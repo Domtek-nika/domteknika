@@ -554,7 +554,7 @@ const FILTERS: ProjectFilterOption[] = [
   },
   {
     key: "household",
-    label: "Household Appliances",
+    label: "Household Products",
     icon: HousePlug,
   },
   {
@@ -599,12 +599,12 @@ export const FEATURED_PROJECT: Project = {
   filter: "mobility",
   title: "STAJVELO RV01",
   description:
-    "Urban e-bike architecture built around injected composite design, distinctive wheels and premium industrial detailing.",
+    "Urban e-bike developed for STAJVELO, a Monaco-based company, around injected structural components, distinctive wheels and carefully integrated details.",
   image: "/assets/projects/stajvelo-rv01/stajvelo-rv01-01.webp",
   imageAlt: "STAJVELO RV01 electric bicycle on a road circuit",
   tags: ["#2017", "#E-bike", "#Polymer"],
   overview:
-    "DOMTEKNIKA supported the polymer conception and structural development of this urban e-bike, from early architecture and wheel engineering to manufacturable product definition.",
+    "DOMTEKNIKA developed the polymer architecture and injected structural components of this urban e-bike for STAJVELO, from the initial concept and wheel engineering through to a manufacturable product definition.",
 };
 
 const PROJECT_GALLERIES = Object.fromEntries(
@@ -746,7 +746,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "instant-coffee-dispenser",
-    category: "Household Appliances",
+    category: "Household Products",
     filter: "household",
     title: "Soluble Coffee Machine",
     description:
@@ -787,39 +787,20 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "airsmile",
-    category: "Household Appliances",
+    category: "Household Products",
     filter: "household",
-    title: "AirSmile",
+    title: "At-home tooth whitening device",
     description:
-      "Dental care device concept developed from product styling through functional packaging and prototype families.",
+      "Non-electric at-home tooth whitening device inspired by professional Airflow systems and powered by a single-use treatment cartridge.",
     image: "/assets/projects/airsmile/airsmile-01.webp",
-    imageAlt: "AirSmile handheld dental care device render",
+    imageAlt: "At-home tooth whitening device and single-use treatment cartridge",
     tags: ["#2007", "#Dental", "#Device"],
     overview:
-      "AirSmile required a clean handheld product architecture, removable components and ergonomic detailing for a dental-care use case.",
+      "Designed to reproduce at home the principle of Airflow devices used in dental practices, the device works without electricity. A single-use consumable supplies the propellant gases and active agents required for one treatment. DOMTEKNIKA developed the complete product, built functional prototypes, carried out performance testing and prepared the design for industrialization.",
     relatedPatents: [
       relatedPatent(
         "CH701083B1",
         "Dental treatment cartridge and jet architecture relevant to at-home scaling and whitening devices.",
-      ),
-    ],
-  },
-  {
-    id: "brossadent",
-    category: "Household Appliances",
-    filter: "household",
-    title: "O2 Cosmetics toothbrush",
-    description:
-      "Dental-care product concept combining a toothbrush body, O2 Cosmetics refill cartridges and internal mechanism packaging.",
-    image: "/assets/projects/brossadent/o2-cosmetics-toothbrush-01.webp",
-    imageAlt: "O2 Cosmetics toothbrush concept with refill cartridges",
-    tags: ["#2007", "#Dental", "#Injection"],
-    overview:
-      "The concept combines an ergonomic toothbrush body, replaceable O2 Cosmetics consumables and internal mechanism packaging for a compact dental-care product.",
-    relatedPatents: [
-      relatedPatent(
-        "CH701083B1",
-        "Disposable dental cartridge principle with liquid, gas and active particles in a handheld device.",
       ),
     ],
   },
@@ -858,7 +839,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "filter-carafe",
-    category: "Household Appliances",
+    category: "Household Products",
     filter: "household",
     title: "Filter Carafe",
     description:
@@ -882,16 +863,16 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "ikitty",
-    category: "Household Appliances",
+    category: "Household Products",
     filter: "household",
-    title: "iKitty",
+    title: "Automatic cat food dispenser",
     description:
-      "Cat enrichment product with refill capsule architecture, feeder mechanism and soft product styling.",
+      "Automatic wet-food dispenser designed for multi-day absences, with portion cartridges and odor-controlled waste management.",
     image: "/assets/projects/ikitty/ikitty-01.webp",
-    imageAlt: "iKitty cat enrichment device prototype",
+    imageAlt: "Automatic cat food dispenser functional prototype",
     tags: ["#2023", "#PetTech", "#Mechanism"],
     overview:
-      "The iKitty concept packages refill capsules, internal feeding mechanics and a recognizable cat-shaped product language into a manufacturable consumer product.",
+      "Designed to dispense wet food automatically while the owner is away for several days, the machine also manages used portions to contain food odors. DOMTEKNIKA developed the cartridge that transfers capsules ergonomically from their packaging into the machine and built a functional demonstrator. The team also improved key functions, including compaction of used capsules and cartridge packaging, and contributed to digitizing the product design and integrating the functional modules into the new housing.",
   },
   {
     id: "smart-bottle",
@@ -991,17 +972,17 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "skincare-applicator",
-    category: "Household Appliances",
+    category: "Household Products",
     filter: "household",
     title: "Skincare applicator",
     description:
-      "Dermocosmetic applicator concept with ergonomic handpiece, internal cartridge layout and product presentation.",
+      "Dermatology device combining physical massage, serum application and controlled light exposure to stimulate collagen production.",
     image: "/assets/projects/skincare-applicator/skincare-applicator-01.webp",
     imageAlt:
       "IDlab skincare applicator with cosmetic cartridges and packaging",
     tags: ["#2012", "#BeautyTech", "#Packaging"],
     overview:
-      "A handheld skincare system combining fluid delivery, user ergonomics, product styling and packaging-ready visual development.",
+      "Based on a principle developed by a dermatology research institute, the device combines physical massage, serum application and controlled light exposure to stimulate collagen production and support skin rejuvenation. DOMTEKNIKA developed the complete device and its single-use serum consumable, built functional prototypes and, together with the institute, ran performance tests to optimize the serum formulation and the most effective exposure wavelengths.",
     relatedPatents: [
       relatedPatent(
         "US2015360014A1",
@@ -1015,7 +996,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "alicoffee-machine",
-    category: "Household Appliances",
+    category: "Household Products",
     filter: "household",
     title: "Coffee Machine",
     description:
@@ -1025,25 +1006,19 @@ export const PROJECTS: Project[] = [
     tags: ["#2014", "#Coffee", "#Capsule", "#Fluidics"],
     overview:
       "This project is limited to the coffee-machine capsule principle: water does not simply flow straight through the capsule. It follows an out-and-back path inside the capsule, creating a double pass during extraction.",
-    relatedPatents: [
-      relatedPatent(
-        "US2011061534A1",
-        "Capsule-based beverage-production context for the double-pass water path through the capsule.",
-      ),
-    ],
   },
   {
     id: "special-t-machine",
-    category: "Household Appliances",
+    category: "Household Products",
     filter: "household",
-    title: "Tea Machine",
+    title: "Capsule tea machine",
     description:
-      "Tea-capsule brewing-unit development, from capsule handling and ejection to beverage flow and pilot-series readiness.",
+      "Capsule tea machine refined around extraction-head mechanics, infusion quality and industrialization readiness.",
     image: "/assets/projects/special-t-machine/tea-machine-01.webp",
     imageAlt: "Tea-machine brewing unit prototype",
     tags: ["#2008", "#Tea", "#BrewingUnit"],
     overview:
-      "DOMTEKNIKA worked on the brewing unit: capsule holding, opening, detection, cinematics, ejection, beverage flow in the cup and industrial-design integration. The work supported the first pilot series of the brewing head and a vortex-based component patented to reduce vapor accumulation in the capsule.",
+      "Starting from an existing extraction-head prototype, DOMTEKNIKA improved capsule retention, closing kinematics, capsule detection and opening, and tea flow at the capsule outlet. The team then supported industrialization of the extraction head, developed a system that prevents steam from accumulating inside the capsule to improve infusion, and contributed to industrializing several machine components.",
     relatedPatents: [
       relatedPatent(
         "US2011061534A1",
@@ -1074,16 +1049,16 @@ export const PROJECTS: Project[] = [
     id: "velum-sky-screen",
     category: "Building Systems",
     filter: "building",
-    title: "Velum SKY screen mechanism",
+    title: "Velum Sky amphitheatre screen",
     description:
-      "Architectural mechanism prototype for a screen or facade element, photographed as a precision mechanical assembly.",
+      "Custom-engineered system for raising and lowering the giant screen in the Velum Sky amphitheatre in Geneva.",
     image:
-      "/assets/projects/velum-sky-screen/velum-sky-screen-mechanism-01.webp",
+      "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp",
     imageAlt:
-      "Velum SKY mechanical screen prototype on a dark studio background",
-    tags: ["#2025", "#Architecture", "#Mechanism"],
+      "Giant screen lifting system in the Velum Sky amphitheatre in Geneva",
+    tags: ["#2025", "#Building", "#Engineering"],
     overview:
-      "Velum SKY is represented here through a high-precision mechanical assembly, suggesting an architectural or environmental screen mechanism requiring robust motion and clean detailing.",
+      "DOMTEKNIKA engineered the complete mechanical system that raises, lowers and positions the giant screen in the Velum Sky amphitheatre in Geneva, including its architecture, guidance, drive and integration into the building.",
   },
 ];
 
@@ -1129,10 +1104,10 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
   "stajvelo-rv01": {
     category: "Mobilité",
     description:
-      "Architecture de vélo urbain électrique fondée sur une structure composite injectée, des roues distinctives et un niveau de finition haut de gamme.",
+      "Vélo électrique urbain développé pour STAJVELO, entreprise monégasque, autour de pièces structurelles injectées, de roues distinctives et d'une intégration soignée.",
     imageAlt: "Vélo électrique STAJVELO RV01 sur circuit",
     overview:
-      "DOMTEKNIKA a accompagné la conception polymère et le développement structurel de ce vélo électrique urbain, depuis l'architecture initiale et l'ingénierie des roues jusqu'à la définition industrialisable du produit.",
+      "DOMTEKNIKA a développé pour STAJVELO l'architecture polymère et les pièces structurelles injectées de ce vélo électrique urbain, depuis le concept initial et l'ingénierie des roues jusqu'à la définition industrialisable du produit.",
   },
   aventor: {
     category: "Mobilité",
@@ -1229,31 +1204,17 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
       "DOMTEKNIKA a étudié plusieurs architectures de mobilité pliante, du vélo électrique au scooter, en travaillant les charnières, le verrouillage, la position de conduite et l'intégration des composants afin d'obtenir des concepts compacts, transportables et réalisables.",
   },
   airsmile: {
-    category: "Médical",
+    category: "Appareils ménagers",
+    title: "Blanchisseur de dent",
     description:
-      "Concept de dispositif dentaire développé de la définition esthétique à l'intégration fonctionnelle, puis décliné en plusieurs prototypes.",
-    imageAlt: "Rendu du dispositif dentaire portatif AirSmile",
+      "Appareil de blanchiment dentaire à domicile, sans électricité, inspiré des systèmes Airflow professionnels et alimenté par un consommable à usage unique.",
+    imageAlt: "Blanchisseur de dent à domicile et consommable à usage unique",
     overview:
-      "AirSmile demandait une architecture produit portative propre, des composants amovibles et un détail ergonomique adapté à un usage de soin dentaire.",
+      "Conçu pour proposer à domicile un blanchiment dentaire inspiré des appareils Airflow utilisés en cabinet, l'appareil fonctionne sans électricité. Un consommable à usage unique fournit les gaz propulseurs et les agents actifs nécessaires à un traitement. DOMTEKNIKA a développé l'ensemble du produit, réalisé des prototypes fonctionnels et des essais de performance, puis préparé son industrialisation.",
     relatedPatents: [
       relatedPatent(
         "CH701083B1",
         "Architecture de cartouche dentaire et de jets pertinente pour un dispositif de détartrage/blanchiment à domicile.",
-      ),
-    ],
-  },
-  brossadent: {
-    category: "Médical",
-    title: "Brosse à dents O2 Cosmetics",
-    description:
-      "Concept de soin dentaire combinant corps de brosse à dents, cartouches O2 Cosmetics et intégration du mécanisme interne.",
-    imageAlt: "Concept de brosse à dents O2 Cosmetics avec cartouches",
-    overview:
-      "Le concept combine un corps de brosse à dents ergonomique, des consommables O2 Cosmetics remplaçables et l'intégration du mécanisme interne dans un produit dentaire compact.",
-    relatedPatents: [
-      relatedPatent(
-        "CH701083B1",
-        "Principe de cartouche dentaire jetable avec liquide, gaz et particules actives dans un appareil portatif.",
       ),
     ],
   },
@@ -1281,7 +1242,7 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     ],
   },
   "filter-carafe": {
-    category: "Produits",
+    category: "Appareils ménagers",
     title: "Carafe filtrante",
     description:
       "Système de carafe filtrante développé de bout en bout, avec un dispositif économique qui mesure le volume d'eau filtré et indique à l'utilisateur quand remplacer la cartouche.",
@@ -1304,12 +1265,13 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     ],
   },
   ikitty: {
-    category: "Produits",
+    category: "Appareils ménagers",
+    title: "Distributeur automatique de nourriture pour chat",
     description:
-      "Produit d'enrichissement pour chat avec capsule rechargeable, mécanisme de distribution et forme douce.",
-    imageAlt: "Prototype de dispositif iKitty pour chat",
+      "Distributeur automatique de pâtée pour les absences de plusieurs jours, avec capsules portionnées et gestion des déchets limitant les odeurs.",
+    imageAlt: "Prototype fonctionnel de distributeur automatique de nourriture pour chat",
     overview:
-      "Le concept iKitty intègre capsules rechargeables, mécanique interne de distribution et langage produit reconnaissable dans un objet grand public industrialisable.",
+      "Conçue pour distribuer automatiquement de la pâtée pendant plusieurs jours d'absence du propriétaire, la machine gère également les portions usagées afin de contenir les odeurs. DOMTEKNIKA a développé la cartouche qui permet de transférer ergonomiquement les capsules de leur emballage vers la machine et réalisé un prototype fonctionnel. L'équipe a aussi amélioré des fonctions clés, notamment le compactage des capsules après usage et leur conditionnement en cartouches, puis participé à la numérisation du design et à l'intégration des éléments fonctionnels dans la nouvelle enveloppe.",
   },
   "smart-bottle": {
     category: "Médical",
@@ -1383,13 +1345,13 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     ],
   },
   "skincare-applicator": {
-    category: "Médical",
-    title: "Applicateur soin de la peau",
+    category: "Appareils ménagers",
+    title: "Applicateur de soin de la peau",
     description:
-      "Concept d'applicateur dermocosmétique avec pièce à main ergonomique, architecture interne de cartouche et présentation produit.",
+      "Appareil dermatologique combinant massage physique, application de sérum et exposition lumineuse contrôlée pour stimuler la production de collagène.",
     imageAlt: "Rendu d'un applicateur dermocosmétique blanc",
     overview:
-      "Système portatif de soin de la peau combinant distribution de fluide, ergonomie utilisateur, style produit et visuels prêts pour présentation.",
+      "Fondé sur un principe développé par un institut de recherche en dermatologie, l'appareil combine massage physique, application de sérum et exposition lumineuse contrôlée afin de stimuler la production de collagène et le rajeunissement cutané. DOMTEKNIKA a développé intégralement l'appareil et son consommable de sérum à usage unique, réalisé des prototypes fonctionnels puis mené, avec l'institut, des essais de performance pour optimiser la formulation du sérum et les longueurs d'onde les plus efficaces.",
     relatedPatents: [
       relatedPatent(
         "US2015360014A1",
@@ -1402,28 +1364,22 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     ],
   },
   "alicoffee-machine": {
-    category: "Produits",
+    category: "Appareils ménagers",
     title: "Machine à café",
     description:
       "Concept de machine à café basé sur un circuit capsule double passage, où l'eau fait un aller-retour dans la capsule.",
     imageAlt: "Rendu du concept de machine à café de comptoir",
     overview:
       "Ce projet se limite au principe capsule de la machine à café: l'eau ne traverse pas simplement la capsule en ligne droite. Elle effectue un aller-retour dans la capsule, créant un double passage pendant l'extraction.",
-    relatedPatents: [
-      relatedPatent(
-        "US2011061534A1",
-        "Contexte de production de boisson à capsule pour le chemin d'eau double passage dans la capsule.",
-      ),
-    ],
   },
   "special-t-machine": {
-    category: "Produits",
-    title: "Machine à thé",
+    category: "Appareils ménagers",
+    title: "Machine à thé à capsules",
     description:
-      "Développement d'une unité d'extraction pour capsules de thé, de la gestion capsule et l'éjection jusqu'au flux boisson et à la présérie.",
+      "Machine à thé en capsules optimisée autour de la tête d'extraction, de la qualité d'infusion et de la préparation industrielle.",
     imageAlt: "Prototype d'unité d'extraction pour machine à thé",
     overview:
-      "DOMTEKNIKA a travaillé sur l'unité d'extraction: maintien, ouverture, détection, cinématique et éjection de la capsule, flux boisson dans la tasse et intégration design industriel. Le projet a soutenu la première série pilote de la tête d'extraction et un composant à vortex breveté pour limiter l'accumulation de vapeur dans la capsule.",
+      "À partir d'un prototype existant de la tête d'extraction, DOMTEKNIKA a amélioré le maintien de la capsule, la cinématique de fermeture, la détection et l'ouverture de la capsule ainsi que l'écoulement du thé en sortie. L'équipe a ensuite participé à l'industrialisation de la tête d'extraction, développé un système limitant l'accumulation de vapeur dans la capsule afin d'améliorer l'infusion, puis contribué à l'industrialisation de plusieurs pièces de la machine.",
     relatedPatents: [
       relatedPatent(
         "US2011061534A1",
@@ -1470,13 +1426,13 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     ],
   },
   "velum-sky-screen": {
-    category: "Produits",
-    title: "Mécanisme Velum SKY",
+    category: "Systèmes du bâtiment",
+    title: "Écran escamotable Velum Sky",
     description:
-      "Prototype de mécanisme architectural pour écran ou élément de façade, photographié comme assemblage mécanique de précision.",
-    imageAlt: "Prototype mécanique Velum SKY sur fond studio sombre",
+      "Système sur mesure permettant de monter et descendre l’écran géant de l’amphithéâtre Velum Sky à Genève.",
+    imageAlt: "Système de levage de l’écran géant de l’amphithéâtre Velum Sky à Genève",
     overview:
-      "Velum SKY est représenté ici par un assemblage mécanique de précision, suggérant un mécanisme architectural ou environnemental demandant mouvement robuste et détails propres.",
+      "DOMTEKNIKA a conçu l’ensemble du système mécanique qui monte, descend et positionne l’écran géant de l’amphithéâtre Velum Sky à Genève : architecture, guidage, entraînement et intégration au bâtiment.",
   },
 };
 
@@ -1484,10 +1440,10 @@ const DE_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
   "stajvelo-rv01": {
     category: "Mobilität",
     description:
-      "Urbanes Elektrofahrrad, entwickelt rund um injizierte Verbundbauweise, markante Räder und hochwertige Industriedetails.",
+      "Urbanes E-Bike für STAJVELO, ein Unternehmen aus Monaco, entwickelt rund um gespritzte Strukturbauteile, markante Räder und eine sorgfältige Integration.",
     imageAlt: "STAJVELO RV01 Elektrofahrrad auf einer Rennstrecke",
     overview:
-      "DOMTEKNIKA unterstützte die Polymerkonzeption und Strukturentwicklung dieses urbanen Elektrofahrrads, von der frühen Architektur und Radentwicklung bis zur herstellbaren Produktdefinition.",
+      "DOMTEKNIKA entwickelte für STAJVELO die Polymerarchitektur und die gespritzten Strukturbauteile dieses urbanen E-Bikes, vom ersten Konzept und der Radentwicklung bis zur fertigungsgerechten Produktdefinition.",
   },
   aventor: {
     category: "Mobilität",
@@ -1542,21 +1498,13 @@ const DE_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
       "DOMTEKNIKA untersuchte verschiedene faltbare Mobilitätsarchitekturen – vom Elektrofahrrad bis zum Scooter. Gelenke, Verriegelung, Fahrposition und Komponentenintegration wurden gezielt weiterentwickelt, um kompakte, transportfähige und herstellbare Konzepte zu schaffen.",
   },
   airsmile: {
-    category: "Medizin",
+    category: "Haushaltsprodukte",
+    title: "Gerät zur Zahnaufhellung für zu Hause",
     description:
-      "Konzept für ein Dentalgerät, entwickelt vom Produktstyling bis zur funktionalen Integration und Prototypfamilien.",
-    imageAlt: "Rendering eines handgeführten AirSmile-Dentalgeräts",
+      "Stromloses Gerät zur Zahnaufhellung für zu Hause, inspiriert von professionellen Airflow-Systemen und versorgt durch eine Einweg-Behandlungskartusche.",
+    imageAlt: "Gerät zur Zahnaufhellung für zu Hause",
     overview:
-      "AirSmile erforderte eine saubere handgeführte Produktarchitektur, austauschbare Komponenten und ergonomische Details für eine Dentalanwendung.",
-  },
-  brossadent: {
-    category: "Medizin",
-    title: "O2 Cosmetics Zahnbürste",
-    description:
-      "Dentalpflege-Konzept mit Zahnbürstenkörper, O2-Cosmetics-Nachfüllkartuschen und Integration des internen Mechanismus.",
-    imageAlt: "O2 Cosmetics Zahnbürstenkonzept mit Nachfüllkartuschen",
-    overview:
-      "Das Konzept kombiniert einen ergonomischen Zahnbürstenkörper, austauschbare O2-Cosmetics-Verbrauchsteile und den internen Mechanismus in einem kompakten Dentalprodukt.",
+      "Das Gerät überträgt das Prinzip der in Zahnarztpraxen verwendeten Airflow-Systeme auf die Anwendung zu Hause und funktioniert ohne Strom. Ein Einweg-Verbrauchsteil liefert die für eine Behandlung erforderlichen Treibgase und Wirkstoffe. DOMTEKNIKA entwickelte das gesamte Produkt, baute funktionsfähige Prototypen, führte Leistungstests durch und bereitete die Industrialisierung vor.",
   },
   "flex-drill": {
     category: "Medizin",
@@ -1576,7 +1524,7 @@ const DE_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
       "Der Applikator zeigt die gesamte Schleife von Ideenskizze und ergonomischem Layout bis zu Finite-Elemente-Prüfungen und Prototypteilen für ein biomedizinisches Handwerkzeug.",
   },
   "filter-carafe": {
-    category: "Produkte",
+    category: "Haushaltsprodukte",
     title: "Filterkaraffe",
     description:
       "Vollständig entwickelte Filterkaraffe mit einer kostengünstigen Volumenerfassung, die die gefilterte Wassermenge misst und den fälligen Kartuschenwechsel anzeigt.",
@@ -1596,12 +1544,13 @@ const DE_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     ],
   },
   ikitty: {
-    category: "Produkte",
+    category: "Haushaltsprodukte",
+    title: "Automatischer Nassfutterspender für Katzen",
     description:
-      "Produkt zur Beschäftigung von Katzen mit Nachfüllkapsel-Architektur, Füttermechanismus und weicher Produktsprache.",
-    imageAlt: "iKitty-Prototyp für Katzenbeschäftigung",
+      "Automatischer Nassfutterspender für mehrtägige Abwesenheiten mit Portionskapseln und geruchsgeschützter Abfallverwaltung.",
+    imageAlt: "Automatischer Nassfutterspender für Katzen",
     overview:
-      "Das iKitty-Konzept verpackt Nachfüllkapseln, interne Füttermechanik und eine erkennbare katzenförmige Produktsprache in ein herstellbares Konsumprodukt.",
+      "Die Maschine gibt während einer mehrtägigen Abwesenheit des Besitzers automatisch Nassfutter aus und verwaltet zugleich die gebrauchten Portionen, um Futtergerüche einzudämmen. DOMTEKNIKA entwickelte die Kartusche für den ergonomischen Transfer der Kapseln aus ihrer Verpackung in die Maschine und baute einen funktionsfähigen Demonstrator. Das Team verbesserte zudem zentrale Funktionen wie die Verdichtung gebrauchter Kapseln und deren Verpackung in Kartuschen und unterstützte die Digitalisierung des Designs sowie die Integration der Funktionsmodule in das neue Gehäuse.",
   },
   "smart-bottle": {
     category: "Medizin",
@@ -1666,37 +1615,31 @@ const DE_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
       "Das Projekt untersucht eine neue Architektur für einen faltbaren Regenschirm, der geschlossen in eine Tasche passt und ungefähr die Grundfläche eines Smartphones einnimmt. Die Arbeit reicht von Etui-Schnitten und Mechanismusstudien bis zu physischen Prototypen.",
   },
   "skincare-applicator": {
-    category: "Medizin",
-    title: "Hautpflege-Applikator",
+    category: "Haushaltsprodukte",
+    title: "Hautpflegegerät",
     description:
-      "Dermokosmetisches Applikatorkonzept mit ergonomischem Handstück, internem Kartuschenaufbau und Produktpräsentation.",
-    imageAlt: "Rendering eines weißen Hautpflege-Applikators",
+      "Dermatologisches Gerät, das physische Massage, Serumauftrag und kontrollierte Lichtbestrahlung zur Anregung der Kollagenproduktion kombiniert.",
+    imageAlt: "Dermatologisches Hautpflegegerät",
     overview:
-      "Ein handgeführtes Hautpflegesystem, das Fluidabgabe, Nutzerergonomie, Produktgestaltung und präsentationsreife Visualisierung verbindet.",
+      "Auf Grundlage eines von einem dermatologischen Forschungsinstitut entwickelten Prinzips kombiniert das Gerät physische Massage, Serumauftrag und kontrollierte Lichtbestrahlung, um die Kollagenproduktion anzuregen und die Hautverjüngung zu unterstützen. DOMTEKNIKA entwickelte das komplette Gerät und das Einweg-Verbrauchsteil mit Serum, baute funktionsfähige Prototypen und führte gemeinsam mit dem Institut Leistungstests durch, um die Serumformulierung und die wirksamsten Wellenlängen zu optimieren.",
   },
   "alicoffee-machine": {
-    category: "Produkte",
+    category: "Haushaltsprodukte",
     title: "Kaffeemaschine",
     description:
       "Kaffeemaschinenkonzept mit doppeltem Kapselkreislauf, bei dem Wasser in der Kapsel hin und zurück geführt wird.",
     imageAlt: "Rendering des Kaffeemaschinenkonzepts",
     overview:
       "Dieses Projekt beschränkt sich auf das Kapselprinzip der Kaffeemaschine: Das Wasser fließt nicht einfach gerade durch die Kapsel, sondern folgt innen einem Hin-und-zurück-Weg mit doppeltem Durchlauf bei der Extraktion.",
-    relatedPatents: [
-      relatedPatent(
-        "US2011061534A1",
-        "Kapselbasierter Getränkezubereitungskontext für den doppelten Wasserweg durch die Kapsel.",
-      ),
-    ],
   },
   "special-t-machine": {
-    category: "Produkte",
-    title: "Teemaschine",
+    category: "Haushaltsprodukte",
+    title: "Kapsel-Teemaschine",
     description:
-      "Entwicklung der Brüheinheit für Teekapseln, von Kapselhandling und Auswurf bis zu Getränkefluss und Pilotserie.",
+      "Kapsel-Teemaschine, optimiert rund um die Mechanik des Extraktionskopfs, die Aufgussqualität und die Industrialisierung.",
     imageAlt: "Prototyp der Brüheinheit für eine Teemaschine",
     overview:
-      "DOMTEKNIKA arbeitete an der Brüheinheit: Kapselhalten, Öffnen, Erkennen, Kinematik, Auswurf, Getränkefluss in der Tasse und Industriedesign-Integration. Die Arbeit unterstützte die erste Pilotserie des Brühkopfs und eine patentierte Vortex-Komponente gegen Dampfansammlung in der Kapsel.",
+      "Ausgehend von einem bestehenden Prototyp des Extraktionskopfs verbesserte DOMTEKNIKA die Kapselhalterung, die Schließkinematik, die Erkennung und Öffnung der Kapsel sowie den Teefluss am Auslass. Anschließend unterstützte das Team die Industrialisierung des Extraktionskopfs, entwickelte ein System gegen Dampfansammlung in der Kapsel zur Verbesserung des Aufgusses und wirkte an der Industrialisierung mehrerer Maschinenkomponenten mit.",
     relatedPatents: [
       relatedPatent(
         "US2011061534A1",
@@ -1705,7 +1648,7 @@ const DE_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     ],
   },
   "instant-coffee-dispenser": {
-    category: "Produkte",
+    category: "Haushaltsprodukte",
     title: "Instantkaffeemaschine",
     description:
       "Kostengünstige Instantkaffeemaschine für ein espressoähnliches Ergebnis mit unterschiedlichen löslichen Kaffees und weiteren löslichen Getränken.",
@@ -1723,14 +1666,13 @@ const DE_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
       "Dieses Uhrenprojekt konzentriert sich auf Präzisionsmechanik, Werkvisualisierung und strukturelle Bewertung kleiner, hochwertiger Komponenten.",
   },
   "velum-sky-screen": {
-    category: "Produkte",
-    title: "Velum SKY Bildschirmmechanismus",
+    category: "Gebäudetechnik",
+    title: "Versenkbare Leinwand Velum Sky",
     description:
-      "Prototyp eines architektonischen Mechanismus für ein Screen- oder Fassadenelement, als präzise mechanische Baugruppe fotografiert.",
-    imageAlt:
-      "Velum SKY mechanischer Screen-Prototyp vor dunklem Studiohintergrund",
+      "Massgeschneidertes System zum Heben und Senken der Grossleinwand im Velum-Sky-Auditorium in Genf.",
+    imageAlt: "Hebesystem der Grossleinwand im Velum-Sky-Auditorium in Genf",
     overview:
-      "Velum SKY wird hier durch eine hochpräzise mechanische Baugruppe dargestellt und verweist auf einen architektonischen oder umweltbezogenen Screen-Mechanismus mit robuster Bewegung und sauberer Detaillierung.",
+      "DOMTEKNIKA entwickelte das komplette mechanische System zum Heben, Senken und Positionieren der Grossleinwand im Velum-Sky-Auditorium in Genf, einschliesslich Architektur, Führung, Antrieb und Gebäudeintegration.",
   },
 };
 
@@ -1738,10 +1680,10 @@ const ES_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
   "stajvelo-rv01": {
     category: "Movilidad",
     description:
-      "Bicicleta eléctrica urbana desarrollada alrededor de diseño composite inyectado, ruedas distintivas y detalles industriales premium.",
+      "Bicicleta eléctrica urbana desarrollada para STAJVELO, empresa monegasca, en torno a componentes estructurales inyectados, ruedas distintivas y una integración cuidada.",
     imageAlt: "Bicicleta eléctrica STAJVELO RV01 en circuito",
     overview:
-      "DOMTEKNIKA acompañó la concepción polimérica y el desarrollo estructural de esta bicicleta eléctrica urbana, desde la arquitectura inicial y la ingeniería de ruedas hasta la definición fabricable del producto.",
+      "DOMTEKNIKA desarrolló para STAJVELO la arquitectura polimérica y los componentes estructurales inyectados de esta bicicleta eléctrica urbana, desde el concepto inicial y la ingeniería de las ruedas hasta la definición industrializable del producto.",
   },
   aventor: {
     category: "Movilidad",
@@ -1795,21 +1737,13 @@ const ES_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
       "DOMTEKNIKA estudió distintas arquitecturas de movilidad plegable, desde bicicletas eléctricas hasta scooters, trabajando las bisagras, el bloqueo, la posición de conducción y la integración de componentes para obtener conceptos compactos, transportables y fabricables.",
   },
   airsmile: {
-    category: "Médico",
+    category: "Productos para el hogar",
+    title: "Dispositivo de blanqueamiento dental doméstico",
     description:
-      "Concepto de dispositivo dental desarrollado desde el estilo de producto hasta la integración funcional y familias de prototipos.",
-    imageAlt: "Render del dispositivo dental portátil AirSmile",
+      "Dispositivo doméstico de blanqueamiento dental sin electricidad, inspirado en los sistemas Airflow profesionales y alimentado por un consumible de un solo uso.",
+    imageAlt: "Dispositivo doméstico de blanqueamiento dental",
     overview:
-      "AirSmile requería una arquitectura limpia de producto portátil, componentes removibles y detalles ergonómicos para un uso de cuidado dental.",
-  },
-  brossadent: {
-    category: "Médico",
-    title: "Cepillo O2 Cosmetics",
-    description:
-      "Concepto de cuidado dental que combina cuerpo de cepillo, cartuchos O2 Cosmetics e integración del mecanismo interno.",
-    imageAlt: "Concepto de cepillo O2 Cosmetics con cartuchos",
-    overview:
-      "El concepto combina un cuerpo ergonómico de cepillo, consumibles O2 Cosmetics reemplazables e integración del mecanismo interno en un producto dental compacto.",
+      "Diseñado para trasladar al hogar el principio de los sistemas Airflow utilizados en las clínicas dentales, el dispositivo funciona sin electricidad. Un consumible de un solo uso aporta los gases propulsores y los agentes activos necesarios para un tratamiento. DOMTEKNIKA desarrolló el producto completo, fabricó prototipos funcionales, realizó ensayos de rendimiento y preparó su industrialización.",
   },
   "flex-drill": {
     category: "Médico",
@@ -1849,12 +1783,13 @@ const ES_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     ],
   },
   ikitty: {
-    category: "Productos",
+    category: "Productos para el hogar",
+    title: "Dispensador automático de comida húmeda para gatos",
     description:
-      "Producto de enriquecimiento para gatos con cápsula recargable, mecanismo de alimentación y estilo suave.",
-    imageAlt: "Prototipo de dispositivo iKitty para gatos",
+      "Dispensador automático de comida húmeda para ausencias de varios días, con cápsulas porcionadas y gestión de residuos para limitar los olores.",
+    imageAlt: "Dispensador automático de comida húmeda para gatos",
     overview:
-      "El concepto iKitty integra cápsulas recargables, mecánica interna de alimentación y un lenguaje de producto reconocible en un producto de consumo fabricable.",
+      "Diseñada para dispensar automáticamente comida húmeda durante ausencias de varios días, la máquina también gestiona las porciones usadas para contener los olores. DOMTEKNIKA desarrolló el cartucho que transfiere ergonómicamente las cápsulas desde su embalaje hasta la máquina y construyó un demostrador funcional. El equipo también mejoró funciones clave, como la compactación de las cápsulas usadas y su envasado en cartuchos, y participó en la digitalización del diseño y la integración de los módulos funcionales en la nueva carcasa.",
   },
   "smart-bottle": {
     category: "Médico",
@@ -1919,13 +1854,13 @@ const ES_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
       "El proyecto explora una nueva arquitectura de paraguas plegable diseñada para caber en un bolsillo una vez cerrada, con una huella cercana a la de un smartphone. El trabajo va desde cortes de funda y estudios de mecanismo hasta prototipos físicos.",
   },
   "skincare-applicator": {
-    category: "Médico",
+    category: "Productos para el hogar",
     title: "Aplicador para el cuidado de la piel",
     description:
-      "Concepto de aplicador dermocosmético con pieza de mano ergonómica, arquitectura interna del cartucho y presentación de producto.",
-    imageAlt: "Render de aplicador dermocosmético blanco",
+      "Dispositivo dermatológico que combina masaje físico, aplicación de sérum y exposición luminosa controlada para estimular la producción de colágeno.",
+    imageAlt: "Dispositivo dermatológico para el cuidado de la piel",
     overview:
-      "Sistema portátil para el cuidado de la piel que combina entrega de fluido, ergonomía de usuario, estilo de producto y desarrollo visual listo para presentación.",
+      "Basado en un principio desarrollado por un instituto de investigación dermatológica, el dispositivo combina masaje físico, aplicación de sérum y exposición luminosa controlada para estimular la producción de colágeno y favorecer el rejuvenecimiento de la piel. DOMTEKNIKA desarrolló íntegramente el dispositivo y su consumible de sérum de un solo uso, fabricó prototipos funcionales y, junto con el instituto, realizó ensayos de rendimiento para optimizar la formulación del sérum y las longitudes de onda más eficaces.",
   },
   "alicoffee-machine": {
     category: "Productos",
@@ -1935,21 +1870,15 @@ const ES_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     imageAlt: "Render del concepto de máquina de café",
     overview:
       "Este proyecto se limita al principio de cápsula de la máquina de café: el agua no atraviesa simplemente la cápsula en línea recta, sino que realiza un recorrido de ida y vuelta dentro de ella durante la extracción.",
-    relatedPatents: [
-      relatedPatent(
-        "US2011061534A1",
-        "Contexto de producción de bebida con cápsula para el recorrido de agua de doble paso dentro de la cápsula.",
-      ),
-    ],
   },
   "special-t-machine": {
-    category: "Productos",
-    title: "Máquina de té",
+    category: "Productos para el hogar",
+    title: "Máquina de té en cápsulas",
     description:
-      "Desarrollo de la unidad de extracción para cápsulas de té, desde el manejo y la expulsión de la cápsula hasta el flujo de bebida y la preserie.",
-    imageAlt: "Prototipo de unidad de extracción para máquina de té",
+      "Máquina de té en cápsulas optimizada en torno a la mecánica del cabezal de extracción, la calidad de la infusión y la preparación industrial.",
+    imageAlt: "Prototipo del cabezal de extracción de una máquina de té",
     overview:
-      "DOMTEKNIKA trabajó en la unidad de extracción: sujeción, apertura, detección, cinemática y expulsión de la cápsula, flujo de bebida en taza e integración de diseño industrial. El trabajo apoyó la primera serie piloto del cabezal y un componente con vórtice patentado para reducir la acumulación de vapor en la cápsula.",
+      "Partiendo de un prototipo existente del cabezal de extracción, DOMTEKNIKA mejoró la retención de la cápsula, la cinemática de cierre, la detección y apertura de la cápsula y el flujo del té a la salida. El equipo apoyó después la industrialización del cabezal, desarrolló un sistema que evita la acumulación de vapor dentro de la cápsula para mejorar la infusión y contribuyó a industrializar varios componentes de la máquina.",
     relatedPatents: [
       relatedPatent(
         "US2011061534A1",
@@ -1976,13 +1905,13 @@ const ES_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
       "Este proyecto relojero se centra en mecánica de precisión, visualización de movimiento y evaluación estructural de pequeños componentes de alto valor.",
   },
   "velum-sky-screen": {
-    category: "Productos",
-    title: "Mecanismo Velum SKY",
+    category: "Sistemas para edificios",
+    title: "Pantalla retráctil Velum Sky",
     description:
-      "Prototipo de mecanismo arquitectónico para pantalla o elemento de fachada, fotografiado como ensamblaje mecánico de precisión.",
-    imageAlt: "Prototipo mecánico Velum SKY sobre fondo de estudio oscuro",
+      "Sistema a medida para subir y bajar la pantalla gigante del auditorio Velum Sky de Ginebra.",
+    imageAlt: "Sistema de elevación de la pantalla gigante del auditorio Velum Sky de Ginebra",
     overview:
-      "Velum SKY se representa aquí mediante un ensamblaje mecánico de alta precisión, sugiriendo un mecanismo arquitectónico o ambiental que requiere movimiento robusto y detalles limpios.",
+      "DOMTEKNIKA diseñó todo el sistema mecánico que eleva, desciende y posiciona la pantalla gigante del auditorio Velum Sky de Ginebra, incluida su arquitectura, guiado, accionamiento e integración en el edificio.",
   },
 };
 
@@ -1990,10 +1919,10 @@ const KO_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
   "stajvelo-rv01": {
     category: "모빌리티",
     description:
-      "사출 복합재 설계, 독특한 휠, 프리미엄 산업 디테일을 중심으로 한 도심형 전기자전거 아키텍처.",
+      "모나코 기업 STAJVELO를 위해 개발한 도심형 전기자전거로, 사출 구조 부품과 독창적인 휠, 정교한 통합 설계를 중심으로 완성했습니다.",
     imageAlt: "도로 서킷 위의 STAJVELO RV01 전기자전거",
     overview:
-      "DOMTEKNIKA는 초기 아키텍처와 휠 엔지니어링부터 제조 가능한 제품 정의까지 이 도심형 전기자전거의 폴리머 설계와 구조 개발을 지원했습니다.",
+      "DOMTEKNIKA는 STAJVELO를 위해 이 도심형 전기자전거의 폴리머 아키텍처와 사출 구조 부품을 개발했으며, 초기 콘셉트와 휠 엔지니어링부터 양산 가능한 제품 정의까지 수행했습니다.",
   },
   aventor: {
     category: "모빌리티",
@@ -2047,21 +1976,13 @@ const KO_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
       "DOMTEKNIKA는 전기자전거부터 스쿠터까지 다양한 접이식 모빌리티 구조를 연구했습니다. 힌지, 잠금장치, 주행 자세, 부품 통합을 다듬어 컴팩트하고 운반이 쉬우며 제작 가능한 콘셉트를 개발했습니다.",
   },
   airsmile: {
-    category: "의료",
+    category: "생활용품",
+    title: "가정용 치아 미백기",
     description:
-      "제품 스타일링부터 기능 통합과 프로토타입 제품군까지 개발한 치과 케어 장치 콘셉트.",
-    imageAlt: "AirSmile 휴대형 치과 장치 렌더",
+      "전문 Airflow 시스템의 원리를 적용하고 일회용 치료 카트리지로 작동하는 무전원 가정용 치아 미백기입니다.",
+    imageAlt: "가정용 치아 미백기",
     overview:
-      "AirSmile은 치과 케어 사용 사례에 맞는 깔끔한 휴대형 제품 아키텍처, 탈착식 구성품, 인체공학적 디테일이 필요했습니다.",
-  },
-  brossadent: {
-    category: "의료",
-    title: "O2 Cosmetics 칫솔",
-    description:
-      "칫솔 본체, O2 Cosmetics 리필 카트리지, 내부 메커니즘 통합을 결합한 치과 케어 제품 콘셉트.",
-    imageAlt: "리필 카트리지가 있는 O2 Cosmetics 칫솔 콘셉트",
-    overview:
-      "이 콘셉트는 인체공학적 칫솔 본체, 교체 가능한 O2 Cosmetics 소모품, 내부 메커니즘 통합을 컴팩트한 치과 제품 안에 결합합니다.",
+      "치과에서 사용하는 Airflow 장비의 원리를 가정에서 구현하도록 설계된 무전원 장치입니다. 일회용 소모품이 한 번의 치료에 필요한 추진 가스와 활성 성분을 공급합니다. DOMTEKNIKA는 제품 전체를 개발하고 기능성 프로토타입 제작, 성능 시험, 양산 준비까지 수행했습니다.",
   },
   "flex-drill": {
     category: "의료",
@@ -2098,12 +2019,13 @@ const KO_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     ],
   },
   ikitty: {
-    category: "제품",
+    category: "생활용품",
+    title: "고양이 습식 사료 자동 급여기",
     description:
-      "리필 캡슐 아키텍처, 급식 메커니즘, 부드러운 제품 스타일을 갖춘 고양이용 제품.",
-    imageAlt: "iKitty 고양이 장치 프로토타입",
+      "며칠간 집을 비울 때 사용할 수 있도록 정량 캡슐과 냄새를 억제하는 폐기물 관리 기능을 갖춘 습식 사료 자동 급여기입니다.",
+    imageAlt: "고양이 습식 사료 자동 급여기",
     overview:
-      "iKitty 콘셉트는 리필 캡슐, 내부 급식 메커니즘, 알아보기 쉬운 고양이 형태 제품 언어를 제조 가능한 소비자 제품으로 구성합니다.",
+      "보호자가 며칠 동안 집을 비운 상황에서도 습식 사료를 자동으로 급여하고, 사용한 포션을 관리해 음식 냄새가 퍼지는 것을 줄이도록 설계했습니다. DOMTEKNIKA는 캡슐을 포장에서 기기로 편리하게 옮기는 카트리지를 개발하고 기능성 시제품을 제작했습니다. 또한 사용한 캡슐의 압축과 카트리지 패키징을 개선하고, 제품 디자인의 디지털화와 기능 모듈의 새 하우징 통합에 참여했습니다.",
   },
   "smart-bottle": {
     category: "의료",
@@ -2166,13 +2088,13 @@ const KO_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
       "이 프로젝트는 접었을 때 주머니에 들어가고 스마트폰에 가까운 크기를 목표로 한 새로운 접이식 우산 구조를 탐구합니다. 케이스 단면과 메커니즘 연구부터 실물 크기 물리 프로토타입까지 포함합니다.",
   },
   "skincare-applicator": {
-    category: "의료",
-    title: "피부 관리 애플리케이터",
+    category: "생활용품",
+    title: "스킨케어 기기",
     description:
-      "인체공학적 핸드피스, 내부 카트리지 구성, 제품 프레젠테이션을 갖춘 더모코스메틱 애플리케이터 콘셉트.",
-    imageAlt: "흰색 피부 관리 애플리케이터 렌더",
+      "물리적 마사지, 세럼 도포, 제어된 광 노출을 결합해 콜라겐 생성을 촉진하는 피부과 연구 기반 기기입니다.",
+    imageAlt: "피부과 연구 기반 스킨케어 기기",
     overview:
-      "유체 전달, 사용자 인체공학, 제품 스타일링, 발표에 적합한 시각 개발을 결합한 휴대형 피부 관리 시스템입니다.",
+      "피부과 연구기관이 개발한 원리를 바탕으로 물리적 마사지, 세럼 도포, 제어된 광 노출을 결합해 콜라겐 생성을 촉진하고 피부 회복을 돕습니다. DOMTEKNIKA는 기기 전체와 일회용 세럼 소모품을 개발하고 기능성 프로토타입을 제작했으며, 연구기관과 함께 성능 시험을 진행해 세럼 조성과 가장 효과적인 노출 파장을 최적화했습니다.",
   },
   "alicoffee-machine": {
     category: "제품",
@@ -2182,21 +2104,15 @@ const KO_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     imageAlt: "커피 머신 콘셉트 렌더",
     overview:
       "이 프로젝트는 커피 머신의 캡슐 원리에만 초점을 둡니다. 물은 캡슐을 직선으로 통과하는 대신 내부에서 왕복하며, 추출 중 두 번 지나가는 흐름을 만듭니다.",
-    relatedPatents: [
-      relatedPatent(
-        "US2011061534A1",
-        "캡슐 내부를 두 번 지나는 물길과 관련된 캡슐 기반 음료 제조 맥락입니다.",
-      ),
-    ],
   },
   "special-t-machine": {
-    category: "제품",
-    title: "차 머신",
+    category: "생활용품",
+    title: "캡슐 티 머신",
     description:
-      "차 캡슐용 브루잉 유닛 개발로, 캡슐 취급과 배출부터 음료 흐름, 파일럿 생산 준비까지 다룹니다.",
-    imageAlt: "차 머신 브루잉 유닛 프로토타입",
+      "추출 헤드 메커니즘, 차 추출 품질, 양산 준비를 중심으로 개선한 캡슐 티 머신입니다.",
+    imageAlt: "캡슐 티 머신 추출 헤드 프로토타입",
     overview:
-      "DOMTEKNIKA는 캡슐 고정, 개봉, 감지, 운동 구조, 배출, 컵 안의 음료 흐름, 산업 디자인 통합까지 브루잉 유닛을 개발했습니다. 이 작업은 첫 브루잉 헤드 파일럿 시리즈와 캡슐 내부 증기 축적을 줄이는 특허받은 와류 부품으로 이어졌습니다.",
+      "기존 추출 헤드 프로토타입을 바탕으로 캡슐 고정, 닫힘 기구, 캡슐 감지와 개봉, 차 배출 흐름을 개선했습니다. 이후 추출 헤드의 산업화를 지원하고, 캡슐 내부의 증기 축적을 방지해 추출 품질을 높이는 시스템을 개발했으며, 여러 기계 부품의 양산화에도 참여했습니다.",
     relatedPatents: [
       relatedPatent(
         "US2011061534A1",
@@ -2223,13 +2139,13 @@ const KO_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
       "이 시계 프로젝트는 정밀 기계, 무브먼트 시각화, 작은 고가치 부품의 구조 평가에 집중합니다.",
   },
   "velum-sky-screen": {
-    category: "제품",
-    title: "Velum SKY 스크린 메커니즘",
+    category: "건축 시스템",
+    title: "Velum Sky 대형 스크린 승강 시스템",
     description:
-      "스크린 또는 파사드 요소를 위한 건축 메커니즘 프로토타입으로, 정밀 기계 조립체로 촬영되었습니다.",
-    imageAlt: "어두운 스튜디오 배경의 Velum SKY 기계식 스크린 프로토타입",
+      "제네바 Velum Sky 강당의 대형 스크린을 올리고 내리기 위해 맞춤 설계한 시스템입니다.",
+    imageAlt: "제네바 Velum Sky 강당의 대형 스크린 승강 시스템",
     overview:
-      "Velum SKY는 고정밀 기계 조립체로 표현되며, 견고한 움직임과 깔끔한 디테일이 필요한 건축 또는 환경 스크린 메커니즘을 보여 줍니다.",
+      "DOMTEKNIKA는 제네바 Velum Sky 강당의 대형 스크린을 승강하고 정확히 위치시키는 전체 기계 시스템을 설계했습니다. 구조, 가이드, 구동부와 건축물 통합까지 모두 포함합니다.",
   },
 };
 
@@ -2237,10 +2153,10 @@ const ZH_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
   "stajvelo-rv01": {
     category: "出行",
     description:
-      "围绕注塑复合材料设计、独特车轮和高端工业细节打造的城市电动自行车架构。",
+      "为摩纳哥企业 STAJVELO 开发的城市电动自行车，采用注塑结构件、独特车轮与精细的一体化设计。",
     imageAlt: "赛道上的 STAJVELO RV01 电动自行车",
     overview:
-      "DOMTEKNIKA 支持了这款城市电动自行车的聚合物构思和结构开发，从早期架构、车轮工程到可制造的产品定义。",
+      "DOMTEKNIKA 为 STAJVELO 开发了这款城市电动自行车的聚合物架构与注塑结构件，涵盖初始概念、车轮工程及面向量产的产品定义。",
   },
   aventor: {
     category: "出行",
@@ -2294,20 +2210,13 @@ const ZH_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
       "DOMTEKNIKA 研究了从电动自行车到滑板车的多种折叠出行架构，并围绕铰链、锁止机构、骑行姿态和部件集成进行优化，以形成紧凑、便携且可制造的概念方案。",
   },
   airsmile: {
-    category: "医疗",
-    description: "牙科护理设备概念，从产品造型到功能集成和原型系列开发。",
-    imageAlt: "AirSmile 手持牙科护理设备渲染图",
-    overview:
-      "AirSmile 需要清晰的手持产品架构、可拆卸组件，以及适合牙科护理使用的人体工学细节。",
-  },
-  brossadent: {
-    category: "医疗",
-    title: "O2 Cosmetics 牙刷",
+    category: "家居用品",
+    title: "家用牙齿美白器",
     description:
-      "牙科护理产品概念，结合牙刷主体、O2 Cosmetics 替换胶囊和内部机构集成。",
-    imageAlt: "带替换胶囊的 O2 Cosmetics 牙刷概念",
+      "无需用电的家用牙齿美白设备，借鉴专业 Airflow 系统，并通过一次性护理耗材提供所需介质。",
+    imageAlt: "家用牙齿美白器",
     overview:
-      "该概念将人体工学牙刷主体、可替换 O2 Cosmetics 消耗件和内部机构整合到紧凑牙科产品中。",
+      "该设备将牙科诊所 Airflow 系统的原理带入家庭使用场景，并且无需用电。一次性耗材为单次护理提供所需的推进气体和活性成分。DOMTEKNIKA 完成了整机开发、功能原型制作、性能测试和量产准备。",
   },
   "flex-drill": {
     category: "医疗",
@@ -2343,11 +2252,13 @@ const ZH_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     ],
   },
   ikitty: {
-    category: "产品",
-    description: "猫咪互动产品，采用可替换胶囊架构、喂食机构和柔和产品造型。",
-    imageAlt: "iKitty 猫咪互动设备原型",
+    category: "家居用品",
+    title: "猫用湿粮自动喂食器",
+    description:
+      "面向主人离家数日场景的湿粮自动喂食器，采用定量胶囊并配备抑制异味的废弃物管理系统。",
+    imageAlt: "猫用湿粮自动喂食器",
     overview:
-      "iKitty 概念将替换胶囊、内部喂食机构和具有识别度的猫形产品语言整合为可制造的消费产品。",
+      "该设备可在主人离家数日时自动投放湿粮，并管理使用后的份量容器以抑制食物异味。DOMTEKNIKA 开发了可将胶囊从包装中便捷转移至机器的料盒，并制作了功能样机。团队还改进了使用后胶囊的压缩与料盒包装，并参与产品设计数字化以及功能模块在新外壳中的集成。",
   },
   "smart-bottle": {
     category: "医疗",
@@ -2408,12 +2319,13 @@ const ZH_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
       "该项目探索一种新的折叠伞架构，收起后可放入口袋，占用空间接近智能手机。从伞套剖面和机构研究到实体原型均有覆盖。",
   },
   "skincare-applicator": {
-    category: "医疗",
-    title: "护肤施用器",
-    description: "皮肤美容施用器概念，带人体工学手柄、内部胶囊布置和产品展示。",
-    imageAlt: "白色护肤施用器渲染图",
+    category: "家居用品",
+    title: "皮肤护理仪",
+    description:
+      "结合物理按摩、精华液涂抹和可控光照，以促进胶原蛋白生成的皮肤科研设备。",
+    imageAlt: "皮肤科研护理设备",
     overview:
-      "一套手持护肤系统，结合流体输送、用户人体工学、产品造型和面向产品展示的视觉开发。",
+      "该设备基于皮肤科研机构开发的原理，将物理按摩、精华液涂抹和可控光照结合，以促进胶原蛋白生成并改善皮肤状态。DOMTEKNIKA 完成了整机及一次性精华液耗材的开发，制作了功能原型，并与研究机构共同开展性能测试，以优化精华液配方和最有效的照射波长。",
   },
   "alicoffee-machine": {
     category: "产品",
@@ -2422,20 +2334,15 @@ const ZH_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     imageAlt: "咖啡机概念渲染图",
     overview:
       "该项目只围绕咖啡机的胶囊原理：水并非直线穿过胶囊，而是在胶囊内部往返流动，在萃取过程中形成双通道。",
-    relatedPatents: [
-      relatedPatent(
-        "US2011061534A1",
-        "与水在胶囊内双通道流动相关的胶囊饮品制备背景。",
-      ),
-    ],
   },
   "special-t-machine": {
-    category: "产品",
-    title: "茶机",
-    description: "茶胶囊冲泡单元开发，从胶囊处理和排出到饮品流动与试生产准备。",
-    imageAlt: "茶机冲泡单元原型",
+    category: "家居用品",
+    title: "胶囊茶饮机",
+    description:
+      "围绕萃取头机构、茶汤品质和量产准备进行优化的胶囊茶饮机。",
+    imageAlt: "胶囊茶饮机萃取头原型",
     overview:
-      "DOMTEKNIKA 负责冲泡单元工作：胶囊保持、开启、检测、运动机构、排出、杯中饮品流动和工业设计集成。该工作支持了第一批冲泡头试生产，并形成用于减少胶囊内蒸汽积聚的专利涡流部件。",
+      "基于已有的萃取头原型，DOMTEKNIKA 改进了胶囊固定、闭合运动、胶囊检测与开启以及茶汤出口流动。随后团队支持萃取头工业化，开发了防止蒸汽在胶囊内积聚的系统以改善冲泡效果，并参与多项机器零件的量产导入。",
     relatedPatents: [
       relatedPatent(
         "US2011061534A1",
@@ -2461,12 +2368,12 @@ const ZH_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
       "该钟表项目聚焦精密机械、机芯可视化，以及小型高价值组件的结构评估。",
   },
   "velum-sky-screen": {
-    category: "产品",
-    title: "Velum SKY 屏幕机构",
-    description: "用于屏幕或幕墙元素的建筑机构原型，以精密机械组件形式拍摄。",
-    imageAlt: "深色工作室背景下的 Velum SKY 机械屏幕原型",
+    category: "建筑系统",
+    title: "Velum Sky 巨幕升降系统",
+    description: "为日内瓦 Velum Sky 礼堂的巨型屏幕量身设计的升降系统。",
+    imageAlt: "日内瓦 Velum Sky 礼堂巨型屏幕升降系统",
     overview:
-      "Velum SKY 通过高精度机械组件呈现，指向一种需要稳健运动和清晰细节的建筑或环境屏幕机构。",
+      "DOMTEKNIKA 完整设计了日内瓦 Velum Sky 礼堂巨型屏幕的机械系统，实现升降与精准定位，涵盖系统架构、导向、驱动及建筑集成。",
   },
 };
 
@@ -2816,38 +2723,6 @@ const PROJECT_SCOPES: Record<
       "打造外观简洁、亲和的手持式口腔护理设备。",
       "完成可拆卸组件与耗材接口的内部集成。",
       "通过系列原型验证人体工学与不同造型方案。",
-    ],
-  },
-  brossadent: {
-    en: [
-      "Toothbrush body architecture with O2 Cosmetics cartridge integration.",
-      "Mechanism and consumable packaging inside a compact dental-care product.",
-      "Product visualization for presentation, validation and design alignment.",
-    ],
-    fr: [
-      "Architecture de corps de brosse à dents avec intégration de cartouches O2 Cosmetics.",
-      "Intégration du mécanisme et des consommables dans un produit dentaire compact.",
-      "Visualisation produit pour présentation, validation et alignement design.",
-    ],
-    de: [
-      "Zahnbürstenarchitektur mit integrierten O2-Cosmetics-Kartuschen.",
-      "Integration von Mechanik und Verbrauchsteilen in ein kompaktes Zahnpflegeprodukt.",
-      "Produktvisualisierung für Präsentation, Validierung und Designabstimmung.",
-    ],
-    es: [
-      "Arquitectura del cuerpo del cepillo con integración de cartuchos O2 Cosmetics.",
-      "Integración del mecanismo y los consumibles en un producto dental compacto.",
-      "Visualización de producto para presentación, validación y coherencia de diseño.",
-    ],
-    ko: [
-      "O2 Cosmetics 카트리지를 통합한 칫솔 본체 구조.",
-      "컴팩트 구강 관리 제품 내부에 메커니즘과 소모품을 통합.",
-      "프레젠테이션, 검증, 디자인 정합성을 위한 제품 시각화.",
-    ],
-    zh: [
-      "开发集成 O2 Cosmetics 替换胶囊的牙刷主体架构。",
-      "在紧凑型口腔护理产品中整合机构与耗材。",
-      "通过产品可视化支持展示、验证与设计统一。",
     ],
   },
   "flex-drill": {
@@ -3338,34 +3213,34 @@ const PROJECT_SCOPES: Record<
   },
   "velum-sky-screen": {
     en: [
-      "Architectural mechanism presentation for a screen or protection system.",
-      "Precision assembly thinking around motion, frame stiffness and clean detailing.",
-      "Patent context connected to bad-weather and sun-protection housings and frames.",
+      "Custom lifting system for the giant screen in the Velum Sky amphitheatre in Geneva.",
+      "Mechanical architecture, guidance and drive engineered by DOMTEKNIKA.",
+      "Integration designed for reliable deployment and discreet storage within the building.",
     ],
     fr: [
-      "Présentation de mécanisme architectural pour écran ou système de protection.",
-      "Logique d'assemblage de précision autour du mouvement, de la rigidité cadre et du détail propre.",
-      "Contexte brevet lié aux boîtiers et cadres de protection pluie/soleil.",
+      "Système de levage sur mesure pour l’écran géant de l’amphithéâtre Velum Sky à Genève.",
+      "Architecture mécanique, guidage et entraînement conçus par DOMTEKNIKA.",
+      "Intégration pensée pour un déploiement fiable et un rangement discret dans le bâtiment.",
     ],
     de: [
-      "Darstellung eines architektonischen Mechanismus für ein Sichtschutz- oder Schutzsystem.",
-      "Präzisionsmontage mit Fokus auf Bewegung, Rahmensteifigkeit und saubere Detaillierung.",
-      "Patentkontext für Gehäuse und Rahmen zum Schutz vor Witterung und Sonne.",
+      "Massgeschneidertes Hebesystem für die Grossleinwand im Velum-Sky-Auditorium in Genf.",
+      "Mechanische Architektur, Führung und Antrieb von DOMTEKNIKA entwickelt.",
+      "Für zuverlässiges Ausfahren und diskrete Unterbringung im Gebäude integriert.",
     ],
     es: [
-      "Presentación de un mecanismo arquitectónico para una pantalla o sistema de protección.",
-      "Montaje de precisión centrado en el movimiento, la rigidez del marco y la calidad de los detalles.",
-      "Contexto de patentes para carcasas y marcos de protección frente al clima y al sol.",
+      "Sistema de elevación a medida para la pantalla gigante del auditorio Velum Sky de Ginebra.",
+      "Arquitectura mecánica, guiado y accionamiento diseñados por DOMTEKNIKA.",
+      "Integración concebida para un despliegue fiable y un almacenamiento discreto en el edificio.",
     ],
     ko: [
-      "스크린 또는 차양 시스템을 위한 건축용 메커니즘 설계 표현.",
-      "움직임, 프레임 강성, 깔끔한 디테일을 고려한 정밀 조립 설계.",
-      "비와 햇빛을 막는 하우징 및 프레임 관련 특허 기술 반영.",
+      "제네바 Velum Sky 강당 대형 스크린을 위한 맞춤형 승강 시스템.",
+      "DOMTEKNIKA가 설계한 기계 구조, 가이드와 구동 시스템.",
+      "안정적인 전개와 건축물 내부의 깔끔한 수납을 고려한 통합 설계.",
     ],
     zh: [
-      "呈现用于遮挡或防护系统的建筑机械结构。",
-      "围绕运动方式、框架刚度与细节品质开展精密装配设计。",
-      "结合防雨与遮阳外壳、框架相关的专利背景。",
+      "为日内瓦 Velum Sky 礼堂巨型屏幕定制的升降系统。",
+      "由 DOMTEKNIKA 设计机械架构、导向与驱动系统。",
+      "兼顾可靠展开与建筑内部隐蔽收纳的一体化设计。",
     ],
   },
 };
@@ -3376,7 +3251,7 @@ const PROJECT_SECTOR_LABELS: Record<
 > = {
   en: {
     mobility: "Mobility",
-    household: "Household Appliances",
+    household: "Household Products",
     medical: "Medical",
     watchmaking: "Watchmaking",
     building: "Building Systems",
@@ -3385,7 +3260,7 @@ const PROJECT_SECTOR_LABELS: Record<
   },
   fr: {
     mobility: "Mobilité",
-    household: "Électroménager",
+    household: "Appareils ménagers",
     medical: "Médical",
     watchmaking: "Horlogerie",
     building: "Systèmes du bâtiment",
@@ -3394,7 +3269,7 @@ const PROJECT_SECTOR_LABELS: Record<
   },
   de: {
     mobility: "Mobilität",
-    household: "Haushaltsgeräte",
+    household: "Haushaltsprodukte",
     medical: "Medizintechnik",
     watchmaking: "Uhrenindustrie",
     building: "Gebäudesysteme",
@@ -3403,7 +3278,7 @@ const PROJECT_SECTOR_LABELS: Record<
   },
   es: {
     mobility: "Movilidad",
-    household: "Electrodomésticos",
+    household: "Productos para el hogar",
     medical: "Tecnología médica",
     watchmaking: "Relojería",
     building: "Sistemas para edificios",
@@ -3412,7 +3287,7 @@ const PROJECT_SECTOR_LABELS: Record<
   },
   ko: {
     mobility: "모빌리티",
-    household: "생활가전",
+    household: "생활용품",
     medical: "의료기기",
     watchmaking: "시계 제조",
     building: "빌딩 시스템",
@@ -3421,7 +3296,7 @@ const PROJECT_SECTOR_LABELS: Record<
   },
   zh: {
     mobility: "出行",
-    household: "家用电器",
+    household: "家居用品",
     medical: "医疗器械",
     watchmaking: "制表",
     building: "建筑系统",
@@ -3586,7 +3461,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       projectFiltersWithLabels({
         all: "Tous",
         mobility: "Mobilité",
-        household: "Électroménager",
+        household: "Appareils ménagers",
         medical: "Médical",
         watchmaking: "Horlogerie",
         building: "Systèmes du bâtiment",
@@ -3676,7 +3551,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       projectFiltersWithLabels({
         all: "Alle",
         mobility: "Mobilität",
-        household: "Haushaltsgeräte",
+        household: "Haushaltsprodukte",
         medical: "Medizintechnik",
         watchmaking: "Uhrenindustrie",
         building: "Gebäudesysteme",
@@ -3758,7 +3633,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       projectFiltersWithLabels({
         all: "Todos",
         mobility: "Movilidad",
-        household: "Electrodomésticos",
+        household: "Productos para el hogar",
         medical: "Tecnología médica",
         watchmaking: "Relojería",
         building: "Sistemas para edificios",
@@ -3840,7 +3715,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       projectFiltersWithLabels({
         all: "전체",
         mobility: "모빌리티",
-        household: "생활가전",
+        household: "생활용품",
         medical: "의료기기",
         watchmaking: "시계 제조",
         building: "빌딩 시스템",
@@ -3922,7 +3797,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       projectFiltersWithLabels({
         all: "全部",
         mobility: "出行",
-        household: "家用电器",
+        household: "家居用品",
         medical: "医疗器械",
         watchmaking: "制表",
         building: "建筑系统",

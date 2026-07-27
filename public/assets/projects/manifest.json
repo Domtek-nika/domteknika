@@ -49,36 +49,29 @@
       }
     ]
   },
-  {
-    "slug": "brossadent",
-    "sourceFolder": "BrossAdent",
-    "cover": "/assets/projects/brossadent/o2-cosmetics-toothbrush-01.webp",
-    "images": [
-      {
-        "source": "BrossAdent/Sans titre.png",
-        "output": "/assets/projects/brossadent/o2-cosmetics-toothbrush-01.webp"
-      },
-      {
-        "source": "BrossAdent/hj.png",
-        "output": "/assets/projects/brossadent/o2-cosmetics-toothbrush-02.webp"
-      },
-      {
-        "source": "BrossAdent/Sans titref.jpg",
-        "output": "/assets/projects/brossadent/o2-cosmetics-toothbrush-03.webp"
-      }
-    ]
-  },
-  {
-    "slug": "velum-sky-screen",
-    "sourceFolder": "EcranVelumSKY",
-    "cover": "/assets/projects/velum-sky-screen/velum-sky-screen-mechanism-01.webp",
-    "images": [
-      {
-        "source": "EcranVelumSKY/_DSC7008-Modifier.jpg",
-        "output": "/assets/projects/velum-sky-screen/velum-sky-screen-mechanism-01.webp"
-      }
-    ]
-  },
+    {
+      "slug": "velum-sky-screen",
+      "sourceFolder": "VelomSkyPicture",
+      "cover": "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp",
+      "images": [
+        {
+          "source": "VelomSkyPicture/1velom.jpeg",
+          "output": "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp"
+        },
+        {
+          "source": "VelomSkyPicture/2velom.jpeg",
+          "output": "/assets/projects/velum-sky-screen/velum-sky-screen-02.webp"
+        },
+        {
+          "source": "EcranVelumSKY/_DSC7008-Modifier.jpg",
+          "output": "/assets/projects/velum-sky-screen/velum-sky-screen-03.webp"
+        },
+        {
+          "source": "VelomSkyPicture/4 velum.jpeg",
+          "output": "/assets/projects/velum-sky-screen/velum-sky-screen-04.webp"
+        }
+      ]
+    },
   {
     "slug": "vacheron-watch-mechanics",
     "sourceFolder": "MontreVacheron",

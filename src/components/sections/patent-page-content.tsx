@@ -38,6 +38,7 @@ import {
   ProjectDetailsDialog,
 } from "@/components/sections/projects-page-content";
 import { Button } from "@/components/ui/button";
+import PATENT_LOCALIZATIONS from "@/data/patent-localizations.json";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import {
@@ -54,6 +55,13 @@ import {
 type PatentLocale = "en" | "fr" | "de" | "es" | "ko" | "zh";
 type FilterKey = "all" | PatentFilterKey;
 type PatentSortKey = "date-desc" | "date-asc" | "publication" | "title";
+type PatentTranslation = Pick<PatentRecord, "title" | "abstract">;
+
+const PATENT_TRANSLATIONS = PATENT_LOCALIZATIONS as Record<
+  Exclude<PatentLocale, "en">,
+  Record<string, PatentTranslation>
+>;
+
 type PatentItem = PatentRecord;
 
 type PanelRect = {
@@ -1131,6 +1139,22 @@ export function PatentPageContent({ locale }: { locale: string }) {
   const copy = COPY[resolvedLocale];
   const stats = STATS[resolvedLocale];
   const filters = FILTERS[resolvedLocale];
+  const localizedPatents = useMemo(() => {
+    if (resolvedLocale === "en") return PATENTS;
+
+    const translations =
+      PATENT_TRANSLATIONS[resolvedLocale as Exclude<PatentLocale, "en">];
+
+    return PATENTS.map((patent) => {
+      const translation = translations?.[patent.id];
+
+      return {
+        ...patent,
+        title: translation?.title || patent.title,
+        abstract: translation?.abstract || patent.abstract,
+      };
+    });
+  }, [resolvedLocale]);
   const [activeFilter, setActiveFilter] = useState<FilterKey>("all");
   const [sortKey, setSortKey] = useState<PatentSortKey>("date-desc");
   const [searchTerm, setSearchTerm] = useState("");
@@ -1200,14 +1224,20 @@ export function PatentPageContent({ locale }: { locale: string }) {
   );
 
   const visiblePatents = useMemo(() => {
-    const filteredPatents = PATENTS.filter((patent) => {
+    const filteredPatents = localizedPatents.filter((patent) => {
       const matchesFilter =
         activeFilter === "all" || patent.filter === activeFilter;
       return matchesFilter && patentMatchesSearch(patent, normalizedSearchTerm);
     });
 
     return sortPatents(filteredPatents, sortKey, resolvedLocale);
-  }, [activeFilter, normalizedSearchTerm, resolvedLocale, sortKey]);
+  }, [
+    activeFilter,
+    localizedPatents,
+    normalizedSearchTerm,
+    resolvedLocale,
+    sortKey,
+  ]);
   const activeSortLabel =
     copy.sort.options.find((option) => option.key === sortKey)?.label ??
     copy.sort.options[0]?.label ??
@@ -1353,7 +1383,7 @@ export function PatentPageContent({ locale }: { locale: string }) {
       );
       if (!patentId || selectedPatent?.id === patentId) return;
 
-      const patent = PATENTS.find((item) => item.id === patentId);
+      const patent = localizedPatents.find((item) => item.id === patentId);
       if (patent) {
         setActiveFilter(patent.filter);
         openPatent(patent);
@@ -1363,7 +1393,7 @@ export function PatentPageContent({ locale }: { locale: string }) {
     openPatentFromHash();
     window.addEventListener("hashchange", openPatentFromHash);
     return () => window.removeEventListener("hashchange", openPatentFromHash);
-  }, [openPatent, selectedPatent?.id]);
+  }, [localizedPatents, openPatent, selectedPatent?.id]);
 
   const closePatent = useCallback(() => {
     if (!selectedPatent || dialogState === "closing") return;
