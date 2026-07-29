@@ -104,7 +104,7 @@ Règles:
 - Le triptyque expertise utilise un conteneur plus large que le `wide` standard (`max-w-[1560px]`) et un vrai espacement entre les cartes (`gap` desktop autour de 24px). Éviter les chevauchements latéraux: la carte rouge `The process` reste au premier plan par sa shadow noire et son `z-index`, pas en mordant sur les cartes blanches.
 - La carte `The product` est la plus longue horizontalement afin que son texte respire et wrap le moins possible. Rééquilibrer les ratios de colonnes avant de réduire la typographie.
 - Les cartes expertise reprennent le hover des cartes de la page Expertise: shadow douce en `duration-300` et ligne d'accent qui s'allonge réellement (`width`) au hover, sans scale, grossissement ni déplacement global de la carte.
-- Le schéma `schema-process.png` dans la carte rouge doit être généreux et lisible. Privilégier une colonne image plus large avant de réduire le texte, tout en gardant environ 24px de respiration minimum entre la barre séparatrice et l'image.
+- Le schéma vectoriel `schema-process.svg` dans la carte rouge ne contient que le tracé et les pictogrammes. Ses libellés restent du vrai texte HTML en 42dot Sans DOMTEKNIKA afin de conserver exactement la typographie du site. Le schéma doit être généreux et lisible, avec une carte au ratio 1.75:1 dès le breakpoint `md` et environ 24px de respiration minimum entre la barre séparatrice et le diagramme.
 - Dans `The product`, les stats sont compactes et peuvent rester en 3 colonnes desktop, mais le drapeau suisse ne doit pas être positionné en absolu au-dessus du texte. Utiliser un petit layout flex pour garder `100%` et le drapeau séparés sans chevauchement.
 - Les logos `Trusted by` doivent être lisibles dans le marquee, pas réduits à des pictogrammes. Le bandeau gris reste compact, avec des logos visuellement plus grands et rapprochés sans chevauchement. Le défilement ne s'arrête pas au hover et les bords gauche/droite utilisent un fondu flouté modéré avec `mask-image`, afin que le blur disparaisse progressivement sans bord visible ni apparition trop précoce.
 - Le bloc `The idea` reste discret mais doit avoir un contour gris clair pour équilibrer les trois colonnes de la section expertise.
@@ -136,7 +136,10 @@ Assets principaux dans `public/assets`:
 - `technical-drawing-top.png`
 - `technical-drawing-bottom.png`
 - `product-1.png` à `product-4.png`
-- `schema-process.png`
+- `schema-process.svg` (asset vectoriel actif)
+- `schema-process.png` (source raster historique)
+- `expertise-value-agile.svg` (icône vectorielle active pour « Agilité & réactivité »)
+- `expertise-value-agile.png` (source Figma raster historique)
 - `logo-aventor.png`, `logo-logitech.png`, `logo-nestle.png`, `logo-nespresso.png`, `logo-softcar.png`, `logo-total.png`, `logo-stagvelo.png`, `logo-gin.png`
 - `alps-background.png`
 - `flag-switzerland.webp`

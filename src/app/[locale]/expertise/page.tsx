@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import {
+  Award,
+  BadgeCheck,
   ArrowRight,
   Box,
   Cpu,
   Factory,
+  Globe2,
   Hourglass,
   Lightbulb,
+  LockKeyhole,
   Monitor,
+  Target,
+  UsersRound,
 } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
@@ -20,6 +26,19 @@ import { Link } from "@/i18n/navigation";
 import { buildPageMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
+function RunningPersonIcon({ className }: { className?: string }) {
+  return (
+    <Image
+      alt=""
+      className={className}
+      height={57}
+      src="/assets/expertise-value-agile.svg"
+      unoptimized
+      width={54}
+    />
+  );
+}
+
 const EXPERTISE_ITEMS = [
   { key: "creativity", icon: Lightbulb },
   { key: "design", icon: Box },
@@ -30,17 +49,17 @@ const EXPERTISE_ITEMS = [
 ] as const;
 
 const VALUE_ITEMS = [
-  { key: "partner", icon: "expertise-value-partner", width: 67, height: 52 },
-  { key: "agile", icon: "expertise-value-agile", width: 54, height: 57 },
-  { key: "confidential", icon: "expertise-value-confidential", width: 45, height: 56 },
-  { key: "quality", icon: "expertise-value-quality", width: 55, height: 56 },
+  { key: "partner", icon: UsersRound },
+  { key: "agile", icon: RunningPersonIcon },
+  { key: "confidential", icon: LockKeyhole },
+  { key: "quality", icon: BadgeCheck },
 ] as const;
 
 const STATS = [
-  { key: "projects", icon: "expertise-stat-projects", width: 53, height: 60 },
-  { key: "years", icon: "expertise-stat-years", width: 53, height: 70 },
-  { key: "worldwide", icon: "expertise-stat-worldwide", width: 59, height: 60 },
-  { key: "industries", icon: "expertise-stat-industries", width: 60, height: 59 },
+  { key: "projects", icon: Box },
+  { key: "years", icon: Award },
+  { key: "worldwide", icon: Globe2 },
+  { key: "industries", icon: Target },
 ] as const;
 
 const TEAM_MEMBERS = [
@@ -111,7 +130,10 @@ function ExpertiseHero() {
         <div className="relative grid gap-12 md:block">
           <Reveal>
             <div className="flex items-center gap-3 text-[15px] font-medium leading-none text-muted-foreground md:text-[16px] min-[2400px]:!gap-5 min-[2400px]:!text-[26px]">
-              <span className="h-[3px] w-[34px] shrink-0 bg-brand min-[2400px]:!h-1 min-[2400px]:!w-[74px]" aria-hidden />
+              <span
+                className="h-[3px] w-[34px] shrink-0 bg-brand min-[2400px]:!h-1 min-[2400px]:!w-[74px]"
+                aria-hidden
+              />
               {t("eyebrow")}
             </div>
 
@@ -133,7 +155,10 @@ function ExpertiseHero() {
                 <p className="text-center text-[17px] font-medium leading-none text-muted-foreground md:text-[15px] min-[1800px]:!text-[20px] min-[2400px]:!text-[22px]">
                   {t("team")}
                 </p>
-                <span className="h-px w-16 bg-brand/55 min-[1800px]:!w-24 min-[2400px]:!w-28" aria-hidden />
+                <span
+                  className="h-px w-16 bg-brand/55 min-[1800px]:!w-24 min-[2400px]:!w-28"
+                  aria-hidden
+                />
               </div>
 
               <div
@@ -207,12 +232,18 @@ function ExpertiseGrid() {
   const t = useTranslations("ExpertisePage.Services");
 
   return (
-    <section className="bg-background pb-[118px] min-[1800px]:!pb-[140px] min-[2400px]:!pb-[160px]" aria-labelledby="expertise-services">
+    <section
+      className="bg-background pb-[118px] min-[1800px]:!pb-[140px] min-[2400px]:!pb-[160px]"
+      aria-labelledby="expertise-services"
+    >
       <Container size="wide">
         <div className="mx-auto max-w-[1080px] min-[1800px]:!max-w-[1480px] min-[2400px]:!max-w-[1600px]">
           <Reveal>
             <div className="flex items-center gap-3 text-[15px] font-medium text-muted-foreground min-[1800px]:!gap-4 min-[1800px]:!text-[18px]">
-              <span className="h-[3px] w-[34px] bg-brand min-[1800px]:!w-[44px]" aria-hidden />
+              <span
+                className="h-[3px] w-[34px] bg-brand min-[1800px]:!w-[44px]"
+                aria-hidden
+              />
               {t("eyebrow")}
             </div>
 
@@ -281,13 +312,17 @@ function BrainstormingSection() {
   const separatorIndex = Math.max(lead.indexOf(":"), lead.indexOf("："));
   const emphasizedLead =
     separatorIndex >= 0 ? lead.slice(0, separatorIndex + 1) : lead;
-  const remainingLead = separatorIndex >= 0 ? lead.slice(separatorIndex + 1) : "";
+  const remainingLead =
+    separatorIndex >= 0 ? lead.slice(separatorIndex + 1) : "";
 
   return (
     <div className="my-14 grid gap-8 md:my-20 lg:grid-cols-[0.82fr_1.18fr] lg:items-center min-[1800px]:!my-24 min-[1800px]:!grid-cols-[0.95fr_1.05fr] min-[1800px]:!gap-12">
       <div className="relative">
         <div className="flex items-center gap-3 text-[14px] font-medium text-muted-foreground min-[1800px]:!gap-4 min-[1800px]:!text-[17px]">
-          <span className="h-[3px] w-[34px] bg-brand min-[1800px]:!w-[44px]" aria-hidden />
+          <span
+            className="h-[3px] w-[34px] bg-brand min-[1800px]:!w-[44px]"
+            aria-hidden
+          />
           {t("title")}
         </div>
         <h3 className="domtek-text-shadow mt-7 max-w-[520px] text-[42px] font-extrabold leading-none text-foreground sm:text-[58px] min-[1800px]:!max-w-[700px] min-[1800px]:!text-[68px] min-[2400px]:!text-[74px]">
@@ -416,12 +451,17 @@ function AddedValueSection() {
         <div className="grid gap-7 lg:grid-cols-[1.4fr_0.95fr] lg:items-stretch min-[1800px]:!grid-cols-[1.25fr_1fr] min-[1800px]:!gap-8">
           <Reveal className="transform-gpu rounded-[7px] border border-border bg-white px-6 py-5 transition-shadow duration-300 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] md:px-9 md:py-6">
             <div className="flex items-center gap-4 text-[16px] font-extrabold leading-none text-foreground min-[1800px]:!text-[18px]">
-              <span className="h-[3px] w-[34px] bg-brand min-[1800px]:!w-[44px]" aria-hidden />
+              <span
+                className="h-[3px] w-[34px] bg-brand min-[1800px]:!w-[44px]"
+                aria-hidden
+              />
               {t("eyebrow")}
             </div>
 
             <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-0">
               {VALUE_ITEMS.map((item, index) => {
+                const Icon = item.icon;
+
                 return (
                   <Reveal
                     as="article"
@@ -429,12 +469,10 @@ function AddedValueSection() {
                     delay={index * 0.04}
                     className="group flex transform-gpu flex-col items-center rounded-[7px] border border-border bg-background/45 px-3 py-4 text-center transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-1 hover:border-brand/25 hover:shadow-[0_18px_24px_-18px_rgba(0,0,0,0.22)] sm:px-5 sm:py-5 lg:border-y-0 lg:border-r-0 lg:border-l lg:border-border lg:bg-transparent lg:px-7 lg:py-1 lg:shadow-none"
                   >
-                    <Image
-                      src={`/assets/${item.icon}.png`}
-                      alt=""
-                      width={item.width}
-                      height={item.height}
-                      className="h-9 w-9 object-contain transition-transform duration-300 group-hover:-translate-y-1 sm:h-11 sm:w-11 min-[1800px]:!size-12 min-[2400px]:!size-[52px]"
+                    <Icon
+                      aria-hidden="true"
+                      strokeWidth={1.65}
+                      className="h-9 w-9 text-brand transition-transform duration-300 group-hover:-translate-y-1 sm:h-11 sm:w-11 min-[1800px]:!size-12 min-[2400px]:!size-[52px]"
                     />
                     <h3 className="mt-4 flex min-h-[2.5em] w-full items-center justify-center text-[13px] font-extrabold leading-tight text-foreground sm:mt-5 sm:text-[15px] lg:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[19px]">
                       {t(`values.${item.key}.title` as never)}
@@ -466,6 +504,7 @@ function AddedValueSection() {
                 <div className="relative grid grid-cols-2 auto-rows-fr lg:h-full lg:grid-rows-2">
                   {STATS.map((stat, index) => {
                     const isIndustries = stat.key === "industries";
+                    const Icon = stat.icon;
 
                     return (
                       <div
@@ -473,18 +512,14 @@ function AddedValueSection() {
                         className={cn(
                           "group flex min-h-[122px] min-w-0 flex-col justify-center gap-1.5 py-4 sm:min-h-[138px] sm:gap-2 sm:py-5 lg:grid lg:min-h-0 lg:content-start lg:grid-rows-[50px_auto] lg:justify-stretch lg:py-0",
                           index % 2 === 0 ? "pr-3 sm:pr-6" : "pl-3 sm:pl-6",
-                          index < 2
-                            ? "lg:-translate-y-2 lg:pb-9"
-                            : "lg:pt-4",
+                          index < 2 ? "lg:-translate-y-2 lg:pb-9" : "lg:pt-4",
                         )}
                       >
                         <div className="flex h-[40px] items-center sm:h-[46px] lg:h-[50px]">
-                          <Image
-                            src={`/assets/${stat.icon}.png`}
-                            alt=""
-                            width={stat.width}
-                            height={stat.height}
-                            className="size-[34px] shrink-0 object-contain transition-transform duration-300 group-hover:-translate-y-1 sm:size-[40px] md:size-[42px] lg:size-[44px] min-[1800px]:!size-[46px] min-[2400px]:!size-[50px]"
+                          <Icon
+                            aria-hidden="true"
+                            strokeWidth={1.65}
+                            className="size-[34px] shrink-0 text-white transition-transform duration-300 group-hover:-translate-y-1 sm:size-[40px] md:size-[42px] lg:size-[44px] min-[1800px]:!size-[46px] min-[2400px]:!size-[50px]"
                           />
                         </div>
                         <div className="min-w-0 self-start">
@@ -494,9 +529,7 @@ function AddedValueSection() {
                                 "flex items-baseline gap-1.5 whitespace-nowrap sm:gap-2",
                             )}
                           >
-                            <strong
-                              className="block max-w-full text-[clamp(14px,3.8vw,18px)] font-extrabold leading-none tracking-normal sm:text-[clamp(17px,2.2vw,21px)] lg:text-[20px] min-[1800px]:!text-[22px] min-[2400px]:!text-[24px]"
-                            >
+                            <strong className="block max-w-full text-[clamp(14px,3.8vw,18px)] font-extrabold leading-none tracking-normal sm:text-[clamp(17px,2.2vw,21px)] lg:text-[20px] min-[1800px]:!text-[22px] min-[2400px]:!text-[24px]">
                               {t(`stats.${stat.key}.value` as never)}
                               {isIndustries && (
                                 <span className="ml-1.5 sm:ml-2">
@@ -549,10 +582,16 @@ function ExpertiseCta() {
         className="pointer-events-none absolute right-[-120px] top-12 hidden w-[52vw] max-w-[760px] opacity-60 md:block min-[1800px]:!right-[4vw] min-[1800px]:!w-[44vw] min-[1800px]:!max-w-[900px] min-[2400px]:!max-w-[1000px]"
       />
 
-      <Container size="wide" className="relative z-10 min-[1800px]:!max-w-[1600px] min-[2400px]:!max-w-[1900px]">
+      <Container
+        size="wide"
+        className="relative z-10 min-[1800px]:!max-w-[1600px] min-[2400px]:!max-w-[1900px]"
+      >
         <Reveal className="max-w-[560px] md:max-w-[860px] min-[1800px]:!max-w-[1040px] min-[2400px]:!max-w-[1200px]">
           <div className="flex items-center gap-3 text-[14px] font-medium text-muted-foreground min-[1800px]:!gap-4 min-[1800px]:!text-[18px]">
-            <span className="h-[3px] w-[34px] bg-brand min-[1800px]:!w-[44px]" aria-hidden />
+            <span
+              className="h-[3px] w-[34px] bg-brand min-[1800px]:!w-[44px]"
+              aria-hidden
+            />
             {t("eyebrow")}
           </div>
 
@@ -561,9 +600,7 @@ function ExpertiseCta() {
             className="domtek-text-shadow mt-8 text-[34px] font-extrabold leading-[1.05] text-foreground sm:text-[46px] md:text-[52px] min-[1800px]:!text-[62px] min-[2400px]:!text-[72px]"
           >
             <span className="text-brand">.</span>
-            {t("title")}
-            {" "}
-            <span className="text-brand">?</span>
+            {t("title")} <span className="text-brand">?</span>
           </h2>
 
           <p className="mt-5 max-w-[450px] text-[14px] font-medium leading-[1.4] text-muted-foreground min-[1800px]:!max-w-[600px] min-[1800px]:!text-[18px] min-[2400px]:!text-[20px]">

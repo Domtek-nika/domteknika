@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 
 import { Container } from "@/components/layout/container";
@@ -10,25 +10,19 @@ import { Reveal } from "@/components/providers/reveal";
 const CONTACT_CARDS = [
   {
     key: "location",
-    icon: "position",
-    width: 48,
-    height: 59,
+    icon: MapPin,
     href: "https://www.google.com/maps/search/?api=1&query=Chemin%20de%20Saint-Joux%2016B%2C%202520%20La%20Neuveville%2C%20Switzerland",
     external: true,
   },
   {
     key: "email",
-    icon: "mail",
-    width: 44,
-    height: 33,
+    icon: Mail,
     href: "mailto:contact@domteknika.ch",
     external: false,
   },
   {
     key: "phone",
-    icon: "tel",
-    width: 43,
-    height: 47,
+    icon: Phone,
     href: "tel:+41327517146",
     external: false,
   },
@@ -77,7 +71,10 @@ export function ContactPageContent() {
             <div>
               <Reveal>
                 <div className="flex items-center gap-3 text-[15px] font-medium leading-none text-muted-foreground md:text-[16px] min-[2400px]:!gap-5 min-[2400px]:!text-[26px]">
-                  <span className="h-[3px] w-[34px] shrink-0 bg-brand min-[2400px]:!h-1 min-[2400px]:!w-[74px]" aria-hidden />
+                  <span
+                    className="h-[3px] w-[34px] shrink-0 bg-brand min-[2400px]:!h-1 min-[2400px]:!w-[74px]"
+                    aria-hidden
+                  />
                   {t("Hero.eyebrow")}
                 </div>
 
@@ -95,47 +92,58 @@ export function ContactPageContent() {
               </Reveal>
 
               <div className="mt-6 grid gap-2.5 min-[1800px]:!mt-8 min-[1800px]:!gap-3.5 min-[2400px]:!mt-10 min-[2400px]:!gap-4">
-                {CONTACT_CARDS.map((card, index) => (
-                  <Reveal key={card.key} delay={0.08 * (index + 1)}>
-                    <a
-                      href={card.href}
-                      aria-label={t(`Cards.${card.key}.action`)}
-                      target={card.external ? "_blank" : undefined}
-                      rel={card.external ? "noreferrer" : undefined}
-                      className="group/contact-card relative grid min-h-[92px] transform-gpu grid-cols-[52px_1fr] items-center rounded-[10px] border border-border bg-white/85 px-5 py-3.5 pr-12 shadow-[0_12px_28px_rgba(0,0,0,0.04)] backdrop-blur-sm transition-[transform,box-shadow,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-brand/25 hover:bg-white hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/30 motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)] min-[1800px]:!min-h-[112px] min-[1800px]:!grid-cols-[64px_1fr] min-[1800px]:!rounded-[12px] min-[1800px]:!px-7 min-[1800px]:!py-5 min-[1800px]:!pr-16 min-[2400px]:!min-h-[128px] min-[2400px]:!grid-cols-[72px_1fr] min-[2400px]:!rounded-[14px] min-[2400px]:!px-8 min-[2400px]:!py-6 min-[2400px]:!pr-20"
-                    >
-                      <span
-                        className="absolute right-4 top-4 grid size-8 place-items-center rounded-full border border-border bg-white/90 text-foreground shadow-[0_8px_18px_rgba(0,0,0,0.06)] transition-[transform,background-color,color,border-color,box-shadow] duration-300 group-hover/contact-card:-translate-y-0.5 group-hover/contact-card:border-brand group-hover/contact-card:bg-brand group-hover/contact-card:text-white group-hover/contact-card:shadow-[0_10px_22px_rgba(227,6,19,0.22)] motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)] min-[1800px]:!right-5 min-[1800px]:!top-5 min-[1800px]:!size-10 min-[2400px]:!right-6 min-[2400px]:!top-6 min-[2400px]:!size-11"
-                        aria-hidden
+                {CONTACT_CARDS.map((card, index) => {
+                  const Icon = card.icon;
+
+                  return (
+                    <Reveal key={card.key} delay={0.08 * (index + 1)}>
+                      <a
+                        href={card.href}
+                        aria-label={t(`Cards.${card.key}.action`)}
+                        target={card.external ? "_blank" : undefined}
+                        rel={card.external ? "noreferrer" : undefined}
+                        className="group/contact-card relative grid min-h-[92px] transform-gpu grid-cols-[52px_1fr] items-center rounded-[10px] border border-border bg-white/85 px-5 py-3.5 pr-12 shadow-[0_12px_28px_rgba(0,0,0,0.04)] backdrop-blur-sm transition-[transform,box-shadow,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-brand/25 hover:bg-white hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/30 motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)] min-[1800px]:!min-h-[112px] min-[1800px]:!grid-cols-[64px_1fr] min-[1800px]:!rounded-[12px] min-[1800px]:!px-7 min-[1800px]:!py-5 min-[1800px]:!pr-16 min-[2400px]:!min-h-[128px] min-[2400px]:!grid-cols-[72px_1fr] min-[2400px]:!rounded-[14px] min-[2400px]:!px-8 min-[2400px]:!py-6 min-[2400px]:!pr-20"
                       >
-                        <ArrowUpRight className="size-4 min-[1800px]:!size-5 min-[2400px]:!size-6" aria-hidden />
-                      </span>
-                      <Image
-                        src={`/assets/contact-page/${card.icon}.png`}
-                        alt=""
-                        width={card.width}
-                        height={card.height}
-                        className="h-auto w-8 object-contain transition-transform duration-300 group-hover/contact-card:-translate-y-1 motion-reduce:transition-none min-[1800px]:!w-10 min-[2400px]:!w-11"
-                      />
-                      <div>
-                        <h2 className="text-[14px] font-extrabold leading-tight text-foreground min-[1800px]:!text-[17px] min-[2400px]:!text-[19px]">
-                          {t(`Cards.${card.key}.title`)}
-                        </h2>
-                        <p className="mt-1.5 whitespace-pre-line text-[12px] font-medium leading-[1.38] text-muted-foreground min-[1800px]:!mt-2 min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]">
-                          {t(`Cards.${card.key}.body`)}
-                        </p>
-                      </div>
-                    </a>
-                  </Reveal>
-                ))}
+                        <span
+                          className="absolute right-4 top-4 grid size-8 place-items-center rounded-full border border-border bg-white/90 text-foreground shadow-[0_8px_18px_rgba(0,0,0,0.06)] transition-[transform,background-color,color,border-color,box-shadow] duration-300 group-hover/contact-card:-translate-y-0.5 group-hover/contact-card:border-brand group-hover/contact-card:bg-brand group-hover/contact-card:text-white group-hover/contact-card:shadow-[0_10px_22px_rgba(227,6,19,0.22)] motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)] min-[1800px]:!right-5 min-[1800px]:!top-5 min-[1800px]:!size-10 min-[2400px]:!right-6 min-[2400px]:!top-6 min-[2400px]:!size-11"
+                          aria-hidden
+                        >
+                          <ArrowUpRight
+                            className="size-4 min-[1800px]:!size-5 min-[2400px]:!size-6"
+                            aria-hidden
+                          />
+                        </span>
+                        <Icon
+                          aria-hidden
+                          strokeWidth={1.8}
+                          className="size-8 shrink-0 text-brand transition-transform duration-300 group-hover/contact-card:-translate-y-1 motion-reduce:transition-none min-[1800px]:!size-10 min-[2400px]:!size-11"
+                        />
+                        <div>
+                          <h2 className="text-[14px] font-extrabold leading-tight text-foreground min-[1800px]:!text-[17px] min-[2400px]:!text-[19px]">
+                            {t(`Cards.${card.key}.title`)}
+                          </h2>
+                          <p className="mt-1.5 whitespace-pre-line text-[12px] font-medium leading-[1.38] text-muted-foreground min-[1800px]:!mt-2 min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]">
+                            {t(`Cards.${card.key}.body`)}
+                          </p>
+                        </div>
+                      </a>
+                    </Reveal>
+                  );
+                })}
               </div>
             </div>
 
-            <Reveal className="lg:pt-[234px] min-[1800px]:!pt-[260px] min-[2400px]:!pt-[310px]" delay={0.08}>
+            <Reveal
+              className="lg:pt-[234px] min-[1800px]:!pt-[260px] min-[2400px]:!pt-[310px]"
+              delay={0.08}
+            >
               <ContactForm copy={formCopy} locale={locale} />
             </Reveal>
 
-            <div className="hidden min-h-[410px] lg:block min-[1800px]:!min-h-[620px] min-[2400px]:!min-h-[720px]" aria-hidden />
+            <div
+              className="hidden min-h-[410px] lg:block min-[1800px]:!min-h-[620px] min-[2400px]:!min-h-[720px]"
+              aria-hidden
+            />
           </div>
         </Container>
       </section>
@@ -149,7 +157,10 @@ export function ContactPageContent() {
             <div className="grid gap-7 lg:grid-cols-[360px_1fr] lg:items-start min-[1800px]:!grid-cols-[480px_1fr] min-[1800px]:!gap-12 min-[2400px]:!grid-cols-[560px_1fr] min-[2400px]:!gap-16">
               <div>
                 <div className="flex items-center gap-3 text-[15px] font-medium leading-none text-muted-foreground md:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!gap-4 min-[2400px]:!text-[21px]">
-                  <span className="h-[3px] w-[34px] shrink-0 bg-brand min-[1800px]:!w-[44px] min-[2400px]:!h-1 min-[2400px]:!w-[52px]" aria-hidden />
+                  <span
+                    className="h-[3px] w-[34px] shrink-0 bg-brand min-[1800px]:!w-[44px] min-[2400px]:!h-1 min-[2400px]:!w-[52px]"
+                    aria-hidden
+                  />
                   {t("Map.eyebrow")}
                 </div>
                 <h2

@@ -4,14 +4,24 @@ import {
   ArrowRight,
   ArrowDownUp,
   ArrowUpRight,
+  CalendarDays,
+  CarFront,
   Check,
   ChevronLeft,
   ChevronRight,
+  Cog,
+  Cpu,
   Download,
   ExternalLink,
+  FileBadge2,
+  HeartPulse,
+  Layers3,
   RotateCw,
   Search,
+  Target,
+  type LucideIcon,
   X,
+  Zap,
   ZoomIn,
   ZoomOut,
 } from "lucide-react";
@@ -73,9 +83,7 @@ type PanelRect = {
 };
 
 type PatentStat = {
-  icon: string;
-  width: number;
-  height: number;
+  icon: LucideIcon;
   value: string;
   label: string;
 };
@@ -84,9 +92,7 @@ type PatentFilterOption = {
   key: FilterKey;
   label: string;
   count?: string;
-  icon?: string;
-  width?: number;
-  height?: number;
+  icon?: LucideIcon;
 };
 
 type PatentSortOption = {
@@ -133,138 +139,102 @@ function centeredPatentPanelRect(): PanelRect {
 const STATS: Record<PatentLocale, PatentStat[]> = {
   en: [
     {
-      icon: `${ASSET_BASE}/icon-patent.png`,
-      width: 26,
-      height: 42,
+      icon: FileBadge2,
       value: String(PATENT_STATS.total),
       label: "Patents verified",
     },
     {
-      icon: `${ASSET_BASE}/icon-industries.png`,
-      width: 43,
-      height: 45,
+      icon: Target,
       value: String(PATENT_STATS.categories),
       label: "Core industries",
     },
     {
-      icon: `${ASSET_BASE}/icon-calendar.png`,
-      width: 49,
-      height: 47,
+      icon: CalendarDays,
       value: `Since ${PATENT_STATS.since}`,
       label: "+25 Years of innovation",
     },
   ],
   fr: [
     {
-      icon: `${ASSET_BASE}/icon-patent.png`,
-      width: 26,
-      height: 42,
+      icon: FileBadge2,
       value: String(PATENT_STATS.total),
       label: "Brevets vérifiés",
     },
     {
-      icon: `${ASSET_BASE}/icon-industries.png`,
-      width: 43,
-      height: 45,
+      icon: Target,
       value: String(PATENT_STATS.categories),
       label: "Industries clés",
     },
     {
-      icon: `${ASSET_BASE}/icon-calendar.png`,
-      width: 49,
-      height: 47,
+      icon: CalendarDays,
       value: `Depuis ${PATENT_STATS.since}`,
       label: "+25 ans d'innovation",
     },
   ],
   de: [
     {
-      icon: `${ASSET_BASE}/icon-patent.png`,
-      width: 26,
-      height: 42,
+      icon: FileBadge2,
       value: String(PATENT_STATS.total),
       label: "Verifizierte Patente",
     },
     {
-      icon: `${ASSET_BASE}/icon-industries.png`,
-      width: 43,
-      height: 45,
+      icon: Target,
       value: String(PATENT_STATS.categories),
       label: "Kernbranchen",
     },
     {
-      icon: `${ASSET_BASE}/icon-calendar.png`,
-      width: 49,
-      height: 47,
+      icon: CalendarDays,
       value: `Seit ${PATENT_STATS.since}`,
       label: "+25 Jahre Innovation",
     },
   ],
   es: [
     {
-      icon: `${ASSET_BASE}/icon-patent.png`,
-      width: 26,
-      height: 42,
+      icon: FileBadge2,
       value: String(PATENT_STATS.total),
       label: "Patentes verificadas",
     },
     {
-      icon: `${ASSET_BASE}/icon-industries.png`,
-      width: 43,
-      height: 45,
+      icon: Target,
       value: String(PATENT_STATS.categories),
       label: "Industrias clave",
     },
     {
-      icon: `${ASSET_BASE}/icon-calendar.png`,
-      width: 49,
-      height: 47,
+      icon: CalendarDays,
       value: `Desde ${PATENT_STATS.since}`,
       label: "+25 años de innovación",
     },
   ],
   ko: [
     {
-      icon: `${ASSET_BASE}/icon-patent.png`,
-      width: 26,
-      height: 42,
+      icon: FileBadge2,
       value: String(PATENT_STATS.total),
       label: "검증된 특허",
     },
     {
-      icon: `${ASSET_BASE}/icon-industries.png`,
-      width: 43,
-      height: 45,
+      icon: Target,
       value: String(PATENT_STATS.categories),
       label: "핵심 산업",
     },
     {
-      icon: `${ASSET_BASE}/icon-calendar.png`,
-      width: 49,
-      height: 47,
+      icon: CalendarDays,
       value: `${PATENT_STATS.since}년부터`,
       label: "+25년의 혁신",
     },
   ],
   zh: [
     {
-      icon: `${ASSET_BASE}/icon-patent.png`,
-      width: 26,
-      height: 42,
+      icon: FileBadge2,
       value: String(PATENT_STATS.total),
       label: "已验证专利",
     },
     {
-      icon: `${ASSET_BASE}/icon-industries.png`,
-      width: 43,
-      height: 45,
+      icon: Target,
       value: String(PATENT_STATS.categories),
       label: "核心行业",
     },
     {
-      icon: `${ASSET_BASE}/icon-calendar.png`,
-      width: 49,
-      height: 47,
+      icon: CalendarDays,
       value: `自 ${PATENT_STATS.since} 年`,
       label: "+25 年创新",
     },
@@ -277,44 +247,32 @@ const FILTERS: Record<PatentLocale, PatentFilterOption[]> = {
     {
       key: "mobility",
       label: "Mobility",
-      icon: `${ASSET_BASE}/icon-mobility.png`,
-      width: 28,
-      height: 25,
+      icon: CarFront,
     },
     {
       key: "industrial",
       label: "Products",
-      icon: `${ASSET_BASE}/icon-industrial.png`,
-      width: 30,
-      height: 32,
+      icon: Cog,
     },
     {
       key: "medical",
       label: "Medical",
-      icon: `${ASSET_BASE}/icon-medical.png`,
-      width: 32,
-      height: 28,
+      icon: HeartPulse,
     },
     {
       key: "energy",
       label: "Energy",
-      icon: `${ASSET_BASE}/icon-energy.png`,
-      width: 23,
-      height: 35,
+      icon: Zap,
     },
     {
       key: "materials",
       label: "Materials",
-      icon: `${ASSET_BASE}/icon-materials.png`,
-      width: 34,
-      height: 33,
+      icon: Layers3,
     },
     {
       key: "digital",
       label: "Digital",
-      icon: `${ASSET_BASE}/icon-digital.png`,
-      width: 37,
-      height: 35,
+      icon: Cpu,
     },
   ],
   fr: [
@@ -322,44 +280,32 @@ const FILTERS: Record<PatentLocale, PatentFilterOption[]> = {
     {
       key: "mobility",
       label: "Mobilité",
-      icon: `${ASSET_BASE}/icon-mobility.png`,
-      width: 28,
-      height: 25,
+      icon: CarFront,
     },
     {
       key: "industrial",
       label: "Produits",
-      icon: `${ASSET_BASE}/icon-industrial.png`,
-      width: 30,
-      height: 32,
+      icon: Cog,
     },
     {
       key: "medical",
       label: "Médical",
-      icon: `${ASSET_BASE}/icon-medical.png`,
-      width: 32,
-      height: 28,
+      icon: HeartPulse,
     },
     {
       key: "energy",
       label: "Énergie",
-      icon: `${ASSET_BASE}/icon-energy.png`,
-      width: 23,
-      height: 35,
+      icon: Zap,
     },
     {
       key: "materials",
       label: "Matériaux",
-      icon: `${ASSET_BASE}/icon-materials.png`,
-      width: 34,
-      height: 33,
+      icon: Layers3,
     },
     {
       key: "digital",
       label: "Digital",
-      icon: `${ASSET_BASE}/icon-digital.png`,
-      width: 37,
-      height: 35,
+      icon: Cpu,
     },
   ],
   de: [
@@ -367,44 +313,32 @@ const FILTERS: Record<PatentLocale, PatentFilterOption[]> = {
     {
       key: "mobility",
       label: "Mobilität",
-      icon: `${ASSET_BASE}/icon-mobility.png`,
-      width: 28,
-      height: 25,
+      icon: CarFront,
     },
     {
       key: "industrial",
       label: "Produkte",
-      icon: `${ASSET_BASE}/icon-industrial.png`,
-      width: 30,
-      height: 32,
+      icon: Cog,
     },
     {
       key: "medical",
       label: "Medizin",
-      icon: `${ASSET_BASE}/icon-medical.png`,
-      width: 32,
-      height: 28,
+      icon: HeartPulse,
     },
     {
       key: "energy",
       label: "Energie",
-      icon: `${ASSET_BASE}/icon-energy.png`,
-      width: 23,
-      height: 35,
+      icon: Zap,
     },
     {
       key: "materials",
       label: "Materialien",
-      icon: `${ASSET_BASE}/icon-materials.png`,
-      width: 34,
-      height: 33,
+      icon: Layers3,
     },
     {
       key: "digital",
       label: "Digital",
-      icon: `${ASSET_BASE}/icon-digital.png`,
-      width: 37,
-      height: 35,
+      icon: Cpu,
     },
   ],
   es: [
@@ -412,44 +346,32 @@ const FILTERS: Record<PatentLocale, PatentFilterOption[]> = {
     {
       key: "mobility",
       label: "Movilidad",
-      icon: `${ASSET_BASE}/icon-mobility.png`,
-      width: 28,
-      height: 25,
+      icon: CarFront,
     },
     {
       key: "industrial",
       label: "Productos",
-      icon: `${ASSET_BASE}/icon-industrial.png`,
-      width: 30,
-      height: 32,
+      icon: Cog,
     },
     {
       key: "medical",
       label: "Médico",
-      icon: `${ASSET_BASE}/icon-medical.png`,
-      width: 32,
-      height: 28,
+      icon: HeartPulse,
     },
     {
       key: "energy",
       label: "Energía",
-      icon: `${ASSET_BASE}/icon-energy.png`,
-      width: 23,
-      height: 35,
+      icon: Zap,
     },
     {
       key: "materials",
       label: "Materiales",
-      icon: `${ASSET_BASE}/icon-materials.png`,
-      width: 34,
-      height: 33,
+      icon: Layers3,
     },
     {
       key: "digital",
       label: "Digital",
-      icon: `${ASSET_BASE}/icon-digital.png`,
-      width: 37,
-      height: 35,
+      icon: Cpu,
     },
   ],
   ko: [
@@ -457,44 +379,32 @@ const FILTERS: Record<PatentLocale, PatentFilterOption[]> = {
     {
       key: "mobility",
       label: "모빌리티",
-      icon: `${ASSET_BASE}/icon-mobility.png`,
-      width: 28,
-      height: 25,
+      icon: CarFront,
     },
     {
       key: "industrial",
       label: "제품",
-      icon: `${ASSET_BASE}/icon-industrial.png`,
-      width: 30,
-      height: 32,
+      icon: Cog,
     },
     {
       key: "medical",
       label: "의료",
-      icon: `${ASSET_BASE}/icon-medical.png`,
-      width: 32,
-      height: 28,
+      icon: HeartPulse,
     },
     {
       key: "energy",
       label: "에너지",
-      icon: `${ASSET_BASE}/icon-energy.png`,
-      width: 23,
-      height: 35,
+      icon: Zap,
     },
     {
       key: "materials",
       label: "소재",
-      icon: `${ASSET_BASE}/icon-materials.png`,
-      width: 34,
-      height: 33,
+      icon: Layers3,
     },
     {
       key: "digital",
       label: "디지털",
-      icon: `${ASSET_BASE}/icon-digital.png`,
-      width: 37,
-      height: 35,
+      icon: Cpu,
     },
   ],
   zh: [
@@ -502,62 +412,43 @@ const FILTERS: Record<PatentLocale, PatentFilterOption[]> = {
     {
       key: "mobility",
       label: "出行",
-      icon: `${ASSET_BASE}/icon-mobility.png`,
-      width: 28,
-      height: 25,
+      icon: CarFront,
     },
     {
       key: "industrial",
       label: "产品",
-      icon: `${ASSET_BASE}/icon-industrial.png`,
-      width: 30,
-      height: 32,
+      icon: Cog,
     },
     {
       key: "medical",
       label: "医疗",
-      icon: `${ASSET_BASE}/icon-medical.png`,
-      width: 32,
-      height: 28,
+      icon: HeartPulse,
     },
     {
       key: "energy",
       label: "能源",
-      icon: `${ASSET_BASE}/icon-energy.png`,
-      width: 23,
-      height: 35,
+      icon: Zap,
     },
     {
       key: "materials",
       label: "材料",
-      icon: `${ASSET_BASE}/icon-materials.png`,
-      width: 34,
-      height: 33,
+      icon: Layers3,
     },
     {
       key: "digital",
       label: "数字",
-      icon: `${ASSET_BASE}/icon-digital.png`,
-      width: 37,
-      height: 35,
+      icon: Cpu,
     },
   ],
 };
 
-const CARD_ICON: Record<
-  PatentFilterKey,
-  { src: string; width: number; height: number }
-> = {
-  mobility: { src: `${ASSET_BASE}/icon-mobility.png`, width: 28, height: 25 },
-  industrial: {
-    src: `${ASSET_BASE}/icon-industrial.png`,
-    width: 30,
-    height: 32,
-  },
-  medical: { src: `${ASSET_BASE}/icon-medical.png`, width: 39, height: 34 },
-  energy: { src: `${ASSET_BASE}/icon-energy.png`, width: 23, height: 35 },
-  materials: { src: `${ASSET_BASE}/icon-materials.png`, width: 34, height: 33 },
-  digital: { src: `${ASSET_BASE}/icon-digital.png`, width: 37, height: 35 },
+const CARD_ICON: Record<PatentFilterKey, LucideIcon> = {
+  mobility: CarFront,
+  industrial: Cog,
+  medical: HeartPulse,
+  energy: Zap,
+  materials: Layers3,
+  digital: Cpu,
 };
 const COPY: Record<
   PatentLocale,
@@ -1885,13 +1776,14 @@ export function PatentPageContent({ locale }: { locale: string }) {
               {filters.map((filter) => {
                 const active = activeFilter === filter.key;
                 const count = getFilterCount(filter.key);
+                const FilterIcon = filter.icon;
                 return (
                   <button
                     key={filter.key}
                     type="button"
                     className={cn(
                       "group/filter grid h-[48px] min-w-0 items-center gap-3 rounded-[4px] border border-border bg-white px-4 text-left shadow-[0_2px_6px_rgba(0,0,0,0.05)] outline-none transition-[translate,background-color,border-color,box-shadow,color] duration-500 hover:-translate-y-1 hover:border-brand/35 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)] focus-visible:ring-2 focus-visible:ring-brand/35 [transition-timing-function:var(--ease-smooth)] min-[1800px]:!h-[58px] min-[1800px]:!px-5 min-[2400px]:!h-[64px] min-[2400px]:!px-6",
-                      filter.icon
+                      FilterIcon
                         ? "grid-cols-[auto_1fr]"
                         : "place-items-center text-center",
                       active &&
@@ -1900,23 +1792,20 @@ export function PatentPageContent({ locale }: { locale: string }) {
                     aria-pressed={active}
                     onClick={() => setActiveFilter(filter.key)}
                   >
-                    {filter.icon && (
-                      <Image
-                        src={filter.icon}
-                        alt=""
-                        width={filter.width}
-                        height={filter.height}
-                        unoptimized
+                    {FilterIcon && (
+                      <FilterIcon
+                        aria-hidden
+                        strokeWidth={1.8}
                         className={cn(
-                          "object-contain transition-[filter,transform] duration-500 group-hover/filter:-translate-y-0.5 group-hover/filter:scale-105 [transition-timing-function:var(--ease-smooth)]",
-                          active && "brightness-0 invert",
+                          "size-7 shrink-0 text-brand transition-transform duration-500 group-hover/filter:-translate-y-0.5 group-hover/filter:scale-105 [transition-timing-function:var(--ease-smooth)]",
+                          active && "text-white",
                         )}
                       />
                     )}
                     <span
                       className={cn(
                         "grid min-w-0",
-                        !filter.icon && "place-items-center text-center",
+                        !FilterIcon && "place-items-center text-center",
                       )}
                     >
                       <strong className="text-[12px] font-extrabold leading-none min-[1800px]:!text-[14px] min-[2400px]:!text-[16px]">
@@ -2137,14 +2026,16 @@ export function PatentPageContent({ locale }: { locale: string }) {
                   </div>
                 )}
                 <div className="absolute left-6 top-6 grid size-12 place-items-center rounded-[6px] bg-white shadow-[0_12px_28px_rgba(0,0,0,0.08)]">
-                  <Image
-                    src={CARD_ICON[selectedPatent.filter].src}
-                    alt=""
-                    width={CARD_ICON[selectedPatent.filter].width}
-                    height={CARD_ICON[selectedPatent.filter].height}
-                    unoptimized
-                    className="object-contain"
-                  />
+                  {(() => {
+                    const SelectedPatentIcon = CARD_ICON[selectedPatent.filter];
+                    return (
+                      <SelectedPatentIcon
+                        aria-hidden
+                        strokeWidth={1.8}
+                        className="size-8 text-brand"
+                      />
+                    );
+                  })()}
                 </div>
                 <div className="absolute bottom-20 left-6 right-6">
                   <strong className="block max-w-[360px] text-[25px] font-extrabold leading-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]">
@@ -2344,35 +2235,32 @@ function PatentStatsBar({ stats }: { stats: PatentStat[] }) {
       className="relative z-20 mx-auto mt-10 w-full max-w-[720px] md:absolute md:bottom-9 md:left-1/2 md:mt-0 md:-translate-x-1/2 min-[1800px]:!bottom-12 min-[1800px]:!max-w-[1000px] min-[2400px]:!bottom-14 min-[2400px]:!max-w-[1180px]"
     >
       <div className="grid overflow-hidden rounded-[9px] border border-border/80 bg-white shadow-[0_7px_14px_rgba(0,0,0,0.20)] sm:grid-cols-3">
-        {stats.map((stat, index) => (
-          <article
-            key={stat.label}
-            className={cn(
-              "group/stat grid min-h-[74px] grid-cols-[34px_1fr] items-center gap-3 px-5 py-3 transition-shadow duration-500 hover:z-10 hover:shadow-[0_18px_42px_rgba(0,0,0,0.08)] [transition-timing-function:var(--ease-smooth)] min-[1800px]:!min-h-[90px] min-[1800px]:!grid-cols-[44px_1fr] min-[1800px]:!gap-4 min-[1800px]:!px-7 min-[1800px]:!py-4 min-[2400px]:!min-h-[104px] min-[2400px]:!grid-cols-[50px_1fr] min-[2400px]:!px-8",
-              index < stats.length - 1 &&
-                "border-b border-border sm:border-b-0 sm:border-r",
-            )}
-          >
-            <span className="grid size-8 place-items-center transition-transform duration-500 group-hover/stat:-translate-y-1 [transition-timing-function:var(--ease-smooth)] min-[1800px]:!size-10 min-[2400px]:!size-12">
-              <Image
-                src={stat.icon}
-                alt=""
-                width={stat.width}
-                height={stat.height}
-                unoptimized
-                className="object-contain"
-              />
-            </span>
-            <div className="min-w-0">
-              <strong className="block text-[24px] font-extrabold leading-none text-foreground min-[1800px]:!text-[30px] min-[2400px]:!text-[34px]">
-                {stat.value}
-              </strong>
-              <span className="mt-1 block text-[10px] font-extrabold leading-none text-foreground/80 min-[1800px]:!mt-2 min-[1800px]:!text-[13px] min-[2400px]:!text-[15px]">
-                {stat.label}
+        {stats.map((stat, index) => {
+          const Icon = stat.icon;
+
+          return (
+            <article
+              key={stat.label}
+              className={cn(
+                "group/stat grid min-h-[74px] grid-cols-[34px_1fr] items-center gap-3 px-5 py-3 transition-shadow duration-500 hover:z-10 hover:shadow-[0_18px_42px_rgba(0,0,0,0.08)] [transition-timing-function:var(--ease-smooth)] min-[1800px]:!min-h-[90px] min-[1800px]:!grid-cols-[44px_1fr] min-[1800px]:!gap-4 min-[1800px]:!px-7 min-[1800px]:!py-4 min-[2400px]:!min-h-[104px] min-[2400px]:!grid-cols-[50px_1fr] min-[2400px]:!px-8",
+                index < stats.length - 1 &&
+                  "border-b border-border sm:border-b-0 sm:border-r",
+              )}
+            >
+              <span className="grid size-8 place-items-center text-brand transition-transform duration-500 group-hover/stat:-translate-y-1 [transition-timing-function:var(--ease-smooth)] min-[1800px]:!size-10 min-[2400px]:!size-12">
+                <Icon aria-hidden strokeWidth={1.8} className="size-full" />
               </span>
-            </div>
-          </article>
-        ))}
+              <div className="min-w-0">
+                <strong className="block text-[24px] font-extrabold leading-none text-foreground min-[1800px]:!text-[30px] min-[2400px]:!text-[34px]">
+                  {stat.value}
+                </strong>
+                <span className="mt-1 block text-[10px] font-extrabold leading-none text-foreground/80 min-[1800px]:!mt-2 min-[1800px]:!text-[13px] min-[2400px]:!text-[15px]">
+                  {stat.label}
+                </span>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </Reveal>
   );
@@ -3299,7 +3187,7 @@ function PatentCard({
   nextDrawingLabel: string;
   onOpen: (patent: PatentItem) => void;
 }) {
-  const icon = CARD_ICON[patent.filter];
+  const PatentCategoryIcon = CARD_ICON[patent.filter];
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const safeActiveImageIndex = patent.images[activeImageIndex]
     ? activeImageIndex
@@ -3336,13 +3224,10 @@ function PatentCard({
           />
         ) : (
           <span className="absolute inset-0 grid place-items-center">
-            <Image
-              src={icon.src}
-              alt=""
-              width={icon.width}
-              height={icon.height}
-              unoptimized
-              className="object-contain opacity-55"
+            <PatentCategoryIcon
+              aria-hidden
+              strokeWidth={1.7}
+              className="size-12 text-brand opacity-55"
             />
           </span>
         )}
@@ -3383,13 +3268,9 @@ function PatentCard({
             className="grid size-6 place-items-center min-[390px]:size-7 min-[1800px]:!size-8 min-[2400px]:!size-9"
             aria-hidden
           >
-            <Image
-              src={icon.src}
-              alt=""
-              width={icon.width}
-              height={icon.height}
-              unoptimized
-              className="object-contain transition-transform duration-500 group-hover/patent:scale-110 group-focus-within/patent:scale-110 [transition-timing-function:var(--ease-smooth)]"
+            <PatentCategoryIcon
+              strokeWidth={1.8}
+              className="size-full text-brand transition-transform duration-500 group-hover/patent:scale-110 group-focus-within/patent:scale-110 [transition-timing-function:var(--ease-smooth)]"
             />
           </span>
           <span className="max-w-none text-[12px] font-extrabold leading-none text-brand min-[390px]:text-[13px] lg:text-[14px] min-[1800px]:!text-[16px] min-[2400px]:!text-[18px]">

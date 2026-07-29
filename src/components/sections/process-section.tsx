@@ -41,7 +41,7 @@ export function ProcessSection() {
           <Reveal
             as="article"
             delay={0.08}
-            className="group relative z-20 my-0 min-h-[210px] overflow-hidden rounded-[15px] bg-brand p-4 text-white transition-shadow duration-300 md:min-h-[250px] md:p-6 lg:min-h-[220px] lg:p-5 lg:pt-6 lg:shadow-[0_24px_42px_rgba(0,0,0,0.24)] lg:hover:shadow-[0_34px_70px_rgba(0,0,0,0.28)] xl:min-h-[290px] min-[1800px]:!min-h-[310px] min-[1800px]:!rounded-[18px] min-[1800px]:!p-6 min-[2300px]:!min-h-[350px] min-[2300px]:!p-7"
+            className="group relative z-20 my-0 min-h-[210px] overflow-hidden rounded-[15px] bg-brand p-4 text-white transition-shadow duration-300 md:aspect-[1.75] md:min-h-[250px] md:p-6 lg:min-h-[220px] lg:p-5 lg:pt-6 lg:shadow-[0_24px_42px_rgba(0,0,0,0.24)] lg:hover:shadow-[0_34px_70px_rgba(0,0,0,0.28)] min-[1800px]:!rounded-[18px] min-[1800px]:!p-6 min-[2300px]:!p-7"
           >
             <div className="grid h-full grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] items-stretch gap-2 sm:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] sm:gap-3 md:grid-cols-[0.72fr_1.28fr] lg:grid-cols-[0.82fr_1.38fr] min-[1800px]:!gap-3 min-[2300px]:!gap-4">
               <div>
@@ -58,14 +58,8 @@ export function ProcessSection() {
               </div>
 
               <div className="relative h-full min-h-[180px] border-l border-white/70 sm:min-h-[190px] lg:min-h-[150px] min-[1800px]:!min-h-[180px] min-[2300px]:!min-h-[200px]">
-                <div className="absolute inset-y-0 left-0 right-0 sm:left-1 md:left-2 lg:left-8 xl:left-3">
-                  <Image
-                    src="/assets/schema-process.png"
-                    alt=""
-                    fill
-                    sizes="(min-width: 2300px) 400px, (min-width: 1800px) 360px, 320px"
-                    className="scale-[1.28] object-contain object-center sm:scale-[1.24] md:scale-[1.2] lg:scale-[1.1] xl:scale-[1.2] min-[1800px]:scale-[1.22] min-[2300px]:scale-[1.24]"
-                  />
+                <div className="absolute inset-y-0 left-3 right-0 sm:left-4 md:left-5 lg:left-6 xl:left-5 min-[1800px]:!left-7 min-[2300px]:!left-8">
+                  <ProcessDiagram />
                 </div>
               </div>
             </div>
@@ -112,6 +106,52 @@ export function ProcessSection() {
         </div>
       </Container>
     </section>
+  );
+}
+
+const processSteps = [
+  { label: "Creativity Session", top: "15.9%" },
+  { label: "Patents Research", top: "28.3%" },
+  { label: "Concept Design", top: "40.8%" },
+  { label: "Prototyping", top: "53.2%" },
+  { label: "Testing & validation", top: "65.7%" },
+] as const;
+
+function ProcessDiagram() {
+  return (
+    <div className="flex h-full items-center justify-center" aria-hidden>
+      <div
+        className="relative h-full max-w-full origin-center aspect-[334/370] scale-[0.96] sm:scale-[1.1] md:scale-[1.2] lg:scale-[1.18] xl:-translate-x-2.5 xl:scale-[1.22] min-[1800px]:!scale-[1.22] min-[2300px]:!scale-[1.24]"
+        style={{ containerType: "size" }}
+      >
+        <Image
+          src="/assets/schema-process.svg"
+          alt=""
+          fill
+          unoptimized
+          sizes="(min-width: 2300px) 430px, (min-width: 1800px) 390px, (min-width: 1280px) 280px, 45vw"
+          className="object-contain"
+        />
+
+        <span className="absolute left-[8.7%] top-[13.2%] whitespace-nowrap text-[clamp(9px,5.4cqh,24px)] font-extrabold leading-none tracking-[-0.025em] text-white">
+          IDEA
+        </span>
+
+        {processSteps.map((step) => (
+          <span
+            key={step.label}
+            className="absolute left-[67.7%] whitespace-nowrap text-[5.5px] font-semibold leading-none tracking-[-0.02em] text-white sm:text-[7.5px] md:text-[15px] lg:text-[9px] xl:text-[10px] min-[1800px]:!text-[12px] min-[2300px]:!text-[14px]"
+            style={{ top: step.top }}
+          >
+            {step.label}
+          </span>
+        ))}
+
+        <span className="absolute left-[8.4%] top-[84.1%] whitespace-nowrap text-[clamp(9px,5.4cqh,24px)] font-extrabold leading-none tracking-[-0.025em] text-white">
+          PRODUCT
+        </span>
+      </div>
+    </div>
   );
 }
 

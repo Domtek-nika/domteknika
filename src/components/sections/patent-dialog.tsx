@@ -1,13 +1,20 @@
 "use client";
 
 import {
+  CarFront,
   ChevronLeft,
   ChevronRight,
+  Cog,
+  Cpu,
   Download,
   ExternalLink,
+  HeartPulse,
+  Layers3,
   RotateCw,
   Search,
+  type LucideIcon,
   X,
+  Zap,
   ZoomIn,
   ZoomOut,
 } from "lucide-react";
@@ -83,20 +90,13 @@ const ASSET_BASE = "/assets/patent-page";
 const MODAL_TRANSITION_MS = 320;
 const MODAL_CLOSE_FALLBACK_MS = 360;
 
-const CARD_ICON: Record<
-  PatentFilterKey,
-  { src: string; width: number; height: number }
-> = {
-  mobility: { src: `${ASSET_BASE}/icon-mobility.png`, width: 28, height: 25 },
-  industrial: {
-    src: `${ASSET_BASE}/icon-industrial.png`,
-    width: 30,
-    height: 32,
-  },
-  medical: { src: `${ASSET_BASE}/icon-medical.png`, width: 39, height: 34 },
-  energy: { src: `${ASSET_BASE}/icon-energy.png`, width: 23, height: 35 },
-  materials: { src: `${ASSET_BASE}/icon-materials.png`, width: 34, height: 33 },
-  digital: { src: `${ASSET_BASE}/icon-digital.png`, width: 37, height: 35 },
+const CARD_ICON: Record<PatentFilterKey, LucideIcon> = {
+  mobility: CarFront,
+  industrial: Cog,
+  medical: HeartPulse,
+  energy: Zap,
+  materials: Layers3,
+  digital: Cpu,
 };
 
 const CATEGORY_LABELS: Record<PatentLocale, Record<PatentFilterKey, string>> = {
@@ -396,6 +396,7 @@ export function PatentDialog({
   const resolvedLocale = resolvePatentLocale(locale);
   const copy = PATENT_DIALOG_COPY[resolvedLocale];
   const renderedPatent = patent;
+  const PatentCategoryIcon = CARD_ICON[renderedPatent.filter];
   const [selectedPatentDetails, setSelectedPatentDetails] =
     useState<PatentDetail | null>(null);
   const [detailError, setDetailError] = useState(false);
@@ -1010,13 +1011,10 @@ export function PatentDialog({
               </div>
             )}
             <div className="absolute left-6 top-6 grid size-12 place-items-center rounded-[6px] bg-white shadow-[0_12px_28px_rgba(0,0,0,0.08)]">
-              <Image
-                src={CARD_ICON[renderedPatent.filter].src}
-                alt=""
-                width={CARD_ICON[renderedPatent.filter].width}
-                height={CARD_ICON[renderedPatent.filter].height}
-                unoptimized
-                className="object-contain"
+              <PatentCategoryIcon
+                aria-hidden
+                strokeWidth={1.8}
+                className="size-8 text-brand"
               />
             </div>
             <div className="absolute bottom-6 left-6 right-6">

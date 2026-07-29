@@ -5,16 +5,21 @@ import {
   ArrowDownUp,
   ArrowRight,
   ArrowUpRight,
+  Box,
   Building2,
+  CalendarDays,
   CarFront,
   Check,
   ChevronLeft,
   ChevronRight,
   Dumbbell,
+  Globe2,
   HeartPulse,
   HousePlug,
   Search,
   Shapes,
+  ShieldCheck,
+  Target,
   Watch as WatchIcon,
   X,
   type LucideIcon,
@@ -474,9 +479,7 @@ type ProjectStat = {
   label: string;
   value: string;
   detail?: string;
-  icon: string;
-  width: number;
-  height: number;
+  icon: LucideIcon;
 };
 
 type ProjectFilterOption = {
@@ -780,7 +783,8 @@ export const PROJECTS: Project[] = [
     description:
       "Three-wheeled technology demonstrator developed for Hutchinson and the Total group, from the chassis and propulsion electronics to the rotomoulded body panels.",
     image: "/assets/projects/totalcar-concept/total-car-01.webp",
-    imageAlt: "Green Total Car three-wheeled technology demonstrator on display",
+    imageAlt:
+      "Green Total Car three-wheeled technology demonstrator on display",
     tags: ["#2011", "#Demonstrator", "#ThreeWheeler", "#Rotomoulding"],
     overview:
       "Commissioned by Hutchinson, then part of the Total group, DOMTEKNIKA developed a complete three-wheeled technology demonstrator. The team designed the chassis, propulsion electronics and rotomoulded body panels.",
@@ -793,7 +797,8 @@ export const PROJECTS: Project[] = [
     description:
       "Non-electric at-home tooth whitening device inspired by professional Airflow systems and powered by a single-use treatment cartridge.",
     image: "/assets/projects/airsmile/airsmile-01.webp",
-    imageAlt: "At-home tooth whitening device and single-use treatment cartridge",
+    imageAlt:
+      "At-home tooth whitening device and single-use treatment cartridge",
     tags: ["#2007", "#Dental", "#Device"],
     overview:
       "Designed to reproduce at home the principle of Airflow devices used in dental practices, the device works without electricity. A single-use consumable supplies the propellant gases and active agents required for one treatment. DOMTEKNIKA developed the complete product, built functional prototypes, carried out performance testing and prepared the design for industrialization.",
@@ -808,28 +813,28 @@ export const PROJECTS: Project[] = [
     id: "flex-drill",
     category: "Medical",
     filter: "medical",
-    title: "Flex Drill",
+    title: "Flexible orthopaedic drill",
     description:
-      "Flexible drill accessory concept with shaped polymer guide, prototype validation and stress-analysis views.",
+      "Low-cost polymer instrument developed to replace the existing steel instrument, which is expensive to manufacture and difficult to sterilize.",
     image: "/assets/projects/flex-drill/flex-drill-01.webp",
-    imageAlt: "Blue flexible drill guide concept",
-    tags: ["#2014", "#Tooling", "#Analysis"],
+    imageAlt: "Flexible orthopaedic drill with a blue polymer body",
+    tags: ["#2014", "#Orthopaedics", "#Polymer"],
     overview:
-      "Flex Drill explores a curved drill-guide architecture, moving from mechanical stress simulation to physical prototype and product rendering.",
+      "DOMTEKNIKA researched a new concept, fully developed the selected solution, produced functional prototypes and carried out a production-cost analysis.",
   },
   {
     id: "biome-staple-applicator",
     category: "Medical",
     filter: "medical",
-    title: "Biome staple applicator",
+    title: "ZipFix sternal implant application instrument",
     description:
-      "Handheld applicator concept developed through sketches, structural analysis and printed prototypes.",
+      "Low-cost, single-use polymer instrument developed to replace the existing multi-use steel instrument, which is expensive to manufacture and maintain and carries contamination risks through reuse.",
     image:
       "/assets/projects/biome-staple-applicator/biome-staple-applicator-01.webp",
-    imageAlt: "White and red biomedical staple applicator render",
-    tags: ["#2013", "#Medical", "#Prototype"],
+    imageAlt: "White and red ZipFix sternal implant application instrument",
+    tags: ["#2013", "#SternalImplant", "#SingleUse"],
     overview:
-      "The applicator shows the full loop from ideation sketch and ergonomic layout to finite element checks and prototype parts for a handheld biomedical tool.",
+      "DOMTEKNIKA researched a new concept, fully developed the selected solution, produced functional prototypes and managed the manufacture of an initial series of injection-moulded parts.",
     relatedPatents: [
       relatedPatent(
         "US2015342657A1",
@@ -1052,8 +1057,7 @@ export const PROJECTS: Project[] = [
     title: "Velum Sky amphitheatre screen",
     description:
       "Custom-engineered system for raising and lowering the giant screen in the Velum Sky amphitheatre in Geneva.",
-    image:
-      "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp",
+    image: "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp",
     imageAlt:
       "Giant screen lifting system in the Velum Sky amphitheatre in Geneva",
     tags: ["#2025", "#Building", "#Engineering"],
@@ -1066,37 +1070,27 @@ const STATS: ProjectStat[] = [
   {
     label: "Projects delivered",
     value: "100+",
-    icon: "/assets/project-page/stat-projects-delivered.png",
-    width: 49,
-    height: 55,
+    icon: Box,
   },
   {
     label: "Project support",
     value: "End-to-end",
-    icon: "/assets/project-page/stat-project-support.png",
-    width: 45,
-    height: 52,
+    icon: ShieldCheck,
   },
   {
     label: "Engineering expertise",
     value: "Multi-sector",
-    icon: "/assets/project-page/stat-core-industries.png",
-    width: 53,
-    height: 50,
+    icon: Target,
   },
   {
     label: "International projects",
     value: "Worldwide",
-    icon: "/assets/project-page/stat-worldwide.png",
-    width: 51,
-    height: 50,
+    icon: Globe2,
   },
   {
     label: "Swiss engineering",
     value: "Since 1998",
-    icon: "/assets/patent-page/icon-calendar.png",
-    width: 49,
-    height: 47,
+    icon: CalendarDays,
   },
 ];
 
@@ -1146,8 +1140,7 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     category: "Mobilité",
     description:
       "Concept électrique à deux roues entièrement conçu et prototypé par DOMTEKNIKA, couvrant l'ensemble du développement électrique et mécanique.",
-    imageAlt:
-      "Étude du concept électrique à deux roues Angel Interceptor",
+    imageAlt: "Étude du concept électrique à deux roues Angel Interceptor",
     overview:
       "Lancé vers 2008, Angel Interceptor est un projet interne de DOMTEKNIKA couvrant la conception électrique et mécanique complète ainsi que le prototypage. Contrairement à Aventor, il est resté au sein de DOMTEKNIKA et n'a pas donné lieu à la création d'une startup séparée.",
   },
@@ -1220,20 +1213,22 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
   },
   "flex-drill": {
     category: "Médical",
+    title: "Foret orthopédique flexible",
     description:
-      "Concept d'accessoire de perçage flexible avec guide polymère, validation prototype et vues d'analyse de contraintes.",
-    imageAlt: "Concept de guide de perçage flexible bleu",
+      "Instrument polymère à bas coût développé pour remplacer l’instrument actuel en acier, cher à produire et difficile à stériliser.",
+    imageAlt: "Foret orthopédique flexible avec corps polymère bleu",
     overview:
-      "Flex Drill explore une architecture de guide de perçage courbe, depuis la simulation mécanique jusqu'au prototype physique et au rendu produit.",
+      "DOMTEKNIKA a recherché un nouveau concept, développé intégralement la solution retenue, réalisé des prototypes fonctionnels et mené une analyse des coûts de production.",
   },
   "biome-staple-applicator": {
     category: "Médical",
-    title: "Applicateur d'agrafes biomédicales",
+    title: "Instrument d’application d’implants sternaux ZipFix",
     description:
-      "Concept d'applicateur portatif développé par croquis, analyse structurelle et prototypes imprimés.",
-    imageAlt: "Rendu d'applicateur d'agrafes biomédical blanc et rouge",
+      "Instrument polymère à bas coût et à usage unique, développé pour remplacer l’instrument actuel multiusage en acier, cher à produire, coûteux en maintenance et présentant des risques de contamination liés à sa réutilisation.",
+    imageAlt:
+      "Instrument blanc et rouge d’application d’implants sternaux ZipFix",
     overview:
-      "L'applicateur montre la boucle complète: idéation, architecture ergonomique, vérifications par éléments finis et pièces prototype pour un outil biomédical portatif.",
+      "DOMTEKNIKA a recherché un nouveau concept, développé intégralement la solution retenue, réalisé des prototypes fonctionnels et piloté la fabrication d’une première série de pièces injectées.",
     relatedPatents: [
       relatedPatent(
         "US2015342657A1",
@@ -1269,7 +1264,8 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     title: "Distributeur automatique de nourriture pour chat",
     description:
       "Distributeur automatique de pâtée pour les absences de plusieurs jours, avec capsules portionnées et gestion des déchets limitant les odeurs.",
-    imageAlt: "Prototype fonctionnel de distributeur automatique de nourriture pour chat",
+    imageAlt:
+      "Prototype fonctionnel de distributeur automatique de nourriture pour chat",
     overview:
       "Conçue pour distribuer automatiquement de la pâtée pendant plusieurs jours d'absence du propriétaire, la machine gère également les portions usagées afin de contenir les odeurs. DOMTEKNIKA a développé la cartouche qui permet de transférer ergonomiquement les capsules de leur emballage vers la machine et réalisé un prototype fonctionnel. L'équipe a aussi amélioré des fonctions clés, notamment le compactage des capsules après usage et leur conditionnement en cartouches, puis participé à la numérisation du design et à l'intégration des éléments fonctionnels dans la nouvelle enveloppe.",
   },
@@ -1430,7 +1426,8 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     title: "Écran escamotable Velum Sky",
     description:
       "Système sur mesure permettant de monter et descendre l’écran géant de l’amphithéâtre Velum Sky à Genève.",
-    imageAlt: "Système de levage de l’écran géant de l’amphithéâtre Velum Sky à Genève",
+    imageAlt:
+      "Système de levage de l’écran géant de l’amphithéâtre Velum Sky à Genève",
     overview:
       "DOMTEKNIKA a conçu l’ensemble du système mécanique qui monte, descend et positionne l’écran géant de l’amphithéâtre Velum Sky à Genève : architecture, guidage, entraînement et intégration au bâtiment.",
   },
@@ -1457,7 +1454,8 @@ const DE_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     category: "Mobilität",
     description:
       "Dreirädriger Technologiedemonstrator für Hutchinson und die Total-Gruppe, vom Fahrgestell und der Antriebselektronik bis zu den rotationsgeformten Karosserieteilen.",
-    imageAlt: "Ausgestellter grüner dreirädriger Total Car Technologiedemonstrator",
+    imageAlt:
+      "Ausgestellter grüner dreirädriger Total Car Technologiedemonstrator",
     overview:
       "Im Auftrag von Hutchinson, damals Teil der Total-Gruppe, entwickelte DOMTEKNIKA einen vollständigen dreirädrigen Technologiedemonstrator. Das Team konstruierte das Fahrgestell, die Antriebselektronik und die rotationsgeformten Karosserieteile.",
   },
@@ -1697,7 +1695,8 @@ const ES_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     category: "Movilidad",
     description:
       "Demostrador tecnológico de tres ruedas desarrollado para Hutchinson y el grupo Total, desde el chasis y la electrónica de propulsión hasta las piezas de carrocería rotomoldeadas.",
-    imageAlt: "Demostrador tecnológico verde de tres ruedas Total Car en exposición",
+    imageAlt:
+      "Demostrador tecnológico verde de tres ruedas Total Car en exposición",
     overview:
       "Por encargo de Hutchinson, entonces parte del grupo Total, DOMTEKNIKA desarrolló un demostrador tecnológico completo de tres ruedas. El equipo diseñó el chasis, la electrónica de propulsión y las piezas de carrocería rotomoldeadas.",
   },
@@ -1909,7 +1908,8 @@ const ES_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     title: "Pantalla retráctil Velum Sky",
     description:
       "Sistema a medida para subir y bajar la pantalla gigante del auditorio Velum Sky de Ginebra.",
-    imageAlt: "Sistema de elevación de la pantalla gigante del auditorio Velum Sky de Ginebra",
+    imageAlt:
+      "Sistema de elevación de la pantalla gigante del auditorio Velum Sky de Ginebra",
     overview:
       "DOMTEKNIKA diseñó todo el sistema mecánico que eleva, desciende y posiciona la pantalla gigante del auditorio Velum Sky de Ginebra, incluida su arquitectura, guiado, accionamiento e integración en el edificio.",
   },
@@ -2338,8 +2338,7 @@ const ZH_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
   "special-t-machine": {
     category: "家居用品",
     title: "胶囊茶饮机",
-    description:
-      "围绕萃取头机构、茶汤品质和量产准备进行优化的胶囊茶饮机。",
+    description: "围绕萃取头机构、茶汤品质和量产准备进行优化的胶囊茶饮机。",
     imageAlt: "胶囊茶饮机萃取头原型",
     overview:
       "基于已有的萃取头原型，DOMTEKNIKA 改进了胶囊固定、闭合运动、胶囊检测与开启以及茶汤出口流动。随后团队支持萃取头工业化，开发了防止蒸汽在胶囊内积聚的系统以改善冲泡效果，并参与多项机器零件的量产导入。",
@@ -2727,14 +2726,14 @@ const PROJECT_SCOPES: Record<
   },
   "flex-drill": {
     en: [
-      "Curved drill-guide concept for constrained access and controlled tool direction.",
-      "Mechanical stress checks to support geometry and material choices.",
-      "Prototype and render iterations to communicate the working principle clearly.",
+      "Research and selection of a new low-cost polymer instrument concept.",
+      "Complete development of the selected solution and production of functional prototypes.",
+      "Production-cost analysis to prepare the instrument for industrialization.",
     ],
     fr: [
-      "Concept de guide de perçage courbe pour accès contraint et direction d'outil contrôlée.",
-      "Vérifications de contraintes mécaniques pour soutenir géométrie et choix matière.",
-      "Itérations prototype et rendu pour communiquer clairement le principe.",
+      "Recherche et sélection d’un nouveau concept d’instrument polymère à bas coût.",
+      "Développement complet de la solution retenue et réalisation de prototypes fonctionnels.",
+      "Analyse des coûts de production en vue de l’industrialisation de l’instrument.",
     ],
     de: [
       "Gebogenes Bohrführungskonzept für schwer zugängliche Bereiche und kontrollierte Werkzeugrichtung.",
@@ -2759,14 +2758,14 @@ const PROJECT_SCOPES: Record<
   },
   "biome-staple-applicator": {
     en: [
-      "Handheld applicator ergonomics from sketch to CAD layout.",
-      "Structural checks and printed prototype work for a biomedical mechanism.",
-      "Product refinement around grip, actuation and clean medical presentation.",
+      "Research and selection of a low-cost, single-use polymer instrument concept.",
+      "Complete development of the selected solution and production of functional prototypes.",
+      "Management of an initial series of injection-moulded parts.",
     ],
     fr: [
-      "Ergonomie d'applicateur portatif depuis le croquis jusqu'à la conception CAO.",
-      "Vérifications structurelles et prototypes imprimés pour mécanisme biomédical.",
-      "Affinage produit autour de la prise, de l'actionnement et de la présentation médicale.",
+      "Recherche et sélection d’un concept d’instrument polymère à bas coût et à usage unique.",
+      "Développement complet de la solution retenue et réalisation de prototypes fonctionnels.",
+      "Pilotage d’une première série de pièces injectées.",
     ],
     de: [
       "Ergonomie eines Handapplikators vom ersten Entwurf bis zum CAD-Layout.",
@@ -5741,8 +5740,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                               active && "text-white/85",
                             )}
                           >
-                            {count}{" "}
-                            {PROJECT_COUNT_LABELS[resolvedLocale]}
+                            {count} {PROJECT_COUNT_LABELS[resolvedLocale]}
                           </span>
                         )}
                       </span>
@@ -6007,13 +6005,15 @@ function ProjectsStatsSection({
       <Container size="wide">
         <div className="grid grid-cols-2 overflow-hidden rounded-[7px] border border-border bg-white min-[1180px]:grid-cols-5">
           {stats.map((stat, index) => {
+            const Icon = stat.icon;
+
             return (
               <Reveal
                 as="article"
                 key={`${index}-${stat.label}`}
                 delay={index * 0.05}
                 className={cn(
-                  "group/stat relative flex min-h-[116px] transform-gpu flex-col items-center justify-center gap-1 bg-white px-5 py-2.5 text-center transition-shadow duration-500 hover:z-10 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] sm:min-h-[92px] sm:px-7 sm:py-1.5 min-[1180px]:grid min-[1180px]:min-h-[76px] min-[1180px]:grid-cols-[32px_minmax(0,1fr)] min-[1180px]:items-center min-[1180px]:gap-2 min-[1180px]:px-3 min-[1180px]:py-2 min-[1180px]:text-left min-[2400px]:!min-h-[90px] min-[2400px]:!grid-cols-[48px_1fr] min-[2400px]:!gap-3 min-[2400px]:!px-5 min-[2400px]:!py-3 motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]",
+                  "group/stat relative flex min-h-[116px] transform-gpu flex-col items-center justify-center gap-1 bg-white px-5 py-2.5 text-center transition-shadow duration-500 hover:z-10 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] sm:min-h-[92px] sm:px-7 sm:py-1.5 min-[1180px]:grid min-[1180px]:min-h-[76px] min-[1180px]:grid-cols-[34px_minmax(0,1fr)] min-[1180px]:items-center min-[1180px]:gap-3 min-[1180px]:py-2 min-[1180px]:pl-2 min-[1180px]:pr-3 min-[1180px]:text-left min-[2400px]:!min-h-[90px] min-[2400px]:!grid-cols-[48px_1fr] min-[2400px]:!gap-4 min-[2400px]:!px-5 min-[2400px]:!py-3 motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]",
                   index % 2 === 0 &&
                     index < stats.length - 1 &&
                     "border-r border-border min-[1180px]:border-r-0",
@@ -6025,12 +6025,10 @@ function ProjectsStatsSection({
                     "col-span-2 min-[1180px]:col-span-1",
                 )}
               >
-                <Image
-                  src={stat.icon}
-                  alt=""
-                  width={stat.width}
-                  height={stat.height}
-                  className="h-[36px] w-[40px] object-contain transition-transform duration-500 group-hover/stat:-translate-y-1 sm:h-[40px] sm:w-[44px] min-[1180px]:h-[30px] min-[1180px]:w-[32px] min-[2400px]:!h-[46px] min-[2400px]:!w-[48px] motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]"
+                <Icon
+                  aria-hidden="true"
+                  strokeWidth={1.65}
+                          className="h-[36px] w-[40px] text-brand transition-transform duration-500 group-hover/stat:-translate-y-1 sm:h-[40px] sm:w-[44px] min-[1180px]:relative min-[1180px]:-left-5 min-[1180px]:h-[30px] min-[1180px]:w-[32px] min-[1180px]:justify-self-start min-[2400px]:!h-[46px] min-[2400px]:!w-[48px] motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]"
                 />
                 <div className="min-w-0 min-[1180px]:grid min-[1180px]:h-[48px] min-[1180px]:grid-rows-[22px_26px] min-[1180px]:content-center min-[2400px]:!h-[60px] min-[2400px]:!grid-rows-[28px_32px]">
                   <strong className="block max-w-full whitespace-nowrap text-[18px] font-extrabold leading-none text-foreground sm:text-[19px] min-[1180px]:flex min-[1180px]:h-[22px] min-[1180px]:items-center min-[1180px]:text-[17px] min-[1180px]:leading-[22px] 2xl:text-[18px] min-[2400px]:!h-[28px] min-[2400px]:!text-[22px] min-[2400px]:!leading-[28px]">
