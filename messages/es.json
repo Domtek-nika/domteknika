@@ -23,6 +23,52 @@
     "ctaPrimary": "Contacto",
     "ctaSecondary": "Nuestra experiencia"
   },
+  "HomeIntro": {
+    "breakthrough": {
+      "eyebrow": "Breakthrough innovation",
+      "title": "Creamos lo que todavía no existe",
+      "body": "Cuando un reto no tiene una respuesta evidente, encontramos la innovación útil: una idea nueva, técnicamente sólida y lista para convertirse en producto.",
+      "sequence": {
+        "challenge": "Reto",
+        "insight": "Hallazgo",
+        "invention": "Invención"
+      }
+    },
+    "expertise": {
+      "eyebrow": "Experiencia de principio a fin",
+      "title": "Del primer boceto a la producción en serie.",
+      "body": "Un mismo equipo conecta creatividad, ingeniería y fabricación. Mantienes una dirección clara, menos traspasos y un producto pensado para la realidad desde el primer día.",
+      "cta": "Descubrir nuestra experiencia",
+      "swiss": "Ingeniería suiza",
+      "location": "La Neuveville · Suiza",
+      "items": {
+        "creativity": {
+          "title": "Creatividad e innovación",
+          "body": "Definición de necesidades, creatividad y nuevas soluciones."
+        },
+        "design": {
+          "title": "Diseño de producto",
+          "body": "Arquitectura de producto, mecánica, CAD y selección de materiales."
+        },
+        "prototyping": {
+          "title": "Prototipado",
+          "body": "Prototipos funcionales, ensayos e iteraciones rápidas."
+        },
+        "simulation": {
+          "title": "Simulación y análisis",
+          "body": "Simulación y análisis para validar decisiones técnicas."
+        },
+        "polymer": {
+          "title": "Polímeros e inyección",
+          "body": "Diseño de polímeros, inyección y componentes de precisión."
+        },
+        "electronics": {
+          "title": "Integración electrónica",
+          "body": "Electrónica integrada para productos conectados fiables."
+        }
+      }
+    }
+  },
   "Projects": {
     "title": "Nuestros proyectos",
     "viewAll": "Ver todos los proyectos",

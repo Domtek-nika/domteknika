@@ -190,7 +190,7 @@ export function HeroSection() {
 
           <motion.div
             variants={rise}
-            className="mt-10 flex flex-row flex-wrap items-center gap-x-4 gap-y-5 sm:gap-x-8 min-[1800px]:mt-12 min-[1800px]:gap-x-12 min-[2300px]:!mt-12 min-[2300px]:!gap-x-12"
+            className="mt-10 min-[1800px]:mt-12 min-[2300px]:!mt-12"
           >
             <Button
               nativeButton={false}
@@ -201,14 +201,6 @@ export function HeroSection() {
               {t("ctaPrimary")}
               <ArrowRight data-icon="inline-end" />
             </Button>
-
-            <Link
-              href="/expertise"
-              className="inline-flex items-center gap-3 text-[15px] font-extrabold text-foreground transition-colors hover:text-brand sm:gap-6 min-[1800px]:text-[18px] min-[2300px]:!text-[19px]"
-            >
-              {t("ctaSecondary")}
-              <ArrowRight className="size-5 text-brand" aria-hidden />
-            </Link>
           </motion.div>
         </motion.div>
       </Container>

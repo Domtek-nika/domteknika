@@ -23,6 +23,52 @@
     "ctaPrimary": "联系我们",
     "ctaSecondary": "了解专长"
   },
+  "HomeIntro": {
+    "breakthrough": {
+      "eyebrow": "Breakthrough innovation",
+      "title": "创造尚未存在的事物",
+      "body": "面对没有明显答案的挑战，我们寻找真正有价值的突破：技术可靠、能够转化为产品的新构想。",
+      "sequence": {
+        "challenge": "挑战",
+        "insight": "洞察",
+        "invention": "发明"
+      }
+    },
+    "expertise": {
+      "eyebrow": "端到端专业能力",
+      "title": "从第一张草图到批量生产。",
+      "body": "同一团队贯通创意、工程与制造，让方向更清晰、交接更少，并从第一天起就以真实应用为目标设计产品。",
+      "cta": "了解我们的专长",
+      "swiss": "瑞士工程",
+      "location": "拉讷沃维尔 · 瑞士",
+      "items": {
+        "creativity": {
+          "title": "创意与创新",
+          "body": "需求界定、创意探索与新方案研究。"
+        },
+        "design": {
+          "title": "产品设计",
+          "body": "产品架构、机械设计、CAD 与材料选择。"
+        },
+        "prototyping": {
+          "title": "原型开发",
+          "body": "功能原型、测试与快速迭代。"
+        },
+        "simulation": {
+          "title": "仿真与分析",
+          "body": "通过仿真与分析验证技术选择。"
+        },
+        "polymer": {
+          "title": "聚合物与注塑专长",
+          "body": "聚合物设计、注塑成型与精密组件。"
+        },
+        "electronics": {
+          "title": "电子集成",
+          "body": "面向可靠互联产品的电子集成。"
+        }
+      }
+    }
+  },
   "Projects": {
     "title": "我们的项目",
     "viewAll": "查看全部项目",

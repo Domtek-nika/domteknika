@@ -23,6 +23,52 @@
     "ctaPrimary": "Contact",
     "ctaSecondary": "Notre expertise"
   },
+  "HomeIntro": {
+    "breakthrough": {
+      "eyebrow": "Breakthrough innovation",
+      "title": "Nous créons ce qui n’existe pas encore",
+      "body": "Face à un défi sans réponse évidente, nous trouvons la rupture utile : une idée nouvelle, techniquement solide et prête à devenir un produit.",
+      "sequence": {
+        "challenge": "Défi",
+        "insight": "Déclic",
+        "invention": "Invention"
+      }
+    },
+    "expertise": {
+      "eyebrow": "Une expertise de bout en bout",
+      "title": "De la première esquisse à la production en série.",
+      "body": "Une même équipe relie la créativité, l’ingénierie et la fabrication. Vous gardez un cap clair, moins d’interfaces et un produit pensé pour le réel dès le premier jour.",
+      "cta": "Découvrir notre expertise",
+      "swiss": "Ingénierie suisse",
+      "location": "La Neuveville · Suisse",
+      "items": {
+        "creativity": {
+          "title": "Créativité & Innovation",
+          "body": "Besoins, créativité et recherche de solutions nouvelles."
+        },
+        "design": {
+          "title": "Design produit",
+          "body": "Architecture produit, mécanique, CAO et choix des matériaux."
+        },
+        "prototyping": {
+          "title": "Prototypage",
+          "body": "Prototypes fonctionnels, essais et itérations rapides."
+        },
+        "simulation": {
+          "title": "Simulation & Analyse",
+          "body": "Calculs et analyses pour valider les choix techniques."
+        },
+        "polymer": {
+          "title": "Polymères & Injection",
+          "body": "Conception polymère, injection et composants de précision."
+        },
+        "electronics": {
+          "title": "Intégration électronique",
+          "body": "Électronique intégrée et produits connectés fiables."
+        }
+      }
+    }
+  },
   "Projects": {
     "title": "Nos projets",
     "viewAll": "Voir tous les projets",

@@ -23,6 +23,52 @@
     "ctaPrimary": "문의하기",
     "ctaSecondary": "전문성 보기"
   },
+  "HomeIntro": {
+    "breakthrough": {
+      "eyebrow": "Breakthrough innovation",
+      "title": "아직 존재하지 않는 것을 만듭니다",
+      "body": "명확한 답이 없는 과제에서 유용한 돌파구를 찾습니다. 기술적으로 타당하고 실제 제품으로 발전할 수 있는 새로운 아이디어입니다.",
+      "sequence": {
+        "challenge": "과제",
+        "insight": "통찰",
+        "invention": "발명"
+      }
+    },
+    "expertise": {
+      "eyebrow": "처음부터 끝까지 이어지는 전문성",
+      "title": "첫 스케치부터 양산까지.",
+      "body": "하나의 팀이 창의성, 엔지니어링, 제조를 연결합니다. 방향은 더 명확해지고 인계는 줄어들며, 제품은 처음부터 현실을 기준으로 설계됩니다.",
+      "cta": "전문성 살펴보기",
+      "swiss": "스위스 엔지니어링",
+      "location": "라 뇌브빌 · 스위스",
+      "items": {
+        "creativity": {
+          "title": "창의성과 혁신",
+          "body": "요구 정의, 창의적 탐색, 새로운 솔루션 발굴."
+        },
+        "design": {
+          "title": "제품 디자인",
+          "body": "제품 아키텍처, 기계 설계, CAD, 소재 선정."
+        },
+        "prototyping": {
+          "title": "프로토타이핑",
+          "body": "기능성 프로토타입, 시험, 빠른 반복 개선."
+        },
+        "simulation": {
+          "title": "시뮬레이션 및 분석",
+          "body": "기술 선택을 검증하는 시뮬레이션과 분석."
+        },
+        "polymer": {
+          "title": "폴리머 및 사출 전문성",
+          "body": "폴리머 설계, 사출 성형, 정밀 부품."
+        },
+        "electronics": {
+          "title": "전자 통합",
+          "body": "신뢰성 높은 커넥티드 제품을 위한 전자 통합."
+        }
+      }
+    }
+  },
   "Projects": {
     "title": "프로젝트",
     "viewAll": "모든 프로젝트 보기",

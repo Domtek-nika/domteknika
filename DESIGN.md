@@ -59,20 +59,31 @@ Ombre typographique de référence: `.domtek-text-shadow`.
 Ordre de la homepage:
 
 1. Navbar fixed glass.
-2. Hero avec dessin technique haut, flèches rouges, titre et deux CTA.
-3. Projets avec carousel shadcn/Embla, cartes compactes autour de 274 x 286, image sur fond gris.
-4. Expertise triptyque: `The idea`, panneau rouge `The process`, `The product` avec stats.
-5. `Trusted by`, ruban de logos en scroll horizontal infini.
-6. Bannière Suisse/Chasseral.
-7. CTA final sur dessin technique bas.
-8. Footer minimal: logo, adresse, copyright.
+2. Hero avec dessin technique haut, flèches rouges, titre et un CTA de contact.
+3. Manifeste `Breakthrough innovation`: une fracture rouge traverse un plan blanc facetté.
+4. Vue d'ensemble de l'expertise: narration idée → série et six domaines d'intervention dans une liste éditoriale compacte.
+5. Projets avec carousel shadcn/Embla, cartes compactes autour de 274 x 286, image sur fond gris.
+6. Expertise triptyque: `The idea`, panneau rouge `The process`, `The product` avec stats.
+7. `Trusted by`, ruban de logos en scroll horizontal infini.
+8. Bannière Suisse/Chasseral.
+9. CTA final sur dessin technique bas.
+10. Footer minimal: logo, adresse, copyright.
+
+## Introduction De La Homepage
+
+- Les deux sections placées entre le hero et les projets doivent répondre successivement à « pourquoi DOMTEKNIKA ? » puis « que fait DOMTEKNIKA ? ».
+- `Breakthrough innovation` reste un manifeste aéré, pas une liste de services. Le visuel `breakthrough-fracture.png` ménage une zone blanche calme pour le texte et concentre la fracture rouge ainsi que les facettes cristallines à droite. Il est utilisé comme composition pleine largeur sur desktop, sans WebGL, shader ni animation décorative.
+- Le visuel occupe la largeur de la section derrière le contenu avec un fondu blanc à gauche sur tous les écrans. Sur mobile, il est recadré à droite plutôt que répété sous le texte afin de conserver un bandeau court.
+- La vue d'ensemble de l'expertise synthétise fidèlement les six domaines présentés dans l'onglet Expertise: créativité et innovation, design produit, prototypage, simulation et analyse, polymères et injection, intégration électronique.
+- Sur desktop, le texte principal occupe une colonne compacte à gauche et les domaines forment un index technique en deux colonnes à droite. Chaque domaine reste visible avec une explication courte; l'ensemble ne dépasse pas trois rangées et n'utilise ni grand panneau actif, ni carousel, ni cartes surdimensionnées.
+- Les projets viennent ensuite comme preuve du savoir-faire présenté. Le triptyque placé après eux reste la description détaillée du processus.
 
 ## Rythme Et Marges
 
 - Les contenus principaux sont centrés dans un conteneur `wide` de 1160px maximum avec des gutters latéraux généreux.
 - La page doit se lire plus petite et plus premium sans être compactée: réduire les grandes typographies, cartes et assets, puis préserver ou augmenter l'espacement vertical entre sections.
 - Ne pas utiliser de `transform: scale()` global pour réduire l'interface; ajuster les tokens de layout, les tailles de composants et les paddings section par section.
-- Les sections peuvent rendre la page plus longue verticalement si cela améliore la respiration et la hiérarchie.
+- Les deux blocs d'introduction restent volontairement courts afin que les projets apparaissent rapidement dans le parcours de la homepage; la respiration vient des alignements et non de grandes hauteurs de section.
 - Éviter les traits de séparation horizontaux entre sections; conserver uniquement le trait final du footer.
 
 ## Navbar
