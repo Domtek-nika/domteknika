@@ -61,7 +61,7 @@ Ordre de la homepage:
 1. Navbar fixed glass.
 2. Hero avec dessin technique haut, flèches rouges, titre et un CTA de contact.
 3. Manifeste `Breakthrough innovation`: une fracture rouge traverse un plan blanc facetté.
-4. Vue d'ensemble de l'expertise: narration idée → série et six domaines d'intervention dans une liste éditoriale compacte.
+4. Vue d'ensemble de l'expertise: réponse directe à « ce que nous faisons » et six domaines d'intervention dans une liste éditoriale compacte.
 5. Projets avec carousel shadcn/Embla, cartes compactes autour de 274 x 286, image sur fond gris.
 6. Expertise triptyque: `The idea`, panneau rouge `The process`, `The product` avec stats.
 7. `Trusted by`, ruban de logos en scroll horizontal infini.
@@ -73,9 +73,10 @@ Ordre de la homepage:
 
 - Les deux sections placées entre le hero et les projets doivent répondre successivement à « pourquoi DOMTEKNIKA ? » puis « que fait DOMTEKNIKA ? ».
 - `Breakthrough innovation` reste un manifeste aéré, pas une liste de services. Le visuel `breakthrough-fracture.png` ménage une zone blanche calme pour le texte et concentre la fracture rouge ainsi que les facettes cristallines à droite. Il est utilisé comme composition pleine largeur sur desktop, sans WebGL, shader ni animation décorative.
-- Le visuel occupe la largeur de la section derrière le contenu avec un fondu blanc à gauche sur tous les écrans. Sur mobile, il est recadré à droite plutôt que répété sous le texte afin de conserver un bandeau court.
+- Le visuel occupe la largeur de la section derrière le contenu avec un fondu blanc à gauche sur tous les écrans. Sur desktop, la fracture déborde légèrement du manifeste dans l'espace supérieur de la section Expertise et rejoint visuellement la première catégorie; les contenus et surfaces de catégories restent au-dessus. Sur mobile, il est recadré à droite et ne déborde pas afin de conserver un bandeau court.
+- La section Expertise prolonge ce raccord avec les assets transparents `fracture-continuation.png` et `technical-mesh.png` dans sa colonne gauche. Ils restent décoratifs, derrière le texte et les cartes, et sont masqués sur mobile.
 - La vue d'ensemble de l'expertise synthétise fidèlement les six domaines présentés dans l'onglet Expertise: créativité et innovation, design produit, prototypage, simulation et analyse, polymères et injection, intégration électronique.
-- Sur desktop, le texte principal occupe une colonne compacte à gauche et les domaines forment un index technique en deux colonnes à droite. Chaque domaine reste visible avec une explication courte; l'ensemble ne dépasse pas trois rangées et n'utilise ni grand panneau actif, ni carousel, ni cartes surdimensionnées.
+- Sur desktop, le texte principal occupe une colonne compacte à gauche et les domaines sont présentés dans six cartes en deux colonnes à droite. Chaque carte possède un pictogramme rouge dans un disque très pâle, un point rouge, un libellé technique en italique, le savoir-faire, une explication courte et une flèche discrète. Les cartes sont séparées par de vrais gutters et ne partagent aucun cadre ou séparateur de tableau.
 - Les projets viennent ensuite comme preuve du savoir-faire présenté. Le triptyque placé après eux reste la description détaillée du processus.
 
 ## Rythme Et Marges

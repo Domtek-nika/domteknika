@@ -35,36 +35,36 @@
       }
     },
     "expertise": {
-      "eyebrow": "Experiencia de principio a fin",
-      "title": "Del primer boceto a la producción en serie.",
-      "body": "Un mismo equipo conecta creatividad, ingeniería y fabricación. Mantienes una dirección clara, menos traspasos y un producto pensado para la realidad desde el primer día.",
+      "eyebrow": "Lo que hacemos",
+      "title": "Nuestra experiencia, de la idea al producto.",
+      "body": "Creatividad, diseño, prototipado, simulación, polímeros y electrónica: reunimos las capacidades necesarias para crear productos fiables y fabricables.",
       "cta": "Descubrir nuestra experiencia",
       "swiss": "Ingeniería suiza",
       "location": "La Neuveville · Suiza",
       "items": {
         "creativity": {
           "title": "Creatividad e innovación",
-          "body": "Definición de necesidades, creatividad y nuevas soluciones."
+          "body": "Definimos la necesidad y exploramos distintas vías para encontrar soluciones nuevas, realistas y viables."
         },
         "design": {
           "title": "Diseño de producto",
-          "body": "Arquitectura de producto, mecánica, CAD y selección de materiales."
+          "body": "Definimos la arquitectura del producto, la mecánica, el CAD y los materiales adecuados para su fabricación."
         },
         "prototyping": {
           "title": "Prototipado",
-          "body": "Prototipos funcionales, ensayos e iteraciones rápidas."
+          "body": "Creamos prototipos funcionales para probar rápidamente el uso, las decisiones técnicas y el rendimiento."
         },
         "simulation": {
           "title": "Simulación y análisis",
-          "body": "Simulación y análisis para validar decisiones técnicas."
+          "body": "Utilizamos cálculo y simulación para anticipar restricciones y asegurar las decisiones de diseño."
         },
         "polymer": {
           "title": "Polímeros e inyección",
-          "body": "Diseño de polímeros, inyección y componentes de precisión."
+          "body": "Diseñamos piezas de polímero precisas, adaptadas a la inyección y a la producción industrial."
         },
         "electronics": {
           "title": "Integración electrónica",
-          "body": "Electrónica integrada para productos conectados fiables."
+          "body": "Integramos electrónica en el producto para crear sistemas conectados, fiables y fáciles de usar."
         }
       }
     }

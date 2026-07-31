@@ -7,10 +7,10 @@ import { ExpertiseOverviewSection } from "@/components/sections/home-expertise-o
 
 export function HomeIntroductionSections() {
   return (
-    <>
+    <div className="relative isolate overflow-hidden bg-background">
       <BreakthroughSection />
       <ExpertiseOverviewSection />
-    </>
+    </div>
   );
 }
 
@@ -20,11 +20,11 @@ function BreakthroughSection() {
   return (
     <section
       id="breakthrough"
-      className="relative isolate flex min-h-[390px] items-center overflow-hidden border-t border-border/60 bg-background py-12 sm:min-h-[360px] sm:py-14 lg:min-h-[380px] lg:py-16"
+      className="relative isolate flex min-h-[420px] items-center overflow-visible border-t border-border/60 bg-background py-12 sm:min-h-[400px] sm:py-14 lg:min-h-[430px] lg:py-16"
       aria-labelledby="breakthrough-title"
     >
       <div
-        className="pointer-events-none absolute inset-0 overflow-hidden"
+        className="pointer-events-none absolute inset-x-0 bottom-0 top-0 overflow-hidden lg:-bottom-20"
         aria-hidden
       >
         <Image

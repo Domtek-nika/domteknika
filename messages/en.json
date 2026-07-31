@@ -35,36 +35,36 @@
       }
     },
     "expertise": {
-      "eyebrow": "End-to-end expertise",
-      "title": "From the first sketch to serial production.",
-      "body": "One team connects creativity, engineering and manufacturing. You keep a clear direction, fewer handovers and a product designed for the real world from day one.",
+      "eyebrow": "What we do",
+      "title": "Our expertise, from idea to product.",
+      "body": "Creativity, design, prototyping, simulation, polymers and electronics: we bring together the expertise needed to create reliable, manufacturable products.",
       "cta": "Explore our expertise",
       "swiss": "Swiss engineering",
       "location": "La Neuveville · Switzerland",
       "items": {
         "creativity": {
           "title": "Creativity & Innovation",
-          "body": "Needs framing, creativity and new solution paths."
+          "body": "We frame the need and explore multiple directions to uncover new, realistic solutions."
         },
         "design": {
           "title": "Product Design",
-          "body": "Product architecture, mechanics, CAD and material selection."
+          "body": "We define product architecture, mechanics, CAD and the materials best suited to manufacturing."
         },
         "prototyping": {
           "title": "Prototyping",
-          "body": "Functional prototypes, testing and fast iteration."
+          "body": "We build functional prototypes to quickly test use cases, technical choices and performance."
         },
         "simulation": {
           "title": "Simulation & Analysis",
-          "body": "Simulation and analysis to validate technical choices."
+          "body": "We use analysis and simulation to anticipate constraints and secure design decisions."
         },
         "polymer": {
           "title": "Polymer & Injection Expertise",
-          "body": "Polymer design, injection molding and precision components."
+          "body": "We design precise polymer parts suited to injection molding and industrial production requirements."
         },
         "electronics": {
           "title": "Electronics Integration",
-          "body": "Integrated electronics for reliable connected products."
+          "body": "We integrate electronics into the product to create connected, reliable and easy-to-use systems."
         }
       }
     }

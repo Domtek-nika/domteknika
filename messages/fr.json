@@ -35,36 +35,36 @@
       }
     },
     "expertise": {
-      "eyebrow": "Une expertise de bout en bout",
-      "title": "De la première esquisse à la production en série.",
-      "body": "Une même équipe relie la créativité, l’ingénierie et la fabrication. Vous gardez un cap clair, moins d’interfaces et un produit pensé pour le réel dès le premier jour.",
+      "eyebrow": "Ce que nous faisons",
+      "title": "Notre expertise, de l’idée au produit.",
+      "body": "Créativité, design, prototypage, simulation, polymères et électronique : nous réunissons les savoir-faire nécessaires pour créer des produits fiables et industrialisables.",
       "cta": "Découvrir notre expertise",
       "swiss": "Ingénierie suisse",
       "location": "La Neuveville · Suisse",
       "items": {
         "creativity": {
           "title": "Créativité & Innovation",
-          "body": "Besoins, créativité et recherche de solutions nouvelles."
+          "body": "Nous cadrons le besoin et explorons plusieurs pistes pour faire émerger des solutions nouvelles et réalistes."
         },
         "design": {
           "title": "Design produit",
-          "body": "Architecture produit, mécanique, CAO et choix des matériaux."
+          "body": "Nous définissons l’architecture du produit, sa mécanique, sa CAO et les matériaux adaptés à sa fabrication."
         },
         "prototyping": {
           "title": "Prototypage",
-          "body": "Prototypes fonctionnels, essais et itérations rapides."
+          "body": "Nous réalisons des prototypes fonctionnels pour tester rapidement les usages, les choix techniques et les performances."
         },
         "simulation": {
           "title": "Simulation & Analyse",
-          "body": "Calculs et analyses pour valider les choix techniques."
+          "body": "Nous utilisons le calcul et la simulation pour anticiper les contraintes et sécuriser les décisions de conception."
         },
         "polymer": {
           "title": "Polymères & Injection",
-          "body": "Conception polymère, injection et composants de précision."
+          "body": "Nous concevons des pièces polymères précises, adaptées à l’injection et aux exigences de la production industrielle."
         },
         "electronics": {
           "title": "Intégration électronique",
-          "body": "Électronique intégrée et produits connectés fiables."
+          "body": "Nous intégrons l’électronique au produit pour créer des systèmes connectés, fiables et simples à utiliser."
         }
       }
     }

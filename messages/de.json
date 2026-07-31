@@ -35,36 +35,36 @@
       }
     },
     "expertise": {
-      "eyebrow": "Durchgängige Expertise",
-      "title": "Von der ersten Skizze bis zur Serienproduktion.",
-      "body": "Ein Team verbindet Kreativität, Entwicklung und Fertigung. So bleiben die Richtung klar, die Übergaben gering und das Produkt von Anfang an realisierbar.",
+      "eyebrow": "Was wir tun",
+      "title": "Unsere Expertise – von der Idee zum Produkt.",
+      "body": "Kreativität, Design, Prototyping, Simulation, Polymere und Elektronik: Wir vereinen alle Kompetenzen für zuverlässige, serienreife Produkte.",
       "cta": "Unsere Expertise entdecken",
       "swiss": "Schweizer Engineering",
       "location": "La Neuveville · Schweiz",
       "items": {
         "creativity": {
           "title": "Kreativität & Innovation",
-          "body": "Bedarfsanalyse, Kreativität und neue Lösungswege."
+          "body": "Wir klären den Bedarf und untersuchen mehrere Ansätze, um neue, realistische Lösungen zu entwickeln."
         },
         "design": {
           "title": "Produktdesign",
-          "body": "Produktarchitektur, Mechanik, CAD und Materialauswahl."
+          "body": "Wir definieren Produktarchitektur, Mechanik, CAD und die für die Fertigung passenden Materialien."
         },
         "prototyping": {
           "title": "Prototyping",
-          "body": "Funktionsprototypen, Tests und schnelle Iterationen."
+          "body": "Wir bauen Funktionsprototypen, um Nutzung, technische Entscheidungen und Leistung früh zu testen."
         },
         "simulation": {
           "title": "Simulation & Analyse",
-          "body": "Simulationen und Analysen zur Absicherung technischer Entscheidungen."
+          "body": "Mit Berechnung und Simulation erkennen wir Belastungen frühzeitig und sichern Konstruktionsentscheidungen ab."
         },
         "polymer": {
           "title": "Polymer- & Spritzgusskompetenz",
-          "body": "Polymerdesign, Spritzguss und Präzisionskomponenten."
+          "body": "Wir entwickeln präzise Polymerbauteile für Spritzguss und industrielle Produktionsanforderungen."
         },
         "electronics": {
           "title": "Elektronik-Integration",
-          "body": "Integrierte Elektronik für zuverlässige vernetzte Produkte."
+          "body": "Wir integrieren Elektronik in das Produkt und schaffen vernetzte, zuverlässige und einfach nutzbare Systeme."
         }
       }
     }
