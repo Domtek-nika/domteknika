@@ -815,12 +815,12 @@ export const PROJECTS: Project[] = [
     filter: "medical",
     title: "Flexible orthopaedic drill",
     description:
-      "Low-cost polymer instrument developed to replace the existing steel instrument, which is expensive to manufacture and difficult to sterilize.",
+      "Flexible polymer instrument combining lightweight construction, controlled production costs and compatibility with medical sterilization requirements.",
     image: "/assets/projects/flex-drill/flex-drill-01.webp",
     imageAlt: "Flexible orthopaedic drill with a blue polymer body",
     tags: ["#2014", "#Orthopaedics", "#Polymer"],
     overview:
-      "DOMTEKNIKA researched a new concept, fully developed the selected solution, produced functional prototypes and carried out a production-cost analysis.",
+      "DOMTEKNIKA designed and developed a new polymer architecture for this flexible orthopaedic instrument. The project covered concept research, complete development of the selected solution, functional prototyping and production-cost analysis, resulting in a lightweight, industrializable design suited to the constraints of medical use.",
   },
   {
     id: "biome-staple-applicator",
@@ -828,13 +828,13 @@ export const PROJECTS: Project[] = [
     filter: "medical",
     title: "ZipFix sternal implant application instrument",
     description:
-      "Low-cost, single-use polymer instrument developed to replace the existing multi-use steel instrument, which is expensive to manufacture and maintain and carries contamination risks through reuse.",
+      "Single-use polymer instrument designed to replace a reusable steel solution, reducing manufacturing and maintenance costs while limiting contamination risks associated with reuse.",
     image:
       "/assets/projects/biome-staple-applicator/biome-staple-applicator-01.webp",
     imageAlt: "White and red ZipFix sternal implant application instrument",
     tags: ["#2013", "#SternalImplant", "#SingleUse"],
     overview:
-      "DOMTEKNIKA researched a new concept, fully developed the selected solution, produced functional prototypes and managed the manufacture of an initial series of injection-moulded parts.",
+      "The project addressed three key challenges of the reusable steel instrument: high manufacturing costs, long-term maintenance requirements and contamination risks associated with repeated use. DOMTEKNIKA developed a single-use polymer alternative for applying ZipFix sternal implants, covering concept research, complete product development, functional prototype validation and management of an initial injection-moulded series.",
     relatedPatents: [
       relatedPatent(
         "US2015342657A1",
@@ -897,14 +897,14 @@ export const PROJECTS: Project[] = [
     id: "personal-injector",
     category: "Medical",
     filter: "medical",
-    title: "Personal Injector",
+    title: "Auto-injector",
     description:
-      "Connected personal-injection device concept focused on compatibility, no needle handling, compact kinematics and a single-use syringe.",
+      "Connected auto-injector designed to simplify and secure self-administered treatments, with a concealed needle and digital dose monitoring.",
     image: "/assets/projects/personal-injector/personal-injector-01.webp",
-    imageAlt: "Personal injector medical device concept",
-    tags: ["#2013", "#Medical", "#Connected"],
+    imageAlt: "Medical auto-injector designed to conceal the needle",
+    tags: ["#2013", "#Medical", "#DoseMonitoring"],
     overview:
-      "Presented in the medical portfolio as a SwissMedDev Start Up Prize 2013 project, the Personal Injector addresses safer self-injection through compact mechanics, connected-device logic, compatibility constraints and no direct needle handling.",
+      "Designed in particular for regular diabetes treatments, this auto-injector keeps the needle out of sight throughout use to reduce patient anxiety. DOMTEKNIKA led the industrialization of the device, optimizing its architecture for a reliable, robust product suitable for series production. Integrated dose monitoring also provides a clear record of treatment adherence over time.",
   },
   {
     id: "acetabular-reamer-holder",
@@ -912,19 +912,13 @@ export const PROJECTS: Project[] = [
     filter: "medical",
     title: "Acetabular Reamer Holder",
     description:
-      "PEEK surgical reamer handle and cover development for acetabular surgery, supported by design, FEA and injection-molding constraints.",
+      "Industrialization of PEEK components for an acetabular reamer holder, combining mechanical validation, injection optimization and process development.",
     image:
       "/assets/projects/acetabular-reamer-holder/acetabular-reamer-holder-01.webp",
-    imageAlt: "Acetabular reamer holder prototype in orange and black PEEK",
-    tags: ["#2014", "#PEEK", "#SurgicalTool"],
+    imageAlt: "Two orange and black PEEK parts for an acetabular reamer holder",
+    tags: ["#2012", "#PEEK", "#Industrialization"],
     overview:
-      "This medical tooling project covers a PEEK handle and protective cover for an acetabular reamer, combining detailed design, finite-element analysis, injection-molding feasibility and high-stiffness requirements for a hygienic surgical instrument.",
-    relatedPatents: [
-      relatedPatent(
-        "EP3185821A1",
-        "Orthopaedic surgery tooling patent context for impactor and reamer-related surgical instruments.",
-      ),
-    ],
+      "DOMTEKNIKA led the industrialization of two PEEK components for an acetabular reamer holder. The development combined finite-element and rheological analyses, geometry optimization for injection molding, tooling development and process tuning to ensure mechanical performance, precision and repeatability in production.",
   },
   {
     id: "single-use-turbine",
@@ -1215,20 +1209,20 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     category: "Médical",
     title: "Foret orthopédique flexible",
     description:
-      "Instrument polymère à bas coût développé pour remplacer l’instrument actuel en acier, cher à produire et difficile à stériliser.",
+      "Instrument orthopédique flexible en polymère, associant légèreté, maîtrise des coûts de production et compatibilité avec les exigences de stérilisation.",
     imageAlt: "Foret orthopédique flexible avec corps polymère bleu",
     overview:
-      "DOMTEKNIKA a recherché un nouveau concept, développé intégralement la solution retenue, réalisé des prototypes fonctionnels et mené une analyse des coûts de production.",
+      "DOMTEKNIKA a conçu et développé une nouvelle architecture polymère pour cet instrument orthopédique flexible. Le projet a couvert la recherche de concepts, le développement complet de la solution retenue, la réalisation de prototypes fonctionnels et l'analyse des coûts de production, pour aboutir à un dispositif léger, industrialisable et adapté aux contraintes de l'usage médical.",
   },
   "biome-staple-applicator": {
     category: "Médical",
     title: "Instrument d’application d’implants sternaux ZipFix",
     description:
-      "Instrument polymère à bas coût et à usage unique, développé pour remplacer l’instrument actuel multiusage en acier, cher à produire, coûteux en maintenance et présentant des risques de contamination liés à sa réutilisation.",
+      "Instrument polymère à usage unique conçu pour remplacer une solution réutilisable en acier, réduire les coûts de fabrication et de maintenance, et limiter les risques de contamination liés à la réutilisation.",
     imageAlt:
       "Instrument blanc et rouge d’application d’implants sternaux ZipFix",
     overview:
-      "DOMTEKNIKA a recherché un nouveau concept, développé intégralement la solution retenue, réalisé des prototypes fonctionnels et piloté la fabrication d’une première série de pièces injectées.",
+      "Le projet répondait à trois enjeux majeurs de l'instrument réutilisable en acier : un coût de fabrication élevé, une maintenance importante sur toute sa durée de vie et des risques de contamination liés aux usages successifs. DOMTEKNIKA a développé une alternative polymère à usage unique pour l'application des implants sternaux ZipFix, de la recherche de concepts au développement complet du produit, jusqu'à la validation par prototypes fonctionnels et au pilotage d'une première série injectée.",
     relatedPatents: [
       relatedPatent(
         "US2015342657A1",
@@ -1281,27 +1275,22 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
   },
   "personal-injector": {
     category: "Médical",
-    title: "Personal Injector",
+    title: "Auto-injecteur",
     description:
-      "Concept d'injecteur personnel connecté, centré sur la compatibilité, l'absence de manipulation d'aiguille, une cinématique compacte et une seringue à usage unique.",
-    imageAlt: "Concept de dispositif médical Personal Injector",
+      "Auto-injecteur connecté conçu pour simplifier et sécuriser l'administration autonome des traitements, avec aiguille dissimulée et suivi numérique des doses.",
+    imageAlt: "Auto-injecteur médical conçu pour dissimuler l'aiguille",
     overview:
-      "Présenté dans le portfolio médical comme projet SwissMedDev Start Up Prize 2013, Personal Injector vise une auto-injection plus sûre grâce à une mécanique compacte, une logique d'objet connecté, des contraintes de compatibilité et l'absence de manipulation directe de l'aiguille.",
+      "Pensé notamment pour les traitements réguliers du diabète, cet auto-injecteur maintient l'aiguille hors du champ visuel pendant toute l'utilisation afin de réduire l'appréhension du patient. DOMTEKNIKA a piloté l'industrialisation du dispositif en optimisant son architecture pour obtenir un produit fiable, robuste et adapté à la fabrication en série. Le suivi intégré des doses permet également de documenter la régularité du traitement dans le temps.",
   },
   "acetabular-reamer-holder": {
     category: "Médical",
     title: "Porte-fraise acétabulaire",
     description:
-      "Développement d'un porte-fraise et d'un capot en PEEK pour chirurgie acétabulaire, avec design, calculs éléments finis et contraintes d'injection.",
-    imageAlt: "Prototype de porte-fraise acétabulaire orange et noir en PEEK",
+      "Industrialisation de composants en PEEK pour un porte-fraise acétabulaire, intégrant validation mécanique, optimisation pour l'injection et développement du procédé.",
+    imageAlt:
+      "Deux pièces orange et noire en PEEK pour un porte-fraise acétabulaire",
     overview:
-      "Ce projet d'outillage médical couvre un porte-fraise en PEEK et un capot de protection pour chirurgie acétabulaire, en combinant conception détaillée, analyse éléments finis, faisabilité injection et exigence de rigidité pour un instrument chirurgical hygiénique.",
-    relatedPatents: [
-      relatedPatent(
-        "EP3185821A1",
-        "Brevet MPS Precimed lié aux instruments orthopédiques d'impaction et de fraisage pour chirurgie acétabulaire.",
-      ),
-    ],
+      "DOMTEKNIKA a piloté l'industrialisation de deux composants en PEEK destinés à un porte-fraise acétabulaire. Le développement a combiné analyses par éléments finis et simulations rhéologiques, optimisation des géométries pour l'injection, développement des outillages et mise au point du procédé afin de garantir performance mécanique, précision et répétabilité en production.",
   },
   "single-use-turbine": {
     category: "Médical",
@@ -1506,20 +1495,21 @@ const DE_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
   },
   "flex-drill": {
     category: "Medizin",
+    title: "Flexibler orthopädischer Bohrer",
     description:
-      "Konzept eines flexiblen Bohrzubehörs mit geformter Polymerführung, Prototypvalidierung und Spannungsanalyse-Ansichten.",
-    imageAlt: "Blaues Konzept einer flexiblen Bohrführung",
+      "Flexibles orthopädisches Instrument aus Polymer, das geringes Gewicht, kontrollierte Produktionskosten und medizinische Sterilisationsanforderungen verbindet.",
+    imageAlt: "Flexibler orthopädischer Bohrer mit blauem Polymerkörper",
     overview:
-      "Flex Drill untersucht eine gekrümmte Bohrführungsarchitektur, von mechanischer Spannungssimulation bis zu physischem Prototyp und Produktrendering.",
+      "DOMTEKNIKA konzipierte und entwickelte eine neue Polymerarchitektur für dieses flexible orthopädische Instrument. Das Projekt umfasste Konzeptstudien, die vollständige Entwicklung der ausgewählten Lösung, funktionsfähige Prototypen und eine Produktionskostenanalyse. Das Ergebnis ist eine leichte, industrialisierbare und für die Anforderungen der medizinischen Anwendung geeignete Lösung.",
   },
   "biome-staple-applicator": {
     category: "Medizin",
-    title: "Biome-Klammerapplikator",
+    title: "Applikationsinstrument für ZipFix-Sternalimplantate",
     description:
-      "Handgeführtes Applikatorkonzept, entwickelt durch Skizzen, Strukturanalyse und gedruckte Prototypen.",
-    imageAlt: "Weiß-rotes Rendering eines biomedizinischen Klammerapplikators",
+      "Einweg-Instrument aus Polymer als Ersatz für eine wiederverwendbare Stahllösung, das Herstellungs- und Wartungskosten sowie Kontaminationsrisiken durch Wiederverwendung reduziert.",
+    imageAlt: "Weiß-rotes Applikationsinstrument für ZipFix-Sternalimplantate",
     overview:
-      "Der Applikator zeigt die gesamte Schleife von Ideenskizze und ergonomischem Layout bis zu Finite-Elemente-Prüfungen und Prototypteilen für ein biomedizinisches Handwerkzeug.",
+      "Das Projekt löste drei zentrale Herausforderungen des wiederverwendbaren Stahlinstruments: hohe Herstellungskosten, langfristigen Wartungsaufwand und Kontaminationsrisiken bei wiederholter Verwendung. DOMTEKNIKA entwickelte eine Einweg-Alternative aus Polymer für die Anwendung von ZipFix-Sternalimplantaten – von der Konzeptstudie und vollständigen Produktentwicklung bis zur Validierung mit funktionsfähigen Prototypen und Betreuung einer ersten Spritzgussserie.",
   },
   "filter-carafe": {
     category: "Haushaltsprodukte",
@@ -1562,28 +1552,22 @@ const DE_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
   },
   "personal-injector": {
     category: "Medizin",
-    title: "Personal Injector",
+    title: "Autoinjektor",
     description:
-      "Vernetztes persönliches Injektionsgerät mit Fokus auf Kompatibilität, keine Nadelhandhabung, kompakte Kinematik und Einwegspritze.",
-    imageAlt: "Konzept eines Personal-Injector-Medizinprodukts",
+      "Vernetzter Autoinjektor für eine einfache und sichere Selbstmedikation mit verdeckter Nadel und digitaler Dosiserfassung.",
+    imageAlt: "Medizinischer Autoinjektor mit verdeckter Nadel",
     overview:
-      "Im medizinischen Portfolio als SwissMedDev Start Up Prize 2013 Projekt vorgestellt, adressiert der Personal Injector sicherere Selbstinjektion durch kompakte Mechanik, vernetzte Gerätefunktion, Kompatibilitätsanforderungen und keine direkte Nadelhandhabung.",
+      "Dieser insbesondere für regelmäßige Diabetesbehandlungen konzipierte Autoinjektor hält die Nadel während der gesamten Anwendung außer Sicht und reduziert so die Hemmschwelle für Patienten. DOMTEKNIKA leitete die Industrialisierung und optimierte die Architektur für ein zuverlässiges, robustes und serienreifes Produkt. Die integrierte Dosiserfassung dokumentiert zudem die Therapietreue im Zeitverlauf.",
   },
   "acetabular-reamer-holder": {
     category: "Medizin",
     title: "Acetabulum-Reamer-Halter",
     description:
-      "PEEK-Griff und Schutzabdeckung für acetabuläre Reamer, entwickelt mit Design, FEM und Spritzgussanforderungen.",
+      "Industrialisierung von PEEK-Komponenten für einen Acetabulum-Reamer-Halter mit mechanischer Validierung, Spritzgussoptimierung und Prozessentwicklung.",
     imageAlt:
-      "Orange-schwarzer PEEK-Prototyp eines acetabulären Reamer-Halters",
+      "Zwei orange-schwarze PEEK-Teile für einen Acetabulum-Reamer-Halter",
     overview:
-      "Dieses medizinische Werkzeugprojekt umfasst einen PEEK-Griff und eine Schutzabdeckung für einen acetabulären Reamer, mit Detaildesign, Finite-Elemente-Analyse, Spritzgussmachbarkeit und hoher Steifigkeit für ein hygienisches chirurgisches Instrument.",
-    relatedPatents: [
-      relatedPatent(
-        "EP3185821A1",
-        "Patentkontext für orthopädische Chirurgiewerkzeuge rund um Impaktor- und Reamer-Instrumente.",
-      ),
-    ],
+      "DOMTEKNIKA leitete die Industrialisierung zweier PEEK-Komponenten für einen Acetabulum-Reamer-Halter. Finite-Elemente- und rheologische Analysen, Geometrieoptimierung für den Spritzguss, Werkzeugentwicklung und Prozessabstimmung wurden kombiniert, um mechanische Leistung, Präzision und Wiederholbarkeit in der Produktion sicherzustellen.",
   },
   "single-use-turbine": {
     category: "Medizin",
@@ -1746,20 +1730,22 @@ const ES_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
   },
   "flex-drill": {
     category: "Médico",
+    title: "Broca ortopédica flexible",
     description:
-      "Concepto de accesorio de taladro flexible con guía polimérica, validación de prototipo y vistas de análisis de tensiones.",
-    imageAlt: "Concepto azul de guía de taladro flexible",
+      "Instrumento ortopédico flexible de polímero que combina ligereza, costes de producción controlados y compatibilidad con la esterilización médica.",
+    imageAlt: "Broca ortopédica flexible con cuerpo de polímero azul",
     overview:
-      "Flex Drill explora una arquitectura de guía de taladro curvada, desde simulación de esfuerzo mecánico hasta prototipo físico y render de producto.",
+      "DOMTEKNIKA diseñó y desarrolló una nueva arquitectura de polímero para este instrumento ortopédico flexible. El proyecto abarcó la investigación de conceptos, el desarrollo completo de la solución elegida, prototipos funcionales y el análisis de costes de producción, dando lugar a un dispositivo ligero, industrializable y adaptado a las exigencias del uso médico.",
   },
   "biome-staple-applicator": {
     category: "Médico",
-    title: "Aplicador de grapas Biome",
+    title: "Instrumento de aplicación de implantes esternales ZipFix",
     description:
-      "Concepto de aplicador portátil desarrollado mediante bocetos, análisis estructural y prototipos impresos.",
-    imageAlt: "Render blanco y rojo de aplicador biomédico de grapas",
+      "Instrumento de polímero de un solo uso que sustituye una solución reutilizable de acero, reduciendo los costes de fabricación y mantenimiento y los riesgos de contaminación por reutilización.",
+    imageAlt:
+      "Instrumento blanco y rojo para aplicar implantes esternales ZipFix",
     overview:
-      "El aplicador muestra el ciclo completo desde boceto de ideación y planteamiento ergonómico hasta verificaciones por elementos finitos y piezas prototipo para una herramienta biomédica portátil.",
+      "El proyecto resolvió tres retos principales del instrumento reutilizable de acero: su elevado coste de fabricación, el mantenimiento a largo plazo y los riesgos de contaminación asociados a usos sucesivos. DOMTEKNIKA desarrolló una alternativa de polímero de un solo uso para aplicar implantes esternales ZipFix, desde la investigación de conceptos y el desarrollo completo hasta la validación mediante prototipos funcionales y la gestión de una primera serie inyectada.",
   },
   "filter-carafe": {
     category: "Productos",
@@ -1802,28 +1788,22 @@ const ES_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
   },
   "personal-injector": {
     category: "Médico",
-    title: "Personal Injector",
+    title: "Autoinyector",
     description:
-      "Concepto de inyector personal conectado, centrado en compatibilidad, sin manipulación de aguja, cinemática compacta y jeringa de un solo uso.",
-    imageAlt: "Concepto de dispositivo médico Personal Injector",
+      "Autoinyector conectado diseñado para simplificar y asegurar la administración autónoma del tratamiento, con aguja oculta y seguimiento digital de dosis.",
+    imageAlt: "Autoinyector médico diseñado para ocultar la aguja",
     overview:
-      "Presentado en el portafolio médico como proyecto SwissMedDev Start Up Prize 2013, Personal Injector busca una autoinyección más segura mediante mecánica compacta, lógica de dispositivo conectado, requisitos de compatibilidad y sin manipulación directa de la aguja.",
+      "Pensado especialmente para tratamientos regulares de la diabetes, este autoinyector mantiene la aguja fuera de la vista durante todo el uso para reducir la aprensión del paciente. DOMTEKNIKA dirigió la industrialización del dispositivo, optimizando su arquitectura para obtener un producto fiable, robusto y apto para la producción en serie. El seguimiento integrado de dosis también permite documentar la regularidad del tratamiento.",
   },
   "acetabular-reamer-holder": {
     category: "Médico",
     title: "Soporte de fresa acetabular",
     description:
-      "Desarrollo de mango y cubierta en PEEK para fresa acetabular, con diseño, análisis FEM y requisitos de inyección.",
+      "Industrialización de componentes de PEEK para un soporte de fresa acetabular, con validación mecánica, optimización para inyección y desarrollo del proceso.",
     imageAlt:
-      "Prototipo naranja y negro de soporte de fresa acetabular en PEEK",
+      "Dos piezas naranjas y negras de PEEK para un soporte de fresa acetabular",
     overview:
-      "Este proyecto de instrumental médico cubre un mango de PEEK y una cubierta protectora para una fresa acetabular, combinando diseño detallado, análisis por elementos finitos, viabilidad de inyección y alta rigidez para un instrumento quirúrgico higiénico.",
-    relatedPatents: [
-      relatedPatent(
-        "EP3185821A1",
-        "Contexto de patente de instrumental ortopédico para instrumentos quirúrgicos relacionados con impactores y fresas.",
-      ),
-    ],
+      "DOMTEKNIKA dirigió la industrialización de dos componentes de PEEK para un soporte de fresa acetabular. El desarrollo combinó análisis por elementos finitos y simulaciones reológicas, optimización de geometrías para inyección, desarrollo de moldes y puesta a punto del proceso para garantizar rendimiento mecánico, precisión y repetibilidad en producción.",
   },
   "single-use-turbine": {
     category: "Médico",
@@ -1986,20 +1966,21 @@ const KO_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
   },
   "flex-drill": {
     category: "의료",
+    title: "유연형 정형외과 드릴",
     description:
-      "형상화된 폴리머 가이드, 프로토타입 검증, 응력 분석 뷰를 포함한 유연 드릴 액세서리 콘셉트.",
-    imageAlt: "파란색 유연 드릴 가이드 콘셉트",
+      "경량 구조, 생산 비용 관리, 의료용 멸균 요건을 결합한 유연형 폴리머 정형외과 기구입니다.",
+    imageAlt: "파란색 폴리머 몸체의 유연형 정형외과 드릴",
     overview:
-      "Flex Drill은 곡선형 드릴 가이드 아키텍처를 탐구하며, 기계 응력 시뮬레이션에서 물리 프로토타입과 제품 렌더링까지 이어집니다.",
+      "DOMTEKNIKA는 이 유연형 정형외과 기구를 위한 새로운 폴리머 구조를 설계하고 개발했습니다. 콘셉트 연구, 선정 솔루션의 전체 개발, 기능성 프로토타입 제작과 생산 비용 분석을 통해 가볍고 산업화가 가능하며 의료 환경의 제약에 적합한 기기를 완성했습니다.",
   },
   "biome-staple-applicator": {
     category: "의료",
-    title: "Biome 스테이플 애플리케이터",
+    title: "ZipFix 흉골 임플란트 적용 기구",
     description:
-      "스케치, 구조 분석, 출력 프로토타입을 통해 개발된 휴대형 애플리케이터 콘셉트.",
-    imageAlt: "흰색과 빨간색 바이오메디컬 스테이플 애플리케이터 렌더",
+      "재사용 강철 기구를 대체해 제조·유지보수 비용과 반복 사용에 따른 오염 위험을 줄이는 일회용 폴리머 기구입니다.",
+    imageAlt: "흰색과 빨간색 ZipFix 흉골 임플란트 적용 기구",
     overview:
-      "이 애플리케이터는 아이디어 스케치와 인체공학적 배치에서 유한요소 검토와 프로토타입 부품까지의 전체 과정을 보여 줍니다.",
+      "이 프로젝트는 재사용 강철 기구의 높은 제조 비용, 장기 유지보수 부담, 반복 사용에 따른 오염 위험이라는 세 가지 과제를 해결했습니다. DOMTEKNIKA는 ZipFix 흉골 임플란트 적용을 위한 일회용 폴리머 대안을 개발했으며, 콘셉트 연구와 전체 제품 개발부터 기능성 프로토타입 검증 및 첫 사출 생산 시리즈 관리까지 수행했습니다.",
   },
   "filter-carafe": {
     category: "제품",
@@ -2038,27 +2019,21 @@ const KO_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
   },
   "personal-injector": {
     category: "의료",
-    title: "Personal Injector",
+    title: "자동 주사기",
     description:
-      "호환성, 바늘 직접 취급 방지, 컴팩트한 기구 구조, 일회용 주사기를 중심으로 한 연결형 개인 주사기 콘셉트.",
-    imageAlt: "Personal Injector 의료기기 콘셉트",
+      "숨겨진 바늘과 디지털 투여량 기록으로 안전하고 간편한 자가 투약을 지원하는 연결형 자동 주사기입니다.",
+    imageAlt: "바늘이 보이지 않도록 설계된 의료용 자동 주사기",
     overview:
-      "의료 포트폴리오에서 SwissMedDev Start Up Prize 2013 프로젝트로 소개된 Personal Injector는 컴팩트한 기구, 연결형 장치 로직, 호환성 조건, 바늘 직접 취급 방지를 통해 더 안전한 자가 주사를 목표로 합니다.",
+      "정기적인 당뇨병 치료를 위해 설계된 이 자동 주사기는 사용 중 바늘이 보이지 않아 환자의 불안을 줄여 줍니다. DOMTEKNIKA는 신뢰성과 내구성을 갖춘 양산 제품을 목표로 기기 구조를 최적화하고 산업화를 주도했습니다. 통합 투여량 기록 기능은 시간에 따른 치료 규칙성도 확인할 수 있게 합니다.",
   },
   "acetabular-reamer-holder": {
     category: "의료",
     title: "비구 리머 홀더",
     description:
-      "비구 수술용 PEEK 리머 핸들과 커버 개발로, 디자인, 유한요소해석, 사출 성형 조건을 함께 다룹니다.",
-    imageAlt: "오렌지와 검정색 PEEK 비구 리머 홀더 프로토타입",
+      "기계 검증, 사출 최적화, 공정 개발을 결합한 비구 리머 홀더용 PEEK 부품 산업화 프로젝트입니다.",
+    imageAlt: "비구 리머 홀더용 오렌지와 검정색 PEEK 부품 2개",
     overview:
-      "이 의료 공구 프로젝트는 비구 리머용 PEEK 핸들과 보호 커버를 다루며, 상세 설계, 유한요소해석, 사출 성형 가능성, 위생적인 수술 기구에 필요한 높은 강성을 함께 검토합니다.",
-    relatedPatents: [
-      relatedPatent(
-        "EP3185821A1",
-        "임팩터와 리머 계열 수술 기구에 관련된 정형외과 수술 도구 특허 맥락입니다.",
-      ),
-    ],
+      "DOMTEKNIKA는 비구 리머 홀더용 PEEK 부품 2개의 산업화를 주도했습니다. 유한요소 및 유동 해석, 사출 성형을 위한 형상 최적화, 금형 개발과 공정 조정을 결합해 양산 시 기계적 성능, 정밀도와 반복성을 확보했습니다.",
   },
   "single-use-turbine": {
     category: "의료",
@@ -2220,19 +2195,20 @@ const ZH_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
   },
   "flex-drill": {
     category: "医疗",
-    description:
-      "柔性钻孔附件概念，包含成型聚合物导向件、原型验证和应力分析视图。",
-    imageAlt: "蓝色柔性钻孔导向概念",
+    title: "柔性骨科钻具",
+    description: "柔性聚合物骨科器械，兼顾轻量化、可控生产成本和医疗灭菌要求。",
+    imageAlt: "带蓝色聚合物主体的柔性骨科钻具",
     overview:
-      "Flex Drill 探索弯曲钻孔导向架构，从机械应力仿真走向实体原型和产品渲染。",
+      "DOMTEKNIKA 为这款柔性骨科器械设计并开发了全新的聚合物架构。项目涵盖概念研究、选定方案的完整开发、功能原型制作和生产成本分析，最终形成轻量、可工业化并适应医疗使用要求的产品。",
   },
   "biome-staple-applicator": {
     category: "医疗",
-    title: "Biome 缝合钉施用器",
-    description: "通过草图、结构分析和打印原型开发的手持施用器概念。",
-    imageAlt: "白红色生物医学缝合钉施用器渲染图",
+    title: "ZipFix 胸骨植入物施用器械",
+    description:
+      "用于替代可重复使用钢制方案的一次性聚合物器械，可降低制造与维护成本，并减少重复使用带来的污染风险。",
+    imageAlt: "白红色 ZipFix 胸骨植入物施用器械",
     overview:
-      "该施用器展示了从创意草图和人体工学布置，到有限元检查和原型零件的完整循环。",
+      "该项目解决了可重复使用钢制器械的三项关键问题：制造成本高、长期维护负担重，以及连续使用所带来的污染风险。DOMTEKNIKA 为 ZipFix 胸骨植入物施用开发了一次性聚合物替代方案，涵盖概念研究、完整产品开发、功能原型验证和首批注塑生产管理。",
   },
   "filter-carafe": {
     category: "产品",
@@ -2271,27 +2247,21 @@ const ZH_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
   },
   "personal-injector": {
     category: "医疗",
-    title: "Personal Injector",
+    title: "自动注射器",
     description:
-      "联网个人注射器概念，聚焦兼容性、无需直接接触针头、紧凑运动机构和一次性注射器。",
-    imageAlt: "Personal Injector 医疗设备概念",
+      "连接型自动注射器，通过隐藏针头和数字剂量记录，让患者更简单、安全地自行完成治疗。",
+    imageAlt: "隐藏针头设计的医疗自动注射器",
     overview:
-      "Personal Injector 在医疗作品集中作为 SwissMedDev Start Up Prize 2013 项目展示，目标是通过紧凑机械、联网设备逻辑、兼容性约束和避免直接接触针头，实现更安全的自我注射。",
+      "这款自动注射器尤其适用于需要规律治疗的糖尿病患者，在整个使用过程中将针头保持在视线之外，从而减轻患者的不安。DOMTEKNIKA 主导设备工业化并优化其架构，使产品具备可靠性、耐用性和批量生产能力。集成式剂量记录功能还可持续记录治疗规律性。",
   },
   "acetabular-reamer-holder": {
     category: "医疗",
     title: "髋臼铰刀支架",
     description:
-      "用于髋臼手术的 PEEK 铰刀手柄和保护盖开发，结合设计、有限元分析和注塑约束。",
-    imageAlt: "橙黑色 PEEK 髋臼铰刀支架原型",
+      "髋臼铰刀支架 PEEK 部件的工业化，涵盖机械验证、注塑优化和工艺开发。",
+    imageAlt: "髋臼铰刀支架的两个橙黑色 PEEK 零件",
     overview:
-      "该医疗工具项目涵盖用于髋臼铰刀的 PEEK 手柄和保护盖，结合详细设计、有限元分析、注塑可行性，以及卫生手术器械所需的高刚度要求。",
-    relatedPatents: [
-      relatedPatent(
-        "EP3185821A1",
-        "与冲击器和铰刀类外科器械相关的骨科手术工具专利背景。",
-      ),
-    ],
+      "DOMTEKNIKA 主导了髋臼铰刀支架两个 PEEK 部件的工业化。项目结合有限元与流变分析、注塑几何优化、模具开发和工艺调试，确保批量生产中的机械性能、精度和重复性。",
   },
   "single-use-turbine": {
     category: "医疗",
@@ -2726,66 +2696,66 @@ const PROJECT_SCOPES: Record<
   },
   "flex-drill": {
     en: [
-      "Research and selection of a new low-cost polymer instrument concept.",
-      "Complete development of the selected solution and production of functional prototypes.",
-      "Production-cost analysis to prepare the instrument for industrialization.",
+      "Research and selection of a lightweight polymer instrument architecture.",
+      "Complete mechanical development and validation through functional prototypes.",
+      "Production-cost analysis and preparation for industrialization.",
     ],
     fr: [
-      "Recherche et sélection d’un nouveau concept d’instrument polymère à bas coût.",
-      "Développement complet de la solution retenue et réalisation de prototypes fonctionnels.",
-      "Analyse des coûts de production en vue de l’industrialisation de l’instrument.",
+      "Recherche et sélection d'une architecture d'instrument polymère légère et performante.",
+      "Développement mécanique complet et validation par prototypes fonctionnels.",
+      "Analyse des coûts de production et préparation à l'industrialisation.",
     ],
     de: [
-      "Gebogenes Bohrführungskonzept für schwer zugängliche Bereiche und kontrollierte Werkzeugrichtung.",
-      "Mechanische Spannungsanalysen zur Absicherung von Geometrie und Materialwahl.",
-      "Prototypen- und Renderingiterationen zur verständlichen Darstellung des Funktionsprinzips.",
+      "Untersuchung und Auswahl einer leichten, leistungsfähigen Polymerarchitektur.",
+      "Vollständige mechanische Entwicklung und Validierung mit funktionsfähigen Prototypen.",
+      "Produktionskostenanalyse und Vorbereitung der Industrialisierung.",
     ],
     es: [
-      "Concepto de guía de perforación curva para accesos limitados y dirección controlada de la herramienta.",
-      "Verificaciones de tensiones mecánicas para respaldar la geometría y la elección del material.",
-      "Iteraciones de prototipo y render para comunicar con claridad el principio de funcionamiento.",
+      "Investigación y selección de una arquitectura de polímero ligera y eficiente.",
+      "Desarrollo mecánico completo y validación mediante prototipos funcionales.",
+      "Análisis de costes de producción y preparación para la industrialización.",
     ],
     ko: [
-      "제한된 접근 공간과 공구 방향 제어를 위한 곡선형 드릴 가이드 콘셉트.",
-      "형상과 소재 선택을 뒷받침하는 기계 응력 검토.",
-      "작동 원리를 명확히 전달하기 위한 프로토타입 및 렌더링 반복.",
+      "가볍고 성능이 뛰어난 폴리머 기구 구조의 연구와 선정.",
+      "전체 기계 개발과 기능성 프로토타입을 통한 검증.",
+      "생산 비용 분석과 산업화 준비.",
     ],
     zh: [
-      "为受限操作空间与可控工具方向开发弯曲钻孔导向概念。",
-      "通过机械应力校核支持几何结构与材料选择。",
-      "迭代原型与渲染图，清晰呈现工作原理。",
+      "研究并选择轻量、高性能的聚合物器械架构。",
+      "完成机械开发并通过功能原型进行验证。",
+      "分析生产成本并为工业化做好准备。",
     ],
   },
   "biome-staple-applicator": {
     en: [
-      "Research and selection of a low-cost, single-use polymer instrument concept.",
-      "Complete development of the selected solution and production of functional prototypes.",
-      "Management of an initial series of injection-moulded parts.",
+      "Replacement of a reusable steel architecture with an ergonomic, single-use polymer instrument.",
+      "Complete product engineering and validation through functional prototypes.",
+      "Industrialization and management of an initial injection-moulded series.",
     ],
     fr: [
-      "Recherche et sélection d’un concept d’instrument polymère à bas coût et à usage unique.",
-      "Développement complet de la solution retenue et réalisation de prototypes fonctionnels.",
-      "Pilotage d’une première série de pièces injectées.",
+      "Remplacement d'une architecture réutilisable en acier par un instrument ergonomique en polymère à usage unique.",
+      "Conception complète du produit et validation par prototypes fonctionnels.",
+      "Industrialisation et pilotage d'une première série de pièces injectées.",
     ],
     de: [
-      "Ergonomie eines Handapplikators vom ersten Entwurf bis zum CAD-Layout.",
-      "Strukturprüfungen und gedruckte Prototypen für einen biomedizinischen Mechanismus.",
-      "Produktverfeinerung bei Griff, Betätigung und medizintechnischer Gestaltung.",
+      "Ersatz einer wiederverwendbaren Stahlarchitektur durch ein ergonomisches Einweg-Instrument aus Polymer.",
+      "Vollständige Produktentwicklung und Validierung mit funktionsfähigen Prototypen.",
+      "Industrialisierung und Betreuung einer ersten Spritzgussserie.",
     ],
     es: [
-      "Ergonomía de un aplicador manual desde el boceto hasta la definición CAD.",
-      "Verificaciones estructurales y prototipos impresos para un mecanismo biomédico.",
-      "Perfeccionamiento del producto en agarre, accionamiento y presentación médica.",
+      "Sustitución de una arquitectura reutilizable de acero por un instrumento ergonómico de polímero y de un solo uso.",
+      "Ingeniería completa del producto y validación mediante prototipos funcionales.",
+      "Industrialización y gestión de una primera serie de piezas inyectadas.",
     ],
     ko: [
-      "스케치부터 CAD 레이아웃까지 이어진 휴대형 어플리케이터 인체공학 설계.",
-      "바이오메디컬 메커니즘을 위한 구조 검토와 3D 프린팅 프로토타입.",
-      "그립, 작동 방식, 의료 제품 표현을 중심으로 한 제품 정교화.",
+      "재사용 강철 구조를 인체공학적 일회용 폴리머 기구로 대체.",
+      "전체 제품 엔지니어링과 기능성 프로토타입 검증.",
+      "산업화와 첫 사출 생산 시리즈 관리.",
     ],
     zh: [
-      "从草图到 CAD 布局完善手持式施用器的人体工学设计。",
-      "通过结构校核与打印原型验证生物医疗机构。",
-      "围绕握持、驱动方式与医疗产品表达深化设计。",
+      "以符合人体工学的一次性聚合物器械替代可重复使用的钢制架构。",
+      "完成产品工程开发并通过功能原型验证。",
+      "完成工业化并管理首批注塑生产。",
     ],
   },
   "filter-carafe": {
@@ -2886,66 +2856,66 @@ const PROJECT_SCOPES: Record<
   },
   "personal-injector": {
     en: [
-      "Compact self-injection architecture with connected-device constraints.",
-      "Reduced-size kinematics intended to avoid direct needle handling.",
-      "Single-use syringe integration around compatibility and safer patient use.",
+      "Industrialization and optimization for reliable series production.",
+      "Self-injection architecture that conceals the needle to reduce patient anxiety.",
+      "Integrated dose monitoring to document treatment adherence over time.",
     ],
     fr: [
-      "Architecture d'auto-injection compacte avec contraintes d'objet connecté.",
-      "Cinématique réduite pour éviter la manipulation directe de l'aiguille.",
-      "Intégration d'une seringue à usage unique autour de la compatibilité et d'un usage patient plus sûr.",
+      "Industrialisation et optimisation pour une fabrication en série fiable.",
+      "Architecture d'auto-injection dissimulant l'aiguille afin de réduire l'anxiété du patient.",
+      "Suivi intégré des doses pour documenter la régularité du traitement dans le temps.",
     ],
     de: [
-      "Kompakte Architektur für einen Selbstinjektor unter Berücksichtigung vernetzter Funktionen.",
-      "Reduzierte Kinematik, damit die Nadel nicht direkt gehandhabt werden muss.",
-      "Integration einer Einwegspritze mit Fokus auf Kompatibilität und sichere Anwendung durch Patienten.",
+      "Industrialisierung und Optimierung für eine zuverlässige Serienfertigung.",
+      "Selbstinjektionsarchitektur mit verdeckter Nadel zur Verringerung der Patientenangst.",
+      "Integrierte Dosiserfassung zur Dokumentation der Therapietreue im Zeitverlauf.",
     ],
     es: [
-      "Arquitectura compacta de autoinyección compatible con las necesidades de un dispositivo conectado.",
-      "Cinemática simplificada para evitar la manipulación directa de la aguja.",
-      "Integración de una jeringa desechable centrada en la compatibilidad y la seguridad del paciente.",
+      "Industrialización y optimización para una producción en serie fiable.",
+      "Arquitectura de autoinyección que oculta la aguja para reducir la ansiedad del paciente.",
+      "Seguimiento integrado de dosis para documentar la regularidad del tratamiento.",
     ],
     ko: [
-      "연결형 기기 요구사항을 반영한 컴팩트 자가 주사기 구조.",
-      "바늘을 직접 다루지 않도록 단순화한 구동 메커니즘.",
-      "호환성과 환자 안전을 중심으로 일회용 주사기를 통합.",
+      "신뢰성 높은 양산을 위한 산업화와 최적화.",
+      "환자의 불안을 줄이도록 바늘을 숨긴 자가 주사 구조.",
+      "시간에 따른 치료 규칙성을 기록하는 통합 투여량 모니터링.",
     ],
     zh: [
-      "结合联网设备需求，构建紧凑型自助注射器架构。",
-      "简化运动机构，避免患者直接接触和操作针头。",
-      "以兼容性与患者安全为核心，集成一次性注射器。",
+      "面向可靠批量生产的工业化与优化。",
+      "采用隐藏针头的自助注射架构，减轻患者焦虑。",
+      "集成剂量监测，持续记录治疗规律性。",
     ],
   },
   "acetabular-reamer-holder": {
     en: [
-      "PEEK handle and cover design for acetabular reamer instrumentation.",
-      "Finite-element checks and material decisions around stiffness and surgical handling.",
-      "Injection-molding feasibility connected to a hygienic surgical tool architecture.",
+      "Finite-element and rheological analyses of the PEEK components.",
+      "Geometry optimization for injection molding and mechanical performance.",
+      "Tooling development and injection-process tuning for repeatable production.",
     ],
     fr: [
-      "Conception d'une poignée et d'un capot en PEEK pour instrumentation de fraise acétabulaire.",
-      "Calculs éléments finis et choix matière autour de la rigidité et de la manipulation chirurgicale.",
-      "Faisabilité injection liée à une architecture d'outil chirurgical hygiénique.",
+      "Calculs par éléments finis et analyses rhéologiques des composants en PEEK.",
+      "Optimisation des géométries pour l'injection et la performance mécanique.",
+      "Développement des outillages et mise au point du procédé pour une production répétable.",
     ],
     de: [
-      "Entwicklung von Griff und Abdeckung aus PEEK für ein Instrument zur Hüftpfannenbearbeitung.",
-      "Finite-Elemente-Berechnungen und Materialwahl im Hinblick auf Steifigkeit und chirurgische Handhabung.",
-      "Bewertung der Spritzgießbarkeit für eine hygienegerechte Instrumentenarchitektur.",
+      "Finite-Elemente- und rheologische Analysen der PEEK-Komponenten.",
+      "Geometrieoptimierung für Spritzguss und mechanische Leistung.",
+      "Werkzeugentwicklung und Prozessabstimmung für eine wiederholbare Produktion.",
     ],
     es: [
-      "Diseño de una empuñadura y una cubierta de PEEK para instrumental de fresado acetabular.",
-      "Cálculos por elementos finitos y selección de material según la rigidez y la manipulación quirúrgica.",
-      "Estudio de viabilidad de inyección para una arquitectura de instrumental higiénica.",
+      "Análisis por elementos finitos y reológicos de los componentes de PEEK.",
+      "Optimización de geometrías para inyección y rendimiento mecánico.",
+      "Desarrollo de moldes y puesta a punto del proceso para una producción repetible.",
     ],
     ko: [
-      "비구 리머 기구용 PEEK 손잡이와 커버 설계.",
-      "강성과 수술 조작성을 고려한 유한요소해석 및 소재 선정.",
-      "위생적인 수술 기구 구조를 위한 사출 성형 가능성 검토.",
+      "PEEK 부품의 유한요소 및 유동 해석.",
+      "사출 성형과 기계적 성능을 위한 형상 최적화.",
+      "반복 가능한 생산을 위한 금형 개발과 사출 공정 조정.",
     ],
     zh: [
-      "为髋臼铰刀器械设计 PEEK 手柄与护盖。",
-      "结合刚度与手术操作需求开展有限元分析和材料选择。",
-      "针对卫生型手术器械架构评估注塑成型可行性。",
+      "对 PEEK 部件开展有限元与流变分析。",
+      "优化几何结构，兼顾注塑成型与机械性能。",
+      "开发模具并调试注塑工艺，实现稳定重复生产。",
     ],
   },
   "single-use-turbine": {
@@ -6028,7 +5998,7 @@ function ProjectsStatsSection({
                 <Icon
                   aria-hidden="true"
                   strokeWidth={1.65}
-                          className="h-[36px] w-[40px] text-brand transition-transform duration-500 group-hover/stat:-translate-y-1 sm:h-[40px] sm:w-[44px] min-[1180px]:relative min-[1180px]:-left-5 min-[1180px]:h-[30px] min-[1180px]:w-[32px] min-[1180px]:justify-self-start min-[2400px]:!h-[46px] min-[2400px]:!w-[48px] motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]"
+                  className="h-[36px] w-[40px] text-brand transition-transform duration-500 group-hover/stat:-translate-y-1 sm:h-[40px] sm:w-[44px] min-[1180px]:relative min-[1180px]:-left-5 min-[1180px]:h-[30px] min-[1180px]:w-[32px] min-[1180px]:justify-self-start min-[2400px]:!h-[46px] min-[2400px]:!w-[48px] motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]"
                 />
                 <div className="min-w-0 min-[1180px]:grid min-[1180px]:h-[48px] min-[1180px]:grid-rows-[22px_26px] min-[1180px]:content-center min-[2400px]:!h-[60px] min-[2400px]:!grid-rows-[28px_32px]">
                   <strong className="block max-w-full whitespace-nowrap text-[18px] font-extrabold leading-none text-foreground sm:text-[19px] min-[1180px]:flex min-[1180px]:h-[22px] min-[1180px]:items-center min-[1180px]:text-[17px] min-[1180px]:leading-[22px] 2xl:text-[18px] min-[2400px]:!h-[28px] min-[2400px]:!text-[22px] min-[2400px]:!leading-[28px]">
