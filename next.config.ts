@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 import { networkInterfaces } from "node:os";
 import createNextIntlPlugin from "next-intl/plugin";
 
+import { PATENTS } from "./src/data/patents";
+
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const isDevelopment = process.env.NODE_ENV === "development";
@@ -72,6 +74,28 @@ const localDevOrigins = Object.values(networkInterfaces())
   .filter((entry) => entry.family === "IPv4" && !entry.internal)
   .map((entry) => entry.address);
 
+const patentFamilyRedirects = Array.from(
+  new Map(
+    PATENTS.flatMap((patent) =>
+      patent.publicationAliases.flatMap((alias) => {
+        const normalizedAlias = alias.replace(/[^a-z0-9]/gi, "");
+        if (!normalizedAlias || normalizedAlias === patent.id) return [];
+
+        return [
+          [
+            normalizedAlias,
+            {
+              source: `/:locale(en|fr|de|es|ko|zh)/patents/${normalizedAlias}`,
+              destination: `/:locale/patents/${patent.id.toLowerCase()}`,
+              permanent: true,
+            },
+          ] as const,
+        ];
+      }),
+    ),
+  ).values(),
+);
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
@@ -83,6 +107,7 @@ const nextConfig: NextConfig = {
         destination: "/:locale/patents",
         permanent: true,
       },
+      ...patentFamilyRedirects,
     ];
   },
   async headers() {

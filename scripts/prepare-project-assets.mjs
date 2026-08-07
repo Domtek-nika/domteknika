@@ -217,6 +217,31 @@ const projects = [
         "assets/project-source-overrides/folding-bike-scooter/folding-bike-scooter-04.png",
     },
   },
+  {
+    folder: "horloge",
+    sourceDir: "/Users/mathis/Domteknika/SiteInternet/horloge",
+    slug: "transparent-clock",
+    cover: "1.JPG",
+    order: ["1.JPG", "2.JPG", "3.JPG", "4.JPG"],
+    outputNames: {
+      "1.JPG": "transparent-clock-01.webp",
+      "2.JPG": "transparent-clock-02.webp",
+      "3.JPG": "transparent-clock-03.webp",
+      "4.JPG": "transparent-clock-04.webp",
+    },
+  },
+  {
+    folder: "Goblet",
+    sourceDir: "/Users/mathis/Domteknika/SiteInternet/Goblet",
+    slug: "bottom-filling-cup",
+    cover: "1.JPG",
+    order: ["1.JPG", "2.jpg", "3.jpg"],
+    outputNames: {
+      "1.JPG": "bottom-filling-cup-01.webp",
+      "2.jpg": "bottom-filling-cup-02.webp",
+      "3.jpg": "bottom-filling-cup-03.webp",
+    },
+  },
 ];
 
 function slugify(value) {
@@ -257,7 +282,7 @@ fs.mkdirSync(OUT_ROOT, { recursive: true });
 const manifest = [];
 
 for (const project of projects) {
-  const sourceDir = path.join(SOURCE_ROOT, project.folder);
+  const sourceDir = project.sourceDir ?? path.join(SOURCE_ROOT, project.folder);
   const outputDir = path.join(OUT_ROOT, project.slug);
   fs.mkdirSync(outputDir, { recursive: true });
 

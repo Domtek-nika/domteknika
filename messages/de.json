@@ -27,7 +27,7 @@
     "breakthrough": {
       "eyebrow": "Breakthrough innovation",
       "title": "Wir schaffen, was es noch nicht gibt",
-      "body": "Wenn eine Herausforderung keine offensichtliche Antwort hat, finden wir den entscheidenden Durchbruch: eine neue, technisch fundierte Idee, die zum Produkt werden kann.",
+      "body": "Bevor wir uns auf eine Richtung festlegen, prüfen wir mehrere Konzepte, decken verborgene Risiken frühzeitig auf und konzentrieren Zeit und Investitionen auf die Lösung mit dem größten Potenzial.",
       "sequence": {
         "challenge": "Herausforderung",
         "insight": "Erkenntnis",
@@ -35,36 +35,35 @@
       }
     },
     "expertise": {
-      "eyebrow": "Was wir tun",
-      "title": "Unsere Expertise – von der Idee zum Produkt.",
-      "body": "Kreativität, Design, Prototyping, Simulation, Polymere und Elektronik: Wir vereinen alle Kompetenzen für zuverlässige, serienreife Produkte.",
-      "cta": "Unsere Expertise entdecken",
+      "eyebrow": "Engineering nach Mass",
+      "title": "Kernkompetenzen",
+      "cta": "Unser Know-how entdecken",
       "swiss": "Schweizer Engineering",
       "location": "La Neuveville · Schweiz",
       "items": {
         "creativity": {
-          "title": "Kreativität & Innovation",
-          "body": "Wir klären den Bedarf und untersuchen mehrere Ansätze, um neue, realistische Lösungen zu entwickeln."
+          "title": "F&E",
+          "body": "Exploration, Konzeptentwicklung und Produktinnovation."
         },
         "design": {
-          "title": "Produktdesign",
-          "body": "Wir definieren Produktarchitektur, Mechanik, CAD und die für die Fertigung passenden Materialien."
+          "title": "CAD & Konstruktion",
+          "body": "Mechanische Architektur und präzise 3D-Auslegung."
         },
         "prototyping": {
           "title": "Prototyping",
-          "body": "Wir bauen Funktionsprototypen, um Nutzung, technische Entscheidungen und Leistung früh zu testen."
+          "body": "Funktionsprototypen für schnelle Tests und Iterationen."
         },
         "simulation": {
-          "title": "Simulation & Analyse",
-          "body": "Mit Berechnung und Simulation erkennen wir Belastungen frühzeitig und sichern Konstruktionsentscheidungen ab."
+          "title": "CAD & FEA",
+          "body": "3D-Konstruktion und Simulation für sichere technische Entscheidungen."
         },
         "polymer": {
           "title": "Polymer- & Spritzgusskompetenz",
           "body": "Wir entwickeln präzise Polymerbauteile für Spritzguss und industrielle Produktionsanforderungen."
         },
         "electronics": {
-          "title": "Elektronik-Integration",
-          "body": "Wir integrieren Elektronik in das Produkt und schaffen vernetzte, zuverlässige und einfach nutzbare Systeme."
+          "title": "Elektronik",
+          "body": "Integration elektronischer und vernetzter Funktionen."
         }
       }
     }

@@ -37,8 +37,8 @@ import {
 
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/providers/reveal";
-import { PatentDialog } from "@/components/sections/patent-dialog";
-import { PATENTS, type PatentRecord } from "@/data/patents";
+import { Link } from "@/i18n/navigation";
+import { getProjectCardImageFitClass } from "@/lib/project-card-image";
 import { cn } from "@/lib/utils";
 import projectAssetManifest from "../../../public/assets/projects/manifest.json";
 
@@ -180,6 +180,11 @@ const RELATED_PATENT_RECORDS = {
     publication: "US2009320941 (A1)",
     title: "MULTI-WAY VALVE DEVICE",
   },
+  EP3215454A1: {
+    publication: "EP3215454 (A1)",
+    title:
+      "BEAKER THAT CAN BE FILLED FROM THE BOTTOM AND CONNECTING DEVICE FOR THE BEAKER",
+  },
   CH701083B1: {
     publication: "CH701083 (B1)",
     title:
@@ -241,19 +246,6 @@ const RELATED_PATENT_RECORDS = {
 type RelatedPatentId = keyof typeof RELATED_PATENT_RECORDS;
 
 function relatedPatent(patentId: RelatedPatentId, note: string): RelatedPatent {
-  const patent = PATENTS.find((item) => item.id === patentId);
-
-  // The visible patent data must come from the patent archive itself, so a
-  // project link always matches the card and modal shown on the Patent page.
-  if (patent) {
-    return {
-      patentId,
-      publication: patent.publication,
-      title: patent.title,
-      note,
-    };
-  }
-
   return {
     patentId,
     publication: RELATED_PATENT_RECORDS[patentId].publication,
@@ -276,6 +268,8 @@ const RELATED_PATENT_NOTE_TRANSLATIONS: Partial<
   Record<ProjectsLocale, Partial<Record<RelatedPatentId, string>>>
 > = {
   fr: {
+    EP3215454A1:
+      "Brevet couvrant le gobelet à remplissage par le bas et son dispositif de connexion, avec Jean-Luc Thuliez et Étienne Crozier parmi les inventeurs.",
     US5584510A:
       "Principes de châssis pour l'intégration structurelle et la gestion de l'énergie d'impact dans un véhicule compact.",
     US5667030A:
@@ -290,6 +284,8 @@ const RELATED_PATENT_NOTE_TRANSLATIONS: Partial<
       "Mischkammer- und Luftführungsprinzipien für Getränke aus löslichen Zutaten.",
     EP3185821A1:
       "Patentkontext für orthopädische Chirurgiewerkzeuge rund um Impaktor- und Reamer-Instrumente.",
+    EP3215454A1:
+      "Patent für den von unten befüllbaren Becher und seine Anschlussvorrichtung, mit Jean-Luc Thuliez und Étienne Crozier unter den Erfindern.",
     EP3261867A2:
       "Direkter Aventor-SA-Patentkontext für die Architektur eines elektrischen Einsitzers.",
     EP3744622A1: "Patentfamilie zur Fahrzeugarchitektur der SOFTCAR-Plattform.",
@@ -344,6 +340,8 @@ const RELATED_PATENT_NOTE_TRANSLATIONS: Partial<
       "Principios de cámara de mezcla y gestión de aire para bebidas a partir de ingredientes solubles.",
     EP3185821A1:
       "Contexto de patente de instrumental ortopédico para instrumentos relacionados con impactores y fresas.",
+    EP3215454A1:
+      "Patente del vaso llenable por la base y su dispositivo de conexión, con Jean-Luc Thuliez y Étienne Crozier entre los inventores.",
     EP3261867A2:
       "Contexto directo de patente de Aventor SA para la arquitectura de un vehículo eléctrico monoplaza.",
     EP3744622A1:
@@ -400,6 +398,8 @@ const RELATED_PATENT_NOTE_TRANSLATIONS: Partial<
       "용해성 원료 기반 음료를 위한 혼합 챔버와 공기 흐름 설계 원리입니다.",
     EP3185821A1:
       "임팩터와 리머 계열 수술 기구에 관련된 정형외과 수술 도구 특허 맥락입니다.",
+    EP3215454A1:
+      "Jean-Luc Thuliez와 Étienne Crozier 등이 발명자로 참여한 하부 충전 컵과 연결 장치 특허입니다.",
     EP3261867A2:
       "전기 단좌 차량 아키텍처에 관한 Aventor SA의 직접 특허 맥락입니다.",
     EP3744622A1: "SOFTCAR 플랫폼에 연결된 차량 아키텍처 특허군입니다.",
@@ -447,6 +447,8 @@ const RELATED_PATENT_NOTE_TRANSLATIONS: Partial<
     CH701083B1: "通过胶囊和喷射结构实现牙齿清洁与美白的专利背景。",
     EP2000065A1: "用于可溶性原料饮品的混合腔和气流管理原理。",
     EP3185821A1: "与冲击器和铰刀类外科器械相关的骨科手术工具专利背景。",
+    EP3215454A1:
+      "可从底部灌装的杯体及其连接装置专利，Jean-Luc Thuliez 与 Étienne Crozier 等为发明人。",
     EP3261867A2: "Aventor SA 关于电动单座车辆架构的直接专利背景。",
     EP3744622A1: "面向 SOFTCAR 平台的车辆架构专利族。",
     EP3393889A1: "早期 SOFTCAR 车辆架构，聚焦轻量结构和车身概念。",
@@ -535,6 +537,7 @@ type ProjectsPageCopy = {
     output: string;
     design: string;
     prototype: string;
+    openFullPage: string;
   };
   cta: {
     eyebrow: string;
@@ -659,20 +662,6 @@ export const PROJECTS: Project[] = [
     tags: ["#1993", "#EV", "#ThreeWheeler"],
     overview:
       "Before founding DOMTEKNIKA, Jean-Luc Thuliez contributed to SAM CREE while working at another company. The ultra-light electric three-wheeler explored tandem seating, a central beam chassis and compact urban mobility - ideas that later informed his engineering approach.",
-    relatedPatents: [
-      relatedPatent(
-        "US6015022A",
-        "Ultra-light electric road-vehicle architecture with central beam chassis and compact wheelbase strategy.",
-      ),
-      relatedPatent(
-        "US5584510A",
-        "Motor-vehicle chassis principles for structural packaging and impact-energy management.",
-      ),
-      relatedPatent(
-        "US5667030A",
-        "Cooling-system heat exchanger integrated around lightweight vehicle architecture.",
-      ),
-    ],
   },
   {
     id: "angel-interceptor",
@@ -885,13 +874,13 @@ export const PROJECTS: Project[] = [
     filter: "medical",
     title: "Smart Bottle",
     description:
-      "Secure medical dispensing bottle for controlled opioid delivery, with biometric access, compact internal packaging and anti-tamper casing.",
+      "Automatic, secure dispenser for prescription-controlled liquid medicines, originally developed for morphine and adaptable to other liquid treatments.",
     image: "/assets/projects/smart-bottle/smart-bottle-01.webp",
     imageAlt:
       "Smart Bottle medical dispenser concept with blue internal module",
-    tags: ["#2014", "#Medical", "#Dosing"],
+    tags: ["#2010–2015", "#Medical", "#Dosing"],
     overview:
-      "A compact medical-device architecture study for a controlled drug dispenser, including dose-access logic, biometric-use constraints, casing design and internal component packaging.",
+      "Starting from a client concept and functional prototype, DOMTEKNIKA improved key functions, including a safety system designed to neutralize morphine if the bottle was breached. The team coordinated the new product design, engineered every part for industrial manufacture, built the first prototype of the revised version, then managed the first molds, injection-molding trials and initial production series. Although originally developed for morphine, the dispensing principle can be adapted to other liquid medicines.",
   },
   {
     id: "personal-injector",
@@ -926,12 +915,12 @@ export const PROJECTS: Project[] = [
     filter: "medical",
     title: "Single Use Turbine",
     description:
-      "Single-use medical turbine concept developed to reduce size, weight and cost through material and geometry optimization.",
+      "Polymer turbine developed before 2006 and documented as an early medical-device engineering project.",
     image: "/assets/projects/single-use-turbine/single-use-turbine-01.webp",
     imageAlt: "Transparent single-use turbine medical component",
-    tags: ["#2011", "#SingleUse", "#Medical"],
+    tags: ["#Pre-2006", "#Polymer", "#Medical"],
     overview:
-      "The Single Use Turbine is documented in the medical portfolio as a compact disposable device, with development priorities around reduced size, reduced weight, reduced cost and innovative materials.",
+      "The available project archive confirms that DOMTEKNIKA developed this turbine in polymer before 2006. It does not establish whether the primary objective was disposability, cost reduction or another technical requirement; the presentation is therefore limited to the component, its polymer construction and the period in which it was developed.",
   },
   {
     id: "glove-helmet-dryer",
@@ -939,12 +928,12 @@ export const PROJECTS: Project[] = [
     filter: "sport",
     title: "Glove & helmet dryer",
     description:
-      "Drying dock concept for sports equipment, developed from CAD layout to physical prototype tests.",
+      "Compact station designed to remove moisture from gloves and a helmet between sports sessions, documented through CAD studies and physical prototypes.",
     image: "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-01.webp",
     imageAlt: "Prototype glove dryer with gloves mounted",
     tags: ["#2015", "#Consumer", "#Prototype"],
     overview:
-      "This consumer product packages airflow paths and stands for gloves and helmets into a compact dock, with both rendered concepts and physical prototypes.",
+      "The project explored a compact station intended to dry perspiration from gloves and a helmet between successive sessions. Available material documents CAD development and physical prototypes focused on equipment support, airflow and compact integration.",
   },
   {
     id: "folding-umbrella",
@@ -952,12 +941,12 @@ export const PROJECTS: Project[] = [
     filter: "others",
     title: "Pocket folding umbrella",
     description:
-      "Phone-sized folding umbrella concept with compact case studies, folding geometry and working prototype details.",
+      "Pocket umbrella designed to fold to approximately smartphone size, with engineered frame kinematics and research into suitable fabrics.",
     image: "/assets/projects/folding-umbrella/pocket-folding-umbrella-01.webp",
     imageAlt: "Yellow pocket folding umbrella prototype",
     tags: ["#2018", "#Mechanism", "#Consumer"],
     overview:
-      "The project explores a new folding umbrella architecture designed to fit in a pocket once closed, close to the footprint of a smartphone. The work runs from case cutaways and mechanism studies to full-scale physical prototypes.",
+      "DOMTEKNIKA worked on the frame architecture and folding kinematics required to achieve a smartphone-sized footprint when closed, and assessed fabrics compatible with compact folding. As the available information does not confirm whether full product development or industrialization was completed, the presentation focuses on the documented engineering and material research.",
     relatedPatents: [
       relatedPatent(
         "US2022338602A1",
@@ -966,6 +955,32 @@ export const PROJECTS: Project[] = [
       relatedPatent(
         "WO2021043427A1",
         "Housing architecture for a weather-protection device.",
+      ),
+    ],
+  },
+  {
+    id: "bottom-filling-cup",
+    category: "Others",
+    filter: "others",
+    title: "Bottom-filling cup",
+    description:
+      "Event cup with an integrated bottom valve for faster filling from beer taps while limiting foam.",
+    image:
+      "/assets/projects/bottom-filling-cup/bottom-filling-cup-01.webp",
+    imageAlt:
+      "CAD study of two bottom-filling cups with integrated valve concepts",
+    gallery: [
+      "/assets/projects/bottom-filling-cup/bottom-filling-cup-01.webp",
+      "/assets/projects/bottom-filling-cup/bottom-filling-cup-02.webp",
+      "/assets/projects/bottom-filling-cup/bottom-filling-cup-03.webp",
+    ],
+    tags: ["#2014–2015", "#Beverage", "#InjectionMolding"],
+    overview:
+      "Designed for high-throughput events, the concept enables beer to enter through the bottom of the cup, reducing turbulence and foam to accelerate service. DOMTEKNIKA defined the integrated valve architecture to combine rapid filling, leak-tight closure and easy cleaning, performed mechanical and rheological calculations, supervised injection molding of the first production series and conducted functional tests.",
+    relatedPatents: [
+      relatedPatent(
+        "EP3215454A1",
+        "Patent covering the bottom-fill cup and its connection device, with Jean-Luc Thuliez and Étienne Crozier among the inventors.",
       ),
     ],
   },
@@ -1026,6 +1041,26 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
+    id: "transparent-clock",
+    category: "Watchmaking",
+    filter: "watchmaking",
+    title: "Transparent showcase clock",
+    description:
+      "Large showcase clock with a transparent face, no visible central hand pivot, peripheral disc drive and atomic-time synchronization.",
+    image: "/assets/projects/transparent-clock/transparent-clock-01.webp",
+    imageAlt:
+      "Functional prototype of the transparent showcase clock with peripheral mechanism",
+    gallery: [
+      "/assets/projects/transparent-clock/transparent-clock-01.webp",
+      "/assets/projects/transparent-clock/transparent-clock-02.webp",
+      "/assets/projects/transparent-clock/transparent-clock-03.webp",
+      "/assets/projects/transparent-clock/transparent-clock-04.webp",
+    ],
+    tags: ["#2012–2013", "#Watchmaking", "#Mechatronics"],
+    overview:
+      "Developed for a watch retailer’s window in Geneva, the clock preserves a clear view through its face without a visible hand pivot at the center. DOMTEKNIKA developed the complete electrical and mechanical concept using transparent rotating discs driven at their periphery, integrated atomic-clock synchronization, coordinated the design study and built a functional prototype with injection-molded gear segments.",
+  },
+  {
     id: "vacheron-watch-mechanics",
     category: "Watchmaking",
     filter: "watchmaking",
@@ -1050,13 +1085,13 @@ export const PROJECTS: Project[] = [
     filter: "building",
     title: "Velum Sky amphitheatre screen",
     description:
-      "Custom-engineered system for raising and lowering the giant screen in the Velum Sky amphitheatre in Geneva.",
+      "Custom lifting system for the Velum Sky screen, engineered with guides that remain invisible when raised while supporting the screen in full cantilever during deployment.",
     image: "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp",
     imageAlt:
       "Giant screen lifting system in the Velum Sky amphitheatre in Geneva",
     tags: ["#2025", "#Building", "#Engineering"],
     overview:
-      "DOMTEKNIKA engineered the complete mechanical system that raises, lowers and positions the giant screen in the Velum Sky amphitheatre in Geneva, including its architecture, guidance, drive and integration into the building.",
+      "DOMTEKNIKA engineered the complete mechanical system that raises, lowers and positions the giant screen in the Velum Sky amphitheatre in Geneva. The central challenge was to keep the guides invisible in the raised position while controlling a fully cantilevered screen as it descends, requiring precise management of guidance, stiffness, drive and integration into the building.",
   },
 ];
 
@@ -1267,11 +1302,11 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     category: "Médical",
     title: "Smart Bottle",
     description:
-      "Distributeur médical sécurisé pour opioïdes, avec accès biométrique, architecture interne compacte et boîtier anti-effraction.",
+      "Distributeur automatique et sécurisé de médicaments liquides selon prescription, développé à l’origine pour la morphine et adaptable à d’autres traitements liquides.",
     imageAlt:
       "Concept de distributeur médical Smart Bottle avec module interne bleu",
     overview:
-      "Étude d'architecture de dispositif médical pour distribution contrôlée de médicaments, incluant logique d'accès aux doses, contraintes biométriques, conception de boîtier et intégration des composants internes.",
+      "À partir du concept et du prototype fonctionnel apportés par le client, DOMTEKNIKA a amélioré plusieurs fonctions clés, dont un dispositif de sécurité conçu pour neutraliser la morphine en cas d’effraction de la bouteille. L’équipe a piloté le nouveau design, conçu l’ensemble des pièces pour une fabrication industrielle, réalisé le premier prototype de la version révisée, puis suivi les premiers moules, la mise au point des injections et la production de la première série. Initialement développé pour la morphine, le principe de distribution peut être adapté à d’autres médicaments liquides.",
   },
   "personal-injector": {
     category: "Médical",
@@ -1296,28 +1331,28 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     category: "Médical",
     title: "Turbine à usage unique",
     description:
-      "Concept de turbine médicale jetable développé pour réduire taille, poids et coût grâce à l'optimisation des matériaux et de la géométrie.",
+      "Turbine en polymère développée avant 2006 et documentée comme l’un des premiers projets d’ingénierie médicale de DOMTEKNIKA.",
     imageAlt: "Composant médical transparent de turbine à usage unique",
     overview:
-      "La turbine à usage unique est documentée dans le portfolio médical comme un dispositif jetable compact, avec des priorités de développement centrées sur la réduction de taille, de poids, de coût et l'emploi de matériaux innovants.",
+      "Les archives disponibles confirment que DOMTEKNIKA a développé cette turbine en polymère avant 2006. Elles ne permettent pas d’établir si l’objectif principal concernait l’usage unique, la réduction des coûts ou une autre exigence technique ; la présentation reste donc limitée au composant, à sa réalisation en polymère et à sa période de développement.",
   },
   "glove-helmet-dryer": {
     category: "Produits",
     title: "Sèche-gants & casque",
     description:
-      "Concept de station de séchage pour équipement sportif, développé des plans CAO aux essais sur prototype physique.",
+      "Station compacte destinée à évacuer l’humidité des gants et du casque entre deux sessions, documentée par des études CAO et des prototypes physiques.",
     imageAlt: "Prototype de sèche-gants avec gants montés",
     overview:
-      "Ce produit intègre les chemins d'air et supports pour gants et casques dans une station compacte, avec rendus conceptuels et prototypes physiques.",
+      "Le projet portait sur une station compacte permettant de sécher la transpiration des gants et du casque entre deux sessions. Les éléments disponibles documentent des études CAO et des prototypes physiques centrés sur les supports, la circulation de l’air et l’intégration compacte de l’ensemble.",
   },
   "folding-umbrella": {
     category: "Produits",
     title: "Parapluie pliant de poche",
     description:
-      "Concept de parapluie pliant au format téléphone, avec études d'étui, géométrie de pliage et détails de prototype fonctionnel.",
+      "Parapluie de poche conçu pour atteindre approximativement le format d’un smartphone une fois replié, avec étude des armatures, des cinématiques et des toiles.",
     imageAlt: "Prototype de parapluie pliant de poche jaune",
     overview:
-      "Le projet explore une nouvelle architecture de parapluie pliant conçue pour tenir dans une poche une fois fermé, avec un encombrement proche de celui d'un smartphone. Le travail couvre les études en coupe de l'étui, la conception du mécanisme et les prototypes physiques.",
+      "DOMTEKNIKA a travaillé sur l’architecture des armatures et les cinématiques de pliage nécessaires pour obtenir un encombrement proche de celui d’un smartphone, ainsi que sur la recherche de toiles compatibles avec un pliage très compact. Les informations disponibles ne confirmant ni un développement intégral du produit ni l’aboutissement de son industrialisation, la présentation se limite aux travaux d’ingénierie et de recherche matière documentés.",
     relatedPatents: [
       relatedPatent(
         "US2022338602A1",
@@ -1328,6 +1363,16 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
         "Architecture de boîtier pour dispositif de protection contre les intempéries.",
       ),
     ],
+  },
+  "bottom-filling-cup": {
+    category: "Autres",
+    title: "Gobelet à remplissage par le bas",
+    description:
+      "Gobelet événementiel doté d’une valve intégrée dans le fond pour accélérer le service à la tireuse tout en limitant la formation de mousse.",
+    imageAlt:
+      "Étude CAO de deux gobelets à remplissage par le bas avec concepts de valve intégrée",
+    overview:
+      "Conçu pour les manifestations nécessitant un débit de service élevé, le concept permet d’injecter la bière par le fond du gobelet afin de réduire les turbulences et la formation de mousse. DOMTEKNIKA a défini l’architecture de la valve intégrée pour réunir remplissage rapide, étanchéité et facilité de nettoyage, réalisé les calculs mécaniques et rhéologiques, piloté l’injection des premières séries et mené les essais fonctionnels.",
   },
   "skincare-applicator": {
     category: "Appareils ménagers",
@@ -1410,15 +1455,25 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
       ),
     ],
   },
+  "transparent-clock": {
+    category: "Horlogerie",
+    title: "Horloge à fond transparent",
+    description:
+      "Grande horloge de vitrine à fond transparent, sans pivot central visible, avec entraînement périphérique des disques et synchronisation sur l’horloge atomique.",
+    imageAlt:
+      "Prototype fonctionnel de l’horloge à fond transparent avec mécanisme périphérique",
+    overview:
+      "Développée pour la vitrine d’un horloger à Genève, cette horloge préserve une vue dégagée à travers son cadran sans laisser apparaître de pivot central pour les aiguilles. DOMTEKNIKA a conçu l’ensemble du système électrique et mécanique à partir de disques transparents entraînés en périphérie, intégré la synchronisation sur l’horloge atomique, piloté l’étude de design et réalisé un prototype fonctionnel utilisant des segments de pignon injectés.",
+  },
   "velum-sky-screen": {
     category: "Systèmes du bâtiment",
     title: "Écran escamotable Velum Sky",
     description:
-      "Système sur mesure permettant de monter et descendre l’écran géant de l’amphithéâtre Velum Sky à Genève.",
+      "Système de levage sur mesure pour l’écran Velum Sky, conçu avec des guides invisibles en position haute et un écran entièrement en porte-à-faux pendant sa descente.",
     imageAlt:
       "Système de levage de l’écran géant de l’amphithéâtre Velum Sky à Genève",
     overview:
-      "DOMTEKNIKA a conçu l’ensemble du système mécanique qui monte, descend et positionne l’écran géant de l’amphithéâtre Velum Sky à Genève : architecture, guidage, entraînement et intégration au bâtiment.",
+      "DOMTEKNIKA a conçu l’ensemble du système mécanique qui monte, descend et positionne l’écran géant de l’amphithéâtre Velum Sky à Genève. Le défi central consistait à rendre les guides invisibles lorsque l’écran est remonté, tout en maîtrisant un écran entièrement en porte-à-faux pendant sa descente. La solution a nécessité un travail précis sur le guidage, la rigidité, le mécanisme de levage et l’intégration au bâtiment.",
   },
 };
 
@@ -1544,11 +1599,11 @@ const DE_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     category: "Medizin",
     title: "Smart Bottle",
     description:
-      "Gesicherter medizinischer Spender für kontrollierte Opioidabgabe mit biometrischem Zugang, kompaktem Innenaufbau und manipulationsgeschütztem Gehäuse.",
+      "Automatischer, gesicherter Spender für verschreibungspflichtige Flüssigmedikamente, ursprünglich für Morphin entwickelt und auf andere flüssige Arzneimittel übertragbar.",
     imageAlt:
       "Medizinisches Smart-Bottle-Spenderkonzept mit blauem internem Modul",
     overview:
-      "Eine kompakte Medizingeräte-Architekturstudie für kontrollierte Medikamentenabgabe, einschließlich Dosiszugang, biometrischer Nutzung, Gehäusedesign und interner Komponentenintegration.",
+      "Ausgehend vom Konzept und einem funktionsfähigen Prototyp des Kunden verbesserte DOMTEKNIKA zentrale Funktionen, darunter ein Sicherheitssystem zur Neutralisierung des Morphins bei einem Aufbruch der Flasche. Das Team koordinierte das neue Produktdesign, konstruierte sämtliche Teile für die industrielle Fertigung, baute den ersten Prototyp der überarbeiteten Version und begleitete anschließend die ersten Werkzeuge, Spritzgussversuche und die erste Produktionsserie. Das ursprünglich für Morphin entwickelte Ausgabeprinzip lässt sich auf andere flüssige Arzneimittel übertragen.",
   },
   "personal-injector": {
     category: "Medizin",
@@ -1573,28 +1628,38 @@ const DE_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     category: "Medizin",
     title: "Single-Use-Turbine",
     description:
-      "Einweg-Medizinturbine, entwickelt zur Reduktion von Größe, Gewicht und Kosten durch Material- und Geometrieoptimierung.",
+      "Vor 2006 entwickelte Polymerturbine, dokumentiert als frühes medizintechnisches Entwicklungsprojekt.",
     imageAlt: "Transparente medizinische Einweg-Turbinenkomponente",
     overview:
-      "Die Single-Use-Turbine ist im medizinischen Portfolio als kompaktes Einweggerät dokumentiert, mit Entwicklungszielen rund um reduzierte Größe, reduziertes Gewicht, geringere Kosten und innovative Materialien.",
+      "Die verfügbaren Projektunterlagen bestätigen, dass DOMTEKNIKA diese Turbine vor 2006 aus Polymer entwickelte. Ob das Hauptziel Einmalgebrauch, Kostensenkung oder eine andere technische Anforderung war, geht daraus nicht hervor; die Darstellung beschränkt sich daher auf das Bauteil, seine Polymerkonstruktion und den Entwicklungszeitraum.",
   },
   "glove-helmet-dryer": {
     category: "Produkte",
     title: "Handschuh- & Helmtrockner",
     description:
-      "Trocknungsstation für Sportausrüstung, entwickelt von der CAD-Auslegung bis zu Tests physischer Prototypen.",
+      "Kompakte Station zum Trocknen von Handschuhen und Helm zwischen zwei Sportsessions, dokumentiert durch CAD-Studien und physische Prototypen.",
     imageAlt: "Prototyp eines Handschuhtrockners mit montierten Handschuhen",
     overview:
-      "Dieses Konsumprodukt integriert Luftführung und Halterungen für Handschuhe und Helme in eine kompakte Dockingstation, mit gerenderten Konzepten und physischen Prototypen.",
+      "Das Projekt untersuchte eine kompakte Station, die Feuchtigkeit aus Handschuhen und Helm zwischen aufeinanderfolgenden Läufen entfernt. Die verfügbaren Unterlagen dokumentieren CAD-Entwicklung und physische Prototypen mit Fokus auf Halterungen, Luftführung und kompakte Integration.",
   },
   "folding-umbrella": {
     category: "Produkte",
     title: "Taschen-Regenschirm",
     description:
-      "Telefonformatiger Faltregenschirm mit Etuistudien, Faltgeometrie und Details funktionsfähiger Prototypen.",
+      "Taschenregenschirm mit annäherndem Smartphone-Format im gefalteten Zustand, entwickelter Gestängekinematik und Recherche geeigneter Gewebe.",
     imageAlt: "Gelber Prototyp eines Taschen-Regenschirms",
     overview:
-      "Das Projekt untersucht eine neue Architektur für einen faltbaren Regenschirm, der geschlossen in eine Tasche passt und ungefähr die Grundfläche eines Smartphones einnimmt. Die Arbeit reicht von Etui-Schnitten und Mechanismusstudien bis zu physischen Prototypen.",
+      "DOMTEKNIKA arbeitete an der Gestängearchitektur und Faltkinematik für ein Packmaß in Smartphone-Größe und untersuchte Gewebe, die sich für eine besonders kompakte Faltung eignen. Da die verfügbaren Informationen weder eine vollständige Produktentwicklung noch eine abgeschlossene Industrialisierung bestätigen, konzentriert sich die Darstellung auf die dokumentierten Konstruktions- und Materialarbeiten.",
+  },
+  "bottom-filling-cup": {
+    category: "Sonstiges",
+    title: "Von unten befüllbarer Becher",
+    description:
+      "Veranstaltungsbecher mit integriertem Bodenventil für schnelleres Zapfen bei gleichzeitig reduzierter Schaumbildung.",
+    imageAlt:
+      "CAD-Studie zweier von unten befüllbarer Becher mit integrierten Ventilkonzepten",
+    overview:
+      "Das Konzept wurde für Veranstaltungen mit hohem Ausschankvolumen entwickelt. Das Bier strömt durch den Becherboden ein, wodurch Turbulenzen und Schaumbildung reduziert und der Service beschleunigt werden. DOMTEKNIKA definierte die integrierte Ventilarchitektur für schnelles Befüllen, zuverlässige Dichtheit und einfache Reinigung, führte mechanische und rheologische Berechnungen durch, begleitete den Spritzguss der ersten Serien und realisierte Funktionstests.",
   },
   "skincare-applicator": {
     category: "Haushaltsprodukte",
@@ -1647,14 +1712,24 @@ const DE_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     overview:
       "Dieses Uhrenprojekt konzentriert sich auf Präzisionsmechanik, Werkvisualisierung und strukturelle Bewertung kleiner, hochwertiger Komponenten.",
   },
+  "transparent-clock": {
+    category: "Uhrmacherei",
+    title: "Transparente Schaufensteruhr",
+    description:
+      "Große Schaufensteruhr mit transparentem Zifferblatt, ohne sichtbare zentrale Zeigerachse, mit peripherem Scheibenantrieb und Atomuhr-Synchronisation.",
+    imageAlt:
+      "Funktionsprototyp der transparenten Schaufensteruhr mit peripherem Mechanismus",
+    overview:
+      "Die Uhr wurde für das Schaufenster eines Genfer Uhrengeschäfts entwickelt und ermöglicht einen freien Durchblick ohne sichtbare zentrale Zeigerachse. DOMTEKNIKA entwickelte das vollständige elektrische und mechanische Konzept mit transparenten, am Umfang angetriebenen Scheiben, integrierte die Synchronisation mit der Atomuhr, koordinierte die Designstudie und baute einen Funktionsprototyp mit spritzgegossenen Zahnsegmenten.",
+  },
   "velum-sky-screen": {
     category: "Gebäudetechnik",
     title: "Versenkbare Leinwand Velum Sky",
     description:
-      "Massgeschneidertes System zum Heben und Senken der Grossleinwand im Velum-Sky-Auditorium in Genf.",
+      "Massgeschneidertes Hebesystem für die Velum-Sky-Leinwand mit in oberer Position unsichtbaren Führungen und vollständig auskragender Leinwand während des Absenkens.",
     imageAlt: "Hebesystem der Grossleinwand im Velum-Sky-Auditorium in Genf",
     overview:
-      "DOMTEKNIKA entwickelte das komplette mechanische System zum Heben, Senken und Positionieren der Grossleinwand im Velum-Sky-Auditorium in Genf, einschliesslich Architektur, Führung, Antrieb und Gebäudeintegration.",
+      "DOMTEKNIKA entwickelte das komplette mechanische System zum Heben, Senken und Positionieren der Grossleinwand im Velum-Sky-Auditorium in Genf. Die zentrale Herausforderung bestand darin, die Führungen in oberer Position unsichtbar zu halten und zugleich die beim Absenken vollständig auskragende Leinwand zu beherrschen. Dafür mussten Führung, Steifigkeit, Antrieb und Gebäudeintegration präzise aufeinander abgestimmt werden.",
   },
 };
 
@@ -1780,11 +1855,11 @@ const ES_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     category: "Médico",
     title: "Smart Bottle",
     description:
-      "Dispensador médico seguro para entrega controlada de opioides, con acceso biométrico, arquitectura interna compacta y carcasa anti-manipulación.",
+      "Dispensador automático y seguro de medicamentos líquidos sujetos a prescripción, desarrollado originalmente para morfina y adaptable a otros tratamientos líquidos.",
     imageAlt:
       "Concepto de dispensador médico Smart Bottle con módulo interno azul",
     overview:
-      "Estudio de arquitectura de dispositivo médico para dispensación controlada de medicamentos, incluyendo acceso a dosis, uso biométrico, diseño de carcasa e integración interna.",
+      "A partir del concepto y del prototipo funcional aportados por el cliente, DOMTEKNIKA mejoró funciones clave, entre ellas un sistema de seguridad diseñado para neutralizar la morfina si se forzaba la botella. El equipo coordinó el nuevo diseño, desarrolló todas las piezas para fabricación industrial, construyó el primer prototipo de la versión revisada y gestionó los primeros moldes, las pruebas de inyección y la primera serie de producción. El principio de dispensación, creado inicialmente para morfina, puede adaptarse a otros medicamentos líquidos.",
   },
   "personal-injector": {
     category: "Médico",
@@ -1809,28 +1884,38 @@ const ES_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     category: "Médico",
     title: "Turbina de un solo uso",
     description:
-      "Concepto de turbina médica desechable desarrollado para reducir tamaño, peso y coste mediante optimización de materiales y geometría.",
+      "Turbina de polímero desarrollada antes de 2006 y documentada como uno de los primeros proyectos de ingeniería médica de DOMTEKNIKA.",
     imageAlt: "Componente médico transparente de turbina de un solo uso",
     overview:
-      "La turbina de un solo uso aparece en el portafolio médico como un dispositivo compacto desechable, con prioridades de desarrollo centradas en reducir tamaño, peso y coste mediante materiales innovadores.",
+      "El archivo disponible confirma que DOMTEKNIKA desarrolló esta turbina en polímero antes de 2006. No permite determinar si el objetivo principal era el uso único, la reducción de costes u otro requisito técnico; por ello, la presentación se limita al componente, su construcción en polímero y el periodo de desarrollo.",
   },
   "glove-helmet-dryer": {
     category: "Productos",
     title: "Secador de guantes y casco",
     description:
-      "Concepto de estación de secado para equipamiento deportivo, desarrollado desde planos CAD hasta pruebas con prototipo físico.",
+      "Estación compacta diseñada para eliminar la humedad de los guantes y el casco entre dos sesiones deportivas, documentada mediante estudios CAD y prototipos físicos.",
     imageAlt: "Prototipo de secador de guantes con guantes montados",
     overview:
-      "Este producto integra rutas de aire y soportes para guantes y cascos en una estación compacta, con conceptos renderizados y prototipos físicos.",
+      "El proyecto estudió una estación compacta destinada a secar la transpiración de los guantes y el casco entre sesiones sucesivas. El material disponible documenta el desarrollo CAD y prototipos físicos centrados en los soportes, la circulación del aire y la integración compacta.",
   },
   "folding-umbrella": {
     category: "Productos",
     title: "Paraguas plegable de bolsillo",
     description:
-      "Concepto de paraguas plegable en formato teléfono, con estudios de funda, geometría de plegado y detalles de prototipo funcional.",
+      "Paraguas de bolsillo diseñado para alcanzar aproximadamente el tamaño de un smartphone al plegarse, con cinemática de varillas y estudio de tejidos adecuados.",
     imageAlt: "Prototipo amarillo de paraguas plegable de bolsillo",
     overview:
-      "El proyecto explora una nueva arquitectura de paraguas plegable diseñada para caber en un bolsillo una vez cerrada, con una huella cercana a la de un smartphone. El trabajo va desde cortes de funda y estudios de mecanismo hasta prototipos físicos.",
+      "DOMTEKNIKA trabajó en la arquitectura de las varillas y en la cinemática de plegado necesarias para lograr un volumen similar al de un smartphone, y evaluó tejidos compatibles con un plegado muy compacto. Como la información disponible no confirma ni el desarrollo integral del producto ni la finalización de su industrialización, la presentación se centra en la ingeniería y la investigación de materiales documentadas.",
+  },
+  "bottom-filling-cup": {
+    category: "Otros",
+    title: "Vaso de llenado por la base",
+    description:
+      "Vaso para eventos con una válvula integrada en la base que acelera el servicio desde el grifo de cerveza y limita la formación de espuma.",
+    imageAlt:
+      "Estudio CAD de dos vasos de llenado por la base con conceptos de válvula integrada",
+    overview:
+      "Diseñado para eventos que requieren un alto caudal de servicio, el concepto introduce la cerveza por la base del vaso para reducir las turbulencias y la formación de espuma. DOMTEKNIKA definió la arquitectura de la válvula integrada para combinar llenado rápido, estanqueidad y facilidad de limpieza, realizó cálculos mecánicos y reológicos, supervisó la inyección de las primeras series y llevó a cabo ensayos funcionales.",
   },
   "skincare-applicator": {
     category: "Productos para el hogar",
@@ -1883,15 +1968,25 @@ const ES_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     overview:
       "Este proyecto relojero se centra en mecánica de precisión, visualización de movimiento y evaluación estructural de pequeños componentes de alto valor.",
   },
+  "transparent-clock": {
+    category: "Relojería",
+    title: "Reloj de escaparate transparente",
+    description:
+      "Gran reloj de escaparate con fondo transparente, sin eje central visible, accionamiento periférico de los discos y sincronización con reloj atómico.",
+    imageAlt:
+      "Prototipo funcional del reloj de escaparate transparente con mecanismo periférico",
+    overview:
+      "Desarrollado para el escaparate de una relojería de Ginebra, el reloj mantiene una vista despejada a través de la esfera sin mostrar un eje central para las agujas. DOMTEKNIKA desarrolló el concepto eléctrico y mecánico completo mediante discos transparentes accionados en la periferia, integró la sincronización con reloj atómico, coordinó el estudio de diseño y construyó un prototipo funcional con segmentos de engranaje inyectados.",
+  },
   "velum-sky-screen": {
     category: "Sistemas para edificios",
     title: "Pantalla retráctil Velum Sky",
     description:
-      "Sistema a medida para subir y bajar la pantalla gigante del auditorio Velum Sky de Ginebra.",
+      "Sistema de elevación a medida para la pantalla Velum Sky, con guías invisibles en posición elevada y la pantalla totalmente en voladizo durante el descenso.",
     imageAlt:
       "Sistema de elevación de la pantalla gigante del auditorio Velum Sky de Ginebra",
     overview:
-      "DOMTEKNIKA diseñó todo el sistema mecánico que eleva, desciende y posiciona la pantalla gigante del auditorio Velum Sky de Ginebra, incluida su arquitectura, guiado, accionamiento e integración en el edificio.",
+      "DOMTEKNIKA diseñó todo el sistema mecánico que eleva, desciende y posiciona la pantalla gigante del auditorio Velum Sky de Ginebra. El reto central consistía en mantener las guías invisibles en la posición elevada y, al mismo tiempo, controlar una pantalla totalmente en voladizo durante su descenso, lo que exigió un trabajo preciso de guiado, rigidez, accionamiento e integración en el edificio.",
   },
 };
 
@@ -2012,10 +2107,10 @@ const KO_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     category: "의료",
     title: "Smart Bottle",
     description:
-      "생체인식 접근, 컴팩트한 내부 구성, 변조 방지 케이스를 갖춘 오피오이드 제어 투여용 의료 디스펜서.",
+      "처방에 따라 액상 의약품을 자동으로 안전하게 공급하며, 원래 모르핀용으로 개발되어 다른 액상 치료제로 확장할 수 있는 디스펜서입니다.",
     imageAlt: "파란색 내부 모듈이 있는 Smart Bottle 의료 디스펜서 콘셉트",
     overview:
-      "제어된 약물 투여를 위한 컴팩트 의료기기 아키텍처 연구로, 투여 접근 로직, 생체인식 사용 조건, 케이스 디자인과 내부 부품 구성을 포함합니다.",
+      "고객이 제공한 콘셉트와 기능성 프로토타입을 바탕으로 DOMTEKNIKA는 병이 강제로 개봉될 경우 모르핀을 중화하도록 설계한 안전 기능을 포함해 핵심 기능을 개선했습니다. 팀은 새로운 제품 디자인을 주도하고 모든 부품을 산업 생산에 맞게 설계했으며, 개선 버전의 첫 프로토타입 제작부터 초기 금형, 사출 성형 시험, 첫 생산 시리즈까지 관리했습니다. 모르핀용으로 개발된 공급 원리는 다른 액상 의약품에도 적용할 수 있습니다.",
   },
   "personal-injector": {
     category: "의료",
@@ -2039,28 +2134,37 @@ const KO_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     category: "의료",
     title: "일회용 터빈",
     description:
-      "재료와 형상 최적화를 통해 크기, 무게, 비용을 줄이도록 개발한 일회용 의료 터빈 콘셉트.",
+      "2006년 이전에 개발된 폴리머 터빈으로, 초기 의료기기 엔지니어링 프로젝트 중 하나로 기록되어 있습니다.",
     imageAlt: "투명한 일회용 의료 터빈 부품",
     overview:
-      "Single Use Turbine은 의료 포트폴리오에서 컴팩트한 일회용 장치로 소개되며, 크기 축소, 무게 절감, 비용 절감, 혁신 소재를 개발 우선순위로 삼았습니다.",
+      "현재 남아 있는 프로젝트 자료는 DOMTEKNIKA가 2006년 이전에 이 터빈을 폴리머로 개발했다는 사실을 확인해 줍니다. 주된 목표가 일회용 구현, 비용 절감 또는 다른 기술 요구였는지는 확인되지 않으므로, 이 소개는 부품 자체와 폴리머 구조, 개발 시기에 한정합니다.",
   },
   "glove-helmet-dryer": {
     category: "제품",
     title: "장갑 및 헬멧 건조기",
     description:
-      "CAD 설계부터 물리 프로토타입 테스트까지 개발한 스포츠 장비용 건조 도크 콘셉트.",
+      "스포츠 활동 사이에 장갑과 헬멧의 습기를 제거하도록 설계하고 CAD 연구와 물리 프로토타입으로 기록한 컴팩트 건조 스테이션입니다.",
     imageAlt: "장갑이 장착된 장갑 건조기 프로토타입",
     overview:
-      "공기 흐름 경로와 장갑/헬멧 지지 구조를 컴팩트 도크에 통합한 제품으로, 렌더 콘셉트와 물리 프로토타입을 모두 포함합니다.",
+      "이 프로젝트는 연속된 스포츠 활동 사이에 장갑과 헬멧의 땀과 습기를 건조하는 컴팩트 스테이션을 검토했습니다. 남아 있는 자료에는 장비 지지 구조, 공기 흐름, 컴팩트한 통합을 중심으로 한 CAD 개발과 물리 프로토타입이 기록되어 있습니다.",
   },
   "folding-umbrella": {
     category: "제품",
     title: "포켓 접이식 우산",
     description:
-      "휴대폰 크기에 가까운 포켓형 접이식 우산 콘셉트로, 케이스 연구와 접힘 기하, 작동 프로토타입 디테일을 포함합니다.",
+      "접었을 때 스마트폰과 비슷한 크기를 목표로 프레임 접힘 운동학과 적합한 원단을 연구한 포켓 우산입니다.",
     imageAlt: "노란색 포켓 접이식 우산 프로토타입",
     overview:
-      "이 프로젝트는 접었을 때 주머니에 들어가고 스마트폰에 가까운 크기를 목표로 한 새로운 접이식 우산 구조를 탐구합니다. 케이스 단면과 메커니즘 연구부터 실물 크기 물리 프로토타입까지 포함합니다.",
+      "DOMTEKNIKA는 접었을 때 스마트폰 수준의 크기를 구현하기 위한 프레임 구조와 접힘 운동학을 개발하고, 매우 컴팩트한 접힘에 적합한 원단을 검토했습니다. 현재 자료로는 제품 전체 개발이나 산업화 완료 여부를 확인할 수 없으므로, 이 소개는 문서로 확인되는 엔지니어링과 소재 연구에 집중합니다.",
+  },
+  "bottom-filling-cup": {
+    category: "기타",
+    title: "하부 충전 컵",
+    description:
+      "바닥에 통합된 밸브를 통해 맥주를 더 빠르게 따르면서 거품 발생을 줄이는 행사용 컵입니다.",
+    imageAlt: "통합 밸브 콘셉트를 적용한 하부 충전 컵 2종의 CAD 연구",
+    overview:
+      "많은 음료를 빠르게 제공해야 하는 행사를 위해, 맥주를 컵 바닥으로 주입해 난류와 거품을 줄이고 서비스 속도를 높이도록 설계했습니다. DOMTEKNIKA는 빠른 충전, 안정적인 밀폐와 간편한 세척을 결합한 통합 밸브 구조를 정의하고, 기계 및 유동 해석을 수행했으며, 초기 생산분의 사출 성형을 관리하고 기능 시험을 진행했습니다.",
   },
   "skincare-applicator": {
     category: "생활용품",
@@ -2113,14 +2217,23 @@ const KO_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     overview:
       "이 시계 프로젝트는 정밀 기계, 무브먼트 시각화, 작은 고가치 부품의 구조 평가에 집중합니다.",
   },
+  "transparent-clock": {
+    category: "시계 제작",
+    title: "투명 쇼윈도 시계",
+    description:
+      "투명한 시계면과 보이지 않는 중앙 바늘축, 원주 구동 디스크, 원자시계 동기화를 갖춘 대형 쇼윈도 시계입니다.",
+    imageAlt: "원주 구동 메커니즘을 적용한 투명 쇼윈도 시계 기능성 프로토타입",
+    overview:
+      "제네바 시계 매장의 쇼윈도를 위해 개발한 이 시계는 중앙 바늘축을 노출하지 않고 시계면을 통해 뒤쪽이 보이도록 설계했습니다. DOMTEKNIKA는 원주에서 구동되는 투명 회전 디스크를 이용해 전체 전기·기계 콘셉트를 개발하고, 원자시계 동기화를 통합했으며, 디자인 연구를 주도하고 사출 성형 기어 세그먼트를 사용한 기능성 프로토타입을 제작했습니다.",
+  },
   "velum-sky-screen": {
     category: "건축 시스템",
     title: "Velum Sky 대형 스크린 승강 시스템",
     description:
-      "제네바 Velum Sky 강당의 대형 스크린을 올리고 내리기 위해 맞춤 설계한 시스템입니다.",
+      "상부 위치에서는 가이드가 보이지 않고 하강 중에는 스크린 전체가 캔틸레버 상태를 유지하도록 설계한 Velum Sky 맞춤형 승강 시스템입니다.",
     imageAlt: "제네바 Velum Sky 강당의 대형 스크린 승강 시스템",
     overview:
-      "DOMTEKNIKA는 제네바 Velum Sky 강당의 대형 스크린을 승강하고 정확히 위치시키는 전체 기계 시스템을 설계했습니다. 구조, 가이드, 구동부와 건축물 통합까지 모두 포함합니다.",
+      "DOMTEKNIKA는 제네바 Velum Sky 강당의 대형 스크린을 올리고 내리며 정확히 위치시키는 전체 기계 시스템을 설계했습니다. 핵심 과제는 상부 위치에서 가이드를 보이지 않게 유지하면서 하강 중 완전히 캔틸레버 상태인 스크린을 제어하는 것이었으며, 이를 위해 가이드, 강성, 구동과 건축물 통합을 정밀하게 설계했습니다.",
   },
 };
 
@@ -2240,10 +2353,10 @@ const ZH_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     category: "医疗",
     title: "Smart Bottle",
     description:
-      "用于受控阿片类药物给药的安全医疗分配器，包含生物识别访问、紧凑内部集成和防拆外壳。",
+      "按处方自动、安全分配液体药物的装置，最初为吗啡开发，也可适配其他液体药物。",
     imageAlt: "带蓝色内部模块的 Smart Bottle 医疗分配器概念",
     overview:
-      "面向受控药物分配的紧凑医疗设备架构研究，包括剂量访问逻辑、生物识别使用约束、外壳设计和内部组件集成。",
+      "以客户提供的概念和功能原型为基础，DOMTEKNIKA 改进了多项关键功能，其中包括在瓶体被强行破坏时中和吗啡的安全系统。团队统筹了新产品设计，完成全部零件的工业化设计，制作改进版本的首个原型，并跟进首批模具、注塑试制及首批量产。该分配原理虽最初为吗啡开发，也可适配其他液体药物。",
   },
   "personal-injector": {
     category: "医疗",
@@ -2266,27 +2379,36 @@ const ZH_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
   "single-use-turbine": {
     category: "医疗",
     title: "一次性涡轮",
-    description: "一次性医疗涡轮概念，通过材料和几何优化降低尺寸、重量和成本。",
+    description: "2006 年以前开发的聚合物涡轮，记录为早期医疗器械工程项目。",
     imageAlt: "透明一次性医疗涡轮部件",
     overview:
-      "Single Use Turbine 在医疗作品集中作为紧凑一次性装置记录，开发重点是减小尺寸、降低重量、降低成本并使用创新材料。",
+      "现有项目档案确认 DOMTEKNIKA 在 2006 年以前以聚合物开发了这款涡轮。档案无法证明其首要目标是一次性使用、降低成本或其他技术要求，因此本页仅介绍该部件、其聚合物结构及开发时期。",
   },
   "glove-helmet-dryer": {
     category: "产品",
     title: "手套与头盔烘干器",
-    description: "运动装备烘干底座概念，从 CAD 布置开发到实体原型测试。",
+    description: "用于在两次运动之间去除手套和头盔湿气的紧凑工作站，并通过 CAD 研究和实体原型加以记录。",
     imageAlt: "装有手套的手套烘干器原型",
     overview:
-      "该消费产品将手套和头盔的气流路径与支架整合到紧凑底座中，并包含渲染概念与实体原型。",
+      "该项目探索了一种紧凑工作站，用于在连续运动之间烘干手套和头盔中的汗液与湿气。现有资料记录了围绕装备支撑、气流组织和紧凑集成开展的 CAD 开发与实体原型。",
   },
   "folding-umbrella": {
     category: "产品",
     title: "口袋折叠伞",
     description:
-      "接近手机尺寸的口袋折叠伞概念，包含伞套研究、折叠几何和工作原型细节。",
+      "折叠后接近智能手机尺寸的口袋伞，涵盖伞架折叠运动学设计及适用面料研究。",
     imageAlt: "黄色口袋折叠伞原型",
     overview:
-      "该项目探索一种新的折叠伞架构，收起后可放入口袋，占用空间接近智能手机。从伞套剖面和机构研究到实体原型均有覆盖。",
+      "DOMTEKNIKA 研究了折叠后实现智能手机级收纳尺寸所需的伞架结构与折叠运动学，并评估了适合高度紧凑折叠的面料。现有资料无法确认产品是否完成全部开发或工业化，因此本页聚焦于已有记录支持的工程与材料研究。",
+  },
+  "bottom-filling-cup": {
+    category: "其他",
+    title: "底部灌装杯",
+    description:
+      "面向活动场景的杯体，通过集成于底部的阀门加快啤酒灌装，同时减少泡沫形成。",
+    imageAlt: "两款带集成阀门方案的底部灌装杯 CAD 研究",
+    overview:
+      "该概念面向需要高流量快速出杯的活动场景，让啤酒从杯底进入，从而减少湍流和泡沫并提高服务速度。DOMTEKNIKA 定义了兼顾快速灌装、可靠密封与便捷清洗的一体化阀门架构，完成机械与流变计算，跟进首批产品的注塑生产，并开展功能测试。",
   },
   "skincare-applicator": {
     category: "家居用品",
@@ -2336,13 +2458,22 @@ const ZH_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     overview:
       "该钟表项目聚焦精密机械、机芯可视化，以及小型高价值组件的结构评估。",
   },
+  "transparent-clock": {
+    category: "钟表",
+    title: "透明橱窗时钟",
+    description:
+      "大型透明橱窗时钟，中央无可见指针转轴，采用圆周驱动透明圆盘并与原子钟同步。",
+    imageAlt: "采用圆周驱动机构的透明橱窗时钟功能原型",
+    overview:
+      "该时钟为日内瓦一家钟表店的橱窗开发，在中央不显示指针转轴的同时保持表面通透。DOMTEKNIKA 采用圆周驱动的透明旋转圆盘完成整套电气与机械概念，集成原子钟同步功能，统筹外观设计研究，并制作了采用注塑齿轮分段的功能原型。",
+  },
   "velum-sky-screen": {
     category: "建筑系统",
     title: "Velum Sky 巨幕升降系统",
-    description: "为日内瓦 Velum Sky 礼堂的巨型屏幕量身设计的升降系统。",
+    description: "为 Velum Sky 屏幕定制的升降系统，导轨在升起位置保持不可见，并在下降过程中支撑完全悬臂的屏幕。",
     imageAlt: "日内瓦 Velum Sky 礼堂巨型屏幕升降系统",
     overview:
-      "DOMTEKNIKA 完整设计了日内瓦 Velum Sky 礼堂巨型屏幕的机械系统，实现升降与精准定位，涵盖系统架构、导向、驱动及建筑集成。",
+      "DOMTEKNIKA 完整设计了日内瓦 Velum Sky 礼堂巨型屏幕的机械系统，实现升降与精准定位。核心挑战是在升起位置隐藏导轨，同时控制下降过程中完全处于悬臂状态的屏幕，因此需要精确统筹导向、刚度、驱动及建筑集成。",
   },
 };
 
@@ -2395,15 +2526,12 @@ const PINNED_PROJECT_IDS = [
 ];
 
 const PROJECT_SORT_YEARS: Partial<Record<string, number>> = {
+  "bottom-filling-cup": 2015,
+  "smart-bottle": 2015,
+  "single-use-turbine": 2005,
   "totalcar-concept": 2011,
+  "transparent-clock": 2013,
   softcar: 2006,
-};
-
-const FILTER_PROJECT_PRIORITY_IDS: Partial<
-  Record<Exclude<FilterKey, "all">, string[]>
-> = {
-  mobility: ["aventor"],
-  medical: ["airsmile"],
 };
 
 const PROJECT_SOURCE_POSITIONS = new Map(
@@ -2824,34 +2952,40 @@ const PROJECT_SCOPES: Record<
   },
   "smart-bottle": {
     en: [
-      "Medical dispenser layout for controlled opioid dosing and secure patient access.",
-      "Biometric-use and anti-tamper constraints integrated into a compact product casing.",
-      "Internal pouch, module and component packaging shaped around safe drug delivery.",
+      "Functional improvements based on the client’s concept and working prototype.",
+      "Safety function designed to neutralize morphine if the bottle is breached.",
+      "Industrial part design, revised prototype, tooling, injection trials and first-series production.",
+      "Prescription-controlled platform adaptable to other liquid medicines.",
     ],
     fr: [
-      "Architecture de distributeur médical pour dosage contrôlé d'opioïdes et accès patient sécurisé.",
-      "Contraintes biométriques et anti-effraction intégrées dans un boîtier produit compact.",
-      "Organisation de la poche, du module et des composants autour d'une distribution sûre du médicament.",
+      "Amélioration des fonctions à partir du concept et du prototype fonctionnel du client.",
+      "Dispositif de sécurité conçu pour neutraliser la morphine en cas d’effraction de la bouteille.",
+      "Conception industrielle des pièces, prototype révisé, outillages, essais d’injection et première série.",
+      "Plateforme de distribution selon prescription adaptable à d’autres médicaments liquides.",
     ],
     de: [
-      "Architektur eines medizinischen Spenders für kontrollierte Opioiddosierung und sicheren Patientenzugang.",
-      "Biometrische Zugangs- und Manipulationsschutzfunktionen in einem kompakten Gehäuse integriert.",
-      "Anordnung von Medikamentenbeutel, Modul und Komponenten für eine sichere Ausgabe.",
+      "Funktionsverbesserungen auf Basis des Kundenkonzepts und des funktionsfähigen Prototyps.",
+      "Sicherheitsfunktion zur Neutralisierung des Morphins bei einem Aufbruch der Flasche.",
+      "Industrielle Teilekonstruktion, überarbeiteter Prototyp, Werkzeuge, Spritzgussversuche und erste Serie.",
+      "Verschreibungsgesteuerte Plattform, die auf andere flüssige Arzneimittel übertragbar ist.",
     ],
     es: [
-      "Arquitectura de un dispensador médico para dosificación controlada de opioides y acceso seguro del paciente.",
-      "Funciones biométricas y antimanipulación integradas en una carcasa compacta.",
-      "Disposición de la bolsa, el módulo y los componentes orientada a una administración segura del medicamento.",
+      "Mejoras funcionales a partir del concepto y el prototipo funcional del cliente.",
+      "Función de seguridad diseñada para neutralizar la morfina si se fuerza la botella.",
+      "Diseño industrial de piezas, prototipo revisado, moldes, pruebas de inyección y primera serie.",
+      "Plataforma controlada por prescripción adaptable a otros medicamentos líquidos.",
     ],
     ko: [
-      "오피오이드 용량을 제어하고 환자 접근을 보호하는 의료용 디스펜서 구조.",
-      "컴팩트한 하우징에 생체 인증과 무단 조작 방지 조건을 통합.",
-      "안전한 약물 투여를 중심으로 약물 파우치, 모듈, 부품을 배치.",
+      "고객의 콘셉트와 기능성 프로토타입을 바탕으로 한 기능 개선.",
+      "병이 강제로 개봉될 경우 모르핀을 중화하도록 설계한 안전 기능.",
+      "산업용 부품 설계, 개선 프로토타입, 금형, 사출 시험과 첫 생산 시리즈.",
+      "다른 액상 의약품에도 적용 가능한 처방 기반 공급 플랫폼.",
     ],
     zh: [
-      "构建医疗给药设备架构，实现阿片类药物的剂量控制与患者安全访问。",
-      "在紧凑外壳中集成生物识别与防篡改功能。",
-      "围绕安全给药合理布置药袋、功能模块与内部组件。",
+      "基于客户概念和功能原型改进关键功能。",
+      "设计在瓶体被强行破坏时中和吗啡的安全功能。",
+      "完成零件工业化设计、改进原型、模具、注塑试制和首批量产。",
+      "构建可适配其他液体药物的处方控制分配平台。",
     ],
   },
   "personal-injector": {
@@ -2920,98 +3054,136 @@ const PROJECT_SCOPES: Record<
   },
   "single-use-turbine": {
     en: [
-      "Disposable medical turbine concept focused on compact geometry.",
-      "Development priorities around reduced size, reduced weight and lower cost.",
-      "Material and shape exploration for a single-use medical component.",
+      "Polymer turbine developed before 2006.",
+      "Early medical-device component documented through the surviving project material.",
+      "Original cost, use-case and performance objectives not established by the available archive.",
     ],
     fr: [
-      "Concept de turbine médicale jetable centré sur une géométrie compacte.",
-      "Priorités de développement autour de la réduction de taille, de poids et de coût.",
-      "Exploration matière et forme pour un composant médical à usage unique.",
+      "Turbine en polymère développée avant 2006.",
+      "Composant médical ancien documenté par les éléments de projet conservés.",
+      "Objectifs initiaux de coût, d’usage et de performance non établis par les archives disponibles.",
     ],
     de: [
-      "Konzept einer medizinischen Einwegturbine mit besonders kompakter Geometrie.",
-      "Entwicklung mit Fokus auf geringere Abmessungen, weniger Gewicht und niedrigere Kosten.",
-      "Material- und Formstudien für eine medizinische Einwegkomponente.",
+      "Vor 2006 entwickelte Polymerturbine.",
+      "Frühe medizintechnische Komponente, dokumentiert durch die erhaltenen Projektunterlagen.",
+      "Ursprüngliche Kosten-, Einsatz- und Leistungsziele sind in den verfügbaren Unterlagen nicht belegt.",
     ],
     es: [
-      "Concepto de turbina médica desechable con una geometría especialmente compacta.",
-      "Desarrollo centrado en reducir el tamaño, el peso y el coste.",
-      "Exploración de materiales y formas para un componente médico de un solo uso.",
+      "Turbina de polímero desarrollada antes de 2006.",
+      "Componente médico temprano documentado por el material de proyecto conservado.",
+      "Los objetivos originales de coste, uso y rendimiento no constan en el archivo disponible.",
     ],
     ko: [
-      "컴팩트한 형상에 초점을 맞춘 일회용 의료용 터빈 콘셉트.",
-      "크기, 무게, 비용 절감을 중심으로 한 개발.",
-      "일회용 의료 부품을 위한 소재와 형상 연구.",
+      "2006년 이전에 개발된 폴리머 터빈.",
+      "현재 남아 있는 프로젝트 자료로 확인되는 초기 의료기기 부품.",
+      "기존 자료로는 초기 비용, 용도, 성능 목표를 확인할 수 없음.",
     ],
     zh: [
-      "开发以紧凑结构为核心的一次性医疗涡轮概念。",
-      "围绕减小尺寸、降低重量与控制成本推进设计。",
-      "针对一次性医疗组件探索合适的材料与形态。",
+      "2006 年以前开发的聚合物涡轮。",
+      "由现存项目资料记录的早期医疗器械部件。",
+      "现有档案无法确定其最初的成本、用途和性能目标。",
     ],
   },
   "glove-helmet-dryer": {
     en: [
-      "Airflow and support architecture for drying sports equipment.",
-      "CAD-to-prototype loop for glove, helmet and dock proportions.",
-      "Physical testing to evaluate usability, stability and drying layout.",
+      "Compact station for drying gloves and a helmet between sports sessions.",
+      "CAD studies covering supports, airflow and overall integration.",
+      "Physical prototypes documenting the proposed architecture.",
     ],
     fr: [
-      "Architecture de flux d'air et supports pour sécher l'équipement sportif.",
-      "Boucle CAO-prototype pour proportions gants, casque et station.",
-      "Tests physiques pour évaluer l'usage, la stabilité et l'efficacité du séchage.",
+      "Station compacte pour sécher gants et casque entre deux sessions.",
+      "Études CAO des supports, de la circulation d’air et de l’intégration générale.",
+      "Prototypes physiques documentant l’architecture proposée.",
     ],
     de: [
-      "Luftführungs- und Halterungsarchitektur zum Trocknen von Sportausrüstung.",
-      "CAD- und Prototypeniterationen zur Abstimmung von Handschuh-, Helm- und Stationsproportionen.",
-      "Physische Tests zu Bedienbarkeit, Stabilität und Trocknungsleistung.",
+      "Kompakte Station zum Trocknen von Handschuhen und Helm zwischen zwei Sportsessions.",
+      "CAD-Studien zu Halterungen, Luftführung und Gesamtintegration.",
+      "Physische Prototypen zur Dokumentation der vorgeschlagenen Architektur.",
     ],
     es: [
-      "Arquitectura de circulación de aire y soportes para secar equipamiento deportivo.",
-      "Iteraciones CAD y de prototipo para ajustar las proporciones de guantes, casco y estación.",
-      "Pruebas físicas para evaluar el uso, la estabilidad y la eficacia de secado.",
+      "Estación compacta para secar guantes y casco entre dos sesiones.",
+      "Estudios CAD de los soportes, la circulación de aire y la integración general.",
+      "Prototipos físicos que documentan la arquitectura propuesta.",
     ],
     ko: [
-      "스포츠 장비 건조를 위한 공기 흐름과 지지 구조 설계.",
-      "장갑, 헬멧, 스테이션 비례를 조정하는 CAD 및 프로토타입 반복.",
-      "사용성, 안정성, 건조 성능을 평가하는 실물 시험.",
+      "스포츠 활동 사이에 장갑과 헬멧을 건조하는 컴팩트 스테이션.",
+      "지지 구조, 공기 흐름과 전체 통합을 다룬 CAD 연구.",
+      "제안된 구조를 기록하는 물리 프로토타입.",
     ],
     zh: [
-      "为运动装备烘干设计气流路径与支撑结构。",
-      "通过 CAD 与原型迭代调整手套、头盔和底座的比例。",
-      "利用实物测试评估易用性、稳定性与烘干效率。",
+      "用于在两次运动之间烘干手套和头盔的紧凑工作站。",
+      "围绕支撑结构、气流和整体集成开展 CAD 研究。",
+      "通过实体原型记录所提出的系统架构。",
     ],
   },
   "folding-umbrella": {
     en: [
-      "Folding and case mechanism studies for a phone-sized umbrella system.",
-      "Cutaway and physical prototype work to clarify the opening sequence.",
-      "Weather-protection product thinking linked to pocket storage and robustness.",
+      "Frame architecture and folding kinematics for smartphone-scale storage.",
+      "Research into fabrics compatible with highly compact folding.",
+      "Presentation limited to documented engineering work; full industrialization is not confirmed.",
     ],
     fr: [
-      "Études mécanisme pliage et étui pour un parapluie au format téléphone.",
-      "Coupes et prototypes physiques pour clarifier la séquence d'ouverture.",
-      "Logique produit de protection météo liée au rangement de poche et à la robustesse.",
+      "Architecture des armatures et cinématiques de pliage pour un rangement au format smartphone.",
+      "Recherche de toiles compatibles avec un pliage très compact.",
+      "Présentation limitée aux travaux documentés ; l’industrialisation complète n’est pas confirmée.",
     ],
     de: [
-      "Studien zu Faltmechanik und Hülle für einen Regenschirm im Smartphone-Format.",
-      "Schnittdarstellungen und physische Prototypen zur Klärung der Öffnungssequenz.",
-      "Wetterschutzkonzept mit Fokus auf Taschentauglichkeit und Robustheit.",
+      "Gestängearchitektur und Faltkinematik für ein Packmass im Smartphone-Format.",
+      "Recherche zu Geweben, die eine besonders kompakte Faltung ermöglichen.",
+      "Darstellung auf dokumentierte Entwicklungsarbeiten begrenzt; eine vollständige Industrialisierung ist nicht bestätigt.",
     ],
     es: [
-      "Estudio del mecanismo plegable y del estuche para un paraguas del tamaño de un teléfono.",
-      "Secciones y prototipos físicos para definir con claridad la secuencia de apertura.",
-      "Diseño orientado a la protección frente al clima, el almacenamiento en el bolsillo y la robustez.",
+      "Arquitectura de varillas y cinemática de plegado para un volumen similar al de un smartphone.",
+      "Investigación de tejidos compatibles con un plegado muy compacto.",
+      "Presentación limitada al trabajo documentado; no se confirma una industrialización completa.",
     ],
     ko: [
-      "스마트폰 크기로 수납되는 우산의 접이식 메커니즘과 케이스 연구.",
-      "개방 순서를 명확히 하기 위한 단면 설계와 실물 프로토타입.",
-      "휴대성과 내구성을 함께 고려한 날씨 보호 제품 설계.",
+      "스마트폰 크기 수납을 위한 프레임 구조와 접힘 운동학.",
+      "매우 컴팩트한 접힘에 적합한 원단 연구.",
+      "문서로 확인되는 엔지니어링 작업만 소개하며 전체 산업화는 확인되지 않음.",
     ],
     zh: [
-      "研究可收纳至手机大小的雨伞折叠机构与外壳。",
-      "通过剖面方案和实物原型明确展开顺序。",
-      "兼顾防风雨性能、口袋收纳与产品耐用性。",
+      "设计伞架结构与折叠运动学，实现智能手机级收纳尺寸。",
+      "研究适合高度紧凑折叠的面料。",
+      "仅呈现已有资料支持的工程工作；尚无法确认是否完成全部工业化。",
+    ],
+  },
+  "bottom-filling-cup": {
+    en: [
+      "Integrated bottom valve for rapid filling with reduced foam.",
+      "Valve architecture designed for leak-tight closure and easy cleaning.",
+      "Mechanical and rheological calculations to validate component and injection behavior.",
+      "Supervision of the first injection-molded series and functional testing.",
+    ],
+    fr: [
+      "Valve intégrée dans le fond pour un remplissage rapide avec moins de mousse.",
+      "Architecture conçue pour assurer l’étanchéité et faciliter le nettoyage.",
+      "Calculs mécaniques et rhéologiques pour valider le composant et son comportement à l’injection.",
+      "Pilotage des premières séries injectées et essais fonctionnels.",
+    ],
+    de: [
+      "Integriertes Bodenventil für schnelles Befüllen mit reduzierter Schaumbildung.",
+      "Ventilarchitektur für zuverlässige Dichtheit und einfache Reinigung.",
+      "Mechanische und rheologische Berechnungen zur Validierung von Bauteil und Spritzgussverhalten.",
+      "Begleitung der ersten Spritzgussserien und Funktionstests.",
+    ],
+    es: [
+      "Válvula integrada en la base para un llenado rápido con menos espuma.",
+      "Arquitectura de válvula diseñada para garantizar la estanqueidad y facilitar la limpieza.",
+      "Cálculos mecánicos y reológicos para validar el componente y su comportamiento en inyección.",
+      "Supervisión de las primeras series inyectadas y ensayos funcionales.",
+    ],
+    ko: [
+      "거품을 줄이면서 빠르게 충전하는 통합 바닥 밸브.",
+      "안정적인 밀폐와 간편한 세척을 위한 밸브 구조.",
+      "부품과 사출 거동을 검증하기 위한 기계 및 유동 해석.",
+      "초기 사출 생산분 관리와 기능 시험.",
+    ],
+    zh: [
+      "集成底部阀门，实现快速灌装并减少泡沫。",
+      "阀门架构兼顾可靠密封与便捷清洗。",
+      "通过机械与流变计算验证部件及其注塑行为。",
+      "跟进首批注塑生产并完成功能测试。",
     ],
   },
   "skincare-applicator": {
@@ -3180,36 +3352,74 @@ const PROJECT_SCOPES: Record<
       "结合隐藏式或精细化机芯部件的光学与结构专利背景。",
     ],
   },
-  "velum-sky-screen": {
+  "transparent-clock": {
     en: [
-      "Custom lifting system for the giant screen in the Velum Sky amphitheatre in Geneva.",
-      "Mechanical architecture, guidance and drive engineered by DOMTEKNIKA.",
-      "Integration designed for reliable deployment and discreet storage within the building.",
+      "Complete electrical and mechanical concept for a large transparent showcase clock.",
+      "Transparent discs driven from the periphery to eliminate a visible central hand pivot.",
+      "Atomic-clock connection for automatic time synchronization.",
+      "Design-study coordination and functional prototype with injection-molded gear segments.",
     ],
     fr: [
-      "Système de levage sur mesure pour l’écran géant de l’amphithéâtre Velum Sky à Genève.",
-      "Architecture mécanique, guidage et entraînement conçus par DOMTEKNIKA.",
-      "Intégration pensée pour un déploiement fiable et un rangement discret dans le bâtiment.",
+      "Concept électrique et mécanique complet d’une grande horloge de vitrine transparente.",
+      "Disques transparents entraînés en périphérie pour supprimer tout pivot central visible.",
+      "Connexion à l’horloge atomique pour la synchronisation automatique de l’heure.",
+      "Pilotage de l’étude de design et prototype fonctionnel avec segments de pignon injectés.",
     ],
     de: [
-      "Massgeschneidertes Hebesystem für die Grossleinwand im Velum-Sky-Auditorium in Genf.",
-      "Mechanische Architektur, Führung und Antrieb von DOMTEKNIKA entwickelt.",
-      "Für zuverlässiges Ausfahren und diskrete Unterbringung im Gebäude integriert.",
+      "Vollständiges elektrisches und mechanisches Konzept für eine große transparente Schaufensteruhr.",
+      "Am Umfang angetriebene transparente Scheiben ohne sichtbare zentrale Zeigerachse.",
+      "Anbindung an die Atomuhr zur automatischen Zeitsynchronisation.",
+      "Koordination der Designstudie und Funktionsprototyp mit spritzgegossenen Zahnsegmenten.",
     ],
     es: [
-      "Sistema de elevación a medida para la pantalla gigante del auditorio Velum Sky de Ginebra.",
-      "Arquitectura mecánica, guiado y accionamiento diseñados por DOMTEKNIKA.",
-      "Integración concebida para un despliegue fiable y un almacenamiento discreto en el edificio.",
+      "Concepto eléctrico y mecánico completo para un gran reloj de escaparate transparente.",
+      "Discos transparentes accionados desde la periferia para eliminar el eje central visible.",
+      "Conexión con reloj atómico para la sincronización automática de la hora.",
+      "Coordinación del estudio de diseño y prototipo funcional con segmentos de engranaje inyectados.",
     ],
     ko: [
-      "제네바 Velum Sky 강당 대형 스크린을 위한 맞춤형 승강 시스템.",
-      "DOMTEKNIKA가 설계한 기계 구조, 가이드와 구동 시스템.",
-      "안정적인 전개와 건축물 내부의 깔끔한 수납을 고려한 통합 설계.",
+      "대형 투명 쇼윈도 시계를 위한 전체 전기·기계 콘셉트.",
+      "중앙 바늘축을 보이지 않게 하는 원주 구동 투명 디스크.",
+      "자동 시간 동기화를 위한 원자시계 연결.",
+      "디자인 연구 주도와 사출 성형 기어 세그먼트를 적용한 기능성 프로토타입.",
     ],
     zh: [
-      "为日内瓦 Velum Sky 礼堂巨型屏幕定制的升降系统。",
-      "由 DOMTEKNIKA 设计机械架构、导向与驱动系统。",
-      "兼顾可靠展开与建筑内部隐蔽收纳的一体化设计。",
+      "完成大型透明橱窗时钟的整套电气与机械概念。",
+      "通过圆周驱动透明圆盘，消除可见的中央指针转轴。",
+      "连接原子钟，实现时间自动同步。",
+      "统筹外观设计研究，并制作采用注塑齿轮分段的功能原型。",
+    ],
+  },
+  "velum-sky-screen": {
+    en: [
+      "Custom lifting system for the Velum Sky amphitheatre screen in Geneva.",
+      "Guides concealed in the raised position to preserve the architectural view.",
+      "Guidance, stiffness and drive engineered for a fully cantilevered screen during descent.",
+    ],
+    fr: [
+      "Système de levage sur mesure pour l’écran de l’amphithéâtre Velum Sky à Genève.",
+      "Guides dissimulés en position haute pour préserver la vue architecturale.",
+      "Guidage, rigidité et mécanisme de levage conçus pour maîtriser l’écran entièrement en porte-à-faux pendant sa descente.",
+    ],
+    de: [
+      "Massgeschneidertes Hebesystem für die Leinwand im Velum-Sky-Auditorium in Genf.",
+      "In oberer Position verdeckte Führungen zum Erhalt der architektonischen Ansicht.",
+      "Führung, Steifigkeit und Antrieb für eine beim Absenken vollständig auskragende Leinwand.",
+    ],
+    es: [
+      "Sistema de elevación a medida para la pantalla del auditorio Velum Sky de Ginebra.",
+      "Guías ocultas en la posición elevada para preservar la vista arquitectónica.",
+      "Guiado, rigidez y accionamiento diseñados para una pantalla totalmente en voladizo durante el descenso.",
+    ],
+    ko: [
+      "제네바 Velum Sky 강당 스크린을 위한 맞춤형 승강 시스템.",
+      "건축적 시야를 유지하도록 상부 위치에서 숨겨지는 가이드.",
+      "하강 중 완전히 캔틸레버 상태인 스크린을 위한 가이드, 강성 및 구동 설계.",
+    ],
+    zh: [
+      "为日内瓦 Velum Sky 礼堂屏幕定制升降系统。",
+      "导轨在升起位置保持隐藏，以保留建筑空间的视觉完整性。",
+      "为下降过程中完全悬臂的屏幕设计导向、刚度和驱动系统。",
     ],
   },
 };
@@ -3408,6 +3618,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       output: "Output",
       design: "Design",
       prototype: "Prototype",
+      openFullPage: "Open full project page",
     },
     cta: {
       eyebrow: "Let's build together",
@@ -3498,6 +3709,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       output: "Livrable",
       design: "Design",
       prototype: "Prototype",
+      openFullPage: "Voir la fiche complète",
     },
     cta: {
       eyebrow: "Let's build together",
@@ -3580,6 +3792,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       output: "Ergebnis",
       design: "Design",
       prototype: "Prototyp",
+      openFullPage: "Vollständige Projektseite öffnen",
     },
     cta: {
       eyebrow: "Let's build together",
@@ -3662,6 +3875,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       output: "Resultado",
       design: "Diseño",
       prototype: "Prototipo",
+      openFullPage: "Ver la ficha completa",
     },
     cta: {
       eyebrow: "Let's build together",
@@ -3744,6 +3958,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       output: "결과물",
       design: "디자인",
       prototype: "프로토타입",
+      openFullPage: "전체 프로젝트 페이지 보기",
     },
     cta: {
       eyebrow: "Let's build together",
@@ -3826,6 +4041,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       output: "成果",
       design: "设计",
       prototype: "原型",
+      openFullPage: "查看完整项目页面",
     },
     cta: {
       eyebrow: "Let's build together",
@@ -3889,32 +4105,6 @@ function compareProjectTitles(a: Project, b: Project, locale: ProjectsLocale) {
     numeric: true,
     sensitivity: "base",
   }).compare(a.title, b.title);
-}
-
-function sortProjectsByTitle(
-  projects: Project[],
-  locale: ProjectsLocale,
-  filter?: Exclude<FilterKey, "all">,
-) {
-  const priorityIds = filter ? (FILTER_PROJECT_PRIORITY_IDS[filter] ?? []) : [];
-
-  return projects
-    .map((project, index) => ({ project, index }))
-    .sort((a, b) => {
-      const aPriority = priorityIds.indexOf(a.project.id);
-      const bPriority = priorityIds.indexOf(b.project.id);
-
-      if (aPriority !== -1 || bPriority !== -1) {
-        return (
-          (aPriority === -1 ? 999 : aPriority) -
-          (bPriority === -1 ? 999 : bPriority)
-        );
-      }
-
-      const titleOrder = compareProjectTitles(a.project, b.project, locale);
-      return titleOrder !== 0 ? titleOrder : a.index - b.index;
-    })
-    .map(({ project }) => project);
 }
 
 function sortProjects(
@@ -4382,19 +4572,14 @@ function ProjectImageLightbox({
 }
 
 export function ProjectDetailsDialog({
-  locale,
   modal,
   onClosed,
   project,
 }: {
-  locale: string;
   modal: ProjectModalCopy;
   onClosed: () => void;
   project: Project;
 }) {
-  const [selectedPatent, setSelectedPatent] = useState<PatentRecord | null>(
-    null,
-  );
   const [activeGalleryIndex, setActiveGalleryIndex] = useState(0);
   const [expandedImageIndex, setExpandedImageIndex] = useState<number | null>(
     null,
@@ -4452,7 +4637,6 @@ export function ProjectDetailsDialog({
 
   const finishClose = useCallback(() => {
     clearCloseTimer();
-    setSelectedPatent(null);
     setExpandedImageIndex(null);
     previousFocusRef.current?.focus?.({ preventScroll: true });
     previousFocusRef.current = null;
@@ -4469,13 +4653,6 @@ export function ProjectDetailsDialog({
       MODAL_CLOSE_FALLBACK_MS,
     );
   }, [clearCloseTimer, dialogState, finishClose]);
-
-  const openRelatedPatent = useCallback((patentId: string) => {
-    const patent = PATENTS.find((item) => item.id === patentId);
-    if (!patent) return;
-
-    setSelectedPatent(patent);
-  }, []);
 
   useEffect(() => {
     lockedScrollYRef.current = window.scrollY;
@@ -4661,8 +4838,6 @@ export function ProjectDetailsDialog({
         return;
       }
 
-      if (selectedPatent) return;
-
       if (event.key === "Escape") {
         closeProject();
         return;
@@ -4700,7 +4875,6 @@ export function ProjectDetailsDialog({
     closeProject,
     expandedImageIndex,
     projectGallery.length,
-    selectedPatent,
     showNextExpandedImage,
     showPreviousExpandedImage,
   ]);
@@ -4857,6 +5031,17 @@ export function ProjectDetailsDialog({
                 {project.description}
               </p>
 
+              <Link
+                href={`/projects/${project.id}`}
+                className="group/fullProject mt-7 inline-flex min-h-11 items-center justify-center gap-3 rounded-[7px] bg-foreground px-5 py-2.5 text-[13px] font-extrabold text-white shadow-[0_8px_22px_rgba(0,0,0,0.16)] transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35 min-[1800px]:mt-10 min-[1800px]:min-h-16 min-[1800px]:px-8 min-[1800px]:text-[20px] min-[2400px]:text-[22px]"
+              >
+                <span>{modal.openFullPage}</span>
+                <ArrowUpRight
+                  className="size-4 transition-transform duration-300 group-hover/fullProject:-translate-y-0.5 group-hover/fullProject:translate-x-0.5 min-[1800px]:size-6"
+                  aria-hidden
+                />
+              </Link>
+
               <div className="mt-8 grid gap-6 md:grid-cols-2 min-[1800px]:mt-14 min-[1800px]:gap-12 min-[2400px]:mt-16">
                 <section>
                   <h3 className="text-[12px] font-extrabold uppercase tracking-wide min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
@@ -4892,12 +5077,10 @@ export function ProjectDetailsDialog({
                   </div>
                   <div className="grid divide-y divide-border">
                     {project.relatedPatents.map((patent) => (
-                      <button
+                      <Link
                         key={patent.publication}
-                        type="button"
+                        href={`/patents/${patent.patentId.toLowerCase()}`}
                         className="group/patentLink grid gap-1 px-4 py-3 text-left transition-colors hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/30 min-[1800px]:gap-3 min-[1800px]:px-7 min-[1800px]:py-6"
-                        aria-haspopup="dialog"
-                        onClick={() => openRelatedPatent(patent.patentId)}
                       >
                         <span className="text-[11px] font-extrabold text-brand min-[1800px]:text-[17px] min-[2400px]:text-[19px]">
                           {patent.publication}
@@ -4908,7 +5091,7 @@ export function ProjectDetailsDialog({
                         <span className="text-[12px] font-medium leading-[1.45] text-muted-foreground min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
                           {patent.note}
                         </span>
-                      </button>
+                      </Link>
                     ))}
                   </div>
                 </section>
@@ -4931,15 +5114,30 @@ export function ProjectDetailsDialog({
           />
         )}
       </div>
-      {selectedPatent && (
-        <PatentDialog
-          key={selectedPatent.id}
-          locale={locale}
-          patent={selectedPatent}
-          onClosed={() => setSelectedPatent(null)}
-        />
-      )}
     </>
+  );
+}
+
+export function HomeProjectDetailsDialog({
+  locale,
+  onClosed,
+  projectId,
+}: {
+  locale: string;
+  onClosed: () => void;
+  projectId: string;
+}) {
+  const copy = getProjectsPageCopy(locale);
+  const project = copy.projects.find((item) => item.id === projectId);
+
+  if (!project) return null;
+
+  return (
+    <ProjectDetailsDialog
+      modal={copy.modal}
+      onClosed={onClosed}
+      project={project}
+    />
   );
 }
 
@@ -4950,9 +5148,6 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
   const [sortKey, setSortKey] = useState<ProjectSortKey>("default");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [selectedPatent, setSelectedPatent] = useState<PatentRecord | null>(
-    null,
-  );
   const [activeGalleryIndex, setActiveGalleryIndex] = useState(0);
   const [dialogState, setDialogState] = useState<
     "closed" | "opening" | "open" | "closing"
@@ -5014,10 +5209,6 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
             .includes(query),
         )
       : filteredProjects;
-
-    if (activeFilter !== "all" && sortKey === "default") {
-      return sortProjectsByTitle(matchedProjects, resolvedLocale, activeFilter);
-    }
 
     return sortProjects(matchedProjects, sortKey, resolvedLocale);
   }, [activeFilter, copy.projects, resolvedLocale, searchQuery, sortKey]);
@@ -5173,7 +5364,6 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
       );
     }
 
-    setSelectedPatent(null);
     setExpandedGalleryIndex(null);
     setSelectedProject(null);
     setPanelRect(null);
@@ -5267,13 +5457,6 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
       window.removeEventListener("hashchange", openProjectFromHash);
     };
   }, [openProjectFromHash]);
-
-  const openRelatedPatent = useCallback((patentId: string) => {
-    const patent = PATENTS.find((item) => item.id === patentId);
-    if (!patent) return;
-
-    setSelectedPatent(patent);
-  }, []);
 
   useEffect(() => {
     dialogStateRef.current = dialogState;
@@ -5454,8 +5637,6 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
         return;
       }
 
-      if (selectedPatent) return;
-
       if (event.key === "Escape") {
         closeProject();
         return;
@@ -5492,7 +5673,6 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
   }, [
     closeProject,
     expandedGalleryIndex,
-    selectedPatent,
     selectedProject,
     selectedProjectGallery.length,
     showNextExpandedGalleryImage,
@@ -5874,6 +6054,17 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                   {selectedProject.description}
                 </p>
 
+                <Link
+                  href={`/projects/${selectedProject.id}`}
+                  className="group/fullProject mt-7 inline-flex min-h-11 items-center justify-center gap-3 rounded-[7px] bg-foreground px-5 py-2.5 text-[13px] font-extrabold text-white shadow-[0_8px_22px_rgba(0,0,0,0.16)] transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35 min-[1800px]:mt-10 min-[1800px]:min-h-16 min-[1800px]:px-8 min-[1800px]:text-[20px] min-[2400px]:text-[22px]"
+                >
+                  <span>{copy.modal.openFullPage}</span>
+                  <ArrowUpRight
+                    className="size-4 transition-transform duration-300 group-hover/fullProject:-translate-y-0.5 group-hover/fullProject:translate-x-0.5 min-[1800px]:size-6"
+                    aria-hidden
+                  />
+                </Link>
+
                 <div className="mt-8 grid gap-6 md:grid-cols-2 min-[1800px]:mt-14 min-[1800px]:gap-12 min-[2400px]:mt-16">
                   <section>
                     <h3 className="text-[12px] font-extrabold uppercase tracking-wide min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
@@ -5909,12 +6100,10 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                     </div>
                     <div className="grid divide-y divide-border">
                       {selectedProject.relatedPatents.map((patent) => (
-                        <button
+                        <Link
                           key={patent.publication}
-                          type="button"
+                          href={`/patents/${patent.patentId.toLowerCase()}`}
                           className="group/patentLink grid gap-1 px-4 py-3 text-left transition-colors hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/30 min-[1800px]:gap-3 min-[1800px]:px-7 min-[1800px]:py-6"
-                          aria-haspopup="dialog"
-                          onClick={() => openRelatedPatent(patent.patentId)}
                         >
                           <span className="text-[11px] font-extrabold text-brand min-[1800px]:text-[17px] min-[2400px]:text-[19px]">
                             {patent.publication}
@@ -5925,7 +6114,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                           <span className="text-[12px] font-medium leading-[1.45] text-muted-foreground min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
                             {patent.note}
                           </span>
-                        </button>
+                        </Link>
                       ))}
                     </div>
                   </section>
@@ -5947,14 +6136,6 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
             )}
           </section>
         </div>
-      )}
-      {selectedPatent && (
-        <PatentDialog
-          key={selectedPatent.id}
-          locale={locale}
-          patent={selectedPatent}
-          onClosed={() => setSelectedPatent(null)}
-        />
       )}
     </>
   );
@@ -6034,15 +6215,16 @@ function ProjectCard({
   return (
     <article
       data-project-origin
-      className="group h-full overflow-hidden rounded-[7px] border border-border bg-white transition-shadow duration-300 hover:shadow-[0_16px_34px_rgba(0,0,0,0.07)] min-[2400px]:rounded-[8px]"
+      className="group relative h-full overflow-hidden rounded-[7px] border border-border bg-white transition-shadow duration-300 hover:shadow-[0_16px_34px_rgba(0,0,0,0.07)] min-[2400px]:rounded-[8px]"
     >
       <button
         type="button"
-        className="flex h-full w-full flex-col text-left outline-none focus-visible:ring-2 focus-visible:ring-brand/30"
+        className="absolute inset-0 z-10 rounded-[7px] text-left outline-none focus-visible:ring-2 focus-visible:ring-brand/30"
         aria-haspopup="dialog"
         aria-label={`${openDetailsLabel}: ${project.title}`}
         onClick={() => onOpen(project)}
-      >
+      />
+      <div className="pointer-events-none relative z-20 flex h-full w-full flex-col text-left">
         <span className="relative block h-[220px] overflow-hidden bg-muted min-[2400px]:!h-[260px]">
           <Image
             src={project.image}
@@ -6051,14 +6233,18 @@ function ProjectCard({
             loading="lazy"
             fetchPriority={imageFetchPriority}
             sizes="(min-width: 2400px) 580px, (max-width: 768px) 100vw, 560px"
-            className="object-contain transition-transform duration-500 group-hover:scale-[1.035]"
+            className={cn(
+              "transition-transform duration-500 group-hover:scale-[1.035]",
+              getProjectCardImageFitClass(project.id),
+            )}
           />
-          <span
-            className="absolute right-4 top-4 grid size-9 place-items-center rounded-full bg-foreground/80 text-white transition-colors duration-300 group-hover:bg-brand min-[2400px]:!right-5 min-[2400px]:!top-5 min-[2400px]:!size-10"
-            aria-hidden
+          <Link
+            href={`/projects/${project.id}`}
+            className="pointer-events-auto absolute right-4 top-4 z-30 grid size-9 place-items-center rounded-full bg-foreground/80 text-white transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:translate-x-0.5 hover:bg-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35 min-[2400px]:!right-5 min-[2400px]:!top-5 min-[2400px]:!size-10"
+            aria-label={`${openDetailsLabel}: ${project.title}`}
           >
-            <ArrowUpRight className="size-4 min-[2400px]:!size-5" />
-          </span>
+            <ArrowUpRight className="size-4 min-[2400px]:!size-5" aria-hidden />
+          </Link>
         </span>
 
         <span className="flex min-h-[150px] flex-1 flex-col px-5 pb-5 pt-5 min-[2400px]:!min-h-[210px] min-[2400px]:!px-6 min-[2400px]:!pb-6 min-[2400px]:!pt-6">
@@ -6085,7 +6271,7 @@ function ProjectCard({
             </span>
           </span>
         </span>
-      </button>
+      </div>
     </article>
   );
 }

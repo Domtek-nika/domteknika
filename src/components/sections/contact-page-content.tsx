@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 
 import { Container } from "@/components/layout/container";
 import { ContactForm } from "@/components/sections/contact-form";
-import { ContactMap } from "@/components/sections/contact-map";
+import { LazyContactMap } from "@/components/sections/lazy-contact-map";
 import { Reveal } from "@/components/providers/reveal";
 
 const CONTACT_CARDS = [
@@ -173,7 +173,7 @@ export function ContactPageContent() {
               </div>
 
               <div className="relative h-[360px] overflow-hidden rounded-[10px] border border-border bg-white shadow-[0_20px_56px_rgba(0,0,0,0.08)] md:h-[380px] min-[1800px]:!h-[520px] min-[1800px]:!rounded-[14px] min-[2400px]:!h-[620px] min-[2400px]:!rounded-[16px]">
-                <ContactMap label={t("Map.marker")} />
+                <LazyContactMap label={t("Map.marker")} />
                 <div className="pointer-events-none absolute bottom-4 left-4 rounded-[7px] border border-border bg-white/92 px-3.5 py-3 shadow-[0_10px_24px_rgba(0,0,0,0.08)] backdrop-blur-sm min-[1800px]:!bottom-6 min-[1800px]:!left-6 min-[1800px]:!rounded-[10px] min-[1800px]:!px-5 min-[1800px]:!py-4 min-[2400px]:!bottom-8 min-[2400px]:!left-8 min-[2400px]:!rounded-[12px] min-[2400px]:!px-6 min-[2400px]:!py-5">
                   <p className="text-[11px] font-extrabold uppercase tracking-wide text-brand min-[1800px]:!text-[14px] min-[2400px]:!text-[16px]">
                     {t("Map.marker")}

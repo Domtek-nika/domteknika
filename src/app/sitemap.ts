@@ -1,5 +1,8 @@
 import type { MetadataRoute } from "next";
 
+import { getCanonicalPatentSlugs } from "@/data/patent-lookup";
+import { PATENTS } from "@/data/patents";
+import { getProjectSlugs } from "@/data/projects";
 import { locales } from "@/i18n/routing";
 import {
   INDEXABLE_ROUTES,
@@ -25,7 +28,7 @@ const ROUTE_SETTINGS: Record<
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return INDEXABLE_ROUTES.flatMap((path) =>
+  const mainRoutes = INDEXABLE_ROUTES.flatMap((path) =>
     locales.map((locale) => ({
       url: localizedUrl(locale, path),
       alternates: {
@@ -34,4 +37,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ...ROUTE_SETTINGS[path],
     })),
   );
+
+  const projectRoutes = getProjectSlugs().flatMap((slug) => {
+    const path = `/projects/${slug}`;
+    return locales.map((locale) => ({
+      url: localizedUrl(locale, path),
+      alternates: { languages: languageAlternates(path) },
+      changeFrequency: "yearly" as const,
+      priority: 0.7,
+    }));
+  });
+
+  const patentBySlug = new Map(
+    PATENTS.map((patent) => [patent.id.toLowerCase(), patent]),
+  );
+  const patentRoutes = getCanonicalPatentSlugs().flatMap((publication) => {
+    const path = `/patents/${publication}`;
+    const patent = patentBySlug.get(publication);
+    return locales.map((locale) => ({
+      url: localizedUrl(locale, path),
+      alternates: { languages: languageAlternates(path) },
+      changeFrequency: "yearly" as const,
+      lastModified: patent?.date ? new Date(patent.date) : undefined,
+      priority: 0.6,
+    }));
+  });
+
+  return [...mainRoutes, ...projectRoutes, ...patentRoutes];
 }

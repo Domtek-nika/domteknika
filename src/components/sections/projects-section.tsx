@@ -1,7 +1,8 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
@@ -13,67 +14,53 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { Container } from "@/components/layout/container";
-import {
-  type Project,
-  getProjectsPageCopy,
-  getProjectsForLocale,
-  ProjectDetailsDialog,
-} from "@/components/sections/projects-page-content";
+import type { ProjectCardSummary } from "@/data/project-types";
 import { Link } from "@/i18n/navigation";
+import { getProjectCardImageFitClass } from "@/lib/project-card-image";
 import { cn } from "@/lib/utils";
 
-const PINNED_HOME_PROJECT_ID = "aventor";
-const HOME_PROJECTS_IMAGE_WARMUP_COUNT = 8;
+const importProjectDetailsDialog = () =>
+  import("@/components/sections/projects-page-content");
+let projectDetailsDialogPromise: ReturnType<
+  typeof importProjectDetailsDialog
+> | null = null;
 
-type IdleWindow = Window &
-  typeof globalThis & {
-    requestIdleCallback?: (
-      callback: IdleRequestCallback,
-      options?: IdleRequestOptions,
-    ) => number;
-    cancelIdleCallback?: (handle: number) => void;
-  };
-
-function shuffleHomeProjects(projects: Project[]) {
-  const pinnedProject = projects.find(
-    (project) => project.id === PINNED_HOME_PROJECT_ID,
-  );
-  const shuffledProjects = projects.filter(
-    (project) => project.id !== PINNED_HOME_PROJECT_ID,
-  );
-
-  for (let index = shuffledProjects.length - 1; index > 0; index -= 1) {
-    const randomIndex = Math.floor(Math.random() * (index + 1));
-    [shuffledProjects[index], shuffledProjects[randomIndex]] = [
-      shuffledProjects[randomIndex],
-      shuffledProjects[index],
-    ];
-  }
-
-  return pinnedProject ? [pinnedProject, ...shuffledProjects] : shuffledProjects;
+function loadProjectDetailsDialog() {
+  projectDetailsDialogPromise ??= importProjectDetailsDialog();
+  return projectDetailsDialogPromise;
 }
 
-function warmProjectImages(projects: Project[]) {
-  projects
-    .slice(0, HOME_PROJECTS_IMAGE_WARMUP_COUNT)
-    .forEach((project) => {
-      const image = new window.Image();
-      image.decoding = "async";
-      image.src = project.image;
-    });
-}
+const DynamicProjectDetailsDialog = dynamic(
+  () =>
+    loadProjectDetailsDialog().then(
+      (module) => module.HomeProjectDetailsDialog,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div
+        className="fixed inset-0 z-[999] bg-black/10 backdrop-blur-[2px]"
+        aria-busy="true"
+        aria-live="polite"
+      />
+    ),
+  },
+);
 
-export function ProjectsSection() {
+export function ProjectsSection({
+  projects,
+}: {
+  projects: ProjectCardSummary[];
+}) {
   const t = useTranslations("Projects");
   const locale = useLocale();
   const [api, setApi] = useState<CarouselApi>();
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const projects = useMemo(() => getProjectsForLocale(locale), [locale]);
-  const projectsCopy = useMemo(() => getProjectsPageCopy(locale), [locale]);
-  const [homeProjects, setHomeProjects] = useState(projects);
+  const [selectedProjectId, setSelectedProjectId] = useState<string | null>(
+    null,
+  );
   const carouselProjects = useMemo(
-    () => [...homeProjects, ...homeProjects],
-    [homeProjects],
+    () => [...projects, ...projects],
+    [projects],
   );
   const autoplay = useMemo(
     () =>
@@ -84,30 +71,7 @@ export function ProjectsSection() {
       }),
     [],
   );
-
-  useEffect(() => {
-    const frameId = window.requestAnimationFrame(() => {
-      setHomeProjects(shuffleHomeProjects(projects));
-    });
-
-    return () => window.cancelAnimationFrame(frameId);
-  }, [projects]);
-
-  useEffect(() => {
-    const scheduleWarmup = () => warmProjectImages(homeProjects);
-    const idleWindow = window as IdleWindow;
-
-    if (typeof idleWindow.requestIdleCallback === "function") {
-      const idleId = idleWindow.requestIdleCallback(scheduleWarmup, {
-        timeout: 2400,
-      });
-
-      return () => idleWindow.cancelIdleCallback?.(idleId);
-    }
-
-    const timerId = idleWindow.setTimeout(scheduleWarmup, 1800);
-    return () => idleWindow.clearTimeout(timerId);
-  }, [homeProjects]);
+  const closeProject = useCallback(() => setSelectedProjectId(null), []);
 
   return (
     <section
@@ -165,13 +129,11 @@ export function ProjectsSection() {
                     className="basis-[min(340px,82vw)] pl-4 md:basis-[274px] min-[1800px]:!basis-[470px] min-[2300px]:!basis-[490px]"
                   >
                     <ProjectCard
+                      onOpen={() => setSelectedProjectId(project.id)}
                       project={project}
-                      tag={project.tags[1] ?? project.tags[0] ?? project.category}
-                      openDetailsLabel={projectsCopy.cardOpenDetails}
-                      onOpen={(nextProject) => {
-                        autoplay.stop();
-                        setSelectedProject(nextProject);
-                      }}
+                      tag={
+                        project.tags[1] ?? project.tags[0] ?? project.category
+                      }
                     />
                   </CarouselItem>
                 ))}
@@ -196,12 +158,12 @@ export function ProjectsSection() {
           </div>
         </div>
       </Container>
-      {selectedProject ? (
-        <ProjectDetailsDialog
+
+      {selectedProjectId ? (
+        <DynamicProjectDetailsDialog
           locale={locale}
-          modal={projectsCopy.modal}
-          project={selectedProject}
-          onClosed={() => setSelectedProject(null)}
+          onClosed={closeProject}
+          projectId={selectedProjectId}
         />
       ) : null}
     </section>
@@ -209,23 +171,23 @@ export function ProjectsSection() {
 }
 
 function ProjectCard({
+  onOpen,
   project,
   tag,
-  onOpen,
-  openDetailsLabel,
 }: {
-  project: Project;
+  onOpen: () => void;
+  project: ProjectCardSummary;
   tag: string;
-  onOpen: (project: Project) => void;
-  openDetailsLabel: string;
 }) {
   return (
     <button
       type="button"
       className="group block h-[334px] w-full overflow-hidden rounded-[7px] border border-border bg-white text-left outline-none transition-shadow duration-300 hover:shadow-[0_18px_45px_rgba(0,0,0,0.08)] focus-visible:ring-2 focus-visible:ring-brand/30 min-[1800px]:h-[500px] min-[2300px]:!h-[510px]"
+      aria-label={project.title}
       aria-haspopup="dialog"
-      aria-label={`${openDetailsLabel}: ${project.title}`}
-      onClick={() => onOpen(project)}
+      onClick={onOpen}
+      onFocus={() => void loadProjectDetailsDialog()}
+      onPointerEnter={() => void loadProjectDetailsDialog()}
     >
       <article className="h-full">
         <div className="relative h-[148px] bg-muted min-[1800px]:h-[230px] min-[2300px]:!h-[235px]">
@@ -236,7 +198,12 @@ function ProjectCard({
             loading="lazy"
             decoding="async"
             sizes="(min-width: 2300px) 490px, (min-width: 1800px) 470px, 274px"
-            className="object-contain p-4 transition-transform duration-500 ease-smooth group-hover:scale-[1.035] min-[1800px]:p-7 min-[2300px]:!p-7"
+            className={cn(
+              "transition-transform duration-500 ease-smooth group-hover:scale-[1.035]",
+              getProjectCardImageFitClass(project.id),
+              project.id !== "velum-sky-screen" &&
+                "p-4 min-[1800px]:p-7 min-[2300px]:!p-7",
+            )}
           />
         </div>
         <div className="flex h-[186px] flex-col px-4 pb-4 pt-4 min-[1800px]:h-[270px] min-[1800px]:px-7 min-[1800px]:pb-7 min-[1800px]:pt-7 min-[2300px]:!h-[275px] min-[2300px]:!px-8 min-[2300px]:!pb-7 min-[2300px]:!pt-7">

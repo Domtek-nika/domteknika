@@ -5,10 +5,44 @@ import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/providers/reveal";
 import { ExpertiseOverviewSection } from "@/components/sections/home-expertise-overview";
 
+const SHOW_BREAKTHROUGH_SECTION = false;
+
 export function HomeIntroductionSections() {
   return (
-    <div className="relative isolate overflow-hidden bg-background">
-      <BreakthroughSection />
+    <div className="relative isolate overflow-hidden bg-[#fefefe]">
+      {SHOW_BREAKTHROUGH_SECTION ? (
+        <>
+          <div
+            className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
+            aria-hidden
+          >
+            <div className="absolute inset-0 hidden -translate-y-[15%] lg:block">
+              <Image
+                src="/assets/breakthrough/aventor-breakthrough-elastic-transformation-wide-v156.png"
+                alt=""
+                fill
+                sizes="100vw"
+                unoptimized
+                className="object-contain object-top"
+              />
+            </div>
+
+            <div className="absolute right-0 top-[330px] aspect-[5292/2160] w-[125vw] sm:top-[250px] sm:w-[min(100%,900px)] md:inset-x-0 md:-top-[9vw] md:h-[520px] md:w-full md:aspect-auto lg:hidden">
+              <Image
+                src="/assets/breakthrough/aventor-breakthrough-elastic-transformation-v155.png"
+                alt=""
+                fill
+                sizes="(max-width: 767px) 100vw, 115vw"
+                unoptimized
+                className="object-contain object-top"
+              />
+            </div>
+
+            <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,#fefefe_0%,rgba(254,254,254,0.98)_34%,rgba(254,254,254,0.72)_45%,rgba(254,254,254,0)_58%)] md:block lg:hidden" />
+          </div>
+          <BreakthroughSection />
+        </>
+      ) : null}
       <ExpertiseOverviewSection />
     </div>
   );
@@ -20,32 +54,16 @@ function BreakthroughSection() {
   return (
     <section
       id="breakthrough"
-      className="relative isolate flex min-h-[420px] items-center overflow-visible border-t border-border/60 bg-background py-12 sm:min-h-[400px] sm:py-14 lg:min-h-[430px] lg:py-16"
+      className="relative z-10 isolate flex min-h-[560px] items-start overflow-visible border-t border-border/60 bg-transparent py-12 sm:min-h-[520px] sm:py-14 md:min-h-[400px] md:items-center lg:min-h-[430px] lg:py-16"
       aria-labelledby="breakthrough-title"
     >
-      <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 top-0 overflow-hidden lg:-bottom-20"
-        aria-hidden
-      >
-        <Image
-          src="/assets/breakthrough/breakthrough-fracture.png"
-          alt=""
-          fill
-          sizes="100vw"
-          unoptimized
-          className="object-cover object-[68%_center] sm:object-[62%_center] lg:object-center"
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.98)_0%,rgba(255,255,255,0.94)_48%,rgba(255,255,255,0.28)_78%,rgba(255,255,255,0.04)_100%)] sm:bg-[linear-gradient(90deg,rgba(255,255,255,0.98)_0%,rgba(255,255,255,0.9)_42%,rgba(255,255,255,0.12)_72%,rgba(255,255,255,0)_100%)]" />
-      </div>
-
       <Container size="wide">
         <div className="relative z-20">
           <Reveal className="max-w-[340px] sm:max-w-[400px] lg:max-w-[440px]">
-            <div className="flex items-center gap-3" aria-hidden>
-              <span className="block h-0.5 w-7 bg-brand" />
-              <span className="block size-1 rotate-45 border border-brand/70" />
-              <span className="block h-px w-8 bg-foreground/15" />
-            </div>
+            <span
+              className="block h-[3px] w-[34px] bg-brand"
+              aria-hidden
+            />
             <h2
               id="breakthrough-title"
               className="mt-4 max-w-[390px] text-[34px] font-extrabold leading-[1.02] tracking-[-0.035em] text-foreground sm:text-[38px] lg:text-[42px]"

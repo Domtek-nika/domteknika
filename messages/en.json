@@ -27,7 +27,7 @@
     "breakthrough": {
       "eyebrow": "Breakthrough innovation",
       "title": "We create what does not yet exist",
-      "body": "When a challenge has no obvious answer, we find the useful breakthrough: a new idea that is technically sound and ready to become a product.",
+      "body": "Before committing to a direction, we explore multiple concepts, expose hidden risks early and focus time and investment on the solution with the greatest potential.",
       "sequence": {
         "challenge": "Challenge",
         "insight": "Insight",
@@ -35,36 +35,35 @@
       }
     },
     "expertise": {
-      "eyebrow": "What we do",
-      "title": "Our expertise, from idea to product.",
-      "body": "Creativity, design, prototyping, simulation, polymers and electronics: we bring together the expertise needed to create reliable, manufacturable products.",
-      "cta": "Explore our expertise",
+      "eyebrow": "Tailored engineering",
+      "title": "Core expertise",
+      "cta": "Explore our capabilities",
       "swiss": "Swiss engineering",
       "location": "La Neuveville · Switzerland",
       "items": {
         "creativity": {
-          "title": "Creativity & Innovation",
-          "body": "We frame the need and explore multiple directions to uncover new, realistic solutions."
+          "title": "R&D",
+          "body": "Exploration, concept development and product innovation."
         },
         "design": {
-          "title": "Product Design",
-          "body": "We define product architecture, mechanics, CAD and the materials best suited to manufacturing."
+          "title": "CAD & Engineering",
+          "body": "Mechanical architecture and precise 3D definition."
         },
         "prototyping": {
           "title": "Prototyping",
-          "body": "We build functional prototypes to quickly test use cases, technical choices and performance."
+          "body": "Functional prototypes for rapid testing and iteration."
         },
         "simulation": {
-          "title": "Simulation & Analysis",
-          "body": "We use analysis and simulation to anticipate constraints and secure design decisions."
+          "title": "CAD & FEA",
+          "body": "3D design and simulation to secure technical decisions."
         },
         "polymer": {
           "title": "Polymer & Injection Expertise",
           "body": "We design precise polymer parts suited to injection molding and industrial production requirements."
         },
         "electronics": {
-          "title": "Electronics Integration",
-          "body": "We integrate electronics into the product to create connected, reliable and easy-to-use systems."
+          "title": "Electronics",
+          "body": "Integration of electronic and connected functions."
         }
       }
     }

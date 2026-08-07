@@ -27,7 +27,7 @@
     "breakthrough": {
       "eyebrow": "Breakthrough innovation",
       "title": "Nous créons ce qui n’existe pas encore",
-      "body": "Face à un défi sans réponse évidente, nous trouvons la rupture utile : une idée nouvelle, techniquement solide et prête à devenir un produit.",
+      "body": "Avant de choisir une direction, nous explorons plusieurs concepts, révélons les risques cachés au plus tôt et concentrons le temps et l’investissement sur la solution au plus fort potentiel.",
       "sequence": {
         "challenge": "Défi",
         "insight": "Déclic",
@@ -35,36 +35,35 @@
       }
     },
     "expertise": {
-      "eyebrow": "Ce que nous faisons",
-      "title": "Notre expertise, de l’idée au produit.",
-      "body": "Créativité, design, prototypage, simulation, polymères et électronique : nous réunissons les savoir-faire nécessaires pour créer des produits fiables et industrialisables.",
-      "cta": "Découvrir notre expertise",
+      "eyebrow": "Ingénierie sur mesure",
+      "title": "Expertises clés",
+      "cta": "Découvrir notre savoir-faire",
       "swiss": "Ingénierie suisse",
       "location": "La Neuveville · Suisse",
       "items": {
         "creativity": {
-          "title": "Créativité & Innovation",
-          "body": "Nous cadrons le besoin et explorons plusieurs pistes pour faire émerger des solutions nouvelles et réalistes."
+          "title": "R&D",
+          "body": "Exploration, recherche de concepts et innovation produit."
         },
         "design": {
-          "title": "Design produit",
-          "body": "Nous définissons l’architecture du produit, sa mécanique, sa CAO et les matériaux adaptés à sa fabrication."
+          "title": "CAO & Conception",
+          "body": "Architecture mécanique et définition 3D précise."
         },
         "prototyping": {
           "title": "Prototypage",
-          "body": "Nous réalisons des prototypes fonctionnels pour tester rapidement les usages, les choix techniques et les performances."
+          "body": "Prototypes fonctionnels pour tester et itérer rapidement."
         },
         "simulation": {
-          "title": "Simulation & Analyse",
-          "body": "Nous utilisons le calcul et la simulation pour anticiper les contraintes et sécuriser les décisions de conception."
+          "title": "CAO & FEA",
+          "body": "Conception 3D et simulations pour sécuriser les choix techniques."
         },
         "polymer": {
           "title": "Polymères & Injection",
           "body": "Nous concevons des pièces polymères précises, adaptées à l’injection et aux exigences de la production industrielle."
         },
         "electronics": {
-          "title": "Intégration électronique",
-          "body": "Nous intégrons l’électronique au produit pour créer des systèmes connectés, fiables et simples à utiliser."
+          "title": "Électronique",
+          "body": "Intégration de fonctions électroniques et connectées."
         }
       }
     }

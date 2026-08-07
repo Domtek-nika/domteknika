@@ -2,22 +2,17 @@
 
 import Image from "next/image";
 import { ArrowUpRight, X } from "lucide-react";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { Container } from "@/components/layout/container";
-import { ContactMap } from "@/components/sections/contact-map";
+import { LazyContactMap } from "@/components/sections/lazy-contact-map";
 import { Reveal } from "@/components/providers/reveal";
 import {
   OurStoryTimelineBlock,
   OurStoryTimelineRail,
   OurStoryTimelineStep,
 } from "@/components/sections/our-story-timeline-rail";
-import {
-  type Project,
-  getProjectsForLocale,
-  getProjectsPageCopy,
-  ProjectDetailsDialog,
-} from "@/components/sections/projects-page-content";
+import { useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 type StoryLocale = "en" | "fr" | "de" | "es" | "ko" | "zh";
@@ -814,25 +809,14 @@ function isStoryLocale(locale: string): locale is StoryLocale {
 
 export function OurStoryPageContent({ locale }: { locale: string }) {
   const copy = getOurStoryCopy(locale);
-  const projects = useMemo(
-    () => getProjectsForLocale(locale, { includeHidden: true }),
-    [locale],
-  );
-  const projectModalCopy = useMemo(
-    () => getProjectsPageCopy(locale).modal,
-    [locale],
-  );
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const router = useRouter();
   const [locationMapOpen, setLocationMapOpen] = useState(false);
 
   const openProject = useCallback(
     (projectId: string) => {
-      const project = projects.find((item) => item.id === projectId);
-      if (!project) return;
-
-      setSelectedProject(project);
+      router.push(`/projects/${projectId}`);
     },
-    [projects],
+    [router],
   );
 
   return (
@@ -885,14 +869,6 @@ export function OurStoryPageContent({ locale }: { locale: string }) {
         </OurStoryTimelineRail>
       </Container>
 
-      {selectedProject && (
-        <ProjectDetailsDialog
-          locale={locale}
-          modal={projectModalCopy}
-          project={selectedProject}
-          onClosed={() => setSelectedProject(null)}
-        />
-      )}
       {locationMapOpen && (
         <OurStoryLocationDialog
           locale={locale as StoryLocale}
@@ -1356,7 +1332,7 @@ function OurStoryLocationDialog({
         </div>
         <div className="grid gap-4 p-4 sm:p-5 md:grid-cols-[minmax(0,1fr)_190px] min-[1800px]:!min-h-0 min-[1800px]:!flex-1 min-[1800px]:!grid-cols-[minmax(0,1fr)_360px] min-[1800px]:!gap-6 min-[1800px]:!p-7 min-[2400px]:!grid-cols-[minmax(0,1fr)_420px] min-[2400px]:!gap-8 min-[2400px]:!p-8">
           <div className="h-[300px] overflow-hidden rounded-[7px] border border-border sm:h-[390px] min-[1800px]:!h-full min-[1800px]:!min-h-0 min-[1800px]:!rounded-[14px] min-[2400px]:!rounded-[16px]">
-            <ContactMap label="DOMTEKNIKA" />
+            <LazyContactMap label="DOMTEKNIKA" />
           </div>
           <div className="flex min-h-0 flex-col justify-between rounded-[7px] border border-border bg-muted/30 p-4 sm:p-5 min-[1800px]:!rounded-[14px] min-[1800px]:!p-8 min-[2400px]:!rounded-[16px] min-[2400px]:!p-10">
             <p className="whitespace-pre-line text-[14px] font-medium leading-[1.5] text-muted-foreground min-[1800px]:!text-[16px] min-[2400px]:!text-[18px]">

@@ -550,5 +550,47 @@
         "output": "/assets/projects/folding-bike-scooter/folding-bike-scooter-05.webp"
       }
     ]
+  },
+  {
+    "slug": "transparent-clock",
+    "sourceFolder": "horloge",
+    "cover": "/assets/projects/transparent-clock/transparent-clock-01.webp",
+    "images": [
+      {
+        "source": "../horloge/1.JPG",
+        "output": "/assets/projects/transparent-clock/transparent-clock-01.webp"
+      },
+      {
+        "source": "../horloge/2.JPG",
+        "output": "/assets/projects/transparent-clock/transparent-clock-02.webp"
+      },
+      {
+        "source": "../horloge/3.JPG",
+        "output": "/assets/projects/transparent-clock/transparent-clock-03.webp"
+      },
+      {
+        "source": "../horloge/4.JPG",
+        "output": "/assets/projects/transparent-clock/transparent-clock-04.webp"
+      }
+    ]
+  },
+  {
+    "slug": "bottom-filling-cup",
+    "sourceFolder": "Goblet",
+    "cover": "/assets/projects/bottom-filling-cup/bottom-filling-cup-01.webp",
+    "images": [
+      {
+        "source": "../Goblet/1.JPG",
+        "output": "/assets/projects/bottom-filling-cup/bottom-filling-cup-01.webp"
+      },
+      {
+        "source": "../Goblet/2.jpg",
+        "output": "/assets/projects/bottom-filling-cup/bottom-filling-cup-02.webp"
+      },
+      {
+        "source": "../Goblet/3.jpg",
+        "output": "/assets/projects/bottom-filling-cup/bottom-filling-cup-03.webp"
+      }
+    ]
   }
 ]

@@ -19,13 +19,12 @@ export function CtaSection() {
       aria-labelledby="cta-title"
     >
       <Image
-        src="/assets/technical-drawing-bottom.png"
+        src="/assets/technical-drawing-bottom-2x.webp"
         alt=""
-        width={1123}
-        height={301}
+        width={2246}
+        height={602}
         quality={100}
-        sizes="(max-width: 1024px) 100vw, 1123px"
-        unoptimized
+        sizes="(min-width: 2300px) 1250px, (min-width: 1800px) 1100px, (min-width: 768px) 50vw, 1px"
         className="pointer-events-none absolute right-0 top-8 hidden w-[50vw] max-w-[960px] opacity-60 md:block min-[1800px]:!w-[55vw] min-[1800px]:!max-w-[1100px] min-[2300px]:!right-[-2vw] min-[2300px]:!top-6 min-[2300px]:!w-[56vw] min-[2300px]:!max-w-[1250px]"
       />
 

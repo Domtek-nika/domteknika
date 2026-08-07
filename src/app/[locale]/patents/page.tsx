@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { PatentPageContent, PatentPageCta } from "@/components/sections/patent-page-content";
+import { getPatentProjectLinks } from "@/data/projects";
 import { buildPageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -27,10 +28,14 @@ export default async function PatentPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const linkedProjectsByPatent = getPatentProjectLinks(locale);
 
   return (
     <>
-      <PatentPageContent locale={locale} />
+      <PatentPageContent
+        linkedProjectsByPatent={linkedProjectsByPatent}
+        locale={locale}
+      />
       <PatentPageCta locale={locale} />
     </>
   );

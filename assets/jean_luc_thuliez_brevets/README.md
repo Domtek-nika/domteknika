@@ -12,6 +12,18 @@ Extraction depuis Espacenet, requête initiale `txt = thuliez`, via les endpoint
 - Descriptions textuelles exactes absentes dans Espacenet : 3
 - Revendications textuelles exactes absentes dans Espacenet : 9
 
+## Périmètre publié sur le site
+
+Le site applique désormais une date de priorité minimale inclusive au `2004-05-07` pour les brevets de Jean-Luc Thuliez. Les 8 fiches de la source Espacenet antérieures à cette date restent conservées dans l'archive de travail, mais ne sont plus générées dans `src/data/patents.ts`.
+
+Comparaison effectuée le 2026-08-04 avec la recherche Google Patents `inventor=Jean-Luc Thuliez&sort=old` :
+
+- 52 numéros de publication Google uniques à partir du seuil, après suppression de 5 répétitions exactes produites par la pagination Google ;
+- 46 familles/inventions distinctes correspondantes ;
+- 46 cartes Jean-Luc Thuliez présentes sur le site, donc aucune famille manquante ;
+- 6 lignes Google supplémentaires correspondent à une seconde publication de familles déjà présentes (pays, demande/délivrance ou variante nationale) ;
+- les variantes de numéros Google sont conservées comme alias recherchables sur leur carte existante afin d'éviter des doublons visuels.
+
 Note : une page mosaïque Espacenet pour US2022338602A1 renvoie 404. Les pages de dessins correspondantes ont été récupérées depuis le document original, pages 2 à 11. Le fichier ERROR est conservé pour audit.
 
 ## Ajout Étienne Crozier sans Jean-Luc Thuliez

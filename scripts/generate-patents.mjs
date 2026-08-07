@@ -8,10 +8,29 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SOURCE_ROOT = path.join(ROOT, "assets/jean_luc_thuliez_brevets");
 const PUBLIC_ROOT = path.join(ROOT, "public/assets/patents");
 const DATA_FILE = path.join(ROOT, "src/data/patents.ts");
-const PDFTOPPM = "/Users/aris/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/pdftoppm";
+const PDFTOPPM = process.env.PDFTOPPM_PATH || "pdftoppm";
 const REUSE_IMAGES = process.argv.includes("--reuse-images");
 const CROP_PADDING = 4;
-const EXCLUDED_PATENT_IDS = new Set(["FR2288933A1", "FR2277489A1"]);
+const MIN_JEAN_LUC_PRIORITY_DATE = "2004-05-07";
+
+// Google Patents sometimes returns a national publication, a grant, or the
+// zero-padded US publication number instead of the Espacenet representative
+// used for the card. Keep those result identifiers attached to the matching
+// family so the Google list can be reconciled and searched without duplicating
+// the same invention in the archive.
+const GOOGLE_RESULT_ALIASES = {
+  USD560092S: ["USD560092S1"],
+  USD568097S: ["USD568097S1"],
+  US2010173057A1: ["HK1119383A"],
+  EP2000065A1: ["HK1124746A"],
+  US2011061534A1: ["HK1153366A"],
+  US2016000570A1: ["US20160317310A9"],
+  US2019313839A1: ["CA2995152C"],
+  US2021106167A1: ["US20210106167A1"],
+  US2022141591A1: ["BR112021014602B1"],
+  US2023164492A1: ["US20230164492A1"],
+  MA68857A1: ["OA21854A"],
+};
 
 const SOURCE_FILES = [
   {
@@ -186,6 +205,70 @@ function cleanupText(value = "") {
     .replace(/\s+,/g, ",")
     .replace(/\?{2,}/g, "")
     .trim();
+}
+
+function formatCompactDate(value = "") {
+  const match = String(value).match(/\b((?:19|20)\d{2})(\d{2})(\d{2})\b/);
+  return match ? `${match[1]}-${match[2]}-${match[3]}` : "";
+}
+
+function priorityDateFor(patent) {
+  const fromList = cleanupText(patent.listSections?.["Date de priorité"] ?? "");
+  if (/^\d{4}-\d{2}-\d{2}$/.test(fromList)) return fromList;
+
+  const fromBiblioText = cleanupText(
+    patent.biblio?.biblioText?.match(/Date de priorité:\s*([0-9-]+)/)?.[1] ?? "",
+  );
+  if (/^\d{4}-\d{2}-\d{2}$/.test(fromBiblioText)) return fromBiblioText;
+
+  return formatCompactDate(patent.biblio?.priorityNumbers ?? "");
+}
+
+function canonicalUsPublicationAlias(docId) {
+  const match = docId.match(/^US((?:19|20)\d{2})(\d{1,6})(A\d)$/);
+  if (!match) return "";
+  return `US${match[1]}${match[2].padStart(7, "0")}${match[3]}`;
+}
+
+function extractPublicationAliases(value = "") {
+  return [
+    ...String(value).matchAll(
+      /\b[A-Z]{2,5}\d+\s*(?:\([A-Z]\d?\)|[A-Z]\d?)(?=\s|$|[.,;])/g,
+    ),
+  ]
+    .map((match) => match[0].replace(/[^A-Z0-9]/g, ""))
+    .filter(Boolean);
+}
+
+function publicationAliasesFor(patent) {
+  const aliases = new Set([
+    patent.docId,
+    ...extractPublicationAliases(patent.publication),
+    ...extractPublicationAliases(patent.biblio?.alsoPublishedAs),
+    ...(GOOGLE_RESULT_ALIASES[patent.docId] ?? []),
+  ]);
+
+  for (const alias of [...aliases]) {
+    const canonicalUsAlias = canonicalUsPublicationAlias(alias);
+    if (canonicalUsAlias) aliases.add(canonicalUsAlias);
+  }
+
+  return [...aliases].filter(Boolean).sort((a, b) => a.localeCompare(b, "en", { numeric: true }));
+}
+
+function alsoPublishedAsFor(patent) {
+  const sourceValue = cleanupText(patent.biblio?.alsoPublishedAs ?? "");
+  const aliases = new Set(GOOGLE_RESULT_ALIASES[patent.docId] ?? []);
+  const canonicalUsAlias = canonicalUsPublicationAlias(patent.docId);
+  if (canonicalUsAlias && canonicalUsAlias !== patent.docId) {
+    aliases.add(canonicalUsAlias);
+  }
+
+  return cleanupText(
+    [sourceValue, aliases.size ? `Google Patents: ${[...aliases].join("; ")}` : ""]
+      .filter(Boolean)
+      .join(" "),
+  );
 }
 
 function splitDescription(value = "") {
@@ -610,9 +693,7 @@ function buildRecord(patent, corpus, renderedImages, pdfAssets) {
     title: cleanupText(biblio.title ?? patent.title ?? ""),
     abstract: cleanupText(biblio.abstract ?? ""),
     date: (biblio.publicationHeader ?? patent.publication ?? "").match(/\d{4}-\d{2}-\d{2}/)?.[0] ?? "",
-    priorityDate: cleanupText(
-      (biblio.biblioText ?? "").match(/Date de priorité:\s*([0-9-]+)/)?.[1] ?? "",
-    ),
+    priorityDate: priorityDateFor(patent),
     inventors: cleanupText(biblio.inventors ?? biblio.secondaryInventors ?? ""),
     applicants: cleanupText(biblio.applicants ?? biblio.secondaryApplicants ?? ""),
     secondaryInventors: cleanupText(biblio.secondaryInventors ?? ""),
@@ -620,7 +701,8 @@ function buildRecord(patent, corpus, renderedImages, pdfAssets) {
     classification: cleanupText(biblio.classification ?? ""),
     applicationNumber: cleanupText(biblio.applicationNumber ?? ""),
     priorityNumbers: cleanupText(biblio.priorityNumbers ?? ""),
-    alsoPublishedAs: cleanupText(biblio.alsoPublishedAs ?? ""),
+    alsoPublishedAs: alsoPublishedAsFor(patent),
+    publicationAliases: publicationAliasesFor(patent),
     publicationHeader: cleanupText(biblio.publicationHeader ?? ""),
     tags: tagsFor(patent, filter),
     coverImage: renderedImages[0]?.href ?? null,
@@ -696,6 +778,7 @@ export type PatentRecord = {
   applicationNumber: string;
   priorityNumbers: string;
   alsoPublishedAs: string;
+  publicationAliases: string[];
   publicationHeader: string;
   tags: string[];
   coverImage: string | null;
@@ -744,7 +827,7 @@ export const PATENT_STATS = ${JSON.stringify(
     {
       total: records.length,
       categories: Object.keys(CATEGORY_LABELS).length,
-      since: 1998,
+      since: Number(MIN_JEAN_LUC_PRIORITY_DATE.slice(0, 4)),
       byCategory,
       corpus: {
         jeanLucThuliez: records.filter((record) => record.corpus === "jean-luc-thuliez").length,
@@ -762,8 +845,10 @@ export const PATENTS: PatentRecord[] = ${JSON.stringify(records, null, 2)};
 }
 
 async function main() {
-  if (!fs.existsSync(PDFTOPPM)) {
-    throw new Error(`Missing pdftoppm at ${PDFTOPPM}`);
+  try {
+    execFileSync(PDFTOPPM, ["-v"], { stdio: "ignore" });
+  } catch {
+    throw new Error(`Missing pdftoppm executable: ${PDFTOPPM}`);
   }
 
   if (REUSE_IMAGES) {
@@ -778,7 +863,12 @@ async function main() {
     const json = readJson(source.json);
     for (const patent of json.patents) {
       const docId = patent.docId;
-      if (EXCLUDED_PATENT_IDS.has(docId)) continue;
+      if (
+        source.corpus === "jean-luc-thuliez" &&
+        priorityDateFor(patent) < MIN_JEAN_LUC_PRIORITY_DATE
+      ) {
+        continue;
+      }
 
       const manifestPatent = manifests.get(`${source.corpus}:${docId}`);
       const publicDir = path.join(PUBLIC_ROOT, docId);

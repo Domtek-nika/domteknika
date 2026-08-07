@@ -40,15 +40,10 @@ import {
 
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/providers/reveal";
-import {
-  type Project,
-  getPatentLinkedProjectsForLocale,
-  getProjectsForLocale,
-  getProjectsPageCopy,
-  ProjectDetailsDialog,
-} from "@/components/sections/projects-page-content";
+import { RelatedProjectCard } from "@/components/sections/related-project-card";
 import { Button } from "@/components/ui/button";
 import PATENT_LOCALIZATIONS from "@/data/patent-localizations.json";
+import type { ProjectLink } from "@/data/project-types";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import {
@@ -151,7 +146,7 @@ const STATS: Record<PatentLocale, PatentStat[]> = {
     {
       icon: CalendarDays,
       value: `Since ${PATENT_STATS.since}`,
-      label: "+25 Years of innovation",
+      label: "20+ Years of innovation",
     },
   ],
   fr: [
@@ -168,7 +163,7 @@ const STATS: Record<PatentLocale, PatentStat[]> = {
     {
       icon: CalendarDays,
       value: `Depuis ${PATENT_STATS.since}`,
-      label: "+25 ans d'innovation",
+      label: "Plus de 20 ans d'innovation",
     },
   ],
   de: [
@@ -185,7 +180,7 @@ const STATS: Record<PatentLocale, PatentStat[]> = {
     {
       icon: CalendarDays,
       value: `Seit ${PATENT_STATS.since}`,
-      label: "+25 Jahre Innovation",
+      label: "Über 20 Jahre Innovation",
     },
   ],
   es: [
@@ -202,7 +197,7 @@ const STATS: Record<PatentLocale, PatentStat[]> = {
     {
       icon: CalendarDays,
       value: `Desde ${PATENT_STATS.since}`,
-      label: "+25 años de innovación",
+      label: "Más de 20 años de innovación",
     },
   ],
   ko: [
@@ -219,7 +214,7 @@ const STATS: Record<PatentLocale, PatentStat[]> = {
     {
       icon: CalendarDays,
       value: `${PATENT_STATS.since}년부터`,
-      label: "+25년의 혁신",
+      label: "20년 이상의 혁신",
     },
   ],
   zh: [
@@ -236,7 +231,7 @@ const STATS: Record<PatentLocale, PatentStat[]> = {
     {
       icon: CalendarDays,
       value: `自 ${PATENT_STATS.since} 年`,
-      label: "+25 年创新",
+      label: "20 多年创新",
     },
   ],
 };
@@ -498,6 +493,7 @@ const COPY: Record<
       downloadPdfs: string;
       linkedProjects: string;
       openLinkedProject: string;
+      openFullPage: string;
       fullDescription: string;
       claims: string;
       legalStatus: string;
@@ -509,6 +505,7 @@ const COPY: Record<
     };
     card: {
       openDetails: string;
+      matchedPublication: string;
     };
     cta: {
       eyebrow: string;
@@ -573,6 +570,7 @@ const COPY: Record<
       downloadPdfs: "Download PDFs",
       linkedProjects: "Linked projects",
       openLinkedProject: "Open project",
+      openFullPage: "Open full patent page",
       fullDescription: "Full description",
       claims: "Claims",
       legalStatus: "Legal status",
@@ -584,6 +582,7 @@ const COPY: Record<
     },
     card: {
       openDetails: "Open patent details",
+      matchedPublication: "Matched publication",
     },
     cta: {
       eyebrow: "Let's build together",
@@ -647,6 +646,7 @@ const COPY: Record<
       downloadPdfs: "Télécharger les PDF",
       linkedProjects: "Projets liés",
       openLinkedProject: "Ouvrir le projet",
+      openFullPage: "Voir la fiche complète",
       fullDescription: "Description complète",
       claims: "Revendications",
       legalStatus: "Situation juridique",
@@ -658,6 +658,7 @@ const COPY: Record<
     },
     card: {
       openDetails: "Ouvrir le détail du brevet",
+      matchedPublication: "Publication trouvée",
     },
     cta: {
       eyebrow: "Let's build together",
@@ -721,6 +722,7 @@ const COPY: Record<
       downloadPdfs: "PDFs herunterladen",
       linkedProjects: "Verknüpfte Projekte",
       openLinkedProject: "Projekt öffnen",
+      openFullPage: "Vollständige Patentseite öffnen",
       fullDescription: "Vollständige Beschreibung",
       claims: "Ansprüche",
       legalStatus: "Rechtsstand",
@@ -732,6 +734,7 @@ const COPY: Record<
     },
     card: {
       openDetails: "Patentdetails öffnen",
+      matchedPublication: "Gefundene Veröffentlichung",
     },
     cta: {
       eyebrow: "Let's build together",
@@ -795,6 +798,7 @@ const COPY: Record<
       downloadPdfs: "Descargar PDFs",
       linkedProjects: "Proyectos vinculados",
       openLinkedProject: "Abrir proyecto",
+      openFullPage: "Ver la ficha completa",
       fullDescription: "Descripción completa",
       claims: "Reivindicaciones",
       legalStatus: "Situación jurídica",
@@ -806,6 +810,7 @@ const COPY: Record<
     },
     card: {
       openDetails: "Abrir detalles de la patente",
+      matchedPublication: "Publicación encontrada",
     },
     cta: {
       eyebrow: "Let's build together",
@@ -869,6 +874,7 @@ const COPY: Record<
       downloadPdfs: "PDF 다운로드",
       linkedProjects: "연결된 프로젝트",
       openLinkedProject: "프로젝트 열기",
+      openFullPage: "전체 특허 페이지 보기",
       fullDescription: "전체 설명",
       claims: "청구항",
       legalStatus: "법적 상태",
@@ -880,6 +886,7 @@ const COPY: Record<
     },
     card: {
       openDetails: "특허 상세 열기",
+      matchedPublication: "검색된 공개번호",
     },
     cta: {
       eyebrow: "Let's build together",
@@ -942,6 +949,7 @@ const COPY: Record<
       downloadPdfs: "下载 PDF",
       linkedProjects: "关联项目",
       openLinkedProject: "打开项目",
+      openFullPage: "查看完整专利页面",
       fullDescription: "完整说明",
       claims: "权利要求",
       legalStatus: "法律状态",
@@ -953,6 +961,7 @@ const COPY: Record<
     },
     card: {
       openDetails: "打开专利详情",
+      matchedPublication: "匹配的公开号",
     },
     cta: {
       eyebrow: "Let's build together",
@@ -992,15 +1001,34 @@ function normalizeSearch(value: string) {
 function patentMatchesSearch(patent: PatentItem, query: string) {
   if (!query) return true;
 
-  return normalizeSearch(
+  const searchableText = normalizeSearch(
     [
       patent.title,
       patent.id,
       patent.publication,
+      patent.priorityDate,
       patent.inventors,
       patent.applicants,
+      patent.alsoPublishedAs,
+      patent.publicationAliases.join(" "),
     ].join(" "),
-  ).includes(query);
+  );
+  if (searchableText.includes(query)) return true;
+
+  const compactQuery = query.replace(/[^a-z0-9]/g, "");
+  if (!compactQuery) return false;
+  return searchableText.replace(/[^a-z0-9]/g, "").includes(compactQuery);
+}
+
+function getMatchedPublicationAlias(patent: PatentItem, query: string) {
+  const compactQuery = query.replace(/[^a-z0-9]/g, "");
+  if (compactQuery.length < 6) return undefined;
+
+  return patent.publicationAliases.find((alias) =>
+    normalizeSearch(alias)
+      .replace(/[^a-z0-9]/g, "")
+      .includes(compactQuery),
+  );
 }
 
 function sortPatents(
@@ -1025,7 +1053,13 @@ function sortPatents(
   });
 }
 
-export function PatentPageContent({ locale }: { locale: string }) {
+export function PatentPageContent({
+  linkedProjectsByPatent,
+  locale,
+}: {
+  linkedProjectsByPatent: Record<string, ProjectLink[]>;
+  locale: string;
+}) {
   const resolvedLocale = resolveLocale(locale);
   const copy = COPY[resolvedLocale];
   const stats = STATS[resolvedLocale];
@@ -1050,8 +1084,6 @@ export function PatentPageContent({ locale }: { locale: string }) {
   const [sortKey, setSortKey] = useState<PatentSortKey>("date-desc");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedPatent, setSelectedPatent] = useState<PatentItem | null>(null);
-  const [selectedLinkedProject, setSelectedLinkedProject] =
-    useState<Project | null>(null);
   const [selectedPatentDetails, setSelectedPatentDetails] =
     useState<PatentDetail | null>(null);
   const [detailError, setDetailError] = useState(false);
@@ -1204,15 +1236,6 @@ export function PatentPageContent({ locale }: { locale: string }) {
       </label>
     </div>
   );
-  const localizedProjects = useMemo(
-    () => getProjectsForLocale(resolvedLocale),
-    [resolvedLocale],
-  );
-  const projectsCopy = useMemo(
-    () => getProjectsPageCopy(resolvedLocale),
-    [resolvedLocale],
-  );
-
   const clearCloseTimer = useCallback(() => {
     if (closeTimerRef.current) {
       window.clearTimeout(closeTimerRef.current);
@@ -1230,7 +1253,6 @@ export function PatentPageContent({ locale }: { locale: string }) {
       );
     }
     setSelectedPatent(null);
-    setSelectedLinkedProject(null);
     setPanelRect(null);
     setActiveDrawingIndex(null);
     setModalImageIndex(0);
@@ -1301,16 +1323,6 @@ export function PatentPageContent({ locale }: { locale: string }) {
       MODAL_CLOSE_FALLBACK_MS,
     );
   }, [clearCloseTimer, dialogState, finishClose, selectedPatent]);
-
-  const openLinkedProject = useCallback(
-    (projectId: string) => {
-      const project = localizedProjects.find((item) => item.id === projectId);
-      if (!project) return;
-
-      setSelectedLinkedProject(project);
-    },
-    [localizedProjects],
-  );
 
   const closeDrawing = useCallback(() => {
     setActiveDrawingIndex(null);
@@ -1567,8 +1579,6 @@ export function PatentPageContent({ locale }: { locale: string }) {
     if (!selectedPatent) return;
 
     const onKeyDown = (event: KeyboardEvent) => {
-      if (selectedLinkedProject) return;
-
       if (activeDrawingIndex !== null) {
         if (event.key === "Escape") {
           closeDrawing();
@@ -1641,7 +1651,6 @@ export function PatentPageContent({ locale }: { locale: string }) {
     cycleDrawing,
     cycleModalImage,
     selectedPatent,
-    selectedLinkedProject,
   ]);
 
   useEffect(() => {
@@ -1673,10 +1682,8 @@ export function PatentPageContent({ locale }: { locale: string }) {
     : "";
   const selectedPatentLinkedProjects = useMemo(
     () =>
-      selectedPatent
-        ? getPatentLinkedProjectsForLocale(selectedPatent.id, resolvedLocale)
-        : [],
-    [resolvedLocale, selectedPatent],
+      selectedPatent ? (linkedProjectsByPatent[selectedPatent.id] ?? []) : [],
+    [linkedProjectsByPatent, selectedPatent],
   );
   const selectedPatentImages = selectedPatent?.images ?? [];
   const safeModalImageIndex = selectedPatentImages[modalImageIndex]
@@ -1844,6 +1851,11 @@ export function PatentPageContent({ locale }: { locale: string }) {
                     patent={patent}
                     depositedLabel={copy.deposited}
                     openDetailsLabel={copy.card.openDetails}
+                    matchedPublication={getMatchedPublicationAlias(
+                      patent,
+                      normalizedSearchTerm,
+                    )}
+                    matchedPublicationLabel={copy.card.matchedPublication}
                     previousDrawingLabel={copy.details.previousDrawing}
                     nextDrawingLabel={copy.details.nextDrawing}
                     onOpen={openPatent}
@@ -2065,27 +2077,35 @@ export function PatentPageContent({ locale }: { locale: string }) {
                   {selectedPatent.abstract || copy.details.unavailable}
                 </p>
 
+                <Link
+                  href={`/patents/${selectedPatent.id.toLowerCase()}`}
+                  className="group/fullPatent mt-6 inline-flex min-h-11 items-center justify-center gap-3 rounded-[7px] bg-foreground px-5 py-2.5 text-[13px] font-extrabold text-white shadow-[0_8px_22px_rgba(0,0,0,0.16)] transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35"
+                >
+                  <span>{copy.details.openFullPage}</span>
+                  <ArrowUpRight
+                    className="size-4 transition-transform duration-300 group-hover/fullPatent:-translate-y-0.5 group-hover/fullPatent:translate-x-0.5"
+                    aria-hidden
+                  />
+                </Link>
+
                 {selectedPatentLinkedProjects.length > 0 && (
-                  <section className="mt-6">
-                    <h3 className="text-[12px] font-extrabold uppercase tracking-wide">
-                      {copy.details.linkedProjects}
-                    </h3>
-                    <div className="mt-3 flex flex-wrap gap-3">
+                  <section className="mt-8 overflow-hidden rounded-[8px] border border-border bg-white shadow-[0_12px_34px_rgba(0,0,0,0.05)]">
+                    <div className="flex items-center gap-4 border-b border-border bg-muted/30 px-4 py-3 sm:px-5">
+                      <div className="flex items-center gap-2.5">
+                        <span className="size-2 bg-brand" aria-hidden />
+                        <h3 className="text-[12px] font-extrabold uppercase tracking-wide">
+                          {copy.details.linkedProjects}
+                        </h3>
+                      </div>
+                    </div>
+                    <div className="grid divide-y divide-border">
                       {selectedPatentLinkedProjects.map((project) => (
-                        <button
+                        <RelatedProjectCard
                           key={project.id}
-                          type="button"
-                          className="group/projectLink inline-flex min-h-11 items-center justify-center gap-3 rounded-[7px] bg-brand px-4 py-2.5 text-[13px] font-extrabold text-white shadow-[0_4px_10px_rgba(0,0,0,0.28)] transition-transform duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35"
-                          aria-haspopup="dialog"
-                          aria-label={`${copy.details.openLinkedProject}: ${project.title}`}
-                          onClick={() => openLinkedProject(project.id)}
-                        >
-                          <span>{project.title}</span>
-                          <ArrowRight
-                            className="size-4 transition-transform duration-300 group-hover/projectLink:translate-x-0.5"
-                            aria-hidden
-                          />
-                        </button>
+                          actionLabel={copy.details.openLinkedProject}
+                          embedded
+                          project={project}
+                        />
                       ))}
                     </div>
                   </section>
@@ -2214,15 +2234,6 @@ export function PatentPageContent({ locale }: { locale: string }) {
               />
             )}
         </div>
-      )}
-      {selectedLinkedProject && (
-        <ProjectDetailsDialog
-          key={selectedLinkedProject.id}
-          locale={resolvedLocale}
-          modal={projectsCopy.modal}
-          project={selectedLinkedProject}
-          onClosed={() => setSelectedLinkedProject(null)}
-        />
       )}
     </>
   );
@@ -3176,6 +3187,8 @@ function PatentCard({
   patent,
   depositedLabel,
   openDetailsLabel,
+  matchedPublication,
+  matchedPublicationLabel,
   previousDrawingLabel,
   nextDrawingLabel,
   onOpen,
@@ -3183,6 +3196,8 @@ function PatentCard({
   patent: PatentItem;
   depositedLabel: string;
   openDetailsLabel: string;
+  matchedPublication?: string;
+  matchedPublicationLabel: string;
   previousDrawingLabel: string;
   nextDrawingLabel: string;
   onOpen: (patent: PatentItem) => void;
@@ -3273,14 +3288,27 @@ function PatentCard({
               className="size-full text-brand transition-transform duration-500 group-hover/patent:scale-110 group-focus-within/patent:scale-110 [transition-timing-function:var(--ease-smooth)]"
             />
           </span>
-          <span className="max-w-none text-[12px] font-extrabold leading-none text-brand min-[390px]:text-[13px] lg:text-[14px] min-[1800px]:!text-[16px] min-[2400px]:!text-[18px]">
-            {patent.publication}
-            <span className="ml-2 inline-block size-1.5 translate-y-[-1px] rounded-full bg-brand" />
+          <span className="min-w-0">
+            <span className="block max-w-none text-[12px] font-extrabold leading-none text-brand min-[390px]:text-[13px] lg:text-[14px] min-[1800px]:!text-[16px] min-[2400px]:!text-[18px]">
+              {patent.publication}
+              <span className="ml-2 inline-block size-1.5 translate-y-[-1px] rounded-full bg-brand" />
+            </span>
+            {matchedPublication && matchedPublication !== patent.id && (
+              <span className="mt-1 block truncate text-[8px] font-bold leading-none text-muted-foreground min-[390px]:text-[9px] min-[1800px]:!mt-2 min-[1800px]:!text-[10px] min-[2400px]:!text-[12px]">
+                {matchedPublicationLabel}: {matchedPublication}
+              </span>
+            )}
           </span>
-          <ArrowUpRight
-            className="size-[16px] text-muted-foreground transition-transform duration-500 group-hover/patent:translate-x-0.5 group-hover/patent:-translate-y-0.5 group-focus-within/patent:translate-x-0.5 group-focus-within/patent:-translate-y-0.5 [transition-timing-function:var(--ease-smooth)] min-[1800px]:!size-5 min-[2400px]:!size-6"
-            aria-hidden
-          />
+          <Link
+            href={`/patents/${patent.id.toLowerCase()}`}
+            className="pointer-events-auto relative z-30 grid size-7 place-items-center rounded-full text-muted-foreground transition-[transform,color,background-color] duration-500 hover:-translate-y-0.5 hover:translate-x-0.5 hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35 min-[1800px]:!size-9 min-[2400px]:!size-10"
+            aria-label={`${openDetailsLabel}: ${patent.id}`}
+          >
+            <ArrowUpRight
+              className="size-[16px] min-[1800px]:!size-5 min-[2400px]:!size-6"
+              aria-hidden
+            />
+          </Link>
         </span>
 
         <span className="mt-3 max-w-none overflow-hidden text-[12px] font-extrabold leading-[1.08] text-foreground [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3] min-[390px]:mt-4 min-[390px]:text-[13px] lg:text-[14px] min-[1800px]:!text-[16px] min-[1800px]:!leading-[1.15] min-[2400px]:!text-[18px]">

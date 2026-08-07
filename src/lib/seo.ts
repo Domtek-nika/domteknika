@@ -35,6 +35,8 @@ const HREF_LANGS: Record<Locale, string> = {
 
 type PageMetadataInput = {
   description: string;
+  image?: string;
+  imageAlt?: string;
   locale: string;
   path?: string;
   title: string;
@@ -42,13 +44,15 @@ type PageMetadataInput = {
 
 export function buildPageMetadata({
   description,
+  image: imagePath,
+  imageAlt,
   locale,
   path = "",
   title,
 }: PageMetadataInput): Metadata {
   const resolvedLocale = resolveLocale(locale);
   const canonical = localizedUrl(resolvedLocale, path);
-  const image = new URL("/social-image", SITE_URL).toString();
+  const image = new URL(imagePath ?? "/social-image", SITE_URL).toString();
 
   return {
     title,
@@ -72,7 +76,9 @@ export function buildPageMetadata({
           url: image,
           width: 1200,
           height: 630,
-          alt: "DOMTEKNIKA — Engineering, prototyping and production",
+          alt:
+            imageAlt ??
+            "DOMTEKNIKA — Engineering, prototyping and production",
         },
       ],
     },
