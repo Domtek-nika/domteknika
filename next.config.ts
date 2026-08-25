@@ -69,6 +69,67 @@ const securityHeaders = [
   },
 ];
 
+const noIndexImageHeaders = [
+  {
+    key: "X-Robots-Tag",
+    value: "noindex",
+  },
+];
+
+// These assets are visual dressing, not standalone editorial content. Keep the
+// page indexable while preventing search engines from presenting the artwork as
+// a DOMTEKNIKA image result. The query patterns also cover Next's image optimizer.
+const decorativeImageRules = [
+  {
+    source: "/assets/contact-page/technical-sketch.png",
+    optimizerQuery: "/assets/contact-page/technical-sketch\\.png",
+  },
+  {
+    source: "/assets/our-story/background/:path*",
+    optimizerQuery: "/assets/our-story/background/.+",
+  },
+  {
+    source: "/assets/technical-drawing-top.png",
+    optimizerQuery: "/assets/technical-drawing-top\\.png",
+  },
+  {
+    source: "/assets/technical-drawing-top-2x.webp",
+    optimizerQuery: "/assets/technical-drawing-top-2x\\.webp",
+  },
+  {
+    source: "/assets/technical-drawing-bottom.png",
+    optimizerQuery: "/assets/technical-drawing-bottom\\.png",
+  },
+  {
+    source: "/assets/technical-drawing-bottom-2x.webp",
+    optimizerQuery: "/assets/technical-drawing-bottom-2x\\.webp",
+  },
+  {
+    source: "/assets/expertise-page/image-fond-top.png",
+    optimizerQuery: "/assets/expertise-page/image-fond-top\\.png",
+  },
+  {
+    source: "/assets/project-page/hero-sketch.png",
+    optimizerQuery: "/assets/project-page/hero-sketch\\.png",
+  },
+  {
+    source: "/assets/project-page/cta-sketch.png",
+    optimizerQuery: "/assets/project-page/cta-sketch\\.png",
+  },
+  {
+    source: "/assets/project-page/image-fond-top.png",
+    optimizerQuery: "/assets/project-page/image-fond-top\\.png",
+  },
+  {
+    source: "/assets/patent-page/hero-sketch.png",
+    optimizerQuery: "/assets/patent-page/hero-sketch\\.png",
+  },
+  {
+    source: "/assets/patent-page/cta-sketch.png",
+    optimizerQuery: "/assets/patent-page/cta-sketch\\.png",
+  },
+] as const;
+
 const localDevOrigins = Object.values(networkInterfaces())
   .flatMap((entries) => entries ?? [])
   .filter((entry) => entry.family === "IPv4" && !entry.internal)
@@ -116,6 +177,21 @@ const nextConfig: NextConfig = {
         source: "/:path*",
         headers: securityHeaders,
       },
+      ...decorativeImageRules.map(({ source }) => ({
+        source,
+        headers: noIndexImageHeaders,
+      })),
+      ...decorativeImageRules.map(({ optimizerQuery }) => ({
+        source: "/_next/image",
+        has: [
+          {
+            type: "query" as const,
+            key: "url",
+            value: optimizerQuery,
+          },
+        ],
+        headers: noIndexImageHeaders,
+      })),
       {
         source: "/assets/logo_DOMTEKNIKA_2023-alpha.png",
         headers: [

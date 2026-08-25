@@ -45,7 +45,7 @@ export function HeroSection() {
   return (
     <section
       id="top"
-      className="relative min-h-[680px] overflow-hidden bg-background pb-10 pt-[132px] md:min-h-[660px] md:pb-[56px] md:pt-[152px] min-[1800px]:min-h-[820px] min-[2300px]:!min-h-[840px]"
+      className="relative mb-6 min-h-[700px] overflow-hidden bg-background pb-10 pt-[132px] sm:mb-16 sm:min-h-[760px] md:mb-[72px] md:min-h-[740px] md:pb-[56px] md:pt-[152px] lg:min-h-[756px] min-[1800px]:min-h-[916px] min-[2300px]:!min-h-[936px]"
       aria-labelledby="hero-title"
     >
       <Image

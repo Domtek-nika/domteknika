@@ -63,6 +63,7 @@ export function ContactPageContent() {
           quality={100}
           sizes="(max-width: 1024px) 70vw, (max-width: 1799px) 660px, (max-width: 2399px) 1000px, 1150px"
           unoptimized
+          aria-hidden
           className="pointer-events-none absolute right-[-30vw] top-[182px] z-0 h-auto w-[80vw] max-w-[630px] opacity-[0.68] sm:right-[-20vw] md:right-[-9vw] md:top-[176px] md:w-[46vw] lg:right-[-5vw] xl:right-[1vw] xl:w-[33vw] min-[1800px]:!right-[4vw] min-[1800px]:!top-[190px] min-[1800px]:!w-[44vw] min-[1800px]:!max-w-[1000px] min-[2400px]:!right-[6vw] min-[2400px]:!top-[210px] min-[2400px]:!max-w-[1150px]"
         />
 

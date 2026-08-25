@@ -10,7 +10,7 @@ export function ProcessSection() {
   return (
     <section
       id="expertise"
-      className="scroll-mt-28 bg-white pb-7 pt-14 md:pb-16 md:pt-24 min-[1800px]:!pb-16 min-[1800px]:!pt-24 min-[2300px]:!pb-20 min-[2300px]:!pt-28"
+      className="scroll-mt-28 bg-white pb-12 pt-14 sm:pb-14 md:pb-24 md:pt-24 lg:pb-28 min-[1800px]:!pb-28 min-[1800px]:!pt-24 min-[2300px]:!pb-32 min-[2300px]:!pt-28"
       aria-labelledby="process-title"
     >
       <Container
