@@ -168,7 +168,11 @@ export function ContactForm({
           autoComplete="tel"
           maxLength={40}
         />
+        <label className="sr-only" htmlFor="contact-message">
+          {copy.message}
+        </label>
         <textarea
+          id="contact-message"
           name="message"
           placeholder={copy.message}
           minLength={10}
@@ -253,15 +257,24 @@ function getFeedback(status: SubmissionStatus, copy: ContactFormCopy) {
 
 function ContactInput({
   className,
+  id,
   ...props
 }: InputHTMLAttributes<HTMLInputElement>) {
+  const inputId = id ?? `contact-${props.name}`;
+
   return (
-    <input
-      className={cn(
-        "h-[40px] rounded-[7px] border border-input bg-white px-3.5 text-[13px] font-medium text-foreground outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-muted-foreground focus:border-brand/45 focus:shadow-[0_0_0_3px_rgba(227,6,19,0.08)] min-[1800px]:!h-[52px] min-[1800px]:!rounded-[10px] min-[1800px]:!px-5 min-[1800px]:!text-[15px] min-[2400px]:!h-[58px] min-[2400px]:!rounded-[12px] min-[2400px]:!px-6 min-[2400px]:!text-[17px]",
-        className,
-      )}
-      {...props}
-    />
+    <>
+      <label className="sr-only" htmlFor={inputId}>
+        {props.placeholder}
+      </label>
+      <input
+        id={inputId}
+        className={cn(
+          "h-[40px] rounded-[7px] border border-input bg-white px-3.5 text-[13px] font-medium text-foreground outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-muted-foreground focus:border-brand/45 focus:shadow-[0_0_0_3px_rgba(227,6,19,0.08)] min-[1800px]:!h-[52px] min-[1800px]:!rounded-[10px] min-[1800px]:!px-5 min-[1800px]:!text-[15px] min-[2400px]:!h-[58px] min-[2400px]:!rounded-[12px] min-[2400px]:!px-6 min-[2400px]:!text-[17px]",
+          className,
+        )}
+        {...props}
+      />
+    </>
   );
 }

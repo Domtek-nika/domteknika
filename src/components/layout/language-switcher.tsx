@@ -97,13 +97,17 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   function switchTo(next: Locale) {
     setOpen(false);
     if (next === current) return;
-    window.sessionStorage.setItem(
-      "domtek:preserve-scroll-on-route",
-      JSON.stringify({
-        left: window.scrollX,
-        top: window.scrollY,
-      }),
-    );
+    try {
+      window.sessionStorage.setItem(
+        "domtek:preserve-scroll-on-route",
+        JSON.stringify({
+          left: window.scrollX,
+          top: window.scrollY,
+        }),
+      );
+    } catch {
+      // Language navigation must still work when browser storage is unavailable.
+    }
     startTransition(() => {
       router.push(pathname, { locale: next });
     });

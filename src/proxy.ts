@@ -70,7 +70,26 @@ export default function proxy(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
-  return intlMiddleware(request);
+  const response = intlMiddleware(request);
+  const rewrittenUrl = response.headers.get("x-middleware-rewrite");
+
+  if (rewrittenUrl) {
+    try {
+      decodeURI(new URL(rewrittenUrl).pathname);
+    } catch {
+      // next-intl decodes the path before rewriting it. A literal percent sign
+      // can then become an invalid escape and fail before the page handles 404.
+      const url = request.nextUrl.clone();
+      const locale = pathname.split("/")[1];
+      // Use the router's unmatched-path fallback so the response is a real 404,
+      // rather than a streamed error page with HTTP 200.
+      url.pathname = `/${locale}/not-found`;
+      url.search = "";
+      return NextResponse.rewrite(url, { status: 404 });
+    }
+  }
+
+  return response;
 }
 
 export const config = {

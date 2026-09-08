@@ -68,6 +68,9 @@ export function ProjectsSection({
         delay: 3000,
         stopOnInteraction: true,
         stopOnMouseEnter: true,
+        breakpoints: {
+          "(prefers-reduced-motion: reduce)": { active: false },
+        },
       }),
     [],
   );
@@ -110,6 +113,9 @@ export function ProjectsSection({
                 align: "center",
                 loop: true,
                 dragFree: false,
+                breakpoints: {
+                  "(prefers-reduced-motion: reduce)": { duration: 0 },
+                },
               }}
               plugins={[autoplay]}
               className="w-full touch-pan-y"

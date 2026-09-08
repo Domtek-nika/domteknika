@@ -16,37 +16,19 @@ export function SmoothScrollProvider({ children }: { children: ReactNode }) {
   const pathname = usePathname();
 
   useEffect(() => {
-    const previousScrollRestoration = window.history.scrollRestoration;
-    window.history.scrollRestoration = "manual";
-
-    return () => {
-      window.history.scrollRestoration = previousScrollRestoration;
-    };
-  }, []);
-
-  useEffect(() => {
-    let restoreFrameId = 0;
     const frameId = window.requestAnimationFrame(() => {
-      const root = document.documentElement;
-      const previousScrollBehavior = root.style.scrollBehavior;
       const preservedScroll = readPreservedRouteScroll();
-
-      root.style.scrollBehavior = "auto";
-      window.scrollTo({
-        left: preservedScroll?.left ?? 0,
-        top: preservedScroll?.top ?? 0,
-        behavior: "auto",
-      });
       window.dispatchEvent(new Event("domtek:scroll-resize"));
 
-      restoreFrameId = window.requestAnimationFrame(() => {
-        root.style.scrollBehavior = previousScrollBehavior;
-      });
+      // Let Next.js restore history entries and handle links/anchors. Only a
+      // language switch explicitly asks us to preserve the current position.
+      if (!preservedScroll) return;
+
+      window.scrollTo({ ...preservedScroll, behavior: "instant" });
     });
 
     return () => {
       window.cancelAnimationFrame(frameId);
-      window.cancelAnimationFrame(restoreFrameId);
     };
   }, [pathname]);
 
@@ -54,21 +36,22 @@ export function SmoothScrollProvider({ children }: { children: ReactNode }) {
 }
 
 function readPreservedRouteScroll() {
-  const rawValue = window.sessionStorage.getItem(
-    "domtek:preserve-scroll-on-route",
-  );
-  if (!rawValue) return null;
-
-  window.sessionStorage.removeItem("domtek:preserve-scroll-on-route");
-
   try {
+    const rawValue = window.sessionStorage.getItem(
+      "domtek:preserve-scroll-on-route",
+    );
+    if (!rawValue) return null;
+    window.sessionStorage.removeItem("domtek:preserve-scroll-on-route");
+
     const parsed = JSON.parse(rawValue) as {
       left?: unknown;
       top?: unknown;
     };
     if (
       typeof parsed.left !== "number" ||
-      typeof parsed.top !== "number"
+      typeof parsed.top !== "number" ||
+      !Number.isFinite(parsed.left) ||
+      !Number.isFinite(parsed.top)
     ) {
       return null;
     }

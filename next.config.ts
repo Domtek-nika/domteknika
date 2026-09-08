@@ -207,8 +207,8 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     qualities: [75, 100],
   },
-  // Type checking runs separately via `npm run typecheck`. Keeping it out of
-  // the production build avoids exceeding constrained hosting build memory.
+  // `npm run build` requires typecheck to pass before starting Next.js.
+  // Run the checks sequentially to limit peak memory on constrained hosts.
   typescript: {
     ignoreBuildErrors: true,
   },

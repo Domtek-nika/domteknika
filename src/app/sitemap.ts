@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 
 import { getCanonicalPatentSlugs } from "@/data/patent-lookup";
-import { PATENTS } from "@/data/patents";
 import { getProjectSlugs } from "@/data/projects";
 import { locales } from "@/i18n/routing";
 import {
@@ -48,17 +47,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
   });
 
-  const patentBySlug = new Map(
-    PATENTS.map((patent) => [patent.id.toLowerCase(), patent]),
-  );
+  // Patent publication dates describe the invention, not this web page's
+  // last update. Omit lastModified until actual content revision dates exist.
   const patentRoutes = getCanonicalPatentSlugs().flatMap((publication) => {
     const path = `/patents/${publication}`;
-    const patent = patentBySlug.get(publication);
     return locales.map((locale) => ({
       url: localizedUrl(locale, path),
       alternates: { languages: languageAlternates(path) },
       changeFrequency: "yearly" as const,
-      lastModified: patent?.date ? new Date(patent.date) : undefined,
       priority: 0.6,
     }));
   });

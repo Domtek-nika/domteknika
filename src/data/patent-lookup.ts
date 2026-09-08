@@ -13,7 +13,12 @@ const TRANSLATIONS = PATENT_LOCALIZATIONS as Record<
 >;
 
 export function normalizePublication(value: string) {
-  return decodeURIComponent(value).replace(/[^a-z0-9]/gi, "").toUpperCase();
+  try {
+    return decodeURIComponent(value).replace(/[^a-z0-9]/gi, "").toUpperCase();
+  } catch {
+    // Malformed percent escapes are an unknown publication, not a server error.
+    return "";
+  }
 }
 function resolveLocale(locale: string): Locale {
   return locales.includes(locale as Locale) ? (locale as Locale) : "en";
@@ -36,6 +41,7 @@ export function getLocalizedPatents(locale: string) {
 
 export function getPatentByPublication(locale: string, publication: string) {
   const normalizedPublication = normalizePublication(publication);
+  if (!normalizedPublication) return undefined;
   return getLocalizedPatents(locale).find((patent) =>
     [patent.id, ...patent.publicationAliases].some(
       (alias) => normalizePublication(alias) === normalizedPublication,
