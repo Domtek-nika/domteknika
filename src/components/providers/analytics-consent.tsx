@@ -104,7 +104,7 @@ export function AnalyticsConsent() {
     {show ? <section role="region" aria-label={copy.title} className="fixed bottom-3 left-3 z-[100] w-[288px] max-w-[calc(100vw-24px)] border border-black/10 bg-white p-5 text-[#111] shadow-[0_4px_24px_rgba(0,0,0,0.1)] sm:bottom-5 sm:left-5">
       <button type="button" onClick={() => choose("rejected")}
         aria-label={`${copy.close} — ${copy.reject}`} title={`${copy.close} — ${copy.reject}`}
-        className="absolute right-0 top-0 flex h-11 w-11 items-center justify-center text-[24px] leading-none text-[#595959] hover:text-brand focus-visible:outline-2 focus-visible:outline-brand">
+        className="absolute right-2 top-2 flex h-6 w-6 items-center justify-center text-[18px] leading-none text-[#595959] hover:text-brand focus-visible:outline-2 focus-visible:outline-brand [@media(pointer:coarse)]:right-0 [@media(pointer:coarse)]:top-0 [@media(pointer:coarse)]:h-11 [@media(pointer:coarse)]:w-11">
         <span aria-hidden="true">×</span>
       </button>
       <div className="mb-3 h-[3px] w-7 bg-brand" aria-hidden="true" />
