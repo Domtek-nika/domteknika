@@ -101,18 +101,20 @@ export function AnalyticsConsent() {
       id="dtk-google-analytics" src={`https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`}
       strategy="afterInteractive" onReady={initializeAnalytics}
     /> : null}
-    {show ? <section role="region" aria-label={copy.title} className="fixed inset-x-3 bottom-3 z-[100] mx-auto max-w-[760px] rounded-2xl border border-black/10 bg-white p-5 text-[#111] shadow-[0_8px_40px_rgba(0,0,0,0.14)] sm:inset-x-6 sm:bottom-6 sm:p-6">
-      <div className="mb-3 h-[3px] w-9 bg-brand" aria-hidden="true" />
-      <h2 className="text-lg font-extrabold">{copy.title}</h2>
-      <p className="mt-2 text-sm leading-relaxed text-[#595959]">{copy.text}</p>
-      <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
-        <Link href="/privacy-policy" className="text-xs underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-brand">{copy.privacy}</Link>
-        <div className="flex w-full gap-3 sm:w-auto">
+    {show ? <section role="region" aria-label={copy.title} className="fixed bottom-3 right-3 z-[100] w-[288px] max-w-[calc(100vw-24px)] border border-black/10 bg-white p-5 text-[#111] shadow-[0_4px_24px_rgba(0,0,0,0.1)] sm:bottom-5 sm:right-5">
+      <div className="mb-3 h-[3px] w-7 bg-brand" aria-hidden="true" />
+      <h2 className="text-[15px] font-extrabold">{copy.title}</h2>
+      <p className="mt-2 text-[13px] leading-[1.6] text-[#595959]">{copy.text}</p>
+      <div className="mt-4 flex flex-col gap-3">
+        <div className="grid grid-cols-2 gap-2">
           {(["rejected", "accepted"] as const).map(choice => <button key={choice} type="button" onClick={() => choose(choice)}
-            className="min-h-11 flex-1 rounded-lg border border-brand bg-white px-6 py-2 text-sm font-bold text-brand transition-colors hover:bg-brand hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:flex-none">
+            className={`min-h-11 border border-brand px-3 py-2 text-[12px] font-bold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${choice === "accepted" ? "bg-brand text-white hover:bg-brand/90" : "bg-white text-brand hover:bg-brand/5"}`}>
             {choice === "accepted" ? copy.accept : copy.reject}
           </button>)}
-          {settingsOpen && consent !== "unknown" ? <button type="button" onClick={() => setSettingsOpen(false)} className="px-2 text-xs underline">{copy.close}</button> : null}
+        </div>
+        <div className="flex items-center justify-between gap-2">
+          <Link href="/privacy-policy" className="text-[11px] text-[#595959] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-brand">{copy.privacy}</Link>
+          {settingsOpen && consent !== "unknown" ? <button type="button" onClick={() => setSettingsOpen(false)} className="text-[11px] underline">{copy.close}</button> : null}
         </div>
       </div>
     </section> : null}
