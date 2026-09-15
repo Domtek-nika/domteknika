@@ -101,7 +101,7 @@ export function AnalyticsConsent() {
       id="dtk-google-analytics" src={`https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`}
       strategy="afterInteractive" onReady={initializeAnalytics}
     /> : null}
-    {show ? <section role="region" aria-label={copy.title} className="fixed bottom-3 right-3 z-[100] w-[288px] max-w-[calc(100vw-24px)] border border-black/10 bg-white p-5 text-[#111] shadow-[0_4px_24px_rgba(0,0,0,0.1)] sm:bottom-5 sm:right-5">
+    {show ? <section role="region" aria-label={copy.title} className="fixed bottom-3 left-3 z-[100] w-[288px] max-w-[calc(100vw-24px)] border border-black/10 bg-white p-5 text-[#111] shadow-[0_4px_24px_rgba(0,0,0,0.1)] sm:bottom-5 sm:left-5">
       <div className="mb-3 h-[3px] w-7 bg-brand" aria-hidden="true" />
       <h2 className="text-[15px] font-extrabold">{copy.title}</h2>
       <p className="mt-2 text-[13px] leading-[1.6] text-[#595959]">{copy.text}</p>
