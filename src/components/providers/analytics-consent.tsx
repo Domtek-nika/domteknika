@@ -1,11 +1,11 @@
 "use client";
 
 import Script from "next/script";
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { getAnalyticsCopy } from "@/data/analytics-copy";
-import { clearAnalyticsCookies, CONSENT_EVENT, CONSENT_KEY, MEASUREMENT_ID, readConsent, SETTINGS_EVENT, SIX_MONTHS } from "@/lib/analytics-consent";
+import { clearAnalyticsCookies, CONSENT_EVENT, CONSENT_KEY, MEASUREMENT_ID, readConsent, readCookieSettingsOpen, setCookieSettingsOpen, SETTINGS_EVENT, SIX_MONTHS } from "@/lib/analytics-consent";
 
 declare global {
   interface Window {
@@ -18,11 +18,13 @@ declare global {
 function subscribe(callback: () => void) {
   window.addEventListener("storage", callback);
   window.addEventListener(CONSENT_EVENT, callback);
+  window.addEventListener(SETTINGS_EVENT, callback);
   window.addEventListener("focus", callback);
   const timer = window.setInterval(callback, 60_000);
   return () => {
     window.removeEventListener("storage", callback);
     window.removeEventListener(CONSENT_EVENT, callback);
+    window.removeEventListener(SETTINGS_EVENT, callback);
     window.removeEventListener("focus", callback);
     window.clearInterval(timer);
   };
@@ -65,7 +67,7 @@ function saveChoice(choice: "accepted" | "rejected") {
 
 export function CookieSettingsButton() {
   const copy = getAnalyticsCopy(useLocale());
-  return <button type="button" onClick={() => window.dispatchEvent(new Event(SETTINGS_EVENT))}
+  return <button type="button" onClick={() => setCookieSettingsOpen(true)}
     className="w-fit cursor-pointer text-left text-[12px] font-medium text-muted-foreground hover:text-brand focus-visible:outline-2 focus-visible:outline-brand lg:text-[13px]">
     {copy.manage}
   </button>;
@@ -74,12 +76,7 @@ export function CookieSettingsButton() {
 export function AnalyticsConsent() {
   const copy = getAnalyticsCopy(useLocale());
   const consent = useSyncExternalStore(subscribe, readConsent, () => "pending");
-  const [settingsOpen, setSettingsOpen] = useState(false);
-  useEffect(() => {
-    const open = () => setSettingsOpen(true);
-    window.addEventListener(SETTINGS_EVENT, open);
-    return () => window.removeEventListener(SETTINGS_EVENT, open);
-  }, []);
+  const settingsOpen = useSyncExternalStore(subscribe, readCookieSettingsOpen, () => false);
   useEffect(() => {
     if (consent !== "accepted" && initialized) {
       window["ga-disable-G-DLCHX3TCF2"] = true;
@@ -91,7 +88,7 @@ export function AnalyticsConsent() {
 
   function choose(choice: "accepted" | "rejected") {
     saveChoice(choice);
-    setSettingsOpen(false);
+    setCookieSettingsOpen(false);
   }
 
   const show = consent === "unknown" || settingsOpen;
