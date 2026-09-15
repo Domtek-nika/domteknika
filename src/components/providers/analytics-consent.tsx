@@ -66,7 +66,7 @@ function saveChoice(choice: "accepted" | "rejected") {
 export function CookieSettingsButton() {
   const copy = getAnalyticsCopy(useLocale());
   return <button type="button" onClick={() => window.dispatchEvent(new Event(SETTINGS_EVENT))}
-    className="w-fit text-left text-[12px] font-medium text-muted-foreground hover:text-brand focus-visible:outline-2 focus-visible:outline-brand lg:text-[13px]">
+    className="w-fit cursor-pointer text-left text-[12px] font-medium text-muted-foreground hover:text-brand focus-visible:outline-2 focus-visible:outline-brand lg:text-[13px]">
     {copy.manage}
   </button>;
 }
@@ -104,7 +104,7 @@ export function AnalyticsConsent() {
     {show ? <section role="region" aria-label={copy.title} className="fixed bottom-3 left-3 z-[100] w-[288px] max-w-[calc(100vw-24px)] border border-black/10 bg-white p-5 text-[#111] shadow-[0_4px_24px_rgba(0,0,0,0.1)] sm:bottom-5 sm:left-5">
       <button type="button" onClick={() => choose("rejected")}
         aria-label={`${copy.close} — ${copy.reject}`} title={`${copy.close} — ${copy.reject}`}
-        className="absolute right-2 top-2 flex h-6 w-6 items-center justify-center text-[18px] leading-none text-[#595959] hover:text-brand focus-visible:outline-2 focus-visible:outline-brand [@media(pointer:coarse)]:right-0 [@media(pointer:coarse)]:top-0 [@media(pointer:coarse)]:h-11 [@media(pointer:coarse)]:w-11">
+        className="absolute right-2 top-2 flex h-6 w-6 cursor-pointer items-center justify-center text-[18px] leading-none text-[#595959] hover:text-brand focus-visible:outline-2 focus-visible:outline-brand [@media(pointer:coarse)]:right-0 [@media(pointer:coarse)]:top-0 [@media(pointer:coarse)]:h-11 [@media(pointer:coarse)]:w-11">
         <span aria-hidden="true">×</span>
       </button>
       <div className="mb-3 h-[3px] w-7 bg-brand" aria-hidden="true" />
@@ -112,7 +112,7 @@ export function AnalyticsConsent() {
       <p className="mt-2 text-[13px] leading-[1.6] text-[#595959]">{copy.text}</p>
       <div className="mt-4 flex flex-col gap-3">
         <button type="button" onClick={() => choose("accepted")}
-          className="min-h-11 w-full border border-brand bg-brand px-3 py-2 text-[12px] font-bold text-white transition-colors hover:bg-brand/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
+          className="min-h-11 w-full cursor-pointer border border-brand bg-brand px-3 py-2 text-[12px] font-bold text-white transition-colors hover:bg-brand/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
           {copy.accept}
         </button>
         <div className="flex items-center justify-between gap-2">
