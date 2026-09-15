@@ -1,4 +1,5 @@
 import { locales, type Locale } from "@/i18n/routing";
+import { getAnalyticsCopy } from "@/data/analytics-copy";
 
 export type LegalLink = {
   label: string;
@@ -1195,7 +1196,11 @@ export function getLegalPages(locale: string): LegalPages {
   const pages = legalPages[resolvedLocale];
   const enhancements = legalEnhancements[resolvedLocale];
   const legalSections = pages.legalNotice.sections;
-  const privacySections = pages.privacyPolicy.sections;
+  const privacySections = pages.privacyPolicy.sections.map(section =>
+    /Cookies|쿠키|Cookie 与/.test(section.title)
+      ? { ...section, paragraphs: [getAnalyticsCopy(resolvedLocale).legal], links: [{ label: "Google — Privacy", href: "https://policies.google.com/privacy" }] }
+      : section,
+  );
   const publisher = legalSections[0]!;
 
   return {
@@ -1224,6 +1229,7 @@ export function getLegalPages(locale: string): LegalPages {
     },
     privacyPolicy: {
       ...pages.privacyPolicy,
+      updated: "2026-09-14",
       sections: [
         privacySections[0]!,
         enhancements.privacy.scope,

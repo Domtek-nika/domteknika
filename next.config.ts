@@ -9,12 +9,12 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 const isDevelopment = process.env.NODE_ENV === "development";
 const contentSecurityPolicy = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline'${isDevelopment ? " 'unsafe-eval'" : ""}`,
+  `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com${isDevelopment ? " 'unsafe-eval'" : ""}`,
   "script-src-attr 'none'",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https://basemaps.cartocdn.com https://*.basemaps.cartocdn.com",
   "font-src 'self' data:",
-  "connect-src 'self' https://basemaps.cartocdn.com https://*.basemaps.cartocdn.com",
+  "connect-src 'self' https://basemaps.cartocdn.com https://*.basemaps.cartocdn.com https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com",
   "media-src 'self' blob:",
   "worker-src 'self' blob:",
   "manifest-src 'self'",

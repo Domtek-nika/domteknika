@@ -8,6 +8,7 @@ import { routing } from "@/i18n/routing";
 import { domtekSans } from "@/app/domtek-font";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { AnalyticsConsent } from "@/components/providers/analytics-consent";
 import { RouteRecovery } from "@/components/providers/route-recovery";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
 import {
@@ -72,6 +73,7 @@ export default async function LocaleLayout({
           }}
         />
         <NextIntlClientProvider>
+          <AnalyticsConsent />
           <SmoothScrollProvider>
             <RouteRecovery />
             <Navbar />

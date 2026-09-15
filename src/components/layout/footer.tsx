@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 
 import { Container } from "@/components/layout/container";
 import { Logo } from "@/components/layout/logo";
+import { CookieSettingsButton } from "@/components/providers/analytics-consent";
 import { Link } from "@/i18n/navigation";
 
 const FOOTER_NAV_ITEMS = [
@@ -75,6 +76,7 @@ export function Footer() {
               <FooterLink href="/privacy-policy">
                 {t("privacyPolicy")}
               </FooterLink>
+              <CookieSettingsButton />
             </div>
           </nav>
         </div>
