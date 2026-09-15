@@ -27,7 +27,7 @@ export function ExpertiseOverviewSection() {
   return (
     <section
       id="capabilities"
-      className="relative z-10 -mt-8 scroll-mt-28 bg-transparent py-10 sm:-mt-10 sm:py-12 md:-mt-16 lg:mt-[-192px] lg:py-14"
+      className="relative z-10 scroll-mt-28 bg-transparent py-10 sm:py-12 lg:py-14"
       aria-labelledby="capabilities-title"
     >
       <Container
