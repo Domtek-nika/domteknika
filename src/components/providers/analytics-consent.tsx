@@ -114,7 +114,6 @@ export function AnalyticsConsent() {
         </div>
         <div className="flex items-center justify-between gap-2">
           <Link href="/privacy-policy" className="text-[11px] text-[#595959] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-brand">{copy.privacy}</Link>
-          {settingsOpen && consent !== "unknown" ? <button type="button" onClick={() => setSettingsOpen(false)} className="text-[11px] underline">{copy.close}</button> : null}
         </div>
       </div>
     </section> : null}
