@@ -102,16 +102,19 @@ export function AnalyticsConsent() {
       strategy="afterInteractive" onReady={initializeAnalytics}
     /> : null}
     {show ? <section role="region" aria-label={copy.title} className="fixed bottom-3 left-3 z-[100] w-[288px] max-w-[calc(100vw-24px)] border border-black/10 bg-white p-5 text-[#111] shadow-[0_4px_24px_rgba(0,0,0,0.1)] sm:bottom-5 sm:left-5">
+      <button type="button" onClick={() => choose("rejected")}
+        aria-label={`${copy.close} — ${copy.reject}`} title={`${copy.close} — ${copy.reject}`}
+        className="absolute right-0 top-0 flex h-11 w-11 items-center justify-center text-[24px] leading-none text-[#595959] hover:text-brand focus-visible:outline-2 focus-visible:outline-brand">
+        <span aria-hidden="true">×</span>
+      </button>
       <div className="mb-3 h-[3px] w-7 bg-brand" aria-hidden="true" />
-      <h2 className="text-[15px] font-extrabold">{copy.title}</h2>
+      <h2 className="pr-3 text-[15px] font-extrabold">{copy.title}</h2>
       <p className="mt-2 text-[13px] leading-[1.6] text-[#595959]">{copy.text}</p>
       <div className="mt-4 flex flex-col gap-3">
-        <div className="grid grid-cols-2 gap-2">
-          {(["rejected", "accepted"] as const).map(choice => <button key={choice} type="button" onClick={() => choose(choice)}
-            className={`min-h-11 border border-brand px-3 py-2 text-[12px] font-bold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${choice === "accepted" ? "bg-brand text-white hover:bg-brand/90" : "bg-white text-brand hover:bg-brand/5"}`}>
-            {choice === "accepted" ? copy.accept : copy.reject}
-          </button>)}
-        </div>
+        <button type="button" onClick={() => choose("accepted")}
+          className="min-h-11 w-full border border-brand bg-brand px-3 py-2 text-[12px] font-bold text-white transition-colors hover:bg-brand/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
+          {copy.accept}
+        </button>
         <div className="flex items-center justify-between gap-2">
           <Link href="/privacy-policy" className="text-[11px] text-[#595959] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-brand">{copy.privacy}</Link>
         </div>
