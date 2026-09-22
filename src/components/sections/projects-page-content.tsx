@@ -965,14 +965,14 @@ export const PROJECTS: Project[] = [
     title: "Bottom-filling cup",
     description:
       "Event cup with an integrated bottom valve for faster filling from beer taps while limiting foam.",
-    image:
-      "/assets/projects/bottom-filling-cup/bottom-filling-cup-01.webp",
+    image: "/assets/projects/bottom-filling-cup/bottom-filling-cup-01.webp",
     imageAlt:
       "CAD study of two bottom-filling cups with integrated valve concepts",
     gallery: [
       "/assets/projects/bottom-filling-cup/bottom-filling-cup-01.webp",
-      "/assets/projects/bottom-filling-cup/bottom-filling-cup-02.webp",
-      "/assets/projects/bottom-filling-cup/bottom-filling-cup-03.webp",
+      "/assets/projects/bottom-filling-cup/shared-02-valve-section.webp",
+      "/assets/projects/bottom-filling-cup/shared-03-prototype-components.webp",
+      "/assets/projects/bottom-filling-cup/shared-04-first-series.webp",
     ],
     tags: ["#2014–2015", "#Beverage", "#InjectionMolding"],
     overview:
@@ -1052,32 +1052,81 @@ export const PROJECTS: Project[] = [
       "Functional prototype of the transparent showcase clock with peripheral mechanism",
     gallery: [
       "/assets/projects/transparent-clock/transparent-clock-01.webp",
-      "/assets/projects/transparent-clock/transparent-clock-02.webp",
-      "/assets/projects/transparent-clock/transparent-clock-03.webp",
-      "/assets/projects/transparent-clock/transparent-clock-04.webp",
+      "/assets/projects/transparent-clock/shared-02-gear-train-cad.webp",
+      "/assets/projects/transparent-clock/shared-03-peripheral-drive.webp",
+      "/assets/projects/transparent-clock/shared-04-toothed-discs.webp",
     ],
     tags: ["#2012–2013", "#Watchmaking", "#Mechatronics"],
     overview:
       "Developed for a watch retailer’s window in Geneva, the clock preserves a clear view through its face without a visible hand pivot at the center. DOMTEKNIKA developed the complete electrical and mechanical concept using transparent rotating discs driven at their periphery, integrated atomic-clock synchronization, coordinated the design study and built a functional prototype with injection-molded gear segments.",
   },
   {
-    id: "vacheron-watch-mechanics",
+    id: "kitesurf-safety",
+    category: "Sport & Outdoor",
+    filter: "sport",
+    title: "Kitesurf safety systems",
+    description: "Injection-moulded polymer primary and secondary releases developed to improve design, cost and reliability, with particular attention to the force needed to activate them.",
+    image: "/assets/projects/kitesurf-safety/shared-01-primary-release.webp",
+    imageAlt: "CAD rendering of the primary kitesurf safety release in black polymer with a red activation arrow",
+    gallery: [
+      "/assets/projects/kitesurf-safety/shared-01-primary-release.webp",
+      "/assets/projects/kitesurf-safety/shared-02-secondary-release.webp",
+      "/assets/projects/kitesurf-safety/shared-03-assembled-release.webp",
+      "/assets/projects/kitesurf-safety/shared-04-release-operation.webp",
+    ],
+    tags: ["#2010–2011"],
+    overview: "In 2010–2011, DOMTEKNIKA developed new kitesurf safety releases for a client whose existing systems did not meet design, cost and reliability expectations. These devices allow the rider to release the kite’s pull in strong winds, reducing the risk of being lifted and injured. Development of the primary and secondary injection-moulded polymer releases focused on the force required for activation.",
+  },
+  {
+    id: "eternal-watch",
     category: "Watchmaking",
     filter: "watchmaking",
-    title: "Watch mechanics",
-    description:
-      "Precision horology studies combining mechanical layouts, rendered assemblies and component analysis.",
-    image: "/assets/projects/vacheron-watch-mechanics/watch-mechanics-01.webp",
-    imageAlt: "Mechanical watch render with visible movement",
-    tags: ["#2014", "#Horology", "#Precision"],
-    overview:
-      "This watch project focuses on precision mechanics, movement visualization and structural evaluation of small, high-value components.",
-    relatedPatents: [
-      relatedPatent(
-        "WO2016004540A1",
-        "Optical method for making a watch movement component invisible.",
-      ),
+    title: "Eternal watch",
+    description: "A mainspring winding system powered by ambient temperature variations, developed from an idea initiated by DOMTEKNIKA.",
+    image: "/assets/projects/eternal-watch/shared-01-watch-render.webp",
+    imageAlt: "Rendering of the eternal watch showing the integration of its mechanism",
+    gallery: [
+      "/assets/projects/eternal-watch/shared-01-watch-render.webp",
+      "/assets/projects/eternal-watch/shared-02-winding-mechanism.webp",
+      "/assets/projects/eternal-watch/shared-03-winding-figure.webp",
     ],
+    tags: ["#2015"],
+    overview: "In 2015, DOMTEKNIKA developed a system for a major Swiss watchmaker based on an internal idea rather than a client request. The mechanism uses ambient temperature variations to wind the mainspring automatically and prevent it from unwinding completely, an important consideration for mechanical watch accuracy. The project included a functional prototype and performance testing. A provisional patent filing was made, but was not followed by a definitive filing and was never published.",
+  },
+  {
+    id: "invisible-gear-train-bridge",
+    category: "Watchmaking",
+    filter: "watchmaking",
+    title: "Invisible gear train bridge",
+    description: "A transparent gear train bridge designed to showcase the gears through carefully selected materials and surface treatments.",
+    image: "/assets/projects/invisible-gear-train-bridge/shared-01-transparent-bridge-front.webp",
+    imageAlt: "Front view of transparent gear train bridge components",
+    gallery: [
+      "/assets/projects/invisible-gear-train-bridge/shared-01-transparent-bridge-front.webp",
+      "/assets/projects/invisible-gear-train-bridge/shared-02-transparent-bridge-perspective.webp",
+    ],
+    tags: ["#2011–2012"],
+    overview: "In 2011–2012, DOMTEKNIKA developed a transparent gear train bridge for a major Swiss watchmaker. The project originated from an internal idea rather than a client request: making the bridge visually invisible to highlight the gears themselves. Work covered component design and calculations, material and treatment selection, and supervision of injection moulding for the first components.",
+    relatedPatents: [
+      relatedPatent("CH707437A1", "Transparent watch movement component and optical treatments."),
+      relatedPatent("WO2016004540A1", "Optical method for making a watch movement component invisible."),
+    ],
+  },
+  {
+    id: "clepsydra",
+    category: "Watchmaking",
+    filter: "watchmaking",
+    title: "Clepsydra",
+    description: "Contribution to a monumental water clock, including a motorised turning mechanism and a half-scale prototype.",
+    image: "/assets/projects/clepsydra/shared-01-design-concept.webp",
+    imageAlt: "Concept presentation of the monumental water clock",
+    gallery: [
+      "/assets/projects/clepsydra/shared-01-design-concept.webp",
+      "/assets/projects/clepsydra/shared-02-half-scale-prototype.webp",
+      "/assets/projects/clepsydra/shared-03-turning-mechanism.webp",
+    ],
+    tags: ["#2008"],
+    overview: "In 2008, DOMTEKNIKA contributed to the development of a monumental water clock for a major Swiss watchmaker, initially intended for display in Geneva. The team helped define the concept, developed and motorised the clock’s turning mechanism, participated in building a half-scale prototype and carried out functional tests.",
   },
   {
     id: "velum-sky-screen",
@@ -1440,20 +1489,41 @@ const FR_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
       ),
     ],
   },
-  "vacheron-watch-mechanics": {
-    category: "Produits",
-    title: "Mécanique horlogère",
-    description:
-      "Études horlogères de précision combinant implantation mécanique, assemblages rendus et analyse de composants.",
-    imageAlt: "Rendu de montre mécanique avec mouvement visible",
-    overview:
-      "Ce projet horloger porte sur la mécanique de précision, la visualisation de mouvement et l'évaluation structurelle de petits composants à forte valeur.",
+  "kitesurf-safety": {
+    category: "Sport",
+    title: "Sécurité de kitesurf",
+    description: "Sécurités primaires et secondaires en polymère injecté, développées pour améliorer le design, le coût et la fiabilité, avec une attention particulière à l’effort de déclenchement.",
+    image: "/assets/projects/kitesurf-safety/shared-01-primary-release.webp",
+    imageAlt: "Rendu CAO de la sécurité primaire de kitesurf en polymère noir avec flèche rouge de déclenchement",
+    overview: "En 2010–2011, DOMTEKNIKA a développé de nouvelles sécurités de kitesurf pour un client dont les solutions existantes ne répondaient pas aux attentes en matière de design, de coût et de fiabilité. Ces dispositifs permettent à l’utilisateur de libérer la traction de l’aile en cas de vent trop fort, afin de limiter les risques d’être emporté et blessé. Le développement des sécurités primaires et secondaires en polymère injecté s’est concentré sur la force nécessaire à leur déclenchement.",
+  },
+  "eternal-watch": {
+    category: "Horlogerie",
+    title: "Montre éternelle",
+    description: "Système de remontage du ressort de barillet utilisant les variations de température ambiante, développé à partir d’une idée de DOMTEKNIKA.",
+    image: "/assets/projects/eternal-watch/shared-01-watch-render.webp",
+    imageAlt: "Rendu de la montre éternelle montrant l’intégration du mécanisme",
+    overview: "En 2015, DOMTEKNIKA a développé pour un grand horloger suisse un système issu d’une idée interne, et non d’une demande du client. Le mécanisme utilise les variations de température ambiante pour remonter automatiquement le ressort de barillet et éviter sa détente complète, un enjeu important pour la précision d’une montre mécanique. Le projet a abouti à un prototype fonctionnel et à des essais de performance. Un dépôt provisoire de brevet a été effectué, mais n’a pas été suivi d’un dépôt définitif et n’a jamais été publié.",
+  },
+  "invisible-gear-train-bridge": {
+    category: "Horlogerie",
+    title: "Pont de rouage invisible",
+    description: "Pont de rouage transparent conçu pour mettre en valeur les rouages, grâce au choix des matériaux et des traitements de surface.",
+    image: "/assets/projects/invisible-gear-train-bridge/shared-01-transparent-bridge-front.webp",
+    imageAlt: "Pièces du pont de rouage transparent vues de face",
+    overview: "En 2011–2012, DOMTEKNIKA a développé un pont de rouage transparent pour un grand horloger suisse. Le projet est né d’une idée interne, et non d’une demande du client : rendre le pont visuellement invisible afin de mettre en valeur les rouages eux-mêmes. Le travail a porté sur la conception et le calcul des pièces, le choix des matériaux et des traitements, ainsi que le pilotage de l’injection des premières pièces.",
     relatedPatents: [
-      relatedPatent(
-        "WO2016004540A1",
-        "Méthode optique pour rendre invisible un composant de mouvement horloger.",
-      ),
+      relatedPatent("CH707437A1", "Composant transparent de mouvement horloger et traitements optiques."),
+      relatedPatent("WO2016004540A1", "Méthode optique pour rendre invisible un composant de mouvement horloger."),
     ],
+  },
+  "clepsydra": {
+    category: "Horlogerie",
+    title: "Clepsydre",
+    description: "Participation au développement d’une clepsydre monumentale, avec un système de retournement motorisé et un prototype à l’échelle 1/2.",
+    image: "/assets/projects/clepsydra/shared-01-design-concept.webp",
+    imageAlt: "Planche de concept de la clepsydre monumentale",
+    overview: "En 2008, DOMTEKNIKA a participé au développement d’une clepsydre monumentale pour un grand horloger suisse, initialement destinée à être exposée à Genève. L’équipe a contribué à la définition du concept, développé et motorisé le système de retournement de la clepsydre, puis participé au prototypage d’une version à l’échelle 1/2 et réalisé des tests fonctionnels.",
   },
   "transparent-clock": {
     category: "Horlogerie",
@@ -1703,14 +1773,41 @@ const DE_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     overview:
       "DOMTEKNIKA entwickelte die komplette Maschine und führte eine erste Industrialisierungsstudie durch. Die Architektur verarbeitet unterschiedliche lösliche Kaffees und weitere lösliche Getränke. Für die Zubereitung von Cappuccino bleibt die Milch vollständig vom internen Kreislauf getrennt und gelangt weder in Leitungen noch in interne Komponenten. Dadurch werden Verunreinigungen und Rückstände vermieden sowie Hygiene, Reinigung und Wartung vereinfacht. Anschliessend wurde die Maschine für eine grosse Kaffeemaschinenmarke auf den Markt gebracht.",
   },
-  "vacheron-watch-mechanics": {
-    category: "Produkte",
-    title: "Uhrenmechanik",
-    description:
-      "Präzisionsstudien in der Uhrmacherei mit mechanischen Anordnungen, gerenderten Baugruppen und Komponentenanalyse.",
-    imageAlt: "Rendering einer mechanischen Uhr mit sichtbarem Werk",
-    overview:
-      "Dieses Uhrenprojekt konzentriert sich auf Präzisionsmechanik, Werkvisualisierung und strukturelle Bewertung kleiner, hochwertiger Komponenten.",
+  "kitesurf-safety": {
+    category: "Sport & Outdoor",
+    title: "Kitesurf-Sicherheitssysteme",
+    description: "Primäre und sekundäre Auslösesysteme aus spritzgegossenem Polymer zur Verbesserung von Design, Kosten und Zuverlässigkeit, mit besonderem Augenmerk auf die Auslösekraft.",
+    image: "/assets/projects/kitesurf-safety/shared-01-primary-release.webp",
+    imageAlt: "CAD-Darstellung der primären Kitesurf-Sicherheitsauslösung aus schwarzem Polymer mit rotem Auslösepfeil",
+    overview: "2010–2011 entwickelte DOMTEKNIKA neue Kitesurf-Sicherheitssysteme für einen Kunden, dessen bestehende Lösungen die Anforderungen an Design, Kosten und Zuverlässigkeit nicht erfüllten. Die Systeme ermöglichen es, bei starkem Wind den Zug des Kites zu lösen und so das Risiko des Abhebens und von Verletzungen zu verringern. Bei der Entwicklung der primären und sekundären Auslösesysteme aus spritzgegossenem Polymer stand die erforderliche Auslösekraft im Mittelpunkt.",
+  },
+  "eternal-watch": {
+    category: "Uhrenindustrie",
+    title: "Ewige Uhr",
+    description: "Aufzugssystem für die Zugfeder, das Schwankungen der Umgebungstemperatur nutzt und auf einer eigenen Idee von DOMTEKNIKA beruht.",
+    image: "/assets/projects/eternal-watch/shared-01-watch-render.webp",
+    imageAlt: "Darstellung der ewigen Uhr mit integriertem Mechanismus",
+    overview: "2015 entwickelte DOMTEKNIKA für einen grossen Schweizer Uhrenhersteller ein System auf Basis einer eigenen Idee, nicht einer Kundenanfrage. Der Mechanismus nutzt Schwankungen der Umgebungstemperatur, um die Zugfeder automatisch aufzuziehen und ihre vollständige Entspannung zu verhindern – ein wichtiger Aspekt für die Ganggenauigkeit mechanischer Uhren. Das Projekt umfasste einen Funktionsprototyp und Leistungstests. Eine vorläufige Patentanmeldung wurde eingereicht, jedoch nicht durch eine endgültige Anmeldung weitergeführt und nie veröffentlicht.",
+  },
+  "invisible-gear-train-bridge": {
+    category: "Uhrenindustrie",
+    title: "Unsichtbare Räderwerksbrücke",
+    description: "Transparente Räderwerksbrücke, die durch gezielte Materialwahl und Oberflächenbehandlungen die Zahnräder sichtbar hervorhebt.",
+    image: "/assets/projects/invisible-gear-train-bridge/shared-01-transparent-bridge-front.webp",
+    imageAlt: "Vorderansicht der transparenten Komponenten der Räderwerksbrücke",
+    overview: "2011–2012 entwickelte DOMTEKNIKA für einen grossen Schweizer Uhrenhersteller eine transparente Räderwerksbrücke. Ausgangspunkt war eine eigene Idee, nicht eine Kundenanfrage: Die Brücke sollte optisch unsichtbar werden, um die Zahnräder selbst hervorzuheben. Die Arbeiten umfassten Konstruktion und Berechnung der Bauteile, Auswahl der Materialien und Behandlungen sowie die Betreuung des Spritzgusses der ersten Teile.",
+    relatedPatents: [
+      relatedPatent("CH707437A1", "Transparente Uhrwerkskomponente und optische Behandlungen."),
+      relatedPatent("WO2016004540A1", "Optisches Verfahren, um eine Uhrwerkskomponente unsichtbar zu machen."),
+    ],
+  },
+  "clepsydra": {
+    category: "Uhrenindustrie",
+    title: "Klepsydra",
+    description: "Mitwirkung an einer monumentalen Wasseruhr mit motorisiertem Wendemechanismus und einem Prototyp im Massstab 1:2.",
+    image: "/assets/projects/clepsydra/shared-01-design-concept.webp",
+    imageAlt: "Konzeptdarstellung der monumentalen Wasseruhr",
+    overview: "2008 wirkte DOMTEKNIKA an der Entwicklung einer monumentalen Wasseruhr für einen grossen Schweizer Uhrenhersteller mit, die ursprünglich in Genf ausgestellt werden sollte. Das Team beteiligte sich an der Konzeptdefinition, entwickelte und motorisierte den Wendemechanismus, wirkte am Bau eines Prototyps im Massstab 1:2 mit und führte Funktionstests durch.",
   },
   "transparent-clock": {
     category: "Uhrmacherei",
@@ -1959,14 +2056,41 @@ const ES_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     overview:
       "DOMTEKNIKA desarrolló íntegramente la máquina y realizó un primer estudio de industrialización. Su arquitectura admite distintos cafés solubles y otras bebidas solubles. Para preparar capuchinos sin contaminar la máquina, la leche se mantiene totalmente separada del circuito interno y no pasa por sus conductos ni componentes. Este diseño limita la acumulación de residuos y simplifica la higiene, la limpieza y el mantenimiento. Posteriormente, la máquina se comercializó para una importante marca de máquinas de café.",
   },
-  "vacheron-watch-mechanics": {
-    category: "Productos",
-    title: "Mecánica relojera",
-    description:
-      "Estudios de relojería de precisión que combinan implantación mecánica, ensamblajes renderizados y análisis de componentes.",
-    imageAlt: "Render de reloj mecánico con movimiento visible",
-    overview:
-      "Este proyecto relojero se centra en mecánica de precisión, visualización de movimiento y evaluación estructural de pequeños componentes de alto valor.",
+  "kitesurf-safety": {
+    category: "Deporte y exterior",
+    title: "Seguridad de kitesurf",
+    description: "Sistemas de seguridad primarios y secundarios en polímero inyectado, desarrollados para mejorar el diseño, el coste y la fiabilidad, con especial atención a la fuerza de activación.",
+    image: "/assets/projects/kitesurf-safety/shared-01-primary-release.webp",
+    imageAlt: "Render CAD del sistema de seguridad primario de kitesurf en polímero negro con flecha roja de activación",
+    overview: "En 2010–2011, DOMTEKNIKA desarrolló nuevos sistemas de seguridad de kitesurf para un cliente cuyas soluciones existentes no cumplían sus expectativas de diseño, coste y fiabilidad. Estos dispositivos permiten liberar la tracción de la cometa con viento fuerte para reducir el riesgo de que el usuario sea levantado y sufra lesiones. El desarrollo de los sistemas primarios y secundarios en polímero inyectado se centró en la fuerza necesaria para activarlos.",
+  },
+  "eternal-watch": {
+    category: "Relojería",
+    title: "Reloj eterno",
+    description: "Sistema de remontaje del muelle real mediante variaciones de temperatura ambiente, desarrollado a partir de una idea propia de DOMTEKNIKA.",
+    image: "/assets/projects/eternal-watch/shared-01-watch-render.webp",
+    imageAlt: "Render del reloj eterno que muestra la integración de su mecanismo",
+    overview: "En 2015, DOMTEKNIKA desarrolló para un gran fabricante suizo de relojes un sistema nacido de una idea interna, no de una solicitud del cliente. El mecanismo utiliza las variaciones de temperatura ambiente para dar cuerda automáticamente al muelle real y evitar que se destense por completo, un aspecto importante para la precisión de los relojes mecánicos. El proyecto incluyó un prototipo funcional y pruebas de rendimiento. Se presentó una solicitud provisional de patente, pero no se continuó con una solicitud definitiva y nunca se publicó.",
+  },
+  "invisible-gear-train-bridge": {
+    category: "Relojería",
+    title: "Puente de rodaje invisible",
+    description: "Puente de rodaje transparente diseñado para destacar los engranajes mediante la selección de materiales y tratamientos superficiales.",
+    image: "/assets/projects/invisible-gear-train-bridge/shared-01-transparent-bridge-front.webp",
+    imageAlt: "Vista frontal de las piezas del puente de rodaje transparente",
+    overview: "En 2011–2012, DOMTEKNIKA desarrolló un puente de rodaje transparente para un gran fabricante suizo de relojes. El proyecto nació de una idea interna, no de una solicitud del cliente: hacer el puente visualmente invisible para destacar los propios engranajes. El trabajo abarcó el diseño y cálculo de las piezas, la selección de materiales y tratamientos, y la supervisión de la inyección de las primeras piezas.",
+    relatedPatents: [
+      relatedPatent("CH707437A1", "Componente transparente de un movimiento relojero y tratamientos ópticos."),
+      relatedPatent("WO2016004540A1", "Método óptico para hacer invisible un componente del movimiento de un reloj."),
+    ],
+  },
+  "clepsydra": {
+    category: "Relojería",
+    title: "Clepsidra",
+    description: "Participación en el desarrollo de una clepsidra monumental, con un mecanismo de volteo motorizado y un prototipo a escala 1:2.",
+    image: "/assets/projects/clepsydra/shared-01-design-concept.webp",
+    imageAlt: "Lámina conceptual de la clepsidra monumental",
+    overview: "En 2008, DOMTEKNIKA participó en el desarrollo de una clepsidra monumental para un gran fabricante suizo de relojes, destinada inicialmente a exponerse en Ginebra. El equipo contribuyó a definir el concepto, desarrolló y motorizó el sistema de volteo, participó en la construcción de un prototipo a escala 1:2 y realizó pruebas funcionales.",
   },
   "transparent-clock": {
     category: "Relojería",
@@ -2208,14 +2332,41 @@ const KO_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     overview:
       "DOMTEKNIKA는 머신 전체를 개발하고 초기 양산화 검토까지 수행했습니다. 다양한 인스턴트 커피와 기타 용해성 음료를 사용할 수 있습니다. 카푸치노를 만들 때 우유가 기계 내부 회로와 완전히 분리되어 배관이나 내부 부품을 통과하지 않도록 설계했습니다. 이를 통해 오염과 잔류물 축적을 줄이고 위생 관리, 세척 및 유지보수를 간소화했습니다. 이후 이 제품은 주요 커피머신 브랜드를 위해 상용화되었습니다.",
   },
-  "vacheron-watch-mechanics": {
-    category: "제품",
-    title: "시계 메커니즘",
-    description:
-      "기계 배치, 렌더 조립체, 부품 분석을 결합한 정밀 시계공학 연구.",
-    imageAlt: "무브먼트가 보이는 기계식 시계 렌더",
-    overview:
-      "이 시계 프로젝트는 정밀 기계, 무브먼트 시각화, 작은 고가치 부품의 구조 평가에 집중합니다.",
+  "kitesurf-safety": {
+    category: "스포츠·아웃도어",
+    title: "카이트서핑 안전장치",
+    description: "디자인, 비용, 신뢰성을 개선하기 위해 개발한 사출 성형 폴리머 1차·2차 안전장치로, 작동에 필요한 힘에 중점을 두었습니다.",
+    image: "/assets/projects/kitesurf-safety/shared-01-primary-release.webp",
+    imageAlt: "빨간 작동 화살표가 있는 검은색 폴리머 카이트서핑 1차 안전장치의 CAD 렌더링",
+    overview: "2010–2011년 DOMTEKNIKA는 기존 제품의 디자인, 비용, 신뢰성에 만족하지 못한 고객을 위해 새로운 카이트서핑 안전장치를 개발했습니다. 이 장치는 강풍에서 카이트의 견인력을 해제하여 사용자가 공중으로 끌려 올라가 다칠 위험을 줄입니다. 사출 성형 폴리머로 제작한 1차·2차 안전장치의 개발은 사용자가 장치를 작동하는 데 필요한 힘에 초점을 맞췄습니다.",
+  },
+  "eternal-watch": {
+    category: "시계 제조",
+    title: "영원한 시계",
+    description: "DOMTEKNIKA의 자체 아이디어에서 출발한, 주변 온도 변화를 이용해 태엽을 감는 시스템입니다.",
+    image: "/assets/projects/eternal-watch/shared-01-watch-render.webp",
+    imageAlt: "메커니즘의 배치를 보여주는 영원한 시계 렌더링",
+    overview: "2015년 DOMTEKNIKA는 고객의 요청이 아닌 자체 아이디어를 바탕으로 스위스의 주요 시계 제조사를 위한 시스템을 개발했습니다. 이 메커니즘은 주변 온도 변화를 이용해 태엽을 자동으로 감아 완전히 풀리지 않도록 하며, 이는 기계식 시계의 정확도에 중요한 요소입니다. 작동 시제품을 제작하고 성능 시험을 수행했습니다. 임시 특허 출원은 이루어졌으나 정식 출원으로 이어지지 않았으며 공개되지 않았습니다.",
+  },
+  "invisible-gear-train-bridge": {
+    category: "시계 제조",
+    title: "보이지 않는 기어 트레인 브리지",
+    description: "소재와 표면 처리를 선정하여 기어 자체가 돋보이도록 설계한 투명 기어 트레인 브리지입니다.",
+    image: "/assets/projects/invisible-gear-train-bridge/shared-01-transparent-bridge-front.webp",
+    imageAlt: "투명 기어 트레인 브리지 부품의 정면 모습",
+    overview: "2011–2012년 DOMTEKNIKA는 스위스의 주요 시계 제조사를 위해 투명 기어 트레인 브리지를 개발했습니다. 고객 요청이 아닌 자체 아이디어에서 출발한 이 프로젝트는 브리지를 시각적으로 보이지 않게 하여 기어 자체를 돋보이게 하는 것을 목표로 했습니다. 부품 설계와 계산, 소재 및 처리 방법 선정, 초기 부품의 사출 성형 관리를 수행했습니다.",
+    relatedPatents: [
+      relatedPatent("CH707437A1", "투명 시계 무브먼트 부품 및 광학 처리."),
+      relatedPatent("WO2016004540A1", "시계 무브먼트 부품을 보이지 않게 하는 광학적 방법."),
+    ],
+  },
+  "clepsydra": {
+    category: "시계 제조",
+    title: "클렙시드라",
+    description: "전동 반전 장치와 1/2 축척 시제품을 포함한 대형 물시계 개발에 참여했습니다.",
+    image: "/assets/projects/clepsydra/shared-01-design-concept.webp",
+    imageAlt: "대형 물시계의 콘셉트 보드",
+    overview: "2008년 DOMTEKNIKA는 스위스의 주요 시계 제조사를 위한 대형 물시계 개발에 참여했습니다. 이 물시계는 원래 제네바에 전시될 예정이었습니다. 팀은 개념 정의에 참여하고 물시계 반전 장치를 개발·전동화했으며, 1/2 축척 시제품 제작에 참여하고 기능 시험을 수행했습니다.",
   },
   "transparent-clock": {
     category: "시계 제작",
@@ -2450,13 +2601,41 @@ const ZH_PROJECT_OVERRIDES: Record<string, Partial<Project>> = {
     overview:
       "DOMTEKNIKA 完成了整机开发，并开展了首轮工业化研究。该架构兼容多种速溶咖啡和其他速溶饮品。制作卡布奇诺时，牛奶与机器内部回路完全隔离，不会流经管路或内部部件，从而减少污染与残留，并简化卫生管理、清洁和维护。该机器随后面向一家大型咖啡机品牌实现商业化。",
   },
-  "vacheron-watch-mechanics": {
-    category: "产品",
-    title: "钟表机械",
-    description: "精密钟表研究，结合机械布置、渲染装配和组件分析。",
-    imageAlt: "可见机芯的机械腕表渲染图",
-    overview:
-      "该钟表项目聚焦精密机械、机芯可视化，以及小型高价值组件的结构评估。",
+  "kitesurf-safety": {
+    category: "运动与户外",
+    title: "风筝冲浪安全装置",
+    description: "采用注塑聚合物制造的一级和二级安全释放装置，旨在改善设计、成本和可靠性，并特别关注触发所需的力量。",
+    image: "/assets/projects/kitesurf-safety/shared-01-primary-release.webp",
+    imageAlt: "带红色触发箭头的黑色聚合物风筝冲浪一级安全装置CAD效果图",
+    overview: "2010–2011年，DOMTEKNIKA为一位对现有方案的设计、成本和可靠性不满意的客户开发了新的风筝冲浪安全装置。这些装置让使用者在强风中释放风筝牵引力，降低被带离地面和受伤的风险。一级和二级注塑聚合物安全装置的开发重点是使用者触发装置所需的力量。",
+  },
+  "eternal-watch": {
+    category: "制表",
+    title: "永恒腕表",
+    description: "源于DOMTEKNIKA自主创意，利用环境温度变化为发条自动上弦的系统。",
+    image: "/assets/projects/eternal-watch/shared-01-watch-render.webp",
+    imageAlt: "展示机构集成方式的永恒腕表效果图",
+    overview: "2015年，DOMTEKNIKA基于自主提出的创意，而非客户需求，为一家大型瑞士制表商开发了该系统。机构利用环境温度变化为发条自动上弦，避免其完全松弛，这对机械腕表的走时精度十分重要。项目完成了功能原型和性能测试。曾提交临时专利申请，但未继续提交正式申请，因此从未公开。",
+  },
+  "invisible-gear-train-bridge": {
+    category: "制表",
+    title: "隐形轮系夹板",
+    description: "通过材料与表面处理的选择，使透明轮系夹板在视觉上隐形，以突出展示齿轮本身。",
+    image: "/assets/projects/invisible-gear-train-bridge/shared-01-transparent-bridge-front.webp",
+    imageAlt: "透明轮系夹板零件正面视图",
+    overview: "2011–2012年，DOMTEKNIKA为一家大型瑞士制表商开发了透明轮系夹板。项目源于内部创意，而非客户需求：让夹板在视觉上隐形，从而突出齿轮本身。工作涵盖零件设计与计算、材料和处理工艺选择，以及首批零件的注塑管理。",
+    relatedPatents: [
+      relatedPatent("CH707437A1", "透明机芯零件及光学处理。"),
+      relatedPatent("WO2016004540A1", "使腕表机芯零件隐形的光学方法。"),
+    ],
+  },
+  "clepsydra": {
+    category: "制表",
+    title: "漏刻",
+    description: "参与大型水钟开发，包括电动翻转机构和1:2比例原型。",
+    image: "/assets/projects/clepsydra/shared-01-design-concept.webp",
+    imageAlt: "大型水钟概念设计图",
+    overview: "2008年，DOMTEKNIKA参与为一家大型瑞士制表商开发大型水钟，最初计划在日内瓦展出。团队参与概念定义，开发水钟翻转机构并实现电动驱动，参与制作1:2比例原型，并进行了功能测试。",
   },
   "transparent-clock": {
     category: "钟表",
@@ -2526,6 +2705,8 @@ const PINNED_PROJECT_IDS = [
 ];
 
 const PROJECT_SORT_YEARS: Partial<Record<string, number>> = {
+  "kitesurf-safety": 2010,
+  "invisible-gear-train-bridge": 2011,
   "bottom-filling-cup": 2015,
   "smart-bottle": 2015,
   "single-use-turbine": 2005,
@@ -3320,36 +3501,150 @@ const PROJECT_SCOPES: Record<
       "随后面向一家大型咖啡机品牌实现商业化。",
     ],
   },
-  "vacheron-watch-mechanics": {
+  "kitesurf-safety": {
     en: [
-      "Precision horology visualization for complex small-scale mechanisms.",
-      "Mechanical layout and component studies for movement presentation.",
-      "Optical and structural patent context around hidden or refined watch movement elements.",
+      "Design and drawing of the primary and secondary release components.",
+      "Mechanical and rheological calculations for injection-moulded parts.",
+      "Study of release force and production of prototypes.",
+      "Supervision of injection moulding for the first production runs.",
     ],
     fr: [
-      "Visualisation horlogère de précision pour mécanismes complexes à petite échelle.",
-      "Études d'implantation mécanique et de composants pour présentation de mouvement.",
-      "Contexte brevet optique et structurel autour d'éléments de mouvement cachés ou raffinés.",
+      "Conception et dessin des pièces des sécurités primaires et secondaires.",
+      "Calculs mécaniques et de rhéologie pour les pièces injectées.",
+      "Étude de l’effort de déclenchement et réalisation de prototypes.",
+      "Pilotage de l’injection des premières séries.",
     ],
     de: [
-      "Präzise Visualisierung komplexer Uhrwerksmechanismen auf kleinstem Raum.",
-      "Studien zu mechanischer Anordnung und Komponenten für die Präsentation des Uhrwerks.",
-      "Optischer und konstruktiver Patentkontext für verborgene oder besonders fein ausgeführte Uhrwerkselemente.",
+      "Konstruktion und Zeichnung der primären und sekundären Sicherheitskomponenten.",
+      "Mechanische und rheologische Berechnungen der Spritzgussteile.",
+      "Untersuchung der Auslösekraft und Herstellung von Prototypen.",
+      "Betreuung des Spritzgusses der ersten Serien.",
     ],
     es: [
-      "Visualización relojera de precisión para mecanismos complejos a pequeña escala.",
-      "Estudios de disposición mecánica y componentes para presentar el movimiento.",
-      "Contexto de patentes ópticas y estructurales para elementos ocultos o refinados del mecanismo.",
+      "Diseño y dibujo de las piezas de los sistemas primarios y secundarios.",
+      "Cálculos mecánicos y reológicos para las piezas inyectadas.",
+      "Estudio de la fuerza de activación y fabricación de prototipos.",
+      "Supervisión de la inyección de las primeras series.",
     ],
     ko: [
-      "소형 복합 메커니즘을 위한 정밀 시계 구조 시각화.",
-      "무브먼트 표현을 위한 기계 배치와 부품 연구.",
-      "숨겨지거나 정교하게 구현된 무브먼트 요소의 광학 및 구조 특허 기술 반영.",
+      "1차·2차 안전장치 부품 설계 및 도면 작성.",
+      "사출 부품의 기계 및 유동 해석.",
+      "작동력 검토 및 시제품 제작.",
+      "초기 생산분의 사출 성형 관리.",
     ],
     zh: [
-      "为微型复杂机构提供精密制表可视化。",
-      "研究机械布局与组件关系，清晰呈现机芯结构。",
-      "结合隐藏式或精细化机芯部件的光学与结构专利背景。",
+      "一级和二级安全装置零件的设计与制图。",
+      "注塑零件的力学和流变计算。",
+      "触发力研究与原型制作。",
+      "管理首批产品的注塑生产。",
+    ],
+  },
+  "eternal-watch": {
+    en: [
+      "Feasibility calculations for winding through temperature variations.",
+      "Component design and dimensioning.",
+      "Construction of a functional prototype.",
+      "System performance testing.",
+    ],
+    fr: [
+      "Calculs de faisabilité du remontage à partir des variations de température.",
+      "Conception et dimensionnement des pièces.",
+      "Réalisation d’un prototype fonctionnel.",
+      "Essais de performance du système.",
+    ],
+    de: [
+      "Machbarkeitsberechnungen zum Aufzug durch Temperaturschwankungen.",
+      "Konstruktion und Dimensionierung der Bauteile.",
+      "Bau eines Funktionsprototyps.",
+      "Leistungstests des Systems.",
+    ],
+    es: [
+      "Cálculos de viabilidad del remontaje mediante variaciones de temperatura.",
+      "Diseño y dimensionamiento de las piezas.",
+      "Fabricación de un prototipo funcional.",
+      "Pruebas de rendimiento del sistema.",
+    ],
+    ko: [
+      "온도 변화를 이용한 태엽 감기의 실현 가능성 계산.",
+      "부품 설계 및 치수 산정.",
+      "작동 시제품 제작.",
+      "시스템 성능 시험.",
+    ],
+    zh: [
+      "利用温度变化上弦的可行性计算。",
+      "零件设计与尺寸计算。",
+      "制作功能原型。",
+      "系统性能测试。",
+    ],
+  },
+  "invisible-gear-train-bridge": {
+    en: [
+      "Design and calculation of the gear train bridge components.",
+      "Selection of transparent materials and treatments to make the component invisible.",
+      "Supervision of injection moulding for the first components.",
+    ],
+    fr: [
+      "Conception et calcul des pièces du pont de rouage.",
+      "Sélection des matériaux transparents et des traitements pour rendre la pièce invisible.",
+      "Pilotage de l’injection des premières pièces.",
+    ],
+    de: [
+      "Konstruktion und Berechnung der Komponenten der Räderwerksbrücke.",
+      "Auswahl transparenter Materialien und Behandlungen, um das Bauteil unsichtbar zu machen.",
+      "Betreuung des Spritzgusses der ersten Teile.",
+    ],
+    es: [
+      "Diseño y cálculo de las piezas del puente de rodaje.",
+      "Selección de materiales transparentes y tratamientos para hacer invisible la pieza.",
+      "Supervisión de la inyección de las primeras piezas.",
+    ],
+    ko: [
+      "기어 트레인 브리지 부품 설계 및 계산.",
+      "부품을 보이지 않게 하는 투명 소재 및 처리 방법 선정.",
+      "초기 부품의 사출 성형 관리.",
+    ],
+    zh: [
+      "轮系夹板零件的设计与计算。",
+      "选择透明材料及使零件隐形的处理工艺。",
+      "管理首批零件的注塑生产。",
+    ],
+  },
+  "clepsydra": {
+    en: [
+      "Contribution to the water clock concept.",
+      "Development and motorisation of the turning mechanism.",
+      "Participation in half-scale prototyping.",
+      "Functional testing.",
+    ],
+    fr: [
+      "Participation à la définition du concept de la clepsydre.",
+      "Développement et motorisation du système de retournement.",
+      "Participation au prototypage à l’échelle 1/2.",
+      "Réalisation de tests fonctionnels.",
+    ],
+    de: [
+      "Mitwirkung an der Konzeptdefinition der Wasseruhr.",
+      "Entwicklung und Motorisierung des Wendemechanismus.",
+      "Mitwirkung am Prototyp im Massstab 1:2.",
+      "Durchführung von Funktionstests.",
+    ],
+    es: [
+      "Participación en la definición del concepto de la clepsidra.",
+      "Desarrollo y motorización del sistema de volteo.",
+      "Participación en el prototipado a escala 1:2.",
+      "Realización de pruebas funcionales.",
+    ],
+    ko: [
+      "물시계 개념 정의 참여.",
+      "반전 장치 개발 및 전동화.",
+      "1/2 축척 시제품 제작 참여.",
+      "기능 시험 수행.",
+    ],
+    zh: [
+      "参与水钟概念定义。",
+      "翻转机构开发及电动驱动。",
+      "参与1:2比例原型制作。",
+      "进行功能测试。",
     ],
   },
   "transparent-clock": {

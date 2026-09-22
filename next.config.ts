@@ -168,6 +168,11 @@ const nextConfig: NextConfig = {
         destination: "/:locale/patents",
         permanent: true,
       },
+      {
+        source: "/:locale(en|fr|de|es|ko|zh)/projects/vacheron-watch-mechanics",
+        destination: "/:locale/projects",
+        permanent: true,
+      },
       ...patentFamilyRedirects,
     ];
   },

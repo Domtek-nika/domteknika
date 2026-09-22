@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import sharp from "sharp";
+import { prepareSharedProjectAssets } from "./prepare-shared-project-assets.mjs";
 
 const SOURCE_ROOT = "/Users/mathis/Domteknika/Project";
 const OUT_ROOT = path.resolve("public/assets/projects");
@@ -349,3 +350,6 @@ fs.writeFileSync(
 );
 
 console.log(`Prepared ${manifest.length} project asset folders in ${OUT_ROOT}`);
+
+// Reapply curated shared-folder illustrations after the full asset rebuild.
+await prepareSharedProjectAssets();

@@ -1,0 +1,113 @@
+[
+  {
+    "slug": "kitesurf-safety",
+    "images": [
+      {
+        "source": "260916/Sécurité de Kite Surf/Corps sécurité V10 perspective.JPG",
+        "output": "shared-01-primary-release.webp"
+      },
+      {
+        "source": "260916/Sécurité de Kite Surf/Mini Sécu V7.JPG",
+        "output": "shared-02-secondary-release.webp"
+      },
+      {
+        "source": "260916/Sécurité de Kite Surf/IMG_1106.jpg",
+        "output": "shared-03-assembled-release.webp"
+      },
+      {
+        "source": "260916/Sécurité de Kite Surf/IMG_1102.jpg",
+        "output": "shared-04-release-operation.webp"
+      }
+    ]
+  },
+  {
+    "slug": "eternal-watch",
+    "images": [
+      {
+        "source": "260916/Montre éternelle/Image1.jpg",
+        "output": "shared-01-watch-render.webp"
+      },
+      {
+        "source": "260916/Montre éternelle/1.meca.png",
+        "output": "shared-02-winding-mechanism.webp"
+      },
+      {
+        "source": "260916/Montre éternelle/Figures.pdf",
+        "page": 1,
+        "output": "shared-03-winding-figure.webp"
+      }
+    ]
+  },
+  {
+    "slug": "invisible-gear-train-bridge",
+    "images": [
+      {
+        "source": "260916/Pont de rouage invisible/Image82.jpg",
+        "output": "shared-01-transparent-bridge-front.webp"
+      },
+      {
+        "source": "260916/Pont de rouage invisible/Image87.jpg",
+        "output": "shared-02-transparent-bridge-perspective.webp"
+      }
+    ]
+  },
+  {
+    "slug": "clepsydra",
+    "images": [
+      {
+        "source": "260916/Clepsydre/Design Roger Pfound.jpg",
+        "output": "shared-01-design-concept.webp"
+      },
+      {
+        "source": "260916/Clepsydre/DSC_0042.JPG",
+        "output": "shared-02-half-scale-prototype.webp"
+      },
+      {
+        "source": "260916/Clepsydre/Photo mécanique retournement sans moteur.JPG",
+        "output": "shared-03-turning-mechanism.webp"
+      }
+    ]
+  },
+  {
+    "slug": "transparent-clock",
+    "images": [
+      {
+        "source": "260807/Horloge à fond transparent/DSC05365.JPG",
+        "output": "transparent-clock-01.webp"
+      },
+      {
+        "source": "260807/Horloge à fond transparent/Train d'engrenages sur disques - vue de devant.JPG",
+        "output": "shared-02-gear-train-cad.webp"
+      },
+      {
+        "source": "260807/Horloge à fond transparent/DSC01766.JPG",
+        "output": "shared-03-peripheral-drive.webp"
+      },
+      {
+        "source": "260807/Horloge à fond transparent/Pignons sur les disques.JPG",
+        "output": "shared-04-toothed-discs.webp"
+      }
+    ]
+  },
+  {
+    "slug": "bottom-filling-cup",
+    "images": [
+      {
+        "source": "260807/Goblet bottom filling/Bottom-fill.JPG",
+        "output": "bottom-filling-cup-01.webp"
+      },
+      {
+        "source": "260807/Goblet bottom filling/Bottom-fill-cut.JPG",
+        "output": "shared-02-valve-section.webp"
+      },
+      {
+        "source": "260807/Goblet bottom filling/DSC09249.JPG",
+        "output": "shared-03-prototype-components.webp"
+      },
+      {
+        "source": "260807/Goblet bottom filling/SAM_9633.jpg",
+        "output": "shared-04-first-series.webp"
+      }
+    ]
+  }
+]

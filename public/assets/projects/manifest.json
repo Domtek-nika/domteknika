@@ -49,29 +49,29 @@
       }
     ]
   },
-    {
-      "slug": "velum-sky-screen",
-      "sourceFolder": "VelomSkyPicture",
-      "cover": "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp",
-      "images": [
-        {
-          "source": "VelomSkyPicture/1velom.jpeg",
-          "output": "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp"
-        },
-        {
-          "source": "VelomSkyPicture/2velom.jpeg",
-          "output": "/assets/projects/velum-sky-screen/velum-sky-screen-02.webp"
-        },
-        {
-          "source": "EcranVelumSKY/_DSC7008-Modifier.jpg",
-          "output": "/assets/projects/velum-sky-screen/velum-sky-screen-03.webp"
-        },
-        {
-          "source": "VelomSkyPicture/4 velum.jpeg",
-          "output": "/assets/projects/velum-sky-screen/velum-sky-screen-04.webp"
-        }
-      ]
-    },
+  {
+    "slug": "velum-sky-screen",
+    "sourceFolder": "VelomSkyPicture",
+    "cover": "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp",
+    "images": [
+      {
+        "source": "VelomSkyPicture/1velom.jpeg",
+        "output": "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp"
+      },
+      {
+        "source": "VelomSkyPicture/2velom.jpeg",
+        "output": "/assets/projects/velum-sky-screen/velum-sky-screen-02.webp"
+      },
+      {
+        "source": "EcranVelumSKY/_DSC7008-Modifier.jpg",
+        "output": "/assets/projects/velum-sky-screen/velum-sky-screen-03.webp"
+      },
+      {
+        "source": "VelomSkyPicture/4 velum.jpeg",
+        "output": "/assets/projects/velum-sky-screen/velum-sky-screen-04.webp"
+      }
+    ]
+  },
   {
     "slug": "vacheron-watch-mechanics",
     "sourceFolder": "MontreVacheron",
@@ -553,43 +553,124 @@
   },
   {
     "slug": "transparent-clock",
-    "sourceFolder": "horloge",
+    "sourceFolder": "260807/Horloge à fond transparent",
     "cover": "/assets/projects/transparent-clock/transparent-clock-01.webp",
     "images": [
       {
-        "source": "../horloge/1.JPG",
+        "source": "../../Partage/260807/Horloge à fond transparent/DSC05365.JPG",
         "output": "/assets/projects/transparent-clock/transparent-clock-01.webp"
       },
       {
-        "source": "../horloge/2.JPG",
-        "output": "/assets/projects/transparent-clock/transparent-clock-02.webp"
+        "source": "../../Partage/260807/Horloge à fond transparent/Train d'engrenages sur disques - vue de devant.JPG",
+        "output": "/assets/projects/transparent-clock/shared-02-gear-train-cad.webp"
       },
       {
-        "source": "../horloge/3.JPG",
-        "output": "/assets/projects/transparent-clock/transparent-clock-03.webp"
+        "source": "../../Partage/260807/Horloge à fond transparent/DSC01766.JPG",
+        "output": "/assets/projects/transparent-clock/shared-03-peripheral-drive.webp"
       },
       {
-        "source": "../horloge/4.JPG",
-        "output": "/assets/projects/transparent-clock/transparent-clock-04.webp"
+        "source": "../../Partage/260807/Horloge à fond transparent/Pignons sur les disques.JPG",
+        "output": "/assets/projects/transparent-clock/shared-04-toothed-discs.webp"
       }
     ]
   },
   {
     "slug": "bottom-filling-cup",
-    "sourceFolder": "Goblet",
+    "sourceFolder": "260807/Goblet bottom filling",
     "cover": "/assets/projects/bottom-filling-cup/bottom-filling-cup-01.webp",
     "images": [
       {
-        "source": "../Goblet/1.JPG",
+        "source": "../../Partage/260807/Goblet bottom filling/Bottom-fill.JPG",
         "output": "/assets/projects/bottom-filling-cup/bottom-filling-cup-01.webp"
       },
       {
-        "source": "../Goblet/2.jpg",
-        "output": "/assets/projects/bottom-filling-cup/bottom-filling-cup-02.webp"
+        "source": "../../Partage/260807/Goblet bottom filling/Bottom-fill-cut.JPG",
+        "output": "/assets/projects/bottom-filling-cup/shared-02-valve-section.webp"
       },
       {
-        "source": "../Goblet/3.jpg",
-        "output": "/assets/projects/bottom-filling-cup/bottom-filling-cup-03.webp"
+        "source": "../../Partage/260807/Goblet bottom filling/DSC09249.JPG",
+        "output": "/assets/projects/bottom-filling-cup/shared-03-prototype-components.webp"
+      },
+      {
+        "source": "../../Partage/260807/Goblet bottom filling/SAM_9633.jpg",
+        "output": "/assets/projects/bottom-filling-cup/shared-04-first-series.webp"
+      }
+    ]
+  },
+  {
+    "slug": "kitesurf-safety",
+    "sourceFolder": "260916/Sécurité de Kite Surf",
+    "cover": "/assets/projects/kitesurf-safety/shared-01-primary-release.webp",
+    "images": [
+      {
+        "source": "../../Partage/260916/Sécurité de Kite Surf/Corps sécurité V10 perspective.JPG",
+        "output": "/assets/projects/kitesurf-safety/shared-01-primary-release.webp"
+      },
+      {
+        "source": "../../Partage/260916/Sécurité de Kite Surf/Mini Sécu V7.JPG",
+        "output": "/assets/projects/kitesurf-safety/shared-02-secondary-release.webp"
+      },
+      {
+        "source": "../../Partage/260916/Sécurité de Kite Surf/IMG_1106.jpg",
+        "output": "/assets/projects/kitesurf-safety/shared-03-assembled-release.webp"
+      },
+      {
+        "source": "../../Partage/260916/Sécurité de Kite Surf/IMG_1102.jpg",
+        "output": "/assets/projects/kitesurf-safety/shared-04-release-operation.webp"
+      }
+    ]
+  },
+  {
+    "slug": "eternal-watch",
+    "sourceFolder": "260916/Montre éternelle",
+    "cover": "/assets/projects/eternal-watch/shared-01-watch-render.webp",
+    "images": [
+      {
+        "source": "../../Partage/260916/Montre éternelle/Image1.jpg",
+        "output": "/assets/projects/eternal-watch/shared-01-watch-render.webp"
+      },
+      {
+        "source": "../../Partage/260916/Montre éternelle/1.meca.png",
+        "output": "/assets/projects/eternal-watch/shared-02-winding-mechanism.webp"
+      },
+      {
+        "source": "../../Partage/260916/Montre éternelle/Figures.pdf",
+        "page": 1,
+        "output": "/assets/projects/eternal-watch/shared-03-winding-figure.webp"
+      }
+    ]
+  },
+  {
+    "slug": "invisible-gear-train-bridge",
+    "sourceFolder": "260916/Pont de rouage invisible",
+    "cover": "/assets/projects/invisible-gear-train-bridge/shared-01-transparent-bridge-front.webp",
+    "images": [
+      {
+        "source": "../../Partage/260916/Pont de rouage invisible/Image82.jpg",
+        "output": "/assets/projects/invisible-gear-train-bridge/shared-01-transparent-bridge-front.webp"
+      },
+      {
+        "source": "../../Partage/260916/Pont de rouage invisible/Image87.jpg",
+        "output": "/assets/projects/invisible-gear-train-bridge/shared-02-transparent-bridge-perspective.webp"
+      }
+    ]
+  },
+  {
+    "slug": "clepsydra",
+    "sourceFolder": "260916/Clepsydre",
+    "cover": "/assets/projects/clepsydra/shared-01-design-concept.webp",
+    "images": [
+      {
+        "source": "../../Partage/260916/Clepsydre/Design Roger Pfound.jpg",
+        "output": "/assets/projects/clepsydra/shared-01-design-concept.webp"
+      },
+      {
+        "source": "../../Partage/260916/Clepsydre/DSC_0042.JPG",
+        "output": "/assets/projects/clepsydra/shared-02-half-scale-prototype.webp"
+      },
+      {
+        "source": "../../Partage/260916/Clepsydre/Photo mécanique retournement sans moteur.JPG",
+        "output": "/assets/projects/clepsydra/shared-03-turning-mechanism.webp"
       }
     ]
   }
