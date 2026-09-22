@@ -5,6 +5,8 @@ import { Container } from "@/components/layout/container";
 import { getDetailPageCopy } from "@/data/detail-page-copy";
 import type { Project } from "@/data/project-types";
 import { Link } from "@/i18n/navigation";
+import { getProjectServices } from "@/data/services";
+import { getServiceCopy } from "@/data/service-copy";
 
 export function ProjectDetailPage({
   locale,
@@ -14,6 +16,8 @@ export function ProjectDetailPage({
   project: Project;
 }) {
   const copy = getDetailPageCopy(locale);
+  const serviceCopy = getServiceCopy(locale);
+  const relatedServices = getProjectServices(project.id);
   const gallery = Array.from(new Set([project.image, ...(project.gallery ?? [])]));
 
   return (
@@ -106,8 +110,19 @@ export function ProjectDetailPage({
             </section>
           ) : null}
 
-          <Link href="/contact" className="mt-14 inline-flex min-h-12 items-center gap-5 rounded-[7px] bg-brand px-6 text-[14px] font-extrabold text-white shadow-[0_10px_24px_rgba(227,6,19,0.2)]">
-            {copy.contact}<ArrowUpRight className="size-4" aria-hidden />
+          {relatedServices.length > 0 ? (
+            <section className="mt-12 border-t border-border pt-8">
+              <h2 className="text-2xl font-extrabold">{serviceCopy.labels.related}</h2>
+              <ul className="mt-4 flex flex-wrap gap-x-8 gap-y-2">
+                {relatedServices.map((service) => (
+                  <li key={service.slug}><Link href={`/expertise/${service.slug}`} className="inline-flex min-h-11 items-center gap-2 text-sm font-bold text-brand hover:underline">{serviceCopy.items[service.slug].title}<ArrowUpRight className="size-4 shrink-0" aria-hidden /></Link></li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
+
+          <Link href="/contact" className="mt-14 inline-flex min-h-12 items-center gap-5 rounded-[7px] bg-brand px-6 py-3 text-[14px] font-extrabold text-white shadow-[0_10px_24px_rgba(227,6,19,0.2)]">
+            {serviceCopy.labels.contact}<ArrowUpRight className="size-4 shrink-0" aria-hidden />
           </Link>
         </article>
       </Container>

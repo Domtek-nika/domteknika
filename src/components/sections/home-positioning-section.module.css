@@ -1,0 +1,46 @@
+.visual {
+  position: relative;
+  isolation: isolate;
+  mix-blend-mode: multiply;
+}
+
+.still {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.wave {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  .introduction {
+    margin-top: -24px;
+  }
+
+  .section {
+    padding-top: 0;
+  }
+
+  .copy {
+    transform: translateX(28px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .copy {
+    transform: translateX(64px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave {
+    display: none;
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "labels": {
+    "learnMore": "Découvrir la prestation",
+    "back": "Toutes nos expertises",
+    "approach": "Notre approche",
+    "deliverables": "Livrables à définir ensemble",
+    "projects": "Exemples de réalisations",
+    "related": "Prestations liées",
+    "contact": "Discuter d’un projet similaire",
+    "ctaTitle": "Parlons de votre besoin",
+    "ctaBody": "Partagez votre objectif, vos contraintes et l’état actuel de votre projet. Nous définirons ensemble le périmètre et les livrables adaptés.",
+    "other": "Autres expertises"
+  },
+  "items": {
+    "mechanical-design": {
+      "title": "Conception mécanique en Suisse",
+      "description": "DOMTEKNIKA conçoit des produits et des mécanismes pour les industriels et les porteurs de projets, de l’architecture aux pièces prêtes à industrialiser.",
+      "approach": "Un mécanisme sur mesure, une nouvelle pièce ou un produit à repenser : nous partons de l’usage, des efforts, de l’encombrement et des contraintes de fabrication. Les choix de matériaux et d’assemblage sont intégrés dès la conception.",
+      "validation": "Les modèles CAO servent à préciser les interfaces et à préparer les validations. Selon le projet, le travail se poursuit par des prototypes, des calculs ou la mise au point des pièces pour la production.",
+      "deliverables": [
+        "Architecture mécanique et modèles CAO",
+        "Définition des pièces, interfaces et assemblages",
+        "Dossier technique adapté à la phase de développement"
+      ]
+    },
+    "prototyping": {
+      "title": "Prototypage et validation de produits",
+      "description": "DOMTEKNIKA développe des prototypes pour confronter une idée à l’usage, vérifier les mécanismes et préparer les prochaines étapes du développement.",
+      "approach": "Le prototype doit répondre à une question précise : vérifier un mouvement, tester l’ergonomie ou démontrer une fonction. Nous définissons les points à valider avant de choisir la forme et le niveau de finition du prototype.",
+      "validation": "Les essais alimentent les itérations de conception. Un démonstrateur fonctionnel et une pièce représentative de la série ne répondent pas au même besoin : le périmètre est adapté à la décision à prendre.",
+      "deliverables": [
+        "Prototype ou démonstrateur selon le besoin",
+        "Points de validation et observations d’essais",
+        "Évolutions de conception pour l’étape suivante"
+      ]
+    },
+    "simulation": {
+      "title": "Simulation mécanique et analyse pour l’injection",
+      "description": "DOMTEKNIKA accompagne la validation mécanique et l’optimisation de pièces injectées, avec des calculs par éléments finis et des analyses rhéologiques.",
+      "approach": "Avant de lancer un outillage, les calculs permettent d’étudier le comportement d’une pièce et de comparer des géométries. Les hypothèses de charge, les matériaux et les conditions d’utilisation déterminent le périmètre de l’analyse.",
+      "validation": "Pour les composants polymères, l’étude relie performance mécanique et contraintes d’injection. Les résultats orientent les modifications de géométrie et la préparation des essais ; ils ne remplacent pas la validation physique nécessaire au projet.",
+      "deliverables": [
+        "Hypothèses et cas de calcul définis ensemble",
+        "Résultats de simulation et analyse des points sensibles",
+        "Recommandations de géométrie ou de procédé"
+      ]
+    },
+    "electronics-integration": {
+      "title": "Intégration électrique et électronique",
+      "description": "DOMTEKNIKA intègre les fonctions électriques et électroniques à l’architecture mécanique de produits et de démonstrateurs.",
+      "approach": "Le développement part des fonctions attendues et de leurs interfaces : alimentation, commande, composants et encombrement. L’intégration est étudiée avec la mécanique pour rendre l’ensemble cohérent et accessible.",
+      "validation": "Nos réalisations documentent notamment des architectures de mobilité électrique et une horloge synchronisée automatiquement. Le niveau de développement, les essais et la préparation industrielle sont définis selon les besoins du projet.",
+      "deliverables": [
+        "Architecture fonctionnelle et interfaces",
+        "Intégration des composants au produit",
+        "Prototype et vérifications fonctionnelles selon le périmètre"
+      ]
+    }
+  }
+}

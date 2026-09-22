@@ -25,6 +25,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { buildPageMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
+import { services, getServicePath } from "@/data/services";
 
 function RunningPersonIcon({ className }: { className?: string }) {
   return (
@@ -299,6 +300,15 @@ function ExpertiseServiceCards({
             <p className="mt-5 max-w-[250px] text-[12.5px] font-medium leading-[1.28] text-muted-foreground sm:mt-8 sm:text-[14px] min-[1800px]:!max-w-[320px] min-[1800px]:!text-[15px] min-[1800px]:!leading-[1.35] min-[2400px]:!text-[16px]">
               {t(`items.${item.key}.description` as never)}
             </p>
+            {services.some((service) => service.key === item.key) ? (
+              <Link
+                href={getServicePath(item.key)}
+                className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-sm text-[13px] font-bold text-brand underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
+                aria-label={`${t("learnMore")} — ${t(`items.${item.key}.title` as never)}`}
+              >
+                {t("learnMore")}<ArrowRight className="size-4" aria-hidden />
+              </Link>
+            ) : null}
           </Reveal>
         );
       })}

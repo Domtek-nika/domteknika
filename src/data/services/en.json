@@ -1,0 +1,60 @@
+{
+  "labels": {
+    "learnMore": "Explore this service",
+    "back": "All expertise",
+    "approach": "Our approach",
+    "deliverables": "Deliverables to define together",
+    "projects": "Selected projects",
+    "related": "Related services",
+    "contact": "Discuss a similar project",
+    "ctaTitle": "Tell us what you need",
+    "ctaBody": "Share your objective, constraints and current development stage. Together, we will define the scope and deliverables suited to your project.",
+    "other": "Other expertise"
+  },
+  "items": {
+    "mechanical-design": {
+      "title": "Mechanical design in Switzerland",
+      "description": "DOMTEKNIKA develops products and mechanisms for industrial companies and innovators, from the initial architecture to components prepared for industrialisation.",
+      "approach": "A custom mechanism, a new component or a product redesign starts with its use, loads, available space and manufacturing constraints. Material and assembly choices are considered from the outset.",
+      "validation": "CAD models clarify interfaces and prepare validation. Depending on the project, development continues through prototypes, calculations or refinement for production.",
+      "deliverables": [
+        "Mechanical architecture and CAD models",
+        "Component, interface and assembly definition",
+        "Technical documentation appropriate to the development stage"
+      ]
+    },
+    "prototyping": {
+      "title": "Product prototyping and validation",
+      "description": "DOMTEKNIKA develops prototypes to test ideas in use, verify mechanisms and prepare the next stages of product development.",
+      "approach": "A prototype should answer a specific question: verify a movement, test ergonomics or demonstrate a function. We define what must be validated before choosing its construction and level of finish.",
+      "validation": "Testing informs design iterations. A functional demonstrator and a production-representative part serve different purposes; the scope is tailored to the decision you need to make.",
+      "deliverables": [
+        "Prototype or demonstrator suited to the need",
+        "Validation points and test observations",
+        "Design revisions for the next development stage"
+      ]
+    },
+    "simulation": {
+      "title": "Mechanical simulation and injection analysis",
+      "description": "DOMTEKNIKA supports mechanical validation and the optimisation of moulded parts through finite element calculations and rheological analysis.",
+      "approach": "Before tooling begins, calculations help study component behaviour and compare geometries. Load assumptions, materials and operating conditions define the scope of the analysis.",
+      "validation": "For polymer components, the study connects mechanical performance with injection moulding constraints. Results guide geometry changes and test preparation; they do not replace the physical validation required for the project.",
+      "deliverables": [
+        "Agreed assumptions and calculation cases",
+        "Simulation results and analysis of critical areas",
+        "Geometry or process recommendations"
+      ]
+    },
+    "electronics-integration": {
+      "title": "Electrical and electronics integration",
+      "description": "DOMTEKNIKA integrates electrical and electronic functions into the mechanical architecture of products and demonstrators.",
+      "approach": "Development begins with the required functions and interfaces: power supply, control, components and packaging. Integration is considered alongside the mechanics to create a coherent, accessible system.",
+      "validation": "Our documented work includes electric mobility architectures and an automatically synchronised clock. Development depth, testing and industrial preparation are defined around each project.",
+      "deliverables": [
+        "Functional architecture and interfaces",
+        "Component integration into the product",
+        "Prototype and functional checks within the agreed scope"
+      ]
+    }
+  }
+}

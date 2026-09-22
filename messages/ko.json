@@ -19,15 +19,17 @@
     "prototyping": "Prototyping",
     "producing": "Producing",
     "shape": "Shape your Dreams",
-    "lead": "아이디어의 첫 순간부터 양산까지, <brand>DOMTEKNIKA</brand>는 산업 기업과 혁신가를 위해 엔지니어링과 제조를 이어 줍니다. 기계공학, 맞춤형 산업 솔루션, 정밀 프로토타이핑을 <strong>스위스에서 구현합니다.</strong>",
+    "lead": "아이디어의 첫 순간부터 양산까지, <brand>DOMTEKNIKA</brand>는 산업 기업과 혁신가를 위해 엔지니어링과 제조를 이어 줍니다. 기계·전자공학, 맞춤형 산업 솔루션, 정밀 프로토타이핑을 <strong>스위스에서 구현합니다.</strong>",
     "ctaPrimary": "문의하기",
     "ctaSecondary": "전문성 보기"
   },
   "HomeIntro": {
     "breakthrough": {
       "eyebrow": "Breakthrough innovation",
+      "scrollHint": "스크롤하며 스케치가 현실이 되는 과정을 확인하세요",
       "title": "아직 존재하지 않는 것을 만듭니다",
-      "body": "방향을 결정하기 전에 여러 콘셉트를 검토하고 숨은 위험을 조기에 찾아내 시간과 투자를 가장 가능성 높은 솔루션에 집중합니다.",
+      "body": "기존의 접근법에 질문을 던지고 새로운 가능성을 탐구하며 기술적 과제의 해답을 찾습니다.",
+      "imageAlt": "아벤토르가 투명한 파동을 통과하며 스케치에서 사실적인 모습으로 바뀝니다.",
       "sequence": {
         "challenge": "과제",
         "insight": "통찰",
@@ -232,7 +234,8 @@
           "title": "전자 통합",
           "description": "연결성과 신뢰성이 필요한 제품을 위한 전자 시스템 설계 및 통합."
         }
-      }
+      },
+      "learnMore": "서비스 살펴보기"
     },
     "Swiss": {
       "title": "스위스에 뿌리를 두고. 아이디어에 형태를 더합니다.",

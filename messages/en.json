@@ -19,15 +19,17 @@
     "prototyping": "Prototyping",
     "producing": "Producing",
     "shape": "Shape your Dreams",
-    "lead": "From the first spark of an idea to serial production, <brand>DOMTEKNIKA</brand> bridges engineering and manufacturing for industrials and innovators. Mechanical engineering, tailored industrial solutions and precision prototyping <strong>made in Switzerland.</strong>",
+    "lead": "From the first spark of an idea to serial production, <brand>DOMTEKNIKA</brand> bridges engineering and manufacturing for industrials and innovators. Mechanical and electronic engineering, tailored industrial solutions and precision prototyping <strong>made in Switzerland.</strong>",
     "ctaPrimary": "Contact Us",
     "ctaSecondary": "Our expertise"
   },
   "HomeIntro": {
     "breakthrough": {
       "eyebrow": "Breakthrough innovation",
+      "scrollHint": "Scroll to move from drawing to reality",
       "title": "We create what does not yet exist",
-      "body": "Before committing to a direction, we explore multiple concepts, expose hidden risks early and focus time and investment on the solution with the greatest potential.",
+      "body": "We challenge established approaches and explore new possibilities to solve your technical challenges.",
+      "imageAlt": "The Aventor transitions from a drawing to a realistic rendering through a transparent wave.",
       "sequence": {
         "challenge": "Challenge",
         "insight": "Insight",
@@ -232,7 +234,8 @@
           "title": "Electronics Integration",
           "description": "Smart electronics design and integration for connected, reliable and intelligent products."
         }
-      }
+      },
+      "learnMore": "Explore this service"
     },
     "Swiss": {
       "title": "Rooted in Switzerland. We shape your ideas.",

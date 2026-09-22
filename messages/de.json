@@ -19,15 +19,17 @@
     "prototyping": "Prototyping",
     "producing": "Producing",
     "shape": "Shape your Dreams",
-    "lead": "Vom ersten Funken einer Idee bis zur Serienproduktion verbindet <brand>DOMTEKNIKA</brand> Entwicklung und Fertigung für Industrieunternehmen und Innovationsteams. Maschinenbau, maßgeschneiderte Industrielösungen und Präzisionsprototypen <strong>aus der Schweiz.</strong>",
+    "lead": "Vom ersten Funken einer Idee bis zur Serienproduktion verbindet <brand>DOMTEKNIKA</brand> Entwicklung und Fertigung für Industrieunternehmen und Innovationsteams. Maschinenbau, Elektronik, maßgeschneiderte Industrielösungen und Präzisionsprototypen <strong>aus der Schweiz.</strong>",
     "ctaPrimary": "Kontakt",
     "ctaSecondary": "Unsere Expertise"
   },
   "HomeIntro": {
     "breakthrough": {
       "eyebrow": "Breakthrough innovation",
+      "scrollHint": "Scrollen Sie von der Zeichnung zur Realität",
       "title": "Wir schaffen, was es noch nicht gibt",
-      "body": "Bevor wir uns auf eine Richtung festlegen, prüfen wir mehrere Konzepte, decken verborgene Risiken frühzeitig auf und konzentrieren Zeit und Investitionen auf die Lösung mit dem größten Potenzial.",
+      "body": "Wir hinterfragen etablierte Ansätze und erkunden neue Wege, um Ihre technischen Herausforderungen zu lösen.",
+      "imageAlt": "Der Aventor verwandelt sich beim Durchqueren einer transparenten Welle von einer Zeichnung in eine realistische Darstellung.",
       "sequence": {
         "challenge": "Herausforderung",
         "insight": "Erkenntnis",
@@ -232,7 +234,8 @@
           "title": "Elektronik-Integration",
           "description": "Elektronikentwicklung und -integration für vernetzte, zuverlässige und leistungsfähige Produkte."
         }
-      }
+      },
+      "learnMore": "Leistung entdecken"
     },
     "Swiss": {
       "title": "In der Schweiz verankert. Wir geben Ihren Ideen Form.",

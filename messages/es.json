@@ -19,15 +19,17 @@
     "prototyping": "Prototyping",
     "producing": "Producing",
     "shape": "Shape your Dreams",
-    "lead": "Desde la primera chispa de una idea hasta la producción en serie, <brand>DOMTEKNIKA</brand> conecta ingeniería y fabricación para empresas industriales y equipos innovadores. Ingeniería mecánica, soluciones industriales a medida y prototipos de precisión <strong>hechos en Suiza.</strong>",
+    "lead": "Desde la primera chispa de una idea hasta la producción en serie, <brand>DOMTEKNIKA</brand> conecta ingeniería y fabricación para empresas industriales y equipos innovadores. Ingeniería mecánica y electrónica, soluciones industriales a medida y prototipos de precisión <strong>hechos en Suiza.</strong>",
     "ctaPrimary": "Contacto",
     "ctaSecondary": "Nuestra experiencia"
   },
   "HomeIntro": {
     "breakthrough": {
       "eyebrow": "Breakthrough innovation",
+      "scrollHint": "Desplázate para pasar del dibujo a la realidad",
       "title": "Creamos lo que todavía no existe",
-      "body": "Antes de elegir una dirección, exploramos varios conceptos, detectamos pronto los riesgos ocultos y concentramos el tiempo y la inversión en la solución con mayor potencial.",
+      "body": "Cuestionamos los enfoques establecidos y exploramos nuevas vías para resolver sus retos técnicos.",
+      "imageAlt": "El Aventor pasa del dibujo a una representación realista al atravesar una onda transparente.",
       "sequence": {
         "challenge": "Reto",
         "insight": "Hallazgo",
@@ -232,7 +234,8 @@
           "title": "Integración electrónica",
           "description": "Diseño e integración electrónica avanzada para productos conectados, fiables y funcionales."
         }
-      }
+      },
+      "learnMore": "Ver el servicio"
     },
     "Swiss": {
       "title": "Arraigados en Suiza. Damos forma a tus ideas.",

@@ -19,15 +19,17 @@
     "prototyping": "Prototyping",
     "producing": "Producing",
     "shape": "Shape your Dreams",
-    "lead": "从最初的灵感到批量生产，<brand>DOMTEKNIKA</brand> 为工业企业和创新团队贯通工程开发与制造。机械工程、定制工业方案和精密原型开发，<strong>源自瑞士。</strong>",
+    "lead": "从最初的灵感到批量生产，<brand>DOMTEKNIKA</brand> 为工业企业和创新团队贯通工程开发与制造。机械与电子工程、定制工业方案和精密原型开发，<strong>源自瑞士。</strong>",
     "ctaPrimary": "联系我们",
     "ctaSecondary": "了解专长"
   },
   "HomeIntro": {
     "breakthrough": {
       "eyebrow": "Breakthrough innovation",
+      "scrollHint": "滚动页面，见证草图成为现实",
       "title": "创造尚未存在的事物",
-      "body": "在确定方向之前，我们会探索多个概念，尽早识别潜在风险，并将时间与投入集中在最具潜力的方案上。",
+      "body": "我们重新审视既有方法，探索新的思路，为您的技术挑战寻找解决方案。",
+      "imageAlt": "Aventor 穿过透明波面，从手绘草图转变为逼真的渲染图。",
       "sequence": {
         "challenge": "挑战",
         "insight": "洞察",
@@ -232,7 +234,8 @@
           "title": "电子集成",
           "description": "为互联、可靠且高性能的产品提供电子系统设计与集成。"
         }
-      }
+      },
+      "learnMore": "了解服务"
     },
     "Swiss": {
       "title": "植根瑞士。我们让您的想法成形。",

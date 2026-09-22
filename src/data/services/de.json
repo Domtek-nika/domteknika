@@ -1,0 +1,60 @@
+{
+  "labels": {
+    "learnMore": "Leistung entdecken",
+    "back": "Alle Kompetenzen",
+    "approach": "Unser Vorgehen",
+    "deliverables": "Gemeinsam festzulegende Ergebnisse",
+    "projects": "Ausgewählte Projekte",
+    "related": "Passende Leistungen",
+    "contact": "Ein ähnliches Projekt besprechen",
+    "ctaTitle": "Erzählen Sie uns von Ihrem Vorhaben",
+    "ctaBody": "Teilen Sie uns Ihr Ziel, Ihre Anforderungen und den aktuellen Entwicklungsstand mit. Gemeinsam legen wir den passenden Umfang und die Ergebnisse fest.",
+    "other": "Weitere Kompetenzen"
+  },
+  "items": {
+    "mechanical-design": {
+      "title": "Mechanische Konstruktion in der Schweiz",
+      "description": "DOMTEKNIKA entwickelt Produkte und Mechanismen für Industrieunternehmen und Innovatoren, von der Architektur bis zu Bauteilen für die Industrialisierung.",
+      "approach": "Ein individueller Mechanismus, ein neues Bauteil oder eine Überarbeitung beginnt mit Nutzung, Belastungen, Bauraum und Fertigungsbedingungen. Werkstoffe und Montage werden von Anfang an berücksichtigt.",
+      "validation": "CAD-Modelle klären Schnittstellen und bereiten die Validierung vor. Je nach Projekt folgen Prototypen, Berechnungen oder die Weiterentwicklung für die Fertigung.",
+      "deliverables": [
+        "Mechanische Architektur und CAD-Modelle",
+        "Definition von Bauteilen, Schnittstellen und Baugruppen",
+        "Technische Unterlagen passend zum Entwicklungsstand"
+      ]
+    },
+    "prototyping": {
+      "title": "Prototypenbau und Produktvalidierung",
+      "description": "DOMTEKNIKA entwickelt Prototypen, um Ideen im Einsatz zu prüfen, Mechanismen zu validieren und weitere Entwicklungsschritte vorzubereiten.",
+      "approach": "Ein Prototyp beantwortet eine konkrete Frage: eine Bewegung prüfen, Ergonomie testen oder eine Funktion demonstrieren. Die Prüfziele bestimmen Aufbau und Ausführung.",
+      "validation": "Versuche fliessen in die Weiterentwicklung ein. Ein Funktionsdemonstrator und ein seriennahes Bauteil erfüllen unterschiedliche Aufgaben; der Umfang richtet sich nach der anstehenden Entscheidung.",
+      "deliverables": [
+        "Bedarfsgerechter Prototyp oder Demonstrator",
+        "Prüfpunkte und Beobachtungen aus Versuchen",
+        "Konstruktionsanpassungen für den nächsten Schritt"
+      ]
+    },
+    "simulation": {
+      "title": "Mechanische Simulation und Spritzgussanalyse",
+      "description": "DOMTEKNIKA unterstützt die mechanische Validierung und Optimierung von Spritzgussteilen durch Finite-Elemente-Berechnungen und rheologische Analysen.",
+      "approach": "Vor dem Werkzeugbau helfen Berechnungen, das Bauteilverhalten zu untersuchen und Geometrien zu vergleichen. Lastannahmen, Werkstoffe und Einsatzbedingungen bestimmen die Analyse.",
+      "validation": "Bei Polymerbauteilen verbindet die Untersuchung mechanische Leistung und Spritzgussanforderungen. Ergebnisse unterstützen Geometrieänderungen und Versuche, ersetzen aber nicht die erforderliche physische Validierung.",
+      "deliverables": [
+        "Abgestimmte Annahmen und Berechnungsfälle",
+        "Simulationsergebnisse und Analyse kritischer Bereiche",
+        "Empfehlungen zu Geometrie oder Prozess"
+      ]
+    },
+    "electronics-integration": {
+      "title": "Elektrische und elektronische Integration",
+      "description": "DOMTEKNIKA integriert elektrische und elektronische Funktionen in die mechanische Architektur von Produkten und Demonstratoren.",
+      "approach": "Ausgangspunkt sind Funktionen und Schnittstellen: Versorgung, Steuerung, Komponenten und Bauraum. Die Integration wird gemeinsam mit der Mechanik entwickelt.",
+      "validation": "Dokumentierte Projekte umfassen elektrische Mobilitätsarchitekturen und eine automatisch synchronisierte Uhr. Entwicklungstiefe, Prüfungen und Produktionsvorbereitung werden projektspezifisch festgelegt.",
+      "deliverables": [
+        "Funktionsarchitektur und Schnittstellen",
+        "Integration der Komponenten in das Produkt",
+        "Prototyp und Funktionsprüfungen im vereinbarten Umfang"
+      ]
+    }
+  }
+}

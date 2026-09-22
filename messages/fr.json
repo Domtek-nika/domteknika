@@ -19,15 +19,17 @@
     "prototyping": "Prototyping",
     "producing": "Producing",
     "shape": "Shape your Dreams",
-    "lead": "De la première étincelle d'une idée à la production en série, <brand>DOMTEKNIKA</brand> relie ingénierie et fabrication pour les industriels et les innovateurs. Ingénierie mécanique, solutions industrielles sur mesure et prototypage de précision <strong>conçus en Suisse.</strong>",
+    "lead": "De la première étincelle d'une idée à la production en série, <brand>DOMTEKNIKA</brand> relie ingénierie et fabrication pour les industriels et les innovateurs. Ingénierie mécanique et électronique, solutions industrielles sur mesure et prototypage de précision <strong>conçus en Suisse.</strong>",
     "ctaPrimary": "Contact",
     "ctaSecondary": "Notre expertise"
   },
   "HomeIntro": {
     "breakthrough": {
       "eyebrow": "Breakthrough innovation",
+      "scrollHint": "Faites défiler pour passer du dessin à la réalité",
       "title": "Nous créons ce qui n’existe pas encore",
-      "body": "Avant de choisir une direction, nous explorons plusieurs concepts, révélons les risques cachés au plus tôt et concentrons le temps et l’investissement sur la solution au plus fort potentiel.",
+      "body": "Nous remettons en question les approches établies et explorons de nouvelles pistes pour répondre à vos défis techniques.",
+      "imageAlt": "L’Aventor passe du dessin au rendu réaliste à travers une onde transparente.",
       "sequence": {
         "challenge": "Défi",
         "insight": "Déclic",
@@ -232,7 +234,8 @@
           "title": "Intégration électronique",
           "description": "Conception et intégration électronique pour des produits connectés, fiables et prêts à l'usage."
         }
-      }
+      },
+      "learnMore": "Découvrir la prestation"
     },
     "Swiss": {
       "title": "Ancré en Suisse. Nous donnons forme à vos idées.",

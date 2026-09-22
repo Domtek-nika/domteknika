@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/providers/reveal";
 import { Link } from "@/i18n/navigation";
+import { getServicePath } from "@/data/services";
 
 const expertiseItems = [
   "creativity",
@@ -27,7 +28,7 @@ export function ExpertiseOverviewSection() {
   return (
     <section
       id="capabilities"
-      className="relative z-10 scroll-mt-28 bg-transparent py-10 sm:py-12 lg:py-14"
+      className="relative z-10 scroll-mt-28 bg-transparent pb-10 pt-7 sm:pb-12 sm:pt-9 lg:pb-14 lg:pt-10"
       aria-labelledby="capabilities-title"
     >
       <Container
@@ -68,7 +69,7 @@ export function ExpertiseOverviewSection() {
               {expertiseItems.map((item) => (
                 <Link
                   key={item}
-                  href="/expertise"
+                  href={getServicePath(item)}
                   aria-label={`${t("cta")} — ${t(`items.${item}.title`)}`}
                   className="group flex min-w-0 snap-none items-start gap-3.5 border-0 border-b border-border/80 bg-transparent px-5 py-3.5 transition-colors duration-300 last:border-b-0 hover:bg-brand/[0.025] focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand sm:min-w-[44%] sm:snap-start sm:gap-4 sm:rounded-[14px] sm:border sm:bg-white sm:px-4 sm:py-4 sm:last:border-b min-[920px]:block min-[920px]:min-w-0 min-[920px]:snap-none min-[920px]:rounded-none min-[920px]:border-b-0 min-[920px]:border-l min-[920px]:border-r-0 min-[920px]:border-t-0 min-[920px]:bg-transparent min-[920px]:px-6 min-[920px]:py-5 lg:py-6"
                 >

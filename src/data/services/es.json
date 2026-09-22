@@ -1,0 +1,60 @@
+{
+  "labels": {
+    "learnMore": "Ver el servicio",
+    "back": "Todas las especialidades",
+    "approach": "Nuestro enfoque",
+    "deliverables": "Entregables por definir juntos",
+    "projects": "Proyectos de referencia",
+    "related": "Servicios relacionados",
+    "contact": "Hablar de un proyecto similar",
+    "ctaTitle": "Cuéntenos qué necesita",
+    "ctaBody": "Comparta su objetivo, sus restricciones y la etapa actual del proyecto. Definiremos juntos el alcance y los entregables adecuados.",
+    "other": "Otras especialidades"
+  },
+  "items": {
+    "mechanical-design": {
+      "title": "Diseño mecánico en Suiza",
+      "description": "DOMTEKNIKA desarrolla productos y mecanismos para empresas industriales e innovadores, desde la arquitectura inicial hasta piezas preparadas para la industrialización.",
+      "approach": "Un mecanismo a medida, una pieza nueva o un rediseño parte del uso, las cargas, el espacio disponible y las restricciones de fabricación. Los materiales y el montaje se consideran desde el principio.",
+      "validation": "Los modelos CAD precisan las interfaces y preparan la validación. Según el proyecto, el desarrollo continúa con prototipos, cálculos o ajustes para producción.",
+      "deliverables": [
+        "Arquitectura mecánica y modelos CAD",
+        "Definición de piezas, interfaces y conjuntos",
+        "Documentación técnica adaptada a la etapa de desarrollo"
+      ]
+    },
+    "prototyping": {
+      "title": "Prototipado y validación de productos",
+      "description": "DOMTEKNIKA desarrolla prototipos para contrastar ideas con el uso, verificar mecanismos y preparar las siguientes etapas del desarrollo.",
+      "approach": "Un prototipo debe responder a una pregunta: verificar un movimiento, probar la ergonomía o demostrar una función. Los puntos que se deben validar determinan su construcción y acabado.",
+      "validation": "Las pruebas orientan las iteraciones de diseño. Un demostrador funcional y una pieza representativa de la serie tienen objetivos distintos; el alcance se adapta a la decisión que se debe tomar.",
+      "deliverables": [
+        "Prototipo o demostrador según la necesidad",
+        "Puntos de validación y observaciones de pruebas",
+        "Cambios de diseño para la siguiente etapa"
+      ]
+    },
+    "simulation": {
+      "title": "Simulación mecánica y análisis de inyección",
+      "description": "DOMTEKNIKA apoya la validación mecánica y la optimización de piezas inyectadas mediante cálculos por elementos finitos y análisis reológicos.",
+      "approach": "Antes de fabricar los moldes, los cálculos permiten estudiar el comportamiento de las piezas y comparar geometrías. Las cargas, los materiales y las condiciones de uso definen el análisis.",
+      "validation": "En componentes poliméricos, el estudio relaciona el rendimiento mecánico con las restricciones de inyección. Los resultados orientan cambios y ensayos; no sustituyen la validación física necesaria.",
+      "deliverables": [
+        "Hipótesis y casos de cálculo acordados",
+        "Resultados de simulación y análisis de zonas críticas",
+        "Recomendaciones de geometría o proceso"
+      ]
+    },
+    "electronics-integration": {
+      "title": "Integración eléctrica y electrónica",
+      "description": "DOMTEKNIKA integra funciones eléctricas y electrónicas en la arquitectura mecánica de productos y demostradores.",
+      "approach": "El desarrollo parte de las funciones y sus interfaces: alimentación, control, componentes y espacio disponible. La integración se estudia junto con la mecánica para obtener un conjunto coherente y accesible.",
+      "validation": "Nuestros proyectos documentados incluyen arquitecturas de movilidad eléctrica y un reloj sincronizado automáticamente. El desarrollo, las pruebas y la preparación industrial se adaptan a cada proyecto.",
+      "deliverables": [
+        "Arquitectura funcional e interfaces",
+        "Integración de componentes en el producto",
+        "Prototipo y verificaciones funcionales según el alcance"
+      ]
+    }
+  }
+}
