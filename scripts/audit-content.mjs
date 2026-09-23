@@ -80,9 +80,15 @@ for (const locale of LOCALES) {
   const maxTitleLength = locale === "ko" ? 75 : locale === "zh" ? 55 : 130;
 
   for (const patentId of patentIds) {
-    const title = titles[patentId]?.trim();
-    if (!title) {
+    if (!titles[patentId]?.trim()) {
       patentTitleIssues.push(`${locale}.${patentId}: missing editorial title`);
+    }
+  }
+
+  for (const [patentId, rawTitle] of Object.entries(titles)) {
+    const title = rawTitle.trim();
+    if (!title) {
+      patentTitleIssues.push(`${locale}.${patentId}: empty editorial title`);
       continue;
     }
     if (title.length > maxTitleLength) {
@@ -93,6 +99,9 @@ for (const locale of LOCALES) {
     }
     if (locale === "zh" && !/[\u3400-\u9fff]/u.test(title)) {
       patentTitleIssues.push(`${locale}.${patentId}: Chinese title has no Han characters`);
+    }
+    if ((locale === "ko" || locale === "zh") && /[A-Za-z]{3,}/u.test(title)) {
+      patentTitleIssues.push(`${locale}.${patentId}: untranslated Latin wording`);
     }
     if (locale !== "fr" && /\b(?:dispositif|rayonnement|détartrage)\b/iu.test(title)) {
       patentTitleIssues.push(`${locale}.${patentId}: untranslated French wording`);
@@ -113,6 +122,11 @@ for (const locale of LOCALES) {
   }
 
   if (locale !== "en") {
+    for (const patentId of Object.keys(patentLocalizations[locale] ?? {})) {
+      if (!titles[patentId]?.trim()) {
+        patentTitleIssues.push(`${locale}.${patentId}: abstract has no editorial title`);
+      }
+    }
     for (const patentId of patentIds) {
       if (!patentLocalizations[locale]?.[patentId]) {
         patentTitleIssues.push(`${locale}.${patentId}: missing abstract localization`);
