@@ -1,11 +1,12 @@
 import "server-only";
 
 import PATENT_LOCALIZATIONS from "@/data/patent-localizations.json";
+import PATENT_TITLES from "@/data/patent-titles.json";
 import { locales, type Locale } from "@/i18n/routing";
 
 import { PATENTS, type PatentRecord } from "./patents";
 
-type PatentTranslation = Pick<PatentRecord, "title" | "abstract">;
+type PatentTranslation = Pick<PatentRecord, "abstract">;
 
 const TRANSLATIONS = PATENT_LOCALIZATIONS as Record<
   Exclude<Locale, "en">,
@@ -26,14 +27,13 @@ function resolveLocale(locale: string): Locale {
 
 export function getLocalizedPatents(locale: string) {
   const resolvedLocale = resolveLocale(locale);
-  if (resolvedLocale === "en") return PATENTS;
-
-  const translations = TRANSLATIONS[resolvedLocale];
+  const translations = resolvedLocale === "en" ? undefined : TRANSLATIONS[resolvedLocale];
+  const titles = PATENT_TITLES[resolvedLocale] as Record<string, string>;
   return PATENTS.map((patent) => {
     const translation = translations?.[patent.id];
     return {
       ...patent,
-      title: translation?.title || patent.title,
+      title: titles[patent.id] || patent.title,
       abstract: translation?.abstract || patent.abstract,
     };
   });

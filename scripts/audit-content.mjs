@@ -5,6 +5,9 @@ import ts from "typescript";
 const LOCALES = ["en", "fr", "de", "es", "ko", "zh"];
 const PROJECTS_SOURCE = "src/components/sections/projects-page-content.tsx";
 const PATENTS_SOURCE = "src/data/patents.ts";
+const PATENT_TITLES = "src/data/patent-titles.json";
+const PATENT_LOCALIZATIONS = "src/data/patent-localizations.json";
+const PROJECTS_GENERATED = "src/data/projects.generated.json";
 const PROJECT_ASSET_MANIFEST = "public/assets/projects/manifest.json";
 
 function readText(filePath) {
@@ -66,6 +69,59 @@ hasErrors =
     "Project links reference missing patent IDs:",
     relatedPatentIds.filter((patentId) => !patentIds.has(patentId)),
   ) || hasErrors;
+
+const patentTitles = readJson(PATENT_TITLES);
+const patentLocalizations = readJson(PATENT_LOCALIZATIONS);
+const generatedProjects = readJson(PROJECTS_GENERATED);
+const patentTitleIssues = [];
+
+for (const locale of LOCALES) {
+  const titles = patentTitles[locale] ?? {};
+  const maxTitleLength = locale === "ko" ? 75 : locale === "zh" ? 55 : 130;
+
+  for (const patentId of patentIds) {
+    const title = titles[patentId]?.trim();
+    if (!title) {
+      patentTitleIssues.push(`${locale}.${patentId}: missing editorial title`);
+      continue;
+    }
+    if (title.length > maxTitleLength) {
+      patentTitleIssues.push(`${locale}.${patentId}: title is ${title.length} characters`);
+    }
+    if (locale === "ko" && !/[가-힣]/u.test(title)) {
+      patentTitleIssues.push(`${locale}.${patentId}: Korean title has no Hangul`);
+    }
+    if (locale === "zh" && !/[\u3400-\u9fff]/u.test(title)) {
+      patentTitleIssues.push(`${locale}.${patentId}: Chinese title has no Han characters`);
+    }
+    if (locale !== "fr" && /\b(?:dispositif|rayonnement|détartrage)\b/iu.test(title)) {
+      patentTitleIssues.push(`${locale}.${patentId}: untranslated French wording`);
+    }
+    if (/(?:e\.g\.|i\.e\.|par ex\.|z\. ?B\.|p\. ?e\.)/iu.test(title)) {
+      patentTitleIssues.push(`${locale}.${patentId}: title contains source-summary shorthand`);
+    }
+  }
+
+  for (const project of generatedProjects[locale] ?? []) {
+    for (const patent of project.relatedPatents ?? []) {
+      if (patent.title !== titles[patent.patentId]) {
+        patentTitleIssues.push(
+          `${locale}.${project.id}.${patent.patentId}: project title differs from patent title`,
+        );
+      }
+    }
+  }
+
+  if (locale !== "en") {
+    for (const patentId of patentIds) {
+      if (!patentLocalizations[locale]?.[patentId]) {
+        patentTitleIssues.push(`${locale}.${patentId}: missing abstract localization`);
+      }
+    }
+  }
+}
+
+hasErrors = reportIssue("Patent title quality and project consistency:", patentTitleIssues) || hasErrors;
 
 function nodeName(node) {
   if (ts.isIdentifier(node) || ts.isStringLiteral(node) || ts.isNumericLiteral(node)) {

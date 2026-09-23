@@ -37,6 +37,7 @@ import {
 
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/providers/reveal";
+import PATENT_TITLES from "@/data/patent-titles.json";
 import { Link } from "@/i18n/navigation";
 import { getProjectCardImageFitClass } from "@/lib/project-card-image";
 import { cn } from "@/lib/utils";
@@ -2685,15 +2686,19 @@ export function resolveProjectsLocale(locale: string): ProjectsLocale {
 function localizeRelatedPatents(
   relatedPatents: Project["relatedPatents"],
   locale: ProjectsLocale,
+  localizeNotes: boolean,
 ): Project["relatedPatents"] {
   if (!relatedPatents?.length) return relatedPatents;
 
-  const noteTranslations = RELATED_PATENT_NOTE_TRANSLATIONS[locale];
-  if (!noteTranslations) return relatedPatents;
+  const noteTranslations = localizeNotes
+    ? RELATED_PATENT_NOTE_TRANSLATIONS[locale]
+    : undefined;
+  const titles = PATENT_TITLES[locale] as Record<string, string>;
 
   return relatedPatents.map((patent) => ({
     ...patent,
-    note: noteTranslations[patent.patentId as RelatedPatentId] ?? patent.note,
+    title: titles[patent.patentId] || patent.title,
+    note: noteTranslations?.[patent.patentId as RelatedPatentId] ?? patent.note,
   }));
 }
 
@@ -3812,16 +3817,14 @@ export function getProjectsForLocale(
   const localizedProjects = ALL_PROJECTS.map((project) => {
     const localizedProject = localizeProject(project, overrides);
     const projectOverride = overrides[project.id];
-    const projectWithLocalizedPatents =
-      projectOverride?.relatedPatents || resolvedLocale === "en"
-        ? localizedProject
-        : {
-            ...localizedProject,
-            relatedPatents: localizeRelatedPatents(
-              localizedProject.relatedPatents,
-              resolvedLocale,
-            ),
-          };
+    const projectWithLocalizedPatents = {
+      ...localizedProject,
+      relatedPatents: localizeRelatedPatents(
+        localizedProject.relatedPatents,
+        resolvedLocale,
+        !projectOverride?.relatedPatents && resolvedLocale !== "en",
+      ),
+    };
 
     return withProjectScope(projectWithLocalizedPatents, resolvedLocale);
   });

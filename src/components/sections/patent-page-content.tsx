@@ -43,6 +43,7 @@ import { Reveal } from "@/components/providers/reveal";
 import { RelatedProjectCard } from "@/components/sections/related-project-card";
 import { Button } from "@/components/ui/button";
 import PATENT_LOCALIZATIONS from "@/data/patent-localizations.json";
+import PATENT_TITLES from "@/data/patent-titles.json";
 import type { ProjectLink } from "@/data/project-types";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
@@ -60,7 +61,7 @@ import {
 type PatentLocale = "en" | "fr" | "de" | "es" | "ko" | "zh";
 type FilterKey = "all" | PatentFilterKey;
 type PatentSortKey = "date-desc" | "date-asc" | "publication" | "title";
-type PatentTranslation = Pick<PatentRecord, "title" | "abstract">;
+type PatentTranslation = Pick<PatentRecord, "abstract">;
 
 const PATENT_TRANSLATIONS = PATENT_LOCALIZATIONS as Record<
   Exclude<PatentLocale, "en">,
@@ -1065,17 +1066,17 @@ export function PatentPageContent({
   const stats = STATS[resolvedLocale];
   const filters = FILTERS[resolvedLocale];
   const localizedPatents = useMemo(() => {
-    if (resolvedLocale === "en") return PATENTS;
-
-    const translations =
-      PATENT_TRANSLATIONS[resolvedLocale as Exclude<PatentLocale, "en">];
+    const translations = resolvedLocale === "en"
+      ? undefined
+      : PATENT_TRANSLATIONS[resolvedLocale as Exclude<PatentLocale, "en">];
+    const titles = PATENT_TITLES[resolvedLocale] as Record<string, string>;
 
     return PATENTS.map((patent) => {
       const translation = translations?.[patent.id];
 
       return {
         ...patent,
-        title: translation?.title || patent.title,
+        title: titles[patent.id] || patent.title,
         abstract: translation?.abstract || patent.abstract,
       };
     });

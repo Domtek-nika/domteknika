@@ -6,7 +6,7 @@
     "predev": "node scripts/prepare-map-worker.mjs",
     "dev": "next dev",
     "prebuild": "node scripts/prepare-map-worker.mjs",
-    "build": "npm run typecheck && next build",
+    "build": "npm run typecheck && npm run audit:content && next build",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit",
