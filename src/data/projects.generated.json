@@ -30,6 +30,7 @@
     },
     {
       "id": "special-t-machine",
+      "temporarilyDisabled": true,
       "category": "Household Products",
       "filter": "household",
       "title": "Capsule tea machine",
@@ -818,6 +819,7 @@
     },
     {
       "id": "special-t-machine",
+      "temporarilyDisabled": true,
       "category": "Appareils ménagers",
       "filter": "household",
       "title": "Machine à thé à capsules",
@@ -1606,6 +1608,7 @@
     },
     {
       "id": "special-t-machine",
+      "temporarilyDisabled": true,
       "category": "Haushaltsprodukte",
       "filter": "household",
       "title": "Kapsel-Teemaschine",
@@ -2394,6 +2397,7 @@
     },
     {
       "id": "special-t-machine",
+      "temporarilyDisabled": true,
       "category": "Productos para el hogar",
       "filter": "household",
       "title": "Máquina de té en cápsulas",
@@ -3182,6 +3186,7 @@
     },
     {
       "id": "special-t-machine",
+      "temporarilyDisabled": true,
       "category": "생활용품",
       "filter": "household",
       "title": "캡슐 티 머신",
@@ -3970,6 +3975,7 @@
     },
     {
       "id": "special-t-machine",
+      "temporarilyDisabled": true,
       "category": "家居用品",
       "filter": "household",
       "title": "胶囊茶饮机",

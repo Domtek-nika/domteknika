@@ -7,6 +7,8 @@ import { getProjectBySlug, getProjectSlugs } from "@/data/projects";
 import type { Locale } from "@/i18n/routing";
 import { buildPageMetadata, localizedUrl, SITE_URL } from "@/lib/seo";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getProjectSlugs().map((slug) => ({ slug }));
 }

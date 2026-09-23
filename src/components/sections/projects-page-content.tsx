@@ -64,6 +64,7 @@ const PROJECT_IMAGE_ZOOM_SELECTOR = "[data-project-image-zoom]";
 export type Project = {
   id: string;
   hiddenFromCatalog?: boolean;
+  temporarilyDisabled?: boolean;
   category: string;
   filter?: Exclude<FilterKey, "all">;
   title: string;
@@ -1024,6 +1025,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "special-t-machine",
+    temporarilyDisabled: true,
     category: "Household Products",
     filter: "household",
     title: "Capsule tea machine",
@@ -3831,7 +3833,9 @@ export function getProjectsForLocale(
 
   return options?.includeHidden
     ? localizedProjects
-    : localizedProjects.filter((project) => !project.hiddenFromCatalog);
+    : localizedProjects.filter(
+        (project) => !project.hiddenFromCatalog && !project.temporarilyDisabled,
+      );
 }
 
 export function getPatentLinkedProjectsForLocale(

@@ -18,17 +18,21 @@ export function getProjectsForLocale(
   const projects = PROJECTS_BY_LOCALE[resolveLocale(locale)];
   return options?.includeHidden
     ? projects
-    : projects.filter((project) => !project.hiddenFromCatalog);
+    : projects.filter(
+        (project) => !project.hiddenFromCatalog && !project.temporarilyDisabled,
+      );
 }
 
 export function getProjectBySlug(locale: string, slug: string) {
   return getProjectsForLocale(locale, { includeHidden: true }).find(
-    (project) => project.id === slug.toLowerCase(),
+    (project) => project.id === slug.toLowerCase() && !project.temporarilyDisabled,
   );
 }
 
 export function getProjectSlugs() {
-  return PROJECTS_BY_LOCALE.en.map((project) => project.id);
+  return PROJECTS_BY_LOCALE.en
+    .filter((project) => !project.temporarilyDisabled)
+    .map((project) => project.id);
 }
 
 export function getPatentProjectLinks(locale: string) {

@@ -17,6 +17,7 @@ export type RelatedPatent = {
 export type Project = {
   id: string;
   hiddenFromCatalog?: boolean;
+  temporarilyDisabled?: boolean;
   category: string;
   filter?: ProjectSectorKey;
   title: string;
