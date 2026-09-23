@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/providers/reveal";
 import { Link } from "@/i18n/navigation";
-import { getServicePath } from "@/data/services";
 
 const expertiseItems = [
   "creativity",
@@ -67,11 +66,9 @@ export function ExpertiseOverviewSection() {
 
             <div className="flex flex-col gap-0 overflow-visible p-0 sm:flex-row sm:snap-x sm:snap-mandatory sm:gap-3 sm:overflow-x-auto sm:overscroll-x-contain sm:scroll-px-4 sm:px-4 sm:py-4 sm:[scrollbar-width:none] sm:[&::-webkit-scrollbar]:hidden min-[920px]:grid min-[920px]:grid-cols-4 min-[920px]:gap-0 min-[920px]:overflow-visible min-[920px]:p-0">
               {expertiseItems.map((item) => (
-                <Link
+                <div
                   key={item}
-                  href={getServicePath(item)}
-                  aria-label={`${t("cta")} — ${t(`items.${item}.title`)}`}
-                  className="group flex min-w-0 snap-none items-start gap-3.5 border-0 border-b border-border/80 bg-transparent px-5 py-3.5 transition-colors duration-300 last:border-b-0 hover:bg-brand/[0.025] focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand sm:min-w-[44%] sm:snap-start sm:gap-4 sm:rounded-[14px] sm:border sm:bg-white sm:px-4 sm:py-4 sm:last:border-b min-[920px]:block min-[920px]:min-w-0 min-[920px]:snap-none min-[920px]:rounded-none min-[920px]:border-b-0 min-[920px]:border-l min-[920px]:border-r-0 min-[920px]:border-t-0 min-[920px]:bg-transparent min-[920px]:px-6 min-[920px]:py-5 lg:py-6"
+                  className="flex min-w-0 snap-none items-start gap-3.5 border-0 border-b border-border/80 bg-transparent px-5 py-3.5 last:border-b-0 sm:min-w-[44%] sm:snap-start sm:gap-4 sm:rounded-[14px] sm:border sm:bg-white sm:px-4 sm:py-4 sm:last:border-b min-[920px]:block min-[920px]:min-w-0 min-[920px]:snap-none min-[920px]:rounded-none min-[920px]:border-b-0 min-[920px]:border-l min-[920px]:border-r-0 min-[920px]:border-t-0 min-[920px]:bg-transparent min-[920px]:px-6 min-[920px]:py-5 lg:py-6"
                 >
                   <span className="flex size-10 shrink-0 items-center justify-center rounded-[11px] bg-brand/[0.07] ring-1 ring-brand/[0.06] sm:size-11 sm:rounded-[12px] min-[920px]:size-10 min-[920px]:rounded-full min-[920px]:ring-0">
                     <Image
@@ -84,7 +81,7 @@ export function ExpertiseOverviewSection() {
                   </span>
 
                   <span className="min-w-0 flex-1 min-[920px]:block">
-                    <span className="block text-[15px] font-extrabold leading-[1.2] tracking-[-0.01em] text-foreground transition-colors duration-300 group-hover:text-brand min-[920px]:mt-3">
+                    <span className="block text-[15px] font-extrabold leading-[1.2] tracking-[-0.01em] text-foreground min-[920px]:mt-3">
                       {t(`items.${item}.title`)}
                     </span>
                     <span className="mt-1 block text-pretty text-[12px] font-medium leading-[1.4] text-muted-foreground sm:mt-1.5 sm:leading-[1.45]">
@@ -92,13 +89,7 @@ export function ExpertiseOverviewSection() {
                     </span>
                   </span>
 
-                  <span
-                    className="mt-1 shrink-0 text-[15px] leading-none text-brand/70 transition-transform duration-300 group-hover:translate-x-0.5 min-[920px]:hidden"
-                    aria-hidden
-                  >
-                    →
-                  </span>
-                </Link>
+                </div>
               ))}
             </div>
           </div>

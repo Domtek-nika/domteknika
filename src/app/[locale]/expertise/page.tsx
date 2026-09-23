@@ -25,7 +25,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { buildPageMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
-import { services, getServicePath } from "@/data/services";
 
 function RunningPersonIcon({ className }: { className?: string }) {
   return (
@@ -288,10 +287,10 @@ function ExpertiseServiceCards({
             as="article"
             key={item.key}
             delay={(startIndex + index) * 0.05}
-            className="group flex min-h-[220px] flex-col items-center justify-center rounded-[7px] border border-border bg-white px-3 py-6 text-center transition-shadow duration-300 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] sm:min-h-[246px] sm:px-6 sm:py-8 min-[1800px]:!min-h-[270px] min-[1800px]:!px-8 min-[2400px]:!min-h-[292px]"
+            className="flex min-h-[220px] flex-col items-center justify-center rounded-[7px] border border-border bg-white px-3 py-6 text-center sm:min-h-[246px] sm:px-6 sm:py-8 min-[1800px]:!min-h-[270px] min-[1800px]:!px-8 min-[2400px]:!min-h-[292px]"
           >
             <Icon
-              className="size-9 stroke-[1.8] text-brand transition-transform duration-300 group-hover:-translate-y-1 sm:size-10 min-[1800px]:!size-12 min-[2400px]:!size-[52px]"
+              className="size-9 stroke-[1.8] text-brand sm:size-10 min-[1800px]:!size-12 min-[2400px]:!size-[52px]"
               aria-hidden
             />
             <h3 className="mt-6 text-[14px] font-extrabold leading-tight text-foreground sm:mt-8 sm:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[20px]">
@@ -300,15 +299,6 @@ function ExpertiseServiceCards({
             <p className="mt-5 max-w-[250px] text-[12.5px] font-medium leading-[1.28] text-muted-foreground sm:mt-8 sm:text-[14px] min-[1800px]:!max-w-[320px] min-[1800px]:!text-[15px] min-[1800px]:!leading-[1.35] min-[2400px]:!text-[16px]">
               {t(`items.${item.key}.description` as never)}
             </p>
-            {services.some((service) => service.key === item.key) ? (
-              <Link
-                href={getServicePath(item.key)}
-                className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-sm text-[13px] font-bold text-brand underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
-                aria-label={`${t("learnMore")} — ${t(`items.${item.key}.title` as never)}`}
-              >
-                {t("learnMore")}<ArrowRight className="size-4" aria-hidden />
-              </Link>
-            ) : null}
           </Reveal>
         );
       })}

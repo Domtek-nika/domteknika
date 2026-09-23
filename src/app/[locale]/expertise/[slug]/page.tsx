@@ -25,12 +25,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = getService(slug);
   if (!service) notFound();
   const copy = getServiceCopy(locale).items[service.slug];
-  return buildPageMetadata({
+  const metadata = buildPageMetadata({
     locale,
     path: `/expertise/${service.slug}`,
     title: `${copy.title} — DOMTEKNIKA`,
     description: copy.description,
   });
+  return {
+    ...metadata,
+    robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
+  };
 }
 
 export default async function ServicePage({ params }: Props) {
