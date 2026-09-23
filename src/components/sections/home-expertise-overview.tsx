@@ -34,7 +34,7 @@ export function ExpertiseOverviewSection() {
         size="wide"
         className="relative z-10 max-w-[1460px] min-[1800px]:max-w-[1520px]"
       >
-        <Reveal>
+        <Reveal initiallyHidden>
           <div className="overflow-hidden rounded-[18px] border border-border/80 bg-white/[0.96] shadow-[0_18px_50px_rgba(17,17,17,0.055)] sm:rounded-[10px] lg:grid lg:grid-cols-[minmax(240px,0.72fr)_minmax(0,2.28fr)]">
             <div className="border-b border-border/80 px-5 py-5 sm:px-7 sm:py-6 lg:border-b-0 lg:border-r lg:px-8 lg:py-7">
               <p className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.13em] text-brand sm:text-[11px] sm:tracking-[0.12em]">

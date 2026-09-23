@@ -18,6 +18,8 @@ const variants: Variants = {
 interface RevealProps {
   children: ReactNode;
   className?: string;
+  /** Begin hidden so an in-view block can animate when first revealed. */
+  initiallyHidden?: boolean;
   /** Delay in seconds before the reveal animation starts. */
   delay?: number;
   /** Keep the reveal hidden until the page has been scrolled by this amount. */
@@ -40,6 +42,7 @@ interface RevealProps {
 export function Reveal({
   children,
   className,
+  initiallyHidden = false,
   delay = 0,
   minimumScrollY = 0,
   minimumScrollYDesktopOnly = false,
@@ -102,7 +105,10 @@ export function Reveal({
     const element = elementRef.current;
     if (!element) return;
 
-    if (isDisabledOnCurrentScreen()) {
+    if (
+      isDisabledOnCurrentScreen() ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
       setStateImmediately("visible");
       return;
     }
@@ -116,10 +122,13 @@ export function Reveal({
       rect.top < viewportHeight + 120 &&
       rect.bottom > -120;
 
-    setStateImmediately(shouldStartVisible ? "visible" : "hidden");
+    if (shouldStartVisible && initiallyHidden) reveal();
+    else setStateImmediately(shouldStartVisible ? "visible" : "hidden");
   }, [
     getEffectiveMinimumScrollY,
+    initiallyHidden,
     isDisabledOnCurrentScreen,
+    reveal,
     setStateImmediately,
   ]);
 
@@ -163,7 +172,7 @@ export function Reveal({
       }}
       data-reveal
       variants={variants}
-      initial={false}
+      initial={initiallyHidden ? "hidden" : false}
       animate={controls}
       viewport={{ once: true, margin: "-80px" }}
       onViewportEnter={() => {

@@ -19,6 +19,7 @@ export function ProcessSection() {
       >
         <div className="grid gap-3 lg:grid-cols-[1.08fr_1.58fr_1.52fr] lg:items-stretch min-[1800px]:!gap-4 min-[2300px]:!gap-5">
           <Reveal
+            initiallyHidden
             as="article"
             className="group flex min-h-[200px] flex-col justify-start rounded-[15px] border border-border bg-white p-4 transition-shadow duration-300 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] md:min-h-[220px] md:p-5 md:pt-6 min-[1800px]:!min-h-[260px] min-[1800px]:!rounded-[18px] min-[1800px]:!p-6 min-[2300px]:!min-h-[300px] min-[2300px]:!p-7"
           >
@@ -39,6 +40,7 @@ export function ProcessSection() {
           </Reveal>
 
           <Reveal
+            initiallyHidden
             as="article"
             delay={0.08}
             className="group relative z-20 my-0 min-h-[210px] overflow-hidden rounded-[15px] bg-brand p-4 text-white transition-shadow duration-300 md:aspect-[1.75] md:min-h-[250px] md:p-6 lg:min-h-[220px] lg:p-5 lg:pt-6 lg:shadow-[0_24px_42px_rgba(0,0,0,0.24)] lg:hover:shadow-[0_34px_70px_rgba(0,0,0,0.28)] min-[1800px]:!rounded-[18px] min-[1800px]:!p-6 min-[2300px]:!p-7"
@@ -66,6 +68,7 @@ export function ProcessSection() {
           </Reveal>
 
           <Reveal
+            initiallyHidden
             as="article"
             delay={0.16}
             className="group min-h-[210px] overflow-hidden rounded-[15px] border border-border bg-white transition-shadow duration-300 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] md:min-h-[220px] min-[1800px]:!min-h-[260px] min-[1800px]:!rounded-[18px] min-[2300px]:!min-h-[300px]"

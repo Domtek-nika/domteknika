@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
+import aventorImage from "@/assets/breakthrough/aventor-transonic-keyframe-v2-logo-corrected-q98.webp";
+
 import { createAventorLiquidRenderer } from "./aventor-liquid-renderer";
 import { AVENTOR_FLOW_COLUMNS, AVENTOR_FLOW_SAMPLES } from "./aventor-liquid-motion";
 import styles from "./home-positioning-section.module.css";
@@ -79,13 +81,10 @@ export function AventorWaveVisual({ alt }: { alt: string }) {
     <div ref={visualRef} className={styles.visual}>
       <Image
         ref={imageRef}
-        src="/assets/breakthrough/aventor-transonic-keyframe-v2-logo-corrected.png"
+        src={aventorImage}
         alt={alt}
-        width={1671}
-        height={941}
-        quality={100}
+        unoptimized
         loading="eager"
-        sizes="(min-width: 1800px) 855px, (min-width: 1024px) 60vw, (min-width: 640px) 880px, 100vw"
         className={styles.still}
         draggable={false}
         onLoad={(event) => setImageSource(event.currentTarget.currentSrc)}

@@ -32,7 +32,7 @@ export function CtaSection() {
         size="wide"
         className="relative z-10 min-[2300px]:!max-w-[1900px]"
       >
-        <Reveal className="max-w-[920px] min-[1800px]:max-w-[1000px] min-[2300px]:!max-w-[1040px]">
+        <Reveal initiallyHidden className="max-w-[920px] min-[1800px]:max-w-[1000px] min-[2300px]:!max-w-[1040px]">
           <div className="flex items-center gap-3 text-[16px] font-medium text-muted-foreground min-[1800px]:gap-4 min-[1800px]:text-[20px] min-[2300px]:!gap-4 min-[2300px]:!text-[20px]">
             <span className="h-[3px] w-[34px] bg-brand min-[1800px]:h-[3px] min-[1800px]:w-[52px] min-[2300px]:!h-[3px] min-[2300px]:!w-[52px]" aria-hidden />
             {t("eyebrow")}

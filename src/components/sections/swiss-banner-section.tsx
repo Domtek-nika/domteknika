@@ -50,7 +50,7 @@ export function SwissBannerSection() {
         size="wide"
         className="relative z-10 flex min-h-[130px] max-w-none items-center justify-start px-5 py-2 text-left sm:px-8 md:min-h-[160px] md:px-10 md:py-3 lg:min-h-[190px] lg:px-12 lg:py-4 min-[1800px]:min-h-[300px] min-[1800px]:max-w-none min-[1800px]:!px-20 min-[1800px]:!py-7 min-[2300px]:!min-h-[320px] min-[2300px]:!px-24 min-[2300px]:!py-8"
       >
-        <Reveal className="flex w-full max-w-[1080px] items-center justify-start gap-4 text-left md:gap-6 min-[1800px]:!max-w-[1320px] min-[1800px]:!gap-8 min-[2300px]:!max-w-[1400px]">
+        <Reveal initiallyHidden className="flex w-full max-w-[1080px] items-center justify-start gap-4 text-left md:gap-6 min-[1800px]:!max-w-[1320px] min-[1800px]:!gap-8 min-[2300px]:!max-w-[1400px]">
           <Image
             src="/assets/flag-switzerland.webp"
             alt=""
