@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import ts from "typescript";
 
-const LOCALES = ["en", "fr", "de", "es", "ko", "zh"];
+const LOCALES = ["en", "fr", "de", "es", "ko", "zh", "ja"];
 const PROJECTS_SOURCE = "src/components/sections/projects-page-content.tsx";
 const PATENTS_SOURCE = "src/data/patents.ts";
 const PATENT_TITLES = "src/data/patent-titles.json";
@@ -77,7 +77,7 @@ const patentTitleIssues = [];
 
 for (const locale of LOCALES) {
   const titles = patentTitles[locale] ?? {};
-  const maxTitleLength = locale === "ko" ? 75 : locale === "zh" ? 55 : 130;
+  const maxTitleLength = locale === "ko" ? 75 : locale === "zh" ? 55 : locale === "ja" ? 75 : 130;
 
   for (const patentId of patentIds) {
     if (!titles[patentId]?.trim()) {
@@ -99,6 +99,9 @@ for (const locale of LOCALES) {
     }
     if (locale === "zh" && !/[\u3400-\u9fff]/u.test(title)) {
       patentTitleIssues.push(`${locale}.${patentId}: Chinese title has no Han characters`);
+    }
+    if (locale === "ja" && !/[\u3040-\u30ff\u3400-\u9fff]/u.test(title)) {
+      patentTitleIssues.push(`${locale}.${patentId}: Japanese title has no Japanese characters`);
     }
     if ((locale === "ko" || locale === "zh") && /[A-Za-z]{3,}/u.test(title)) {
       patentTitleIssues.push(`${locale}.${patentId}: untranslated Latin wording`);
@@ -269,6 +272,7 @@ const overrideVariables = {
   es: "ES_PROJECT_OVERRIDES",
   ko: "KO_PROJECT_OVERRIDES",
   zh: "ZH_PROJECT_OVERRIDES",
+  ja: "JA_PROJECT_OVERRIDES",
 };
 const relatedPatentTranslationKeys = collectRelatedPatentTranslationKeys();
 

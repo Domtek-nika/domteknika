@@ -30,6 +30,7 @@ const CONTACT_BUBBLE_IMAGES = [
 
 export function Navbar() {
   const t = useTranslations("Nav");
+  const footerT = useTranslations("Footer");
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileNavVisible, setMobileNavVisible] = useState(true);
@@ -184,7 +185,7 @@ export function Navbar() {
     <header className="fixed inset-x-0 top-0 z-[900]">
       <nav
         className="relative isolate mx-auto hidden h-[80px] max-w-[1180px] rounded-b-[50px] min-[810px]:block min-[1800px]:h-[84px] min-[1800px]:max-w-[1480px] min-[2400px]:h-[92px] min-[2400px]:max-w-[1600px]"
-        aria-label="Primary"
+        aria-label={footerT("navigationLabel")}
       >
         <div
           className="absolute inset-0 rounded-b-[50px] bg-white/75 shadow-[0_2px_10px_rgba(0,0,0,0.12)]"
@@ -214,7 +215,7 @@ export function Navbar() {
           <Link
             href="/"
             className="inline-flex w-fit rounded-[7px] outline-none focus-visible:ring-2 focus-visible:ring-brand/40"
-            aria-label="DOMTEKNIKA home"
+            aria-label={`DOMTEKNIKA ${t("home")}`}
           >
             <Logo className="w-[132px] min-[1800px]:w-[150px] min-[2400px]:w-[160px]" />
           </Link>
@@ -283,7 +284,7 @@ export function Navbar() {
           <Link
             href="/"
             className="inline-flex min-w-0 rounded-[7px] outline-none focus-visible:ring-2 focus-visible:ring-brand/40"
-            aria-label="DOMTEKNIKA home"
+            aria-label={`DOMTEKNIKA ${t("home")}`}
             onClick={() => setMobileOpen(false)}
           >
             <Logo className="w-[142px]" />
@@ -395,7 +396,7 @@ export function Navbar() {
                   <Link
                     href="/"
                     className="inline-flex rounded-[7px] outline-none focus-visible:ring-2 focus-visible:ring-brand/40"
-                    aria-label="DOMTEKNIKA home"
+                    aria-label={`DOMTEKNIKA ${t("home")}`}
                     onClick={() => setMobileOpen(false)}
                   >
                     <Logo className="w-[126px]" />

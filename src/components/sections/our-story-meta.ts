@@ -1,4 +1,4 @@
-type StoryLocale = "en" | "fr" | "de" | "es" | "ko" | "zh";
+type StoryLocale = "en" | "fr" | "de" | "es" | "ko" | "zh" | "ja";
 
 const metaCopy = {
   en: {
@@ -30,6 +30,11 @@ const metaCopy = {
     title: "DOMTEKNIKA - 我们的故事",
     description:
       "了解 DOMTEKNIKA 自 1998 年以来在产品工程、出行、医疗技术和原型开发方面的重要历程。",
+  },
+  ja: {
+    title: "DOMTEKNIKA | 私たちの歩み",
+    description:
+      "1998 年の創業以来、DOMTEKNIKA が製品開発、モビリティ、医療技術、試作で積み重ねてきた歩みをご紹介します。",
   },
 } satisfies Record<StoryLocale, { title: string; description: string }>;
 

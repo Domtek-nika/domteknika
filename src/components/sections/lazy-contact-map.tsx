@@ -28,6 +28,7 @@ const LOAD_LABELS: Record<string, string> = {
   es: "Cargar el mapa interactivo",
   ko: "인터랙티브 지도 불러오기",
   zh: "加载交互式地图",
+  ja: "インタラクティブマップをロードする",
 };
 
 export function LazyContactMap({ label }: { label: string }) {

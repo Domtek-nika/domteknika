@@ -40,7 +40,7 @@ import {
 } from "@/data/patents";
 import { cn } from "@/lib/utils";
 
-type PatentLocale = "en" | "fr" | "de" | "es" | "ko" | "zh";
+type PatentLocale = "en" | "fr" | "de" | "es" | "ko" | "zh" | "ja";
 
 type PanelRect = {
   left: number;
@@ -147,6 +147,14 @@ const CATEGORY_LABELS: Record<PatentLocale, Record<PatentFilterKey, string>> = {
     energy: "能源",
     materials: "材料",
     digital: "数字",
+  },
+  ja: {
+    mobility: "モビリティ",
+    industrial: "製品",
+    medical: "医療",
+    energy: "エネルギー",
+    materials: "材料",
+    digital: "デジタル",
   },
 };
 
@@ -360,6 +368,41 @@ const PATENT_DIALOG_COPY: Record<PatentLocale, PatentDialogCopy> = {
     citing: "引用文献",
     loading: "正在加载已验证专利记录...",
     unavailable: "此部分没有本地文本。",
+  },
+  ja: {
+    close: "特許の詳細を閉じる",
+    eyebrow: "保護されたイノベーション",
+    overview: "特許の概要",
+    tags: "特許タグ",
+    category: "カテゴリ",
+    publication: "公開番号",
+    publicationDate: "公開日",
+    priorityDate: "優先日",
+    inventors: "発明者",
+    applicants: "出願人",
+    application: "出願番号",
+    classification: "分類",
+    alsoPublishedAs: "他の公開番号",
+    images: "図面",
+    openDrawing: "図面を開く",
+    closeDrawing: "図面を閉じる",
+    previousDrawing: "前の図面",
+    nextDrawing: "次の図面",
+    rotateDrawing: "図面を回転する",
+    zoomInDrawing: "図面を拡大する",
+    zoomOutDrawing: "図面を縮小する",
+    openImageViewer: "画像ビューアを開く",
+    vectorPdf: "ベクトルPDF",
+    sourceLinks: "Espacenet の公式情報",
+    downloadPdfs: "PDFをダウンロードする",
+    fullDescription: "明細書",
+    claims: "特許請求の範囲",
+    legalStatus: "法的状況",
+    family: "INPADOC 特許ファミリー",
+    cited: "引用文献",
+    citing: "この特許を引用した文献",
+    loading: "確認済みの特許情報を読み込み中...",
+    unavailable: "この項目の本文はありません。",
   },
 };
 

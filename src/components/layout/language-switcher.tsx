@@ -22,6 +22,7 @@ const LANGUAGE_NAMES: Record<Locale, string> = {
   es: "Español",
   ko: "한국어",
   zh: "中文",
+  ja: "日本語",
 };
 
 const LANGUAGE_BADGES: Record<Locale, string> = {
@@ -31,6 +32,7 @@ const LANGUAGE_BADGES: Record<Locale, string> = {
   es: "ES",
   ko: "KO",
   zh: "ZH",
+  ja: "JA",
 };
 
 export function LanguageSwitcher({ className }: { className?: string }) {

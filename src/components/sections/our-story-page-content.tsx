@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useLocale } from "next-intl";
 import { ArrowUpRight, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
@@ -15,7 +16,7 @@ import {
 import { useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
-type StoryLocale = "en" | "fr" | "de" | "es" | "ko" | "zh";
+type StoryLocale = "en" | "fr" | "de" | "es" | "ko" | "zh" | "ja";
 type CardKey =
   | "founded"
   | "cree"
@@ -98,6 +99,7 @@ const LOCATION_DIALOG_COPY: Record<
   es: { eyebrow: "Nuestra dirección", title: "DOMTEKNIKA en La Neuveville", address: "Chem. de Saint-Joux 16B\n2520 La Neuveville\nSuiza", openMaps: "Abrir en Google Maps", close: "Cerrar el mapa" },
   ko: { eyebrow: "회사 주소", title: "La Neuveville의 DOMTEKNIKA", address: "Chem. de Saint-Joux 16B\n2520 La Neuveville\n스위스", openMaps: "Google 지도에서 열기", close: "지도 닫기" },
   zh: { eyebrow: "公司地址", title: "位于 La Neuveville 的 DOMTEKNIKA", address: "Chem. de Saint-Joux 16B\n2520 La Neuveville\n瑞士", openMaps: "在 Google 地图中打开", close: "关闭地图" },
+  ja: { eyebrow: "所在地", title: "La Neuveville の DOMTEKNIKA", address: "Chem. de Saint-Joux 16B\n2520 La Neuveville\nスイス", openMaps: "Google マップで開く", close: "地図を閉じる" },
 };
 
 const STORY_COPY: Record<StoryLocale, StoryCopy> = {
@@ -617,6 +619,92 @@ const STORY_COPY: Record<StoryLocale, StoryCopy> = {
       },
     },
   },
+  ja: {
+    eyebrow: "1998年からの歩み",
+    title: "私たちの歩み",
+    intro:
+      "DOMTEKNIKA は、エンジニアの Jean-Luc Thuliez によって 1998 年に設立されました。25 年以上にわたり、複雑な技術課題を信頼できる製品へと変えてきました。構想・試作からシミュレーション、電子技術、量産に向けた開発まで、私たちの歩みを代表的なプロジェクトとともにご紹介します。",
+    cards: {
+      founded: {
+        year: "1998",
+        title: "スイス・La Neuveville で創業",
+        description:
+          "DOMTEKNIKA は La Neuveville で創業しました。創造性、機械設計、ポリマー技術を組み合わせ、アイデアを実際の製品に変えることを目指しました。",
+        icon: "box",
+      },
+      cree: {
+        year: "2001",
+        title: "SAM CREE ― 電動モビリティの原点",
+        description:
+          "Jean-Luc Thuliez は DOMTEKNIKA の設立前、別の会社に在籍していた時期に SAM CREE の開発に参加しました。この超軽量電動三輪車での経験は、その後のモビリティ設計にもつながっています。",
+        icon: "box",
+      },
+      swissbiomed: {
+        year: "2009",
+        title: "SwissBiomed ― 医療技術への展開",
+        description:
+          "SwissBiomed の設立を機に、DOMTEKNIKA は医療機器の開発へ活動を広げました。精密機械設計、材料の知識、試作技術を組み合わせています。",
+        icon: "monitor",
+      },
+      startup: {
+        year: "2011-2013",
+        title: "スタートアップの革新で 3 年連続受賞",
+        description:
+          "Smart Bottle、スキンケア機器、自動注射器など、スタートアップの構想を製品開発へつなげ、スマート製品、美容、医療技術の分野で受賞につながりました。",
+        icon: "document",
+        awards: true,
+      },
+      totalCar: {
+        year: "2013",
+        title: "Total Car",
+        description:
+          "Total Car では、バイオ由来の樹脂とリサイクル可能な構造を取り入れた車両設計を検討し、より環境に配慮した製造の可能性を探りました。",
+        icon: "globe",
+      },
+      aventor: {
+        year: "2014",
+        title: "Aventor ― 電動車両の可能性を試す",
+        description:
+          "2012 年に始まった Aventor は、DOMTEKNIKA の社内プロジェクトです。電気系統と機械構造を設計し、三輪・四輪の両仕様を試作。その後、独立したスタートアップへと発展しました。",
+        icon: "document",
+      },
+      boneFixation: {
+        year: "2014",
+        title: "骨固定システム",
+        description:
+          "DePuy Synthes 向けに開発した樹脂製の骨固定システム。手術で扱いやすく、骨を正確かつ安定して固定できるよう設計しました。",
+        icon: "document",
+      },
+      softcar: {
+        year: "2015",
+        title: "SOFTCAR の構想",
+        description:
+          "2006〜2007 年に構想が始まった SOFTCAR は、完全電動仕様も想定するハイブリッド車のプラットフォームです。DOMTEKNIKA が電気系統と機械構造の設計・試作を主導した後、独立したスタートアップに開発が引き継がれました。現在も開発が続いています。",
+        icon: "globe",
+      },
+      stajvelo: {
+        year: "2018",
+        title: "Stajvelo ― 樹脂技術を生かした電動自転車",
+        description:
+          "DOMTEKNIKA は樹脂部品の設計技術を Stajvelo に生かし、構造の一体感と快適さ、デザイン、乗る楽しさを備えた都市型電動自転車の開発に参加しました。",
+        icon: "document",
+      },
+      softcarReveal: {
+        year: "2024",
+        title: "SOFTCAR の発表",
+        description:
+          "SOFTCAR の新しい都市型車両が発表されました。長年の軽量化技術と、資源を循環させるモビリティの研究が具体的な製品に結び付きました。",
+        icon: "globe",
+      },
+      today: {
+        year: "現在",
+        title: "次の製品を形にする",
+        description:
+          "DOMTEKNIKA は設計、解析、電子技術、製造の知識を組み合わせ、産業、医療、モビリティ分野の構想を試作品へと育てる取り組みを続けています。",
+        icon: "document",
+      },
+    },
+  },
 };
 
 const MEDIA: Record<
@@ -780,6 +868,20 @@ const MEDIA: Record<
       },
     ],
   },
+};
+
+const JA_MEDIA_ALT: Record<string, string> = {
+  "/assets/our-story/la-neuveville.jpg": "La Neuveville 近郊のビール湖の風景",
+  "/assets/our-story/cree.png": "緑色の CREE 電動車両の試作品",
+  "/assets/our-story/smart-bottle-ethimedix.png": "Smart Bottle のコンセプト画像",
+  "/assets/our-story/personal-injector.png": "自動注射器の製品イメージ",
+  "/assets/our-story/total-car-expo.jpg": "展示会で公開された Total Car の試作品",
+  "/assets/our-story/total-car.png": "サーキットを走る Aventor",
+  "/assets/our-story/bone-fixation-production.jpg": "骨固定システムの試作品",
+  "/assets/projects/airsmile/airsmile-01.webp": "AirSmile の携帯型歯科ケア機器",
+  "/assets/our-story/softcar-concept.png": "白い SOFTCAR のコンセプト車両",
+  "/assets/our-story/stajvelo.png": "コンクリート壁の前に置かれた STAJVELO の電動自転車",
+  "/assets/our-story/softcar-v1.png": "発表された黄色い SOFTCAR",
 };
 
 const TIMELINE_ROWS: TimelineRow[] = [
@@ -1204,6 +1306,7 @@ function TimelineMedia({
   onOpenProject: (projectId: string) => void;
   onOpenLocationMap?: () => void;
 }) {
+  const locale = useLocale();
   return (
     <div
       className={cn(
@@ -1229,7 +1332,7 @@ function TimelineMedia({
             <div className="relative bg-muted/30 px-2 pt-2 min-[1800px]:!px-3 min-[1800px]:!pt-3 min-[2400px]:!px-4 min-[2400px]:!pt-4">
             <Image
               src={image.src}
-              alt={image.alt}
+              alt={locale === "ja" ? JA_MEDIA_ALT[image.src] ?? image.alt : image.alt}
               width={image.width}
               height={image.height}
               loading={image.loading ?? "lazy"}
@@ -1249,8 +1352,8 @@ function TimelineMedia({
               className="absolute inset-0 cursor-pointer rounded-[7px] outline-none focus-visible:ring-2 focus-visible:ring-brand/50"
               aria-label={
                 onOpenLocationMap
-                  ? "Open DOMTEKNIKA location map"
-                  : `Open project: ${image.title}`
+                  ? locale === "ja" ? "DOMTEKNIKA の所在地を地図で見る" : "Open DOMTEKNIKA location map"
+                  : locale === "ja" ? `${image.title} のプロジェクトを見る` : `Open project: ${image.title}`
               }
               onClick={() => {
                 if (onOpenLocationMap) {

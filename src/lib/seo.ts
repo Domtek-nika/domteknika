@@ -20,6 +20,7 @@ const OPEN_GRAPH_LOCALES: Record<Locale, string> = {
   en: "en_US",
   es: "es_ES",
   fr: "fr_CH",
+  ja: "ja_JP",
   ko: "ko_KR",
   zh: "zh_CN",
 };
@@ -29,6 +30,7 @@ const HREF_LANGS: Record<Locale, string> = {
   en: "en",
   es: "es",
   fr: "fr",
+  ja: "ja",
   ko: "ko",
   zh: "zh-Hans",
 };
@@ -156,7 +158,7 @@ export function organizationJsonLd(locale: string) {
           contactType: "business enquiries",
           email: "contact@domteknika.ch",
           telephone: "+41 32 751 71 46",
-          availableLanguage: ["de", "en", "es", "fr", "ko", "zh"],
+          availableLanguage: ["de", "en", "es", "fr", "ja", "ko", "zh"],
         },
       },
       {

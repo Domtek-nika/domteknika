@@ -58,7 +58,7 @@ import {
   type PatentSourceLinks,
 } from "@/data/patents";
 
-type PatentLocale = "en" | "fr" | "de" | "es" | "ko" | "zh";
+type PatentLocale = "en" | "fr" | "de" | "es" | "ko" | "zh" | "ja";
 type FilterKey = "all" | PatentFilterKey;
 type PatentSortKey = "date-desc" | "date-asc" | "publication" | "title";
 type PatentTranslation = Pick<PatentRecord, "abstract">;
@@ -233,6 +233,23 @@ const STATS: Record<PatentLocale, PatentStat[]> = {
       icon: CalendarDays,
       value: `自 ${PATENT_STATS.since} 年`,
       label: "20 多年创新",
+    },
+  ],
+  ja: [
+    {
+      icon: FileBadge2,
+      value: String(PATENT_STATS.total),
+      label: "確認済みの特許",
+    },
+    {
+      icon: Target,
+      value: String(PATENT_STATS.categories),
+      label: "主要分野",
+    },
+    {
+      icon: CalendarDays,
+      value: `${PATENT_STATS.since}年から`,
+      label: "20年以上のイノベーション",
     },
   ],
 };
@@ -433,6 +450,39 @@ const FILTERS: Record<PatentLocale, PatentFilterOption[]> = {
     {
       key: "digital",
       label: "数字",
+      icon: Cpu,
+    },
+  ],
+  ja: [
+    { key: "all", label: "すべて" },
+    {
+      key: "mobility",
+      label: "モビリティ",
+      icon: CarFront,
+    },
+    {
+      key: "industrial",
+      label: "製品",
+      icon: Cog,
+    },
+    {
+      key: "medical",
+      label: "医療",
+      icon: HeartPulse,
+    },
+    {
+      key: "energy",
+      label: "エネルギー",
+      icon: Zap,
+    },
+    {
+      key: "materials",
+      label: "材料",
+      icon: Layers3,
+    },
+    {
+      key: "digital",
+      label: "デジタル",
       icon: Cpu,
     },
   ],
@@ -971,6 +1021,82 @@ const COPY: Record<
       titleQuestion: "?",
       body: "我们与具有前瞻性的企业合作，将复杂挑战转化为切实可行且可制造的解决方案。",
       button: "启动您的项目",
+    },
+  },
+  ja: {
+    hero: {
+      eyebrow: "特許で守られた技術",
+      title: "特許",
+      leadOne:
+        "長年にわたる研究と設計開発、複雑な課題への取り組みが、DOMTEKNIKA の特許に形として残っています。",
+      leadTwo:
+        "さまざまな産業分野で生まれた技術をご覧ください。",
+    },
+    archiveTitle: "技術革新の記録",
+    filtersLabel: "特許を絞り込む",
+    noResults: "このカテゴリに一致する特許はありません。",
+    searchPlaceholder: "名称、発明者、出願人、公開番号を検索...",
+    resultsLabel: "件の特許",
+    filterCountLabel: "件",
+    sort: {
+      label: "並べ替え",
+      options: [
+        { key: "date-desc", label: "新しい順" },
+        { key: "date-asc", label: "古い順" },
+        { key: "publication", label: "公開番号順" },
+        { key: "title", label: "タイトル A ～ Z" },
+      ],
+    },
+    deposited: "公開:",
+    details: {
+      close: "特許の詳細を閉じる",
+      eyebrow: "保護されたイノベーション",
+      overview: "特許の概要",
+      tags: "特許タグ",
+      category: "カテゴリ",
+      publication: "公開番号",
+      publicationDate: "公開日",
+      priorityDate: "優先日",
+      inventors: "発明者",
+      applicants: "出願人",
+      application: "出願番号",
+      classification: "分類",
+      alsoPublishedAs: "他の公開番号",
+      images: "図面",
+      openDrawing: "図面を開く",
+      closeDrawing: "図面を閉じる",
+      previousDrawing: "前の図面",
+      nextDrawing: "次の図面",
+      rotateDrawing: "図面を回転する",
+      zoomInDrawing: "図面を拡大する",
+      zoomOutDrawing: "図面を縮小する",
+      openImageViewer: "画像ビューアを開く",
+      vectorPdf: "ベクトルPDF",
+      sourceLinks: "Espacenet の公式情報",
+      downloadPdfs: "PDFをダウンロードする",
+      linkedProjects: "リンクされたプロジェクト",
+      openLinkedProject: "プロジェクトを開く",
+      openFullPage: "特許の詳細ページを開く",
+      fullDescription: "明細書",
+      claims: "特許請求の範囲",
+      legalStatus: "法的状況",
+      family: "INPADOC 特許ファミリー",
+      cited: "引用文献",
+      citing: "この特許を引用した文献",
+      loading: "確認済みの特許情報を読み込み中...",
+      unavailable: "この項目の本文はありません。",
+    },
+    card: {
+      openDetails: "特許の詳細を見る",
+      matchedPublication: "該当する公開番号",
+    },
+    cta: {
+      eyebrow: "一緒に開発しましょう",
+      titlePrefix: ".",
+      title: "技術課題を一緒に解決しませんか",
+      titleQuestion: "?",
+      body: "複雑な課題を、実際に使えて製造できる解決策へ。企業とともに取り組みます。",
+      button: "プロジェクトを相談する",
     },
   },
 };

@@ -4732,5 +4732,794 @@
         "为下降过程中完全悬臂的屏幕设计导向、刚度和驱动系统。"
       ]
     }
+  ],
+  "ja": [
+    {
+      "id": "aventor",
+      "category": "モビリティ",
+      "filter": "mobility",
+      "title": "Aventor",
+      "description": "Aventor は DOMTEKNIKA の社内発プロジェクト。電気系統と機械構造の設計から試作まで手がけ、その後、独立したスタートアップへ発展しました。",
+      "image": "/assets/projects/aventor/aventor-01.webp",
+      "imageAlt": "走行コース上の緑色の電気自動車 Aventor",
+      "tags": [
+        "#2012",
+        "#EV",
+        "#Prototype"
+      ],
+      "overview": "2012 年に始まった Aventor は、DOMTEKNIKA が構想から試作まで手がけた社内の電気自動車プロジェクトです。電気系統と機械構造を設計し、三輪・四輪の両仕様で実機を製作しました。開発はその後、独立したスタートアップに引き継がれました。",
+      "relatedPatents": [
+        {
+          "patentId": "EP3261867A2",
+          "publication": "EP3261867 (A2)",
+          "title": "一人乗り電動車両",
+          "note": "Aventor SA に直接関連する、一人乗り電気自動車の構造に関する特許です。"
+        }
+      ],
+      "scope": [
+        "電気系統と機械構造を DOMTEKNIKA が一貫して設計。",
+        "2012 年以降、三輪・四輪の両仕様を検討。",
+        "社内で試作・検証を重ね、開発は独立したスタートアップへ引き継がれました。"
+      ]
+    },
+    {
+      "id": "special-t-machine",
+      "temporarilyDisabled": true,
+      "category": "家庭用品",
+      "filter": "household",
+      "title": "カプセルティーマシン",
+      "description": "カプセルを扱う抽出ヘッドの機構とお茶の抽出品質を改良し、量産化も見据えたティーマシン。",
+      "image": "/assets/projects/special-t-machine/tea-machine-01.webp",
+      "imageAlt": "カプセル式ティーマシンの抽出ユニット試作品",
+      "tags": [
+        "#2008",
+        "#Tea",
+        "#BrewingUnit"
+      ],
+      "overview": "既存の抽出ヘッド試作品を基に、DOMTEKNIKA はカプセルの保持方法、閉じる動き、カプセルの検知と開封、お茶の流れを改良しました。蒸気がカプセル内にたまらない仕組みも開発して抽出品質を高め、抽出ヘッドや複数の部品の量産化を支援しました。",
+      "relatedPatents": [
+        {
+          "patentId": "US2011061534A1",
+          "publication": "US2011061534 (A1)",
+          "title": "飲料製造装置",
+          "note": "茶カプセルマシン用飲料製造装置として、WO2009135899としても公開されました。"
+        }
+      ],
+      "scope": [
+        "ティーカプセルマシンの抽出ユニットを開発。",
+        "カプセルの保持・検知・開封・排出と、お茶の流れを検証。",
+        "試験生産を支援し、特許 WO2009135899 に関連する渦流部品も検討しました。"
+      ]
+    },
+    {
+      "id": "stajvelo-rv01",
+      "category": "モビリティ",
+      "filter": "mobility",
+      "title": "STAJVELO RV01",
+      "description": "モナコの STAJVELO 向け都市型電動自転車。射出成形の構造部品と独自のホイールを、製品全体のデザインに統合しました。",
+      "image": "/assets/projects/stajvelo-rv01/stajvelo-rv01-01.webp",
+      "imageAlt": "走行コース上の電動自転車 STAJVELO RV01",
+      "tags": [
+        "#2017",
+        "#E-bike",
+        "#Polymer"
+      ],
+      "overview": "DOMTEKNIKA は STAJVELO の都市型電動自転車について、初期構想からホイールの設計、ポリマー製構造部品の開発まで担当し、量産を見据えた製品仕様にまとめました。",
+      "scope": [
+        "高級都市型電動自転車のポリマー構造と射出成形複合材を設計。",
+        "ホイール、フレーム、部品を一体化し、製品の個性を形にしました。",
+        "量産できる形状と丈夫な部品接合部を目指して CAD を調整。"
+      ]
+    },
+    {
+      "id": "softcar",
+      "category": "モビリティ",
+      "filter": "mobility",
+      "title": "SOFTCAR",
+      "description": "電動仕様にも対応できる小型ハイブリッド車のプラットフォーム。DOMTEKNIKA が電気・機械設計から試作まで一貫して開発しました。",
+      "image": "/assets/projects/softcar/softcar-01.webp",
+      "imageAlt": "オープンドアの黄色の SOFTCAR コンパクトシティ車両",
+      "tags": [
+        "#2006",
+        "#Hybrid",
+        "#Ongoing"
+      ],
+      "overview": "SOFTCAR の最初の構想は 2006〜2007 年にさかのぼります。DOMTEKNIKA は社内プロジェクトとして電気系統・機械構造の設計と試作を主導し、その後、独立したスタートアップが設立されました。開発は現在も続いており、ハイブリッド車を基本としながら完全電動仕様も想定しています。",
+      "relatedPatents": [
+        {
+          "patentId": "WO2026078588A1",
+          "publication": "WO2026078588 (A1)",
+          "title": "超軽量でリサイクル可能なダッシュボード",
+          "note": "成形時に設ける機能や空気の通り道を一体化した、超軽量でリサイクル可能なダッシュボードです。"
+        },
+        {
+          "patentId": "EP4488027A1",
+          "publication": "EP4488027 (A1)",
+          "title": "強化された回転成形ボディ",
+          "note": "軽量な車体部品を作るための、補強を伴う回転成形技術です。"
+        },
+        {
+          "patentId": "EP4705115A1",
+          "publication": "EP4705115 (A1)",
+          "title": "車両ホイールリム用ディフレクター",
+          "note": "SOFTCAR のホイール周囲の空気の流れと、空力性能を考えたカバーに関するリム用部品です。"
+        },
+        {
+          "patentId": "EP4680511A1",
+          "publication": "EP4680511 (A1)",
+          "title": "リサイクル可能なステアリングホイール",
+          "note": "環境負荷の少ない車内を目指した、リサイクル可能なステアリングホイールの構造です。"
+        },
+        {
+          "patentId": "US2024326565A1",
+          "publication": "US2024326565 (A1)",
+          "title": "車両ドア",
+          "note": "複雑な車体形状にも対応し、限られた空間で乗り降りしやすくするドアの構造です。"
+        },
+        {
+          "patentId": "EP3744622A1",
+          "publication": "EP3744622 (A1)",
+          "title": "車両のアーキテクチャ",
+          "note": "SOFTCAR の車両構造に関する特許群です。"
+        },
+        {
+          "patentId": "EP3393889A1",
+          "publication": "EP3393889 (A1)",
+          "title": "車両のアーキテクチャ",
+          "note": "軽量な構造と車体の構想を扱う、SOFTCAR の初期の特許です。"
+        },
+        {
+          "patentId": "US2025129628A1",
+          "publication": "US2025129628 (A1)",
+          "title": "二酸化炭素排出量が低い自動車工場",
+          "note": "製造工程の構想につながる、CO₂ 排出量の少ない自動車工場のコンセプトです。"
+        }
+      ],
+      "scope": [
+        "完全電動仕様にも対応可能な都市型ハイブリッド車の構想。",
+        "DOMTEKNIKA が電気系統・機械構造の設計と試作を一貫して担当。",
+        "2006〜2007 年に社内で始まり、独立したスタートアップを経て開発が続いています。"
+      ]
+    },
+    {
+      "id": "sam-cree",
+      "hiddenFromCatalog": true,
+      "category": "モビリティ",
+      "filter": "mobility",
+      "title": "SAM CREE",
+      "description": "DOMTEKNIKA 設立前に Jean-Luc Thuliez が開発に携わった、超軽量の電動三輪車。",
+      "image": "/assets/projects/sam-cree/sam-cree-01.webp",
+      "imageAlt": "オレンジ色のオープンキャノピー付き電動三輪車 SAM CREE",
+      "tags": [
+        "#1993",
+        "#EV",
+        "#ThreeWheeler"
+      ],
+      "overview": "Jean-Luc Thuliez は DOMTEKNIKA の設立前、別の会社に在籍していた時期に SAM CREE の開発に参加しました。前後に並ぶ座席と中央の梁を使った車台を備え、都市で使いやすい小型の電動三輪車を模索した経験は、その後の設計にもつながりました。",
+      "scope": [
+        "DOMTEKNIKA の設立前に開発された超軽量の電動三輪車。",
+        "Jean-Luc Thuliez が別の会社に在籍中に開発へ参加。",
+        "前後に並ぶ座席と中央の梁を使った車台で、小型の都市型車両を模索しました。"
+      ]
+    },
+    {
+      "id": "angel-interceptor",
+      "category": "モビリティ",
+      "filter": "mobility",
+      "title": "Angel Interceptor",
+      "description": "DOMTEKNIKA が電気系統と機械構造の設計から試作まで手がけた、二輪の電気自動車コンセプト。",
+      "image": "/assets/projects/angel-interceptor/angel-interceptor-01.webp",
+      "imageAlt": "エンジェル インターセプター三輪車の側面断面 CAD スタディ",
+      "tags": [
+        "#2008",
+        "#EV",
+        "#TwoWheeler"
+      ],
+      "overview": "2008 年頃に始まった Angel Interceptor は、DOMTEKNIKA が電気系統と機械構造の設計から試作まで担った社内プロジェクトです。開発は社内で進められ、独立したスタートアップには発展しませんでした。",
+      "scope": [
+        "2008 年頃に始まった二輪の電気自動車コンセプト。",
+        "電気系統と機械構造を DOMTEKNIKA が設計。",
+        "社内で試作を進め、独立したスタートアップは設立されませんでした。"
+      ]
+    },
+    {
+      "id": "ikitty",
+      "category": "家庭用品",
+      "filter": "household",
+      "title": "猫用ウェットフード自動給餌器",
+      "description": "数日間の留守を想定した猫用ウェットフード自動給餌器。小分けカートリッジと、臭いを抑える使用済み容器の管理機構を備えています。",
+      "image": "/assets/projects/ikitty/ikitty-01.webp",
+      "imageAlt": "自動キャットフードディスペンサーの機能プロトタイプ",
+      "tags": [
+        "#2023",
+        "#PetTech",
+        "#Mechanism"
+      ],
+      "overview": "飼い主が数日間留守にしてもウェットフードを自動で与えられるよう、使用済みの容器も臭いを抑えて保管する構想です。DOMTEKNIKA は包装から本体へカプセルを装填しやすくするカートリッジを開発し、機能する試作機を製作しました。使用済みカプセルや包装の圧縮機構を改良し、製品設計のデジタル化と各機能を新しい筐体に収める作業にも参加しました。",
+      "scope": [
+        "カプセルの装填と給餌の仕組みを中心に製品を設計。",
+        "親しみやすい外観と、内部機構を収める構造を両立。",
+        "断面図と試作品で補充のしやすさや動作を検証しました。"
+      ]
+    },
+    {
+      "id": "instant-coffee-dispenser",
+      "category": "家庭用品",
+      "filter": "household",
+      "title": "インスタントコーヒーマシン",
+      "description": "さまざまなインスタントコーヒーや溶解性飲料から、エスプレッソに近い仕上がりを目指す低コストのコーヒーマシン。",
+      "image": "/assets/projects/instant-coffee-dispenser/instant-coffee-dispenser-01.webp",
+      "imageAlt": "手の操作が可能な可溶性コーヒーマシンのプロトタイプ",
+      "tags": [
+        "#2006",
+        "#Appliance",
+        "#Prototype"
+      ],
+      "overview": "DOMTEKNIKA は機械全体を開発し、量産化に向けた初期検討を行いました。さまざまなインスタントコーヒーや粉末飲料に対応しています。カプチーノを作る際も牛乳を内部の配管に通さない設計とし、残留物を抑えて衛生管理や清掃を容易にしました。その後、大手コーヒーマシンブランド向けの製品として市場に投入されました。",
+      "relatedPatents": [
+        {
+          "patentId": "EP2000065A1",
+          "publication": "EP2000065 (A1)",
+          "title": "可溶性成分と希釈剤を混合して飲料を製造するための装置および方法",
+          "note": "可溶性の原料から飲料を作る際の混合室と空気の流れに関する技術です。"
+        },
+        {
+          "patentId": "US2010173057A1",
+          "publication": "US2010173057 (A1)",
+          "title": "可溶性成分および希釈剤から発泡液体を製造するための装置および方法",
+          "note": "可溶性の原料と希釈液から、泡立った飲料を作る方法です。"
+        },
+        {
+          "patentId": "US2009320941A1",
+          "publication": "US2009320941 (A1)",
+          "title": "多方弁装置",
+          "note": "小型飲料機器の多方弁と、決まった量を供給する制御方式です。"
+        }
+      ],
+      "scope": [
+        "機械全体を開発し、初期の量産化検討を実施。",
+        "さまざまなインスタントコーヒーや粉末飲料に対応する低コストの構造。",
+        "エスプレッソに近い仕上がりを目指し、牛乳は内部配管に通さず残留物を抑えます。",
+        "その後、大手コーヒーマシンブランド向けに製品化されました。"
+      ]
+    },
+    {
+      "id": "totalcar-concept",
+      "category": "モビリティ",
+      "filter": "mobility",
+      "title": "Total Car",
+      "description": "Hutchinson と Total グループ向けに開発した三輪の技術実証車。シャシー、駆動用電子回路、回転成形の車体パネルを設計しました。",
+      "image": "/assets/projects/totalcar-concept/total-car-01.webp",
+      "imageAlt": "展示された緑色の三輪技術実証車 Total Car",
+      "tags": [
+        "#2011",
+        "#Demonstrator",
+        "#ThreeWheeler",
+        "#Rotomoulding"
+      ],
+      "overview": "当時 Total グループに属していた Hutchinson の依頼を受け、DOMTEKNIKA は三輪の技術実証車を開発しました。車台から駆動用電子回路、回転成形による車体パネルまで設計しています。",
+      "scope": [
+        "Hutchinson が Total グループ向けに依頼した三輪の技術実証車。",
+        "DOMTEKNIKA が車台と駆動用電子回路を設計。",
+        "回転成形の車体部品を開発し、走行可能な実証車に組み込みました。"
+      ]
+    },
+    {
+      "id": "airsmile",
+      "category": "家庭用品",
+      "filter": "household",
+      "title": "家庭用ホワイトニング機器",
+      "description": "歯科用エアフロー装置の原理を応用した、電源不要の家庭用歯のホワイトニング機器。1 回使い切りのカートリッジを使用します。",
+      "image": "/assets/projects/airsmile/airsmile-01.webp",
+      "imageAlt": "家庭用歯のホワイトニング機器と使い切りカートリッジ",
+      "tags": [
+        "#2007",
+        "#Dental",
+        "#Device"
+      ],
+      "overview": "歯科医院で使われるエアフロー装置の仕組みを家庭向けに応用した機器で、電気を使わずに動作します。使い切りのカートリッジが、1 回の処置に必要な噴射ガスと有効成分を供給します。DOMTEKNIKA は製品全体を開発し、試作品の製作と性能試験を経て、量産に向けた設計まで進めました。",
+      "relatedPatents": [
+        {
+          "patentId": "CH701083B1",
+          "publication": "CH701083 (B1)",
+          "title": "歯のスケーリングとホワイトニングを同時に行う装置",
+          "note": "カートリッジと噴射機構を使い、歯のクリーニングとホワイトニングを行う装置に関する特許です。"
+        }
+      ],
+      "scope": [
+        "手になじみ、親しみやすい外観の歯科用機器を検討。",
+        "取り外す部品や使い切りカートリッジを本体に収める構造を設計。",
+        "複数の試作品で使いやすさと外観の違いを確認しました。"
+      ]
+    },
+    {
+      "id": "flex-drill",
+      "category": "医療機器",
+      "filter": "medical",
+      "title": "柔軟な整形外科ドリル",
+      "description": "軽さ、製造コスト、医療用の滅菌への対応を両立させた、柔軟なポリマー製の整形外科器具。",
+      "image": "/assets/projects/flex-drill/flex-drill-01.webp",
+      "imageAlt": "青色のポリマーボディを備えた柔軟な整形外科用ドリル",
+      "tags": [
+        "#2014",
+        "#Orthopaedics",
+        "#Polymer"
+      ],
+      "overview": "DOMTEKNIKA は、この柔軟な整形外科器具のために新しいポリマー構造を開発しました。構想の検討から設計、機能試作、製造コストの分析まで行い、医療現場の要件に合う軽量で量産可能な形にまとめました。",
+      "scope": [
+        "軽量なポリマー製器具の構造を検討・選定。",
+        "機械設計を進め、機能試作品で検証。",
+        "製造コストを分析し、量産化に向けて準備しました。"
+      ]
+    },
+    {
+      "id": "biome-staple-applicator",
+      "category": "医療機器",
+      "filter": "medical",
+      "title": "ZipFix 胸骨インプラント装着器具",
+      "description": "再利用型の鋼製器具に代わる使い捨てのポリマー製器具。製造・保守コストと、繰り返し使用による汚染リスクの低減を目指しました。",
+      "image": "/assets/projects/biome-staple-applicator/biome-staple-applicator-01.webp",
+      "imageAlt": "白と赤の ZipFix 胸骨インプラント装着器具",
+      "tags": [
+        "#2013",
+        "#SternalImplant",
+        "#SingleUse"
+      ],
+      "overview": "従来の再利用型鋼製器具には、製造費、継続的な保守、再使用に伴う汚染リスクという課題がありました。DOMTEKNIKA は ZipFix 胸骨インプラントの装着に使うポリマー製の使い捨て器具を開発。構想から製品設計、試作品の検証、最初の射出成形ロットの管理まで担当しました。",
+      "relatedPatents": [
+        {
+          "patentId": "US2015342657A1",
+          "publication": "US2015342657 (A1)",
+          "title": "骨固定アセンブリ",
+          "note": "力が加わる医療用部品の固定と、荷重の伝達に関する技術です。"
+        }
+      ],
+      "scope": [
+        "再利用型の鋼製器具に代わる、使いやすい使い捨てポリマー器具を開発。",
+        "製品全体を設計し、機能試作品で検証。",
+        "初期ロットの射出成形と量産化を管理しました。"
+      ]
+    },
+    {
+      "id": "filter-carafe",
+      "category": "家庭用品",
+      "filter": "household",
+      "title": "浄水カラフェ",
+      "description": "DOMTEKNIKA が製品全体を開発した浄水カラフェ。低コストの機構でろ過した水の量を測り、フィルターカートリッジの交換時期を知らせます。",
+      "image": "/assets/projects/filter-carafe/filter-carafe-01.webp",
+      "imageAlt": "カートリッジ付属品を備えた濾過水カラフェのコンセプト",
+      "tags": [
+        "#2006",
+        "#Filtration",
+        "#ProductDesign"
+      ],
+      "overview": "DOMTEKNIKA は、カラフェ本体とフィルター部品に加え、ろ過した水量を低コストで計測する機構まで開発しました。計測した水量を基に、フィルターカートリッジの交換時期を知らせます。",
+      "relatedPatents": [
+        {
+          "patentId": "WO2008017182A1",
+          "publication": "WO2008017182 (A1)",
+          "title": "フィルターカートリッジの品質を監視する方法および装置",
+          "note": "浄水容器に統合されたフィルターカートリッジの品質管理方法と装置。"
+        },
+        {
+          "patentId": "USD560092S",
+          "publication": "USD560092 (S)",
+          "title": "デカンタ",
+          "note": "カラフェの形状に関する意匠特許。"
+        },
+        {
+          "patentId": "USD568097S",
+          "publication": "USD568097 (S)",
+          "title": "カラフェ用フィルターアクセサリー",
+          "note": "カラフェ用フィルター部品に関する意匠特許。"
+        }
+      ],
+      "scope": [
+        "浄水容器、フィルター部品、内蔵機構まで製品全体を開発。",
+        "ろ過した水量を低コストで測る部品を設計。",
+        "フィルターの交換時期を分かりやすく知らせる仕組みを用意しました。"
+      ]
+    },
+    {
+      "id": "folding-bike-scooter",
+      "category": "モビリティ",
+      "filter": "mobility",
+      "title": "折りたたみ自転車とスクーター",
+      "description": "社内で検討した折りたたみ自転車とスクーター。小さく畳める機構、日常の使いやすさ、持ち運びやすさを重視しました。",
+      "image": "/assets/projects/folding-bike-scooter/folding-bike-scooter-01.webp",
+      "imageAlt": "DOMTEKNIKA 折りたたみ電動自転車コンセプト",
+      "tags": [
+        "#2011",
+        "#Folding",
+        "#Mobility"
+      ],
+      "overview": "DOMTEKNIKA は電動自転車からスクーターまで、複数の折りたたみ方式を検討しました。ヒンジやロック機構、乗車姿勢、部品の配置を磨き込み、コンパクトで運びやすく、製造にも適した構想にまとめています。",
+      "scope": [
+        "収納や持ち運びを考えた折りたたみ構造を検討。",
+        "小型電動車両のヒンジ、フレーム、乗車姿勢を設計。",
+        "自転車とスクーターの両形式で、外観と機構を改良しました。"
+      ]
+    },
+    {
+      "id": "smart-bottle",
+      "category": "医療機器",
+      "filter": "medical",
+      "title": "Smart Bottle",
+      "description": "投与管理が必要な液体医薬品を安全に自動で供給する装置。モルヒネ向けに開発され、他の液剤にも応用できます。",
+      "image": "/assets/projects/smart-bottle/smart-bottle-01.webp",
+      "imageAlt": "青色の内部モジュールを備えた Smart Bottle の構想図",
+      "tags": [
+        "#2010–2015",
+        "#Medical",
+        "#Dosing"
+      ],
+      "overview": "顧客の構想と機能試作を出発点に、DOMTEKNIKA は主要な機能を改良しました。ボトルが破損した場合にモルヒネを中和する安全機構もその一つです。製品の再設計を取りまとめ、量産に向けて各部品を設計し、改良版の初号機を製作。その後、金型製作、射出成形の試作、初期生産も管理しました。開発当初の用途はモルヒネでしたが、同じ供給方式は他の液体医薬品にも応用できます。",
+      "scope": [
+        "顧客の構想と試作品を基に主要機能を改良。",
+        "ボトル破損時にモルヒネを中和する安全機構を設計。",
+        "量産向けの部品設計、改良試作、金型製作、射出成形試作と初期生産を担当。",
+        "他の液体医薬品にも応用できる供給方式を検討しました。"
+      ]
+    },
+    {
+      "id": "personal-injector",
+      "category": "医療機器",
+      "filter": "medical",
+      "title": "自動注射器",
+      "description": "針が見えない設計と投与量のデジタル記録により、患者自身による治療を使いやすく安全にする通信対応の自動注射器。",
+      "image": "/assets/projects/personal-injector/personal-injector-01.webp",
+      "imageAlt": "針を隠すように設計された医療用自動注射器",
+      "tags": [
+        "#2013",
+        "#Medical",
+        "#DoseMonitoring"
+      ],
+      "overview": "特に糖尿病の継続的な治療を想定し、使用中に針が見えないようにして患者の不安を軽減します。DOMTEKNIKA は量産化を主導し、信頼性と耐久性を高めるために製品構造を最適化しました。投与量を記録する機能により、治療が計画どおり続けられているかも確認できます。",
+      "scope": [
+        "信頼性の高い量産に向けて製品構造を最適化。",
+        "針を見せず、患者の不安を抑える自己注射の仕組みを設計。",
+        "投与量を記録し、治療の継続状況を確認できる機能を統合しました。"
+      ]
+    },
+    {
+      "id": "acetabular-reamer-holder",
+      "category": "医療機器",
+      "filter": "medical",
+      "title": "寛骨臼リーマーホルダー",
+      "description": "寛骨臼リーマーホルダー用 PEEK 部品を量産するため、強度検証、射出成形に適した形状設計、製造工程の開発を行いました。",
+      "image": "/assets/projects/acetabular-reamer-holder/acetabular-reamer-holder-01.webp",
+      "imageAlt": "寛骨臼リーマーホルダー用のオレンジと黒の PEEK パーツ 2 個",
+      "tags": [
+        "#2012",
+        "#PEEK",
+        "#Industrialization"
+      ],
+      "overview": "DOMTEKNIKA は寛骨臼リーマーホルダーに使う 2 つの PEEK 部品の量産化を主導しました。有限要素解析と樹脂の流動解析を基に射出成形向けの形状を整え、金型と工程を開発。量産時にも必要な強度、精度、品質の再現性を確保しました。",
+      "scope": [
+        "PEEK 部品の強度解析と樹脂の流動解析を実施。",
+        "射出成形と機械的性能の両面から部品形状を最適化。",
+        "金型と成形条件を調整し、安定して再現できる製造工程を整えました。"
+      ]
+    },
+    {
+      "id": "single-use-turbine",
+      "category": "医療機器",
+      "filter": "medical",
+      "title": "使い捨てタービン",
+      "description": "2006 年以前に開発されたポリマー製タービン。医療機器分野における初期の開発事例として記録されています。",
+      "image": "/assets/projects/single-use-turbine/single-use-turbine-01.webp",
+      "imageAlt": "透明な使い捨てタービン医療コンポーネント",
+      "tags": [
+        "#Pre-2006",
+        "#Polymer",
+        "#Medical"
+      ],
+      "overview": "保存されている資料から、DOMTEKNIKA が 2006 年以前にこのポリマー製タービンを開発したことが確認できます。一方、使い捨てを目的としたのか、コスト削減や別の技術要件が主眼だったのかは判明していません。ここでは確認できる部品の構造と開発時期のみを紹介します。",
+      "scope": [
+        "2006 年以前に開発されたポリマー製タービン。",
+        "残された資料から確認できる初期の医療機器部品です。",
+        "当時のコスト、用途、性能目標は資料から特定できません。"
+      ]
+    },
+    {
+      "id": "glove-helmet-dryer",
+      "category": "スポーツ・アウトドア",
+      "filter": "sport",
+      "title": "手袋とヘルメット乾燥機",
+      "description": "スポーツの合間に手袋やヘルメットを乾かす小型装置。CAD による検討と実機試作の記録が残っています。",
+      "image": "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-01.webp",
+      "imageAlt": "手袋を取り付けた乾燥機の試作品",
+      "tags": [
+        "#2015",
+        "#Consumer",
+        "#Prototype"
+      ],
+      "overview": "続けてスポーツを行う際、手袋やヘルメットに残る汗や湿気を乾かすための小型装置です。残された CAD データと試作品から、用具の保持方法、空気の流れ、省スペースの構造を検討していたことが分かります。",
+      "scope": [
+        "スポーツの合間に手袋やヘルメットを乾かす小型装置。",
+        "用具の保持方法、空気の流れ、部品配置を CAD で検討。",
+        "実際の試作品で構造を示しました。"
+      ]
+    },
+    {
+      "id": "folding-umbrella",
+      "category": "その他",
+      "filter": "others",
+      "title": "ポケット折りたたみ傘",
+      "description": "収納時にスマートフォン程度の大きさになる折りたたみ傘。骨組みの動きと、それに適した生地を検討しました。",
+      "image": "/assets/projects/folding-umbrella/pocket-folding-umbrella-01.webp",
+      "imageAlt": "黄色いポケットサイズの折りたたみ傘の試作品",
+      "tags": [
+        "#2018",
+        "#Mechanism",
+        "#Consumer"
+      ],
+      "overview": "DOMTEKNIKA は、閉じるとスマートフォンほどの大きさになる傘を目指し、骨組みの構造と折りたたみ方を検討しました。小さく畳める生地の選定も行っています。製品開発や量産化まで完了したかは資料から確認できないため、ここでは記録に残る設計と素材の検討を紹介します。",
+      "relatedPatents": [
+        {
+          "patentId": "US2022338602A1",
+          "publication": "US2022338602 (A1)",
+          "title": "雨風・日差しを防ぐ装置用のフレーム",
+          "note": "雨や日差しを防ぐ装置に使う、展開式フレームに関する特許です。"
+        },
+        {
+          "patentId": "WO2021043427A1",
+          "publication": "WO2021043427 (A1)",
+          "title": "雨風・日差しを防ぐ装置用のハウジング",
+          "note": "雨や日差しを防ぐ装置の外装に関する特許です。"
+        }
+      ],
+      "scope": [
+        "スマートフォン程度に収納するため、骨組みと折りたたみ方を検討。",
+        "小さく畳める生地を調査。",
+        "資料で確認できる設計・素材検討のみを紹介し、量産化の完了は断定しません。"
+      ]
+    },
+    {
+      "id": "bottom-filling-cup",
+      "category": "その他",
+      "filter": "others",
+      "title": "底から注ぐビールカップ",
+      "description": "底面のバルブからビールを注ぐイベント用カップ。泡を抑えながら、素早く提供できます。",
+      "image": "/assets/projects/bottom-filling-cup/bottom-filling-cup-01.webp",
+      "imageAlt": "底面バルブを備えた 2 種類のビールカップの CAD 検討図",
+      "gallery": [
+        "/assets/projects/bottom-filling-cup/bottom-filling-cup-01.webp",
+        "/assets/projects/bottom-filling-cup/shared-02-valve-section.webp",
+        "/assets/projects/bottom-filling-cup/shared-03-prototype-components.webp",
+        "/assets/projects/bottom-filling-cup/shared-04-first-series.webp"
+      ],
+      "tags": [
+        "#2014–2015",
+        "#Beverage",
+        "#InjectionMolding"
+      ],
+      "overview": "多くの注文をさばくイベント会場向けに、ビールをカップの底から注いで泡立ちを抑える仕組みです。DOMTEKNIKA は、速く注げて漏れず、洗いやすいバルブを設計しました。機械・流体の解析、初期ロットの射出成形の監督、機能試験も行っています。",
+      "relatedPatents": [
+        {
+          "patentId": "EP3215454A1",
+          "publication": "EP3215454 (A1)",
+          "title": "底部充填可能なカップと接続装置",
+          "note": "底から飲料を注ぐカップと接続装置の特許で、Jean-Luc Thuliez と Étienne Crozier も発明者に名を連ねています。"
+        }
+      ],
+      "scope": [
+        "底面のバルブから素早く注ぎ、泡を抑える仕組み。",
+        "漏れにくく、洗いやすいバルブ構造を設計。",
+        "部品の動作と射出成形時の樹脂の流れを計算で検証。",
+        "最初の射出成形ロットを監督し、機能試験を行いました。"
+      ]
+    },
+    {
+      "id": "skincare-applicator",
+      "category": "家庭用品",
+      "filter": "household",
+      "title": "スキンケア機器",
+      "description": "マッサージ、美容液の塗布、制御された光照射を組み合わせ、コラーゲン生成を促すスキンケア機器。",
+      "image": "/assets/projects/skincare-applicator/skincare-applicator-01.webp",
+      "imageAlt": "IDlab スキンケア アプリケーター、化粧品カートリッジとパッケージ付き",
+      "tags": [
+        "#2012",
+        "#BeautyTech",
+        "#Packaging"
+      ],
+      "overview": "皮膚科学の研究機関が考案した原理を基に、マッサージ、美容液の塗布、光の照射を組み合わせた機器です。コラーゲンの生成を促し、肌のケアに役立てることを目指しています。DOMTEKNIKA は本体と使い切りの美容液カートリッジを開発し、試作品を製作。研究機関とともに、美容液の配合や照射する光の波長を検討する性能試験を行いました。",
+      "relatedPatents": [
+        {
+          "patentId": "US2015360014A1",
+          "publication": "US2015360014 (A1)",
+          "title": "アプリケーターおよびそのアプリケーター用のカプセル",
+          "note": "交換可能なカプセルから製品を供給するための塗布器具です。"
+        },
+        {
+          "patentId": "FR2999439A1",
+          "publication": "FR2999439 (A1)",
+          "title": "製品を分配し、発光するための装置",
+          "note": "化粧品を正確に塗布するための供給方法と発光機能に関する技術です。"
+        }
+      ],
+      "scope": [
+        "手になじむ本体と美容液カートリッジの配置を検討。",
+        "美容機器としての外観と、美容液を届ける仕組みを両立。",
+        "試作品と構造図で使い方、補充方法、内部配置を示しました。"
+      ]
+    },
+    {
+      "id": "alicoffee-machine",
+      "category": "家庭用品",
+      "filter": "household",
+      "title": "コーヒーマシン",
+      "description": "抽出中、水がカプセル内を往復する二重流路を用いたコーヒーマシンの構想。",
+      "image": "/assets/projects/alicoffee-machine/coffee-machine-01.webp",
+      "imageAlt": "卓上型コーヒーマシンのコンセプト画像",
+      "tags": [
+        "#2014",
+        "#Coffee",
+        "#Capsule",
+        "#Fluidics"
+      ],
+      "overview": "このプロジェクトで検討したのは、コーヒーカプセル内の水の通り道です。水を一方向に通すのではなく、カプセル内で往復させ、抽出時に二度通る仕組みを考案しました。",
+      "scope": [
+        "水が二度通る流路を設けたコーヒーカプセルの構想。",
+        "抽出中、水はカプセル内を往復します。",
+        "紹介するのは、この水の流れに関する仕組みです。"
+      ]
+    },
+    {
+      "id": "transparent-clock",
+      "category": "時計製造",
+      "filter": "watchmaking",
+      "title": "透明ショーウィンドウ時計",
+      "description": "透明な文字盤の中心に針の軸を見せず、外周から円盤を駆動する大型展示時計。原子時計との時刻同期にも対応します。",
+      "image": "/assets/projects/transparent-clock/transparent-clock-01.webp",
+      "imageAlt": "外周に駆動機構を備えた透明な展示時計の試作品",
+      "gallery": [
+        "/assets/projects/transparent-clock/transparent-clock-01.webp",
+        "/assets/projects/transparent-clock/shared-02-gear-train-cad.webp",
+        "/assets/projects/transparent-clock/shared-03-peripheral-drive.webp",
+        "/assets/projects/transparent-clock/shared-04-toothed-discs.webp"
+      ],
+      "tags": [
+        "#2012–2013",
+        "#Watchmaking",
+        "#Mechatronics"
+      ],
+      "overview": "ジュネーブの時計店のショーウィンドウ向けに開発された大型時計です。中央に針の軸を見せず、透明な文字盤の向こう側まで見通せるようにしました。DOMTEKNIKA は外周から駆動する透明な回転円盤と原子時計との時刻同期を含む電気・機械構造を設計し、検討を取りまとめました。射出成形の歯車部品を組み込んだ機能試作も製作しています。",
+      "scope": [
+        "大型の透明な展示時計について、電気・機械構造を一貫して設計。",
+        "外周から駆動する透明円盤により、中央の針の軸を見せない仕組み。",
+        "原子時計と接続し、時刻を自動で同期。",
+        "設計検討を取りまとめ、射出成形の歯車部品を使って機能試作を製作。"
+      ]
+    },
+    {
+      "id": "kitesurf-safety",
+      "category": "スポーツ・アウトドア",
+      "filter": "sport",
+      "title": "カイトサーフィン安全装置",
+      "description": "一次・二次の安全解除装置を射出成形ポリマーで開発。操作に必要な力にも配慮し、設計・コスト・信頼性の改善を図りました。",
+      "image": "/assets/projects/kitesurf-safety/shared-01-primary-release.webp",
+      "imageAlt": "赤い操作矢印が付いた黒いカイトサーフィン用安全解除装置の CAD 画像",
+      "gallery": [
+        "/assets/projects/kitesurf-safety/shared-01-primary-release.webp",
+        "/assets/projects/kitesurf-safety/shared-02-secondary-release.webp",
+        "/assets/projects/kitesurf-safety/shared-03-assembled-release.webp",
+        "/assets/projects/kitesurf-safety/shared-04-release-operation.webp"
+      ],
+      "tags": [
+        "#2010–2011"
+      ],
+      "overview": "2010〜2011 年、DOMTEKNIKA は既存製品の設計、コスト、信頼性に課題を抱える顧客のために、カイトサーフィン用の新たな安全解除装置を開発しました。強風時にカイトの牽引力を逃がし、利用者が引き上げられて負傷する危険を抑えるための装置です。一次・二次の両解除装置を射出成形ポリマーで製作し、操作に必要な力を重点的に検討しました。",
+      "scope": [
+        "一次・二次の安全解除部品を設計し、図面を作成。",
+        "射出成形部品の強度と樹脂の流れを計算。",
+        "解除に必要な操作力を調べ、試作品を製作。",
+        "初期生産での射出成形を監督しました。"
+      ]
+    },
+    {
+      "id": "eternal-watch",
+      "category": "時計製造",
+      "filter": "watchmaking",
+      "title": "Eternal Watch",
+      "description": "周囲の温度変化を利用して主ゼンマイを巻き上げる機構。DOMTEKNIKA の社内発案から生まれました。",
+      "image": "/assets/projects/eternal-watch/shared-01-watch-render.webp",
+      "imageAlt": "機構の組み込みを示す Eternal Watch の完成イメージ",
+      "gallery": [
+        "/assets/projects/eternal-watch/shared-01-watch-render.webp",
+        "/assets/projects/eternal-watch/shared-02-winding-mechanism.webp",
+        "/assets/projects/eternal-watch/shared-03-winding-figure.webp"
+      ],
+      "tags": [
+        "#2015"
+      ],
+      "overview": "2015 年、DOMTEKNIKA は社内で生まれた着想を基に、スイスの大手時計メーカー向けの機構を開発しました。周囲の温度変化を使って主ゼンマイを自動で巻き上げ、完全にほどけるのを防ぎます。機械式時計の精度に関わる仕組みとして、機能試作と性能試験を行いました。仮出願は行われましたが、正式な出願には進まず、公開もされていません。",
+      "scope": [
+        "温度変化によるゼンマイ巻き上げの実現可能性を計算。",
+        "部品を設計し、必要な寸法を決定。",
+        "動作する試作品を製作。",
+        "システムの性能を試験しました。"
+      ]
+    },
+    {
+      "id": "invisible-gear-train-bridge",
+      "category": "時計製造",
+      "filter": "watchmaking",
+      "title": "透明な輪列受け",
+      "description": "歯車を際立たせるため、素材と表面処理を工夫して目立たなくした透明な輪列受け。",
+      "image": "/assets/projects/invisible-gear-train-bridge/shared-01-transparent-bridge-front.webp",
+      "imageAlt": "透明な輪列受けの正面図",
+      "gallery": [
+        "/assets/projects/invisible-gear-train-bridge/shared-01-transparent-bridge-front.webp",
+        "/assets/projects/invisible-gear-train-bridge/shared-02-transparent-bridge-perspective.webp"
+      ],
+      "tags": [
+        "#2011–2012"
+      ],
+      "overview": "2011〜2012 年、DOMTEKNIKA はスイスの大手時計メーカー向けに透明な輪列受けを開発しました。歯車そのものが見えるよう、支持部品を視覚的に目立たなくするという社内発の着想です。部品の設計と計算、素材・表面処理の選定に加え、最初の部品の射出成形も監督しました。",
+      "relatedPatents": [
+        {
+          "patentId": "CH707437A1",
+          "publication": "CH707437 (A1)",
+          "title": "時計のムーブメント部品を見えなくする光学的手法",
+          "note": "透明時計ムーブメント部品と光学加工。"
+        },
+        {
+          "patentId": "WO2016004540A1",
+          "publication": "WO2016004540 (A1)",
+          "title": "時計のムーブメント部品を見えなくする光学的手法",
+          "note": "時計ムーブメント部品を見えないようにする光学的方法。"
+        }
+      ],
+      "scope": [
+        "透明な輪列受けの設計と計算。",
+        "部品を目立たなくする素材と表面処理を選定。",
+        "最初の部品の射出成形を監督しました。"
+      ]
+    },
+    {
+      "id": "clepsydra",
+      "category": "時計製造",
+      "filter": "watchmaking",
+      "title": "Clepsydra（水時計）",
+      "description": "大型水時計の開発に参加し、回転機構の電動化と半分の大きさの試作品づくりに携わりました。",
+      "image": "/assets/projects/clepsydra/shared-01-design-concept.webp",
+      "imageAlt": "大型水時計のコンセプト図",
+      "gallery": [
+        "/assets/projects/clepsydra/shared-01-design-concept.webp",
+        "/assets/projects/clepsydra/shared-02-half-scale-prototype.webp",
+        "/assets/projects/clepsydra/shared-03-turning-mechanism.webp"
+      ],
+      "tags": [
+        "#2008"
+      ],
+      "overview": "2008 年、DOMTEKNIKA はスイスの大手時計メーカーが計画した大型水時計の開発に参加しました。当初はジュネーブでの展示を想定した計画です。コンセプトの検討、時計を回転させる機構の開発と電動化、半分の大きさの試作品づくりに携わり、動作試験も行いました。",
+      "scope": [
+        "水時計のコンセプト検討に参加。",
+        "回転機構を開発し、電動化。",
+        "半分の大きさの試作品づくりに参加。",
+        "動作試験を行いました。"
+      ]
+    },
+    {
+      "id": "velum-sky-screen",
+      "category": "建築設備",
+      "filter": "building",
+      "title": "Velum Sky 大画面昇降システム",
+      "description": "Velum Sky の大型スクリーン用に開発した昇降システム。上昇時にはガイドを隠し、下降時には片持ち状態のスクリーンを支えます。",
+      "image": "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp",
+      "imageAlt": "ジュネーブの Velum Sky 講堂に設けた大型スクリーン昇降システム",
+      "tags": [
+        "#2025",
+        "#Building",
+        "#Engineering"
+      ],
+      "overview": "DOMTEKNIKA は、ジュネーブの Velum Sky 講堂で大型スクリーンを昇降・位置決めする機械システム全体を設計しました。ガイドを上昇位置で見えないようにしながら、下降中は完全に片持ち状態になるスクリーンを制御するため、案内機構、剛性、駆動方式、建物との一体化を精密に検討しました。",
+      "scope": [
+        "ジュネーブの Velum Sky 講堂向けに大型スクリーンの昇降装置を設計。",
+        "スクリーンを上げた状態ではガイドを隠し、建築空間の見え方を保ちます。",
+        "下降中に片持ちとなるスクリーンに合わせ、案内機構、剛性、駆動方式を設計しました。"
+      ]
+    }
   ]
 }

@@ -20,7 +20,7 @@ const RATE_LIMIT_RULES = [
 const MAX_RATE_LIMIT_WINDOW_MS = Math.max(
   ...RATE_LIMIT_RULES.map((rule) => rule.windowMs),
 );
-const CONTACT_LOCALES = ["de", "en", "es", "fr", "ko", "zh"] as const;
+const CONTACT_LOCALES = ["de", "en", "es", "fr", "ja", "ko", "zh"] as const;
 const ALLOWED_LOCALES = new Set<string>(CONTACT_LOCALES);
 const ALLOWED_FIELDS = new Set([
   "company",
@@ -92,6 +92,16 @@ const CONFIRMATION_COPY: Record<
     closing: "Meilleures salutations,",
     team: "L’équipe DOMTEKNIKA",
   },
+  ja: {
+    subject: "お問い合わせを受け付けました",
+    greeting: (firstName) => `${firstName} 様`,
+    message:
+      "DOMTEKNIKA にお問い合わせいただき、ありがとうございます。メッセージを受け付けました。担当者よりできるだけ早くご連絡いたします。",
+    notice:
+      "この自動確認メールは、domteknika.ch のお問い合わせフォームにお客様のメールアドレスが入力されたため送信されています。お心当たりがない場合は、このメールを破棄してください。",
+    closing: "よろしくお願いいたします。",
+    team: "DOMTEKNIKA チーム",
+  },
   ko: {
     subject: "문의가 접수되었습니다",
     greeting: (firstName) => `${firstName}님, 안녕하세요.`,
@@ -119,6 +129,7 @@ const COUNTRY_BY_LOCALE: Record<ContactLocale, string> = {
   en: "Switzerland",
   es: "Suiza",
   fr: "Suisse",
+  ja: "スイス",
   ko: "스위스",
   zh: "瑞士",
 };

@@ -1,0 +1,354 @@
+{
+  "Meta": {
+    "title": "DOMTEKNIKA | 製品開発・試作",
+    "description": "DOMTEKNIKA はスイスを拠点に、企業やイノベーターの構想を設計・試作から製造までつなぎます。"
+  },
+  "Nav": {
+    "home": "ホーム",
+    "projects": "プロジェクト",
+    "expertise": "専門分野",
+    "patent": "特許",
+    "story": "私たちの歩み",
+    "cta": "お問い合わせ",
+    "openMenu": "メニューを開く",
+    "closeMenu": "メニューを閉じる"
+  },
+  "Hero": {
+    "eyebrow": "アイデアを、確かなかたちへ",
+    "engineering": "設計・開発",
+    "prototyping": "試作",
+    "producing": "製造",
+    "shape": "夢を 形に",
+    "lead": "ひらめきから量産まで、<brand>DOMTEKNIKA</brand> は企業やイノベーターの構想を技術とものづくりで形にします。機械・電子設計、課題に合わせた産業ソリューション、精密な試作を<strong>スイスで</strong>手がけています。",
+    "ctaPrimary": "お問い合わせ",
+    "ctaSecondary": "専門分野を見る"
+  },
+  "HomeIntro": {
+    "breakthrough": {
+      "eyebrow": "新たな発想を形に",
+      "scrollHint": "スクロールすると、図面が現実の姿へ変わります",
+      "title": "まだないものを、つくる",
+      "body": "既存の発想にとらわれず、お客様の技術課題を解く新しい可能性を探ります。",
+      "imageAlt": "Aventor の図面が透明な波を境に、実車のような画像へ変わる様子。",
+      "sequence": {
+        "challenge": "課題",
+        "insight": "着想",
+        "invention": "発明"
+      }
+    },
+    "expertise": {
+      "eyebrow": "課題に合わせたエンジニアリング",
+      "title": "主な専門分野",
+      "cta": "できることを見る",
+      "swiss": "スイスのエンジニアリング",
+      "location": "La Neuveville · スイス",
+      "items": {
+        "creativity": {
+          "title": "研究開発",
+          "body": "課題の探索から構想づくり、製品の革新まで。"
+        },
+        "design": {
+          "title": "CAD・機械設計",
+          "body": "機械構造を設計し、3D データで精密に具体化。"
+        },
+        "prototyping": {
+          "title": "試作",
+          "body": "動作する試作品を素早く作り、検証と改良を重ねます。"
+        },
+        "simulation": {
+          "title": "CAD・構造解析",
+          "body": "3D 設計と解析で、技術的な判断を裏付けます。"
+        },
+        "polymer": {
+          "title": "樹脂部品・射出成形",
+          "body": "射出成形と量産を見据え、精度が求められる樹脂部品を設計します。"
+        },
+        "electronics": {
+          "title": "エレクトロニクス",
+          "body": "電子機能や通信機能を製品に組み込みます。"
+        }
+      }
+    }
+  },
+  "Projects": {
+    "title": "私たちのプロジェクト",
+    "viewAll": "すべてのプロジェクトを見る",
+    "items": {
+      "2": {
+        "title": "Aventor",
+        "description": "軽量な複合材ボディを備えた高性能な電気自動車プラットフォーム。"
+      },
+      "3": {
+        "title": "SOFTCAR",
+        "description": "再利用可能な車両システムを取り入れた、コンパクトな都市型 EV。"
+      },
+      "4": {
+        "title": "STAJVELO RV01",
+        "description": "樹脂部品の設計と独自のホイールが特徴の都市型電動自転車。"
+      },
+      "5": {
+        "title": "コーヒーマシン",
+        "description": "水がカプセル内を往復する二重流路を用いたコーヒーマシンの構想。"
+      }
+    },
+    "previous": "前のプロジェクト",
+    "next": "次のプロジェクト"
+  },
+  "ProjectsPage": {
+    "Meta": {
+      "title": "DOMTEKNIKA - プロジェクト",
+      "description": "スイスの精密な設計・試作・製造の技術を生かした DOMTEKNIKA のプロジェクトをご紹介します。"
+    }
+  },
+  "PatentPage": {
+    "Meta": {
+      "title": "DOMTEKNIKA - 特許",
+      "description": "さまざまな産業分野で生まれた DOMTEKNIKA の技術革新と特許をご紹介します。"
+    }
+  },
+  "ContactPage": {
+    "Meta": {
+      "title": "DOMTEKNIKA | お問い合わせ",
+      "description": "設計、試作、製造のご相談は、スイス・ラ・ヌーヴヴィルの DOMTEKNIKA へお問い合わせください。"
+    },
+    "Hero": {
+      "eyebrow": "ご相談ください",
+      "title": "お問い合わせ",
+      "lead": "ご質問や検討中のプロジェクトがあれば、お気軽にご連絡ください。ご一緒できることを考えます。"
+    },
+    "Cards": {
+      "location": {
+        "title": "私たちの所在地",
+        "body": "Chemin de Saint-Joux 16B\n2520 La Neuveville\nスイス",
+        "action": "Google マップで開く"
+      },
+      "email": {
+        "title": "メール",
+        "body": "contact@domteknika.ch",
+        "action": "メールを送る"
+      },
+      "phone": {
+        "title": "電話",
+        "body": "+41 32 751 71 46",
+        "action": "DOMTEKNIKA に電話する"
+      }
+    },
+    "Form": {
+      "title": "ご相談・お問い合わせ",
+      "firstName": "名",
+      "lastName": "姓",
+      "company": "会社名",
+      "email": "メールアドレス",
+      "phone": "電話番号（任意）",
+      "message": "ご相談内容を入力してください",
+      "submit": "送信する",
+      "sending": "送信中...",
+      "secure": "入力内容は安全に送信し、お問い合わせへの対応にのみ使用します。",
+      "success": "メッセージを送信しました。担当者よりできるだけ早くご連絡いたします。",
+      "invalid": "入力した情報をご確認ください。",
+      "rateLimited": "送信回数が上限に達しました。数分後にもう一度お試しください。",
+      "error": "メッセージを送信できませんでした。後でもう一度試してください。"
+    },
+    "Map": {
+      "eyebrow": "所在地",
+      "title": "オフィスと工房",
+      "body": "オフィスと工房は、ビール湖とジュラ山脈の麓にある La Neuveville にあります。",
+      "marker": "DOMTEKNIKA SA"
+    }
+  },
+  "Process": {
+    "ideaTitle": "アイデア",
+    "ideaIntro": "優れた製品の出発点は、ひとつのアイデアやスケッチ、解決したい課題です。",
+    "ideaBody": "企業の開発案件も、初めてのアイデアも、<strong>構想を実現できる製品へと形にします。</strong>",
+    "processTitle": "プロセス",
+    "processBody": "実現可能性の検討から CAD 設計、試作、量産まで。機密性を守りながら、状況に合わせて進めます。",
+    "productTitle": "製品",
+    "productBody": "実際に機能し、製造できる部品へ。企業の市場投入を早め、イノベーターの最初のアイデアを検証・製造できる製品にします。",
+    "stats": {
+      "years": {
+        "value": "25年以上",
+        "label": "の経験"
+      },
+      "sectors": {
+        "value": "幅広い分野",
+        "label": "に対応"
+      },
+      "swiss": {
+        "value": "100%",
+        "label": "スイスエンジニアリング"
+      }
+    }
+  },
+  "ExpertisePage": {
+    "Meta": {
+      "title": "DOMTEKNIKA | 産業分野の専門技術",
+      "description": "DOMTEKNIKA がスイスで手がける製品設計、試作、解析、樹脂部品、電子技術の専門分野をご紹介します。"
+    },
+    "Hero": {
+      "eyebrow": "技術的な課題を、製品づくりの解決策へ",
+      "team": "私たちのチーム",
+      "title": "専門分野"
+    },
+    "Services": {
+      "eyebrow": "事業内容",
+      "title": "構想から製造まで支える専門技術",
+      "intro": "一品ものの試作から量産まで。企業や個人の構想を、設計・開発・製造の各段階で支えます。",
+      "brainstorming": {
+        "eyebrow": "ブレーンストーミング",
+        "title": "問題を明確な方向に変える",
+        "lead": "方向性を決める前に、使い方、機構、素材、コスト、製造方法、リスクを多角的に検討します。",
+        "body": "未解決の問いを実現可能な選択肢に整理し、方式を比べて有効な方向を見極めます。",
+        "cards": {
+          "doorRod": "ドアと連結ロッド",
+          "springLock": "ばね式ロック",
+          "magneticLock": "磁気ロック",
+          "threePointAttachment": "3点留め",
+          "flexibleLatch": "柔軟なラッチ",
+          "mechanicalUnlock": "機械的なロック解除",
+          "rotation90": "90°回転",
+          "mechanicalAdhesion": "機械的な固定"
+        }
+      },
+      "items": {
+        "creativity": {
+          "title": "創造性とイノベーション",
+          "description": "必要な機能や制約、使われる場面から考え、実現できる新しい解決策を生み出します。"
+        },
+        "design": {
+          "title": "製品設計",
+          "description": "工業デザインと機械・電気・システム設計を組み合わせ、性能と製造のしやすさを両立します。"
+        },
+        "prototyping": {
+          "title": "試作",
+          "description": "試作品を素早く作ってアイデアを確かめ、開発上のリスクを減らします。"
+        },
+        "simulation": {
+          "title": "シミュレーションと分析",
+          "description": "解析で性能を見通し、設計を改善して信頼性を高めます。"
+        },
+        "polymer": {
+          "title": "ポリマー・射出成形",
+          "description": "樹脂材料と射出成形に精通し、精密部品に適した製造工程を整えます。"
+        },
+        "electronics": {
+          "title": "電子機器の統合",
+          "description": "電子回路と通信機能を設計・統合し、信頼性の高い製品につなげます。"
+        }
+      },
+      "learnMore": "このサービスを詳しく見る"
+    },
+    "Swiss": {
+      "title": "スイスを拠点に、あなたのアイデアを形に。",
+      "titleLineOne": "スイスを拠点に。",
+      "titleLineTwo": "あなたのアイデアを形に。"
+    },
+    "AddedValue": {
+      "eyebrow": "私たちの付加価値",
+      "values": {
+        "partner": {
+          "title": "構想から量産まで",
+          "description": "構想づくりから量産化まで、一貫して担当します。"
+        },
+        "agile": {
+          "title": "柔軟で迅速な対応",
+          "description": "迅速に動き、状況に合わせて柔軟に対応し、お客様と密に連携します。"
+        },
+        "confidential": {
+          "title": "機密保持",
+          "description": "お客様のアイデアを責任を持って守ります。"
+        },
+        "quality": {
+          "title": "スイスの品質",
+          "description": "スイスの品質基準に沿って、精密に設計・製造します。"
+        }
+      },
+      "stats": {
+        "projects": {
+          "value": "100+",
+          "label": "手がけたプロジェクト"
+        },
+        "years": {
+          "value": "25年以上",
+          "label": "の経験"
+        },
+        "worldwide": {
+          "value": "世界各地",
+          "label": "国際プロジェクト"
+        },
+        "industries": {
+          "value": "6+",
+          "label": "主要産業分野",
+          "detail": "医療、モビリティ、産業機器、生活用品、食品技術、時計製造"
+        }
+      }
+    },
+    "Cta": {
+      "eyebrow": "一緒に築きましょう",
+      "title": "解決したい課題はありませんか",
+      "subtitle": "複雑な課題を、実際に製造できる解決策へ。先を見据える企業とともに取り組みます。",
+      "button": "プロジェクトを相談する"
+    }
+  },
+  "TrustedBy": {
+    "label": "信頼を寄せる企業"
+  },
+  "SwissBanner": {
+    "titleLineOne": "スイスで生まれ、",
+    "titleLineTwo": "世界に向けて設計する。",
+    "values": {
+      "swissQuality": "スイス品質",
+      "endToEnd": "構想から製造まで",
+      "agile": "柔軟で迅速",
+      "confidential": "機密保持"
+    },
+    "end": "スイスの価値観の紹介終了"
+  },
+  "Cta": {
+    "eyebrow": "一緒につくりましょう",
+    "title": "次のアイデアを形にしませんか",
+    "subtitle": "課題をお聞かせください。スイスの工房で設計・試作し、実用化に向けて一緒に進めます。",
+    "cta": "プロジェクトを相談する"
+  },
+  "Footer": {
+    "addressLabel": "住所",
+    "contactLabel": "お問い合わせ",
+    "country": "スイス",
+    "navigationLabel": "ナビゲーション",
+    "legalLabel": "法的情報",
+    "legalNotice": "サイト運営情報",
+    "privacyPolicy": "プライバシーポリシー",
+    "rights": "無断転載を禁じます"
+  },
+  "LegalPages": {
+    "legalNotice": {
+      "metaTitle": "DOMTEKNIKA | サイト運営情報",
+      "metaDescription": "DOMTEKNIKA ウェブサイトに関連する法的情報。",
+      "eyebrow": "法的情報",
+      "title": "サイト運営情報",
+      "intro": "DOMTEKNIKA の会社情報と、本ウェブサイトの利用条件をご案内します。",
+      "publisher": "ウェブサイト発行者",
+      "hosting": "ホスティング",
+      "intellectualProperty": "知的財産"
+    },
+    "privacyPolicy": {
+      "metaTitle": "DOMTEKNIKA | プライバシーポリシー",
+      "metaDescription": "DOMTEKNIKA がウェブサイト上で個人データをどのように処理し、保護するか。",
+      "eyebrow": "データ保護",
+      "title": "プライバシーポリシー",
+      "intro": "ウェブサイトの利用やお問い合わせに際して、DOMTEKNIKA が個人情報をどのように取り扱うかをご説明します。",
+      "dataCollection": "収集されたデータ",
+      "dataUse": "データの利用",
+      "rights": "保存期間とお客様の権利"
+    }
+  },
+  "Language": {
+    "switch": "言語を切り替える",
+    "fr": "Français",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "ko": "한국어",
+    "zh": "中文",
+    "ja": "日本語"
+  }
+}

@@ -42,6 +42,7 @@ const countryLocaleMap = {
   CA: "en",
   GB: "en",
   IE: "en",
+  JP: "ja",
   NZ: "en",
   US: "en",
 } as const;

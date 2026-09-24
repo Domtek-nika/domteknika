@@ -146,7 +146,7 @@ const patentFamilyRedirects = Array.from(
           [
             normalizedAlias,
             {
-              source: `/:locale(en|fr|de|es|ko|zh)/patents/${normalizedAlias}`,
+              source: `/:locale(en|fr|de|es|ko|zh|ja)/patents/${normalizedAlias}`,
               destination: `/:locale/patents/${patent.id.toLowerCase()}`,
               permanent: true,
             },
@@ -164,12 +164,12 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: "/:locale(en|fr|de|es|ko|zh)/patent",
+        source: "/:locale(en|fr|de|es|ko|zh|ja)/patent",
         destination: "/:locale/patents",
         permanent: true,
       },
       {
-        source: "/:locale(en|fr|de|es|ko|zh)/projects/vacheron-watch-mechanics",
+        source: "/:locale(en|fr|de|es|ko|zh|ja)/projects/vacheron-watch-mechanics",
         destination: "/:locale/projects",
         permanent: true,
       },

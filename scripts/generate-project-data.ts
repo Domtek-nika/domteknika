@@ -6,7 +6,7 @@ import {
   type Project,
 } from "../src/components/sections/projects-page-content";
 
-const LOCALES = ["en", "fr", "de", "es", "ko", "zh"] as const;
+const LOCALES = ["en", "fr", "de", "es", "ko", "zh", "ja"] as const;
 const outputPath = path.join(
   process.cwd(),
   "src/data/projects.generated.json",

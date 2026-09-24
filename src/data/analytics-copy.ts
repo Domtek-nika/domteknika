@@ -35,6 +35,12 @@ export const analyticsCopy = {
     accept: "接受", reject: "拒绝", manage: "管理 Cookie", privacy: "隐私政策", close: "关闭",
     legal: "经您同意，我们使用 Google Analytics（Google Ireland Limited）统计访问次数、浏览页面、流量来源及设备。Google 接收浏览信息并处理 IP 地址以确定大致位置。数据可能在瑞士和欧洲经济区以外（包括美国）处理。同意之前不会加载追踪代码；本集成已禁用广告功能和 Google Signals。您的选择在浏览器本地存储中保留六个月。您可随时通过页脚的“管理 Cookie”撤回同意：追踪将停止，并删除网站可访问的 Analytics Cookie。Analytics Cookie 设置为六个月后到期，不自动续期。功能性 NEXT_LOCALE Cookie 仍用于记住语言。拒绝统计不会限制网站访问。",
   },
+  ja: {
+    title: "このサイトでは Cookie を使用しています。",
+    text: "同意いただいた場合に、サイトの利用状況を調べるための Cookie を使用します。",
+    accept: "同意する", reject: "拒否する", manage: "Cookie を管理", privacy: "プライバシー", close: "閉じる",
+    legal: "お客様の同意を得た場合、当社は Google Analytics（Google Ireland Limited）を使用し、訪問数、閲覧ページ、流入元、利用端末を測定します。Google は閲覧情報を受け取り、おおよその所在地を把握するために IP アドレスを処理します。データは、米国を含むスイスおよび欧州経済領域（EEA）の域外で処理される場合があります。同意前に追跡機能は読み込まれず、広告機能と Google Signals は無効です。選択内容はブラウザーのローカルストレージに 6 か月間保存されます。フッターの「Cookie を管理」からいつでも同意を撤回できます。撤回すると追跡が停止し、当サイトからアクセス可能な Analytics Cookie が削除されます。Analytics Cookie は自動延長されず、6 か月後に期限切れとなるよう設定されています。言語設定を記憶するための機能性 Cookie NEXT_LOCALE は引き続き使用します。アクセス解析を拒否しても、サイトの利用は制限されません。",
+  },
 };
 
 export function getAnalyticsCopy(locale: string) {
