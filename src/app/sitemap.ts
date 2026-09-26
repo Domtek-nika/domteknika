@@ -2,7 +2,6 @@ import type { MetadataRoute } from "next";
 
 import { getCanonicalPatentSlugs } from "@/data/patent-lookup";
 import { getProjectSlugs } from "@/data/projects";
-import { services } from "@/data/services";
 import { locales } from "@/i18n/routing";
 import {
   INDEXABLE_ROUTES,
@@ -60,15 +59,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
   });
 
-  const serviceRoutes = services.flatMap(({ slug }) => {
-    const path = `/expertise/${slug}`;
-    return locales.map((locale) => ({
-      url: localizedUrl(locale, path),
-      alternates: { languages: languageAlternates(path) },
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    }));
-  });
-
-  return [...mainRoutes, ...serviceRoutes, ...projectRoutes, ...patentRoutes];
+  return [...mainRoutes, ...projectRoutes, ...patentRoutes];
 }

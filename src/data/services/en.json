@@ -3,106 +3,15 @@
     "learnMore": "Explore this service",
     "back": "All expertise",
     "approach": "Our approach",
-    "deliverables": "What you receive",
+    "deliverables": "Deliverables to define together",
     "projects": "Selected projects",
     "related": "Related services",
-    "contact": "Discuss your requirements",
-    "ctaTitle": "What is your next step?",
-    "ctaBody": "An idea to explore, a prototype to improve or a component to industrialise? Tell us what you need so we can define the right engineering work.",
-    "other": "Other expertise",
-    "eyebrow": "Product engineering · Switzerland",
-    "onThisPage": "On this page",
-    "needs": "When to involve us",
-    "method": "How we work",
-    "scopeNote": "We agree the scope, tests and deliverables with you before work begins.",
-    "faq": "Practical questions",
-    "briefTitle": "For our first conversation",
-    "brief": [
-      "Your objective and how the product will be used",
-      "What you already have: an idea, drawings or a prototype",
-      "Your technical constraints and target date"
-    ],
-    "confidentiality": "Your information is treated confidentially.",
-    "viewProject": "View project",
-    "caseStudy": "A challenge, a real project",
-    "technicalFocus": "Technical insight",
-    "takeaway": "Takeaway",
-    "reference": "Further reading"
+    "contact": "Discuss a similar project",
+    "ctaTitle": "Tell us what you need",
+    "ctaBody": "Share your objective, constraints and current development stage. Together, we will define the scope and deliverables suited to your project.",
+    "other": "Other expertise"
   },
   "items": {
-    "creativity-innovation": {
-      "title": "Product creativity and innovation",
-      "description": "You have a problem to solve or an idea to develop. We explore possible solutions before you commit to a product architecture.",
-      "approach": "We start with use, required functions, cost, space and manufacturing constraints. Concept exploration connects mechanics, materials and integration to identify feasible options.",
-      "validation": "Options are compared by their strengths, limitations and outstanding questions. The aim is to choose a direction and prepare the first validation work.",
-      "deliverables": [
-        "Requirements and constraints summary",
-        "Concepts and operating principles",
-        "Options comparison and verification plan"
-      ],
-      "outcome": "Turn an open problem into technical options you can compare.",
-      "needs": [
-        "Explore an idea without a defined technical solution",
-        "Rethink an existing product or mechanism",
-        "Choose an architecture before development"
-      ],
-      "steps": [
-        {
-          "title": "Frame the problem",
-          "body": "Clarify use, functions and constraints."
-        },
-        {
-          "title": "Explore options",
-          "body": "Connect mechanical principles, materials and manufacturing."
-        },
-        {
-          "title": "Choose the next step",
-          "body": "Compare concepts and identify the priority checks."
-        }
-      ],
-      "faq": [
-        {
-          "question": "Do we need a specification first?",
-          "answer": "No. A description of the problem, intended use and known constraints is enough to start structuring your requirements."
-        },
-        {
-          "question": "Does this stage include a prototype?",
-          "answer": "It can lead to a proof of concept. Its construction and validation points depend on the uncertainties to resolve."
-        }
-      ],
-      "caseStudy": {
-        "title": "A mechanism that measures the water actually filtered.",
-        "body": "The filter carafe needed to indicate when its cartridge should be replaced. DOMTEKNIKA developed the complete product and an economical mechanism for counting water volume. The project connects concept exploration, everyday use and integration into a physical product."
-      },
-      "ctaTitle": "Which idea would you like to develop?",
-      "technicalFocus": {
-        "title": "A useful idea starts with the right question.",
-        "intro": "An appealing solution can hide the actual need early in a project. Describing the user’s action, the environment and the expected result opens up several technical options. These can then be compared against clear criteria before investing time in CAD.",
-        "columns": [
-          "Define",
-          "Why it matters",
-          "The question to ask"
-        ],
-        "rows": [
-          {
-            "title": "Use",
-            "why": "The same mechanism changes with the person operating it and how often it is used.",
-            "check": "Which action causes difficulty, when and under what conditions?"
-          },
-          {
-            "title": "Function",
-            "why": "A function describes what the product must accomplish and keeps the technical solution open.",
-            "check": "What must the product do, and how will success be measured?"
-          },
-          {
-            "title": "Trade-offs",
-            "why": "Space, cost, maintenance and manufacturing can favour different architectures.",
-            "check": "Which criterion takes priority, and what needs checking first?"
-          }
-        ],
-        "takeaway": "For example, “open with one hand while wearing gloves” defines a function to explore. A lever, latch or another mechanism can then be compared against the same need."
-      }
-    },
     "mechanical-design": {
       "title": "Mechanical design in Switzerland",
       "description": "DOMTEKNIKA develops products and mechanisms for industrial companies and innovators, from the initial architecture to components prepared for industrialisation.",
@@ -112,69 +21,7 @@
         "Mechanical architecture and CAD models",
         "Component, interface and assembly definition",
         "Technical documentation appropriate to the development stage"
-      ],
-      "outcome": "Translate a required function into a feasible mechanical architecture.",
-      "needs": [
-        "Design a custom part or mechanism",
-        "Improve a product that is difficult to manufacture",
-        "Prepare drawings for a prototype or production"
-      ],
-      "steps": [
-        {
-          "title": "Define interfaces",
-          "body": "Identify loads, available space and interacting parts."
-        },
-        {
-          "title": "Develop the solution",
-          "body": "Build the CAD design, material choices and assemblies."
-        },
-        {
-          "title": "Prepare validation",
-          "body": "Define the checks and technical documentation."
-        }
-      ],
-      "faq": [
-        {
-          "question": "Can you work on an existing design?",
-          "answer": "Yes. We use available drawings, models or prototypes to identify improvements and the interfaces that must be retained."
-        },
-        {
-          "question": "Does design include manufacturing?",
-          "answer": "The documentation can support prototyping or production. Manufacturing, testing and industrial support are specified within the agreed scope."
-        }
-      ],
-      "caseStudy": {
-        "title": "Lowering a screen while preserving the architectural view.",
-        "body": "At the Velum Sky amphitheatre in Geneva, the guides had to remain hidden with the screen raised. During descent, the screen is fully cantilevered. DOMTEKNIKA designed the guidance, stiffness and lifting mechanism around these constraints, integrating a precise function into its surroundings."
-      },
-      "ctaTitle": "Which mechanism would you like to develop?",
-      "technicalFocus": {
-        "title": "The detail that changes an assembly: tolerances.",
-        "intro": "Manufactured dimensions vary within the limits specified on a drawing. In an assembly, those variations combine: a guide can jam, a seal can be compressed incorrectly or alignment can drift. Design therefore needs to account for the behaviour of real parts.",
-        "columns": [
-          "Design point",
-          "What can happen",
-          "Define on the drawing"
-        ],
-        "rows": [
-          {
-            "title": "Guidance and clearance",
-            "why": "Too little clearance can stop movement; too much can introduce play.",
-            "check": "Functional dimensions and the acceptable clearance range."
-          },
-          {
-            "title": "Assembly references",
-            "why": "Each locating feature adds variation to the parts already assembled.",
-            "check": "Reference surfaces and the assembly sequence."
-          },
-          {
-            "title": "Manufacturing",
-            "why": "High precision may require more operations and inspection.",
-            "check": "Tolerances needed for function and the intended process."
-          }
-        ],
-        "takeaway": "A simplified example: a 10.2 ± 0.1 mm bore and a 10.0 ± 0.1 mm shaft give a theoretical diametral clearance of 0 to 0.4 mm. The nominal 0.2 mm clearance can disappear. Part form and operating conditions still need checking."
-      }
+      ]
     },
     "prototyping": {
       "title": "Product prototyping and validation",
@@ -185,219 +32,18 @@
         "Prototype or demonstrator suited to the need",
         "Validation points and test observations",
         "Design revisions for the next development stage"
-      ],
-      "outcome": "Get practical answers before committing to the next development stage.",
-      "needs": [
-        "Verify a function or movement",
-        "Test ergonomics and component integration",
-        "Improve an existing prototype"
-      ],
-      "steps": [
-        {
-          "title": "Choose what to test",
-          "body": "Define the question and observation criteria."
-        },
-        {
-          "title": "Build the useful prototype",
-          "body": "Match materials and finish to the planned test."
-        },
-        {
-          "title": "Test and iterate",
-          "body": "Document observations and necessary design changes."
-        }
-      ],
-      "faq": [
-        {
-          "question": "Must a prototype look like the final product?",
-          "answer": "Not always. A simple assembly may be enough to check a movement. Representative form and ergonomics matter when testing product use."
-        },
-        {
-          "question": "Is a working prototype ready for production?",
-          "answer": "Not necessarily. Materials, tolerances, assembly and the production process may need a separate industrialisation stage."
-        },
-        {
-          "question": "How do you choose between 3D printing and machining?",
-          "answer": "3D printing builds a part in layers; machining removes material from a blank. The choice depends on geometry, the required material, functional surfaces and the loads to be tested. For a prototype, any finishing operations and the level of precision actually needed should also be defined."
-        }
-      ],
-      "caseStudy": {
-        "title": "Three- and four-wheel concepts brought to physical prototypes.",
-        "body": "Aventor began in 2012 as an internal project. DOMTEKNIKA developed its electrical and mechanical architectures, studied three- and four-wheel configurations and built physical prototypes. The project shows the progression from a concept to a complete system, before a separate startup was established."
-      },
-      "ctaTitle": "What should your next prototype demonstrate?",
-      "technicalFocus": {
-        "title": "Which prototype supports which decision?",
-        "intro": "A prototype can explore movement, support user trials or prepare for manufacturing. The question being answered determines the material, process and level of finish required. Choosing what you want to learn helps direct the investment.",
-        "columns": [
-          "Prototype type",
-          "The question it explores",
-          "Still to verify"
-        ],
-        "rows": [
-          {
-            "title": "Proof of principle",
-            "why": "Does the proposed motion or mechanism work?",
-            "check": "Final space requirements, durability and manufacturing."
-          },
-          {
-            "title": "User trial",
-            "why": "Do handling, access and user actions work as intended?",
-            "check": "Material performance and production repeatability."
-          },
-          {
-            "title": "Production representative",
-            "why": "Are assembly and behaviour consistent with the intended process?",
-            "check": "Process variation and the tests needed for production release."
-          }
-        ],
-        "takeaway": "Before building, define a question, a success criterion and the decision to make from the result. A 3D printed part can validate space requirements; its behaviour needs reassessment if the final material or process changes."
-      }
+      ]
     },
     "simulation": {
-      "title": "Mechanical simulation and analysis",
-      "description": "You need to compare designs or better understand a component’s behaviour. Our finite element calculations inform design choices before physical testing.",
-      "approach": "We define the model from geometry, materials, loads and actual interfaces. The calculation focuses on the questions that influence design.",
-      "validation": "Results are interpreted alongside their assumptions. They guide geometry changes and physical validation; injection studies are covered in our polymer expertise.",
+      "title": "Mechanical simulation and injection analysis",
+      "description": "DOMTEKNIKA supports mechanical validation and the optimisation of moulded parts through finite element calculations and rheological analysis.",
+      "approach": "Before tooling begins, calculations help study component behaviour and compare geometries. Load assumptions, materials and operating conditions define the scope of the analysis.",
+      "validation": "For polymer components, the study connects mechanical performance with injection moulding constraints. Results guide geometry changes and test preparation; they do not replace the physical validation required for the project.",
       "deliverables": [
         "Agreed assumptions and calculation cases",
         "Simulation results and analysis of critical areas",
         "Geometry or process recommendations"
-      ],
-      "outcome": "Support design decisions with calculations and clear assumptions.",
-      "needs": [
-        "Study loads and deformation in a component",
-        "Compare geometries or materials",
-        "Identify critical areas before testing"
-      ],
-      "steps": [
-        {
-          "title": "Set the assumptions",
-          "body": "Define materials, loads and boundary conditions."
-        },
-        {
-          "title": "Analyse behaviour",
-          "body": "Study loaded areas and compare variants."
-        },
-        {
-          "title": "Guide decisions",
-          "body": "Connect results to design changes and physical tests."
-        }
-      ],
-      "faq": [
-        {
-          "question": "What do you need for an analysis?",
-          "answer": "Available geometry, proposed materials, loads and operating conditions. Missing assumptions are clarified before calculations begin."
-        },
-        {
-          "question": "Can simulation replace physical tests?",
-          "answer": "No. It helps focus tests and compare solutions. Results depend on the assumptions and must be checked against real behaviour."
-        }
-      ],
-      "caseStudy": {
-        "title": "From calculations to a PEEK component prepared for production.",
-        "body": "The acetabular reamer holder’s PEEK components had to meet both mechanical and injection moulding constraints. Finite element calculations and rheological analyses guided geometry optimisation. The work continued through tooling and refinement of the production process."
-      },
-      "ctaTitle": "Which technical decision do you need to verify?",
-      "technicalFocus": {
-        "title": "What does a red area actually mean?",
-        "intro": "The colours in a calculation represent a quantity and a selected scale. Interpreting a red area requires the applied loads, restraints, material and model geometry. A result becomes useful when it answers a specific design question.",
-        "columns": [
-          "Observation",
-          "What to understand",
-          "A useful check"
-        ],
-        "rows": [
-          {
-            "title": "Large deformation",
-            "why": "Displacement can disrupt an assembly or guide before a part breaks.",
-            "check": "Compare displacement with product clearances and functions."
-          },
-          {
-            "title": "A very local peak",
-            "why": "An ideally sharp corner or point load can create a numerical singularity.",
-            "check": "Review real details, restraints and mesh sensitivity."
-          },
-          {
-            "title": "A changing result",
-            "why": "The mesh divides the part into small calculation elements. Its refinement influences the result.",
-            "check": "Refine the mesh and check that the quantity being tracked stabilises."
-          }
-        ],
-        "takeaway": "Read a stress plot with its units, scale and assumptions. Relate the results to the material and failure mode being studied, then to the physical tests planned for the project."
-      }
-    },
-    "polymer-injection": {
-      "title": "Polymers and injection moulding",
-      "description": "You are developing a moulded component or considering a material change. We connect design, mechanical behaviour and manufacturing constraints from the start.",
-      "approach": "Wall thickness, assemblies, material properties and operating conditions are studied together. Depending on the project, mechanical calculations and rheological analyses help refine geometry before tooling.",
-      "validation": "Our work ranges from component design to tooling coordination and initial moulded production runs. Trials check real behaviour and inform process adjustments.",
-      "deliverables": [
-        "Material choices and component definition",
-        "Geometry recommendations and analysis as needed",
-        "Tooling documentation and trial support within the agreed scope"
-      ],
-      "outcome": "Develop the part and its injection moulding process together.",
-      "needs": [
-        "Adapt a part for injection moulding",
-        "Replace a metal architecture with a polymer",
-        "Prepare tooling and initial parts"
-      ],
-      "steps": [
-        {
-          "title": "Choose the architecture",
-          "body": "Relate material properties to the intended use."
-        },
-        {
-          "title": "Prepare moulding",
-          "body": "Study geometry, filling and critical areas."
-        },
-        {
-          "title": "Refine production",
-          "body": "Support tooling, trials and initial parts as required."
-        }
-      ],
-      "faq": [
-        {
-          "question": "When should we involve you?",
-          "answer": "Ideally before fixing the geometry or commissioning tooling. We can also analyse difficulties with an existing component."
-        },
-        {
-          "question": "Can you support initial production runs?",
-          "answer": "Our documented projects include tooling coordination, injection trials and initial production runs. DOMTEKNIKA’s role and the partners’ roles are agreed for each project."
-        }
-      ],
-      "caseStudy": {
-        "title": "Rethinking a surgical instrument in polymer.",
-        "body": "The ZipFix implant applicator replaces a reusable steel architecture with an ergonomic single-use polymer solution. DOMTEKNIKA designed the product, built functional prototypes and coordinated an initial moulded production run. Material, use and manufacturing were considered together."
-      },
-      "ctaTitle": "Is your component ready for injection moulding?",
-      "technicalFocus": {
-        "title": "A strong part starts with considered wall geometry.",
-        "intro": "In injection moulding, geometry influences filling, cooling and ejection. Changes in thickness can cause local shrinkage and distortion. Addressing these constraints during design makes discussions with the toolmaker and initial adjustments easier.",
-        "columns": [
-          "Geometry choice",
-          "Why it matters",
-          "What to examine"
-        ],
-        "rows": [
-          {
-            "title": "Walls and ribs",
-            "why": "A bulky section cools differently; a rib can add stiffness with less material.",
-            "check": "Consistent thickness and the junctions between ribs and walls."
-          },
-          {
-            "title": "Draft and radii",
-            "why": "Draft helps ejection; radii soften transitions in shape.",
-            "check": "Ejection direction, surface texture and loaded areas."
-          },
-          {
-            "title": "Mould separation",
-            "why": "Undercuts and access requirements may require additional tool movements.",
-            "check": "The parting line, acceptable marks and functional surfaces."
-          }
-        ],
-        "takeaway": "Thickness, draft and shrinkage are defined with the selected material, geometry and process. A local change in shape can affect the whole part, so it deserves review before tooling."
-      }
+      ]
     },
     "electronics-integration": {
       "title": "Electrical and electronics integration",
@@ -408,69 +54,7 @@
         "Functional architecture and interfaces",
         "Component integration into the product",
         "Prototype and functional checks within the agreed scope"
-      ],
-      "outcome": "Make mechanics, power supply and control work together.",
-      "needs": [
-        "Add an electrical function to a product",
-        "Develop an electromechanical demonstrator",
-        "Resolve interfaces between components and mechanics"
-      ],
-      "steps": [
-        {
-          "title": "Define functions",
-          "body": "Clarify power, control and interfaces."
-        },
-        {
-          "title": "Integrate components",
-          "body": "Plan packaging, assembly and access within the product."
-        },
-        {
-          "title": "Verify the system",
-          "body": "Test functions and refine integration."
-        }
-      ],
-      "faq": [
-        {
-          "question": "Can you work with our electronics team?",
-          "answer": "Yes. We can focus on interfaces and mechanical integration, coordinating with your project teams or partners."
-        },
-        {
-          "question": "What information should we prepare?",
-          "answer": "Required functions, selected components, power constraints and available drawings. We then define the necessary development work and checks."
-        }
-      ],
-      "caseStudy": {
-        "title": "Telling the time without a visible central pivot.",
-        "body": "The transparent clock combines peripherally driven discs with automatic atomic-clock synchronisation. DOMTEKNIKA developed the complete electrical and mechanical concept, coordinated the design study and built a working prototype with moulded gear segments. Integration makes the product’s visual principle possible."
-      },
-      "ctaTitle": "Which functions would you like to integrate?",
-      "technicalFocus": {
-        "title": "Electronics integration also depends on mechanics.",
-        "intro": "Integrating a board, sensor or motor requires space for connections, mounting and operating conditions. The mechanical enclosure also influences access, wiring and heat removal. These interfaces need defining as part of the product architecture.",
-        "columns": [
-          "Interface",
-          "The detail often missed",
-          "Define together"
-        ],
-        "rows": [
-          {
-            "title": "Power supply",
-            "why": "Current at start-up or during an action can differ from average consumption.",
-            "check": "Operating modes, current peaks and connections."
-          },
-          {
-            "title": "Space and access",
-            "why": "A connector needs room to be plugged in; replaceable components need access.",
-            "check": "Reserved volumes, cable routing and assembly sequence."
-          },
-          {
-            "title": "Heat",
-            "why": "Power losses heat components; the board and enclosure contribute to the thermal path.",
-            "check": "The environment, heat to remove and its path to the outside."
-          }
-        ],
-        "takeaway": "To scope integration, gather available component data sheets, use scenarios and enclosure constraints. Electronics, software and testing responsibilities can then be assigned clearly within the project."
-      }
+      ]
     }
   }
 }

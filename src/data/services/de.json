@@ -3,106 +3,15 @@
     "learnMore": "Leistung entdecken",
     "back": "Alle Kompetenzen",
     "approach": "Unser Vorgehen",
-    "deliverables": "Ihre Ergebnisse und Unterlagen",
+    "deliverables": "Gemeinsam festzulegende Ergebnisse",
     "projects": "Ausgewählte Projekte",
     "related": "Passende Leistungen",
-    "contact": "Ihr Vorhaben besprechen",
-    "ctaTitle": "Was ist Ihr nächster Schritt?",
-    "ctaBody": "Eine Idee untersuchen, einen Prototyp weiterentwickeln oder ein Bauteil für die Fertigung vorbereiten? Beschreiben Sie Ihr Vorhaben, damit wir die passende Unterstützung festlegen können.",
-    "other": "Weitere Kompetenzen",
-    "eyebrow": "Produktentwicklung · Schweiz",
-    "onThisPage": "Auf dieser Seite",
-    "needs": "Wann wir Sie unterstützen",
-    "method": "So gehen wir vor",
-    "scopeNote": "Umfang, Prüfungen und Ergebnisse legen wir vor Projektbeginn gemeinsam fest.",
-    "faq": "Konkrete Fragen",
-    "briefTitle": "Für unser erstes Gespräch",
-    "brief": [
-      "Ihr Ziel und der Einsatz des Produkts",
-      "Der aktuelle Stand: Idee, Zeichnungen oder Prototyp",
-      "Ihre technischen Anforderungen und Ihr Zeitplan"
-    ],
-    "confidentiality": "Ihre Informationen behandeln wir vertraulich.",
-    "viewProject": "Projekt ansehen",
-    "caseStudy": "Eine Aufgabe, ein konkretes Projekt",
-    "technicalFocus": "Technik verstehen",
-    "takeaway": "Merksatz",
-    "reference": "Weiterführende Informationen"
+    "contact": "Ein ähnliches Projekt besprechen",
+    "ctaTitle": "Erzählen Sie uns von Ihrem Vorhaben",
+    "ctaBody": "Teilen Sie uns Ihr Ziel, Ihre Anforderungen und den aktuellen Entwicklungsstand mit. Gemeinsam legen wir den passenden Umfang und die Ergebnisse fest.",
+    "other": "Weitere Kompetenzen"
   },
   "items": {
-    "creativity-innovation": {
-      "title": "Kreativität und Produktinnovation",
-      "description": "Sie möchten ein Problem lösen oder eine Idee umsetzen. Wir untersuchen mögliche Lösungen, bevor Sie sich auf eine Produktarchitektur festlegen.",
-      "approach": "Ausgangspunkt sind Anwendung, Funktionen sowie Kosten-, Bauraum- und Fertigungsanforderungen. Mechanik, Werkstoffe und Integration werden zusammen betrachtet, um umsetzbare Konzepte zu entwickeln.",
-      "validation": "Wir vergleichen Stärken, Grenzen und offene Fragen der Konzepte. Ziel ist eine klare Richtung mit den ersten notwendigen Validierungsschritten.",
-      "deliverables": [
-        "Zusammenfassung von Bedarf und Anforderungen",
-        "Konzepte und Funktionsprinzipien",
-        "Konzeptvergleich und Prüfplan"
-      ],
-      "outcome": "Aus einer offenen Frage werden vergleichbare technische Lösungswege.",
-      "needs": [
-        "Eine Idee ohne festgelegte technische Lösung untersuchen",
-        "Ein bestehendes Produkt oder einen Mechanismus neu denken",
-        "Vor der Entwicklung eine Architektur auswählen"
-      ],
-      "steps": [
-        {
-          "title": "Problem eingrenzen",
-          "body": "Anwendung, Funktionen und Anforderungen klären."
-        },
-        {
-          "title": "Lösungswege untersuchen",
-          "body": "Mechanische Prinzipien, Werkstoffe und Fertigung zusammen betrachten."
-        },
-        {
-          "title": "Nächsten Schritt festlegen",
-          "body": "Konzepte vergleichen und vorrangige Prüfungen definieren."
-        }
-      ],
-      "faq": [
-        {
-          "question": "Benötigen wir bereits ein Pflichtenheft?",
-          "answer": "Nein. Eine Beschreibung des Problems, der Anwendung und der bekannten Anforderungen reicht aus, um den Bedarf zu strukturieren."
-        },
-        {
-          "question": "Gehört ein Prototyp zu dieser Phase?",
-          "answer": "Ein Funktionsmuster kann daraus entstehen. Ausführung und Prüfziele richten sich nach den offenen technischen Fragen."
-        }
-      ],
-      "caseStudy": {
-        "title": "Ein Mechanismus, der die tatsächlich gefilterte Wassermenge erfasst.",
-        "body": "Die Filterkaraffe sollte anzeigen, wann ihre Kartusche gewechselt werden muss. DOMTEKNIKA entwickelte das gesamte Produkt und einen kostengünstigen Mechanismus zur Erfassung des Wasservolumens. Das Projekt verbindet Konzeptentwicklung, täglichen Gebrauch und Integration in ein konkretes Produkt."
-      },
-      "ctaTitle": "Welche Idee möchten Sie umsetzen?",
-      "technicalFocus": {
-        "title": "Eine gute Idee beginnt mit der richtigen Frage.",
-        "intro": "Zu Beginn eines Projekts kann eine attraktive Lösung den eigentlichen Bedarf verdecken. Beschreibt man die Handlung des Nutzers, die Umgebung und das erwartete Ergebnis, entstehen mehrere technische Ansätze. Diese lassen sich anhand konkreter Kriterien vergleichen, bevor Zeit in die CAD-Konstruktion fliesst.",
-        "columns": [
-          "Zu klären",
-          "Warum es wichtig ist",
-          "Die passende Frage"
-        ],
-        "rows": [
-          {
-            "title": "Nutzung",
-            "why": "Derselbe Mechanismus verändert sich je nach Bedienperson und Nutzungshäufigkeit.",
-            "check": "Welche Handlung ist schwierig, wann und unter welchen Bedingungen?"
-          },
-          {
-            "title": "Funktion",
-            "why": "Eine Funktion beschreibt die Aufgabe des Produkts und lässt den technischen Lösungsweg offen.",
-            "check": "Was soll das Produkt leisten, und woran erkennen wir den Erfolg?"
-          },
-          {
-            "title": "Zielkonflikte",
-            "why": "Bauraum, Kosten, Wartung und Fertigung können unterschiedliche Architekturen begünstigen.",
-            "check": "Welches Kriterium hat Vorrang, und was prüfen wir zuerst?"
-          }
-        ],
-        "takeaway": "Beispiel: «Mit einer Hand und mit Handschuhen öffnen» beschreibt eine Funktion. Hebel, Riegel und andere Mechanismen können dann am gleichen Bedarf gemessen werden."
-      }
-    },
     "mechanical-design": {
       "title": "Mechanische Konstruktion in der Schweiz",
       "description": "DOMTEKNIKA entwickelt Produkte und Mechanismen für Industrieunternehmen und Innovatoren, von der Architektur bis zu Bauteilen für die Industrialisierung.",
@@ -112,69 +21,7 @@
         "Mechanische Architektur und CAD-Modelle",
         "Definition von Bauteilen, Schnittstellen und Baugruppen",
         "Technische Unterlagen passend zum Entwicklungsstand"
-      ],
-      "outcome": "Von der gewünschten Funktion zu einer umsetzbaren mechanischen Architektur.",
-      "needs": [
-        "Ein individuelles Bauteil oder einen Mechanismus entwickeln",
-        "Die Fertigung eines komplexen Produkts vereinfachen",
-        "Unterlagen für Prototypen oder Serienfertigung vorbereiten"
-      ],
-      "steps": [
-        {
-          "title": "Schnittstellen festlegen",
-          "body": "Lasten, Bauraum und zusammenwirkende Teile erfassen."
-        },
-        {
-          "title": "Lösung ausarbeiten",
-          "body": "CAD, Werkstoffe und Baugruppen entwickeln."
-        },
-        {
-          "title": "Validierung vorbereiten",
-          "body": "Prüfungen und technische Unterlagen festlegen."
-        }
-      ],
-      "faq": [
-        {
-          "question": "Können Sie eine bestehende Konstruktion übernehmen?",
-          "answer": "Ja. Vorhandene Zeichnungen, Modelle oder Prototypen bilden die Grundlage, um Verbesserungen und beizubehaltende Schnittstellen zu bestimmen."
-        },
-        {
-          "question": "Ist die Fertigung in der Konstruktion enthalten?",
-          "answer": "Die Unterlagen können dem Prototypenbau oder der Produktion dienen. Fertigung, Prüfungen und industrielle Begleitung werden im Projektumfang festgelegt."
-        }
-      ],
-      "caseStudy": {
-        "title": "Ein Bildschirm, der die Architektur sichtbar lässt.",
-        "body": "Im Amphitheater Velum Sky in Genf sollten die Führungen bei angehobenem Bildschirm unsichtbar bleiben. Beim Absenken ist der Bildschirm vollständig freitragend. DOMTEKNIKA entwickelte Führung, Steifigkeit und Hebemechanismus anhand dieser Anforderungen und integrierte die Funktion in ihre Umgebung."
-      },
-      "ctaTitle": "Welchen Mechanismus möchten Sie entwickeln?",
-      "technicalFocus": {
-        "title": "Das entscheidende Detail einer Baugruppe: Toleranzen.",
-        "intro": "Die Masse gefertigter Teile variieren innerhalb der Zeichnungsvorgaben. In einer Baugruppe wirken diese Abweichungen zusammen: Eine Führung kann klemmen, eine Dichtung falsch komprimiert sein oder die Ausrichtung abweichen. Die Konstruktion muss daher das Verhalten realer Teile berücksichtigen.",
-        "columns": [
-          "Konstruktionspunkt",
-          "Mögliche Auswirkung",
-          "In der Zeichnung festlegen"
-        ],
-        "rows": [
-          {
-            "title": "Führung und Spiel",
-            "why": "Zu wenig Spiel kann die Bewegung blockieren; zu viel kann unerwünschte Beweglichkeit erzeugen.",
-            "check": "Funktionsmasse und den zulässigen Spielbereich."
-          },
-          {
-            "title": "Montagebezüge",
-            "why": "Jede Positionierung ergänzt die Abweichungen der bereits montierten Teile.",
-            "check": "Bezugsflächen und die Montagefolge."
-          },
-          {
-            "title": "Fertigung",
-            "why": "Hohe Präzision kann zusätzliche Bearbeitung und Prüfung erfordern.",
-            "check": "Funktionsgerechte Toleranzen und das vorgesehene Verfahren."
-          }
-        ],
-        "takeaway": "Vereinfachtes Beispiel: Eine Bohrung von 10,2 ± 0,1 mm und eine Welle von 10,0 ± 0,1 mm ergeben theoretisch 0 bis 0,4 mm Durchmesserspiel. Das Nennspiel von 0,2 mm kann somit verschwinden. Formabweichungen und Einsatzbedingungen müssen zusätzlich geprüft werden."
-      }
+      ]
     },
     "prototyping": {
       "title": "Prototypenbau und Produktvalidierung",
@@ -185,219 +32,18 @@
         "Bedarfsgerechter Prototyp oder Demonstrator",
         "Prüfpunkte und Beobachtungen aus Versuchen",
         "Konstruktionsanpassungen für den nächsten Schritt"
-      ],
-      "outcome": "Konkrete Erkenntnisse gewinnen, bevor Sie den nächsten Entwicklungsschritt beauftragen.",
-      "needs": [
-        "Eine Funktion oder Bewegung überprüfen",
-        "Ergonomie und Komponentenintegration testen",
-        "Einen bestehenden Prototyp weiterentwickeln"
-      ],
-      "steps": [
-        {
-          "title": "Prüfziel bestimmen",
-          "body": "Fragestellung und Beobachtungskriterien festlegen."
-        },
-        {
-          "title": "Passenden Prototyp bauen",
-          "body": "Werkstoffe und Ausführung auf den Test abstimmen."
-        },
-        {
-          "title": "Testen und verbessern",
-          "body": "Beobachtungen und notwendige Änderungen dokumentieren."
-        }
-      ],
-      "faq": [
-        {
-          "question": "Muss ein Prototyp wie das Serienprodukt aussehen?",
-          "answer": "Nicht immer. Für einen Bewegungsnachweis kann ein einfacher Aufbau reichen. Für Anwendungstests sind eine repräsentative Form und Ergonomie wichtiger."
-        },
-        {
-          "question": "Ist ein funktionierender Prototyp serienreif?",
-          "answer": "Nicht unbedingt. Werkstoffe, Toleranzen, Montage und Serienverfahren können eine eigene Industrialisierungsphase erfordern."
-        },
-        {
-          "question": "Wie wählt man zwischen 3D-Druck und spanender Fertigung?",
-          "answer": "Beim 3D-Druck entsteht das Teil schichtweise; bei der spanenden Fertigung wird Material aus einem Rohling abgetragen. Entscheidend sind Geometrie, gewünschtes Material, Funktionsflächen und die zu prüfenden Lasten. Für einen Prototyp werden auch notwendige Nachbearbeitung und die tatsächlich benötigte Präzision festgelegt."
-        }
-      ],
-      "caseStudy": {
-        "title": "Von Konzepten mit drei und vier Rädern zu physischen Prototypen.",
-        "body": "Aventor begann 2012 als internes Projekt. DOMTEKNIKA entwickelte die elektrische und mechanische Architektur, untersuchte Varianten mit drei und vier Rädern und baute physische Prototypen. Das Projekt zeigt den Weg vom Konzept zum vollständigen System, bevor ein eigenständiges Startup gegründet wurde."
-      },
-      "ctaTitle": "Was soll Ihr nächster Prototyp zeigen?",
-      "technicalFocus": {
-        "title": "Welcher Prototyp für welche Entscheidung?",
-        "intro": "Ein Prototyp kann eine Bewegung untersuchen, Nutzertests ermöglichen oder die Fertigung vorbereiten. Die zu beantwortende Frage bestimmt Material, Verfahren und erforderliche Ausführung. Wer das Lernziel festlegt, kann den Aufwand gezielt einsetzen.",
-        "columns": [
-          "Prototyp",
-          "Welche Frage er beantwortet",
-          "Was noch zu prüfen ist"
-        ],
-        "rows": [
-          {
-            "title": "Funktionsprinzip",
-            "why": "Funktioniert die geplante Bewegung oder der Mechanismus?",
-            "check": "Endgültiger Bauraum, Lebensdauer und Fertigung."
-          },
-          {
-            "title": "Nutzungsmodell",
-            "why": "Passen Handhabung, Zugänglichkeit und Bedienabläufe zu den Nutzern?",
-            "check": "Materialverhalten und Wiederholbarkeit in der Produktion."
-          },
-          {
-            "title": "Seriennaher Prototyp",
-            "why": "Entsprechen Montage und Verhalten dem geplanten Verfahren?",
-            "check": "Prozessstreuung und Prüfungen für die Produktionsfreigabe."
-          }
-        ],
-        "takeaway": "Definieren Sie vor dem Bau eine Frage, ein Erfolgskriterium und die daraus folgende Entscheidung. Ein 3D-Druck kann den Bauraum bestätigen; bei einem Wechsel von Material oder Verfahren muss das Verhalten erneut bewertet werden."
-      }
+      ]
     },
     "simulation": {
-      "title": "Mechanische Simulation und Analyse",
-      "description": "Sie möchten Konstruktionen vergleichen oder das Verhalten eines Bauteils besser verstehen. Unsere Finite-Elemente-Berechnungen unterstützen Ihre Entscheidungen vor den Versuchen.",
-      "approach": "Wir erstellen das Modell anhand von Geometrie, Werkstoffen, Lasten und realen Schnittstellen. Die Berechnung konzentriert sich auf die konstruktionsrelevanten Fragen.",
-      "validation": "Wir interpretieren die Ergebnisse mit ihren Annahmen. Sie unterstützen Geometrieänderungen und physische Validierung; Spritzgussanalysen erläutern wir im Bereich Polymere.",
+      "title": "Mechanische Simulation und Spritzgussanalyse",
+      "description": "DOMTEKNIKA unterstützt die mechanische Validierung und Optimierung von Spritzgussteilen durch Finite-Elemente-Berechnungen und rheologische Analysen.",
+      "approach": "Vor dem Werkzeugbau helfen Berechnungen, das Bauteilverhalten zu untersuchen und Geometrien zu vergleichen. Lastannahmen, Werkstoffe und Einsatzbedingungen bestimmen die Analyse.",
+      "validation": "Bei Polymerbauteilen verbindet die Untersuchung mechanische Leistung und Spritzgussanforderungen. Ergebnisse unterstützen Geometrieänderungen und Versuche, ersetzen aber nicht die erforderliche physische Validierung.",
       "deliverables": [
         "Abgestimmte Annahmen und Berechnungsfälle",
         "Simulationsergebnisse und Analyse kritischer Bereiche",
         "Empfehlungen zu Geometrie oder Prozess"
-      ],
-      "outcome": "Konstruktionsentscheidungen mit Berechnungen und klaren Annahmen unterstützen.",
-      "needs": [
-        "Lasten und Verformungen eines Bauteils untersuchen",
-        "Geometrien oder Werkstoffe vergleichen",
-        "Kritische Bereiche vor den Versuchen erkennen"
-      ],
-      "steps": [
-        {
-          "title": "Annahmen festlegen",
-          "body": "Werkstoffe, Lasten und Randbedingungen definieren."
-        },
-        {
-          "title": "Verhalten analysieren",
-          "body": "Beanspruchte Bereiche untersuchen und Varianten vergleichen."
-        },
-        {
-          "title": "Entscheidungen vorbereiten",
-          "body": "Ergebnisse mit Änderungen und physischen Versuchen verknüpfen."
-        }
-      ],
-      "faq": [
-        {
-          "question": "Welche Informationen benötigen Sie?",
-          "answer": "Die verfügbare Geometrie, mögliche Werkstoffe, Belastungen und Einsatzbedingungen. Fehlende Annahmen klären wir vor der Berechnung."
-        },
-        {
-          "question": "Ersetzt die Simulation physische Versuche?",
-          "answer": "Nein. Sie hilft, Versuche gezielt vorzubereiten und Lösungen zu vergleichen. Ergebnisse hängen von den Annahmen ab und müssen mit dem realen Verhalten abgeglichen werden."
-        }
-      ],
-      "caseStudy": {
-        "title": "Von der Berechnung zum fertigungsgeeigneten PEEK-Bauteil.",
-        "body": "Die PEEK-Komponenten des Halters für Acetabulumfräsen mussten mechanische und spritzgusstechnische Anforderungen erfüllen. Finite-Elemente-Berechnungen und rheologische Analysen unterstützten die Geometrieoptimierung. Es folgten Werkzeugentwicklung und die Abstimmung des Produktionsverfahrens."
-      },
-      "ctaTitle": "Welche technische Entscheidung möchten Sie absichern?",
-      "technicalFocus": {
-        "title": "Was bedeutet ein roter Bereich im Ergebnis?",
-        "intro": "Die Farben einer Berechnung zeigen eine Grösse und eine gewählte Skala. Für die Interpretation eines roten Bereichs braucht es die Lasten, Lagerungen, das Material und die Modellgeometrie. Das Ergebnis wird nützlich, wenn es eine konkrete Konstruktionsfrage beantwortet.",
-        "columns": [
-          "Beobachtung",
-          "Was dahintersteht",
-          "Sinnvolle Prüfung"
-        ],
-        "rows": [
-          {
-            "title": "Grosse Verformung",
-            "why": "Verschiebungen können Montage oder Führung beeinträchtigen, bevor ein Teil bricht.",
-            "check": "Verschiebungen mit Spiel und Produktfunktionen vergleichen."
-          },
-          {
-            "title": "Sehr lokale Spitze",
-            "why": "Eine ideal scharfe Ecke oder Punktlast kann eine numerische Singularität erzeugen.",
-            "check": "Reale Details, Lagerungen und Netzabhängigkeit untersuchen."
-          },
-          {
-            "title": "Veränderliches Ergebnis",
-            "why": "Das Netz unterteilt das Bauteil in kleine Berechnungselemente. Seine Feinheit beeinflusst das Ergebnis.",
-            "check": "Das Netz verfeinern und prüfen, ob sich die betrachtete Grösse stabilisiert."
-          }
-        ],
-        "takeaway": "Lesen Sie eine Spannungskarte mit ihren Einheiten, ihrer Skala und ihren Annahmen. Beziehen Sie die Ergebnisse auf das Material und den untersuchten Versagensmechanismus sowie auf die geplanten physischen Versuche."
-      }
-    },
-    "polymer-injection": {
-      "title": "Polymere und Spritzguss",
-      "description": "Sie entwickeln ein Spritzgussteil oder prüfen einen Materialwechsel. Wir verbinden Konstruktion, mechanisches Verhalten und Fertigungsanforderungen von Beginn an.",
-      "approach": "Wandstärken, Baugruppen, Materialeigenschaften und Einsatzbedingungen werden gemeinsam untersucht. Je nach Projekt helfen mechanische Berechnungen und rheologische Analysen, die Geometrie vor dem Werkzeugbau zu präzisieren.",
-      "validation": "Unsere Aufgaben reichen von der Bauteilkonstruktion bis zur Werkzeugkoordination und Begleitung erster Spritzgussserien. Versuche prüfen das reale Verhalten und unterstützen die Prozessabstimmung.",
-      "deliverables": [
-        "Werkstoffauswahl und Bauteildefinition",
-        "Geometrieempfehlungen und bedarfsgerechte Analysen",
-        "Werkzeugunterlagen und Versuchsbegleitung im vereinbarten Umfang"
-      ],
-      "outcome": "Bauteil und Spritzgussverfahren gemeinsam entwickeln.",
-      "needs": [
-        "Ein Bauteil für den Spritzguss optimieren",
-        "Eine Metallkonstruktion durch einen Polymerwerkstoff ersetzen",
-        "Werkzeuge und erste Bauteile vorbereiten"
-      ],
-      "steps": [
-        {
-          "title": "Architektur auswählen",
-          "body": "Materialeigenschaften auf den Einsatz abstimmen."
-        },
-        {
-          "title": "Spritzguss vorbereiten",
-          "body": "Geometrie, Füllverhalten und kritische Bereiche untersuchen."
-        },
-        {
-          "title": "Fertigung abstimmen",
-          "body": "Werkzeuge, Versuche und erste Teile nach Bedarf begleiten."
-        }
-      ],
-      "faq": [
-        {
-          "question": "Wann sollten wir Sie einbeziehen?",
-          "answer": "Möglichst bevor die Geometrie festgelegt oder das Werkzeug beauftragt wird. Wir können auch Schwierigkeiten an einem bestehenden Bauteil untersuchen."
-        },
-        {
-          "question": "Begleiten Sie erste Serien?",
-          "answer": "Unsere dokumentierten Projekte umfassen Werkzeugkoordination, Spritzgussversuche und erste Serien. Die Aufgaben von DOMTEKNIKA und den Partnern werden je Projekt vereinbart."
-        }
-      ],
-      "caseStudy": {
-        "title": "Ein chirurgisches Instrument in Polymer neu gestalten.",
-        "body": "Das Instrument zum Einsetzen von ZipFix-Implantaten ersetzt eine wiederverwendbare Stahlkonstruktion durch eine ergonomische Einweglösung aus Polymer. DOMTEKNIKA konstruierte das Produkt, fertigte Funktionsprototypen und koordinierte eine erste Spritzgussserie. Werkstoff, Anwendung und Fertigung wurden gemeinsam betrachtet."
-      },
-      "ctaTitle": "Ist Ihr Bauteil bereit für den Spritzguss?",
-      "technicalFocus": {
-        "title": "Ein stabiles Teil beginnt mit durchdachten Wandungen.",
-        "intro": "Beim Spritzgiessen beeinflusst die Geometrie das Füllen, Abkühlen und Entformen. Unterschiedliche Wanddicken können lokale Schwindung und Verzug verursachen. Werden diese Zusammenhänge bereits in der Konstruktion berücksichtigt, erleichtert das die Abstimmung mit dem Werkzeugbau und die ersten Anpassungen.",
-        "columns": [
-          "Geometrie",
-          "Warum sie wichtig ist",
-          "Was zu untersuchen ist"
-        ],
-        "rows": [
-          {
-            "title": "Wände und Rippen",
-            "why": "Massive Bereiche kühlen anders ab; Rippen können mit weniger Material versteifen.",
-            "check": "Gleichmässige Wanddicken und Übergänge zwischen Rippen und Wänden."
-          },
-          {
-            "title": "Entformung und Radien",
-            "why": "Entformungsschrägen erleichtern das Auswerfen; Radien entschärfen Formübergänge.",
-            "check": "Entformungsrichtung, Oberflächenstruktur und belastete Bereiche."
-          },
-          {
-            "title": "Werkzeugteilung",
-            "why": "Hinterschneidungen und Zugänglichkeit können zusätzliche Werkzeugbewegungen erfordern.",
-            "check": "Trennebene, zulässige Spuren und Funktionsflächen."
-          }
-        ],
-        "takeaway": "Wanddicken, Entformungsschrägen und Schwindung werden mit Material, Geometrie und Verfahren abgestimmt. Eine lokale Formänderung kann das gesamte Teil beeinflussen und sollte vor dem Werkzeugbau geprüft werden."
-      }
+      ]
     },
     "electronics-integration": {
       "title": "Elektrische und elektronische Integration",
@@ -408,69 +54,7 @@
         "Funktionsarchitektur und Schnittstellen",
         "Integration der Komponenten in das Produkt",
         "Prototyp und Funktionsprüfungen im vereinbarten Umfang"
-      ],
-      "outcome": "Mechanik, Stromversorgung und Steuerung zu einem funktionierenden System verbinden.",
-      "needs": [
-        "Eine elektrische Funktion in ein Produkt integrieren",
-        "Einen elektromechanischen Demonstrator entwickeln",
-        "Schnittstellen zwischen Komponenten und Mechanik klären"
-      ],
-      "steps": [
-        {
-          "title": "Funktionen definieren",
-          "body": "Stromversorgung, Steuerung und Schnittstellen klären."
-        },
-        {
-          "title": "Komponenten integrieren",
-          "body": "Bauraum, Montage und Zugänglichkeit planen."
-        },
-        {
-          "title": "Gesamtsystem prüfen",
-          "body": "Funktionen testen und Integration weiterentwickeln."
-        }
-      ],
-      "faq": [
-        {
-          "question": "Arbeiten Sie mit unserem Elektronikteam zusammen?",
-          "answer": "Ja. Wir können Schnittstellen und mechanische Integration gemeinsam mit Ihren Projektteams oder Partnern bearbeiten."
-        },
-        {
-          "question": "Welche Unterlagen sollen wir vorbereiten?",
-          "answer": "Gewünschte Funktionen, ausgewählte Komponenten, Anforderungen an die Stromversorgung und vorhandene Zeichnungen. Darauf aufbauend legen wir Entwicklung und Prüfungen fest."
-        }
-      ],
-      "caseStudy": {
-        "title": "Die Zeit anzeigen, ohne sichtbare zentrale Achse.",
-        "body": "Die transparente Uhr verbindet am Umfang angetriebene Scheiben mit automatischer Synchronisation über die Atomuhr. DOMTEKNIKA entwickelte das vollständige elektrische und mechanische Konzept, koordinierte die Designstudie und baute einen Funktionsprototyp mit gespritzten Zahnsegmenten. Die Integration ermöglicht das visuelle Prinzip des Produkts."
-      },
-      "ctaTitle": "Welche Funktionen möchten Sie integrieren?",
-      "technicalFocus": {
-        "title": "Elektronikintegration braucht auch Mechanik.",
-        "intro": "Eine Platine, ein Sensor oder ein Motor benötigt Platz für Anschlüsse, Befestigung und Betrieb. Das mechanische Gehäuse beeinflusst ausserdem Zugänglichkeit, Verkabelung und Wärmeabfuhr. Diese Schnittstellen werden bereits in der Produktarchitektur festgelegt.",
-        "columns": [
-          "Schnittstelle",
-          "Oft übersehen",
-          "Gemeinsam festlegen"
-        ],
-        "rows": [
-          {
-            "title": "Stromversorgung",
-            "why": "Anlaufstrom oder Strom während einer Aktion kann vom Durchschnittsverbrauch abweichen.",
-            "check": "Betriebsarten, Stromspitzen und Anschlüsse."
-          },
-          {
-            "title": "Bauraum und Zugang",
-            "why": "Stecker benötigen Platz zum Anschliessen; austauschbare Komponenten müssen zugänglich bleiben.",
-            "check": "Reservierte Volumen, Kabelführung und Montagefolge."
-          },
-          {
-            "title": "Wärme",
-            "why": "Verlustleistung erwärmt Komponenten; Platine und Gehäuse tragen zum Wärmeweg bei.",
-            "check": "Umgebung, abzuführende Wärme und den Weg nach aussen."
-          }
-        ],
-        "takeaway": "Für die Planung helfen Datenblätter verfügbarer Komponenten, Nutzungsszenarien und Gehäusebedingungen. Damit lassen sich Aufgaben für Elektronik, Software und Prüfungen im Projekt klar zuordnen."
-      }
+      ]
     }
   }
 }

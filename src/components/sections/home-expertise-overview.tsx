@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/providers/reveal";
 import { Link } from "@/i18n/navigation";
-import { getServicePath } from "@/data/services";
 
 const expertiseItems = [
   "creativity",
@@ -67,10 +66,9 @@ export function ExpertiseOverviewSection() {
 
             <div className="flex flex-col gap-0 overflow-visible p-0 sm:flex-row sm:snap-x sm:snap-mandatory sm:gap-3 sm:overflow-x-auto sm:overscroll-x-contain sm:scroll-px-4 sm:px-4 sm:py-4 sm:[scrollbar-width:none] sm:[&::-webkit-scrollbar]:hidden min-[920px]:grid min-[920px]:grid-cols-4 min-[920px]:gap-0 min-[920px]:overflow-visible min-[920px]:p-0">
               {expertiseItems.map((item) => (
-                <Link
+                <div
                   key={item}
-                  href={getServicePath(item)}
-                  className="flex min-w-0 snap-none items-start gap-3.5 border-0 border-b border-border/80 bg-transparent px-5 py-3.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand last:border-b-0 sm:min-w-[44%] sm:snap-start sm:gap-4 sm:rounded-[14px] sm:border sm:bg-white sm:px-4 sm:py-4 sm:last:border-b min-[920px]:block min-[920px]:min-w-0 min-[920px]:snap-none min-[920px]:rounded-none min-[920px]:border-b-0 min-[920px]:border-l min-[920px]:border-r-0 min-[920px]:border-t-0 min-[920px]:bg-transparent min-[920px]:px-6 min-[920px]:py-5 lg:py-6"
+                  className="flex min-w-0 snap-none items-start gap-3.5 border-0 border-b border-border/80 bg-transparent px-5 py-3.5 last:border-b-0 sm:min-w-[44%] sm:snap-start sm:gap-4 sm:rounded-[14px] sm:border sm:bg-white sm:px-4 sm:py-4 sm:last:border-b min-[920px]:block min-[920px]:min-w-0 min-[920px]:snap-none min-[920px]:rounded-none min-[920px]:border-b-0 min-[920px]:border-l min-[920px]:border-r-0 min-[920px]:border-t-0 min-[920px]:bg-transparent min-[920px]:px-6 min-[920px]:py-5 lg:py-6"
                 >
                   <span className="flex size-10 shrink-0 items-center justify-center rounded-[11px] bg-brand/[0.07] ring-1 ring-brand/[0.06] sm:size-11 sm:rounded-[12px] min-[920px]:size-10 min-[920px]:rounded-full min-[920px]:ring-0">
                     <Image
@@ -91,7 +89,7 @@ export function ExpertiseOverviewSection() {
                     </span>
                   </span>
 
-                </Link>
+                </div>
               ))}
             </div>
           </div>
