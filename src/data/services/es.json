@@ -234,12 +234,12 @@
         ],
         "rows": [
           {
-            "title": "De principio",
+            "title": "Prueba de principio",
             "why": "¿Funciona el movimiento o el mecanismo propuesto?",
-            "check": "El espacio final, la duración y la fabricación."
+            "check": "El espacio final, la durabilidad y la fabricación."
           },
           {
-            "title": "De uso",
+            "title": "Evaluación de uso",
             "why": "¿La manipulación, los accesos y los gestos se adaptan a los usuarios?",
             "check": "El comportamiento del material y la repetibilidad en producción."
           },
@@ -299,7 +299,7 @@
       "ctaTitle": "¿Qué decisión técnica necesita verificar?",
       "technicalFocus": {
         "title": "¿Qué significa realmente una zona roja?",
-        "intro": "Los colores de un cálculo representan una magnitud y una escala elegidas. Para interpretar una zona roja hay que conocer las cargas, los apoyos, el material y la geometría del modelo. El resultado resulta útil cuando responde a una pregunta concreta de diseño.",
+        "intro": "Los colores de un cálculo representan una magnitud y una escala elegidas. Para interpretar una zona roja hay que conocer las cargas, los apoyos, el material y la geometría del modelo. El resultado es útil cuando responde a una pregunta concreta de diseño.",
         "columns": [
           "Qué se observa",
           "Qué hay que entender",
