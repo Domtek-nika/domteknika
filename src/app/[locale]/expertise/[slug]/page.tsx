@@ -7,7 +7,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/layout/container";
 import { getProjectBySlug } from "@/data/projects";
 import { getServiceCopy } from "@/data/service-copy";
-import { getService, serviceReferences, services } from "@/data/services";
+import { getService, services } from "@/data/services";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { buildPageMetadata, localizedUrl, SITE_URL } from "@/lib/seo";
@@ -43,7 +43,6 @@ export default async function ServicePage({ params }: Props) {
   if (!service) notFound();
   const { labels, items } = getServiceCopy(locale);
   const copy = items[service.slug];
-  const reference = serviceReferences[service.slug];
   const t = await getTranslations({ locale, namespace: "ExpertisePage.Services" });
   const displayTitle = t(`items.${service.key}.title`);
   const projects = service.projects.flatMap((id) => {
@@ -141,7 +140,6 @@ export default async function ServicePage({ params }: Props) {
                   ))}
                 </tbody>
               </table>
-              <p className="mt-5 text-[11px] leading-relaxed text-muted-foreground">{labels.reference} : <a href={reference.url} className={`font-bold underline underline-offset-4 hover:text-brand ${focusStyle}`}>{reference.title}</a></p>
             </div>
           </div>
           <div className="mt-9 max-w-[900px] border-l-[3px] border-brand pl-5">

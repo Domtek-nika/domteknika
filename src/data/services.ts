@@ -11,34 +11,6 @@ export const services = [
 
 export type ServiceSlug = (typeof services)[number]["slug"];
 
-// Further reading supports the explanations; it does not describe tools used by DOMTEKNIKA.
-export const serviceReferences: Record<ServiceSlug, { title: string; url: string }> = {
-  "creativity-innovation": {
-    title: "Design Council · Double Diamond",
-    url: "https://www.designcouncil.org.uk/resources/the-double-diamond/",
-  },
-  "mechanical-design": {
-    title: "Autodesk · Tolerance Analysis",
-    url: "https://www.autodesk.com/support/technical/article/caas/tsarticles/ts/63R3AYMja3Hl07cLHP5GMg.html",
-  },
-  prototyping: {
-    title: "Formlabs · Guide to Rapid Prototyping",
-    url: "https://formlabs.com/blog/ultimate-guide-to-rapid-prototyping/",
-  },
-  simulation: {
-    title: "COMSOL · Singularities in Finite Element Models",
-    url: "https://www.comsol.com/blogs/singularities-in-finite-element-models-dealing-with-red-spots",
-  },
-  "polymer-injection": {
-    title: "Protolabs · Injection Molding Basics",
-    url: "https://www.protolabs.com/resources/design-tips/injection-molding-basics/",
-  },
-  "electronics-integration": {
-    title: "Texas Instruments · PCB Thermal Calculator",
-    url: "https://www.ti.com/design-development/design-simulation-tools/pcb-thermal-calculator.html",
-  },
-};
-
 export function getService(slug: string) {
   return services.find((service) => service.slug === slug);
 }
