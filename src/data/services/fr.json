@@ -3,58 +3,474 @@
     "learnMore": "Découvrir la prestation",
     "back": "Toutes nos expertises",
     "approach": "Notre approche",
-    "deliverables": "Livrables à définir ensemble",
+    "deliverables": "Ce que nous vous remettons",
     "projects": "Exemples de réalisations",
     "related": "Prestations liées",
-    "contact": "Discuter d’un projet similaire",
-    "ctaTitle": "Parlons de votre besoin",
-    "ctaBody": "Partagez votre objectif, vos contraintes et l’état actuel de votre projet. Nous définirons ensemble le périmètre et les livrables adaptés.",
-    "other": "Autres expertises"
+    "contact": "Parler de votre besoin",
+    "ctaTitle": "Quelle est votre prochaine étape ?",
+    "ctaBody": "Une idée à explorer, un prototype à fiabiliser ou une pièce à industrialiser ? Présentez-nous votre besoin pour définir une intervention adaptée.",
+    "other": "Autres expertises",
+    "eyebrow": "Ingénierie produit · Suisse",
+    "onThisPage": "Dans cette page",
+    "needs": "Quand nous solliciter",
+    "method": "Comment nous avançons",
+    "scopeNote": "Le périmètre, les essais et les livrables sont définis avec vous avant de commencer.",
+    "faq": "Vos questions, concrètement",
+    "briefTitle": "Pour préparer notre premier échange",
+    "brief": [
+      "Votre objectif et l’usage du produit",
+      "Ce qui existe déjà : idée, plans ou prototype",
+      "Vos contraintes techniques et votre échéance"
+    ],
+    "confidentiality": "Vos informations sont traitées de manière confidentielle.",
+    "viewProject": "Voir le projet",
+    "caseStudy": "Un défi, une réalisation",
+    "technicalFocus": "À comprendre",
+    "takeaway": "À retenir",
+    "reference": "Pour aller plus loin"
   },
   "items": {
+    "creativity-innovation": {
+      "title": "Créativité et innovation produit",
+      "description": "Vous avez un problème à résoudre ou une idée à concrétiser. Nous explorons les solutions possibles avant de vous engager dans une architecture de produit.",
+      "approach": "Nous partons de l’usage, des fonctions attendues et des contraintes de coût, d’encombrement et de fabrication. La recherche de concepts croise mécanique, matériaux et intégration pour faire émerger des pistes réalisables.",
+      "validation": "Les pistes sont comparées selon leurs avantages, leurs limites et les points restant à vérifier. L’objectif : choisir une direction et préparer les premières validations.",
+      "deliverables": [
+        "Synthèse du besoin et des contraintes",
+        "Concepts et principes de fonctionnement",
+        "Comparaison des pistes et plan de vérification"
+      ],
+      "outcome": "Transformer un problème ouvert en pistes techniques comparables.",
+      "needs": [
+        "Explorer une idée sans solution technique définie",
+        "Repenser un produit ou un mécanisme existant",
+        "Choisir une architecture avant de développer"
+      ],
+      "steps": [
+        {
+          "title": "Cadrer le problème",
+          "body": "Clarifier l’usage, les fonctions et les contraintes."
+        },
+        {
+          "title": "Explorer les pistes",
+          "body": "Croiser les principes mécaniques, les matériaux et la fabrication."
+        },
+        {
+          "title": "Choisir la suite",
+          "body": "Comparer les concepts et définir les vérifications prioritaires."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Faut-il déjà avoir un cahier des charges ?",
+          "answer": "Non. Une description du problème, de l’usage et des contraintes connues suffit pour commencer à structurer le besoin."
+        },
+        {
+          "question": "Est-ce que cette étape inclut un prototype ?",
+          "answer": "Elle peut déboucher sur un prototype de principe. Sa réalisation et les points à valider sont définis selon les incertitudes à lever."
+        }
+      ],
+      "caseStudy": {
+        "title": "Un mécanisme qui mesure l’eau réellement filtrée.",
+        "body": "Pour la carafe filtrante, le besoin était de signaler le bon moment pour remplacer la cartouche. DOMTEKNIKA a développé l’ensemble du produit et un mécanisme économique de comptage du volume d’eau. Ce projet relie recherche de principe, usage quotidien et intégration dans un produit concret."
+      },
+      "ctaTitle": "Quelle idée souhaitez-vous concrétiser ?",
+      "technicalFocus": {
+        "title": "Une bonne idée commence par une bonne question.",
+        "intro": "Au début d’un projet, une solution séduisante peut masquer le vrai besoin. Décrire le geste de l’utilisateur, l’environnement et le résultat attendu ouvre plusieurs pistes techniques. On peut ensuite les comparer sur des critères concrets, avant de consacrer du temps à la CAO.",
+        "columns": [
+          "À clarifier",
+          "Pourquoi cela compte",
+          "La question à poser"
+        ],
+        "rows": [
+          {
+            "title": "L’usage",
+            "why": "Le même mécanisme change selon la personne qui le manipule et la fréquence d’utilisation.",
+            "check": "Quel geste pose problème, à quel moment et dans quelles conditions ?"
+          },
+          {
+            "title": "La fonction",
+            "why": "Une fonction décrit ce que le produit doit accomplir et laisse le choix du moyen technique.",
+            "check": "Que doit faire le produit, et comment saura-t-on que cela fonctionne ?"
+          },
+          {
+            "title": "Le compromis",
+            "why": "Encombrement, coût, entretien et fabrication peuvent favoriser des architectures différentes.",
+            "check": "Quel critère est prioritaire, et quel point faut-il vérifier en premier ?"
+          }
+        ],
+        "takeaway": "Exemple : « ouvrir d’une seule main avec des gants » donne une fonction à explorer. Le choix d’un levier, d’un loquet ou d’un autre mécanisme peut alors être comparé sur le même besoin."
+      }
+    },
     "mechanical-design": {
       "title": "Conception mécanique en Suisse",
       "description": "DOMTEKNIKA conçoit des produits et des mécanismes pour les industriels et les porteurs de projets, de l’architecture aux pièces prêtes à industrialiser.",
-      "approach": "Un mécanisme sur mesure, une nouvelle pièce ou un produit à repenser : nous partons de l’usage, des efforts, de l’encombrement et des contraintes de fabrication. Les choix de matériaux et d’assemblage sont intégrés dès la conception.",
+      "approach": "Un mécanisme sur mesure, une nouvelle pièce ou un produit à repenser : nous partons de l’usage, des efforts, de l’encombrement et des contraintes de fabrication. Les choix de matériaux et d’assemblage sont intégrés dès la conception.",
       "validation": "Les modèles CAO servent à préciser les interfaces et à préparer les validations. Selon le projet, le travail se poursuit par des prototypes, des calculs ou la mise au point des pièces pour la production.",
       "deliverables": [
         "Architecture mécanique et modèles CAO",
         "Définition des pièces, interfaces et assemblages",
         "Dossier technique adapté à la phase de développement"
-      ]
+      ],
+      "outcome": "Passer d’une fonction attendue à une architecture mécanique réalisable.",
+      "needs": [
+        "Concevoir une pièce ou un mécanisme sur mesure",
+        "Améliorer un produit trop complexe à fabriquer",
+        "Préparer des plans pour le prototype ou la série"
+      ],
+      "steps": [
+        {
+          "title": "Définir les interfaces",
+          "body": "Identifier les efforts, l’encombrement et les pièces en contact."
+        },
+        {
+          "title": "Construire la solution",
+          "body": "Développer la CAO, les matériaux et les assemblages."
+        },
+        {
+          "title": "Préparer la validation",
+          "body": "Préciser les vérifications et les éléments du dossier technique."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Pouvez-vous reprendre une conception existante ?",
+          "answer": "Oui. Nous partons des plans, des modèles ou du prototype disponibles pour identifier les points à améliorer et les interfaces à conserver."
+        },
+        {
+          "question": "La conception inclut-elle la fabrication ?",
+          "answer": "Le dossier peut servir au prototypage ou à la production. La fabrication, les essais et l’accompagnement industriel sont précisés dans le périmètre de l’intervention."
+        }
+      ],
+      "caseStudy": {
+        "title": "Faire descendre un écran en préservant la vue architecturale.",
+        "body": "Pour l’amphithéâtre Velum Sky à Genève, les guides devaient rester invisibles en position haute. Pendant la descente, l’écran est entièrement en porte-à-faux. DOMTEKNIKA a conçu le guidage, la rigidité et le mécanisme de levage autour de ces contraintes : une fonction précise, intégrée à son environnement."
+      },
+      "ctaTitle": "Quel mécanisme souhaitez-vous développer ?",
+      "technicalFocus": {
+        "title": "Le détail qui change un assemblage : les tolérances.",
+        "intro": "Les dimensions d’une pièce fabriquée varient dans les limites prévues au plan. Dans un assemblage, ces variations se combinent : un guidage peut se coincer, un joint être mal comprimé ou un alignement se dégrader. La conception doit donc prévoir le comportement des pièces réelles.",
+        "columns": [
+          "Point de conception",
+          "Ce qui peut se passer",
+          "À définir au plan"
+        ],
+        "rows": [
+          {
+            "title": "Guidage et jeu",
+            "why": "Un jeu trop faible peut bloquer le mouvement ; trop grand, il peut créer du flottement.",
+            "check": "Les dimensions fonctionnelles et la plage de jeu admissible."
+          },
+          {
+            "title": "Références de montage",
+            "why": "Chaque positionnement ajoute une variation à celle des pièces déjà assemblées.",
+            "check": "Les surfaces de référence et l’ordre de montage."
+          },
+          {
+            "title": "Fabrication",
+            "why": "Une précision élevée peut demander davantage d’opérations et de contrôle.",
+            "check": "Les tolérances utiles à la fonction et le procédé envisagé."
+          }
+        ],
+        "takeaway": "Exemple simplifié : un alésage de 10,2 ± 0,1 mm et un axe de 10,0 ± 0,1 mm donnent un jeu diamétral théorique de 0 à 0,4 mm. Le jeu nominal de 0,2 mm peut donc disparaître. La forme des pièces et les conditions d’usage restent à vérifier."
+      }
     },
     "prototyping": {
       "title": "Prototypage et validation de produits",
       "description": "DOMTEKNIKA développe des prototypes pour confronter une idée à l’usage, vérifier les mécanismes et préparer les prochaines étapes du développement.",
-      "approach": "Le prototype doit répondre à une question précise : vérifier un mouvement, tester l’ergonomie ou démontrer une fonction. Nous définissons les points à valider avant de choisir la forme et le niveau de finition du prototype.",
-      "validation": "Les essais alimentent les itérations de conception. Un démonstrateur fonctionnel et une pièce représentative de la série ne répondent pas au même besoin : le périmètre est adapté à la décision à prendre.",
+      "approach": "Le prototype doit répondre à une question précise : vérifier un mouvement, tester l’ergonomie ou démontrer une fonction. Nous définissons les points à valider avant de choisir la forme et le niveau de finition du prototype.",
+      "validation": "Les essais alimentent les itérations de conception. Un démonstrateur fonctionnel et une pièce représentative de la série ne répondent pas au même besoin : le périmètre est adapté à la décision à prendre.",
       "deliverables": [
         "Prototype ou démonstrateur selon le besoin",
         "Points de validation et observations d’essais",
         "Évolutions de conception pour l’étape suivante"
-      ]
+      ],
+      "outcome": "Obtenir des réponses concrètes avant d’engager la prochaine étape.",
+      "needs": [
+        "Vérifier une fonction ou une cinématique",
+        "Tester l’ergonomie et l’intégration des composants",
+        "Faire évoluer un prototype existant"
+      ],
+      "steps": [
+        {
+          "title": "Choisir ce qu’il faut tester",
+          "body": "Formuler la question et les critères d’observation."
+        },
+        {
+          "title": "Réaliser le prototype utile",
+          "body": "Adapter les matériaux et la finition au test prévu."
+        },
+        {
+          "title": "Tester et faire évoluer",
+          "body": "Documenter les observations et les modifications nécessaires."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Un prototype doit-il ressembler au produit final ?",
+          "answer": "Pas toujours. Pour vérifier un mouvement, un montage simple peut suffire. Pour tester l’usage, une forme et une ergonomie représentatives deviennent importantes."
+        },
+        {
+          "question": "Un prototype fonctionnel est-il prêt à produire ?",
+          "answer": "Pas nécessairement. Les matériaux, les tolérances, l’assemblage et le procédé de série peuvent demander une phase d’industrialisation distincte."
+        },
+        {
+          "question": "Comment choisir entre impression 3D et usinage ?",
+          "answer": "L’impression 3D construit la pièce par couches ; l’usinage enlève de la matière dans un brut. Le choix dépend de la géométrie, du matériau recherché, des surfaces fonctionnelles et des efforts à tester. Pour un prototype, il faut aussi définir les reprises et le niveau de précision réellement nécessaires."
+        }
+      ],
+      "caseStudy": {
+        "title": "Des versions trois et quatre roues jusqu’aux prototypes.",
+        "body": "Aventor a commencé en 2012 comme projet interne. DOMTEKNIKA a développé les architectures électrique et mécanique, étudié des configurations à trois et quatre roues, puis réalisé les prototypes physiques. Le projet illustre le passage du concept à un système complet, avant la création d’une startup distincte."
+      },
+      "ctaTitle": "Que doit démontrer votre prochain prototype ?",
+      "technicalFocus": {
+        "title": "Quel prototype pour quelle décision ?",
+        "intro": "Un prototype peut servir à explorer un mouvement, faire essayer un produit ou préparer sa fabrication. La question à trancher détermine la matière, le procédé et le niveau de finition nécessaires. Choisir ce que l’on veut apprendre aide à investir au bon endroit.",
+        "columns": [
+          "Type de prototype",
+          "La question qu’il éclaire",
+          "Ce qui reste à vérifier"
+        ],
+        "rows": [
+          {
+            "title": "De principe",
+            "why": "Le mouvement ou le mécanisme envisagé fonctionne-t-il ?",
+            "check": "L’encombrement final, l’endurance et la fabrication."
+          },
+          {
+            "title": "D’usage",
+            "why": "La prise en main, l’accès et les gestes conviennent-ils aux utilisateurs ?",
+            "check": "La tenue des matériaux et la répétabilité de production."
+          },
+          {
+            "title": "Représentatif de la série",
+            "why": "L’assemblage et le comportement sont-ils cohérents avec le procédé prévu ?",
+            "check": "La variabilité du procédé et les essais nécessaires à la mise en production."
+          }
+        ],
+        "takeaway": "Avant de fabriquer, formulez une question, un critère de réussite et la décision à prendre selon le résultat. Une pièce imprimée en 3D peut valider un encombrement ; son comportement doit être réévalué si la matière ou le procédé final change."
+      }
     },
     "simulation": {
-      "title": "Simulation mécanique et analyse pour l’injection",
-      "description": "DOMTEKNIKA accompagne la validation mécanique et l’optimisation de pièces injectées, avec des calculs par éléments finis et des analyses rhéologiques.",
-      "approach": "Avant de lancer un outillage, les calculs permettent d’étudier le comportement d’une pièce et de comparer des géométries. Les hypothèses de charge, les matériaux et les conditions d’utilisation déterminent le périmètre de l’analyse.",
-      "validation": "Pour les composants polymères, l’étude relie performance mécanique et contraintes d’injection. Les résultats orientent les modifications de géométrie et la préparation des essais ; ils ne remplacent pas la validation physique nécessaire au projet.",
+      "title": "Simulation et analyse mécanique",
+      "description": "Vous devez comparer des conceptions ou mieux comprendre le comportement d’une pièce. Nos calculs par éléments finis éclairent vos choix avant les essais.",
+      "approach": "Nous définissons le modèle à partir de la géométrie, des matériaux, des charges et des interfaces réelles. Le calcul se concentre sur les questions qui influencent la conception.",
+      "validation": "Les résultats sont interprétés avec leurs hypothèses. Ils orientent les évolutions de géométrie et les validations physiques ; les études d’injection sont détaillées dans notre expertise polymères.",
       "deliverables": [
         "Hypothèses et cas de calcul définis ensemble",
         "Résultats de simulation et analyse des points sensibles",
         "Recommandations de géométrie ou de procédé"
-      ]
+      ],
+      "outcome": "Appuyer vos choix de conception sur des calculs et des hypothèses explicites.",
+      "needs": [
+        "Étudier les efforts et les déformations d’une pièce",
+        "Comparer des géométries ou des matériaux",
+        "Identifier les zones sensibles avant les essais"
+      ],
+      "steps": [
+        {
+          "title": "Poser les hypothèses",
+          "body": "Définir matériaux, charges et conditions aux limites."
+        },
+        {
+          "title": "Analyser le comportement",
+          "body": "Étudier les zones sollicitées et comparer les variantes."
+        },
+        {
+          "title": "Orienter les décisions",
+          "body": "Relier les résultats aux modifications et aux essais physiques."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Que faut-il fournir pour une étude ?",
+          "answer": "La géométrie disponible, les matériaux envisagés, les sollicitations et les conditions d’utilisation. Les hypothèses manquantes sont clarifiées avant le calcul."
+        },
+        {
+          "question": "La simulation remplace-t-elle les essais ?",
+          "answer": "Non. Elle aide à cibler les essais et à comparer les solutions. Les résultats restent liés aux hypothèses et doivent être confrontés au comportement réel."
+        }
+      ],
+      "caseStudy": {
+        "title": "Du calcul à une pièce en PEEK industrialisable.",
+        "body": "Sur le porte-fraise acétabulaire, les composants en PEEK devaient répondre aux contraintes mécaniques et à celles de l’injection. Les calculs par éléments finis et les analyses rhéologiques ont guidé l’optimisation des géométries. Le travail s’est prolongé par les outillages et la mise au point du procédé de production."
+      },
+      "ctaTitle": "Quel choix technique devez-vous sécuriser ?",
+      "technicalFocus": {
+        "title": "Que signifie vraiment une zone rouge ?",
+        "intro": "Les couleurs d’un calcul représentent une grandeur et une échelle choisies. Pour interpréter une zone rouge, il faut connaître les efforts appliqués, les appuis, le matériau et la géométrie du modèle. Le résultat devient utile lorsqu’il répond à une question de conception précise.",
+        "columns": [
+          "Ce que l’on observe",
+          "Ce qu’il faut comprendre",
+          "La vérification utile"
+        ],
+        "rows": [
+          {
+            "title": "Une forte déformation",
+            "why": "Le déplacement peut gêner un assemblage ou un guidage avant même la rupture.",
+            "check": "Comparer le déplacement aux jeux et aux fonctions du produit."
+          },
+          {
+            "title": "Un pic très localisé",
+            "why": "Un angle idéalement vif ou une charge ponctuelle peut créer une singularité numérique.",
+            "check": "Examiner les détails réels, les appuis et la sensibilité au maillage."
+          },
+          {
+            "title": "Un résultat qui évolue",
+            "why": "Le maillage découpe la pièce en petits éléments de calcul. Sa finesse influence le résultat.",
+            "check": "Affiner le maillage et vérifier que la grandeur suivie se stabilise."
+          }
+        ],
+        "takeaway": "Une carte de contraintes se lit avec ses unités, son échelle et ses hypothèses. On relie ensuite les résultats au matériau et au mode de défaillance étudié, puis aux essais physiques prévus pour le projet."
+      }
+    },
+    "polymer-injection": {
+      "title": "Polymères et injection",
+      "description": "Vous préparez une pièce injectée ou une évolution de matériau. Nous relions conception, comportement mécanique et contraintes de fabrication dès le développement.",
+      "approach": "Épaisseurs, assemblages, propriétés des matériaux et conditions d’utilisation sont étudiés ensemble. Selon le projet, les calculs mécaniques et les analyses rhéologiques aident à préciser la géométrie avant les outillages.",
+      "validation": "Nos interventions vont de la conception de pièces au suivi des outillages et des premières séries injectées. Les essais servent à vérifier le comportement réel et à ajuster le procédé.",
+      "deliverables": [
+        "Choix de matériaux et définition des pièces",
+        "Recommandations de géométrie et analyses selon le besoin",
+        "Dossier d’outillage et suivi des essais selon le périmètre"
+      ],
+      "outcome": "Concevoir la pièce et son procédé d’injection comme un même ensemble.",
+      "needs": [
+        "Adapter une pièce aux contraintes de l’injection",
+        "Remplacer une architecture métallique par un polymère",
+        "Préparer l’outillage et les premières pièces"
+      ],
+      "steps": [
+        {
+          "title": "Choisir l’architecture",
+          "body": "Relier les propriétés du matériau à l’usage de la pièce."
+        },
+        {
+          "title": "Préparer l’injection",
+          "body": "Étudier la géométrie, le remplissage et les points sensibles."
+        },
+        {
+          "title": "Mettre au point la série",
+          "body": "Accompagner les outillages, les essais et les premières pièces selon le besoin."
+        }
+      ],
+      "faq": [
+        {
+          "question": "À quel moment vous consulter ?",
+          "answer": "Idéalement avant de figer la géométrie ou de lancer l’outillage. Nous pouvons aussi intervenir sur une pièce existante pour analyser ses difficultés."
+        },
+        {
+          "question": "Prenez-vous en charge les premières séries ?",
+          "answer": "Nos projets documentent le pilotage d’outillages, d’essais d’injection et de premières séries. Le rôle de DOMTEKNIKA et celui des partenaires sont définis pour chaque projet."
+        }
+      ],
+      "caseStudy": {
+        "title": "Repenser un instrument chirurgical en polymère.",
+        "body": "L’instrument d’application des implants ZipFix remplace une architecture réutilisable en acier par une solution ergonomique en polymère à usage unique. DOMTEKNIKA a conçu le produit, réalisé les prototypes fonctionnels et piloté une première série injectée. Le matériau, l’usage et la fabrication ont été traités ensemble."
+      },
+      "ctaTitle": "Votre pièce est-elle prête pour l’injection ?",
+      "technicalFocus": {
+        "title": "Une pièce solide commence par une paroi bien conçue.",
+        "intro": "En injection, la géométrie influence le remplissage, le refroidissement et le démoulage. Les variations d’épaisseur peuvent provoquer des retraits locaux et des déformations. Anticiper ces contraintes pendant la conception facilite les échanges avec l’outilleur et les premières mises au point.",
+        "columns": [
+          "Choix de géométrie",
+          "Pourquoi il compte",
+          "Ce qu’il faut examiner"
+        ],
+        "rows": [
+          {
+            "title": "Parois et nervures",
+            "why": "Une zone massive refroidit différemment ; une nervure peut apporter de la rigidité avec moins de matière.",
+            "check": "La régularité des épaisseurs et les jonctions entre nervures et parois."
+          },
+          {
+            "title": "Dépouilles et rayons",
+            "why": "La dépouille facilite l’éjection ; les rayons adoucissent les transitions de forme.",
+            "check": "La direction de démoulage, la texture et les zones sollicitées."
+          },
+          {
+            "title": "Séparation du moule",
+            "why": "Les contre-dépouilles et les accès peuvent imposer des mouvements supplémentaires dans l’outillage.",
+            "check": "Le plan de joint, les traces acceptables et les surfaces fonctionnelles."
+          }
+        ],
+        "takeaway": "Les épaisseurs, les dépouilles et le retrait se définissent avec la matière, la géométrie et le procédé retenus. Une modification locale de forme peut avoir des effets sur la pièce entière : elle mérite d’être examinée avant l’outillage."
+      }
     },
     "electronics-integration": {
       "title": "Intégration électrique et électronique",
       "description": "DOMTEKNIKA intègre les fonctions électriques et électroniques à l’architecture mécanique de produits et de démonstrateurs.",
-      "approach": "Le développement part des fonctions attendues et de leurs interfaces : alimentation, commande, composants et encombrement. L’intégration est étudiée avec la mécanique pour rendre l’ensemble cohérent et accessible.",
+      "approach": "Le développement part des fonctions attendues et de leurs interfaces : alimentation, commande, composants et encombrement. L’intégration est étudiée avec la mécanique pour rendre l’ensemble cohérent et accessible.",
       "validation": "Nos réalisations documentent notamment des architectures de mobilité électrique et une horloge synchronisée automatiquement. Le niveau de développement, les essais et la préparation industrielle sont définis selon les besoins du projet.",
       "deliverables": [
         "Architecture fonctionnelle et interfaces",
         "Intégration des composants au produit",
         "Prototype et vérifications fonctionnelles selon le périmètre"
-      ]
+      ],
+      "outcome": "Faire fonctionner ensemble la mécanique, l’alimentation et la commande.",
+      "needs": [
+        "Intégrer une fonction électrique dans un produit",
+        "Développer un démonstrateur électromécanique",
+        "Résoudre les interfaces entre composants et mécanique"
+      ],
+      "steps": [
+        {
+          "title": "Définir les fonctions",
+          "body": "Clarifier l’alimentation, la commande et les interfaces."
+        },
+        {
+          "title": "Intégrer les composants",
+          "body": "Organiser encombrement, montage et accès dans le produit."
+        },
+        {
+          "title": "Vérifier l’ensemble",
+          "body": "Tester les fonctions et faire évoluer l’intégration."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Pouvez-vous intervenir avec notre équipe électronique ?",
+          "answer": "Oui. Le travail peut porter sur les interfaces et l’intégration mécanique, en coordination avec les équipes ou partenaires du projet."
+        },
+        {
+          "question": "Quels documents faut-il préparer ?",
+          "answer": "Les fonctions attendues, les composants déjà retenus, les contraintes d’alimentation et les plans disponibles. Nous précisons ensuite les développements et vérifications nécessaires."
+        }
+      ],
+      "caseStudy": {
+        "title": "Donner l’heure sans pivot central visible.",
+        "body": "L’horloge à fond transparent associe des disques entraînés en périphérie à une synchronisation automatique sur l’horloge atomique. DOMTEKNIKA a développé le concept électrique et mécanique complet, piloté l’étude de design et réalisé un prototype fonctionnel avec des segments de pignon injectés. L’intégration rend possible le principe visuel du produit."
+      },
+      "ctaTitle": "Quelles fonctions souhaitez-vous intégrer ?",
+      "technicalFocus": {
+        "title": "L’électronique se joue aussi dans la mécanique.",
+        "intro": "Intégrer une carte, un capteur ou un moteur demande de réserver de la place pour ses connexions, ses fixations et ses conditions de fonctionnement. L’enveloppe mécanique influence aussi l’accès, le câblage et l’évacuation de la chaleur. Ces interfaces se définissent dès l’architecture du produit.",
+        "columns": [
+          "Interface",
+          "Le point souvent oublié",
+          "À préciser ensemble"
+        ],
+        "rows": [
+          {
+            "title": "Alimentation",
+            "why": "Le courant au démarrage ou pendant une action peut différer de la consommation moyenne.",
+            "check": "Les modes de fonctionnement, les pointes de courant et les connexions."
+          },
+          {
+            "title": "Encombrement et accès",
+            "why": "Un connecteur doit pouvoir être branché ; un composant remplacé doit rester accessible.",
+            "check": "Les volumes réservés, le passage des câbles et l’ordre d’assemblage."
+          },
+          {
+            "title": "Chaleur",
+            "why": "Les pertes dissipées chauffent les composants ; la carte et le boîtier participent au chemin thermique.",
+            "check": "L’environnement, la chaleur à évacuer et le chemin jusqu’à l’extérieur."
+          }
+        ],
+        "takeaway": "Pour cadrer l’intégration, rassemblez les fiches des composants disponibles, les modes d’usage et les contraintes du boîtier. Les besoins en électronique, logiciel et essais peuvent alors être attribués clairement dans le projet."
+      }
     }
   }
 }
