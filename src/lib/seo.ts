@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { locales, type Locale } from "@/i18n/routing";
 
 export const SITE_URL = new URL("https://domteknika.ch");
+const SOCIAL_IMAGE_PATH = "/social-image?v=shape-your-dream-20260926";
 
 export const INDEXABLE_ROUTES = [
   "",
@@ -39,6 +40,7 @@ type PageMetadataInput = {
   description: string;
   image?: string;
   imageAlt?: string;
+  shareDescription?: string;
   locale: string;
   path?: string;
   title: string;
@@ -48,13 +50,14 @@ export function buildPageMetadata({
   description,
   image: imagePath,
   imageAlt,
+  shareDescription,
   locale,
   path = "",
   title,
 }: PageMetadataInput): Metadata {
   const resolvedLocale = resolveLocale(locale);
   const canonical = localizedUrl(resolvedLocale, path);
-  const image = new URL(imagePath ?? "/social-image", SITE_URL).toString();
+  const image = new URL(imagePath ?? SOCIAL_IMAGE_PATH, SITE_URL).toString();
 
   return {
     title,
@@ -65,7 +68,7 @@ export function buildPageMetadata({
     },
     openGraph: {
       title,
-      description,
+      description: shareDescription ?? description,
       url: canonical,
       siteName: "DOMTEKNIKA",
       locale: OPEN_GRAPH_LOCALES[resolvedLocale],
@@ -80,14 +83,14 @@ export function buildPageMetadata({
           height: 630,
           alt:
             imageAlt ??
-            "DOMTEKNIKA — Engineering, prototyping and production",
+            "DOMTEKNIKA — Shape your dream. Swiss engineering.",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
       title,
-      description,
+      description: shareDescription ?? description,
       images: [image],
     },
     robots: {
@@ -134,7 +137,7 @@ export function organizationJsonLd(locale: string) {
         name: "DOMTEKNIKA SA",
         url: SITE_URL.toString(),
         logo: new URL("/assets/domteknika-logo.png", SITE_URL).toString(),
-        image: new URL("/social-image", SITE_URL).toString(),
+        image: new URL(SOCIAL_IMAGE_PATH, SITE_URL).toString(),
         email: "contact@domteknika.ch",
         telephone: "+41 32 751 71 46",
         address: {
