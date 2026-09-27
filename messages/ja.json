@@ -1,7 +1,8 @@
 {
   "Meta": {
-    "title": "DOMTEKNIKA | 製品開発・試作",
-    "description": "DOMTEKNIKA はスイスを拠点に、企業やイノベーターの構想を設計・試作から製造までつなぎます。"
+    "title": "DOMTEKNIKA — Shape your dream",
+    "description": "DOMTEKNIKA はスイスを拠点に、企業やイノベーターの構想を設計・試作から製造までつなぎます。",
+    "shareDescription": "スイスのエンジニアリング"
   },
   "Nav": {
     "home": "ホーム",

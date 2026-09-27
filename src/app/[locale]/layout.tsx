@@ -33,6 +33,7 @@ export async function generateMetadata({
     metadataBase: SITE_URL,
     ...buildPageMetadata({
       description: t("description"),
+      shareDescription: t("shareDescription"),
       locale,
       title: t("title"),
     }),

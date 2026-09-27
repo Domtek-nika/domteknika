@@ -1,7 +1,8 @@
 {
   "Meta": {
-    "title": "DOMTEKNIKA - 제품 엔지니어링 및 프로토타이핑",
-    "description": "DOMTEKNIKA는 스위스에서 산업 기업과 혁신팀을 위해 엔지니어링, 프로토타이핑, 생산을 하나의 과정으로 연결합니다."
+    "title": "DOMTEKNIKA — Shape your dream",
+    "description": "DOMTEKNIKA는 스위스에서 산업 기업과 혁신팀을 위해 엔지니어링, 프로토타이핑, 생산을 하나의 과정으로 연결합니다.",
+    "shareDescription": "스위스 엔지니어링"
   },
   "Nav": {
     "home": "홈",
