@@ -217,15 +217,15 @@
         },
         "design": {
           "title": "Diseño de producto",
-          "description": "Diseño industrial e ingeniería mecánica, eléctrica y de sistemas orientados al rendimiento y la fabricabilidad."
+          "description": "Desarrollamos productos y sistemas mecánicos considerando los materiales, el montaje y las restricciones de fabricación."
         },
         "prototyping": {
           "title": "Prototipado",
-          "description": "Prototipado rápido y técnicas avanzadas para validar ideas y reducir riesgos."
+          "description": "Prototipos adaptados a lo que necesita comprobar: movimiento, ergonomía o funcionamiento del producto."
         },
         "simulation": {
           "title": "Simulación y análisis",
-          "description": "Simulación y análisis avanzados para prever rendimiento, optimizar diseños y asegurar fiabilidad."
+          "description": "Comparamos diseños y analizamos cargas y deformaciones para orientar las decisiones técnicas y los ensayos físicos."
         },
         "polymer": {
           "title": "Polímeros e inyección",
@@ -233,7 +233,7 @@
         },
         "electronics": {
           "title": "Integración electrónica",
-          "description": "Diseño e integración electrónica avanzada para productos conectados, fiables y funcionales."
+          "description": "Integramos alimentación, control y componentes electrónicos en la arquitectura mecánica de sus productos."
         }
       },
       "learnMore": "Ver el servicio"

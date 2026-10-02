@@ -217,15 +217,15 @@
         },
         "design": {
           "title": "Produktdesign",
-          "description": "Industriedesign, mechanisches, elektrisches und System-Engineering für Leistung und Herstellbarkeit."
+          "description": "Wir entwickeln Produkte und mechanische Systeme und berücksichtigen dabei Werkstoffe, Montage und Fertigungsbedingungen."
         },
         "prototyping": {
           "title": "Prototyping",
-          "description": "Schnelles Prototyping und fortschrittliche Verfahren, um Ideen zu validieren und Risiken zu reduzieren."
+          "description": "Prototypen passend zu Ihrem Prüfziel: Bewegung, Ergonomie oder Produktfunktion."
         },
         "simulation": {
           "title": "Simulation & Analyse",
-          "description": "Fortschrittliche Simulation und Analyse, um Leistung vorherzusagen, Designs zu optimieren und Zuverlässigkeit zu sichern."
+          "description": "Wir vergleichen Konstruktionen und analysieren Belastungen und Verformungen, um technische Entscheidungen und Versuche vorzubereiten."
         },
         "polymer": {
           "title": "Polymer- & Spritzgusskompetenz",
@@ -233,7 +233,7 @@
         },
         "electronics": {
           "title": "Elektronik-Integration",
-          "description": "Elektronikentwicklung und -integration für vernetzte, zuverlässige und leistungsfähige Produkte."
+          "description": "Wir integrieren Stromversorgung, Steuerung und elektronische Komponenten in die mechanische Architektur Ihrer Produkte."
         }
       },
       "learnMore": "Leistung entdecken"

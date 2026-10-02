@@ -23,6 +23,7 @@ import { Reveal } from "@/components/providers/reveal";
 import { BrainstormingCardSwap } from "@/components/sections/brainstorming-card-swap";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
+import { getServicePath } from "@/data/services";
 import { buildPageMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
@@ -66,7 +67,6 @@ const TEAM_MEMBERS = [
   { name: "Etienne", image: "/assets/team/etienne.png" },
   { name: "Nicole", image: "/assets/team/nicole.png" },
   { name: "Guillaume", image: "/assets/team/guillaume.png" },
-  { name: "Nicolas", image: "/assets/team/nicolas.png" },
   { name: "Hector", image: "/assets/team/hector.png" },
   { name: "Quentin", image: "/assets/team/quentin-c.png" },
   { name: "Robin", image: "/assets/team/robin.png" },
@@ -166,26 +166,19 @@ function ExpertiseHero() {
                 aria-hidden
               />
               <div className="relative mx-auto flex max-w-[292px] items-start justify-center gap-1 min-[360px]:max-w-[326px] min-[390px]:max-w-[366px] min-[390px]:gap-1.5 sm:max-w-[520px] sm:gap-3 md:max-w-[520px] md:gap-2 lg:max-w-[560px] lg:gap-4 xl:max-w-[620px] xl:gap-5 min-[1800px]:!max-w-[720px] min-[2300px]:!max-w-[760px] min-[2400px]:!max-w-[820px]">
-                {TEAM_MEMBERS.slice(0, 4).map((member, index) => (
+                {TEAM_MEMBERS.slice(0, 3).map((member) => (
                   <TeamPortrait
                     key={member.name}
                     member={member}
                     eager
-                    className={cn(
-                      index === 0 && "mt-2",
-                      index === 1 && "mt-0",
-                      index === 2 && "mt-1",
-                      index === 3 && "mt-2",
-                    )}
                   />
                 ))}
               </div>
-              <div className="relative mx-auto mt-4 flex max-w-[258px] items-start justify-center gap-3 min-[360px]:max-w-[284px] min-[390px]:max-w-[328px] sm:max-w-[428px] md:max-w-[408px] lg:mt-3 lg:max-w-[440px] lg:gap-5 xl:max-w-[470px] min-[1800px]:!max-w-[540px] min-[2300px]:!max-w-[570px] min-[2400px]:!max-w-[610px]">
-                {TEAM_MEMBERS.slice(4).map((member, index) => (
+              <div className="relative mx-auto mt-4 flex max-w-[292px] items-start justify-center gap-1 min-[360px]:max-w-[326px] min-[390px]:max-w-[366px] min-[390px]:gap-1.5 sm:max-w-[520px] sm:gap-3 md:max-w-[520px] md:gap-2 lg:mt-3 lg:max-w-[560px] lg:gap-4 xl:max-w-[620px] xl:gap-5 min-[1800px]:!max-w-[720px] min-[2300px]:!max-w-[760px] min-[2400px]:!max-w-[820px]">
+                {TEAM_MEMBERS.slice(3).map((member) => (
                   <TeamPortrait
                     key={member.name}
                     member={member}
-                    className={cn(index === 1 && "mt-1")}
                   />
                 ))}
               </div>
@@ -287,18 +280,23 @@ function ExpertiseServiceCards({
             as="article"
             key={item.key}
             delay={(startIndex + index) * 0.05}
-            className="flex min-h-[220px] flex-col items-center justify-center rounded-[7px] border border-border bg-white px-3 py-6 text-center sm:min-h-[246px] sm:px-6 sm:py-8 min-[1800px]:!min-h-[270px] min-[1800px]:!px-8 min-[2400px]:!min-h-[292px]"
+            className="h-full"
           >
-            <Icon
-              className="size-9 stroke-[1.8] text-brand sm:size-10 min-[1800px]:!size-12 min-[2400px]:!size-[52px]"
-              aria-hidden
-            />
-            <h3 className="mt-6 text-[14px] font-extrabold leading-tight text-foreground sm:mt-8 sm:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[20px]">
-              {t(`items.${item.key}.title` as never)}
-            </h3>
-            <p className="mt-5 max-w-[250px] text-[12.5px] font-medium leading-[1.28] text-muted-foreground sm:mt-8 sm:text-[14px] min-[1800px]:!max-w-[320px] min-[1800px]:!text-[15px] min-[1800px]:!leading-[1.35] min-[2400px]:!text-[16px]">
-              {t(`items.${item.key}.description` as never)}
-            </p>
+            <Link href={getServicePath(item.key)} className="group flex h-full min-h-[220px] flex-col items-center rounded-[7px] border border-border bg-white px-3 py-6 text-center transition-[border-color,box-shadow] duration-300 hover:border-brand/30 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand sm:min-h-[246px] sm:px-6 sm:py-8 min-[1800px]:!min-h-[270px] min-[1800px]:!px-8 min-[2400px]:!min-h-[292px]">
+              <Icon
+                className="size-9 stroke-[1.8] text-brand sm:size-10 min-[1800px]:!size-12 min-[2400px]:!size-[52px]"
+                aria-hidden
+              />
+              <h3 className="mt-6 text-[14px] font-extrabold leading-tight text-foreground sm:mt-8 sm:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[20px]">
+                {t(`items.${item.key}.title` as never)}
+              </h3>
+              <p className="mt-5 max-w-[250px] text-[12.5px] font-medium leading-[1.28] text-muted-foreground sm:mt-8 sm:text-[14px] min-[1800px]:!max-w-[320px] min-[1800px]:!text-[15px] min-[1800px]:!leading-[1.35] min-[2400px]:!text-[16px]">
+                {t(`items.${item.key}.description` as never)}
+              </p>
+              <span className="mt-auto inline-flex min-h-11 items-center gap-2 pt-5 text-[11px] font-bold text-brand sm:text-xs">
+                {t("learnMore")}<ArrowRight className="size-3.5 shrink-0" aria-hidden />
+              </span>
+            </Link>
           </Reveal>
         );
       })}

@@ -1,10 +1,12 @@
 // Links are shared by service pages, project pages, the expertise grid and sitemap.
 // Project associations use the documented scope in projects.generated.json.
 export const services = [
+  { slug: "creativity-innovation", key: "creativity", projects: ["filter-carafe", "eternal-watch", "folding-umbrella"] },
   { slug: "mechanical-design", key: "design", projects: ["velum-sky-screen", "flex-drill", "filter-carafe"] },
   { slug: "prototyping", key: "prototyping", projects: ["aventor", "biome-staple-applicator", "glove-helmet-dryer"] },
-  { slug: "simulation", key: "simulation", projects: ["acetabular-reamer-holder", "bottom-filling-cup"] },
-  { slug: "electronics-integration", key: "electronics", projects: ["aventor", "transparent-clock", "angel-interceptor"] },
+  { slug: "simulation", key: "simulation", projects: ["acetabular-reamer-holder", "kitesurf-safety", "bottom-filling-cup"] },
+  { slug: "polymer-injection", key: "polymer", projects: ["biome-staple-applicator", "stajvelo-rv01", "acetabular-reamer-holder"] },
+  { slug: "electronics-integration", key: "electronics", projects: ["transparent-clock", "aventor", "totalcar-concept"] },
 ] as const;
 
 export type ServiceSlug = (typeof services)[number]["slug"];
