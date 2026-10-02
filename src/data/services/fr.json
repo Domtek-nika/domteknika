@@ -85,7 +85,7 @@
         "rows": [
           {
             "title": "L’usage",
-            "why": "Le même mécanisme change selon la personne qui le manipule et la fréquence d’utilisation.",
+            "why": "La conception d’un mécanisme dépend de l’utilisateur et de la fréquence d’utilisation.",
             "check": "Quel geste pose problème, à quel moment et dans quelles conditions ?"
           },
           {
@@ -362,7 +362,7 @@
         },
         {
           "question": "Prenez-vous en charge les premières séries ?",
-          "answer": "Nos projets documentent le pilotage d’outillages, d’essais d’injection et de premières séries. Le rôle de DOMTEKNIKA et celui des partenaires sont définis pour chaque projet."
+          "answer": "Nous avons piloté des outillages, des essais d’injection et des premières séries. Le rôle de DOMTEKNIKA et celui des partenaires sont définis pour chaque projet."
         }
       ],
       "caseStudy": {
@@ -402,7 +402,7 @@
       "title": "Intégration électrique et électronique",
       "description": "DOMTEKNIKA intègre les fonctions électriques et électroniques à l’architecture mécanique de produits et de démonstrateurs.",
       "approach": "Le développement part des fonctions attendues et de leurs interfaces : alimentation, commande, composants et encombrement. L’intégration est étudiée avec la mécanique pour rendre l’ensemble cohérent et accessible.",
-      "validation": "Nos réalisations documentent notamment des architectures de mobilité électrique et une horloge synchronisée automatiquement. Le niveau de développement, les essais et la préparation industrielle sont définis selon les besoins du projet.",
+      "validation": "Nous avons notamment développé des architectures de mobilité électrique et une horloge synchronisée automatiquement. Le niveau de développement, les essais et la préparation industrielle sont définis selon les besoins du projet.",
       "deliverables": [
         "Architecture fonctionnelle et interfaces",
         "Intégration des composants au produit",
@@ -459,7 +459,7 @@
           },
           {
             "title": "Encombrement et accès",
-            "why": "Un connecteur doit pouvoir être branché ; un composant remplacé doit rester accessible.",
+            "why": "Un connecteur doit pouvoir être branché ; un composant à remplacer doit rester accessible.",
             "check": "Les volumes réservés, le passage des câbles et l’ordre d’assemblage."
           },
           {

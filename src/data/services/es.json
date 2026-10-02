@@ -31,7 +31,7 @@
   "items": {
     "creativity-innovation": {
       "title": "Creatividad e innovación de producto",
-      "description": "Tiene un problema que resolver o una idea que desarrollar. Exploramos posibles soluciones antes de comprometer una arquitectura de producto.",
+      "description": "Tiene un problema que resolver o una idea que desarrollar. Exploramos posibles soluciones antes de decidirse por una arquitectura de producto.",
       "approach": "Partimos del uso, las funciones y las restricciones de coste, espacio y fabricación. La búsqueda de conceptos combina mecánica, materiales e integración para identificar opciones realizables.",
       "validation": "Comparamos ventajas, limitaciones y cuestiones pendientes. El objetivo es elegir una dirección y preparar las primeras validaciones.",
       "deliverables": [
@@ -85,7 +85,7 @@
         "rows": [
           {
             "title": "El uso",
-            "why": "Un mismo mecanismo cambia según quién lo maneja y la frecuencia de uso.",
+            "why": "El diseño de un mecanismo depende de quién lo utiliza y de la frecuencia de uso.",
             "check": "¿Qué acción resulta difícil, en qué momento y en qué condiciones?"
           },
           {
@@ -172,7 +172,7 @@
             "check": "Las tolerancias necesarias para la función y el proceso previsto."
           }
         ],
-        "takeaway": "Ejemplo simplificado: un alojamiento de 10,2 ± 0,1 mm y un eje de 10,0 ± 0,1 mm dan una holgura diametral teórica de 0 a 0,4 mm. La holgura nominal de 0,2 mm puede desaparecer. También deben comprobarse la forma y las condiciones de uso."
+        "takeaway": "Ejemplo simplificado: un orificio de 10,2 ± 0,1 mm y un eje de 10,0 ± 0,1 mm dan una holgura diametral teórica de 0 a 0,4 mm. La holgura nominal de 0,2 mm puede desaparecer. También deben comprobarse la forma y las condiciones de uso."
       }
     },
     "prototyping": {
@@ -216,7 +216,7 @@
         },
         {
           "question": "¿Cómo elegir entre impresión 3D y mecanizado?",
-          "answer": "La impresión 3D construye la pieza por capas; el mecanizado retira material de un bloque. La elección depende de la geometría, el material requerido, las superficies funcionales y las cargas que se quieren probar. Para un prototipo también deben definirse los acabados adicionales y la precisión realmente necesaria."
+          "answer": "La impresión 3D construye la pieza por capas; el mecanizado retira material de una pieza en bruto. La elección depende de la geometría, el material requerido, las superficies funcionales y las cargas que se quieren probar. Para un prototipo también deben definirse los acabados adicionales y la precisión realmente necesaria."
         }
       ],
       "caseStudy": {
@@ -362,7 +362,7 @@
         },
         {
           "question": "¿Acompañan las primeras series?",
-          "answer": "Nuestros proyectos documentados incluyen coordinación de moldes, ensayos de inyección y primeras series. El papel de DOMTEKNIKA y de los colaboradores se define para cada proyecto."
+          "answer": "Hemos coordinado moldes, ensayos de inyección y primeras series. El papel de DOMTEKNIKA y de los colaboradores se define para cada proyecto."
         }
       ],
       "caseStudy": {
@@ -402,7 +402,7 @@
       "title": "Integración eléctrica y electrónica",
       "description": "DOMTEKNIKA integra funciones eléctricas y electrónicas en la arquitectura mecánica de productos y demostradores.",
       "approach": "El desarrollo parte de las funciones y sus interfaces: alimentación, control, componentes y espacio disponible. La integración se estudia junto con la mecánica para obtener un conjunto coherente y accesible.",
-      "validation": "Nuestros proyectos documentados incluyen arquitecturas de movilidad eléctrica y un reloj sincronizado automáticamente. El desarrollo, las pruebas y la preparación industrial se adaptan a cada proyecto.",
+      "validation": "Nuestros proyectos incluyen arquitecturas de movilidad eléctrica y un reloj sincronizado automáticamente. El desarrollo, las pruebas y la preparación industrial se adaptan a cada proyecto.",
       "deliverables": [
         "Arquitectura funcional e interfaces",
         "Integración de componentes en el producto",

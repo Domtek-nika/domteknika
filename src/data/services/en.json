@@ -85,7 +85,7 @@
         "rows": [
           {
             "title": "Use",
-            "why": "The same mechanism changes with the person operating it and how often it is used.",
+            "why": "A mechanism’s design depends on who uses it and how often it is used.",
             "check": "Which action causes difficulty, when and under what conditions?"
           },
           {
@@ -362,7 +362,7 @@
         },
         {
           "question": "Can you support initial production runs?",
-          "answer": "Our documented projects include tooling coordination, injection trials and initial production runs. DOMTEKNIKA’s role and the partners’ roles are agreed for each project."
+          "answer": "We have coordinated tooling, injection trials and initial production runs. DOMTEKNIKA’s role and the partners’ roles are agreed for each project."
         }
       ],
       "caseStudy": {
@@ -402,7 +402,7 @@
       "title": "Electrical and electronics integration",
       "description": "DOMTEKNIKA integrates electrical and electronic functions into the mechanical architecture of products and demonstrators.",
       "approach": "Development begins with the required functions and interfaces: power supply, control, components and packaging. Integration is considered alongside the mechanics to create a coherent, accessible system.",
-      "validation": "Our documented work includes electric mobility architectures and an automatically synchronised clock. Development depth, testing and industrial preparation are defined around each project.",
+      "validation": "Our projects include electric mobility architectures and an automatically synchronised clock. Development depth, testing and preparation for production are defined around each project.",
       "deliverables": [
         "Functional architecture and interfaces",
         "Component integration into the product",

@@ -217,15 +217,15 @@
         },
         "design": {
           "title": "产品设计",
-          "description": "面向性能和可制造性的工业设计、机械、电气与系统工程。"
+          "description": "结合材料选择、装配方式和制造约束，设计产品与机械系统。"
         },
         "prototyping": {
           "title": "原型开发",
-          "description": "快速原型开发和先进技术，用于验证想法并降低风险。"
+          "description": "根据需要验证的运动、人机体验或产品功能，开发合适的原型。"
         },
         "simulation": {
           "title": "仿真与分析",
-          "description": "通过先进仿真和分析预测性能、优化设计并确保可靠性。"
+          "description": "比较设计方案，分析载荷与变形，为技术决策和实物试验提供依据。"
         },
         "polymer": {
           "title": "聚合物与注塑专长",
@@ -233,7 +233,7 @@
         },
         "electronics": {
           "title": "电子集成",
-          "description": "为互联、可靠且高性能的产品提供电子系统设计与集成。"
+          "description": "将电源、控制和电子组件集成到产品的机械架构中。"
         }
       },
       "learnMore": "了解服务"

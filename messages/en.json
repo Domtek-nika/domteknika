@@ -217,15 +217,15 @@
         },
         "design": {
           "title": "Product Design",
-          "description": "Industrial design, mechanical, electrical and systems engineering built for performance and manufacturability."
+          "description": "We develop products and mechanical systems with material choices, assembly and manufacturing constraints built into the design."
         },
         "prototyping": {
           "title": "Prototyping",
-          "description": "Fast prototyping and advanced techniques to validate ideas and reduce risk."
+          "description": "Prototypes matched to what you need to verify: movement, ergonomics or product function."
         },
         "simulation": {
           "title": "Simulation & Analysis",
-          "description": "Advanced simulation and analysis to predict performance, optimize designs and ensure reliability."
+          "description": "We compare designs and analyse loads and deformation to guide technical decisions and physical testing."
         },
         "polymer": {
           "title": "Polymer & Injection Expertise",
@@ -233,7 +233,7 @@
         },
         "electronics": {
           "title": "Electronics Integration",
-          "description": "Smart electronics design and integration for connected, reliable and intelligent products."
+          "description": "We integrate power, control and electronic components into your product’s mechanical architecture."
         }
       },
       "learnMore": "Explore this service"

@@ -61,7 +61,7 @@
       ],
       "faq": [
         {
-          "question": "Benötigen wir bereits ein Pflichtenheft?",
+          "question": "Benötigen wir bereits ein Lastenheft?",
           "answer": "Nein. Eine Beschreibung des Problems, der Anwendung und der bekannten Anforderungen reicht aus, um den Bedarf zu strukturieren."
         },
         {
@@ -85,7 +85,7 @@
         "rows": [
           {
             "title": "Nutzung",
-            "why": "Derselbe Mechanismus verändert sich je nach Bedienperson und Nutzungshäufigkeit.",
+            "why": "Die Konstruktion eines Mechanismus hängt von der Bedienperson und der Nutzungshäufigkeit ab.",
             "check": "Welche Handlung ist schwierig, wann und unter welchen Bedingungen?"
           },
           {
@@ -362,7 +362,7 @@
         },
         {
           "question": "Begleiten Sie erste Serien?",
-          "answer": "Unsere dokumentierten Projekte umfassen Werkzeugkoordination, Spritzgussversuche und erste Serien. Die Aufgaben von DOMTEKNIKA und den Partnern werden je Projekt vereinbart."
+          "answer": "Wir haben Werkzeugbau, Spritzgussversuche und erste Serien koordiniert. Die Aufgaben von DOMTEKNIKA und den Partnern werden je Projekt vereinbart."
         }
       ],
       "caseStudy": {
@@ -402,7 +402,7 @@
       "title": "Elektrische und elektronische Integration",
       "description": "DOMTEKNIKA integriert elektrische und elektronische Funktionen in die mechanische Architektur von Produkten und Demonstratoren.",
       "approach": "Ausgangspunkt sind Funktionen und Schnittstellen: Versorgung, Steuerung, Komponenten und Bauraum. Die Integration wird gemeinsam mit der Mechanik entwickelt.",
-      "validation": "Dokumentierte Projekte umfassen elektrische Mobilitätsarchitekturen und eine automatisch synchronisierte Uhr. Entwicklungstiefe, Prüfungen und Produktionsvorbereitung werden projektspezifisch festgelegt.",
+      "validation": "Zu unseren Projekten gehören elektrische Mobilitätsarchitekturen und eine automatisch synchronisierte Uhr. Entwicklungstiefe, Prüfungen und Produktionsvorbereitung werden projektspezifisch festgelegt.",
       "deliverables": [
         "Funktionsarchitektur und Schnittstellen",
         "Integration der Komponenten in das Produkt",

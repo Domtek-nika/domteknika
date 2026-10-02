@@ -217,15 +217,15 @@
         },
         "design": {
           "title": "Design produit",
-          "description": "Nous concevons des produits et des systèmes mécaniques, électriques et industriels, optimisés pour la performance et la production."
+          "description": "Nous concevons des produits et des systèmes mécaniques en intégrant les matériaux, l’assemblage et les contraintes de fabrication."
         },
         "prototyping": {
           "title": "Prototypage",
-          "description": "Prototypage rapide et techniques avancées pour valider les idées et réduire les risques."
+          "description": "Des prototypes adaptés à ce que vous devez vérifier : mouvement, ergonomie ou fonctionnement du produit."
         },
         "simulation": {
           "title": "Simulation & Analyse",
-          "description": "Simulation et analyse avancées pour prédire les performances, optimiser les conceptions et fiabiliser les choix techniques."
+          "description": "Nous comparons les conceptions et analysons les efforts et les déformations pour orienter les choix techniques et les essais."
         },
         "polymer": {
           "title": "Polymères & Injection",
@@ -233,7 +233,7 @@
         },
         "electronics": {
           "title": "Intégration électronique",
-          "description": "Conception et intégration électronique pour des produits connectés, fiables et prêts à l'usage."
+          "description": "Nous intégrons l’alimentation, la commande et les composants électroniques à l’architecture mécanique de vos produits."
         }
       },
       "learnMore": "Découvrir la prestation"
