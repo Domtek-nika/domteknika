@@ -11,6 +11,19 @@ export const services = [
 
 export type ServiceSlug = (typeof services)[number]["slug"];
 
+// Select the documented contribution that matches the service, in every locale.
+const projectScopeIndices: Partial<Record<ServiceSlug, Readonly<Record<string, number>>>> = {
+  "mechanical-design": { "flex-drill": 1 },
+  prototyping: { "biome-staple-applicator": 1, "glove-helmet-dryer": 2 },
+  simulation: { "kitesurf-safety": 1, "bottom-filling-cup": 2 },
+  "polymer-injection": { "acetabular-reamer-holder": 1 },
+  "electronics-integration": { "totalcar-concept": 1 },
+};
+
+export function getServiceProjectScopeIndex(slug: ServiceSlug, projectId: string) {
+  return projectScopeIndices[slug]?.[projectId] ?? 0;
+}
+
 export function getService(slug: string) {
   return services.find((service) => service.slug === slug);
 }

@@ -23,6 +23,7 @@ type ServiceContent = {
     takeaway: string;
   };
   ctaTitle: string;
+  ctaBody: string;
   approach: string;
   validation: string;
   needs: string[];

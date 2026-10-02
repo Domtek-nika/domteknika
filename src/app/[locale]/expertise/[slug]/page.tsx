@@ -7,7 +7,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/layout/container";
 import { getProjectBySlug } from "@/data/projects";
 import { getServiceCopy } from "@/data/service-copy";
-import { getService, services } from "@/data/services";
+import { getService, getServiceProjectScopeIndex, services } from "@/data/services";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { buildPageMetadata, localizedUrl, SITE_URL } from "@/lib/seo";
@@ -64,7 +64,7 @@ export default async function ServicePage({ params }: Props) {
       {
         "@type": "Service",
         "@id": `${url}#service`,
-        name: copy.title,
+        name: displayTitle,
         description: copy.description,
         url,
         provider: { "@id": `${SITE_URL}#organization` },
@@ -73,7 +73,7 @@ export default async function ServicePage({ params }: Props) {
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: labels.back, item: localizedUrl(locale as Locale, "/expertise") },
-          { "@type": "ListItem", position: 2, name: copy.title, item: url },
+          { "@type": "ListItem", position: 2, name: displayTitle, item: url },
         ],
       },
     ],
@@ -169,7 +169,7 @@ export default async function ServicePage({ params }: Props) {
             {projects.slice(1).map((project) => (
               <Link key={project.id} href={`/projects/${project.id}`} className={`group grid min-w-0 grid-cols-[100px_1fr] gap-4 rounded-[7px] border border-border bg-white p-4 transition-shadow hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)] sm:grid-cols-[120px_1fr] ${focusStyle}`}>
                 <div className="relative aspect-square self-start rounded-[7px] bg-muted/60"><Image src={project.image} alt={project.imageAlt} fill sizes="120px" className="object-contain p-2" /></div>
-                <div className="min-w-0"><h3 className="text-[14px] font-extrabold leading-tight">{project.title}</h3><p className="mt-2 text-xs font-medium leading-[1.45] text-muted-foreground">{project.scope?.[0] ?? project.description}</p><span className="mt-3 inline-flex items-center gap-2 text-xs font-bold text-brand">{labels.viewProject}<ArrowUpRight className="size-3.5" aria-hidden /></span></div>
+                <div className="min-w-0"><h3 className="text-[14px] font-extrabold leading-tight">{project.title}</h3><p className="mt-2 text-xs font-medium leading-[1.45] text-muted-foreground">{project.scope?.[getServiceProjectScopeIndex(service.slug, project.id)] ?? project.description}</p><span className="mt-3 inline-flex items-center gap-2 text-xs font-bold text-brand">{labels.viewProject}<ArrowUpRight className="size-3.5" aria-hidden /></span></div>
               </Link>
             ))}
           </div>
@@ -239,7 +239,7 @@ export default async function ServicePage({ params }: Props) {
           <div className="max-w-[700px]">
             <p className="flex items-center gap-3 text-[14px] font-medium text-muted-foreground"><span className="h-[3px] w-[34px] bg-brand" aria-hidden />{labels.briefTitle}</p>
             <h2 id="service-contact" className="domtek-text-shadow mt-6 text-[34px] font-extrabold leading-[1.05] sm:text-[46px] md:text-[52px]"><span className="text-brand">.</span>{copy.ctaTitle}</h2>
-            <p className="mt-6 max-w-[500px] text-[14px] font-medium leading-[1.5] text-muted-foreground">{labels.ctaBody}</p>
+            <p className="mt-6 max-w-[500px] text-[14px] font-medium leading-[1.5] text-muted-foreground">{copy.ctaBody}</p>
             <ul className="mt-5 max-w-[500px] space-y-2.5">
               {labels.brief.map((item) => <li key={item} className="flex gap-3 text-[12px] font-medium leading-[1.45] text-muted-foreground"><Check className="mt-0.5 size-3.5 shrink-0 text-brand" aria-hidden />{item}</li>)}
             </ul>
@@ -254,7 +254,7 @@ export default async function ServicePage({ params }: Props) {
           <h2 className="text-[16px] font-extrabold">{labels.other}</h2>
           <ul className="mt-3 flex flex-wrap gap-x-8 gap-y-1">
             {services.filter((item) => item.slug !== service.slug).map((item) => (
-              <li key={item.slug}><Link href={`/expertise/${item.slug}`} className={`inline-flex min-h-11 items-center gap-2 text-[12px] font-bold text-muted-foreground transition-colors hover:text-brand ${focusStyle}`}>{items[item.slug].title}<ArrowRight className="size-3.5 shrink-0 text-brand" aria-hidden /></Link></li>
+              <li key={item.slug}><Link href={`/expertise/${item.slug}`} className={`inline-flex min-h-11 items-center gap-2 text-[12px] font-bold text-muted-foreground transition-colors hover:text-brand ${focusStyle}`}>{t(`items.${item.key}.title`)}<ArrowRight className="size-3.5 shrink-0 text-brand" aria-hidden /></Link></li>
             ))}
           </ul>
         </Container>

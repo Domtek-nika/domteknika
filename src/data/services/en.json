@@ -74,6 +74,7 @@
         "body": "The filter carafe needed to indicate when its cartridge should be replaced. DOMTEKNIKA developed the complete product and an economical mechanism for counting water volume. The project connects concept exploration, everyday use and integration into a physical product."
       },
       "ctaTitle": "Which idea would you like to develop?",
+      "ctaBody": "Tell us how the product will be used and which problem it needs to solve. We can explore the most relevant concepts and define the first checks.",
       "technicalFocus": {
         "title": "A useful idea starts with the right question.",
         "intro": "An appealing solution can hide the actual need early in a project. Describing the user’s action, the environment and the expected result opens up several technical options. These can then be compared against clear criteria before investing time in CAD.",
@@ -147,6 +148,7 @@
         "body": "At the Velum Sky amphitheatre in Geneva, the guides had to remain hidden with the screen raised. During descent, the screen is fully cantilevered. DOMTEKNIKA designed the guidance, stiffness and lifting mechanism around these constraints, integrating a precise function into its surroundings."
       },
       "ctaTitle": "Which mechanism would you like to develop?",
+      "ctaBody": "Share your drawings or CAD models and the points you want to improve. We can define the components, interfaces and manufacturing constraints to address.",
       "technicalFocus": {
         "title": "The detail that changes an assembly: tolerances.",
         "intro": "Manufactured dimensions vary within the limits specified on a drawing. In an assembly, those variations combine: a guide can jam, a seal can be compressed incorrectly or alignment can drift. Design therefore needs to account for the behaviour of real parts.",
@@ -224,6 +226,7 @@
         "body": "Aventor began in 2012 as an internal project. DOMTEKNIKA developed its electrical and mechanical architectures, studied three- and four-wheel configurations and built physical prototypes. The project shows the progression from a concept to a complete system, before a separate startup was established."
       },
       "ctaTitle": "What should your next prototype demonstrate?",
+      "ctaBody": "Your sketches, models and existing test results will help us define what to test and choose a prototype suited to the decision you need to make.",
       "technicalFocus": {
         "title": "Which prototype supports which decision?",
         "intro": "A prototype can explore movement, support user trials or prepare for manufacturing. The question being answered determines the material, process and level of finish required. Choosing what you want to learn helps direct the investment.",
@@ -297,6 +300,7 @@
         "body": "The acetabular reamer holder’s PEEK components had to meet both mechanical and injection moulding constraints. Finite element calculations and rheological analyses guided geometry optimisation. The work continued through tooling and refinement of the production process."
       },
       "ctaTitle": "Which technical decision do you need to verify?",
+      "ctaBody": "Share your geometry, proposed materials and load cases. We can define the analysis scope and the results needed to inform your decision.",
       "technicalFocus": {
         "title": "What does a red area actually mean?",
         "intro": "The colours in a calculation represent a quantity and a selected scale. Interpreting a red area requires the applied loads, restraints, material and model geometry. A result becomes useful when it answers a specific design question.",
@@ -370,6 +374,7 @@
         "body": "The ZipFix implant applicator replaces a reusable steel architecture with an ergonomic single-use polymer solution. DOMTEKNIKA designed the product, built functional prototypes and coordinated an initial moulded production run. Material, use and manufacturing were considered together."
       },
       "ctaTitle": "Is your component ready for injection moulding?",
+      "ctaBody": "Share your drawings, proposed material and production volumes. We can review part geometry, the process and tooling constraints.",
       "technicalFocus": {
         "title": "A strong part starts with considered wall geometry.",
         "intro": "In injection moulding, geometry influences filling, cooling and ejection. Changes in thickness can cause local shrinkage and distortion. Addressing these constraints during design makes discussions with the toolmaker and initial adjustments easier.",
@@ -443,6 +448,7 @@
         "body": "The transparent clock combines peripherally driven discs with automatic atomic-clock synchronisation. DOMTEKNIKA developed the complete electrical and mechanical concept, coordinated the design study and built a working prototype with moulded gear segments. Integration makes the product’s visual principle possible."
       },
       "ctaTitle": "Which functions would you like to integrate?",
+      "ctaBody": "Tell us about the required functions, components and power or enclosure constraints. We can define the interfaces and the checks needed.",
       "technicalFocus": {
         "title": "Electronics integration also depends on mechanics.",
         "intro": "Integrating a board, sensor or motor requires space for connections, mounting and operating conditions. The mechanical enclosure also influences access, wiring and heat removal. These interfaces need defining as part of the product architecture.",

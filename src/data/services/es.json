@@ -74,6 +74,7 @@
         "body": "La jarra filtrante debía indicar cuándo sustituir el cartucho. DOMTEKNIKA desarrolló el producto completo y un mecanismo económico para contabilizar el volumen de agua. El proyecto conecta búsqueda de conceptos, uso cotidiano e integración en un producto concreto."
       },
       "ctaTitle": "¿Qué idea quiere convertir en producto?",
+      "ctaBody": "Describa el uso previsto y el problema que su producto debe resolver. Exploraremos los conceptos más adecuados y definiremos las primeras comprobaciones.",
       "technicalFocus": {
         "title": "Una buena idea empieza con la pregunta adecuada.",
         "intro": "Al inicio de un proyecto, una solución atractiva puede ocultar la necesidad real. Describir la acción del usuario, el entorno y el resultado esperado abre varias opciones técnicas. Después pueden compararse con criterios concretos, antes de dedicar tiempo al CAD.",
@@ -147,6 +148,7 @@
         "body": "En el anfiteatro Velum Sky de Ginebra, las guías debían quedar ocultas con la pantalla elevada. Durante el descenso, la pantalla está completamente en voladizo. DOMTEKNIKA diseñó el guiado, la rigidez y el mecanismo de elevación en torno a estas restricciones, integrando una función precisa en su entorno."
       },
       "ctaTitle": "¿Qué mecanismo quiere desarrollar?",
+      "ctaBody": "Comparta sus planos o modelos CAD y los puntos que quiere mejorar. Definiremos las piezas, interfaces y restricciones de fabricación que conviene abordar.",
       "technicalFocus": {
         "title": "El detalle que cambia un conjunto: las tolerancias.",
         "intro": "Las dimensiones de una pieza fabricada varían dentro de los límites del plano. En un conjunto, estas variaciones se combinan: una guía puede atascarse, una junta comprimirse incorrectamente o la alineación desviarse. El diseño debe prever el comportamiento de las piezas reales.",
@@ -224,6 +226,7 @@
         "body": "Aventor comenzó en 2012 como proyecto interno. DOMTEKNIKA desarrolló las arquitecturas eléctrica y mecánica, estudió configuraciones de tres y cuatro ruedas y construyó los prototipos físicos. El proyecto muestra el paso de un concepto a un sistema completo, antes de crear una startup independiente."
       },
       "ctaTitle": "¿Qué debe demostrar su próximo prototipo?",
+      "ctaBody": "Sus bocetos, modelos y resultados de pruebas nos ayudarán a definir qué comprobar y elegir un prototipo adecuado a la decisión que necesita tomar.",
       "technicalFocus": {
         "title": "¿Qué prototipo sirve para cada decisión?",
         "intro": "Un prototipo puede explorar un movimiento, permitir pruebas con usuarios o preparar la fabricación. La pregunta que se quiere resolver determina el material, el proceso y el acabado necesarios. Elegir qué queremos aprender ayuda a dirigir la inversión.",
@@ -297,6 +300,7 @@
         "body": "Los componentes de PEEK del portafresa acetabular debían cumplir requisitos mecánicos y de inyección. Los cálculos por elementos finitos y los análisis reológicos guiaron la optimización geométrica. El trabajo continuó con los moldes y el ajuste del proceso de producción."
       },
       "ctaTitle": "¿Qué decisión técnica necesita verificar?",
+      "ctaBody": "Comparta la geometría, los materiales previstos y los casos de carga. Definiremos el alcance del cálculo y los resultados necesarios para su decisión.",
       "technicalFocus": {
         "title": "¿Qué significa realmente una zona roja?",
         "intro": "Los colores de un cálculo representan una magnitud y una escala elegidas. Para interpretar una zona roja hay que conocer las cargas, los apoyos, el material y la geometría del modelo. El resultado es útil cuando responde a una pregunta concreta de diseño.",
@@ -370,6 +374,7 @@
         "body": "El aplicador de implantes ZipFix sustituye una arquitectura reutilizable de acero por una solución ergonómica de polímero de un solo uso. DOMTEKNIKA diseñó el producto, construyó prototipos funcionales y coordinó una primera serie inyectada. Material, uso y fabricación se abordaron conjuntamente."
       },
       "ctaTitle": "¿Su pieza está lista para la inyección?",
+      "ctaBody": "Comparta sus planos, el material previsto y los volúmenes de producción. Revisaremos la geometría de la pieza, el proceso y las restricciones del molde.",
       "technicalFocus": {
         "title": "Una pieza resistente empieza por una pared bien diseñada.",
         "intro": "En el moldeo por inyección, la geometría influye en el llenado, el enfriamiento y la extracción. Los cambios de espesor pueden causar contracciones locales y deformaciones. Prever estas condiciones durante el diseño facilita el trabajo con el fabricante del molde y los primeros ajustes.",
@@ -443,6 +448,7 @@
         "body": "El reloj transparente combina discos accionados por su periferia con sincronización automática con el reloj atómico. DOMTEKNIKA desarrolló el concepto eléctrico y mecánico completo, coordinó el estudio de diseño y construyó un prototipo funcional con segmentos de engranaje inyectados. La integración hace posible el principio visual del producto."
       },
       "ctaTitle": "¿Qué funciones quiere integrar?",
+      "ctaBody": "Describa las funciones, los componentes y las restricciones de alimentación o de la carcasa. Definiremos las interfaces y las comprobaciones necesarias.",
       "technicalFocus": {
         "title": "La integración electrónica también depende de la mecánica.",
         "intro": "Integrar una placa, un sensor o un motor exige espacio para sus conexiones, su fijación y su funcionamiento. La envolvente mecánica también influye en el acceso, el cableado y la evacuación de calor. Estas interfaces se definen desde la arquitectura del producto.",

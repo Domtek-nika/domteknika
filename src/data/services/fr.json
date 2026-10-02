@@ -74,6 +74,7 @@
         "body": "Pour la carafe filtrante, le besoin était de signaler le bon moment pour remplacer la cartouche. DOMTEKNIKA a développé l’ensemble du produit et un mécanisme économique de comptage du volume d’eau. Ce projet relie recherche de principe, usage quotidien et intégration dans un produit concret."
       },
       "ctaTitle": "Quelle idée souhaitez-vous concrétiser ?",
+      "ctaBody": "Présentez l’usage que vous visez et le problème à résoudre. Nous pourrons explorer les concepts prioritaires et définir les premières vérifications.",
       "technicalFocus": {
         "title": "Une bonne idée commence par une bonne question.",
         "intro": "Au début d’un projet, une solution séduisante peut masquer le vrai besoin. Décrire le geste de l’utilisateur, l’environnement et le résultat attendu ouvre plusieurs pistes techniques. On peut ensuite les comparer sur des critères concrets, avant de consacrer du temps à la CAO.",
@@ -147,6 +148,7 @@
         "body": "Pour l’amphithéâtre Velum Sky à Genève, les guides devaient rester invisibles en position haute. Pendant la descente, l’écran est entièrement en porte-à-faux. DOMTEKNIKA a conçu le guidage, la rigidité et le mécanisme de levage autour de ces contraintes : une fonction précise, intégrée à son environnement."
       },
       "ctaTitle": "Quel mécanisme souhaitez-vous développer ?",
+      "ctaBody": "Partagez vos plans ou modèles CAO et les points à améliorer. Nous pourrons définir les pièces, les interfaces et les contraintes de fabrication à travailler.",
       "technicalFocus": {
         "title": "Le détail qui change un assemblage : les tolérances.",
         "intro": "Les dimensions d’une pièce fabriquée varient dans les limites prévues au plan. Dans un assemblage, ces variations se combinent : un guidage peut se coincer, un joint être mal comprimé ou un alignement se dégrader. La conception doit donc prévoir le comportement des pièces réelles.",
@@ -224,6 +226,7 @@
         "body": "Aventor a commencé en 2012 comme projet interne. DOMTEKNIKA a développé les architectures électrique et mécanique, étudié des configurations à trois et quatre roues, puis réalisé les prototypes physiques. Le projet illustre le passage du concept à un système complet, avant la création d’une startup distincte."
       },
       "ctaTitle": "Que doit démontrer votre prochain prototype ?",
+      "ctaBody": "Vos croquis, modèles et essais existants nous aideront à définir la question à tester, puis le prototype adapté à la décision que vous devez prendre.",
       "technicalFocus": {
         "title": "Quel prototype pour quelle décision ?",
         "intro": "Un prototype peut servir à explorer un mouvement, faire essayer un produit ou préparer sa fabrication. La question à trancher détermine la matière, le procédé et le niveau de finition nécessaires. Choisir ce que l’on veut apprendre aide à investir au bon endroit.",
@@ -297,6 +300,7 @@
         "body": "Sur le porte-fraise acétabulaire, les composants en PEEK devaient répondre aux contraintes mécaniques et à celles de l’injection. Les calculs par éléments finis et les analyses rhéologiques ont guidé l’optimisation des géométries. Le travail s’est prolongé par les outillages et la mise au point du procédé de production."
       },
       "ctaTitle": "Quel choix technique devez-vous sécuriser ?",
+      "ctaBody": "Partagez votre géométrie, vos matériaux et les charges envisagées. Nous pourrons cadrer le calcul et préciser les résultats nécessaires à votre décision.",
       "technicalFocus": {
         "title": "Que signifie vraiment une zone rouge ?",
         "intro": "Les couleurs d’un calcul représentent une grandeur et une échelle choisies. Pour interpréter une zone rouge, il faut connaître les efforts appliqués, les appuis, le matériau et la géométrie du modèle. Le résultat devient utile lorsqu’il répond à une question de conception précise.",
@@ -370,6 +374,7 @@
         "body": "L’instrument d’application des implants ZipFix remplace une architecture réutilisable en acier par une solution ergonomique en polymère à usage unique. DOMTEKNIKA a conçu le produit, réalisé les prototypes fonctionnels et piloté une première série injectée. Le matériau, l’usage et la fabrication ont été traités ensemble."
       },
       "ctaTitle": "Votre pièce est-elle prête pour l’injection ?",
+      "ctaBody": "Partagez vos plans, la matière envisagée et les volumes de production. Nous pourrons examiner la géométrie, le procédé et les contraintes d’outillage.",
       "technicalFocus": {
         "title": "Une pièce solide commence par une paroi bien conçue.",
         "intro": "En injection, la géométrie influence le remplissage, le refroidissement et le démoulage. Les variations d’épaisseur peuvent provoquer des retraits locaux et des déformations. Anticiper ces contraintes pendant la conception facilite les échanges avec l’outilleur et les premières mises au point.",
@@ -443,6 +448,7 @@
         "body": "L’horloge à fond transparent associe des disques entraînés en périphérie à une synchronisation automatique sur l’horloge atomique. DOMTEKNIKA a développé le concept électrique et mécanique complet, piloté l’étude de design et réalisé un prototype fonctionnel avec des segments de pignon injectés. L’intégration rend possible le principe visuel du produit."
       },
       "ctaTitle": "Quelles fonctions souhaitez-vous intégrer ?",
+      "ctaBody": "Présentez les fonctions, les composants et les contraintes d’alimentation ou de boîtier. Nous pourrons définir les interfaces et les vérifications à mener.",
       "technicalFocus": {
         "title": "L’électronique se joue aussi dans la mécanique.",
         "intro": "Intégrer une carte, un capteur ou un moteur demande de réserver de la place pour ses connexions, ses fixations et ses conditions de fonctionnement. L’enveloppe mécanique influence aussi l’accès, le câblage et l’évacuation de la chaleur. Ces interfaces se définissent dès l’architecture du produit.",

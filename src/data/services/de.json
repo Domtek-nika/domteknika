@@ -74,6 +74,7 @@
         "body": "Die Filterkaraffe sollte anzeigen, wann ihre Kartusche gewechselt werden muss. DOMTEKNIKA entwickelte das gesamte Produkt und einen kostengünstigen Mechanismus zur Erfassung des Wasservolumens. Das Projekt verbindet Konzeptentwicklung, täglichen Gebrauch und Integration in ein konkretes Produkt."
       },
       "ctaTitle": "Welche Idee möchten Sie umsetzen?",
+      "ctaBody": "Beschreiben Sie den geplanten Einsatz und das Problem, das Ihr Produkt lösen soll. Gemeinsam untersuchen wir geeignete Konzepte und legen die ersten Prüfungen fest.",
       "technicalFocus": {
         "title": "Eine gute Idee beginnt mit der richtigen Frage.",
         "intro": "Zu Beginn eines Projekts kann eine attraktive Lösung den eigentlichen Bedarf verdecken. Beschreibt man die Handlung des Nutzers, die Umgebung und das erwartete Ergebnis, entstehen mehrere technische Ansätze. Diese lassen sich anhand konkreter Kriterien vergleichen, bevor Zeit in die CAD-Konstruktion fliesst.",
@@ -147,6 +148,7 @@
         "body": "Im Amphitheater Velum Sky in Genf sollten die Führungen bei angehobenem Bildschirm unsichtbar bleiben. Beim Absenken ist der Bildschirm vollständig freitragend. DOMTEKNIKA entwickelte Führung, Steifigkeit und Hebemechanismus anhand dieser Anforderungen und integrierte die Funktion in ihre Umgebung."
       },
       "ctaTitle": "Welchen Mechanismus möchten Sie entwickeln?",
+      "ctaBody": "Zeigen Sie uns Ihre Zeichnungen oder CAD-Modelle und die gewünschten Verbesserungen. Wir klären, welche Bauteile, Schnittstellen und Fertigungsanforderungen zu bearbeiten sind.",
       "technicalFocus": {
         "title": "Das entscheidende Detail einer Baugruppe: Toleranzen.",
         "intro": "Die Masse gefertigter Teile variieren innerhalb der Zeichnungsvorgaben. In einer Baugruppe wirken diese Abweichungen zusammen: Eine Führung kann klemmen, eine Dichtung falsch komprimiert sein oder die Ausrichtung abweichen. Die Konstruktion muss daher das Verhalten realer Teile berücksichtigen.",
@@ -224,6 +226,7 @@
         "body": "Aventor begann 2012 als internes Projekt. DOMTEKNIKA entwickelte die elektrische und mechanische Architektur, untersuchte Varianten mit drei und vier Rädern und baute physische Prototypen. Das Projekt zeigt den Weg vom Konzept zum vollständigen System, bevor ein eigenständiges Startup gegründet wurde."
       },
       "ctaTitle": "Was soll Ihr nächster Prototyp zeigen?",
+      "ctaBody": "Ihre Skizzen, Modelle und vorhandenen Versuchsergebnisse helfen uns, das Prüfziel zu bestimmen und einen für Ihre Entscheidung geeigneten Prototyp auszuwählen.",
       "technicalFocus": {
         "title": "Welcher Prototyp für welche Entscheidung?",
         "intro": "Ein Prototyp kann eine Bewegung untersuchen, Nutzertests ermöglichen oder die Fertigung vorbereiten. Die zu beantwortende Frage bestimmt Material, Verfahren und erforderliche Ausführung. Wer das Lernziel festlegt, kann den Aufwand gezielt einsetzen.",
@@ -297,6 +300,7 @@
         "body": "Die PEEK-Komponenten des Halters für Acetabulumfräsen mussten mechanische und spritzgusstechnische Anforderungen erfüllen. Finite-Elemente-Berechnungen und rheologische Analysen unterstützten die Geometrieoptimierung. Es folgten Werkzeugentwicklung und die Abstimmung des Produktionsverfahrens."
       },
       "ctaTitle": "Welche technische Entscheidung möchten Sie absichern?",
+      "ctaBody": "Zeigen Sie uns die Geometrie, vorgesehenen Werkstoffe und Lastfälle. Wir legen den Berechnungsumfang und die für Ihre Entscheidung benötigten Ergebnisse fest.",
       "technicalFocus": {
         "title": "Was bedeutet ein roter Bereich im Ergebnis?",
         "intro": "Die Farben einer Berechnung zeigen eine Grösse und eine gewählte Skala. Für die Interpretation eines roten Bereichs braucht es die Lasten, Lagerungen, das Material und die Modellgeometrie. Das Ergebnis wird nützlich, wenn es eine konkrete Konstruktionsfrage beantwortet.",
@@ -370,6 +374,7 @@
         "body": "Das Instrument zum Einsetzen von ZipFix-Implantaten ersetzt eine wiederverwendbare Stahlkonstruktion durch eine ergonomische Einweglösung aus Polymer. DOMTEKNIKA konstruierte das Produkt, fertigte Funktionsprototypen und koordinierte eine erste Spritzgussserie. Werkstoff, Anwendung und Fertigung wurden gemeinsam betrachtet."
       },
       "ctaTitle": "Ist Ihr Bauteil bereit für den Spritzguss?",
+      "ctaBody": "Zeigen Sie uns Ihre Zeichnungen, den vorgesehenen Werkstoff und die geplanten Stückzahlen. Wir prüfen Bauteilgeometrie, Verfahren und Anforderungen an das Werkzeug.",
       "technicalFocus": {
         "title": "Ein stabiles Teil beginnt mit durchdachten Wandungen.",
         "intro": "Beim Spritzgiessen beeinflusst die Geometrie das Füllen, Abkühlen und Entformen. Unterschiedliche Wanddicken können lokale Schwindung und Verzug verursachen. Werden diese Zusammenhänge bereits in der Konstruktion berücksichtigt, erleichtert das die Abstimmung mit dem Werkzeugbau und die ersten Anpassungen.",
@@ -443,6 +448,7 @@
         "body": "Die transparente Uhr verbindet am Umfang angetriebene Scheiben mit automatischer Synchronisation über die Atomuhr. DOMTEKNIKA entwickelte das vollständige elektrische und mechanische Konzept, koordinierte die Designstudie und baute einen Funktionsprototyp mit gespritzten Zahnsegmenten. Die Integration ermöglicht das visuelle Prinzip des Produkts."
       },
       "ctaTitle": "Welche Funktionen möchten Sie integrieren?",
+      "ctaBody": "Beschreiben Sie Funktionen, Komponenten sowie die Bedingungen für Stromversorgung und Gehäuse. Daraus bestimmen wir Schnittstellen und notwendige Prüfungen.",
       "technicalFocus": {
         "title": "Elektronikintegration braucht auch Mechanik.",
         "intro": "Eine Platine, ein Sensor oder ein Motor benötigt Platz für Anschlüsse, Befestigung und Betrieb. Das mechanische Gehäuse beeinflusst ausserdem Zugänglichkeit, Verkabelung und Wärmeabfuhr. Diese Schnittstellen werden bereits in der Produktarchitektur festgelegt.",
