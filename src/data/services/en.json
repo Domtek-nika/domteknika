@@ -62,6 +62,22 @@
         {
           "question": "Does this stage include a prototype?",
           "answer": "It can lead to a proof of concept. Its construction and validation points depend on the uncertainties to resolve."
+        },
+        {
+          "question": "How do you compare different concepts?",
+          "answer": "We compare them against the same need: required functions, available space, manufacturing, cost and uncertainties. This makes trade-offs visible and helps identify which options deserve further development."
+        },
+        {
+          "question": "Can you improve an existing product?",
+          "answer": "Yes. A problem with use, assembly or manufacturing can be the starting point. We examine the functions to preserve and the constraints to improve before proposing changes to the concept."
+        },
+        {
+          "question": "Is an attractive idea already a feasible solution?",
+          "answer": "An idea still needs to be assessed against materials, loads, available space and manufacturing. Initial studies identify uncertainties and help decide what needs checking first."
+        },
+        {
+          "question": "What is a proof-of-principle prototype for?",
+          "answer": "It tests a specific function, such as a movement, locking mechanism or interaction. A simple assembly can answer that question before work begins on the details of the final product."
         }
       ],
       "caseStudy": {
@@ -135,6 +151,22 @@
         {
           "question": "Does design include manufacturing?",
           "answer": "The documentation can support prototyping or production. Manufacturing, testing and industrial support are specified within the agreed scope."
+        },
+        {
+          "question": "What can serve as the starting point?",
+          "answer": "Drawings, CAD models, sketches, photographs and observations from an existing component can help. We identify missing information for the requested work, particularly interfaces, loads and functional dimensions."
+        },
+        {
+          "question": "How do you select a component’s material?",
+          "answer": "The choice depends on function, loads, environment, weight and the manufacturing process. Assembly and cost constraints are also compared to identify a material suited to the product."
+        },
+        {
+          "question": "Why do tolerances matter?",
+          "answer": "They define acceptable dimensional variations in manufactured parts. In an assembly, these variations affect clearance, guidance and clamping. Tight precision should therefore meet a functional need."
+        },
+        {
+          "question": "How is a component prepared for manufacturing?",
+          "answer": "The geometry and specifications are assessed against the intended process. Access, functional surfaces, tolerances and assembly steps are reviewed to prepare documentation consistent with manufacturing and inspection."
         }
       ],
       "caseStudy": {
@@ -208,6 +240,22 @@
         {
           "question": "Is a working prototype ready for production?",
           "answer": "Not necessarily. Materials, tolerances, assembly and the production process may need a separate industrialisation stage."
+        },
+        {
+          "question": "What can you test with a prototype?",
+          "answer": "A prototype can check a mechanism, handling, available space or component integration. Tests are chosen for the decision to be made, with explicit limits related to the material and how the prototype was made."
+        },
+        {
+          "question": "Why build several versions?",
+          "answer": "Each test can reveal something to improve or an assumption to revisit. Successive versions make it possible to test changes and develop the design using concrete observations."
+        },
+        {
+          "question": "Can you improve an existing prototype?",
+          "answer": "Yes. We examine its construction, results and the difficulties encountered. Changes are then focused on the functions or operating conditions that still need checking."
+        },
+        {
+          "question": "How do you know whether a test is successful?",
+          "answer": "Before testing, define the function, operating conditions and expected result. Observations can then inform a decision: keep the solution, adapt it or carry out another test."
         }
       ],
       "caseStudy": {
@@ -281,6 +329,22 @@
         {
           "question": "Can simulation replace physical tests?",
           "answer": "No. It helps focus tests and compare solutions. Results depend on the assumptions and must be checked against real behaviour."
+        },
+        {
+          "question": "What can a finite-element calculation show?",
+          "answer": "It can study loads, stresses and deformation in a model under defined loading conditions. Interpretation depends on the assumptions and the design question the analysis needs to answer."
+        },
+        {
+          "question": "Why do boundary conditions matter?",
+          "answer": "Supports, contacts and loads describe how a component interacts with its surroundings. An unsuitable representation can substantially change the results, even when the geometry appears accurate."
+        },
+        {
+          "question": "How do you check whether the mesh is suitable?",
+          "answer": "We examine how results change with element size and distribution. The quantity relevant to the decision should stabilise; highly localised peaks also require a review of geometry and applied conditions."
+        },
+        {
+          "question": "Can you compare different geometries or materials?",
+          "answer": "Yes. Variants can be studied under comparable conditions to understand their differences. This guides design while accounting for manufacturing constraints and the tests still needed."
         }
       ],
       "caseStudy": {
@@ -354,6 +418,22 @@
         {
           "question": "Can you support initial production runs?",
           "answer": "We have coordinated tooling, injection trials and initial production runs. DOMTEKNIKA’s role and the partners’ roles are agreed for each project."
+        },
+        {
+          "question": "Why consider injection moulding during design?",
+          "answer": "Geometry affects filling, cooling and ejection. Considering wall thickness, draft and tooling access during design helps limit changes later in development."
+        },
+        {
+          "question": "Can a prototype component be injection moulded unchanged?",
+          "answer": "Not always. A geometry developed for a prototype may need changes to its walls, ejection or assembly. The production material and process must be considered before specifying tooling."
+        },
+        {
+          "question": "How do you select a polymer?",
+          "answer": "The choice depends on use, loads, temperatures, environment and the processing method. Material properties are assessed together with component geometry and product requirements."
+        },
+        {
+          "question": "What is checked on the first moulded components?",
+          "answer": "Dimensions, appearance, assembly and function are assessed against the intended requirements. Observations identify any changes to geometry, tooling or process needed before production continues."
         }
       ],
       "caseStudy": {
@@ -427,6 +507,22 @@
         {
           "question": "What information should we prepare?",
           "answer": "Required functions, selected components, power constraints and available drawings. We then define the necessary development work and checks."
+        },
+        {
+          "question": "What does electronics integration cover?",
+          "answer": "It covers component placement, power, connections and interfaces with the mechanical design. Any electronics design or software work needed is defined in the project scope."
+        },
+        {
+          "question": "Do the components need to be selected already?",
+          "answer": "No. Work can start from required functions or components you already have. Data sheets, dimensions and power requirements then help define the architecture and integration constraints."
+        },
+        {
+          "question": "Why does the enclosure affect electronics?",
+          "answer": "It determines available space, mounting, cable routing and access to connections. It also contributes to heat removal; these constraints are addressed together with the product’s operating conditions."
+        },
+        {
+          "question": "How is the combined mechanical and electronic system tested?",
+          "answer": "Interfaces are checked progressively: power, control, movement and behaviour during use. Tests should match the required functions and intended operating conditions, with criteria defined in advance."
         }
       ],
       "caseStudy": {

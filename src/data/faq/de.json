@@ -1,0 +1,44 @@
+{
+  "title": "Häufige Fragen",
+  "intro": "Vom ersten Gespräch bis zu technischen Entscheidungen: Hier finden Sie Antworten, um Ihr Projekt einzuordnen und den nächsten Schritt zu planen.",
+  "generalTopic": "Ihr Projekt",
+  "fullFaqLink": "Die vollständige FAQ ansehen",
+  "labels": {
+    "searchLabel": "Fragen und Antworten durchsuchen",
+    "searchPlaceholder": "Fragen durchsuchen…",
+    "clearSearch": "Suche löschen",
+    "allTopics": "Alle Themen",
+    "topicsLabel": "Fragen nach Thema filtern",
+    "resultSingle": "{count} Frage",
+    "resultPlural": "{count} Fragen",
+    "noResultsTitle": "Keine Frage passt zu Ihrer Suche.",
+    "noResultsBody": "Versuchen Sie ein anderes Wort oder wählen Sie ein umfassenderes Thema.",
+    "resetFilters": "Suche und Filter zurücksetzen"
+  },
+  "general": [
+    {
+      "question": "Können Sie in ein bereits gestartetes Projekt einsteigen?",
+      "answer": "Ja. Wir können an einer Idee, Zeichnungen, einem Prototyp oder einem bestehenden Produkt ansetzen. Wir sichten die bisherigen Arbeiten und legen die nächsten sinnvollen Schritte ausgehend von Ihrem aktuellen Stand fest."
+    },
+    {
+      "question": "Können Sie nur einen Teil eines Projekts übernehmen?",
+      "answer": "Ja. Eine Aufgabe kann ein Bauteil, einen Mechanismus, eine Simulation oder die Integration von Komponenten betreffen. Wir legen den Umfang und die Schnittstellen zum übrigen Produkt fest, damit eine gezielte Aufgabe das Projekt voranbringt."
+    },
+    {
+      "question": "Was ist für ein erstes Gespräch hilfreich?",
+      "answer": "Beschreiben Sie das Problem, die vorgesehene Nutzung und den bisherigen Entwicklungsstand. Skizzen, Fotos, Zeichnungen und Prüfergebnisse können helfen. Bekannte Anforderungen und Ihr Termin erleichtern die Planung der nächsten Schritte."
+    },
+    {
+      "question": "Wie werden Budget und Zeitplan festgelegt?",
+      "answer": "Umfang, Ergebnisse und Validierungsschritte bilden die Grundlage der Schätzung. Budget und Zeitplan hängen auch von Prüfungen, Beschaffung und Entwicklungsstand ab."
+    },
+    {
+      "question": "Brauchen wir alle sechs Kompetenzen?",
+      "answer": "Nein. Ihr Bedarf kann eine einzelne Disziplin oder mehrere betreffen. Wir bestimmen die Kompetenzen passend zu Ihrem Ziel, etwa ein Konzept zu untersuchen, ein Bauteil zu verbessern oder die Fertigung vorzubereiten."
+    },
+    {
+      "question": "Wie entscheiden wir über den nächsten Projektschritt?",
+      "answer": "Die Ergebnisse werden mit den vereinbarten Kriterien der Phase verglichen: Funktion, Nutzung, mechanisches Verhalten oder Fertigung. Verbleibende offene Fragen zeigen, ob wir fortfahren, die Konstruktion anpassen oder weitere Prüfungen durchführen sollten."
+    }
+  ]
+}

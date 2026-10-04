@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Plus } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { Container } from "@/components/layout/container";
+import { FaqSearch } from "@/components/sections/faq-search";
+import { getFaqCopy } from "@/data/faq-copy";
 import { getProjectBySlug } from "@/data/projects";
 import { getServiceCopy } from "@/data/service-copy";
 import { getService, getServiceProjectScopeIndex, services } from "@/data/services";
@@ -44,6 +46,7 @@ export default async function ServicePage({ params }: Props) {
   if (!service) notFound();
   const { labels, items } = getServiceCopy(locale);
   const copy = items[service.slug];
+  const faqCopy = getFaqCopy(locale);
   const t = await getTranslations({ locale, namespace: "ExpertisePage.Services" });
   const displayTitle = t(`items.${service.key}.title`);
   const projects = service.projects.flatMap((id) => {
@@ -216,20 +219,14 @@ export default async function ServicePage({ params }: Props) {
         </Container>
       </section>
 
-      <section id="service-faq" aria-labelledby="service-faq-title" className="scroll-mt-32 pb-8 md:pb-12">
+      <section id="service-faq" aria-labelledby="service-faq-title" className="pb-8 md:pb-12">
         <Container size="wide">
           <div className="grid gap-6 lg:grid-cols-[0.85fr_1.35fr] lg:gap-12">
-            <h2 id="service-faq-title" className="domtek-text-shadow max-w-sm text-[30px] font-extrabold leading-[1.1] sm:text-[36px]">{labels.faq}<span className="text-brand">.</span></h2>
-            <div className="border-t border-border">
-              {copy.faq.map(({ question, answer }) => (
-                <details key={question} className="group border-b border-border">
-                  <summary className={`flex min-h-16 cursor-pointer list-none items-center justify-between gap-5 py-5 text-[14px] font-bold leading-relaxed [&::-webkit-details-marker]:hidden ${focusStyle}`}>
-                    {question}<Plus className="size-5 shrink-0 text-brand transition-transform group-open:rotate-45 motion-reduce:transition-none" aria-hidden />
-                  </summary>
-                  <p className="max-w-3xl pb-6 pr-7 text-[14px] font-medium leading-[1.55] text-muted-foreground">{answer}</p>
-                </details>
-              ))}
+            <div>
+              <h2 id="service-faq-title" className="domtek-text-shadow max-w-sm text-[30px] font-extrabold leading-[1.1] sm:text-[36px]">{labels.faq}<span className="text-brand">.</span></h2>
+              <Link href="/expertise#expertise-faq" className={`mt-5 inline-flex min-h-11 items-center gap-3 text-[13px] font-bold text-brand hover:underline ${focusStyle}`}>{faqCopy.fullFaqLink}<ArrowUpRight className="size-4 shrink-0" aria-hidden /></Link>
             </div>
+            <FaqSearch questions={copy.faq.map((item, index) => ({ ...item, id: `${service.slug}-${index}`, topic: service.slug }))} topics={[{id: service.slug, label: displayTitle}]} labels={faqCopy.labels} locale={locale} />
           </div>
         </Container>
       </section>

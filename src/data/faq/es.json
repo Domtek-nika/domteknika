@@ -1,0 +1,44 @@
+{
+  "title": "Preguntas frecuentes",
+  "intro": "Desde la primera conversación hasta las decisiones técnicas: encuentre respuestas útiles para situar su proyecto y preparar el siguiente paso.",
+  "generalTopic": "Su proyecto",
+  "fullFaqLink": "Ver todas las preguntas",
+  "labels": {
+    "searchLabel": "Buscar en las preguntas y respuestas",
+    "searchPlaceholder": "Buscar en las preguntas…",
+    "clearSearch": "Borrar la búsqueda",
+    "allTopics": "Todos los temas",
+    "topicsLabel": "Filtrar preguntas por tema",
+    "resultSingle": "{count} pregunta",
+    "resultPlural": "{count} preguntas",
+    "noResultsTitle": "Ninguna pregunta coincide con su búsqueda.",
+    "noResultsBody": "Pruebe otra palabra o seleccione un tema más amplio.",
+    "resetFilters": "Restablecer la búsqueda y los filtros"
+  },
+  "general": [
+    {
+      "question": "¿Pueden incorporarse a un proyecto que ya ha comenzado?",
+      "answer": "Sí. Podemos partir de una idea, planos, un prototipo o un producto existente. Revisamos el trabajo realizado y definimos los siguientes pasos útiles a partir de la situación actual."
+    },
+    {
+      "question": "¿Pueden trabajar solo en una parte del proyecto?",
+      "answer": "Sí. El encargo puede centrarse en una pieza, un mecanismo, una simulación o la integración de componentes. Definimos su alcance y las interfaces con el resto del producto para que una intervención concreta haga avanzar el proyecto."
+    },
+    {
+      "question": "¿Qué conviene preparar para una primera conversación?",
+      "answer": "Explique el problema, el uso previsto y lo que ya se ha desarrollado. Los bocetos, fotografías, planos y resultados de pruebas pueden ayudar. Las restricciones conocidas y el plazo facilitan la definición de los siguientes pasos."
+    },
+    {
+      "question": "¿Cómo se definen el presupuesto y el calendario?",
+      "answer": "El alcance, los entregables y las etapas de validación sirven de base para la estimación. El presupuesto y el calendario también dependen de las pruebas, el aprovisionamiento y el grado de desarrollo del proyecto."
+    },
+    {
+      "question": "¿Son necesarias las seis especialidades?",
+      "answer": "No. Su necesidad puede requerir una sola disciplina o varias. Identificamos las competencias necesarias para su objetivo, ya sea explorar un concepto, mejorar una pieza o preparar su fabricación."
+    },
+    {
+      "question": "¿Cómo se decide pasar a la siguiente etapa?",
+      "answer": "Los resultados se comparan con los criterios acordados para esa etapa: función, uso, comportamiento mecánico o fabricación. Las incertidumbres pendientes ayudan a decidir si conviene avanzar, modificar el diseño o realizar otra prueba."
+    }
+  ]
+}

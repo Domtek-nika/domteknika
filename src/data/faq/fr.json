@@ -1,0 +1,44 @@
+{
+  "title": "Questions fréquentes",
+  "intro": "Du premier échange aux choix techniques : trouvez les réponses utiles pour situer votre projet et préparer la suite.",
+  "generalTopic": "Votre projet",
+  "fullFaqLink": "Voir la FAQ complète",
+  "labels": {
+    "searchLabel": "Rechercher dans les questions et les réponses",
+    "searchPlaceholder": "Rechercher dans la FAQ…",
+    "clearSearch": "Effacer la recherche",
+    "allTopics": "Tous les thèmes",
+    "topicsLabel": "Filtrer les questions par thème",
+    "resultSingle": "{count} question",
+    "resultPlural": "{count} questions",
+    "noResultsTitle": "Aucune question ne correspond à cette recherche.",
+    "noResultsBody": "Essayez un autre mot ou élargissez le thème sélectionné.",
+    "resetFilters": "Réinitialiser la recherche et les filtres"
+  },
+  "general": [
+    {
+      "question": "Pouvez-vous intervenir sur un projet déjà commencé ?",
+      "answer": "Oui. Nous pouvons partir d’une idée, de plans, d’un prototype ou d’un produit existant. L’objectif est de comprendre ce qui a déjà été fait et de définir le travail utile à partir de votre situation actuelle."
+    },
+    {
+      "question": "Pouvez-vous travailler uniquement sur une partie du projet ?",
+      "answer": "Oui. Une intervention peut concerner une pièce, un mécanisme, une simulation ou l’intégration d’un composant. Nous définissons le périmètre et les interfaces avec le reste du produit pour que cette mission ciblée fasse avancer votre projet."
+    },
+    {
+      "question": "Quelles informations sont utiles pour un premier échange ?",
+      "answer": "Présentez le problème à résoudre, l’usage du produit et ce que vous avez déjà développé. Des croquis, photos, plans ou essais peuvent aider. Les contraintes connues et votre échéance permettent de préciser les prochaines étapes."
+    },
+    {
+      "question": "Comment sont définis le budget et le planning ?",
+      "answer": "Le périmètre, les livrables et les étapes de validation servent à établir une estimation. Le budget et le planning dépendent aussi des essais, des approvisionnements et du niveau de maturité de votre projet."
+    },
+    {
+      "question": "Faut-il utiliser les six expertises pour travailler avec vous ?",
+      "answer": "Non. Le besoin peut relever d’une seule expertise ou en combiner plusieurs. Nous cherchons les compétences nécessaires à votre objectif : explorer un concept, fiabiliser une pièce ou préparer une fabrication, par exemple."
+    },
+    {
+      "question": "Comment décide-t-on de passer à l’étape suivante ?",
+      "answer": "Les résultats sont comparés aux critères définis pour l’étape : fonctionnement, usage, comportement mécanique ou fabrication. Les points encore incertains sont identifiés pour décider s’il faut poursuivre, modifier la conception ou réaliser un essai complémentaire."
+    }
+  ]
+}

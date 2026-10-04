@@ -21,6 +21,8 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/providers/reveal";
 import { BrainstormingCardSwap } from "@/components/sections/brainstorming-card-swap";
+import { ExpertiseFaq } from "@/components/sections/expertise-faq";
+import { getFaqCopy } from "@/data/faq-copy";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { getServicePath } from "@/data/services";
@@ -99,9 +101,10 @@ export default async function ExpertisePage({
   return (
     <>
       <ExpertiseHero />
-      <ExpertiseGrid />
+      <ExpertiseGrid faqLabel={getFaqCopy(locale).title} />
       <ExpertiseSwissBanner />
       <AddedValueSection />
+      <ExpertiseFaq locale={locale} />
       <ExpertiseCta />
     </>
   );
@@ -221,7 +224,7 @@ function TeamPortrait({
   );
 }
 
-function ExpertiseGrid() {
+function ExpertiseGrid({ faqLabel }: { faqLabel: string }) {
   const t = useTranslations("ExpertisePage.Services");
 
   return (
@@ -251,6 +254,9 @@ function ExpertiseGrid() {
             <p className="mt-7 max-w-[320px] text-[15px] font-medium leading-[1.42] text-muted-foreground sm:max-w-[610px] min-[1800px]:!max-w-[760px] min-[1800px]:!text-[17px] min-[2400px]:!text-[19px]">
               {t("intro")}
             </p>
+            <a href="#expertise-faq" className="mt-6 inline-flex min-h-11 items-center gap-3 rounded-[7px] border border-brand/30 bg-white px-4 py-3 text-[13px] font-bold shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors hover:border-brand hover:bg-brand/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+              {faqLabel}<ArrowRight className="size-4 text-brand" aria-hidden />
+            </a>
           </Reveal>
 
           <ExpertiseServiceCards items={EXPERTISE_ITEMS} startIndex={0} />

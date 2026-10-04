@@ -1,0 +1,44 @@
+{
+  "title": "Frequently asked questions",
+  "intro": "From the first conversation to technical decisions: find useful answers to understand where your project stands and plan the next step.",
+  "generalTopic": "Your project",
+  "fullFaqLink": "Explore the full FAQ",
+  "labels": {
+    "searchLabel": "Search questions and answers",
+    "searchPlaceholder": "Search the FAQ…",
+    "clearSearch": "Clear search",
+    "allTopics": "All topics",
+    "topicsLabel": "Filter questions by topic",
+    "resultSingle": "{count} question",
+    "resultPlural": "{count} questions",
+    "noResultsTitle": "No questions match your search.",
+    "noResultsBody": "Try another word or select a broader topic.",
+    "resetFilters": "Reset search and filters"
+  },
+  "general": [
+    {
+      "question": "Can you join a project that has already started?",
+      "answer": "Yes. We can start from an idea, drawings, a prototype or an existing product. We review the work already completed and define the next useful steps from your current position."
+    },
+    {
+      "question": "Can you work on just one part of a project?",
+      "answer": "Yes. A task can focus on a component, mechanism, simulation or component integration. We define its scope and interfaces with the rest of the product so that a focused assignment moves the project forward."
+    },
+    {
+      "question": "What is useful for a first conversation?",
+      "answer": "Describe the problem, how the product will be used and what you have developed so far. Sketches, photographs, drawings and test results can help. Known constraints and your deadline make it easier to define the next steps."
+    },
+    {
+      "question": "How are the budget and schedule defined?",
+      "answer": "The scope, deliverables and validation stages provide the basis for an estimate. The budget and schedule also depend on testing, sourcing and how far the project has progressed."
+    },
+    {
+      "question": "Do we need all six areas of expertise?",
+      "answer": "No. Your need may involve a single discipline or several. We identify the skills needed for your objective, such as exploring a concept, improving a component or preparing it for manufacturing."
+    },
+    {
+      "question": "How do we decide to move to the next stage?",
+      "answer": "Results are compared with the criteria agreed for that stage: function, use, mechanical behaviour or manufacturing. Remaining uncertainties help determine whether to proceed, revise the design or run another test."
+    }
+  ]
+}

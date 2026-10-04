@@ -62,6 +62,22 @@
         {
           "question": "Est-ce que cette étape inclut un prototype ?",
           "answer": "Elle peut déboucher sur un prototype de principe. Sa réalisation et les points à valider sont définis selon les incertitudes à lever."
+        },
+        {
+          "question": "Comment comparez-vous plusieurs concepts ?",
+          "answer": "Nous les comparons sur le même besoin : fonctions attendues, encombrement, fabrication, coût et points à vérifier. Cette comparaison rend les compromis visibles et aide à choisir les pistes qui méritent d’être développées."
+        },
+        {
+          "question": "Pouvez-vous améliorer un produit existant ?",
+          "answer": "Oui. Un problème d’usage, d’assemblage ou de fabrication peut servir de point de départ. Nous examinons les fonctions à conserver et les contraintes à améliorer avant de proposer des évolutions de concept."
+        },
+        {
+          "question": "Une idée séduisante est-elle déjà une solution réalisable ?",
+          "answer": "Une idée doit encore être confrontée aux matériaux, aux efforts, à l’espace disponible et à la fabrication. Les premières études servent à repérer les incertitudes et à choisir ce qu’il faut vérifier en priorité."
+        },
+        {
+          "question": "À quoi sert un prototype de principe ?",
+          "answer": "Il sert à observer une fonction précise : un mouvement, un verrouillage ou une interaction, par exemple. Un montage simple peut suffire à répondre à cette question, avant de travailler les détails du produit final."
         }
       ],
       "caseStudy": {
@@ -135,6 +151,22 @@
         {
           "question": "La conception inclut-elle la fabrication ?",
           "answer": "Le dossier peut servir au prototypage ou à la production. La fabrication, les essais et l’accompagnement industriel sont précisés dans le périmètre de l’intervention."
+        },
+        {
+          "question": "Quels documents peuvent servir de point de départ ?",
+          "answer": "Plans, modèles CAO, croquis, photos et observations sur une pièce existante peuvent être utiles. Nous précisons les informations manquantes selon le travail demandé, notamment les interfaces, les efforts et les dimensions fonctionnelles."
+        },
+        {
+          "question": "Comment choisir le matériau d’une pièce ?",
+          "answer": "Le choix dépend de la fonction, des efforts, de l’environnement, du poids et du procédé de fabrication. On compare aussi les contraintes d’assemblage et de coût pour retenir une matière adaptée au produit."
+        },
+        {
+          "question": "Pourquoi les tolérances sont-elles importantes ?",
+          "answer": "Elles définissent les variations de dimensions acceptables sur les pièces fabriquées. Dans un assemblage, ces variations influencent le jeu, le guidage ou le serrage. Une précision élevée doit donc répondre à un besoin fonctionnel."
+        },
+        {
+          "question": "Comment prépare-t-on une pièce à la fabrication ?",
+          "answer": "La géométrie et les spécifications sont confrontées au procédé envisagé. Les accès, surfaces fonctionnelles, tolérances et étapes d’assemblage sont examinés pour préparer des documents cohérents avec la fabrication et le contrôle."
         }
       ],
       "caseStudy": {
@@ -208,6 +240,22 @@
         {
           "question": "Un prototype fonctionnel est-il prêt à produire ?",
           "answer": "Pas nécessairement. Les matériaux, les tolérances, l’assemblage et le procédé de série peuvent demander une phase d’industrialisation distincte."
+        },
+        {
+          "question": "Que peut-on tester avec un prototype ?",
+          "answer": "Un prototype peut aider à vérifier un mécanisme, la prise en main, l’encombrement ou l’intégration des composants. Les essais sont choisis selon la décision à prendre, avec des limites explicites liées au matériau et à la réalisation."
+        },
+        {
+          "question": "Pourquoi fabriquer plusieurs versions ?",
+          "answer": "Chaque essai peut révéler un point à améliorer ou une hypothèse à revoir. Des versions successives permettent de tester ces modifications et de faire évoluer la conception avec des observations concrètes."
+        },
+        {
+          "question": "Pouvez-vous améliorer un prototype existant ?",
+          "answer": "Oui. Nous examinons sa construction, les résultats obtenus et les difficultés rencontrées. Les modifications sont ensuite ciblées sur les fonctions ou les conditions d’usage qui doivent encore être vérifiées."
+        },
+        {
+          "question": "Comment savoir si un essai est concluant ?",
+          "answer": "Il faut définir avant l’essai la fonction à vérifier, les conditions d’utilisation et le résultat attendu. L’observation peut alors être reliée à une décision : conserver la solution, l’adapter ou mener un autre test."
         }
       ],
       "caseStudy": {
@@ -281,6 +329,22 @@
         {
           "question": "La simulation remplace-t-elle les essais ?",
           "answer": "Non. Elle aide à cibler les essais et à comparer les solutions. Les résultats restent liés aux hypothèses et doivent être confrontés au comportement réel."
+        },
+        {
+          "question": "Que peut montrer un calcul par éléments finis ?",
+          "answer": "Il permet d’étudier notamment les efforts, les contraintes et les déformations d’un modèle soumis à des charges définies. L’interprétation dépend des hypothèses retenues et de la question de conception que le calcul doit éclairer."
+        },
+        {
+          "question": "Pourquoi les conditions aux limites sont-elles importantes ?",
+          "answer": "Les appuis, les contacts et les charges décrivent la façon dont la pièce interagit avec son environnement. Une représentation inadaptée peut modifier fortement les résultats, même si la géométrie paraît fidèle."
+        },
+        {
+          "question": "Comment vérifier que le maillage est adapté ?",
+          "answer": "On examine la sensibilité des résultats à la taille et à la répartition des éléments. La grandeur utile à la décision doit se stabiliser ; les pics très localisés demandent aussi de vérifier la géométrie et les conditions appliquées."
+        },
+        {
+          "question": "Peut-on comparer plusieurs géométries ou matériaux ?",
+          "answer": "Oui. Des variantes peuvent être étudiées avec des conditions comparables pour comprendre leurs différences. Cette comparaison aide à orienter la conception, tout en tenant compte des contraintes de fabrication et des essais nécessaires."
         }
       ],
       "caseStudy": {
@@ -354,6 +418,22 @@
         {
           "question": "Prenez-vous en charge les premières séries ?",
           "answer": "Nous avons piloté des outillages, des essais d’injection et des premières séries. Le rôle de DOMTEKNIKA et celui des partenaires sont définis pour chaque projet."
+        },
+        {
+          "question": "Pourquoi penser à l’injection dès la conception ?",
+          "answer": "La géométrie influence le remplissage, le refroidissement et le démoulage. Prévoir les épaisseurs, les dépouilles et les accès d’outillage dès la conception aide à limiter les modifications tardives."
+        },
+        {
+          "question": "Une pièce de prototype peut-elle être injectée telle quelle ?",
+          "answer": "Pas toujours. Une géométrie réalisée pour un prototype peut demander des adaptations de paroi, de démoulage ou d’assemblage. Le matériau et le procédé de série doivent être pris en compte avant de définir l’outillage."
+        },
+        {
+          "question": "Comment choisir un polymère ?",
+          "answer": "Le choix dépend de l’usage, des efforts, des températures, de l’environnement et du procédé de transformation. Les propriétés de la matière sont examinées avec la géométrie de la pièce et les exigences du produit."
+        },
+        {
+          "question": "Que vérifie-t-on sur les premières pièces moulées ?",
+          "answer": "Les dimensions, l’aspect, l’assemblage et le fonctionnement sont confrontés aux exigences prévues. Les observations servent à identifier les ajustements de géométrie, d’outillage ou de procédé nécessaires avant la suite de la production."
         }
       ],
       "caseStudy": {
@@ -427,6 +507,22 @@
         {
           "question": "Quels documents faut-il préparer ?",
           "answer": "Les fonctions attendues, les composants déjà retenus, les contraintes d’alimentation et les plans disponibles. Nous précisons ensuite les développements et vérifications nécessaires."
+        },
+        {
+          "question": "Que couvre l’intégration électronique ?",
+          "answer": "Elle concerne la place des composants dans le produit, leur alimentation, leurs connexions et leurs interfaces avec la mécanique. Les besoins de conception électronique ou de logiciel sont précisés dans le périmètre du projet."
+        },
+        {
+          "question": "Les composants doivent-ils déjà être choisis ?",
+          "answer": "Non. Le travail peut partir des fonctions attendues ou de composants déjà disponibles. Les fiches techniques, dimensions et besoins d’alimentation aident ensuite à préciser l’architecture et les contraintes d’intégration."
+        },
+        {
+          "question": "Pourquoi le boîtier influence-t-il l’électronique ?",
+          "answer": "Il détermine l’espace disponible, les fixations, le passage des câbles et l’accès aux connexions. Il participe aussi à l’évacuation de la chaleur ; ces contraintes se traitent avec les conditions d’utilisation du produit."
+        },
+        {
+          "question": "Comment teste-t-on l’ensemble mécanique et électronique ?",
+          "answer": "Les interfaces sont vérifiées progressivement : alimentation, commande, mouvements et comportement en usage. Les essais doivent correspondre aux fonctions attendues et aux conditions retenues pour le produit, avec des critères définis à l’avance."
         }
       ],
       "caseStudy": {

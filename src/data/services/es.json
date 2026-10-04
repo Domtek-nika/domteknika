@@ -62,6 +62,22 @@
         {
           "question": "¿Esta etapa incluye un prototipo?",
           "answer": "Puede dar lugar a una prueba de concepto. Su construcción y los puntos de validación dependen de las incertidumbres que haya que resolver."
+        },
+        {
+          "question": "¿Cómo se comparan varios conceptos?",
+          "answer": "A partir de la misma necesidad: funciones, espacio disponible, fabricación, costes e incertidumbres técnicas. La comparación muestra los compromisos y permite elegir las opciones que merece la pena estudiar."
+        },
+        {
+          "question": "¿Pueden mejorar un producto existente?",
+          "answer": "Sí. Un problema de uso, montaje o fabricación puede ser el punto de partida. Antes de modificar el concepto, identificamos las funciones que deben mantenerse y las restricciones que se pueden mejorar."
+        },
+        {
+          "question": "¿Una idea atractiva ya es técnicamente viable?",
+          "answer": "Hay que comprobarlo. Los materiales, las cargas, el espacio disponible y los procesos de fabricación influyen en su viabilidad. Un estudio inicial identifica las incertidumbres y las primeras comprobaciones necesarias."
+        },
+        {
+          "question": "¿Para qué sirve un prototipo de prueba de concepto?",
+          "answer": "Para comprobar un principio concreto, como un movimiento, un cierre o una interacción. Un montaje sencillo puede resolver esa pregunta antes de desarrollar los detalles del producto final."
         }
       ],
       "caseStudy": {
@@ -135,6 +151,22 @@
         {
           "question": "¿El diseño incluye la fabricación?",
           "answer": "La documentación puede servir para prototipado o producción. La fabricación, los ensayos y el acompañamiento industrial se concretan en el alcance acordado."
+        },
+        {
+          "question": "¿Qué documentos son útiles para iniciar el diseño?",
+          "answer": "Planos, modelos CAD, bocetos, fotografías u observaciones de una pieza existente. Revisamos qué información falta sobre interfaces, cargas y dimensiones funcionales."
+        },
+        {
+          "question": "¿Cómo se elige un material?",
+          "answer": "Según la función, las cargas, el entorno, el peso y el proceso de fabricación. El montaje y el coste también cuentan. La elección debe responder a las condiciones reales de funcionamiento de la pieza."
+        },
+        {
+          "question": "¿Por qué son importantes las tolerancias?",
+          "answer": "Definen las variaciones dimensionales admisibles e influyen en la holgura, el guiado o la sujeción entre piezas. Exigir una precisión elevada debe responder a una necesidad funcional."
+        },
+        {
+          "question": "¿Cómo se prepara una pieza para su fabricación?",
+          "answer": "Se contrastan la geometría y las especificaciones con el proceso previsto. El acceso de las herramientas, las superficies, las tolerancias y el montaje se consideran para preparar documentos útiles de fabricación y control."
         }
       ],
       "caseStudy": {
@@ -208,6 +240,22 @@
         {
           "question": "¿Un prototipo funcional está listo para producirse?",
           "answer": "No necesariamente. Los materiales, tolerancias, montaje y proceso de serie pueden requerir una fase de industrialización específica."
+        },
+        {
+          "question": "¿Qué se puede comprobar con un prototipo?",
+          "answer": "Por ejemplo, un mecanismo, la manipulación, el espacio ocupado o la integración de componentes. Las pruebas deben servir para tomar una decisión concreta, teniendo en cuenta las limitaciones de los materiales y del montaje."
+        },
+        {
+          "question": "¿Por qué pueden ser necesarias varias versiones?",
+          "answer": "Cada prueba puede revelar una mejora necesaria o una hipótesis pendiente de comprobar. Las versiones sucesivas permiten evaluar los cambios a partir de las observaciones anteriores."
+        },
+        {
+          "question": "¿Pueden mejorar un prototipo que ya existe?",
+          "answer": "Sí. Revisamos su construcción, los resultados obtenidos y las dificultades encontradas. Después nos centramos en las funciones o condiciones de funcionamiento que aún necesitan verificación."
+        },
+        {
+          "question": "¿Cómo se determina si una prueba ha sido satisfactoria?",
+          "answer": "La función, las condiciones de prueba y el resultado esperado se definen de antemano. Las observaciones permiten decidir si se conserva la solución, se modifica o se vuelve a probar."
         }
       ],
       "caseStudy": {
@@ -281,6 +329,22 @@
         {
           "question": "¿La simulación sustituye los ensayos?",
           "answer": "No. Ayuda a enfocar los ensayos y comparar soluciones. Los resultados dependen de las hipótesis y deben contrastarse con el comportamiento real."
+        },
+        {
+          "question": "¿Qué permite conocer un cálculo por elementos finitos?",
+          "answer": "Puede estudiar tensiones y deformaciones bajo cargas definidas. Los resultados se interpretan según las hipótesis del modelo y la pregunta técnica que se quiere resolver."
+        },
+        {
+          "question": "¿Por qué son importantes las condiciones de contorno?",
+          "answer": "Los apoyos, contactos y cargas representan la interacción de la pieza con su entorno. Una representación inadecuada puede alterar los resultados aunque la geometría sea correcta."
+        },
+        {
+          "question": "¿Cómo se comprueba que la malla es adecuada?",
+          "answer": "Se estudia la sensibilidad del resultado relevante al tamaño y la distribución de la malla. Ese resultado debería estabilizarse. Los picos locales requieren revisar también la geometría y las condiciones del modelo."
+        },
+        {
+          "question": "¿Se pueden comparar distintas geometrías o materiales?",
+          "answer": "Sí, en condiciones comparables. Los resultados orientan la elección, considerando también las restricciones de fabricación y las pruebas físicas que puedan ser necesarias."
         }
       ],
       "caseStudy": {
@@ -354,6 +418,22 @@
         {
           "question": "¿Acompañan las primeras series?",
           "answer": "Hemos coordinado moldes, ensayos de inyección y primeras series. El papel de DOMTEKNIKA y de los colaboradores se define para cada proyecto."
+        },
+        {
+          "question": "¿Por qué conviene considerar la inyección desde el diseño?",
+          "answer": "La geometría influye en el llenado, el enfriamiento y el desmoldeo. Prever los espesores, los ángulos de salida y el acceso del molde ayuda a limitar los cambios tardíos."
+        },
+        {
+          "question": "¿Se puede moldear un prototipo sin modificar su geometría?",
+          "answer": "No siempre. Puede ser necesario adaptar los espesores, el desmoldeo o el montaje. El material y el proceso de producción deben tenerse en cuenta antes de fabricar el molde."
+        },
+        {
+          "question": "¿Cómo se elige un polímero?",
+          "answer": "Según el uso, las cargas, la temperatura, el entorno y el proceso de fabricación. Las propiedades del material se valoran junto con la geometría y los requisitos del producto."
+        },
+        {
+          "question": "¿Qué se comprueba en las primeras piezas inyectadas?",
+          "answer": "Las dimensiones, el aspecto, el montaje y la función se comparan con los requisitos. El objetivo es identificar ajustes en la geometría, el molde o el proceso antes de continuar la fabricación."
         }
       ],
       "caseStudy": {
@@ -427,6 +507,22 @@
         {
           "question": "¿Qué información debemos preparar?",
           "answer": "Las funciones deseadas, componentes seleccionados, requisitos de alimentación y planos disponibles. Después concretamos los desarrollos y verificaciones necesarios."
+        },
+        {
+          "question": "¿Qué incluye la integración electrónica?",
+          "answer": "Se coordinan la ubicación, la alimentación, las conexiones y las interfaces mecánicas de los componentes. Si se necesita diseño electrónico o software, su alcance se define expresamente."
+        },
+        {
+          "question": "¿Deben estar elegidos los componentes electrónicos?",
+          "answer": "No. Podemos partir de las funciones necesarias o de componentes disponibles. Las fichas técnicas, las dimensiones y la alimentación ayudan a definir la arquitectura y sus restricciones."
+        },
+        {
+          "question": "¿Por qué influye la carcasa en la electrónica?",
+          "answer": "El espacio, las fijaciones, los cables y el acceso dependen del diseño mecánico. También debe considerarse la evacuación del calor en las condiciones de uso previstas."
+        },
+        {
+          "question": "¿Cómo se prueba el conjunto mecánico y electrónico?",
+          "answer": "De forma progresiva: alimentación, control, movimiento y uso. Las pruebas se centran en las funciones necesarias y las condiciones previstas, con criterios definidos de antemano."
         }
       ],
       "caseStudy": {

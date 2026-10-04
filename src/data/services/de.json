@@ -62,6 +62,22 @@
         {
           "question": "Gehört ein Prototyp zu dieser Phase?",
           "answer": "Ein Funktionsmuster kann daraus entstehen. Ausführung und Prüfziele richten sich nach den offenen technischen Fragen."
+        },
+        {
+          "question": "Wie lassen sich mehrere Konzepte vergleichen?",
+          "answer": "Anhand desselben Bedarfs: Funktionen, Bauraum, Fertigung, Kosten und offene technische Fragen. Der Vergleich macht Zielkonflikte sichtbar und zeigt, welche Ansätze eine weitere Untersuchung verdienen."
+        },
+        {
+          "question": "Können Sie ein bestehendes Produkt verbessern?",
+          "answer": "Ja. Ein Problem bei Nutzung, Montage oder Fertigung kann der Ausgangspunkt sein. Wir klären, welche Funktionen erhalten bleiben sollen und welche Anforderungen sich verbessern lassen, bevor wir das Konzept ändern."
+        },
+        {
+          "question": "Ist eine überzeugende Idee bereits technisch umsetzbar?",
+          "answer": "Das muss geprüft werden. Werkstoffe, Belastungen, Bauraum und Fertigungsverfahren beeinflussen die Machbarkeit. Eine erste Untersuchung zeigt die offenen Fragen und die vorrangigen Prüfungen."
+        },
+        {
+          "question": "Wozu dient ein Funktionsmuster?",
+          "answer": "Es prüft ein bestimmtes Prinzip, etwa eine Bewegung, eine Verriegelung oder eine Bedienhandlung. Ein einfacher Aufbau kann diese Frage beantworten, bevor die Details des fertigen Produkts ausgearbeitet werden."
         }
       ],
       "caseStudy": {
@@ -135,6 +151,22 @@
         {
           "question": "Ist die Fertigung in der Konstruktion enthalten?",
           "answer": "Die Unterlagen können dem Prototypenbau oder der Produktion dienen. Fertigung, Prüfungen und industrielle Begleitung werden im Projektumfang festgelegt."
+        },
+        {
+          "question": "Welche Unterlagen helfen beim Start einer Konstruktion?",
+          "answer": "Zeichnungen, CAD-Modelle, Skizzen, Fotos oder Beobachtungen an einem vorhandenen Bauteil. Wir prüfen, welche Angaben zu Schnittstellen, Belastungen und funktionsrelevanten Abmessungen noch fehlen."
+        },
+        {
+          "question": "Wie wird ein Werkstoff ausgewählt?",
+          "answer": "Ausgehend von Funktion, Belastungen, Umgebung, Gewicht und Fertigungsverfahren. Montage und Kosten spielen ebenfalls eine Rolle. Die Auswahl muss zu den tatsächlichen Betriebsbedingungen des Bauteils passen."
+        },
+        {
+          "question": "Warum sind Toleranzen wichtig?",
+          "answer": "Sie legen die zulässigen Massabweichungen fest und beeinflussen Spiel, Führung oder Klemmung zwischen Bauteilen. Enge Toleranzen sollten durch eine funktionale Anforderung begründet sein."
+        },
+        {
+          "question": "Wie wird ein Bauteil für die Fertigung vorbereitet?",
+          "answer": "Geometrie und Anforderungen werden mit dem vorgesehenen Fertigungsverfahren abgeglichen. Werkzeugzugang, Oberflächen, Toleranzen und Montage werden berücksichtigt, um brauchbare Fertigungs- und Prüfunterlagen zu erstellen."
         }
       ],
       "caseStudy": {
@@ -208,6 +240,22 @@
         {
           "question": "Ist ein funktionierender Prototyp serienreif?",
           "answer": "Nicht unbedingt. Werkstoffe, Toleranzen, Montage und Serienverfahren können eine eigene Industrialisierungsphase erfordern."
+        },
+        {
+          "question": "Was lässt sich mit einem Prototyp prüfen?",
+          "answer": "Zum Beispiel ein Mechanismus, die Handhabung, der Bauraum oder die Integration von Komponenten. Die Prüfung soll eine konkrete Entscheidung unterstützen; Grenzen der Werkstoffe und des Aufbaus werden dabei berücksichtigt."
+        },
+        {
+          "question": "Warum sind manchmal mehrere Prototypen nötig?",
+          "answer": "Jeder Versuch kann einen Verbesserungsbedarf oder eine noch ungeprüfte Annahme zeigen. Weitere Versionen dienen dazu, Änderungen anhand der bisherigen Beobachtungen zu prüfen."
+        },
+        {
+          "question": "Können Sie einen vorhandenen Prototyp weiterentwickeln?",
+          "answer": "Ja. Wir betrachten seinen Aufbau, die bisherigen Ergebnisse und die aufgetretenen Schwierigkeiten. Daraus ergeben sich die Funktionen oder Betriebsbedingungen, die noch gezielt zu prüfen sind."
+        },
+        {
+          "question": "Woran erkennt man einen erfolgreichen Prototypentest?",
+          "answer": "Funktion, Prüfbedingungen und erwartetes Ergebnis werden vorab festgelegt. Die Beobachtungen zeigen anschliessend, ob die Lösung beibehalten, angepasst oder erneut geprüft werden sollte."
         }
       ],
       "caseStudy": {
@@ -281,6 +329,22 @@
         {
           "question": "Ersetzt die Simulation physische Versuche?",
           "answer": "Nein. Sie hilft, Versuche gezielt vorzubereiten und Lösungen zu vergleichen. Ergebnisse hängen von den Annahmen ab und müssen mit dem realen Verhalten abgeglichen werden."
+        },
+        {
+          "question": "Was zeigt eine Finite-Elemente-Berechnung?",
+          "answer": "Sie kann Spannungen und Verformungen unter definierten Belastungen untersuchen. Die Ergebnisse werden anhand der Modellannahmen und der technischen Fragestellung interpretiert."
+        },
+        {
+          "question": "Warum sind Randbedingungen entscheidend?",
+          "answer": "Lagerungen, Kontakte und Lasten bilden die Wechselwirkung des Bauteils mit seiner Umgebung ab. Eine ungeeignete Darstellung kann die Ergebnisse verändern, auch wenn die Geometrie korrekt ist."
+        },
+        {
+          "question": "Wie wird geprüft, ob das Rechennetz geeignet ist?",
+          "answer": "Wir untersuchen, wie sich die relevante Ergebnisgrösse bei veränderter Netzgrösse und Netzverteilung verhält. Sie sollte sich stabilisieren. Lokale Spitzen erfordern eine zusätzliche Prüfung von Geometrie und Modellbedingungen."
+        },
+        {
+          "question": "Kann eine Simulation Geometrien oder Werkstoffe vergleichen?",
+          "answer": "Ja, unter vergleichbaren Bedingungen. Die Ergebnisse helfen bei der Auswahl; Fertigungsanforderungen und die gegebenenfalls nötigen physischen Prüfungen werden ebenfalls berücksichtigt."
         }
       ],
       "caseStudy": {
@@ -354,6 +418,22 @@
         {
           "question": "Begleiten Sie erste Serien?",
           "answer": "Wir haben Werkzeugbau, Spritzgussversuche und erste Serien koordiniert. Die Aufgaben von DOMTEKNIKA und den Partnern werden je Projekt vereinbart."
+        },
+        {
+          "question": "Warum sollte Spritzguss schon bei der Konstruktion berücksichtigt werden?",
+          "answer": "Die Geometrie beeinflusst Füllung, Abkühlung und Entformung. Werden Wandstärken, Entformungsschrägen und Werkzeugzugänge früh berücksichtigt, lassen sich späte Änderungen begrenzen."
+        },
+        {
+          "question": "Kann ein Prototyp unverändert im Spritzguss hergestellt werden?",
+          "answer": "Nicht immer. Wandstärken, Entformung oder Montage können Anpassungen erfordern. Der spätere Werkstoff und das Fertigungsverfahren müssen vor der Werkzeugherstellung berücksichtigt werden."
+        },
+        {
+          "question": "Wie wird ein Kunststoff ausgewählt?",
+          "answer": "Nach Nutzung, Belastungen, Temperatur, Umgebung und Fertigungsverfahren. Die Werkstoffeigenschaften werden zusammen mit der Geometrie und den Produktanforderungen bewertet."
+        },
+        {
+          "question": "Was wird an den ersten Spritzgussteilen geprüft?",
+          "answer": "Abmessungen, Aussehen, Montage und Funktion werden mit den Anforderungen verglichen. Ziel ist, nötige Änderungen an Geometrie, Werkzeug oder Prozess zu erkennen, bevor die Fertigung fortgesetzt wird."
         }
       ],
       "caseStudy": {
@@ -427,6 +507,22 @@
         {
           "question": "Welche Unterlagen sollen wir vorbereiten?",
           "answer": "Gewünschte Funktionen, ausgewählte Komponenten, Anforderungen an die Stromversorgung und vorhandene Zeichnungen. Darauf aufbauend legen wir Entwicklung und Prüfungen fest."
+        },
+        {
+          "question": "Was umfasst die Integration elektronischer Komponenten?",
+          "answer": "Einbau, Stromversorgung, Verbindungen und mechanische Schnittstellen werden aufeinander abgestimmt. Falls Elektronikentwicklung oder Software erforderlich sind, wird deren Umfang ausdrücklich festgelegt."
+        },
+        {
+          "question": "Müssen die elektronischen Komponenten schon ausgewählt sein?",
+          "answer": "Nein. Ausgangspunkt können die benötigten Funktionen oder bereits verfügbare Komponenten sein. Datenblätter, Abmessungen und Anforderungen an die Stromversorgung helfen, Architektur und Randbedingungen festzulegen."
+        },
+        {
+          "question": "Warum beeinflusst das Gehäuse die Elektronik?",
+          "answer": "Bauraum, Befestigung, Kabel und Zugang hängen von der mechanischen Konstruktion ab. Auch die Wärmeabfuhr unter den vorgesehenen Betriebsbedingungen muss berücksichtigt werden."
+        },
+        {
+          "question": "Wie wird das Zusammenspiel von Mechanik und Elektronik geprüft?",
+          "answer": "Schrittweise, etwa über Stromversorgung, Steuerung, Bewegung und Nutzung. Die Prüfungen beziehen sich auf die benötigten Funktionen und vorgesehenen Bedingungen, mit vorab festgelegten Kriterien."
         }
       ],
       "caseStudy": {
