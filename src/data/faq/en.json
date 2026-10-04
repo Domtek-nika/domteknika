@@ -39,6 +39,18 @@
     {
       "question": "How do we decide to move to the next stage?",
       "answer": "Results are compared with the criteria agreed for that stage: function, use, mechanical behaviour or manufacturing. Remaining uncertainties help determine whether to proceed, revise the design or run another test."
+    },
+    {
+      "question": "What deliverables can we receive at the end of an assignment?",
+      "answer": "Depending on the assignment: concepts, 3D models, drawings, a prototype, an analysis report or manufacturing documentation. The content and formats are agreed at the start so that the results support the next stage of your project."
+    },
+    {
+      "question": "How do we prepare for handover to a manufacturer?",
+      "answer": "Gather current drawings, material specifications, tolerances, intended quantities and inspection criteria. Discussions with the manufacturer help check feasibility before finalising the design or commissioning tooling."
+    },
+    {
+      "question": "How can development costs be kept under control?",
+      "answer": "Start with uncertainties that could change the concept, then check them with a focused study or test before detailing the entire design. Distinguish design, prototype, tooling and manufacturing costs: the unit price alone does not represent the cost of the project."
     }
   ]
 }

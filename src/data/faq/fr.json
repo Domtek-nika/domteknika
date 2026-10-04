@@ -39,6 +39,18 @@
     {
       "question": "Comment décide-t-on de passer à l’étape suivante ?",
       "answer": "Les résultats sont comparés aux critères définis pour l’étape : fonctionnement, usage, comportement mécanique ou fabrication. Les points encore incertains sont identifiés pour décider s’il faut poursuivre, modifier la conception ou réaliser un essai complémentaire."
+    },
+    {
+      "question": "Quels livrables peut-on recevoir à la fin d’une mission ?",
+      "answer": "Selon la mission : concepts, modèles 3D, plans, prototype, rapport de calcul ou dossier de fabrication. Le contenu et les formats sont définis au départ pour que les résultats servent à la suite de votre projet."
+    },
+    {
+      "question": "Comment préparer le passage à un fabricant ?",
+      "answer": "Il faut réunir des plans à jour, la matière, les tolérances, les quantités prévues et les critères de contrôle. Les échanges avec le fabricant permettent de vérifier les possibilités de réalisation avant de figer la conception ou de lancer l’outillage."
+    },
+    {
+      "question": "Comment maîtriser les coûts de développement ?",
+      "answer": "On commence par les incertitudes qui peuvent changer le concept, puis on les vérifie par une étude ou un essai ciblé avant de détailler toute la conception. Il faut aussi distinguer les coûts d’étude, de prototype, d’outillage et de fabrication : le prix d’une pièce ne résume pas le coût du projet."
     }
   ]
 }

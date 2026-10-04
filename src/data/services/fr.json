@@ -167,6 +167,10 @@
         {
           "question": "Comment prépare-t-on une pièce à la fabrication ?",
           "answer": "La géométrie et les spécifications sont confrontées au procédé envisagé. Les accès, surfaces fonctionnelles, tolérances et étapes d’assemblage sont examinés pour préparer des documents cohérents avec la fabrication et le contrôle."
+        },
+        {
+          "question": "Comment anticiper l’entretien et la réparation ?",
+          "answer": "Dès la conception, on identifie les pièces à contrôler, nettoyer ou remplacer et l’accès nécessaire. Les fixations, le démontage et le passage des câbles sont pensés en fonction de ces opérations et des conditions d’utilisation."
         }
       ],
       "caseStudy": {
@@ -256,6 +260,10 @@
         {
           "question": "Comment savoir si un essai est concluant ?",
           "answer": "Il faut définir avant l’essai la fonction à vérifier, les conditions d’utilisation et le résultat attendu. L’observation peut alors être reliée à une décision : conserver la solution, l’adapter ou mener un autre test."
+        },
+        {
+          "question": "Comment évaluer l’usage réel du produit ?",
+          "answer": "Le prototype et les essais doivent représenter les gestes et les conditions à observer. Faire manipuler le produit à des utilisateurs concernés permet de repérer les difficultés de prise en main, de compréhension ou de montage, puis de revoir la conception."
         }
       ],
       "caseStudy": {
@@ -327,12 +335,12 @@
           "answer": "La géométrie disponible, les matériaux envisagés, les sollicitations et les conditions d’utilisation. Les hypothèses manquantes sont clarifiées avant le calcul."
         },
         {
-          "question": "La simulation remplace-t-elle les essais ?",
-          "answer": "Non. Elle aide à cibler les essais et à comparer les solutions. Les résultats restent liés aux hypothèses et doivent être confrontés au comportement réel."
+          "question": "Comment la simulation complète-t-elle les essais ?",
+          "answer": "Elle permet de comparer des variantes et de repérer les zones à examiner pour mieux cibler les essais. La confiance dans les résultats dépend des hypothèses, des données du matériau et de la validation du modèle ; un résultat calculé ne valide pas à lui seul le produit."
         },
         {
           "question": "Que peut montrer un calcul par éléments finis ?",
-          "answer": "Il permet d’étudier notamment les efforts, les contraintes et les déformations d’un modèle soumis à des charges définies. L’interprétation dépend des hypothèses retenues et de la question de conception que le calcul doit éclairer."
+          "answer": "Il permet d’étudier notamment les contraintes et les déformations d’un modèle soumis à des charges définies. L’interprétation dépend des hypothèses retenues et de la question de conception que le calcul doit éclairer."
         },
         {
           "question": "Pourquoi les conditions aux limites sont-elles importantes ?",
@@ -345,6 +353,10 @@
         {
           "question": "Peut-on comparer plusieurs géométries ou matériaux ?",
           "answer": "Oui. Des variantes peuvent être étudiées avec des conditions comparables pour comprendre leurs différences. Cette comparaison aide à orienter la conception, tout en tenant compte des contraintes de fabrication et des essais nécessaires."
+        },
+        {
+          "question": "Une simulation peut-elle estimer la durée de vie d’une pièce ?",
+          "answer": "Une étude de fatigue peut estimer l’effet de charges répétées si les cycles d’utilisation et les données du matériau sont adaptés au cas étudié. Un calcul statique seul ne suffit pas à conclure sur la durée de vie ; les hypothèses et le besoin d’essais doivent être examinés."
         }
       ],
       "caseStudy": {
@@ -434,6 +446,10 @@
         {
           "question": "Que vérifie-t-on sur les premières pièces moulées ?",
           "answer": "Les dimensions, l’aspect, l’assemblage et le fonctionnement sont confrontés aux exigences prévues. Les observations servent à identifier les ajustements de géométrie, d’outillage ou de procédé nécessaires avant la suite de la production."
+        },
+        {
+          "question": "L’injection est-elle adaptée aux petites séries ?",
+          "answer": "Elle peut l’être, mais il faut comparer le coût de l’outillage, les quantités, la géométrie et le matériau. Le choix se fait sur le coût total et les exigences du produit, avant d’investir dans un moule."
         }
       ],
       "caseStudy": {
@@ -523,6 +539,10 @@
         {
           "question": "Comment teste-t-on l’ensemble mécanique et électronique ?",
           "answer": "Les interfaces sont vérifiées progressivement : alimentation, commande, mouvements et comportement en usage. Les essais doivent correspondre aux fonctions attendues et aux conditions retenues pour le produit, avec des critères définis à l’avance."
+        },
+        {
+          "question": "Comment estimer l’autonomie d’un produit sur batterie ?",
+          "answer": "Il faut connaître la consommation dans les différents modes, leur durée et la capacité réellement utilisable de la batterie. La consommation en veille compte aussi. Une estimation fondée sur le scénario d’usage doit ensuite être confrontée à des mesures sur le système."
         }
       ],
       "caseStudy": {

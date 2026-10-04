@@ -167,6 +167,10 @@
         {
           "question": "Wie wird ein Bauteil für die Fertigung vorbereitet?",
           "answer": "Geometrie und Anforderungen werden mit dem vorgesehenen Fertigungsverfahren abgeglichen. Werkzeugzugang, Oberflächen, Toleranzen und Montage werden berücksichtigt, um brauchbare Fertigungs- und Prüfunterlagen zu erstellen."
+        },
+        {
+          "question": "Wie lassen sich Wartung und Reparatur bei der Konstruktion berücksichtigen?",
+          "answer": "Schon bei der Konstruktion werden die zu prüfenden, zu reinigenden oder zu ersetzenden Teile und die nötigen Zugänge bestimmt. Befestigungen, Demontage und Kabelführung werden auf diese Aufgaben und die Einsatzbedingungen abgestimmt."
         }
       ],
       "caseStudy": {
@@ -256,6 +260,10 @@
         {
           "question": "Woran erkennt man einen erfolgreichen Prototypentest?",
           "answer": "Funktion, Prüfbedingungen und erwartetes Ergebnis werden vorab festgelegt. Die Beobachtungen zeigen anschliessend, ob die Lösung beibehalten, angepasst oder erneut geprüft werden sollte."
+        },
+        {
+          "question": "Wie lässt sich die tatsächliche Nutzung des Produkts beurteilen?",
+          "answer": "Prototyp und Prüfungen sollen die untersuchten Handlungen und Bedingungen abbilden. Wenn vorgesehene Nutzer das Produkt bedienen, können Schwierigkeiten bei Handhabung, Verständnis oder Montage sichtbar werden und in die weitere Konstruktion einfliessen."
         }
       ],
       "caseStudy": {
@@ -327,8 +335,8 @@
           "answer": "Die verfügbare Geometrie, mögliche Werkstoffe, Belastungen und Einsatzbedingungen. Fehlende Annahmen klären wir vor der Berechnung."
         },
         {
-          "question": "Ersetzt die Simulation physische Versuche?",
-          "answer": "Nein. Sie hilft, Versuche gezielt vorzubereiten und Lösungen zu vergleichen. Ergebnisse hängen von den Annahmen ab und müssen mit dem realen Verhalten abgeglichen werden."
+          "question": "Wie ergänzt die Simulation physische Versuche?",
+          "answer": "Sie vergleicht Varianten und zeigt Bereiche, die genauer zu prüfen sind. So können Versuche gezielter geplant werden. Die Aussagekraft hängt von Annahmen, Werkstoffdaten und Modellvalidierung ab; ein berechnetes Ergebnis allein validiert das Produkt nicht."
         },
         {
           "question": "Was zeigt eine Finite-Elemente-Berechnung?",
@@ -345,6 +353,10 @@
         {
           "question": "Kann eine Simulation Geometrien oder Werkstoffe vergleichen?",
           "answer": "Ja, unter vergleichbaren Bedingungen. Die Ergebnisse helfen bei der Auswahl; Fertigungsanforderungen und die gegebenenfalls nötigen physischen Prüfungen werden ebenfalls berücksichtigt."
+        },
+        {
+          "question": "Kann eine Simulation die Lebensdauer eines Bauteils abschätzen?",
+          "answer": "Eine Ermüdungsanalyse kann die Wirkung wiederholter Belastungen abschätzen, wenn Lastzyklen und Werkstoffdaten zum untersuchten Fall passen. Eine statische Berechnung allein reicht für eine Aussage zur Lebensdauer nicht aus; Annahmen und nötige Versuche müssen geprüft werden."
         }
       ],
       "caseStudy": {
@@ -434,6 +446,10 @@
         {
           "question": "Was wird an den ersten Spritzgussteilen geprüft?",
           "answer": "Abmessungen, Aussehen, Montage und Funktion werden mit den Anforderungen verglichen. Ziel ist, nötige Änderungen an Geometrie, Werkzeug oder Prozess zu erkennen, bevor die Fertigung fortgesetzt wird."
+        },
+        {
+          "question": "Eignet sich Spritzguss für kleine Serien?",
+          "answer": "Das kann der Fall sein. Werkzeugkosten, Mengen, Geometrie und Werkstoff müssen jedoch verglichen werden. Die Entscheidung richtet sich nach den Gesamtkosten und Produktanforderungen, bevor in ein Werkzeug investiert wird."
         }
       ],
       "caseStudy": {
@@ -523,6 +539,10 @@
         {
           "question": "Wie wird das Zusammenspiel von Mechanik und Elektronik geprüft?",
           "answer": "Schrittweise, etwa über Stromversorgung, Steuerung, Bewegung und Nutzung. Die Prüfungen beziehen sich auf die benötigten Funktionen und vorgesehenen Bedingungen, mit vorab festgelegten Kriterien."
+        },
+        {
+          "question": "Wie wird die Laufzeit eines batteriebetriebenen Produkts abgeschätzt?",
+          "answer": "Erforderlich sind der Verbrauch in den verschiedenen Betriebsarten, deren Dauer und die tatsächlich nutzbare Batteriekapazität. Auch der Standby-Verbrauch zählt. Die Abschätzung für den vorgesehenen Einsatz wird anschliessend mit Messungen am System abgeglichen."
         }
       ],
       "caseStudy": {

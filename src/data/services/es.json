@@ -65,7 +65,7 @@
         },
         {
           "question": "¿Cómo se comparan varios conceptos?",
-          "answer": "A partir de la misma necesidad: funciones, espacio disponible, fabricación, costes e incertidumbres técnicas. La comparación muestra los compromisos y permite elegir las opciones que merece la pena estudiar."
+          "answer": "A partir de la misma necesidad: funciones, espacio disponible, fabricación, costes e incertidumbres técnicas. La comparación muestra las ventajas y limitaciones de cada opción y permite elegir las que merece la pena estudiar."
         },
         {
           "question": "¿Pueden mejorar un producto existente?",
@@ -167,6 +167,10 @@
         {
           "question": "¿Cómo se prepara una pieza para su fabricación?",
           "answer": "Se contrastan la geometría y las especificaciones con el proceso previsto. El acceso de las herramientas, las superficies, las tolerancias y el montaje se consideran para preparar documentos útiles de fabricación y control."
+        },
+        {
+          "question": "¿Cómo se pueden prever el mantenimiento y la reparación?",
+          "answer": "Desde el diseño se identifican las piezas que deben inspeccionarse, limpiarse o sustituirse y el acceso necesario. Las fijaciones, el desmontaje y el recorrido de los cables se consideran según esas operaciones y las condiciones de uso."
         }
       ],
       "caseStudy": {
@@ -256,6 +260,10 @@
         {
           "question": "¿Cómo se determina si una prueba ha sido satisfactoria?",
           "answer": "La función, las condiciones de prueba y el resultado esperado se definen de antemano. Las observaciones permiten decidir si se conserva la solución, se modifica o se vuelve a probar."
+        },
+        {
+          "question": "¿Cómo se puede evaluar el uso real del producto?",
+          "answer": "El prototipo y los ensayos deben representar las acciones y condiciones que se quieren observar. Dejar que los usuarios previstos manipulen el producto permite detectar dificultades de manejo, comprensión o montaje y orientar los cambios de diseño."
         }
       ],
       "caseStudy": {
@@ -327,8 +335,8 @@
           "answer": "La geometría disponible, los materiales previstos, las cargas y las condiciones de uso. Las hipótesis pendientes se aclaran antes del cálculo."
         },
         {
-          "question": "¿La simulación sustituye los ensayos?",
-          "answer": "No. Ayuda a enfocar los ensayos y comparar soluciones. Los resultados dependen de las hipótesis y deben contrastarse con el comportamiento real."
+          "question": "¿Cómo complementa la simulación los ensayos físicos?",
+          "answer": "Permite comparar variantes e identificar las zonas que conviene examinar para orientar mejor los ensayos. La confianza en los resultados depende de las hipótesis, los datos del material y la validación del modelo; un resultado calculado no valida por sí solo el producto."
         },
         {
           "question": "¿Qué permite conocer un cálculo por elementos finitos?",
@@ -345,6 +353,10 @@
         {
           "question": "¿Se pueden comparar distintas geometrías o materiales?",
           "answer": "Sí, en condiciones comparables. Los resultados orientan la elección, considerando también las restricciones de fabricación y las pruebas físicas que puedan ser necesarias."
+        },
+        {
+          "question": "¿Puede una simulación estimar la vida útil de una pieza?",
+          "answer": "Un estudio de fatiga puede estimar el efecto de cargas repetidas si los ciclos de uso y los datos del material son adecuados para el caso. Un cálculo estático por sí solo no permite concluir sobre la vida útil; deben revisarse las hipótesis y la necesidad de ensayos físicos."
         }
       ],
       "caseStudy": {
@@ -434,6 +446,10 @@
         {
           "question": "¿Qué se comprueba en las primeras piezas inyectadas?",
           "answer": "Las dimensiones, el aspecto, el montaje y la función se comparan con los requisitos. El objetivo es identificar ajustes en la geometría, el molde o el proceso antes de continuar la fabricación."
+        },
+        {
+          "question": "¿Es adecuada la inyección para series pequeñas?",
+          "answer": "Puede serlo, pero hay que comparar el coste del molde, las cantidades, la geometría y el material. La decisión se basa en el coste total y los requisitos del producto, antes de invertir en un molde."
         }
       ],
       "caseStudy": {
@@ -523,6 +539,10 @@
         {
           "question": "¿Cómo se prueba el conjunto mecánico y electrónico?",
           "answer": "De forma progresiva: alimentación, control, movimiento y uso. Las pruebas se centran en las funciones necesarias y las condiciones previstas, con criterios definidos de antemano."
+        },
+        {
+          "question": "¿Cómo se estima la autonomía de un producto con batería?",
+          "answer": "Se considera el consumo en cada modo, el tiempo de funcionamiento en esos modos y la capacidad realmente utilizable de la batería. El consumo en espera también cuenta. La estimación basada en el uso previsto debe contrastarse después con mediciones del sistema."
         }
       ],
       "caseStudy": {

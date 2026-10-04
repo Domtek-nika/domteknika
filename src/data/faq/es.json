@@ -39,6 +39,18 @@
     {
       "question": "¿Cómo se decide pasar a la siguiente etapa?",
       "answer": "Los resultados se comparan con los criterios acordados para esa etapa: función, uso, comportamiento mecánico o fabricación. Las incertidumbres pendientes ayudan a decidir si conviene avanzar, modificar el diseño o realizar otra prueba."
+    },
+    {
+      "question": "¿Qué entregables podemos recibir al terminar un encargo?",
+      "answer": "Según el encargo: conceptos, modelos 3D, planos, un prototipo, un informe de cálculo o documentación de fabricación. El contenido y los formatos se acuerdan al inicio para que los resultados sirvan al siguiente paso del proyecto."
+    },
+    {
+      "question": "¿Cómo se prepara el paso a un fabricante?",
+      "answer": "Se reúnen planos actualizados, especificaciones del material, tolerancias, cantidades previstas y criterios de control. El diálogo con el fabricante permite comprobar la viabilidad antes de cerrar el diseño o encargar el utillaje."
+    },
+    {
+      "question": "¿Cómo se pueden controlar los costes de desarrollo?",
+      "answer": "Se empieza por las incertidumbres que podrían cambiar el concepto y se comprueban mediante un estudio o ensayo concreto antes de detallar todo el diseño. También conviene distinguir los costes de desarrollo, prototipo, utillaje y fabricación: el precio unitario no representa por sí solo el coste del proyecto."
     }
   ]
 }

@@ -39,6 +39,18 @@
     {
       "question": "Wie entscheiden wir über den nächsten Projektschritt?",
       "answer": "Die Ergebnisse werden mit den vereinbarten Kriterien der Phase verglichen: Funktion, Nutzung, mechanisches Verhalten oder Fertigung. Verbleibende offene Fragen zeigen, ob wir fortfahren, die Konstruktion anpassen oder weitere Prüfungen durchführen sollten."
+    },
+    {
+      "question": "Welche Ergebnisse erhalten wir am Ende einer Aufgabe?",
+      "answer": "Je nach Aufgabe: Konzepte, 3D-Modelle, Zeichnungen, einen Prototyp, einen Berechnungsbericht oder Fertigungsunterlagen. Inhalte und Formate werden zu Beginn vereinbart, damit die Ergebnisse den nächsten Projektschritt unterstützen."
+    },
+    {
+      "question": "Wie wird die Übergabe an einen Hersteller vorbereitet?",
+      "answer": "Aktuelle Zeichnungen, Werkstoffangaben, Toleranzen, geplante Mengen und Prüfkriterien werden zusammengestellt. Gespräche mit dem Hersteller helfen, die Umsetzbarkeit zu prüfen, bevor die Konstruktion abgeschlossen oder das Werkzeug beauftragt wird."
+    },
+    {
+      "question": "Wie lassen sich die Entwicklungskosten im Griff behalten?",
+      "answer": "Zuerst werden offene Fragen untersucht, die das Konzept verändern könnten. Gezielte Studien oder Versuche klären sie, bevor die gesamte Konstruktion ausgearbeitet wird. Entwicklungs-, Prototypen-, Werkzeug- und Fertigungskosten sind getrennt zu betrachten: Der Stückpreis allein bildet die Projektkosten nicht ab."
     }
   ]
 }

@@ -162,11 +162,15 @@
         },
         {
           "question": "Why do tolerances matter?",
-          "answer": "They define acceptable dimensional variations in manufactured parts. In an assembly, these variations affect clearance, guidance and clamping. Tight precision should therefore meet a functional need."
+          "answer": "They define acceptable dimensional variations in manufactured parts. In an assembly, these variations affect clearance, guidance and clamping. Tight tolerances should therefore meet a functional need."
         },
         {
           "question": "How is a component prepared for manufacturing?",
           "answer": "The geometry and specifications are assessed against the intended process. Access, functional surfaces, tolerances and assembly steps are reviewed to prepare documentation consistent with manufacturing and inspection."
+        },
+        {
+          "question": "How can maintenance and repair be considered during design?",
+          "answer": "Identify the parts that need inspection, cleaning or replacement, and the access required. Fasteners, disassembly and cable routing should account for these tasks and the operating conditions."
         }
       ],
       "caseStudy": {
@@ -256,6 +260,10 @@
         {
           "question": "How do you know whether a test is successful?",
           "answer": "Before testing, define the function, operating conditions and expected result. Observations can then inform a decision: keep the solution, adapt it or carry out another test."
+        },
+        {
+          "question": "How can we evaluate how people actually use the product?",
+          "answer": "The prototype and tests should represent the actions and conditions being assessed. Having relevant users handle the product can reveal difficulties with handling, understanding or assembly, which can then guide design changes."
         }
       ],
       "caseStudy": {
@@ -327,12 +335,12 @@
           "answer": "Available geometry, proposed materials, loads and operating conditions. Missing assumptions are clarified before calculations begin."
         },
         {
-          "question": "Can simulation replace physical tests?",
-          "answer": "No. It helps focus tests and compare solutions. Results depend on the assumptions and must be checked against real behaviour."
+          "question": "How does simulation complement physical tests?",
+          "answer": "It compares variants and identifies areas to examine, helping focus testing. Confidence in the results depends on assumptions, material data and model validation; a calculated result alone does not validate the product."
         },
         {
           "question": "What can a finite-element calculation show?",
-          "answer": "It can study loads, stresses and deformation in a model under defined loading conditions. Interpretation depends on the assumptions and the design question the analysis needs to answer."
+          "answer": "It can study stresses and deformation in a model under defined loading conditions. Interpretation depends on the assumptions and the design question the analysis needs to answer."
         },
         {
           "question": "Why do boundary conditions matter?",
@@ -345,6 +353,10 @@
         {
           "question": "Can you compare different geometries or materials?",
           "answer": "Yes. Variants can be studied under comparable conditions to understand their differences. This guides design while accounting for manufacturing constraints and the tests still needed."
+        },
+        {
+          "question": "Can simulation estimate a component’s service life?",
+          "answer": "A fatigue study can estimate the effect of repeated loads when the operating cycles and material data are appropriate for the case. A static calculation alone cannot establish service life; assumptions and the need for physical tests must be considered."
         }
       ],
       "caseStudy": {
@@ -434,6 +446,10 @@
         {
           "question": "What is checked on the first moulded components?",
           "answer": "Dimensions, appearance, assembly and function are assessed against the intended requirements. Observations identify any changes to geometry, tooling or process needed before production continues."
+        },
+        {
+          "question": "Is injection moulding suitable for small production runs?",
+          "answer": "It can be, but tooling cost, quantities, geometry and material must be compared. The choice depends on total cost and product requirements, before investing in a mould."
         }
       ],
       "caseStudy": {
@@ -523,6 +539,10 @@
         {
           "question": "How is the combined mechanical and electronic system tested?",
           "answer": "Interfaces are checked progressively: power, control, movement and behaviour during use. Tests should match the required functions and intended operating conditions, with criteria defined in advance."
+        },
+        {
+          "question": "How can the runtime of a battery-powered product be estimated?",
+          "answer": "Account for consumption in each operating mode, the time spent in those modes and the usable battery capacity. Standby consumption matters too. An estimate based on the intended use should then be checked against measurements on the system."
         }
       ],
       "caseStudy": {
