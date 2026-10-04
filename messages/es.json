@@ -132,6 +132,11 @@
         "title": "Llámanos",
         "body": "+41 32 751 71 46",
         "action": "Llamar a DOMTEKNIKA"
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "body": "DOMTEKNIKA SA",
+        "action": "Ver DOMTEKNIKA en LinkedIn"
       }
     },
     "Form": {

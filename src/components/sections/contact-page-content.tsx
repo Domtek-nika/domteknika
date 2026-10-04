@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { SVGProps } from "react";
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 
@@ -26,7 +27,23 @@ const CONTACT_CARDS = [
     href: "tel:+41327517146",
     external: false,
   },
+  {
+    key: "linkedin",
+    icon: LinkedInIcon,
+    href: "https://www.linkedin.com/company/domteknika1/",
+    external: true,
+  },
 ] as const;
+
+function LinkedInIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <rect x="2" y="2" width="20" height="20" rx="3" />
+      <path d="M7 10v7M11 17v-7M11 13a3 3 0 0 1 6 0v4" />
+      <circle cx="7" cy="7" r="0.8" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
 
 export function ContactPageContent() {
   const t = useTranslations("ContactPage");

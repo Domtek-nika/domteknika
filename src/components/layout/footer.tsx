@@ -64,6 +64,9 @@ export function Footer() {
               <FooterAnchor href="mailto:contact@domteknika.ch">
                 contact@domteknika.ch
               </FooterAnchor>
+              <FooterAnchor href="https://www.linkedin.com/company/domteknika1/" external>
+                LinkedIn <span aria-hidden>↗</span>
+              </FooterAnchor>
             </div>
           </address>
 
@@ -117,13 +120,17 @@ function FooterLink({
 function FooterAnchor({
   children,
   href,
+  external = false,
 }: {
   children: React.ReactNode;
   href: string;
+  external?: boolean;
 }) {
   return (
     <a
       href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
       className="w-fit text-[12px] font-medium leading-[1.5] text-muted-foreground transition-colors hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35 min-[1800px]:!text-[16px] min-[2400px]:!text-[18px]"
     >
       {children}

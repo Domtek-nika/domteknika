@@ -132,6 +132,11 @@
         "title": "致电我们",
         "body": "+41 32 751 71 46",
         "action": "致电 DOMTEKNIKA"
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "body": "DOMTEKNIKA SA",
+        "action": "在 LinkedIn 上查看 DOMTEKNIKA"
       }
     },
     "Form": {

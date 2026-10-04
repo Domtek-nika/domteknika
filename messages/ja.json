@@ -132,6 +132,11 @@
         "title": "電話",
         "body": "+41 32 751 71 46",
         "action": "DOMTEKNIKA に電話する"
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "body": "DOMTEKNIKA SA",
+        "action": "LinkedInでDOMTEKNIKAのページを見る"
       }
     },
     "Form": {

@@ -229,11 +229,11 @@ function ExpertiseGrid({ faqLabel }: { faqLabel: string }) {
 
   return (
     <section
-      className="bg-background pb-[118px] min-[1800px]:!pb-[140px] min-[2400px]:!pb-[160px]"
+      className="bg-background pb-16 md:pb-20 min-[1800px]:!pb-24 min-[2400px]:!pb-28"
       aria-labelledby="expertise-services"
     >
-      <Container size="wide">
-        <div className="mx-auto max-w-[1080px] min-[1800px]:!max-w-[1480px] min-[2400px]:!max-w-[1600px]">
+      <Container size="expanded">
+        <div className="lg:mx-8 min-[1800px]:!mx-12">
           <Reveal>
             <div className="flex items-center gap-3 text-[15px] font-medium text-muted-foreground min-[1800px]:!gap-4 min-[1800px]:!text-[18px]">
               <span
@@ -258,10 +258,11 @@ function ExpertiseGrid({ faqLabel }: { faqLabel: string }) {
               {faqLabel}<ArrowRight className="size-4 text-brand" aria-hidden />
             </a>
           </Reveal>
-
-          <ExpertiseServiceCards items={EXPERTISE_ITEMS} startIndex={0} />
-          <BrainstormingSection />
         </div>
+        <ExpertiseServiceCards items={EXPERTISE_ITEMS} startIndex={0} />
+      </Container>
+      <Container size="wide" className="max-w-[1480px] min-[1800px]:!max-w-[1640px] min-[2400px]:!max-w-[1800px]">
+        <BrainstormingSection />
       </Container>
     </section>
   );
@@ -320,7 +321,7 @@ function BrainstormingSection() {
     separatorIndex >= 0 ? lead.slice(separatorIndex + 1) : "";
 
   return (
-    <div className="my-14 grid gap-8 md:my-20 lg:grid-cols-[0.82fr_1.18fr] lg:items-center min-[1800px]:!my-24 min-[1800px]:!grid-cols-[0.95fr_1.05fr] min-[1800px]:!gap-12">
+    <div className="mt-14 grid gap-8 md:mt-20 lg:grid-cols-[0.82fr_1.18fr] lg:items-center min-[1800px]:!mt-24 min-[1800px]:!grid-cols-[0.95fr_1.05fr] min-[1800px]:!gap-12">
       <div className="relative">
         <div className="flex items-center gap-3 text-[14px] font-medium text-muted-foreground min-[1800px]:!gap-4 min-[1800px]:!text-[17px]">
           <span
@@ -342,7 +343,7 @@ function BrainstormingSection() {
         </p>
       </div>
 
-      <div className="w-full min-w-0 lg:translate-x-0 xl:translate-x-10 2xl:translate-x-24 min-[1800px]:!translate-x-0 min-[1800px]:justify-self-center">
+      <div className="w-full min-w-0 min-[1800px]:justify-self-center">
         <BrainstormingCardSwap />
       </div>
     </div>

@@ -132,6 +132,11 @@
         "title": "전화 문의",
         "body": "+41 32 751 71 46",
         "action": "DOMTEKNIKA에 전화하기"
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "body": "DOMTEKNIKA SA",
+        "action": "LinkedIn에서 DOMTEKNIKA 페이지 보기"
       }
     },
     "Form": {
