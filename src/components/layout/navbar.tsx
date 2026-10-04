@@ -403,7 +403,7 @@ export function Navbar() {
                   </Link>
                   <button
                     type="button"
-                    className="grid size-11 shrink-0 place-items-center rounded-full border border-brand/30 bg-white text-foreground shadow-[0_8px_20px_rgba(0,0,0,0.12)] transition-colors hover:border-brand hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35"
+                    className="grid size-11 shrink-0 place-items-center rounded-[7px] border border-border bg-white text-foreground shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors hover:border-foreground/25 hover:bg-muted/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35"
                     aria-label={t("closeMenu")}
                     onClick={() => setMobileOpen(false)}
                   >

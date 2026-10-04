@@ -254,7 +254,7 @@ function ExpertiseGrid({ faqLabel }: { faqLabel: string }) {
             <p className="mt-7 max-w-[320px] text-[15px] font-medium leading-[1.42] text-muted-foreground sm:max-w-[610px] min-[1800px]:!max-w-[760px] min-[1800px]:!text-[17px] min-[2400px]:!text-[19px]">
               {t("intro")}
             </p>
-            <a href="#expertise-faq" className="mt-6 inline-flex min-h-11 items-center gap-3 rounded-[7px] border border-brand/30 bg-white px-4 py-3 text-[13px] font-bold shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors hover:border-brand hover:bg-brand/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+            <a href="#expertise-faq" className="mt-6 inline-flex min-h-11 items-center gap-3 rounded-[7px] border border-border bg-white px-4 py-3 text-[13px] font-bold shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors hover:border-foreground/25 hover:bg-muted/40 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
               {faqLabel}<ArrowRight className="size-4 text-brand" aria-hidden />
             </a>
           </Reveal>
@@ -278,7 +278,7 @@ function ExpertiseServiceCards({
   const t = useTranslations("ExpertisePage.Services");
 
   return (
-    <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3 min-[1800px]:!gap-6 min-[2400px]:!mt-12">
+    <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 md:mt-12 lg:grid-cols-3 min-[1800px]:!gap-6 min-[2400px]:!mt-16">
       {items.map((item, index) => {
         const Icon = item.icon;
 
@@ -321,7 +321,7 @@ function BrainstormingSection() {
     separatorIndex >= 0 ? lead.slice(separatorIndex + 1) : "";
 
   return (
-    <div className="mt-14 grid gap-8 md:mt-20 lg:grid-cols-[0.82fr_1.18fr] lg:items-center min-[1800px]:!mt-24 min-[1800px]:!grid-cols-[0.95fr_1.05fr] min-[1800px]:!gap-12">
+    <div className="mt-16 grid gap-8 md:mt-24 lg:grid-cols-[0.82fr_1.18fr] lg:items-center min-[1800px]:!mt-28 min-[1800px]:!grid-cols-[0.95fr_1.05fr] min-[1800px]:!gap-12">
       <div className="relative">
         <div className="flex items-center gap-3 text-[14px] font-medium text-muted-foreground min-[1800px]:!gap-4 min-[1800px]:!text-[17px]">
           <span

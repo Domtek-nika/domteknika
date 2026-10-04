@@ -117,7 +117,7 @@ export function FaqSearch({
             <button key={topic.id} type="button" aria-pressed={activeTopic === topic.id} onClick={() => {
               setActiveTopic(topic.id);
               setPage(0);
-            }} className={`min-h-11 rounded-[7px] border px-4 py-2.5 text-left text-[12px] font-bold leading-[1.35] transition-colors ${activeTopic === topic.id ? "border-brand bg-brand text-white" : "border-border bg-white text-foreground hover:border-brand/40 hover:bg-brand/5"} ${focusStyle}`}>
+            }} className={`min-h-11 rounded-[7px] border px-4 py-2.5 text-left text-[12px] font-bold leading-[1.35] transition-colors ${activeTopic === topic.id ? "border-brand bg-brand text-white" : "border-border bg-white text-foreground hover:border-foreground/25 hover:bg-muted/40"} ${focusStyle}`}>
               {topic.label}
             </button>
           ))}
@@ -145,11 +145,11 @@ export function FaqSearch({
           </div>
           {pageCount > 1 && (
             <nav aria-label={labels.paginationLabel} className="mt-5 flex flex-wrap items-center justify-between gap-3">
-              <button type="button" disabled={currentPage === 0} aria-controls={resultsId} onClick={() => setPage(currentPage - 1)} className={`inline-flex min-h-11 items-center gap-2 rounded-[7px] border border-border bg-white px-3 py-2.5 text-[12px] font-bold transition-colors hover:border-brand/40 hover:bg-brand/5 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-border disabled:hover:bg-white ${focusStyle}`}>
+              <button type="button" disabled={currentPage === 0} aria-controls={resultsId} onClick={() => setPage(currentPage - 1)} className={`inline-flex min-h-11 items-center gap-2 rounded-[7px] border border-border bg-white px-3 py-2.5 text-[12px] font-bold transition-colors hover:border-foreground/25 hover:bg-muted/40 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-border disabled:hover:bg-white ${focusStyle}`}>
                 <ChevronLeft className="size-4 shrink-0 text-brand" aria-hidden />{labels.previousPage}
               </button>
               <span className="text-[12px] font-bold text-muted-foreground">{pageLabel}</span>
-              <button type="button" disabled={currentPage === pageCount - 1} aria-controls={resultsId} onClick={() => setPage(currentPage + 1)} className={`inline-flex min-h-11 items-center gap-2 rounded-[7px] border border-brand/30 bg-white px-3 py-2.5 text-[12px] font-bold transition-colors hover:border-brand hover:bg-brand/5 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-brand/30 disabled:hover:bg-white ${focusStyle}`}>
+              <button type="button" disabled={currentPage === pageCount - 1} aria-controls={resultsId} onClick={() => setPage(currentPage + 1)} className={`inline-flex min-h-11 items-center gap-2 rounded-[7px] border border-border bg-white px-3 py-2.5 text-[12px] font-bold transition-colors hover:border-foreground/25 hover:bg-muted/40 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-border disabled:hover:bg-white ${focusStyle}`}>
                 {labels.nextPage}<ChevronRight className="size-4 shrink-0 text-brand" aria-hidden />
               </button>
             </nav>
