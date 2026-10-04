@@ -193,7 +193,7 @@
     "Services": {
       "eyebrow": "What we do",
       "title": "전 과정에 걸친 엔지니어링 전문성",
-      "intro": "단일 프로토타입부터 산업 규모 생산까지, 기업과 발명가가 아이디어를 설계하고 검증해 양산 가능한 제품으로 발전시키도록 지원합니다.",
+      "intro": "개인부터 중소기업, 대기업까지, 첫 아이디어에서 생산까지 제품 개발을 돕습니다. 필요한 업무와 프로젝트의 진행 단계에 맞춰 지원합니다.",
       "brainstorming": {
         "eyebrow": "브레인스토밍",
         "title": "Turning a problem into a clear direction",
@@ -286,7 +286,7 @@
     "Cta": {
       "eyebrow": "Let's build together",
       "title": "해결할 과제가 있으신가요",
-      "subtitle": "미래지향적인 기업과 협력해 복잡한 과제를 실용적이고 양산 가능한 솔루션으로 전환합니다.",
+      "subtitle": "아이디어나 프로젝트에 대해 알려 주세요. 다음 단계와 필요한 지원을 함께 정합니다.",
       "button": "프로젝트 시작하기"
     }
   },

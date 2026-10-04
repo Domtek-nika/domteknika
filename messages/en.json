@@ -193,7 +193,7 @@
     "Services": {
       "eyebrow": "What we do",
       "title": "End-to-end expertise at every step",
-      "intro": "From one-of-a-kind prototypes to industrial-scale production, we help both individuals and companies design, engineer, and manufacture their ideas.",
+      "intro": "We help individuals and businesses of all sizes take products from an initial idea to production. Our involvement is tailored to your needs and the stage of your project.",
       "brainstorming": {
         "eyebrow": "Brainstorming",
         "title": "Turning a problem into a clear direction",
@@ -286,7 +286,7 @@
     "Cta": {
       "eyebrow": "Let's build together",
       "title": "Have a challenge we can solve",
-      "subtitle": "We partner with forward-thinking companies to turn complex challenges into smart, manufacturable solutions.",
+      "subtitle": "Tell us about your idea or project. Together, we can define the next step and the support you need.",
       "button": "Start your project"
     }
   },

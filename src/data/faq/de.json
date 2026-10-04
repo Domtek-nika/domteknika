@@ -22,6 +22,10 @@
   },
   "general": [
     {
+      "question": "An wen richten sich Ihre Leistungen?",
+      "answer": "An Privatpersonen mit einer Idee, Gründerinnen und Gründer, kleine und mittlere sowie große Unternehmen. Sie können uns bei den ersten Überlegungen oder mit einem bereits fortgeschrittenen Projekt kontaktieren. Wir stimmen den Umfang auf Ihren Bedarf ab und arbeiten mit Ihren Teams zusammen, wenn das Projekt es erfordert."
+    },
+    {
       "question": "Können Sie in ein bereits gestartetes Projekt einsteigen?",
       "answer": "Ja. Wir können an einer Idee, Zeichnungen, einem Prototyp oder einem bestehenden Produkt ansetzen. Wir sichten die bisherigen Arbeiten und legen die nächsten sinnvollen Schritte ausgehend von Ihrem aktuellen Stand fest."
     },

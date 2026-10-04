@@ -22,6 +22,10 @@
   },
   "general": [
     {
+      "question": "À qui s’adressent vos prestations ?",
+      "answer": "Aux particuliers avec une idée à développer, aux entrepreneurs, aux PME et aux grandes entreprises. Vous pouvez nous contacter dès les premières réflexions ou pour un projet déjà avancé. Nous adaptons l’intervention à votre besoin et travaillons avec vos équipes lorsque le projet le demande."
+    },
+    {
       "question": "Pouvez-vous intervenir sur un projet déjà commencé ?",
       "answer": "Oui. Nous pouvons partir d’une idée, de plans, d’un prototype ou d’un produit existant. L’objectif est de comprendre ce qui a déjà été fait et de définir le travail utile à partir de votre situation actuelle."
     },

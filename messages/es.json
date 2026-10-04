@@ -193,7 +193,7 @@
     "Services": {
       "eyebrow": "What we do",
       "title": "Experiencia integral en cada etapa",
-      "intro": "Desde prototipos únicos hasta producción industrial, ayudamos a empresas e inventores a diseñar, desarrollar y fabricar sus ideas.",
+      "intro": "Acompañamos a particulares y empresas de todos los tamaños, desde la primera idea hasta la producción. Adaptamos nuestra intervención a sus necesidades y al avance del proyecto.",
       "brainstorming": {
         "eyebrow": "Brainstorming",
         "title": "Turning a problem into a clear direction",
@@ -286,7 +286,7 @@
     "Cta": {
       "eyebrow": "Let's build together",
       "title": "¿Tienes un reto que podamos resolver?",
-      "subtitle": "Colaboramos con empresas visionarias para convertir retos complejos en soluciones pertinentes y listas para industrializar.",
+      "subtitle": "Cuéntenos su idea o su proyecto. Juntos definiremos el siguiente paso y el apoyo adecuado a sus necesidades.",
       "button": "Iniciar tu proyecto"
     }
   },

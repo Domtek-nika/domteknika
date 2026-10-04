@@ -193,7 +193,7 @@
     "Services": {
       "eyebrow": "What we do",
       "title": "贯穿每个阶段的工程专长",
-      "intro": "从单件原型到工业化生产，我们帮助企业和发明者完成设计、工程开发，并将创意转化为可制造的产品。",
+      "intro": "我们为个人及不同规模的企业提供从初步构想到生产的产品开发支持，并根据您的需求和项目进展确定参与方式。",
       "brainstorming": {
         "eyebrow": "头脑风暴",
         "title": "Turning a problem into a clear direction",
@@ -286,7 +286,7 @@
     "Cta": {
       "eyebrow": "Let's build together",
       "title": "有需要我们共同解决的工程挑战吗",
-      "subtitle": "我们与具有前瞻性的企业合作，将复杂挑战转化为切实可行且可制造的解决方案。",
+      "subtitle": "请向我们介绍您的想法或项目。我们将与您一起确定下一步，以及适合您需求的支持方式。",
       "button": "启动您的项目"
     }
   },

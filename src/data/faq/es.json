@@ -22,6 +22,10 @@
   },
   "general": [
     {
+      "question": "¿A quiénes se dirigen sus servicios?",
+      "answer": "A particulares con una idea que desarrollar, emprendedores, pymes y grandes empresas. Puede contactarnos desde las primeras ideas o con un proyecto ya avanzado. Adaptamos el alcance a sus necesidades y colaboramos con sus equipos cuando el proyecto lo requiere."
+    },
+    {
       "question": "¿Pueden incorporarse a un proyecto que ya ha comenzado?",
       "answer": "Sí. Podemos partir de una idea, planos, un prototipo o un producto existente. Revisamos el trabajo realizado y definimos los siguientes pasos útiles a partir de la situación actual."
     },

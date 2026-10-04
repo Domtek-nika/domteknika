@@ -22,6 +22,10 @@
   },
   "general": [
     {
+      "question": "Who are your services for?",
+      "answer": "Individuals with an idea to develop, entrepreneurs, small and medium-sized businesses, and large companies. You can contact us at the earliest stages or with a project already underway. We adapt the scope to your needs and work with your teams when the project calls for it."
+    },
+    {
       "question": "Can you join a project that has already started?",
       "answer": "Yes. We can start from an idea, drawings, a prototype or an existing product. We review the work already completed and define the next useful steps from your current position."
     },

@@ -193,7 +193,7 @@
     "Services": {
       "eyebrow": "What we do",
       "title": "Une expertise de bout en bout à chaque étape",
-      "intro": "Du prototype unique à la production industrielle, nous accompagnons entreprises et inventeurs pour concevoir, valider et produire leurs idées.",
+      "intro": "Nous accompagnons les particuliers et les entreprises de toute taille, de la première idée à la production. Notre intervention s’adapte à votre besoin et à l’avancement de votre projet.",
       "brainstorming": {
         "eyebrow": "Brainstorming",
         "title": "Turning a problem into a clear direction",
@@ -286,7 +286,7 @@
     "Cta": {
       "eyebrow": "Let's build together",
       "title": "Vous avez un défi que nous pouvons résoudre",
-      "subtitle": "Nous accompagnons les entreprises visionnaires pour transformer des défis complexes en solutions pertinentes et industrialisables.",
+      "subtitle": "Présentez-nous votre idée ou votre projet. Nous définirons ensemble la prochaine étape et l’accompagnement adapté à votre besoin.",
       "button": "Démarrer votre projet"
     }
   },
