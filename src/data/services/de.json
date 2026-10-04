@@ -15,18 +15,13 @@
     "needs": "Wann wir Sie unterstützen",
     "method": "So gehen wir vor",
     "scopeNote": "Umfang, Prüfungen und Ergebnisse legen wir vor Projektbeginn gemeinsam fest.",
-    "faq": "Konkrete Fragen",
+    "faq": "Häufige Fragen",
     "briefTitle": "Für unser erstes Gespräch",
-    "brief": [
-      "Ihr Ziel und der Einsatz des Produkts",
-      "Der aktuelle Stand: Idee, Zeichnungen oder Prototyp",
-      "Ihre technischen Anforderungen und Ihr Zeitplan"
-    ],
-    "confidentiality": "Ihre Informationen behandeln wir vertraulich.",
     "viewProject": "Projekt ansehen",
     "caseStudy": "Eine Aufgabe, ein konkretes Projekt",
     "technicalFocus": "Technik verstehen",
-    "takeaway": "Merksatz"
+    "projectStageTitle": "In jeder Phase Ihres Projekts.",
+    "projectStageBody": "Ob Idee, Zeichnungen, Prototyp oder bestehendes Produkt: Wir steigen dort ein, wo Sie stehen – für eine gezielte Aufgabe oder die vollständige Produktentwicklung."
   },
   "items": {
     "creativity-innovation": {
@@ -99,8 +94,7 @@
             "why": "Bauraum, Kosten, Wartung und Fertigung können unterschiedliche Architekturen begünstigen.",
             "check": "Welches Kriterium hat Vorrang, und was prüfen wir zuerst?"
           }
-        ],
-        "takeaway": "Beispiel: «Mit einer Hand und mit Handschuhen öffnen» beschreibt eine Funktion. Hebel, Riegel und andere Mechanismen können dann am gleichen Bedarf gemessen werden."
+        ]
       }
     },
     "mechanical-design": {
@@ -173,8 +167,7 @@
             "why": "Hohe Präzision kann zusätzliche Bearbeitung und Prüfung erfordern.",
             "check": "Funktionsgerechte Toleranzen und das vorgesehene Verfahren."
           }
-        ],
-        "takeaway": "Vereinfachtes Beispiel: Eine Bohrung von 10,2 ± 0,1 mm und eine Welle von 10,0 ± 0,1 mm ergeben theoretisch 0 bis 0,4 mm Durchmesserspiel. Das Nennspiel von 0,2 mm kann somit verschwinden. Formabweichungen und Einsatzbedingungen müssen zusätzlich geprüft werden."
+        ]
       }
     },
     "prototyping": {
@@ -215,10 +208,6 @@
         {
           "question": "Ist ein funktionierender Prototyp serienreif?",
           "answer": "Nicht unbedingt. Werkstoffe, Toleranzen, Montage und Serienverfahren können eine eigene Industrialisierungsphase erfordern."
-        },
-        {
-          "question": "Wie wählt man zwischen 3D-Druck und spanender Fertigung?",
-          "answer": "Beim 3D-Druck entsteht das Teil schichtweise; bei der spanenden Fertigung wird Material aus einem Rohling abgetragen. Entscheidend sind Geometrie, gewünschtes Material, Funktionsflächen und die zu prüfenden Lasten. Für einen Prototyp werden auch notwendige Nachbearbeitung und die tatsächlich benötigte Präzision festgelegt."
         }
       ],
       "caseStudy": {
@@ -251,8 +240,7 @@
             "why": "Entsprechen Montage und Verhalten dem geplanten Verfahren?",
             "check": "Prozessstreuung und Prüfungen für die Produktionsfreigabe."
           }
-        ],
-        "takeaway": "Definieren Sie vor dem Bau eine Frage, ein Erfolgskriterium und die daraus folgende Entscheidung. Ein 3D-Druck kann den Bauraum bestätigen; bei einem Wechsel von Material oder Verfahren muss das Verhalten erneut bewertet werden."
+        ]
       }
     },
     "simulation": {
@@ -325,8 +313,7 @@
             "why": "Das Netz unterteilt das Bauteil in kleine Berechnungselemente. Seine Feinheit beeinflusst das Ergebnis.",
             "check": "Das Netz verfeinern und prüfen, ob sich die betrachtete Grösse stabilisiert."
           }
-        ],
-        "takeaway": "Lesen Sie eine Spannungskarte mit ihren Einheiten, ihrer Skala und ihren Annahmen. Beziehen Sie die Ergebnisse auf das Material und den untersuchten Versagensmechanismus sowie auf die geplanten physischen Versuche."
+        ]
       }
     },
     "polymer-injection": {
@@ -399,8 +386,7 @@
             "why": "Hinterschneidungen und Zugänglichkeit können zusätzliche Werkzeugbewegungen erfordern.",
             "check": "Trennebene, zulässige Spuren und Funktionsflächen."
           }
-        ],
-        "takeaway": "Wanddicken, Entformungsschrägen und Schwindung werden mit Material, Geometrie und Verfahren abgestimmt. Eine lokale Formänderung kann das gesamte Teil beeinflussen und sollte vor dem Werkzeugbau geprüft werden."
+        ]
       }
     },
     "electronics-integration": {
@@ -473,8 +459,7 @@
             "why": "Verlustleistung erwärmt Komponenten; Platine und Gehäuse tragen zum Wärmeweg bei.",
             "check": "Umgebung, abzuführende Wärme und den Weg nach aussen."
           }
-        ],
-        "takeaway": "Für die Planung helfen Datenblätter verfügbarer Komponenten, Nutzungsszenarien und Gehäusebedingungen. Damit lassen sich Aufgaben für Elektronik, Software und Prüfungen im Projekt klar zuordnen."
+        ]
       }
     }
   }

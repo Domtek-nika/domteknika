@@ -20,7 +20,6 @@ type ServiceContent = {
     intro: string;
     columns: string[];
     rows: { title: string; why: string; check: string }[];
-    takeaway: string;
   };
   ctaTitle: string;
   ctaBody: string;

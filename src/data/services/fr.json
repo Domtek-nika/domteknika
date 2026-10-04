@@ -15,18 +15,13 @@
     "needs": "Quand nous solliciter",
     "method": "Comment nous avançons",
     "scopeNote": "Le périmètre, les essais et les livrables sont définis avec vous avant de commencer.",
-    "faq": "Vos questions, concrètement",
+    "faq": "Questions fréquentes",
     "briefTitle": "Pour préparer notre premier échange",
-    "brief": [
-      "Votre objectif et l’usage du produit",
-      "Ce qui existe déjà : idée, plans ou prototype",
-      "Vos contraintes techniques et votre échéance"
-    ],
-    "confidentiality": "Vos informations sont traitées de manière confidentielle.",
     "viewProject": "Voir le projet",
     "caseStudy": "Un défi, une réalisation",
     "technicalFocus": "À comprendre",
-    "takeaway": "À retenir"
+    "projectStageTitle": "À chaque stade de votre projet.",
+    "projectStageBody": "Idée, plans, prototype ou produit existant : nous pouvons intervenir là où vous en êtes, pour une mission ciblée ou un développement complet."
   },
   "items": {
     "creativity-innovation": {
@@ -99,8 +94,7 @@
             "why": "Encombrement, coût, entretien et fabrication peuvent favoriser des architectures différentes.",
             "check": "Quel critère est prioritaire, et quel point faut-il vérifier en premier ?"
           }
-        ],
-        "takeaway": "Exemple : « ouvrir d’une seule main avec des gants » donne une fonction à explorer. Le choix d’un levier, d’un loquet ou d’un autre mécanisme peut alors être comparé sur le même besoin."
+        ]
       }
     },
     "mechanical-design": {
@@ -173,8 +167,7 @@
             "why": "Une précision élevée peut demander davantage d’opérations et de contrôle.",
             "check": "Les tolérances utiles à la fonction et le procédé envisagé."
           }
-        ],
-        "takeaway": "Exemple simplifié : un alésage de 10,2 ± 0,1 mm et un axe de 10,0 ± 0,1 mm donnent un jeu diamétral théorique de 0 à 0,4 mm. Le jeu nominal de 0,2 mm peut donc disparaître. La forme des pièces et les conditions d’usage restent à vérifier."
+        ]
       }
     },
     "prototyping": {
@@ -215,10 +208,6 @@
         {
           "question": "Un prototype fonctionnel est-il prêt à produire ?",
           "answer": "Pas nécessairement. Les matériaux, les tolérances, l’assemblage et le procédé de série peuvent demander une phase d’industrialisation distincte."
-        },
-        {
-          "question": "Comment choisir entre impression 3D et usinage ?",
-          "answer": "L’impression 3D construit la pièce par couches ; l’usinage enlève de la matière dans un brut. Le choix dépend de la géométrie, du matériau recherché, des surfaces fonctionnelles et des efforts à tester. Pour un prototype, il faut aussi définir les reprises et le niveau de précision réellement nécessaires."
         }
       ],
       "caseStudy": {
@@ -251,8 +240,7 @@
             "why": "L’assemblage et le comportement sont-ils cohérents avec le procédé prévu ?",
             "check": "La variabilité du procédé et les essais nécessaires à la mise en production."
           }
-        ],
-        "takeaway": "Avant de fabriquer, formulez une question, un critère de réussite et la décision à prendre selon le résultat. Une pièce imprimée en 3D peut valider un encombrement ; son comportement doit être réévalué si la matière ou le procédé final change."
+        ]
       }
     },
     "simulation": {
@@ -325,8 +313,7 @@
             "why": "Le maillage découpe la pièce en petits éléments de calcul. Sa finesse influence le résultat.",
             "check": "Affiner le maillage et vérifier que la grandeur suivie se stabilise."
           }
-        ],
-        "takeaway": "Une carte de contraintes se lit avec ses unités, son échelle et ses hypothèses. On relie ensuite les résultats au matériau et au mode de défaillance étudié, puis aux essais physiques prévus pour le projet."
+        ]
       }
     },
     "polymer-injection": {
@@ -399,8 +386,7 @@
             "why": "Les contre-dépouilles et les accès peuvent imposer des mouvements supplémentaires dans l’outillage.",
             "check": "Le plan de joint, les traces acceptables et les surfaces fonctionnelles."
           }
-        ],
-        "takeaway": "Les épaisseurs, les dépouilles et le retrait se définissent avec la matière, la géométrie et le procédé retenus. Une modification locale de forme peut avoir des effets sur la pièce entière : elle mérite d’être examinée avant l’outillage."
+        ]
       }
     },
     "electronics-integration": {
@@ -473,8 +459,7 @@
             "why": "Les pertes dissipées chauffent les composants ; la carte et le boîtier participent au chemin thermique.",
             "check": "L’environnement, la chaleur à évacuer et le chemin jusqu’à l’extérieur."
           }
-        ],
-        "takeaway": "Pour cadrer l’intégration, rassemblez les fiches des composants disponibles, les modes d’usage et les contraintes du boîtier. Les besoins en électronique, logiciel et essais peuvent alors être attribués clairement dans le projet."
+        ]
       }
     }
   }

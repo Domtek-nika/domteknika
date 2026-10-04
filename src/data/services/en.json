@@ -15,18 +15,13 @@
     "needs": "When to involve us",
     "method": "How we work",
     "scopeNote": "We agree the scope, tests and deliverables with you before work begins.",
-    "faq": "Practical questions",
+    "faq": "Frequently asked questions",
     "briefTitle": "For our first conversation",
-    "brief": [
-      "Your objective and how the product will be used",
-      "What you already have: an idea, drawings or a prototype",
-      "Your technical constraints and target date"
-    ],
-    "confidentiality": "Your information is treated confidentially.",
     "viewProject": "View project",
     "caseStudy": "A challenge, a real project",
     "technicalFocus": "Technical insight",
-    "takeaway": "Takeaway"
+    "projectStageTitle": "At any stage of your project.",
+    "projectStageBody": "An idea, drawings, a prototype or an existing product: we can join your project where you are, for a focused task or complete product development."
   },
   "items": {
     "creativity-innovation": {
@@ -99,8 +94,7 @@
             "why": "Space, cost, maintenance and manufacturing can favour different architectures.",
             "check": "Which criterion takes priority, and what needs checking first?"
           }
-        ],
-        "takeaway": "For example, “open with one hand while wearing gloves” defines a function to explore. A lever, latch or another mechanism can then be compared against the same need."
+        ]
       }
     },
     "mechanical-design": {
@@ -173,8 +167,7 @@
             "why": "High precision may require more operations and inspection.",
             "check": "Tolerances needed for function and the intended process."
           }
-        ],
-        "takeaway": "A simplified example: a 10.2 ± 0.1 mm bore and a 10.0 ± 0.1 mm shaft give a theoretical diametral clearance of 0 to 0.4 mm. The nominal 0.2 mm clearance can disappear. Part form and operating conditions still need checking."
+        ]
       }
     },
     "prototyping": {
@@ -215,10 +208,6 @@
         {
           "question": "Is a working prototype ready for production?",
           "answer": "Not necessarily. Materials, tolerances, assembly and the production process may need a separate industrialisation stage."
-        },
-        {
-          "question": "How do you choose between 3D printing and machining?",
-          "answer": "3D printing builds a part in layers; machining removes material from a blank. The choice depends on geometry, the required material, functional surfaces and the loads to be tested. For a prototype, any finishing operations and the level of precision actually needed should also be defined."
         }
       ],
       "caseStudy": {
@@ -251,8 +240,7 @@
             "why": "Are assembly and behaviour consistent with the intended process?",
             "check": "Process variation and the tests needed for production release."
           }
-        ],
-        "takeaway": "Before building, define a question, a success criterion and the decision to make from the result. A 3D printed part can validate space requirements; its behaviour needs reassessment if the final material or process changes."
+        ]
       }
     },
     "simulation": {
@@ -325,8 +313,7 @@
             "why": "The mesh divides the part into small calculation elements. Its refinement influences the result.",
             "check": "Refine the mesh and check that the quantity being tracked stabilises."
           }
-        ],
-        "takeaway": "Read a stress plot with its units, scale and assumptions. Relate the results to the material and failure mode being studied, then to the physical tests planned for the project."
+        ]
       }
     },
     "polymer-injection": {
@@ -399,8 +386,7 @@
             "why": "Undercuts and access requirements may require additional tool movements.",
             "check": "The parting line, acceptable marks and functional surfaces."
           }
-        ],
-        "takeaway": "Thickness, draft and shrinkage are defined with the selected material, geometry and process. A local change in shape can affect the whole part, so it deserves review before tooling."
+        ]
       }
     },
     "electronics-integration": {
@@ -473,8 +459,7 @@
             "why": "Power losses heat components; the board and enclosure contribute to the thermal path.",
             "check": "The environment, heat to remove and its path to the outside."
           }
-        ],
-        "takeaway": "To scope integration, gather available component data sheets, use scenarios and enclosure constraints. Electronics, software and testing responsibilities can then be assigned clearly within the project."
+        ]
       }
     }
   }

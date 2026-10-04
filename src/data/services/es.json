@@ -15,18 +15,13 @@
     "needs": "Cuándo contar con nosotros",
     "method": "Cómo trabajamos",
     "scopeNote": "Antes de empezar, acordamos con usted el alcance, los ensayos y los entregables.",
-    "faq": "Preguntas prácticas",
+    "faq": "Preguntas frecuentes",
     "briefTitle": "Para preparar la primera conversación",
-    "brief": [
-      "Su objetivo y el uso previsto del producto",
-      "Lo que ya tiene: una idea, planos o un prototipo",
-      "Sus requisitos técnicos y la fecha objetivo"
-    ],
-    "confidentiality": "Tratamos su información de forma confidencial.",
     "viewProject": "Ver el proyecto",
     "caseStudy": "Un reto, un proyecto real",
     "technicalFocus": "Comprender la técnica",
-    "takeaway": "Para recordar"
+    "projectStageTitle": "En cualquier etapa de su proyecto.",
+    "projectStageBody": "Una idea, planos, un prototipo o un producto existente: podemos incorporarnos donde se encuentre su proyecto, para una tarea concreta o un desarrollo completo."
   },
   "items": {
     "creativity-innovation": {
@@ -99,8 +94,7 @@
             "why": "Espacio, coste, mantenimiento y fabricación pueden favorecer arquitecturas diferentes.",
             "check": "¿Qué criterio es prioritario y qué conviene comprobar primero?"
           }
-        ],
-        "takeaway": "Por ejemplo, «abrir con una sola mano y con guantes» define una función que explorar. Una palanca, un pestillo u otro mecanismo pueden compararse frente a la misma necesidad."
+        ]
       }
     },
     "mechanical-design": {
@@ -173,8 +167,7 @@
             "why": "Una precisión elevada puede exigir más operaciones y controles.",
             "check": "Las tolerancias necesarias para la función y el proceso previsto."
           }
-        ],
-        "takeaway": "Ejemplo simplificado: un orificio de 10,2 ± 0,1 mm y un eje de 10,0 ± 0,1 mm dan una holgura diametral teórica de 0 a 0,4 mm. La holgura nominal de 0,2 mm puede desaparecer. También deben comprobarse la forma y las condiciones de uso."
+        ]
       }
     },
     "prototyping": {
@@ -215,10 +208,6 @@
         {
           "question": "¿Un prototipo funcional está listo para producirse?",
           "answer": "No necesariamente. Los materiales, tolerancias, montaje y proceso de serie pueden requerir una fase de industrialización específica."
-        },
-        {
-          "question": "¿Cómo elegir entre impresión 3D y mecanizado?",
-          "answer": "La impresión 3D construye la pieza por capas; el mecanizado retira material de una pieza en bruto. La elección depende de la geometría, el material requerido, las superficies funcionales y las cargas que se quieren probar. Para un prototipo también deben definirse los acabados adicionales y la precisión realmente necesaria."
         }
       ],
       "caseStudy": {
@@ -251,8 +240,7 @@
             "why": "¿El montaje y el comportamiento corresponden al proceso previsto?",
             "check": "La variabilidad del proceso y los ensayos para iniciar la producción."
           }
-        ],
-        "takeaway": "Antes de fabricar, defina una pregunta, un criterio de éxito y la decisión que tomará según el resultado. Una pieza impresa en 3D puede validar el espacio; su comportamiento debe reevaluarse si cambian el material o el proceso finales."
+        ]
       }
     },
     "simulation": {
@@ -325,8 +313,7 @@
             "why": "La malla divide la pieza en pequeños elementos de cálculo. Su nivel de detalle influye en el resultado.",
             "check": "Refinar la malla y comprobar que la magnitud observada se estabiliza."
           }
-        ],
-        "takeaway": "Un mapa de tensiones se interpreta con sus unidades, su escala y sus hipótesis. Después se relaciona con el material, el modo de fallo estudiado y los ensayos físicos previstos para el proyecto."
+        ]
       }
     },
     "polymer-injection": {
@@ -399,8 +386,7 @@
             "why": "Las contrasalidas y los accesos pueden exigir movimientos adicionales del molde.",
             "check": "El plano de partición, las marcas aceptables y las superficies funcionales."
           }
-        ],
-        "takeaway": "Los espesores, los ángulos de salida y la contracción se definen con el material, la geometría y el proceso elegidos. Un cambio local puede afectar a toda la pieza y merece revisarse antes de fabricar el molde."
+        ]
       }
     },
     "electronics-integration": {
@@ -473,8 +459,7 @@
             "why": "Las pérdidas calientan los componentes; la placa y la carcasa participan en el camino térmico.",
             "check": "El entorno, el calor que se debe evacuar y su recorrido hasta el exterior."
           }
-        ],
-        "takeaway": "Para definir la integración, reúna las fichas de los componentes disponibles, los escenarios de uso y las restricciones de la carcasa. Así pueden asignarse con claridad las tareas de electrónica, software y ensayos dentro del proyecto."
+        ]
       }
     }
   }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check, LockKeyhole, Plus } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Plus } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { Container } from "@/components/layout/container";
@@ -16,6 +16,7 @@ type Props = { params: Promise<{ locale: string; slug: string }> };
 
 const focusStyle = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
 const buttonStyle = `inline-flex min-h-11 items-center justify-between gap-4 rounded-[7px] bg-brand px-5 py-2.5 text-[13px] font-bold text-white shadow-[0_4px_10px_rgba(0,0,0,0.28)] transition-transform motion-safe:hover:-translate-y-0.5 ${focusStyle}`;
+const secondaryButtonStyle = `inline-flex min-h-11 items-center gap-3 rounded-[7px] border border-brand/30 bg-white px-4 py-3 text-[13px] font-bold text-foreground shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors hover:border-brand hover:bg-brand/5 ${focusStyle}`;
 
 export const dynamicParams = false;
 
@@ -85,10 +86,10 @@ export default async function ServicePage({ params }: Props) {
       <header className="relative overflow-hidden pb-10 pt-[112px] md:pb-14 md:pt-[152px]">
         <Image src="/assets/expertise-page/image-fond-top.png" alt="" width={1351} height={421} sizes="100vw" className="pointer-events-none absolute right-[-10%] top-[112px] w-[85vw] max-w-[1150px] opacity-45 md:w-[70vw]" />
         <Container size="wide" className="relative z-10">
-          <Link href="/expertise" className={`inline-flex min-h-11 items-center gap-3 text-[13px] font-extrabold transition-colors hover:text-brand ${focusStyle}`}>
+          <Link href="/expertise" className={secondaryButtonStyle}>
             <ArrowLeft className="size-4 text-brand" aria-hidden />{labels.back}
           </Link>
-          <div className="mt-6 grid gap-5 md:mt-9 md:gap-7 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:gap-14">
+          <div className="mt-6 grid gap-5 md:mt-9 md:gap-7 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14">
             <div>
               <p className="flex items-center gap-3 text-[15px] font-medium text-muted-foreground">
                 <span className="h-[3px] w-[34px] shrink-0 bg-brand" aria-hidden />{labels.eyebrow}
@@ -99,6 +100,10 @@ export default async function ServicePage({ params }: Props) {
             </div>
             <div>
               <p className="max-w-[520px] text-[15px] font-medium leading-[1.5] text-muted-foreground min-[1800px]:text-[18px]">{copy.description}</p>
+              <p className="mt-5 max-w-[520px] text-[13px] font-medium leading-[1.55] text-muted-foreground min-[1800px]:text-[15px]">
+                <strong className="mb-1.5 block font-extrabold text-foreground">{labels.projectStageTitle}</strong>
+                {labels.projectStageBody}
+              </p>
               <Link href="/contact" className={`mt-7 ${buttonStyle}`}>
                 {labels.contact}<ArrowRight className="size-4 shrink-0" aria-hidden />
               </Link>
@@ -141,10 +146,6 @@ export default async function ServicePage({ params }: Props) {
                 </tbody>
               </table>
             </div>
-          </div>
-          <div className="mt-9 max-w-[900px] border-l-[3px] border-brand pl-5">
-            <h3 className="text-xs font-extrabold text-brand">{labels.takeaway}</h3>
-            <p className="mt-2 text-[14px] font-medium leading-[1.6]">{copy.technicalFocus.takeaway}</p>
           </div>
         </Container>
       </section>
@@ -240,21 +241,21 @@ export default async function ServicePage({ params }: Props) {
             <p className="flex items-center gap-3 text-[14px] font-medium text-muted-foreground"><span className="h-[3px] w-[34px] bg-brand" aria-hidden />{labels.briefTitle}</p>
             <h2 id="service-contact" className="domtek-text-shadow mt-6 text-[34px] font-extrabold leading-[1.05] sm:text-[46px] md:text-[52px]"><span className="text-brand">.</span>{copy.ctaTitle}</h2>
             <p className="mt-6 max-w-[500px] text-[14px] font-medium leading-[1.5] text-muted-foreground">{copy.ctaBody}</p>
-            <ul className="mt-5 max-w-[500px] space-y-2.5">
-              {labels.brief.map((item) => <li key={item} className="flex gap-3 text-[12px] font-medium leading-[1.45] text-muted-foreground"><Check className="mt-0.5 size-3.5 shrink-0 text-brand" aria-hidden />{item}</li>)}
-            </ul>
             <Link href="/contact" className={`mt-7 ${buttonStyle}`}>{labels.contact}<ArrowRight className="size-4 shrink-0" aria-hidden /></Link>
-            <p className="mt-4 flex items-start gap-2 text-[11px] leading-relaxed text-muted-foreground"><LockKeyhole className="mt-0.5 size-3 shrink-0 text-brand" aria-hidden />{labels.confidentiality}</p>
           </div>
         </Container>
       </section>
 
       <nav aria-label={labels.other} className="pb-16">
         <Container size="wide">
-          <h2 className="text-[16px] font-extrabold">{labels.other}</h2>
-          <ul className="mt-3 flex flex-wrap gap-x-8 gap-y-1">
+          <h2 className="text-[22px] font-extrabold">{labels.other}</h2>
+          <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
             {services.filter((item) => item.slug !== service.slug).map((item) => (
-              <li key={item.slug}><Link href={`/expertise/${item.slug}`} className={`inline-flex min-h-11 items-center gap-2 text-[12px] font-bold text-muted-foreground transition-colors hover:text-brand ${focusStyle}`}>{t(`items.${item.key}.title`)}<ArrowRight className="size-3.5 shrink-0 text-brand" aria-hidden /></Link></li>
+              <li key={item.slug} className="min-w-0">
+                <Link href={`/expertise/${item.slug}`} className={`${secondaryButtonStyle} h-full min-h-[72px] w-full justify-between leading-[1.4]`}>
+                  <span>{t(`items.${item.key}.title`)}</span><ArrowRight className="size-4 shrink-0 text-brand" aria-hidden />
+                </Link>
+              </li>
             ))}
           </ul>
         </Container>
