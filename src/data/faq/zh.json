@@ -13,7 +13,12 @@
     "resultPlural": "{count} 个问题",
     "noResultsTitle": "没有与搜索内容匹配的问题。",
     "noResultsBody": "请尝试其他关键词，或选择范围更广的主题。",
-    "resetFilters": "重置搜索和筛选"
+    "resetFilters": "重置搜索和筛选",
+    "resultRange": "共{count}个问题，显示第{from}–{to}个",
+    "paginationLabel": "问题分页导航",
+    "previousPage": "上一页",
+    "nextPage": "下一页",
+    "pageLabel": "{current} / {total}"
   },
   "general": [
     {

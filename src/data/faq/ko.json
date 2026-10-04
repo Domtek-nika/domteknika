@@ -13,7 +13,12 @@
     "resultPlural": "질문 {count}개",
     "noResultsTitle": "검색에 맞는 질문이 없습니다.",
     "noResultsBody": "다른 단어로 검색하거나 더 넓은 주제를 선택해 보세요.",
-    "resetFilters": "검색 및 필터 초기화"
+    "resetFilters": "검색 및 필터 초기화",
+    "resultRange": "질문 {count}개 중 {from}–{to}개",
+    "paginationLabel": "질문 페이지 이동",
+    "previousPage": "이전",
+    "nextPage": "다음",
+    "pageLabel": "{current} / {total}"
   },
   "general": [
     {

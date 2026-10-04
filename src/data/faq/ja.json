@@ -13,7 +13,12 @@
     "resultPlural": "{count}件の質問",
     "noResultsTitle": "検索に一致する質問がありません。",
     "noResultsBody": "別の言葉で検索するか、テーマの範囲を広げてください。",
-    "resetFilters": "検索と絞り込みをリセット"
+    "resetFilters": "検索と絞り込みをリセット",
+    "resultRange": "{count}件中{from}–{to}件を表示",
+    "paginationLabel": "質問ページの移動",
+    "previousPage": "前へ",
+    "nextPage": "次へ",
+    "pageLabel": "{current} / {total}"
   },
   "general": [
     {

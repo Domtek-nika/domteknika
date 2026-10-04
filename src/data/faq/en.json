@@ -13,7 +13,12 @@
     "resultPlural": "{count} questions",
     "noResultsTitle": "No questions match your search.",
     "noResultsBody": "Try another word or select a broader topic.",
-    "resetFilters": "Reset search and filters"
+    "resetFilters": "Reset search and filters",
+    "resultRange": "{from}–{to} of {count} questions",
+    "paginationLabel": "Question navigation",
+    "previousPage": "Previous",
+    "nextPage": "Next",
+    "pageLabel": "{current} / {total}"
   },
   "general": [
     {

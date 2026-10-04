@@ -13,7 +13,12 @@
     "resultPlural": "{count} Fragen",
     "noResultsTitle": "Keine Frage passt zu Ihrer Suche.",
     "noResultsBody": "Versuchen Sie ein anderes Wort oder wählen Sie ein umfassenderes Thema.",
-    "resetFilters": "Suche und Filter zurücksetzen"
+    "resetFilters": "Suche und Filter zurücksetzen",
+    "resultRange": "Fragen {from}–{to} von {count}",
+    "paginationLabel": "Navigation durch die Fragen",
+    "previousPage": "Zurück",
+    "nextPage": "Weiter",
+    "pageLabel": "{current} / {total}"
   },
   "general": [
     {
