@@ -261,7 +261,7 @@ function ExpertiseGrid({ faqLabel }: { faqLabel: string }) {
         </div>
         <ExpertiseServiceCards items={EXPERTISE_ITEMS} startIndex={0} />
       </Container>
-      <Container size="wide" className="max-w-[1480px] min-[1800px]:!max-w-[1640px] min-[2400px]:!max-w-[1800px]">
+      <Container size="wide" className="max-w-[1240px] min-[1800px]:!max-w-[1560px] min-[2400px]:!max-w-[1720px]">
         <BrainstormingSection />
       </Container>
     </section>
