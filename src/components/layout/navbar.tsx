@@ -2,7 +2,7 @@
 
 import { ArrowRight, Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import type { CSSProperties } from "react";
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
@@ -108,18 +108,29 @@ export function Navbar() {
     if (isContactPage) return;
 
     let cancelled = false;
+    let loading = false;
+    const mobileViewport = window.matchMedia("(max-width: 809px)");
 
-    Promise.all(CONTACT_BUBBLE_IMAGES.map(preloadImage))
-      .then(waitForNextPaint)
-      .then(() => {
-        if (!cancelled) setContactBubbleReady(true);
-      })
-      .catch(() => {
-        if (!cancelled) setContactBubbleReady(true);
-      });
+    const loadContactBubble = () => {
+      if (!mobileViewport.matches || loading) return;
+      loading = true;
+
+      Promise.all(CONTACT_BUBBLE_IMAGES.map(preloadImage))
+        .then(waitForNextPaint)
+        .then(() => {
+          if (!cancelled) setContactBubbleReady(true);
+        })
+        .catch(() => {
+          if (!cancelled) setContactBubbleReady(true);
+        });
+    };
+
+    loadContactBubble();
+    mobileViewport.addEventListener("change", loadContactBubble);
 
     return () => {
       cancelled = true;
+      mobileViewport.removeEventListener("change", loadContactBubble);
     };
   }, [isContactPage]);
 
@@ -335,7 +346,7 @@ export function Navbar() {
               src="/assets/contact-bubble-button-mask.png"
               alt=""
               fill
-              unoptimized
+              quality={100}
               sizes="60px"
               className="pointer-events-none object-contain drop-shadow-[0_8px_12px_rgba(227,6,19,0.34)] transition-[filter,opacity] duration-200 group-hover/contact-bubble:drop-shadow-[0_10px_16px_rgba(227,6,19,0.42)]"
               style={
@@ -349,7 +360,7 @@ export function Navbar() {
               src="/assets/contact-bubble-button-mask-inverted.png"
               alt=""
               fill
-              unoptimized
+              quality={100}
               sizes="60px"
               className="pointer-events-none object-contain drop-shadow-[0_8px_12px_rgba(227,6,19,0.18)] transition-[filter,opacity] duration-200 group-hover/contact-bubble:drop-shadow-[0_10px_16px_rgba(227,6,19,0.24)]"
               style={
@@ -505,6 +516,14 @@ function parseCssRgb(color: string) {
 function preloadImage(src: string) {
   return new Promise<void>((resolve, reject) => {
     const image = new window.Image();
+    const { props } = getImageProps({
+      src,
+      alt: "",
+      width: 512,
+      height: 512,
+      quality: 100,
+      sizes: "60px",
+    });
 
     image.onload = () => {
       if (typeof image.decode !== "function") {
@@ -516,7 +535,9 @@ function preloadImage(src: string) {
     };
 
     image.onerror = () => reject(new Error(`Unable to preload ${src}`));
-    image.src = src;
+    image.sizes = props.sizes ?? "";
+    image.srcset = props.srcSet ?? "";
+    image.src = props.src;
   });
 }
 

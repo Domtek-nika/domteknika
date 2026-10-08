@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { trackContactLead } from "@/lib/analytics-events";
 
 type ContactFormCopy = {
   title: string;
@@ -83,6 +84,7 @@ export function ContactForm({
         form.reset();
         submissionIdRef.current = null;
         setStatus("success");
+        if (!getFormString(formData, "website").trim()) trackContactLead(locale);
         return;
       }
 

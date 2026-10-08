@@ -41,6 +41,7 @@ type PageMetadataInput = {
   image?: string;
   imageAlt?: string;
   shareDescription?: string;
+  shareTitle?: string;
   locale: string;
   path?: string;
   title: string;
@@ -51,6 +52,7 @@ export function buildPageMetadata({
   image: imagePath,
   imageAlt,
   shareDescription,
+  shareTitle,
   locale,
   path = "",
   title,
@@ -67,7 +69,7 @@ export function buildPageMetadata({
       languages: languageAlternates(path),
     },
     openGraph: {
-      title,
+      title: shareTitle ?? title,
       description: shareDescription ?? description,
       url: canonical,
       siteName: "DOMTEKNIKA",
@@ -89,16 +91,18 @@ export function buildPageMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: shareTitle ?? title,
       description: shareDescription ?? description,
       images: [image],
     },
     robots: {
       index: true,
       follow: true,
+      noimageindex: true,
       googleBot: {
         index: true,
         follow: true,
+        noimageindex: true,
         "max-image-preview": "large",
         "max-snippet": -1,
         "max-video-preview": -1,
@@ -136,6 +140,7 @@ export function organizationJsonLd(locale: string) {
         "@type": ["Organization", "ProfessionalService"],
         name: "DOMTEKNIKA SA",
         url: SITE_URL.toString(),
+        sameAs: ["https://www.linkedin.com/company/domteknika1/"],
         logo: new URL("/assets/domteknika-logo.png", SITE_URL).toString(),
         image: new URL(SOCIAL_IMAGE_PATH, SITE_URL).toString(),
         email: "contact@domteknika.ch",
@@ -161,7 +166,6 @@ export function organizationJsonLd(locale: string) {
           contactType: "business enquiries",
           email: "contact@domteknika.ch",
           telephone: "+41 32 751 71 46",
-          availableLanguage: ["de", "en", "es", "fr", "ja", "ko", "zh"],
         },
       },
       {

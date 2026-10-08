@@ -1,5 +1,9 @@
 import { AVENTOR_FLOW_COLUMNS, AVENTOR_FLOW_HALF_WIDTH, AVENTOR_FLOW_RANGE, AVENTOR_FLOW_SAMPLES } from "./aventor-liquid-motion";
 
+// The normal 880px-wide visual keeps a full 2x backing buffer. Larger displays
+// use a bounded buffer instead of growing the shader workload without a limit.
+const MAX_RENDER_PIXELS = 2_000_000;
+
 const VERTEX = `
   attribute vec2 position;
   varying vec2 uv;
@@ -147,31 +151,56 @@ export function createAventorLiquidRenderer(canvas: HTMLCanvasElement, image: HT
     gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
     gl.uniform1i(gl.getUniformLocation(program, "picture"), 0);
-    const liquid = texture(gl.TEXTURE1);
+    texture(gl.TEXTURE1);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
     gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, AVENTOR_FLOW_COLUMNS, AVENTOR_FLOW_SAMPLES, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+    // Production uses a stationary flow field. Upload it once rather than
+    // transferring the same texture again for every animation frame.
+    const neutralFlow = new Uint8Array(AVENTOR_FLOW_COLUMNS * AVENTOR_FLOW_SAMPLES * 4);
+    for (let index = 0; index < neutralFlow.length; index += 4) {
+      neutralFlow[index] = 128;
+      neutralFlow[index + 2] = 128;
+    }
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, AVENTOR_FLOW_COLUMNS, AVENTOR_FLOW_SAMPLES, 0, gl.RGBA, gl.UNSIGNED_BYTE, neutralFlow);
     gl.uniform1i(gl.getUniformLocation(program, "liquid"), 1);
     const elapsed = gl.getUniformLocation(program, "elapsed");
     const motionScale = gl.getUniformLocation(program, "motionScale");
+    let pixelRatioLimit = 2;
+
+    const resize = () => {
+      const displayWidth = Math.max(canvas.clientWidth, 1);
+      const displayHeight = Math.max(canvas.clientHeight, 1);
+      const pixelRatio = Math.min(
+        window.devicePixelRatio || 1,
+        pixelRatioLimit,
+        Math.sqrt(MAX_RENDER_PIXELS / (displayWidth * displayHeight)),
+      );
+      const width = Math.max(1, Math.round(displayWidth * pixelRatio));
+      const height = Math.max(1, Math.round(displayHeight * pixelRatio));
+      const resized = canvas.width !== width || canvas.height !== height;
+      if (resized) {
+        canvas.width = width;
+        canvas.height = height;
+      }
+      gl.viewport(0, 0, width, height);
+      gl.uniform1f(motionScale, Math.min(6.5, 1671 / displayWidth));
+      return resized;
+    };
+    resize();
 
     return {
-      render(field: Uint8Array, time: number) {
-        const displayWidth = canvas.clientWidth;
-        const width = Math.max(1, Math.round(displayWidth * 2));
-        const height = Math.max(1, Math.round(canvas.clientHeight * 2));
-        if (canvas.width !== width || canvas.height !== height) {
-          canvas.width = width;
-          canvas.height = height;
-        }
-        gl.viewport(0, 0, width, height);
-        gl.activeTexture(gl.TEXTURE1);
-        gl.bindTexture(gl.TEXTURE_2D, liquid);
-        gl.texSubImage2D(gl.TEXTURE_2D, 0, 0, 0, AVENTOR_FLOW_COLUMNS, AVENTOR_FLOW_SAMPLES, gl.RGBA, gl.UNSIGNED_BYTE, field);
+      render(time: number) {
         gl.uniform1f(elapsed, time);
-        gl.uniform1f(motionScale, Math.min(6.5, 1671 / Math.max(displayWidth, 1)));
         gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+      },
+      resize,
+      reduceResolution() {
+        const currentLimit = Math.min(window.devicePixelRatio || 1, pixelRatioLimit);
+        if (currentLimit <= 1) return false;
+        pixelRatioLimit = Math.max(1, currentLimit * 0.75);
+        resize();
+        return true;
       },
       dispose,
     };

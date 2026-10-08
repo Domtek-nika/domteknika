@@ -69,66 +69,47 @@ const securityHeaders = [
   },
 ];
 
-const noIndexImageHeaders = [
+const noIndexMediaHeaders = [
   {
     key: "X-Robots-Tag",
     value: "noindex",
   },
 ];
 
-// These assets are visual dressing, not standalone editorial content. Keep the
-// page indexable while preventing search engines from presenting the artwork as
-// a DOMTEKNIKA image result. The query patterns also cover Next's image optimizer.
-const decorativeImageRules = [
-  {
-    source: "/assets/contact-page/technical-sketch.png",
-    optimizerQuery: "/assets/contact-page/technical-sketch\\.png",
-  },
-  {
-    source: "/assets/our-story/background/:path*",
-    optimizerQuery: "/assets/our-story/background/.+",
-  },
-  {
-    source: "/assets/technical-drawing-top.png",
-    optimizerQuery: "/assets/technical-drawing-top\\.png",
-  },
-  {
-    source: "/assets/technical-drawing-top-2x.webp",
-    optimizerQuery: "/assets/technical-drawing-top-2x\\.webp",
-  },
-  {
-    source: "/assets/technical-drawing-bottom.png",
-    optimizerQuery: "/assets/technical-drawing-bottom\\.png",
-  },
-  {
-    source: "/assets/technical-drawing-bottom-2x.webp",
-    optimizerQuery: "/assets/technical-drawing-bottom-2x\\.webp",
-  },
-  {
-    source: "/assets/expertise-page/image-fond-top.png",
-    optimizerQuery: "/assets/expertise-page/image-fond-top\\.png",
-  },
-  {
-    source: "/assets/project-page/hero-sketch.png",
-    optimizerQuery: "/assets/project-page/hero-sketch\\.png",
-  },
-  {
-    source: "/assets/project-page/cta-sketch.png",
-    optimizerQuery: "/assets/project-page/cta-sketch\\.png",
-  },
-  {
-    source: "/assets/project-page/image-fond-top.png",
-    optimizerQuery: "/assets/project-page/image-fond-top\\.png",
-  },
-  {
-    source: "/assets/patent-page/hero-sketch.png",
-    optimizerQuery: "/assets/patent-page/hero-sketch\\.png",
-  },
-  {
-    source: "/assets/patent-page/cta-sketch.png",
-    optimizerQuery: "/assets/patent-page/cta-sketch\\.png",
-  },
+// Keep HTML pages indexable, and leave media crawlable so search engines can
+// read their noindex header. This also covers static imports and optimized or
+// generated images without changing how browsers and social previews load them.
+const nonIndexableMediaSources = [
+  "/:file(.*\\.(?:apng|avif|bmp|gif|heic|heif|ico|jfif|jpe?g|jxl|pdf|png|svgz?|tiff?|webp))",
+  "/_next/image",
+  "/social-image",
 ] as const;
+
+// Preserve the language of known legacy pages instead of sending every old URL
+// to the homepage. Removed pages without a matching service keep their 404.
+const legacyPagePaths = [
+  ["projets", "projects"],
+  ["projets-2", "projects"],
+  ["brevets", "patents"],
+  ["conception-2", "expertise/mechanical-design"],
+  ["analyse-numerique-2", "expertise/simulation"],
+  ["electronique-2", "expertise/electronics-integration"],
+  ["creativite", "expertise/creativity-innovation"],
+  ["creativite-2", "expertise/creativity-innovation"],
+] as const;
+
+const legacyPageRedirects = legacyPagePaths.flatMap(([legacyPath, path]) => [
+  {
+    source: `/${legacyPath}`,
+    destination: `/fr/${path}`,
+    permanent: true,
+  },
+  {
+    source: `/en/${legacyPath}`,
+    destination: `/en/${path}`,
+    permanent: true,
+  },
+]);
 
 const localDevOrigins = Object.values(networkInterfaces())
   .flatMap((entries) => entries ?? [])
@@ -164,6 +145,18 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/:path*",
+        has: [{ type: "host", value: "www\\.domteknika\\.ch" }],
+        destination: "https://domteknika.ch/:path*",
+        permanent: true,
+      },
+      ...legacyPageRedirects,
+      {
+        source: "/domteknika.ch/creativite",
+        destination: "/fr/expertise/creativity-innovation",
+        permanent: true,
+      },
+      {
         source: "/:locale(en|fr|de|es|ko|zh|ja)/patent",
         destination: "/:locale/patents",
         permanent: true,
@@ -182,20 +175,9 @@ const nextConfig: NextConfig = {
         source: "/:path*",
         headers: securityHeaders,
       },
-      ...decorativeImageRules.map(({ source }) => ({
+      ...nonIndexableMediaSources.map((source) => ({
         source,
-        headers: noIndexImageHeaders,
-      })),
-      ...decorativeImageRules.map(({ optimizerQuery }) => ({
-        source: "/_next/image",
-        has: [
-          {
-            type: "query" as const,
-            key: "url",
-            value: optimizerQuery,
-          },
-        ],
-        headers: noIndexImageHeaders,
+        headers: noIndexMediaHeaders,
       })),
       {
         source: "/assets/logo_DOMTEKNIKA_2023-alpha.png",
@@ -210,7 +192,7 @@ const nextConfig: NextConfig = {
   },
   images: {
     formats: ["image/avif", "image/webp"],
-    qualities: [75, 100],
+    qualities: [75, 90, 100],
   },
   // `npm run build` requires typecheck to pass before starting Next.js.
   // Run the checks sequentially to limit peak memory on constrained hosts.

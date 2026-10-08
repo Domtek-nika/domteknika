@@ -130,8 +130,14 @@ export function FaqSearch({
         <div id={resultsId}>
           {showTopics && activeTopic === "all" && singleTopic && <p className="mb-3 text-[11px] font-extrabold text-brand">{visibleResults[0].topicLabel}</p>}
           <div className="border-t border-border">
-            {visibleResults.map((item) => (
-              <details key={item.id} className="group border-b border-border">
+            {/* Keep the answers in the initial HTML while pagination still
+                presents only six questions at a time. */}
+            {results.map((item, index) => (
+              <details
+                key={item.id}
+                hidden={index < firstResult || index >= firstResult + questionsPerPage}
+                className="group border-b border-border"
+              >
                 <summary className={`flex min-h-16 cursor-pointer list-none items-center justify-between gap-5 py-5 text-[14px] font-bold leading-relaxed [&::-webkit-details-marker]:hidden ${focusStyle}`}>
                   <span>
                     {showTopics && activeTopic === "all" && !singleTopic && <span className="mb-1.5 block text-[11px] font-extrabold text-brand">{item.topicLabel}</span>}

@@ -13,7 +13,8 @@ function LeftHeroArrow({ className }: { className: string }) {
       alt=""
       width={351}
       height={512}
-      unoptimized
+      quality={100}
+      sizes="(min-width: 1800px) 70px, (min-width: 1024px) 54px, (min-width: 768px) 42px, (min-width: 640px) 38px, 30px"
       draggable={false}
       className={className}
       aria-hidden
@@ -28,7 +29,8 @@ function RightHeroArrow({ className }: { className: string }) {
       alt=""
       width={323}
       height={512}
-      unoptimized
+      quality={100}
+      sizes="(min-width: 1800px) 80px, (min-width: 1024px) 58px, (min-width: 768px) 43px, (min-width: 640px) 38px, 32px"
       draggable={false}
       className={className}
       aria-hidden
@@ -53,10 +55,10 @@ export function HeroSection() {
         alt=""
         width={2360}
         height={1532}
-        quality={100}
+        quality={90}
         loading="eager"
         fetchPriority="high"
-        sizes="(min-width: 2300px) 70vw, (min-width: 2200px) 72vw, (max-width: 640px) 112vw, (max-width: 767px) 96vw, (max-width: 1024px) 82vw, 56vw"
+        sizes="(min-width: 2500px) 1450px, (min-width: 2300px) 58vw, (min-width: 2200px) 60vw, (min-width: 1800px) 56vw, (min-width: 1608px) 900px, (min-width: 1024px) 56vw, (min-width: 768px) 82vw, (min-width: 640px) 96vw, (min-width: 390px) 116vw, 112vw"
         className="pointer-events-none absolute right-[-48vw] top-[76px] z-0 h-auto w-[112vw] max-w-none opacity-[0.82] min-[390px]:right-[-50vw] min-[390px]:w-[116vw] sm:right-[-30vw] sm:top-[100px] sm:w-[96vw] md:right-[-18vw] md:top-[72px] md:w-[82vw] md:opacity-60 lg:right-0 lg:top-[82px] lg:w-[56vw] lg:max-w-[900px] min-[1800px]:right-[calc((100vw-1680px)/2-60px)] min-[1800px]:top-[96px] min-[1800px]:w-[56vw] min-[1800px]:max-w-[1260px] min-[2200px]:max-[2299px]:!right-[calc((100vw-1880px)/2-130px)] min-[2200px]:max-[2299px]:!top-[96px] min-[2200px]:max-[2299px]:!w-[60vw] min-[2200px]:max-[2299px]:!max-w-[1450px] min-[2300px]:!right-[calc((100vw-1900px)/2-110px)] min-[2300px]:!top-[96px] min-[2300px]:!w-[58vw] min-[2300px]:!max-w-[1450px]"
       />
       <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white via-white/62 to-white/8 md:via-white/76 md:to-white/16" />
@@ -85,7 +87,7 @@ export function HeroSection() {
             fill
             loading="lazy"
             fetchPriority="low"
-            sizes="(max-width: 1024px) 82vw, 1040px"
+            sizes="(min-width: 2300px) 1360px, (min-width: 1800px) 1280px, (min-width: 1406px) 1040px, (min-width: 768px) 74vw, 1px"
             className="object-contain object-bottom"
           />
           <div
