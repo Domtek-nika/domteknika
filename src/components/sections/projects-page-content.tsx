@@ -6624,7 +6624,8 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
               src="/assets/projects/aventor/aventor-hero.webp"
               alt=""
               fill
-              priority
+              loading="lazy"
+              fetchPriority="high"
               sizes="(max-width: 1024px) 96vw, 1180px"
               className="z-[2] object-contain object-center"
             />

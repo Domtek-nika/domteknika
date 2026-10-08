@@ -166,7 +166,7 @@ export function BrainstormingCardSwap() {
         skewAmount={0}
         easing="elastic"
       >
-        {BRAINSTORMING_CARDS.map((item, index) => {
+        {BRAINSTORMING_CARDS.map((item) => {
           const title = t(item.titleKey);
 
           return (
@@ -185,8 +185,8 @@ export function BrainstormingCardSwap() {
                     src={item.image}
                     alt={title}
                     fill
-                    loading={index === 0 ? "eager" : "lazy"}
-                    fetchPriority={index === 0 ? "auto" : "low"}
+                    loading="lazy"
+                    fetchPriority="low"
                     sizes="(max-width: 640px) 320px, (max-width: 1024px) 420px, 460px"
                     className="object-contain"
                     draggable={false}

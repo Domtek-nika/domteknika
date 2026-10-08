@@ -109,11 +109,10 @@ export function PatentDetailPage({
                 </h2>
               </div>
               <div className="mt-5 grid gap-4 lg:grid-cols-2">
-                {linkedProjects.map((project, index) => (
+                {linkedProjects.map((project) => (
                   <RelatedProjectCard
                     key={project.id}
                     actionLabel={copy.openProject}
-                    eager={index === 0}
                     project={project}
                   />
                 ))}

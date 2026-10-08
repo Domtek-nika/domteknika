@@ -86,7 +86,7 @@ export function HeroSection() {
             alt=""
             fill
             loading="lazy"
-            fetchPriority="low"
+            fetchPriority="high"
             sizes="(min-width: 2300px) 1360px, (min-width: 1800px) 1280px, (min-width: 1406px) 1040px, (min-width: 768px) 74vw, 1px"
             className="object-contain object-bottom"
           />
