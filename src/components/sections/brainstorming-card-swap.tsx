@@ -81,6 +81,7 @@ const BRAINSTORMING_CARDS = [
 
 export function BrainstormingCardSwap() {
   const t = useTranslations("ExpertisePage.Services.brainstorming.cards");
+  const interfaceT = useTranslations("Interface");
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [manualSwapSignal, setManualSwapSignal] = useState(0);
   const [swapSize, setSwapSize] = useState(DEFAULT_SWAP_SIZE);
@@ -141,7 +142,7 @@ export function BrainstormingCardSwap() {
       }}
       role="button"
       tabIndex={0}
-      aria-label="Faire avancer les cartes de brainstorming"
+      aria-label={interfaceT("nextBrainstormingCard")}
       onPointerDown={triggerSwap}
       onKeyDown={(event) => {
         if (event.key === "Enter" || event.key === " ") {

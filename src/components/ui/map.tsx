@@ -785,6 +785,22 @@ function MarkerLabel({
   );
 }
 
+type MapControlLabels = {
+  zoomIn: string;
+  zoomOut: string;
+  locate: string;
+  fullscreen: string;
+  resetBearing: string;
+};
+
+const DEFAULT_CONTROL_LABELS: MapControlLabels = {
+  zoomIn: "Zoom in",
+  zoomOut: "Zoom out",
+  locate: "Find my location",
+  fullscreen: "Toggle fullscreen",
+  resetBearing: "Reset bearing to north",
+};
+
 type MapControlsProps = {
   /** Position of the controls on the map (default: "bottom-right") */
   position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";
@@ -798,6 +814,8 @@ type MapControlsProps = {
   showFullscreen?: boolean;
   /** Additional CSS classes for the controls container */
   className?: string;
+  /** Localized accessible names for the control buttons */
+  labels?: Partial<MapControlLabels>;
   /** Callback with user coordinates when located */
   onLocate?: (coords: { longitude: number; latitude: number }) => void;
 };
@@ -854,9 +872,11 @@ function MapControls({
   showLocate = false,
   showFullscreen = false,
   className,
+  labels,
   onLocate,
 }: MapControlsProps) {
   const { map } = useMap();
+  const controlLabels = { ...DEFAULT_CONTROL_LABELS, ...labels };
   const [waitingForLocation, setWaitingForLocation] = useState(false);
 
   const handleZoomIn = useCallback(() => {
@@ -916,24 +936,24 @@ function MapControls({
     >
       {showZoom && (
         <ControlGroup>
-          <ControlButton onClick={handleZoomIn} label="Zoom in">
+          <ControlButton onClick={handleZoomIn} label={controlLabels.zoomIn}>
             <Plus className="size-4" />
           </ControlButton>
-          <ControlButton onClick={handleZoomOut} label="Zoom out">
+          <ControlButton onClick={handleZoomOut} label={controlLabels.zoomOut}>
             <Minus className="size-4" />
           </ControlButton>
         </ControlGroup>
       )}
       {showCompass && (
         <ControlGroup>
-          <CompassButton onClick={handleResetBearing} />
+          <CompassButton onClick={handleResetBearing} label={controlLabels.resetBearing} />
         </ControlGroup>
       )}
       {showLocate && (
         <ControlGroup>
           <ControlButton
             onClick={handleLocate}
-            label="Find my location"
+            label={controlLabels.locate}
             disabled={waitingForLocation}
           >
             {waitingForLocation ? (
@@ -946,7 +966,7 @@ function MapControls({
       )}
       {showFullscreen && (
         <ControlGroup>
-          <ControlButton onClick={handleFullscreen} label="Toggle fullscreen">
+          <ControlButton onClick={handleFullscreen} label={controlLabels.fullscreen}>
             <Maximize className="size-4" />
           </ControlButton>
         </ControlGroup>
@@ -955,7 +975,7 @@ function MapControls({
   );
 }
 
-function CompassButton({ onClick }: { onClick: () => void }) {
+function CompassButton({ onClick, label }: { onClick: () => void; label: string }) {
   const { map } = useMap();
   const compassRef = useRef<SVGSVGElement>(null);
 
@@ -981,7 +1001,7 @@ function CompassButton({ onClick }: { onClick: () => void }) {
   }, [map]);
 
   return (
-    <ControlButton onClick={onClick} label="Reset bearing to north">
+    <ControlButton onClick={onClick} label={label}>
       <svg
         ref={compassRef}
         viewBox="0 0 24 24"

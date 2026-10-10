@@ -14,6 +14,7 @@ import {
   OurStoryTimelineStep,
 } from "@/components/sections/our-story-timeline-rail";
 import { useRouter } from "@/i18n/navigation";
+import { getStoryMediaAlt, getStoryMediaCopy } from "@/data/story-media-copy";
 import { cn } from "@/lib/utils";
 
 type StoryLocale = "en" | "fr" | "de" | "es" | "ko" | "zh" | "ja";
@@ -870,20 +871,6 @@ const MEDIA: Record<
   },
 };
 
-const JA_MEDIA_ALT: Record<string, string> = {
-  "/assets/our-story/la-neuveville.jpg": "La Neuveville 近郊のビール湖の風景",
-  "/assets/our-story/cree.png": "緑色の CREE 電動車両の試作品",
-  "/assets/our-story/smart-bottle-ethimedix.png": "Smart Bottle のコンセプト画像",
-  "/assets/our-story/personal-injector.png": "自動注射器の製品イメージ",
-  "/assets/our-story/total-car-expo.jpg": "展示会で公開された Total Car の試作品",
-  "/assets/our-story/total-car.png": "サーキットを走る Aventor",
-  "/assets/our-story/bone-fixation-production.jpg": "骨固定システムの試作品",
-  "/assets/projects/airsmile/airsmile-01.webp": "AirSmile の携帯型歯科ケア機器",
-  "/assets/our-story/softcar-concept.png": "白い SOFTCAR のコンセプト車両",
-  "/assets/our-story/stajvelo.png": "コンクリート壁の前に置かれた STAJVELO の電動自転車",
-  "/assets/our-story/softcar-v1.png": "発表された黄色い SOFTCAR",
-};
-
 const TIMELINE_ROWS: TimelineRow[] = [
   { left: { type: "card", key: "founded" }, right: { type: "media", key: "lake" } },
   { left: { type: "media", key: "cree" }, right: { type: "card", key: "cree" } },
@@ -1307,6 +1294,7 @@ function TimelineMedia({
   onOpenLocationMap?: () => void;
 }) {
   const locale = useLocale();
+  const mediaCopy = getStoryMediaCopy(locale);
   return (
     <div
       className={cn(
@@ -1332,7 +1320,7 @@ function TimelineMedia({
             <div className="relative bg-muted/30 px-2 pt-2 min-[1800px]:!px-3 min-[1800px]:!pt-3 min-[2400px]:!px-4 min-[2400px]:!pt-4">
             <Image
               src={image.src}
-              alt={locale === "ja" ? JA_MEDIA_ALT[image.src] ?? image.alt : image.alt}
+              alt={getStoryMediaAlt(locale, image.src, image.alt)}
               width={image.width}
               height={image.height}
               loading={image.loading ?? "lazy"}
@@ -1352,8 +1340,8 @@ function TimelineMedia({
               className="absolute inset-0 cursor-pointer rounded-[7px] outline-none focus-visible:ring-2 focus-visible:ring-brand/50"
               aria-label={
                 onOpenLocationMap
-                  ? locale === "ja" ? "DOMTEKNIKA の所在地を地図で見る" : "Open DOMTEKNIKA location map"
-                  : locale === "ja" ? `${image.title} のプロジェクトを見る` : `Open project: ${image.title}`
+                  ? mediaCopy.openLocationMap
+                  : mediaCopy.openProject.replace("{title}", image.title)
               }
               onClick={() => {
                 if (onOpenLocationMap) {

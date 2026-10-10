@@ -6309,9 +6309,12 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
     const hash = window.location.hash.slice(1);
     if (!hash.startsWith(PROJECT_DETAIL_HASH_PREFIX)) return;
 
-    const projectId = decodeURIComponent(
-      hash.slice(PROJECT_DETAIL_HASH_PREFIX.length),
-    );
+    let projectId: string;
+    try {
+      projectId = decodeURIComponent(hash.slice(PROJECT_DETAIL_HASH_PREFIX.length));
+    } catch {
+      return;
+    }
     if (!projectId || selectedProject?.id === projectId) return;
 
     const project =

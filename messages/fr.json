@@ -5,6 +5,18 @@
     "description": "Bureau d’ingénierie en Suisse. Conception mécanique, prototypage et développement de produits, d’une première idée à la production.",
     "shareDescription": "Bureau d’ingénierie suisse"
   },
+  "Interface": {
+    "loading": "Chargement",
+    "nextBrainstormingCard": "Faire avancer les cartes de brainstorming",
+    "openPatentSource": "Ouvrir la source du brevet",
+    "map": {
+      "zoomIn": "Zoom avant",
+      "zoomOut": "Zoom arrière",
+      "locate": "Trouver ma position",
+      "fullscreen": "Activer ou désactiver le plein écran",
+      "resetBearing": "Orienter la carte vers le nord"
+    }
+  },
   "Nav": {
     "home": "Accueil",
     "projects": "Projets",

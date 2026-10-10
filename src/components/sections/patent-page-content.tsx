@@ -26,6 +26,7 @@ import {
   ZoomOut,
 } from "lucide-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import {
   type CSSProperties,
   type PointerEvent,
@@ -1418,9 +1419,12 @@ export function PatentPageContent({
 
   useEffect(() => {
     const openPatentFromHash = () => {
-      const patentId = decodeURIComponent(
-        window.location.hash.replace(/^#/, ""),
-      );
+      let patentId: string;
+      try {
+        patentId = decodeURIComponent(window.location.hash.replace(/^#/, ""));
+      } catch {
+        return;
+      }
       if (!patentId || selectedPatent?.id === patentId) return;
 
       const patent = localizedPatents.find((item) => item.id === patentId);
@@ -2696,6 +2700,7 @@ function PatentReferenceSection({
 }
 
 function PatentReferenceCard({ row }: { row: PatentReferenceRow }) {
+  const t = useTranslations("Interface");
   const entries = Object.entries(row.sections);
 
   return (
@@ -2713,7 +2718,7 @@ function PatentReferenceCard({ row }: { row: PatentReferenceRow }) {
             className="grid size-8 shrink-0 place-items-center rounded-full bg-white text-muted-foreground shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors hover:bg-brand hover:text-white"
           >
             <ExternalLink className="size-3.5" aria-hidden />
-            <span className="sr-only">Open patent source</span>
+            <span className="sr-only">{t("openPatentSource")}</span>
           </a>
         )}
       </div>

@@ -5,6 +5,18 @@
     "description": "瑞士工程设计服务，涵盖机械设计、原型开发与产品开发，支持项目从最初构想到投入生产。",
     "shareDescription": "瑞士工程设计"
   },
+  "Interface": {
+    "loading": "正在加载",
+    "nextBrainstormingCard": "显示下一张创意卡片",
+    "openPatentSource": "打开专利来源",
+    "map": {
+      "zoomIn": "放大",
+      "zoomOut": "缩小",
+      "locate": "显示我的位置",
+      "fullscreen": "切换全屏",
+      "resetBearing": "将地图朝向重置为北方"
+    }
+  },
   "Nav": {
     "home": "首页",
     "projects": "项目",

@@ -5,6 +5,18 @@
     "description": "Schweizer Ingenieurbüro für mechanische Konstruktion, Prototypenbau und Produktentwicklung – von der ersten Idee bis zur Produktion.",
     "shareDescription": "Schweizer Ingenieurwesen"
   },
+  "Interface": {
+    "loading": "Wird geladen",
+    "nextBrainstormingCard": "Nächste Brainstorming-Karte anzeigen",
+    "openPatentSource": "Patentquelle öffnen",
+    "map": {
+      "zoomIn": "Vergrössern",
+      "zoomOut": "Verkleinern",
+      "locate": "Meinen Standort anzeigen",
+      "fullscreen": "Vollbild umschalten",
+      "resetBearing": "Kartenorientierung nach Norden zurücksetzen"
+    }
+  },
   "Nav": {
     "home": "Startseite",
     "projects": "Projekte",

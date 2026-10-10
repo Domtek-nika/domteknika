@@ -5,6 +5,18 @@
     "description": "Swiss engineering. Mechanical design, prototyping and product development, from an initial idea through to production.",
     "shareDescription": "Swiss engineering"
   },
+  "Interface": {
+    "loading": "Loading",
+    "nextBrainstormingCard": "Show the next brainstorming card",
+    "openPatentSource": "Open patent source",
+    "map": {
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out",
+      "locate": "Find my location",
+      "fullscreen": "Toggle fullscreen",
+      "resetBearing": "Reset bearing to north"
+    }
+  },
   "Nav": {
     "home": "Home",
     "projects": "Projects",

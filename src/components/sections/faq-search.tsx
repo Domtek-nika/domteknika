@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronLeft, ChevronRight, Plus, Search, X } from "lucide-react";
-import { useId, useMemo, useState } from "react";
+import { useId, useMemo, useRef, useState } from "react";
 
 export type FaqQuestion = {
   id: string;
@@ -52,6 +52,7 @@ export function FaqSearch({
 }) {
   const searchId = useId();
   const resultsId = useId();
+  const searchRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState("");
   const [activeTopic, setActiveTopic] = useState("all");
   const [page, setPage] = useState(0);
@@ -80,6 +81,7 @@ export function FaqSearch({
   function clearSearch() {
     setQuery("");
     setPage(0);
+    searchRef.current?.focus({ preventScroll: true });
   }
 
   function resetFilters() {
@@ -94,6 +96,7 @@ export function FaqSearch({
       <div className="relative">
         <Search className="pointer-events-none absolute left-4 top-1/2 size-5 -translate-y-1/2 text-brand" aria-hidden />
         <input
+          ref={searchRef}
           id={searchId}
           type="search"
           value={query}

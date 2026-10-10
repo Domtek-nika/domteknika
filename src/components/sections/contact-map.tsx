@@ -1,6 +1,7 @@
 "use client";
 
 import { MapPin } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 
 import {
@@ -35,6 +36,7 @@ function CollapsedMapAttribution() {
 }
 
 export function ContactMap({ label }: { label: string }) {
+  const t = useTranslations("Interface.map");
   return (
     <Map
       center={[DOMTEKNIKA_COORDS.longitude, DOMTEKNIKA_COORDS.latitude]}
@@ -53,6 +55,13 @@ export function ContactMap({ label }: { label: string }) {
         showCompass={false}
         showFullscreen={false}
         showLocate={false}
+        labels={{
+          zoomIn: t("zoomIn"),
+          zoomOut: t("zoomOut"),
+          locate: t("locate"),
+          fullscreen: t("fullscreen"),
+          resetBearing: t("resetBearing"),
+        }}
         className="[&_button]:bg-white [&_button]:text-foreground [&_button:hover]:bg-muted"
       />
       <MapMarker

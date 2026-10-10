@@ -43,13 +43,15 @@ export function ContactForm({
 }) {
   const [status, setStatus] = useState<SubmissionStatus>("idle");
   const submissionIdRef = useRef<string | null>(null);
+  const sendingRef = useRef(false);
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (status === "sending") return;
+    if (sendingRef.current) return;
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    sendingRef.current = true;
     const submissionId = submissionIdRef.current ?? createSubmissionId();
     submissionIdRef.current = submissionId;
     setStatus("sending");
@@ -98,11 +100,13 @@ export function ContactForm({
     } catch {
       setStatus("error");
     } finally {
+      sendingRef.current = false;
       window.clearTimeout(timeout);
     }
   };
 
   const resetSubmissionState = () => {
+    if (sendingRef.current) return;
     submissionIdRef.current = null;
     if (status !== "idle" && status !== "sending") setStatus("idle");
   };
@@ -137,6 +141,7 @@ export function ContactForm({
           placeholder={copy.firstName}
           autoComplete="given-name"
           maxLength={80}
+          disabled={status === "sending"}
           required
         />
         <ContactInput
@@ -144,6 +149,7 @@ export function ContactForm({
           placeholder={copy.lastName}
           autoComplete="family-name"
           maxLength={80}
+          disabled={status === "sending"}
           required
         />
       </div>
@@ -154,6 +160,7 @@ export function ContactForm({
           placeholder={copy.company}
           autoComplete="organization"
           maxLength={120}
+          disabled={status === "sending"}
         />
         <ContactInput
           name="email"
@@ -161,6 +168,7 @@ export function ContactForm({
           placeholder={copy.email}
           autoComplete="email"
           maxLength={254}
+          disabled={status === "sending"}
           required
         />
         <ContactInput
@@ -169,6 +177,7 @@ export function ContactForm({
           placeholder={copy.phone}
           autoComplete="tel"
           maxLength={40}
+          disabled={status === "sending"}
         />
         <label className="sr-only" htmlFor="contact-message">
           {copy.message}
@@ -179,6 +188,7 @@ export function ContactForm({
           placeholder={copy.message}
           minLength={10}
           maxLength={5000}
+          disabled={status === "sending"}
           required
           className="min-h-[88px] resize-y rounded-[7px] border border-input bg-white px-3.5 py-3 text-[13px] font-medium leading-[1.45] text-foreground outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-muted-foreground focus:border-brand/45 focus:shadow-[0_0_0_3px_rgba(227,6,19,0.08)] min-[1800px]:!min-h-[130px] min-[1800px]:!rounded-[10px] min-[1800px]:!px-5 min-[1800px]:!py-4 min-[1800px]:!text-[15px] min-[2400px]:!min-h-[160px] min-[2400px]:!rounded-[12px] min-[2400px]:!px-6 min-[2400px]:!py-5 min-[2400px]:!text-[17px]"
         />

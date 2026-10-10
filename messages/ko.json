@@ -5,6 +5,18 @@
     "description": "스위스 엔지니어링. 기계 설계, 시제품 제작, 제품 개발을 통해 초기 아이디어부터 생산까지 프로젝트를 지원합니다.",
     "shareDescription": "스위스 엔지니어링"
   },
+  "Interface": {
+    "loading": "불러오는 중",
+    "nextBrainstormingCard": "다음 아이디어 카드 보기",
+    "openPatentSource": "특허 출처 열기",
+    "map": {
+      "zoomIn": "확대",
+      "zoomOut": "축소",
+      "locate": "내 위치 찾기",
+      "fullscreen": "전체 화면 전환",
+      "resetBearing": "지도를 북쪽 방향으로 되돌리기"
+    }
+  },
   "Nav": {
     "home": "홈",
     "projects": "프로젝트",
@@ -159,7 +171,7 @@
     "Map": {
       "eyebrow": "Find us",
       "title": "DOMTEKNIKA 방문",
-      "body": "저희 사무실과 워크숍은 비엘 호수와 쥐라 산기슭 사이의 라 뇌브빌에 있습니다.",
+      "body": "저희 사무실과 작업장은 비엘 호수와 쥐라 산기슭 사이의 라 뇌브빌에 있습니다.",
       "marker": "DOMTEKNIKA SA"
     }
   },

@@ -4,7 +4,7 @@ import { ArrowRight, Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { getImageProps } from "next/image";
 import type { CSSProperties } from "react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 
 import { Container } from "@/components/layout/container";
@@ -32,6 +32,7 @@ export function Navbar() {
   const t = useTranslations("Nav");
   const footerT = useTranslations("Footer");
   const pathname = usePathname();
+  const mobileMenuId = useId();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileNavVisible, setMobileNavVisible] = useState(true);
   const [contactBubbleReady, setContactBubbleReady] = useState(false);
@@ -42,36 +43,72 @@ export function Navbar() {
   const tickingRef = useRef(false);
   const contactBubbleRef = useRef<HTMLDivElement>(null);
   const contactBubbleProgressRef = useRef(0);
-  const currentNavKey =
-    pathname === "/projects"
-      ? "projects"
-      : pathname === "/expertise"
-        ? "expertise"
-        : pathname === "/patents"
-          ? "patent"
-          : pathname === "/our-story"
-            ? "story"
-            : pathname === "/"
-              ? "home"
-              : null;
+  const mobileMenuRef = useRef<HTMLElement>(null);
+  const mobileMenuCloseRef = useRef<HTMLButtonElement>(null);
+  const currentNavKey = NAV_ITEMS.find(({ href }) =>
+    href === "/"
+      ? pathname === "/"
+      : pathname === href || pathname.startsWith(`${href}/`),
+  )?.key ?? null;
   const isContactPage = pathname === "/contact" || pathname.endsWith("/contact");
 
   useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "";
-
     if (!mobileOpen) return;
 
+    const previousOverflow = document.body.style.overflow;
+    const previousFocus = document.activeElement instanceof HTMLElement
+      ? document.activeElement
+      : null;
+    document.body.style.overflow = "hidden";
+    mobileMenuCloseRef.current?.focus({ preventScroll: true });
+
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setMobileOpen(false);
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setMobileOpen(false);
+        return;
+      }
+      const menu = mobileMenuRef.current;
+      if (event.key !== "Tab" || !menu) return;
+
+      const focusable = Array.from(menu.querySelectorAll<HTMLElement>(
+        'button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+      )).filter((element) => !element.hasAttribute("disabled") && element.getClientRects().length > 0);
+      if (!focusable.length) {
+        event.preventDefault();
+        menu.focus({ preventScroll: true });
+        return;
+      }
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const outsideMenu = !menu.contains(document.activeElement);
+      if (event.shiftKey && (document.activeElement === first || outsideMenu)) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && (document.activeElement === last || outsideMenu)) {
+        event.preventDefault();
+        first.focus();
+      }
     };
 
     document.addEventListener("keydown", handleKeyDown);
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
+      if (previousFocus?.isConnected) previousFocus.focus({ preventScroll: true });
     };
   }, [mobileOpen]);
+
+  useEffect(() => {
+    const desktopViewport = window.matchMedia("(min-width: 810px)");
+    const closeOnDesktop = (event: MediaQueryListEvent) => {
+      if (event.matches) setMobileOpen(false);
+    };
+    desktopViewport.addEventListener("change", closeOnDesktop);
+    return () => desktopViewport.removeEventListener("change", closeOnDesktop);
+  }, []);
 
   useEffect(() => {
     lastScrollYRef.current = window.scrollY;
@@ -253,6 +290,7 @@ export function Navbar() {
                     href={item.href}
                     disabled={disabled}
                     active={!disabled && activeNavKey === item.key}
+                    current={!disabled && currentNavKey === item.key}
                   >
                     {t(item.key)}
                   </NavLink>
@@ -307,6 +345,7 @@ export function Navbar() {
               className="grid size-[52px] shrink-0 place-items-center rounded-[12px] border border-border bg-white text-foreground shadow-[0_6px_18px_rgba(0,0,0,0.12)] transition-[border-color,background-color,transform] duration-300 hover:-translate-y-0.5 hover:border-brand/35 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35"
               aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
               aria-expanded={mobileOpen}
+              aria-controls={mobileOpen ? mobileMenuId : undefined}
               onClick={() => setMobileOpen((value) => !value)}
             >
               {mobileOpen ? <X className="size-6" /> : <Menu className="size-6" />}
@@ -392,8 +431,11 @@ export function Navbar() {
               transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
             />
             <motion.aside
+              ref={mobileMenuRef}
+              id={mobileMenuId}
               role="dialog"
               aria-modal="true"
+              tabIndex={-1}
               className="absolute inset-y-0 right-0 isolate flex w-[min(84vw,360px)] flex-col overflow-hidden border-l border-border bg-white shadow-[-18px_0_42px_rgba(0,0,0,0.12)]"
               aria-label={t("openMenu")}
               variants={{
@@ -413,6 +455,7 @@ export function Navbar() {
                     <Logo className="w-[126px]" />
                   </Link>
                   <button
+                    ref={mobileMenuCloseRef}
                     type="button"
                     className="grid size-11 shrink-0 place-items-center rounded-[7px] border border-border bg-white text-foreground shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors hover:border-foreground/25 hover:bg-muted/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35"
                     aria-label={t("closeMenu")}
@@ -432,6 +475,7 @@ export function Navbar() {
                         !("disabled" in item ? Boolean(item.disabled) : false) &&
                         currentNavKey === item.key
                       }
+                      current={currentNavKey === item.key}
                       mobile
                       onNavigate={() => setMobileOpen(false)}
                     >
@@ -554,6 +598,7 @@ function NavLink({
   children,
   disabled,
   active,
+  current,
   mobile,
   onNavigate,
 }: {
@@ -561,6 +606,7 @@ function NavLink({
   children: React.ReactNode;
   disabled?: boolean;
   active?: boolean;
+  current?: boolean;
   mobile?: boolean;
   onNavigate?: () => void;
 }) {
@@ -596,7 +642,7 @@ function NavLink({
   }
 
   return (
-    <Link href={href as never} className={className} onClick={onNavigate}>
+    <Link href={href as never} className={className} onClick={onNavigate} aria-current={current ? "location" : undefined}>
       {children}
       {indicator}
     </Link>

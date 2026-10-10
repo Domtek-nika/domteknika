@@ -5,6 +5,18 @@
     "description": "Ingeniería suiza: diseño mecánico, prototipado y desarrollo de productos, desde una primera idea hasta la producción.",
     "shareDescription": "Ingeniería suiza"
   },
+  "Interface": {
+    "loading": "Cargando",
+    "nextBrainstormingCard": "Mostrar la siguiente tarjeta de ideas",
+    "openPatentSource": "Abrir la fuente de la patente",
+    "map": {
+      "zoomIn": "Acercar",
+      "zoomOut": "Alejar",
+      "locate": "Mostrar mi ubicación",
+      "fullscreen": "Activar o desactivar la pantalla completa",
+      "resetBearing": "Orientar el mapa al norte"
+    }
+  },
   "Nav": {
     "home": "Inicio",
     "projects": "Proyectos",
