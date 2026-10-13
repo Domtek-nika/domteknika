@@ -83,6 +83,7 @@ type PatentStat = {
   icon: LucideIcon;
   value: string;
   label: string;
+  separator?: string;
 };
 
 type PatentFilterOption = {
@@ -137,8 +138,8 @@ const STATS: Record<PatentLocale, PatentStat[]> = {
   en: [
     {
       icon: FileBadge2,
-      value: String(PATENT_STATS.total),
-      label: "Patents verified",
+      value: "45+",
+      label: "Patents",
     },
     {
       icon: Target,
@@ -147,15 +148,15 @@ const STATS: Record<PatentLocale, PatentStat[]> = {
     },
     {
       icon: CalendarDays,
-      value: `Since ${PATENT_STATS.since}`,
-      label: "20+ Years of innovation",
+      value: "25+",
+      label: "Years of innovation",
     },
   ],
   fr: [
     {
       icon: FileBadge2,
-      value: String(PATENT_STATS.total),
-      label: "Brevets vérifiés",
+      value: "45+",
+      label: "Brevets",
     },
     {
       icon: Target,
@@ -164,15 +165,15 @@ const STATS: Record<PatentLocale, PatentStat[]> = {
     },
     {
       icon: CalendarDays,
-      value: `Depuis ${PATENT_STATS.since}`,
-      label: "Plus de 20 ans d'innovation",
+      value: "+25",
+      label: "ans d’innovation",
     },
   ],
   de: [
     {
       icon: FileBadge2,
-      value: String(PATENT_STATS.total),
-      label: "Verifizierte Patente",
+      value: "45+",
+      label: "Patente",
     },
     {
       icon: Target,
@@ -181,15 +182,15 @@ const STATS: Record<PatentLocale, PatentStat[]> = {
     },
     {
       icon: CalendarDays,
-      value: `Seit ${PATENT_STATS.since}`,
-      label: "Über 20 Jahre Innovation",
+      value: "25+",
+      label: "Jahre Innovation",
     },
   ],
   es: [
     {
       icon: FileBadge2,
-      value: String(PATENT_STATS.total),
-      label: "Patentes verificadas",
+      value: "45+",
+      label: "Patentes",
     },
     {
       icon: Target,
@@ -198,15 +199,15 @@ const STATS: Record<PatentLocale, PatentStat[]> = {
     },
     {
       icon: CalendarDays,
-      value: `Desde ${PATENT_STATS.since}`,
-      label: "Más de 20 años de innovación",
+      value: "25+",
+      label: "años de innovación",
     },
   ],
   ko: [
     {
       icon: FileBadge2,
-      value: String(PATENT_STATS.total),
-      label: "검증된 특허",
+      value: "45+",
+      label: "특허",
     },
     {
       icon: Target,
@@ -215,15 +216,15 @@ const STATS: Record<PatentLocale, PatentStat[]> = {
     },
     {
       icon: CalendarDays,
-      value: `${PATENT_STATS.since}년부터`,
-      label: "20년 이상의 혁신",
+      value: "25년 이상",
+      label: "혁신 경험",
     },
   ],
   zh: [
     {
       icon: FileBadge2,
-      value: String(PATENT_STATS.total),
-      label: "已验证专利",
+      value: "45+",
+      label: "项专利",
     },
     {
       icon: Target,
@@ -232,25 +233,28 @@ const STATS: Record<PatentLocale, PatentStat[]> = {
     },
     {
       icon: CalendarDays,
-      value: `自 ${PATENT_STATS.since} 年`,
-      label: "20 多年创新",
+      value: "25年以上",
+      label: "创新历程",
     },
   ],
   ja: [
     {
       icon: FileBadge2,
-      value: String(PATENT_STATS.total),
-      label: "確認済みの特許",
+      value: "45+",
+      label: "件の特許",
+      separator: "",
     },
     {
       icon: Target,
       value: String(PATENT_STATS.categories),
-      label: "主要分野",
+      label: "つの主要分野",
+      separator: "",
     },
     {
       icon: CalendarDays,
-      value: `${PATENT_STATS.since}年から`,
-      label: "20年以上のイノベーション",
+      value: "25年以上",
+      label: "の技術革新",
+      separator: "",
     },
   ],
 };
@@ -2374,9 +2378,9 @@ function PatentStatsBar({ stats }: { stats: PatentStat[] }) {
   return (
     <Reveal
       delay={0.1}
-      className="relative z-20 mx-auto mt-10 w-full max-w-[720px] md:absolute md:bottom-9 md:left-1/2 md:mt-0 md:-translate-x-1/2 min-[1800px]:!bottom-12 min-[1800px]:!max-w-[1000px] min-[2400px]:!bottom-14 min-[2400px]:!max-w-[1180px]"
+      className="relative z-20 mx-auto mt-10 w-full max-w-[1040px] lg:absolute lg:bottom-9 lg:left-1/2 lg:mt-0 lg:-translate-x-1/2 min-[1800px]:!bottom-12 min-[1800px]:!max-w-[1200px] min-[2400px]:!bottom-14 min-[2400px]:!max-w-[1400px]"
     >
-      <div className="grid overflow-hidden rounded-[9px] border border-border/80 bg-white shadow-[0_7px_14px_rgba(0,0,0,0.20)] sm:grid-cols-3">
+      <div className="grid overflow-hidden rounded-[9px] border border-border/80 bg-white shadow-[0_7px_14px_rgba(0,0,0,0.20)] lg:grid-cols-3">
         {stats.map((stat, index) => {
           const Icon = stat.icon;
 
@@ -2384,22 +2388,17 @@ function PatentStatsBar({ stats }: { stats: PatentStat[] }) {
             <article
               key={stat.label}
               className={cn(
-                "group/stat grid min-h-[74px] grid-cols-[34px_1fr] items-center gap-3 px-5 py-3 transition-shadow duration-500 hover:z-10 hover:shadow-[0_18px_42px_rgba(0,0,0,0.08)] [transition-timing-function:var(--ease-smooth)] min-[1800px]:!min-h-[90px] min-[1800px]:!grid-cols-[44px_1fr] min-[1800px]:!gap-4 min-[1800px]:!px-7 min-[1800px]:!py-4 min-[2400px]:!min-h-[104px] min-[2400px]:!grid-cols-[50px_1fr] min-[2400px]:!px-8",
+                "group/stat grid min-h-[74px] grid-cols-[28px_minmax(0,1fr)] items-center gap-2 px-3 py-3 lg:grid-cols-[34px_minmax(0,1fr)] lg:gap-3 lg:px-5 transition-shadow duration-500 hover:z-10 hover:shadow-[0_18px_42px_rgba(0,0,0,0.08)] [transition-timing-function:var(--ease-smooth)] min-[1800px]:!min-h-[90px] min-[1800px]:!grid-cols-[44px_1fr] min-[1800px]:!gap-4 min-[1800px]:!px-7 min-[1800px]:!py-4 min-[2400px]:!min-h-[104px] min-[2400px]:!grid-cols-[50px_1fr] min-[2400px]:!px-8",
                 index < stats.length - 1 &&
-                  "border-b border-border sm:border-b-0 sm:border-r",
+                  "border-b border-border lg:border-b-0 lg:border-r",
               )}
             >
               <span className="grid size-8 place-items-center text-brand transition-transform duration-500 group-hover/stat:-translate-y-1 [transition-timing-function:var(--ease-smooth)] min-[1800px]:!size-10 min-[2400px]:!size-12">
                 <Icon aria-hidden strokeWidth={1.8} className="size-full" />
               </span>
-              <div className="min-w-0">
-                <strong className="block text-[24px] font-extrabold leading-none text-foreground min-[1800px]:!text-[30px] min-[2400px]:!text-[34px]">
-                  {stat.value}
-                </strong>
-                <span className="mt-1 block text-[10px] font-extrabold leading-none text-foreground/80 min-[1800px]:!mt-2 min-[1800px]:!text-[13px] min-[2400px]:!text-[15px]">
-                  {stat.label}
-                </span>
-              </div>
+              <strong className="min-w-0 whitespace-nowrap font-extrabold text-foreground domtek-type-heading">
+                {stat.value}{stat.separator ?? " "}{stat.label}
+              </strong>
             </article>
           );
         })}

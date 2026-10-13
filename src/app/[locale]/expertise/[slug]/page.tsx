@@ -18,8 +18,8 @@ type Props = { params: Promise<{ locale: string; slug: string }> };
 
 const focusStyle = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
 const introTextStyle = "max-w-[520px] domtek-type-body font-medium text-muted-foreground";
-const buttonStyle = `inline-flex min-h-11 items-center justify-between gap-4 rounded-[7px] bg-brand px-5 py-2.5 text-[13px] font-bold text-white shadow-[0_4px_10px_rgba(0,0,0,0.28)] transition-transform motion-safe:hover:-translate-y-0.5 ${focusStyle}`;
-const secondaryButtonStyle = `inline-flex min-h-11 items-center gap-3 rounded-[7px] border border-border bg-white px-4 py-3 text-[13px] font-bold text-foreground shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors hover:border-foreground/25 hover:bg-muted/40 ${focusStyle}`;
+const buttonStyle = `inline-flex min-h-11 items-center justify-between gap-4 rounded-[7px] bg-brand px-5 py-2.5 domtek-type-body font-bold text-white shadow-[0_4px_10px_rgba(0,0,0,0.28)] transition-transform motion-safe:hover:-translate-y-0.5 ${focusStyle}`;
+const secondaryButtonStyle = `inline-flex min-h-11 items-center gap-3 rounded-[7px] border border-border bg-white px-4 py-3 domtek-type-body font-bold text-foreground shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors hover:border-foreground/25 hover:bg-muted/40 ${focusStyle}`;
 
 export const dynamicParams = false;
 
@@ -115,7 +115,7 @@ export default async function ServicePage({ params }: Props) {
           </div>
           <nav aria-label={labels.onThisPage} className="mt-5 grid grid-cols-2 gap-x-4 md:mt-8 sm:flex sm:flex-wrap sm:gap-x-6 sm:gap-y-1">
             {sections.map(({ id, label }) => (
-              <a key={id} href={`#${id}`} className={`inline-flex min-h-11 items-center gap-2 text-[11px] font-bold text-muted-foreground transition-colors hover:text-brand sm:text-xs ${focusStyle}`}>
+              <a key={id} href={`#${id}`} className={`inline-flex min-h-11 items-center gap-2 domtek-type-body font-medium text-muted-foreground transition-colors hover:text-brand ${focusStyle}`}>
                 {label}<ArrowRight className="size-3 shrink-0 text-brand" aria-hidden />
               </a>
             ))}
@@ -166,7 +166,7 @@ export default async function ServicePage({ params }: Props) {
                 <p className="mt-6 font-extrabold text-brand domtek-type-small">{heroProject.title}</p>
                 <h2 id="service-projects-title" className="domtek-text-shadow mt-3 font-extrabold domtek-type-section">{copy.caseStudy.title}</h2>
                 <p className="mt-6 font-medium text-muted-foreground domtek-type-body">{copy.caseStudy.body}</p>
-                <Link href={`/projects/${heroProject.id}`} className={`mt-5 inline-flex min-h-11 items-center gap-4 text-[13px] font-bold text-brand hover:underline ${focusStyle}`}>{labels.viewProject}<ArrowUpRight className="size-4" aria-hidden /></Link>
+                <Link href={`/projects/${heroProject.id}`} className={`mt-5 inline-flex min-h-11 items-center gap-4 domtek-type-body font-bold text-brand hover:underline ${focusStyle}`}>{labels.viewProject}<ArrowUpRight className="size-4" aria-hidden /></Link>
               </div>
             </div>
           )}
@@ -174,7 +174,7 @@ export default async function ServicePage({ params }: Props) {
             {projects.slice(1).map((project) => (
               <Link key={project.id} href={`/projects/${project.id}`} className={`group grid min-w-0 grid-cols-[100px_1fr] gap-4 rounded-[7px] border border-border bg-white p-4 transition-shadow hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)] sm:grid-cols-[120px_1fr] ${focusStyle}`}>
                 <div className="relative aspect-square self-start rounded-[7px] bg-muted/60"><Image src={project.image} alt={project.imageAlt} fill sizes="120px" className="object-contain p-2" /></div>
-                <div className="min-w-0"><h3 className="font-extrabold domtek-type-card">{project.title}</h3><p className="mt-2 font-medium text-muted-foreground domtek-type-small">{project.scope?.[getServiceProjectScopeIndex(service.slug, project.id)] ?? project.description}</p><span className="mt-3 inline-flex items-center gap-2 text-xs font-bold text-brand">{labels.viewProject}<ArrowUpRight className="size-3.5" aria-hidden /></span></div>
+                <div className="min-w-0"><h3 className="font-extrabold domtek-type-card">{project.title}</h3><p className="mt-2 font-medium text-muted-foreground domtek-type-small">{project.scope?.[getServiceProjectScopeIndex(service.slug, project.id)] ?? project.description}</p><span className="mt-3 inline-flex items-center gap-2 domtek-type-body font-bold text-brand">{labels.viewProject}<ArrowUpRight className="size-3.5" aria-hidden /></span></div>
               </Link>
             ))}
           </div>
@@ -225,7 +225,7 @@ export default async function ServicePage({ params }: Props) {
           <div className="grid gap-6 lg:grid-cols-[0.85fr_1.35fr] lg:gap-12">
             <div>
               <h2 id="service-faq-title" className="domtek-text-shadow max-w-sm font-extrabold domtek-type-section">{labels.faq}<span className="text-brand">.</span></h2>
-              <Link href="/expertise#expertise-faq" className={`mt-5 inline-flex min-h-11 items-center gap-3 text-[13px] font-bold text-brand hover:underline ${focusStyle}`}>{faqCopy.fullFaqLink}<ArrowUpRight className="size-4 shrink-0" aria-hidden /></Link>
+              <Link href="/expertise#expertise-faq" className={`mt-5 inline-flex min-h-11 items-center gap-3 domtek-type-body font-bold text-brand hover:underline ${focusStyle}`}>{faqCopy.fullFaqLink}<ArrowUpRight className="size-4 shrink-0" aria-hidden /></Link>
             </div>
             <FaqSearch questions={copy.faq.map((item, index) => ({ ...item, id: `${service.slug}-${index}`, topic: service.slug }))} topics={[{id: service.slug, label: displayTitle}]} labels={faqCopy.labels} locale={locale} />
           </div>

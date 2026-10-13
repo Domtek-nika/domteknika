@@ -254,7 +254,7 @@ function ExpertiseGrid({ faqLabel }: { faqLabel: string }) {
             <p className="mt-7 max-w-[320px] font-medium text-muted-foreground sm:max-w-[610px] min-[1800px]:!max-w-[760px] domtek-type-body">
               {t("intro")}
             </p>
-            <a href="#expertise-faq" className="mt-6 inline-flex min-h-11 items-center gap-3 rounded-[7px] border border-border bg-white px-4 py-3 text-[13px] font-bold shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors hover:border-foreground/25 hover:bg-muted/40 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+            <a href="#expertise-faq" className="mt-6 inline-flex min-h-11 items-center gap-3 rounded-[7px] border border-border bg-white px-4 py-3 domtek-type-body font-bold shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors hover:border-foreground/25 hover:bg-muted/40 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
               {faqLabel}<ArrowRight className="size-4 text-brand" aria-hidden />
             </a>
           </Reveal>
@@ -294,13 +294,13 @@ function ExpertiseServiceCards({
                 className="size-9 stroke-[1.8] text-brand sm:size-10 min-[1800px]:!size-12 min-[2400px]:!size-[52px]"
                 aria-hidden
               />
-              <h3 className="mt-6 font-extrabold text-foreground sm:mt-8 domtek-type-card">
+              <h3 className="mt-6 max-w-full break-words font-extrabold text-foreground [hyphens:auto] sm:mt-8 domtek-type-card">
                 {t(`items.${item.key}.title` as never)}
               </h3>
-              <p className="mt-5 max-w-[250px] font-medium text-muted-foreground sm:mt-8 min-[1800px]:!max-w-[320px] domtek-type-small">
+              <p className="mt-5 max-w-[250px] font-medium text-muted-foreground sm:mt-8 min-[1800px]:!max-w-[320px] domtek-type-body">
                 {t(`items.${item.key}.description` as never)}
               </p>
-              <span className="mt-auto inline-flex min-h-11 items-center gap-2 pt-5 text-[11px] font-bold text-brand sm:text-xs">
+              <span className="mt-auto inline-flex min-h-11 items-center gap-2 pt-5 domtek-type-body font-bold text-brand">
                 {t("learnMore")}<ArrowRight className="size-3.5 shrink-0" aria-hidden />
               </span>
             </Link>
@@ -482,7 +482,7 @@ function AddedValueSection() {
                     <h3 className="mt-4 flex min-h-[2.5em] w-full items-center justify-center font-extrabold text-foreground sm:mt-5 domtek-type-card">
                       {t(`values.${item.key}.title` as never)}
                     </h3>
-                    <p className="mt-3 font-medium text-muted-foreground sm:mt-4 domtek-type-small">
+                    <p className="mt-3 font-medium text-muted-foreground sm:mt-4 domtek-type-body">
                       {t(`values.${item.key}.description` as never)}
                     </p>
                   </Reveal>
@@ -542,7 +542,7 @@ function AddedValueSection() {
                                 </span>
                               )}
                             </strong>
-                            {!isIndustries && (
+                            {!isIndustries && stat.key !== "worldwide" && (
                               <span className="mt-1.5 block text-[12px] font-medium leading-tight text-white/88 sm:mt-2 sm:text-[13px] md:text-[13px] min-[1800px]:!text-[14px] min-[2400px]:!text-[15px]">
                                 {t(`stats.${stat.key}.label` as never)}
                               </span>

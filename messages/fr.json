@@ -300,8 +300,8 @@
           "label": "d'expérience"
         },
         "worldwide": {
-          "value": "International",
-          "label": "Projets internationaux"
+          "value": "Projets internationaux",
+          "label": ""
         },
         "industries": {
           "value": "6+",

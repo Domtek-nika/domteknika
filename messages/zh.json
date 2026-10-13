@@ -300,8 +300,8 @@
           "label": "经验"
         },
         "worldwide": {
-          "value": "全球",
-          "label": "国际项目"
+          "value": "国际项目",
+          "label": ""
         },
         "industries": {
           "value": "6+",

@@ -1216,8 +1216,8 @@ const STATS: ProjectStat[] = [
     icon: Target,
   },
   {
-    label: "International projects",
-    value: "Worldwide",
+    label: "",
+    value: "International projects",
     icon: Globe2,
   },
   {
@@ -4451,12 +4451,12 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
         label: "Projets livrés",
         value: "100+",
       },
-      { ...STATS[1] },
-      { ...STATS[2] },
+      { ...STATS[1], label: "Accompagnement", value: "De bout en bout" },
+      { ...STATS[2], label: "Expertise technique", value: "Multisectorielle" },
       {
         ...STATS[3],
-        label: "Projets internationaux",
-        value: "International",
+        label: "",
+        value: "Projets internationaux",
       },
       {
         ...STATS[4],
@@ -4538,9 +4538,9 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
     projects: getProjectsForLocale("de"),
     stats: [
       { ...STATS[0], label: "Gelieferte Projekte", value: "100+" },
-      { ...STATS[1] },
-      { ...STATS[2] },
-      { ...STATS[3], label: "Internationale Projekte", value: "Weltweit" },
+      { ...STATS[1], label: "Projektbegleitung", value: "Durchgängig" },
+      { ...STATS[2], label: "Ingenieurkompetenz", value: "Multisektoral" },
+      { ...STATS[3], label: "", value: "Internationale Projekte" },
       {
         ...STATS[4],
         label: "Schweizer Ingenieurskunst",
@@ -4621,9 +4621,9 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
     projects: getProjectsForLocale("es"),
     stats: [
       { ...STATS[0], label: "Proyectos entregados", value: "100+" },
-      { ...STATS[1] },
-      { ...STATS[2] },
-      { ...STATS[3], label: "Proyectos globales", value: "Internacional" },
+      { ...STATS[1], label: "Apoyo al proyecto", value: "De principio a fin" },
+      { ...STATS[2], label: "Experiencia técnica", value: "Multisectorial" },
+      { ...STATS[3], label: "", value: "Proyectos internacionales" },
       {
         ...STATS[4],
         label: "Ingeniería suiza",
@@ -4704,9 +4704,9 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
     projects: getProjectsForLocale("ko"),
     stats: [
       { ...STATS[0], label: "완료한 프로젝트", value: "100+" },
-      { ...STATS[1] },
-      { ...STATS[2] },
-      { ...STATS[3], label: "글로벌 프로젝트", value: "전 세계" },
+      { ...STATS[1], label: "프로젝트 협업", value: "전 과정 지원" },
+      { ...STATS[2], label: "엔지니어링 전문성", value: "다양한 산업 분야" },
+      { ...STATS[3], label: "", value: "국제 프로젝트" },
       {
         ...STATS[4],
         label: "스위스 엔지니어링",
@@ -4787,9 +4787,9 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
     projects: getProjectsForLocale("zh"),
     stats: [
       { ...STATS[0], label: "交付项目", value: "100+" },
-      { ...STATS[1] },
-      { ...STATS[2] },
-      { ...STATS[3], label: "国际项目", value: "全球" },
+      { ...STATS[1], label: "项目支持", value: "全流程" },
+      { ...STATS[2], label: "工程专长", value: "跨行业" },
+      { ...STATS[3], label: "", value: "国际项目" },
       {
         ...STATS[4],
         label: "瑞士工程",
@@ -4872,7 +4872,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       { ...STATS[0], label: "手がけたプロジェクト", value: "100+" },
       { ...STATS[1], label: "プロジェクト支援", value: "一貫対応" },
       { ...STATS[2], label: "エンジニアリング", value: "多分野に対応" },
-      { ...STATS[3], label: "国際プロジェクト", value: "グローバル" },
+      { ...STATS[3], label: "", value: "国際プロジェクト" },
       {
         ...STATS[4],
         label: "スイスエンジニアリング",
@@ -7032,7 +7032,7 @@ function ProjectsStatsSection({
       aria-label={ariaLabel}
     >
       <Container size="wide">
-        <div className="grid grid-cols-2 overflow-hidden rounded-[7px] border border-border bg-white min-[1180px]:grid-cols-5">
+        <div className="grid grid-cols-2 overflow-hidden rounded-[7px] border border-border bg-white min-[1180px]:grid-cols-[0.8fr_1.1fr_1.2fr_1.35fr_1fr]">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
 
@@ -7042,7 +7042,7 @@ function ProjectsStatsSection({
                 key={`${index}-${stat.label}`}
                 delay={index * 0.05}
                 className={cn(
-                  "group/stat relative flex min-h-[116px] transform-gpu flex-col items-center justify-center gap-1 bg-white px-5 py-2.5 text-center transition-shadow duration-500 hover:z-10 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] sm:min-h-[92px] sm:px-7 sm:py-1.5 min-[1180px]:grid min-[1180px]:min-h-[76px] min-[1180px]:grid-cols-[34px_minmax(0,1fr)] min-[1180px]:items-center min-[1180px]:gap-3 min-[1180px]:py-2 min-[1180px]:pl-2 min-[1180px]:pr-3 min-[1180px]:text-left min-[2400px]:!min-h-[90px] min-[2400px]:!grid-cols-[48px_1fr] min-[2400px]:!gap-4 min-[2400px]:!px-5 min-[2400px]:!py-3 motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]",
+                  "group/stat relative flex min-h-[116px] transform-gpu flex-col items-center justify-center gap-1 bg-white px-4 py-2.5 text-center transition-shadow duration-500 hover:z-10 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] sm:min-h-[92px] sm:px-7 sm:py-1.5 min-[1180px]:grid min-[1180px]:min-h-[76px] min-[1180px]:grid-cols-[34px_minmax(0,1fr)] min-[1180px]:items-center min-[1180px]:gap-3 min-[1180px]:py-2 min-[1180px]:!pl-3 min-[1180px]:!pr-3 min-[1180px]:text-left min-[2400px]:!min-h-[90px] min-[2400px]:!grid-cols-[48px_1fr] min-[2400px]:!gap-4 min-[2400px]:!px-5 min-[2400px]:!py-3 motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]",
                   index % 2 === 0 &&
                     index < stats.length - 1 &&
                     "border-r border-border min-[1180px]:border-r-0",
@@ -7057,16 +7057,16 @@ function ProjectsStatsSection({
                 <Icon
                   aria-hidden="true"
                   strokeWidth={1.65}
-                  className="h-[36px] w-[40px] text-brand transition-transform duration-500 group-hover/stat:-translate-y-1 sm:h-[40px] sm:w-[44px] min-[1180px]:relative min-[1180px]:-left-5 min-[1180px]:h-[30px] min-[1180px]:w-[32px] min-[1180px]:justify-self-start min-[2400px]:!h-[46px] min-[2400px]:!w-[48px] motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]"
+                  className="h-[36px] w-[40px] text-brand transition-transform duration-500 group-hover/stat:-translate-y-1 sm:h-[40px] sm:w-[44px] min-[1180px]:relative min-[1180px]:h-[30px] min-[1180px]:w-[32px] min-[1180px]:justify-self-start min-[2400px]:!h-[46px] min-[2400px]:!w-[48px] motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]"
                 />
-                <div className="min-w-0 min-[1180px]:grid min-[1180px]:h-[48px] min-[1180px]:grid-rows-[22px_26px] min-[1180px]:content-center min-[2400px]:!h-[60px] min-[2400px]:!grid-rows-[28px_32px]">
-                  <strong className="block max-w-full whitespace-nowrap text-[18px] font-extrabold leading-none text-foreground sm:text-[19px] min-[1180px]:flex min-[1180px]:h-[22px] min-[1180px]:items-center min-[1180px]:text-[17px] min-[1180px]:leading-[22px] 2xl:text-[18px] min-[2400px]:!h-[28px] min-[2400px]:!text-[22px] min-[2400px]:!leading-[28px]">
+                <div className="w-full min-w-0 max-w-full">
+                  <strong className={cn("block max-w-full font-extrabold text-foreground domtek-type-card", index === 2 ? "whitespace-nowrap" : "break-words [hyphens:auto]")}>
                     {stat.value}
                   </strong>
-                  <span className="mt-0.5 block max-w-full break-words text-[12px] font-medium leading-tight text-muted-foreground [hyphens:auto] min-[1180px]:mt-0 min-[1180px]:flex min-[1180px]:h-[26px] min-[1180px]:items-start min-[1180px]:text-[11px] min-[1180px]:leading-[14px] 2xl:text-[12px] min-[2400px]:!h-[32px] min-[2400px]:!text-[15px] min-[2400px]:!leading-[17px]">
+                  {stat.label && <span className="mt-1 block max-w-full break-words font-medium text-muted-foreground [hyphens:auto] domtek-type-small">
                     {stat.label}
                     {stat.detail ? ` ${stat.detail}` : null}
-                  </span>
+                  </span>}
                 </div>
               </Reveal>
             );

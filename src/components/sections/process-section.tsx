@@ -27,7 +27,7 @@ export function ProcessSection() {
             <h2 className="mt-3 font-extrabold text-foreground domtek-type-heading">
               {t("ideaTitle")}
             </h2>
-            <div className="mt-4 max-w-[390px] font-medium text-foreground min-[1800px]:!mt-3 min-[1800px]:max-w-[520px] domtek-type-small">
+            <div className="mt-4 max-w-[390px] font-medium text-muted-foreground min-[1800px]:!mt-3 min-[1800px]:max-w-[520px] domtek-type-body">
               <p>{t("ideaIntro")}</p>
               <p className="mt-4 min-[1800px]:!mt-3 min-[2300px]:!mt-4">
                 {t.rich("ideaBody", {
@@ -43,7 +43,7 @@ export function ProcessSection() {
             initiallyHidden
             as="article"
             delay={0.08}
-            className="group relative z-20 my-0 min-h-[210px] overflow-hidden rounded-[15px] bg-brand p-4 text-white transition-shadow duration-300 md:aspect-[1.75] md:min-h-[250px] md:p-6 lg:min-h-[220px] lg:p-5 lg:pt-6 lg:shadow-[0_24px_42px_rgba(0,0,0,0.24)] lg:hover:shadow-[0_34px_70px_rgba(0,0,0,0.28)] min-[1800px]:!rounded-[18px] min-[1800px]:!p-6 min-[2300px]:!p-7"
+            className="group relative z-20 my-0 min-h-[210px] overflow-hidden rounded-[15px] bg-brand p-4 text-white transition-shadow duration-300 md:min-h-[250px] md:p-6 lg:min-h-[220px] lg:p-5 lg:pt-6 lg:shadow-[0_24px_42px_rgba(0,0,0,0.24)] lg:hover:shadow-[0_34px_70px_rgba(0,0,0,0.28)] min-[1800px]:!rounded-[18px] min-[1800px]:!p-6 min-[2300px]:!p-7"
           >
             <div className="grid h-full grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] items-stretch gap-2 sm:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] sm:gap-3 md:grid-cols-[0.72fr_1.28fr] lg:grid-cols-[0.82fr_1.38fr] min-[1800px]:!gap-3 min-[2300px]:!gap-4">
               <div>
@@ -54,7 +54,7 @@ export function ProcessSection() {
                 >
                   {t("processTitle")}
                 </h2>
-                <p className="mt-4 font-medium min-[1800px]:!mt-3 min-[2300px]:!mt-4 domtek-type-small">
+                <p className="mt-4 font-medium min-[1800px]:!mt-3 min-[2300px]:!mt-4 domtek-type-body">
                   {t("processBody")}
                 </p>
               </div>
@@ -79,7 +79,7 @@ export function ProcessSection() {
                 <h2 className="mt-3 font-extrabold text-foreground domtek-type-heading">
                   {t("productTitle")}
                 </h2>
-                <p className="mt-4 text-left font-medium text-foreground lg:mt-3 lg:max-w-[760px] min-[2300px]:!mt-4 domtek-type-small">
+                <p className="mt-4 text-left font-medium text-muted-foreground lg:mt-3 lg:max-w-[760px] min-[2300px]:!mt-4 domtek-type-body">
                   {t("productBody")}
                 </p>
               </div>
@@ -143,7 +143,7 @@ function ProcessDiagram() {
         {processSteps.map((step) => (
           <span
             key={step.label}
-            className="absolute left-[67.7%] whitespace-nowrap text-[5.5px] font-semibold leading-none tracking-[-0.02em] text-white sm:text-[7.5px] md:text-[15px] lg:text-[9px] xl:text-[10px] min-[1800px]:!text-[12px] min-[2300px]:!text-[14px]"
+            className="absolute left-[67.7%] max-w-[32.3%] text-[5.5px] font-semibold leading-none tracking-[-0.02em] text-white sm:text-[7.5px] md:text-[15px] lg:text-[9px] xl:text-[10px] min-[1800px]:!text-[12px] min-[2300px]:!text-[14px]"
             style={{ top: step.top }}
           >
             {step.label}
