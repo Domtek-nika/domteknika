@@ -235,21 +235,21 @@ function ExpertiseGrid({ faqLabel }: { faqLabel: string }) {
       <Container size="expanded">
         <div className="lg:mx-8 min-[1800px]:!mx-12">
           <Reveal>
-            <h2
-              id="expertise-services"
-              className="domtek-text-shadow max-w-[320px] text-foreground sm:max-w-[560px] min-[1800px]:!max-w-[680px] min-[2400px]:!max-w-[760px] text-[30px] font-extrabold leading-[1.06] sm:text-[44px] md:text-[52px] min-[1800px]:!text-[58px] min-[2400px]:!text-[66px]"
-            >
-              {t("title")}
-              <span className="text-brand">.</span>
-            </h2>
-
-            <div className="mt-5 flex items-center gap-3 text-muted-foreground min-[1800px]:!gap-4 text-[15px] font-medium min-[1800px]:!text-[18px]">
+            <div className="flex items-center gap-3 text-muted-foreground min-[1800px]:!gap-4 text-[15px] font-medium min-[1800px]:!text-[18px]">
               <span
                 className="h-[3px] w-[34px] bg-brand min-[1800px]:!w-[44px]"
                 aria-hidden
               />
               {t("eyebrow")}
             </div>
+
+            <h2
+              id="expertise-services"
+              className="domtek-text-shadow mt-8 max-w-[320px] text-foreground sm:max-w-[560px] min-[1800px]:!max-w-[680px] min-[2400px]:!max-w-[760px] text-[30px] font-extrabold leading-[1.06] sm:text-[44px] md:text-[52px] min-[1800px]:!text-[58px] min-[2400px]:!text-[66px]"
+            >
+              {t("title")}
+              <span className="text-brand">.</span>
+            </h2>
 
             <p className="mt-7 max-w-[320px] text-muted-foreground sm:max-w-[610px] min-[1800px]:!max-w-[760px] text-[15px] font-medium leading-[1.42] min-[1800px]:!text-[17px] min-[2400px]:!text-[19px]">
               {t("intro")}
