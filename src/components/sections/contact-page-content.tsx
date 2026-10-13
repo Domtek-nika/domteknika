@@ -107,7 +107,7 @@ export function ContactPageContent() {
 
                 <h1
                   id="contact-page-title"
-                  className="domtek-text-shadow mt-[38px] font-extrabold text-foreground sm:whitespace-nowrap md:mt-[52px] min-[2400px]:!mt-[82px] domtek-type-display"
+                  className="domtek-text-shadow mt-[38px] text-foreground sm:whitespace-nowrap md:mt-[52px] min-[2400px]:!mt-[82px] text-[42px] font-extrabold leading-none sm:text-[60px] md:text-[66px] min-[1800px]:!text-[74px] min-[2400px]:!text-[96px]"
                 >
                   {t("Hero.title")}
                   <span className="text-brand">.</span>
@@ -146,7 +146,7 @@ export function ContactPageContent() {
                           className="size-8 shrink-0 text-brand transition-transform duration-300 group-hover/contact-card:-translate-y-1 motion-reduce:transition-none min-[1800px]:!size-10 min-[2400px]:!size-11"
                         />
                         <div>
-                          <h2 className="font-extrabold text-foreground domtek-type-card">
+                          <h2 className="text-foreground text-[14px] font-extrabold leading-tight min-[1800px]:!text-[17px] min-[2400px]:!text-[19px]">
                             {t(`Cards.${card.key}.title`)}
                           </h2>
                           <p className="mt-1.5 whitespace-pre-line font-medium text-muted-foreground min-[1800px]:!mt-2 domtek-type-small">
@@ -192,7 +192,7 @@ export function ContactPageContent() {
                 </div>
                 <h2
                   id="contact-map-title"
-                  className="mt-5 max-w-[340px] font-extrabold text-foreground min-[1800px]:!mt-7 min-[1800px]:!max-w-[460px] min-[2400px]:!max-w-[540px] domtek-type-large"
+                  className="mt-5 max-w-[340px] text-foreground min-[1800px]:!mt-7 min-[1800px]:!max-w-[460px] min-[2400px]:!max-w-[540px] text-[32px] font-extrabold leading-[1.05] md:text-[40px] min-[1800px]:!text-[52px] min-[2400px]:!text-[60px]"
                 >
                   {t("Map.title")}
                   <span className="text-brand">.</span>

@@ -185,7 +185,7 @@ export function ContactForm({
       noValidate
       aria-busy={status === "sending"}
     >
-      <h2 className="font-extrabold text-foreground domtek-type-heading">
+      <h2 className="text-foreground text-[19px] font-extrabold leading-none md:text-[20px] min-[1800px]:!text-[26px] min-[2400px]:!text-[30px]">
         {copy.title}
       </h2>
       <p className="mt-2 font-medium text-muted-foreground domtek-type-small">

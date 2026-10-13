@@ -29,7 +29,7 @@ export function LegalDocumentPage({
             {eyebrow}
           </div>
 
-          <h1 className="mt-9 text-balance font-extrabold text-foreground md:mt-11 domtek-type-display">
+          <h1 className="mt-9 text-balance text-foreground md:mt-11 text-[36px] font-extrabold leading-[1.05] sm:text-[44px] md:text-[50px]">
             {title}
             <span className="text-brand">.</span>
           </h1>
@@ -44,7 +44,7 @@ export function LegalDocumentPage({
           <div className="mt-10 grid gap-9 border-t border-border pt-9 md:mt-12 md:gap-11 md:pt-11">
             {sections.map((section) => (
               <article key={section.title} className="max-w-[820px]">
-                <h2 className="text-balance font-extrabold text-foreground domtek-type-heading">
+                <h2 className="text-balance text-foreground text-[19px] font-extrabold leading-[1.25] md:text-[21px]">
                   {section.title}
                 </h2>
 

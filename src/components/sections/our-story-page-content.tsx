@@ -933,7 +933,7 @@ export function OurStoryPageContent({ locale }: { locale: string }) {
             </div>
             <h1
               id="our-story-title"
-              className="domtek-text-shadow mt-[38px] font-extrabold text-foreground md:mt-[52px] min-[2400px]:!mt-[82px] domtek-type-display"
+              className="domtek-text-shadow mt-[38px] text-foreground md:mt-[52px] min-[2400px]:!mt-[82px] text-[42px] font-extrabold leading-none sm:text-[60px] md:text-[66px] min-[1800px]:!text-[74px] min-[2400px]:!text-[78px]"
             >
               {copy.title}
               <span className="text-brand">.</span>
@@ -1229,7 +1229,7 @@ function TimelineCard({
         <span className="block text-[13px] font-extrabold leading-none text-brand md:text-[14px] min-[1800px]:!text-[16px] min-[2400px]:!text-[18px]">
           {card.year}
         </span>
-        <h3 className="mt-3 font-extrabold text-foreground domtek-type-card">
+        <h3 className="mt-3 text-foreground text-[16px] font-extrabold leading-tight md:text-[17px] min-[1800px]:!text-[20px] min-[2400px]:!text-[22px]">
           {card.title}
         </h3>
         <p className="mt-2.5 font-medium text-muted-foreground min-[1800px]:!mt-3 domtek-type-small">
@@ -1407,7 +1407,7 @@ function OurStoryLocationDialog({
             </p>
             <h2
               id="our-story-location-title"
-              className="mt-1 font-extrabold text-foreground min-[1800px]:!mt-2 domtek-type-heading"
+              className="mt-1 text-foreground min-[1800px]:!mt-2 text-[22px] font-extrabold leading-tight sm:text-[28px] min-[1800px]:!text-[36px] min-[2400px]:!text-[42px]"
             >
               {copy.title}
             </h2>

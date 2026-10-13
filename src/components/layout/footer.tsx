@@ -94,7 +94,7 @@ export function Footer() {
 
 function FooterHeading({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="font-extrabold text-foreground domtek-type-card">
+    <h2 className="text-foreground text-[13px] font-extrabold leading-none md:text-[14px] min-[1800px]:!text-[18px] min-[2400px]:!text-[20px]">
       {children}
     </h2>
   );

@@ -142,7 +142,7 @@ function ExpertiseHero() {
 
             <h1
               id="expertise-hero-title"
-              className="domtek-text-shadow mt-[38px] font-extrabold text-foreground md:mt-[52px] min-[2400px]:!mt-[82px] domtek-type-display"
+              className="domtek-text-shadow mt-[38px] text-foreground md:mt-[52px] min-[2400px]:!mt-[82px] text-[42px] font-extrabold leading-none sm:text-[60px] md:text-[66px] min-[1800px]:!text-[74px] min-[2400px]:!text-[96px]"
             >
               {t("title")}
               <span className="text-brand">.</span>
@@ -245,7 +245,7 @@ function ExpertiseGrid({ faqLabel }: { faqLabel: string }) {
 
             <h2
               id="expertise-services"
-              className="domtek-text-shadow mt-8 max-w-[320px] font-extrabold text-foreground sm:max-w-[560px] min-[1800px]:!max-w-[680px] min-[2400px]:!max-w-[760px] domtek-type-large"
+              className="domtek-text-shadow mt-8 max-w-[320px] text-foreground sm:max-w-[560px] min-[1800px]:!max-w-[680px] min-[2400px]:!max-w-[760px] text-[30px] font-extrabold leading-[1.06] sm:text-[44px] md:text-[52px] min-[1800px]:!text-[58px] min-[2400px]:!text-[66px]"
             >
               {t("title")}
               <span className="text-brand">.</span>
@@ -294,7 +294,7 @@ function ExpertiseServiceCards({
                 className="size-9 stroke-[1.8] text-brand sm:size-10 min-[1800px]:!size-12 min-[2400px]:!size-[52px]"
                 aria-hidden
               />
-              <h3 className="mt-6 max-w-full break-words font-extrabold text-foreground [hyphens:auto] sm:mt-8 domtek-type-card">
+              <h3 className="mt-6 max-w-full break-words text-foreground [hyphens:auto] sm:mt-8 text-[14px] font-extrabold leading-tight sm:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[20px]">
                 {t(`items.${item.key}.title` as never)}
               </h3>
               <p className="mt-5 max-w-[250px] font-medium text-muted-foreground sm:mt-8 min-[1800px]:!max-w-[320px] domtek-type-body">
@@ -330,7 +330,7 @@ function BrainstormingSection() {
           />
           {t("title")}
         </div>
-        <h3 className="domtek-text-shadow mt-7 max-w-[520px] font-extrabold text-foreground min-[1800px]:!max-w-[700px] domtek-type-large">
+        <h3 className="domtek-text-shadow mt-7 max-w-[520px] text-foreground min-[1800px]:!max-w-[700px] text-[42px] font-extrabold leading-none sm:text-[58px] min-[1800px]:!text-[68px] min-[2400px]:!text-[74px]">
           {t("eyebrow")}
           <span className="text-brand">.</span>
         </h3>
@@ -479,7 +479,7 @@ function AddedValueSection() {
                       strokeWidth={1.65}
                       className="h-9 w-9 text-brand transition-transform duration-300 group-hover:-translate-y-1 sm:h-11 sm:w-11 min-[1800px]:!size-12 min-[2400px]:!size-[52px]"
                     />
-                    <h3 className="mt-4 flex min-h-[2.5em] w-full items-center justify-center font-extrabold text-foreground sm:mt-5 domtek-type-card">
+                    <h3 className="mt-4 flex min-h-[2.5em] w-full items-center justify-center text-foreground sm:mt-5 text-[13px] font-extrabold leading-tight sm:text-[15px] lg:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[19px]">
                       {t(`values.${item.key}.title` as never)}
                     </h3>
                     <p className="mt-3 font-medium text-muted-foreground sm:mt-4 domtek-type-body">
@@ -542,7 +542,7 @@ function AddedValueSection() {
                                 </span>
                               )}
                             </strong>
-                            {!isIndustries && stat.key !== "worldwide" && (
+                            {!isIndustries && t(`stats.${stat.key}.label` as never) && (
                               <span className="mt-1.5 block text-[12px] font-medium leading-tight text-white/88 sm:mt-2 sm:text-[13px] md:text-[13px] min-[1800px]:!text-[14px] min-[2400px]:!text-[15px]">
                                 {t(`stats.${stat.key}.label` as never)}
                               </span>
@@ -602,7 +602,7 @@ function ExpertiseCta() {
 
           <h2
             id="expertise-cta-title"
-            className="domtek-text-shadow mt-8 font-extrabold text-foreground domtek-type-large"
+            className="domtek-text-shadow mt-8 text-foreground text-[34px] font-extrabold leading-[1.05] sm:text-[46px] md:text-[52px] min-[1800px]:!text-[62px] min-[2400px]:!text-[72px]"
           >
             <span className="text-brand">.</span>
             {t("title")} <span className="text-brand">?</span>

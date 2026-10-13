@@ -1216,8 +1216,8 @@ const STATS: ProjectStat[] = [
     icon: Target,
   },
   {
-    label: "",
-    value: "International projects",
+    label: "International projects",
+    value: "Worldwide",
     icon: Globe2,
   },
   {
@@ -4540,7 +4540,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       { ...STATS[0], label: "Gelieferte Projekte", value: "100+" },
       { ...STATS[1], label: "Projektbegleitung", value: "Durchgängig" },
       { ...STATS[2], label: "Ingenieurkompetenz", value: "Multisektoral" },
-      { ...STATS[3], label: "", value: "Internationale Projekte" },
+      { ...STATS[3], label: "Internationale Projekte", value: "Weltweit" },
       {
         ...STATS[4],
         label: "Schweizer Ingenieurskunst",
@@ -4623,7 +4623,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       { ...STATS[0], label: "Proyectos entregados", value: "100+" },
       { ...STATS[1], label: "Apoyo al proyecto", value: "De principio a fin" },
       { ...STATS[2], label: "Experiencia técnica", value: "Multisectorial" },
-      { ...STATS[3], label: "", value: "Proyectos internacionales" },
+      { ...STATS[3], label: "Proyectos globales", value: "Internacional" },
       {
         ...STATS[4],
         label: "Ingeniería suiza",
@@ -4706,7 +4706,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       { ...STATS[0], label: "완료한 프로젝트", value: "100+" },
       { ...STATS[1], label: "프로젝트 협업", value: "전 과정 지원" },
       { ...STATS[2], label: "엔지니어링 전문성", value: "다양한 산업 분야" },
-      { ...STATS[3], label: "", value: "국제 프로젝트" },
+      { ...STATS[3], label: "글로벌 프로젝트", value: "전 세계" },
       {
         ...STATS[4],
         label: "스위스 엔지니어링",
@@ -4789,7 +4789,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       { ...STATS[0], label: "交付项目", value: "100+" },
       { ...STATS[1], label: "项目支持", value: "全流程" },
       { ...STATS[2], label: "工程专长", value: "跨行业" },
-      { ...STATS[3], label: "", value: "国际项目" },
+      { ...STATS[3], label: "国际项目", value: "全球" },
       {
         ...STATS[4],
         label: "瑞士工程",
@@ -4872,7 +4872,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       { ...STATS[0], label: "手がけたプロジェクト", value: "100+" },
       { ...STATS[1], label: "プロジェクト支援", value: "一貫対応" },
       { ...STATS[2], label: "エンジニアリング", value: "多分野に対応" },
-      { ...STATS[3], label: "", value: "国際プロジェクト" },
+      { ...STATS[3], label: "国際プロジェクト", value: "グローバル" },
       {
         ...STATS[4],
         label: "スイスエンジニアリング",
@@ -5897,7 +5897,7 @@ export function ProjectDetailsDialog({
               </span>
               <h2
                 id="project-dialog-title"
-                className="mt-4 max-w-[500px] font-extrabold tracking-[-0.02em] text-foreground min-[1800px]:max-w-[840px] min-[2400px]:max-w-[980px] domtek-type-large"
+                className="mt-4 max-w-[500px] text-foreground min-[1800px]:max-w-[840px] min-[2400px]:max-w-[980px] text-[34px] font-extrabold leading-[0.98] tracking-[-0.02em] md:text-[48px] min-[1800px]:text-[78px] min-[2400px]:text-[92px]"
               >
                 {project.title}
               </h2>
@@ -5918,7 +5918,7 @@ export function ProjectDetailsDialog({
 
               <div className="mt-8 grid gap-6 md:grid-cols-2 min-[1800px]:mt-14 min-[1800px]:gap-12 min-[2400px]:mt-16">
                 <section>
-                  <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
+                  <h3 className="uppercase text-[12px] font-extrabold tracking-wide min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
                     {modal.overview}
                   </h3>
                   <p className="mt-4 font-medium text-muted-foreground domtek-type-body">
@@ -5926,7 +5926,7 @@ export function ProjectDetailsDialog({
                   </p>
                 </section>
                 <section>
-                  <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
+                  <h3 className="uppercase text-[12px] font-extrabold tracking-wide min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
                     {modal.tags}
                   </h3>
                   <div className="mt-3 flex flex-wrap gap-2">
@@ -5945,7 +5945,7 @@ export function ProjectDetailsDialog({
               {project.relatedPatents?.length ? (
                 <section className="mt-8 border border-border bg-white min-[1800px]:mt-14">
                   <div className="border-b border-border px-4 py-3 min-[1800px]:px-7 min-[1800px]:py-6">
-                    <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
+                    <h3 className="uppercase text-[12px] font-extrabold tracking-wide min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
                       {modal.relatedPatents}
                     </h3>
                   </div>
@@ -5959,7 +5959,7 @@ export function ProjectDetailsDialog({
                         <span className="font-extrabold text-brand domtek-type-small">
                           {patent.publication}
                         </span>
-                        <span className="font-extrabold text-foreground transition-colors group-hover/patentLink:text-brand domtek-type-card">
+                        <span className="text-foreground transition-colors group-hover/patentLink:text-brand text-[14px] font-extrabold leading-tight min-[1800px]:text-[22px] min-[2400px]:text-[25px]">
                           {patent.title}
                         </span>
                         <span className="font-medium text-muted-foreground domtek-type-small">
@@ -6661,7 +6661,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
             </div>
             <h1
               id="projects-page-title"
-              className="domtek-text-shadow mt-[38px] max-w-full font-extrabold text-foreground md:mt-[52px] min-[2400px]:!mt-[82px] domtek-type-display"
+              className="domtek-text-shadow mt-[38px] max-w-full text-foreground md:mt-[52px] min-[2400px]:!mt-[82px] text-[42px] font-extrabold leading-none sm:text-[60px] md:text-[66px] min-[1800px]:!text-[74px] min-[2400px]:!text-[96px]"
             >
               {copy.hero.title}
               <span className="text-brand">.</span>
@@ -6689,7 +6689,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
             <div className="min-w-0 shrink-0">
               <h2
                 id="selected-projects"
-                className="font-extrabold text-foreground domtek-type-heading"
+                className="text-foreground text-[22px] font-extrabold leading-none min-[2400px]:!text-[40px]"
               >
                 {copy.selectedTitle}
               </h2>
@@ -6924,7 +6924,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                 </span>
                 <h2
                   id="project-dialog-title"
-                  className="mt-4 max-w-[500px] font-extrabold tracking-[-0.02em] text-foreground min-[1800px]:max-w-[840px] min-[2400px]:max-w-[980px] domtek-type-large"
+                  className="mt-4 max-w-[500px] text-foreground min-[1800px]:max-w-[840px] min-[2400px]:max-w-[980px] text-[34px] font-extrabold leading-[0.98] tracking-[-0.02em] md:text-[48px] min-[1800px]:text-[78px] min-[2400px]:text-[92px]"
                 >
                   {selectedProject.title}
                 </h2>
@@ -6945,7 +6945,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
 
                 <div className="mt-8 grid gap-6 md:grid-cols-2 min-[1800px]:mt-14 min-[1800px]:gap-12 min-[2400px]:mt-16">
                   <section>
-                    <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
+                    <h3 className="uppercase text-[12px] font-extrabold tracking-wide min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
                       {copy.modal.overview}
                     </h3>
                     <p className="mt-4 font-medium text-muted-foreground domtek-type-body">
@@ -6953,7 +6953,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                     </p>
                   </section>
                   <section>
-                    <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
+                    <h3 className="uppercase text-[12px] font-extrabold tracking-wide min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
                       {copy.modal.tags}
                     </h3>
                     <div className="mt-3 flex flex-wrap gap-2">
@@ -6972,7 +6972,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                 {selectedProject.relatedPatents?.length ? (
                   <section className="mt-8 border border-border bg-white min-[1800px]:mt-14">
                     <div className="border-b border-border px-4 py-3 min-[1800px]:px-7 min-[1800px]:py-6">
-                      <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
+                      <h3 className="uppercase text-[12px] font-extrabold tracking-wide min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
                         {copy.modal.relatedPatents}
                       </h3>
                     </div>
@@ -6986,7 +6986,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                           <span className="font-extrabold text-brand domtek-type-small">
                             {patent.publication}
                           </span>
-                          <span className="font-extrabold text-foreground transition-colors group-hover/patentLink:text-brand domtek-type-card">
+                          <span className="text-foreground transition-colors group-hover/patentLink:text-brand text-[14px] font-extrabold leading-tight min-[1800px]:text-[22px] min-[2400px]:text-[25px]">
                             {patent.title}
                           </span>
                           <span className="font-medium text-muted-foreground domtek-type-small">
@@ -7059,11 +7059,11 @@ function ProjectsStatsSection({
                   strokeWidth={1.65}
                   className="h-[36px] w-[40px] text-brand transition-transform duration-500 group-hover/stat:-translate-y-1 sm:h-[40px] sm:w-[44px] min-[1180px]:relative min-[1180px]:h-[30px] min-[1180px]:w-[32px] min-[1180px]:justify-self-start min-[2400px]:!h-[46px] min-[2400px]:!w-[48px] motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]"
                 />
-                <div className="w-full min-w-0 max-w-full">
-                  <strong className={cn("block max-w-full font-extrabold text-foreground domtek-type-card", index === 2 ? "whitespace-nowrap" : "break-words [hyphens:auto]")}>
+                <div className="grid w-full min-w-0 max-w-full grid-rows-[44px_calc(var(--domtek-type-small)*2.9)] gap-y-1 min-[1180px]:grid-rows-[22px_calc(var(--domtek-type-small)*2.9)] min-[2400px]:!grid-rows-[28px_calc(var(--domtek-type-small)*2.9)]">
+                  <strong className={cn("block max-w-full text-[18px] font-extrabold leading-[1.2] text-foreground sm:text-[19px] min-[1180px]:text-[17px] min-[1180px]:whitespace-nowrap 2xl:text-[18px] min-[2400px]:!text-[22px]", index === 2 ? "whitespace-nowrap" : "break-words [hyphens:auto]")}>
                     {stat.value}
                   </strong>
-                  {stat.label && <span className="mt-1 block max-w-full break-words font-medium text-muted-foreground [hyphens:auto] domtek-type-small">
+                  {stat.label && <span className="block max-w-full break-words font-medium text-muted-foreground [hyphens:auto] domtek-type-small">
                     {stat.label}
                     {stat.detail ? ` ${stat.detail}` : null}
                   </span>}
@@ -7129,7 +7129,7 @@ function ProjectCard({
           <span className="font-extrabold text-brand domtek-type-small">
             {project.category}
           </span>
-          <strong className="mt-2 font-extrabold text-foreground min-[2400px]:!mt-3 domtek-type-card">
+          <strong className="mt-2 text-foreground min-[2400px]:!mt-3 text-[19px] font-extrabold leading-tight min-[2400px]:!text-[24px]">
             {project.title}
           </strong>
           <span className="mt-2 font-medium text-muted-foreground min-[2400px]:!mt-3 domtek-type-body">
@@ -7186,7 +7186,7 @@ export function ProjectsPageCta({ locale }: { locale: string }) {
           </div>
           <h2
             id="projects-cta-title"
-            className="domtek-text-shadow mt-8 font-extrabold text-foreground min-[2400px]:!mt-[82px] min-[2400px]:!max-w-[1100px] domtek-type-large"
+            className="domtek-text-shadow mt-8 text-foreground min-[2400px]:!mt-[82px] min-[2400px]:!max-w-[1100px] text-[36px] font-extrabold leading-[1.05] sm:text-[48px] min-[2400px]:!text-[96px]"
           >
             <span className="text-brand">.</span>
             {copy.title} <span className="text-brand">?</span>

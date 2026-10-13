@@ -98,7 +98,7 @@ export default async function ServicePage({ params }: Props) {
               <p className="flex items-center gap-3 font-medium text-muted-foreground domtek-type-eyebrow">
                 <span className="h-[3px] w-[34px] shrink-0 bg-brand" aria-hidden />{labels.eyebrow}
               </p>
-              <h1 className="domtek-text-shadow mt-5 font-extrabold text-foreground md:mt-8 domtek-type-display">
+              <h1 className="domtek-text-shadow mt-5 text-foreground md:mt-8 text-[42px] font-extrabold leading-[1.05] sm:text-[60px] md:text-[66px] min-[1800px]:text-[74px]">
                 {displayTitle}<span className="text-brand">.</span>
               </h1>
             </div>
@@ -128,7 +128,7 @@ export default async function ServicePage({ params }: Props) {
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.35fr] lg:gap-12">
             <div>
               <p className="flex items-center gap-3 font-medium text-muted-foreground domtek-type-eyebrow"><span className="h-[3px] w-[34px] shrink-0 bg-brand" aria-hidden />{labels.technicalFocus}</p>
-              <h2 id="service-insight-title" className="domtek-text-shadow mt-6 font-extrabold domtek-type-section">{copy.technicalFocus.title}</h2>
+              <h2 id="service-insight-title" className="domtek-text-shadow mt-6 text-[30px] font-extrabold leading-[1.1] sm:text-[36px] min-[1800px]:text-[42px]">{copy.technicalFocus.title}</h2>
               <p className="mt-6 font-medium text-muted-foreground domtek-type-body">{copy.technicalFocus.intro}</p>
             </div>
             <div className="min-w-0">
@@ -164,7 +164,7 @@ export default async function ServicePage({ params }: Props) {
               <div>
                 <p className="flex items-center gap-3 font-medium text-muted-foreground domtek-type-eyebrow"><span className="h-[3px] w-[34px] bg-brand" aria-hidden />{labels.caseStudy}</p>
                 <p className="mt-6 font-extrabold text-brand domtek-type-small">{heroProject.title}</p>
-                <h2 id="service-projects-title" className="domtek-text-shadow mt-3 font-extrabold domtek-type-section">{copy.caseStudy.title}</h2>
+                <h2 id="service-projects-title" className="domtek-text-shadow mt-3 text-[30px] font-extrabold leading-[1.08] sm:text-[38px] min-[1800px]:text-[46px]">{copy.caseStudy.title}</h2>
                 <p className="mt-6 font-medium text-muted-foreground domtek-type-body">{copy.caseStudy.body}</p>
                 <Link href={`/projects/${heroProject.id}`} className={`mt-5 inline-flex min-h-11 items-center gap-4 domtek-type-body font-bold text-brand hover:underline ${focusStyle}`}>{labels.viewProject}<ArrowUpRight className="size-4" aria-hidden /></Link>
               </div>
@@ -174,7 +174,7 @@ export default async function ServicePage({ params }: Props) {
             {projects.slice(1).map((project) => (
               <Link key={project.id} href={`/projects/${project.id}`} className={`group grid min-w-0 grid-cols-[100px_1fr] gap-4 rounded-[7px] border border-border bg-white p-4 transition-shadow hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)] sm:grid-cols-[120px_1fr] ${focusStyle}`}>
                 <div className="relative aspect-square self-start rounded-[7px] bg-muted/60"><Image src={project.image} alt={project.imageAlt} fill sizes="120px" className="object-contain p-2" /></div>
-                <div className="min-w-0"><h3 className="font-extrabold domtek-type-card">{project.title}</h3><p className="mt-2 font-medium text-muted-foreground domtek-type-small">{project.scope?.[getServiceProjectScopeIndex(service.slug, project.id)] ?? project.description}</p><span className="mt-3 inline-flex items-center gap-2 domtek-type-body font-bold text-brand">{labels.viewProject}<ArrowUpRight className="size-3.5" aria-hidden /></span></div>
+                <div className="min-w-0"><h3 className="text-[14px] font-extrabold leading-tight">{project.title}</h3><p className="mt-2 font-medium text-muted-foreground domtek-type-small">{project.scope?.[getServiceProjectScopeIndex(service.slug, project.id)] ?? project.description}</p><span className="mt-3 inline-flex items-center gap-2 domtek-type-body font-bold text-brand">{labels.viewProject}<ArrowUpRight className="size-3.5" aria-hidden /></span></div>
               </Link>
             ))}
           </div>
@@ -186,7 +186,7 @@ export default async function ServicePage({ params }: Props) {
           <div className="grid gap-4 lg:grid-cols-[0.9fr_1.25fr_1.15fr] lg:items-stretch min-[1800px]:gap-5">
             <section id="service-needs" aria-labelledby="service-needs-title" className="scroll-mt-32 rounded-[15px] border border-border bg-white p-6 min-[1800px]:p-8">
               <span className="block h-[3px] w-[34px] bg-brand" aria-hidden />
-              <h2 id="service-needs-title" className="mt-4 font-extrabold domtek-type-heading">{labels.needs}</h2>
+              <h2 id="service-needs-title" className="mt-4 text-[20px] font-extrabold leading-tight">{labels.needs}</h2>
               <p className="mt-5 font-bold domtek-type-body">{copy.outcome}</p>
               <ul className="mt-6 space-y-4">
                 {copy.needs.map((need) => <li key={need} className="flex gap-3 domtek-type-body font-medium text-muted-foreground"><Check className="mt-0.5 size-4 shrink-0 text-brand" aria-hidden />{need}</li>)}
@@ -195,13 +195,13 @@ export default async function ServicePage({ params }: Props) {
 
             <section id="service-method" aria-labelledby="service-method-title" className="relative z-10 scroll-mt-32 rounded-[15px] bg-brand p-6 text-white shadow-[0_24px_42px_rgba(0,0,0,0.18)] min-[1800px]:p-8">
               <span className="block h-[3px] w-[34px] bg-white" aria-hidden />
-              <h2 id="service-method-title" className="mt-4 font-extrabold domtek-type-heading">{labels.approach}</h2>
+              <h2 id="service-method-title" className="mt-4 text-[22px] font-extrabold leading-tight">{labels.approach}</h2>
               <p className="mt-5 font-medium text-white/95 domtek-type-body">{copy.approach}</p>
               <ol className="mt-6 space-y-5 border-t border-white/35 pt-6">
                 {copy.steps.map((step, index) => (
                   <li key={step.title} className="flex items-start gap-4">
                     <span className="pt-0.5 domtek-type-small font-extrabold tabular-nums text-white/75" aria-hidden>{String(index + 1).padStart(2, "0")}</span>
-                    <div><h3 className="font-extrabold domtek-type-card">{step.title}</h3><p className="mt-1.5 text-white/90 domtek-type-body">{step.body}</p></div>
+                    <div><h3 className="text-[14px] font-extrabold leading-snug">{step.title}</h3><p className="mt-1.5 text-white/90 domtek-type-body">{step.body}</p></div>
                   </li>
                 ))}
               </ol>
@@ -209,7 +209,7 @@ export default async function ServicePage({ params }: Props) {
 
             <section aria-labelledby="service-deliverables" className="rounded-[15px] border border-border bg-white p-6 min-[1800px]:p-8">
               <span className="block h-[3px] w-[34px] bg-brand" aria-hidden />
-              <h2 id="service-deliverables" className="mt-4 font-extrabold domtek-type-heading">{labels.deliverables}</h2>
+              <h2 id="service-deliverables" className="mt-4 text-[20px] font-extrabold leading-tight">{labels.deliverables}</h2>
               <ul className="mt-5 space-y-4">
                 {copy.deliverables.map((item) => <li key={item} className="flex gap-3 domtek-type-body font-medium"><Check className="mt-0.5 size-4 shrink-0 text-brand" aria-hidden />{item}</li>)}
               </ul>
@@ -224,7 +224,7 @@ export default async function ServicePage({ params }: Props) {
         <Container size="wide">
           <div className="grid gap-6 lg:grid-cols-[0.85fr_1.35fr] lg:gap-12">
             <div>
-              <h2 id="service-faq-title" className="domtek-text-shadow max-w-sm font-extrabold domtek-type-section">{labels.faq}<span className="text-brand">.</span></h2>
+              <h2 id="service-faq-title" className="domtek-text-shadow max-w-sm text-[30px] font-extrabold leading-[1.1] sm:text-[36px]">{labels.faq}<span className="text-brand">.</span></h2>
               <Link href="/expertise#expertise-faq" className={`mt-5 inline-flex min-h-11 items-center gap-3 domtek-type-body font-bold text-brand hover:underline ${focusStyle}`}>{faqCopy.fullFaqLink}<ArrowUpRight className="size-4 shrink-0" aria-hidden /></Link>
             </div>
             <FaqSearch questions={copy.faq.map((item, index) => ({ ...item, id: `${service.slug}-${index}`, topic: service.slug }))} topics={[{id: service.slug, label: displayTitle}]} labels={faqCopy.labels} locale={locale} />
@@ -237,7 +237,7 @@ export default async function ServicePage({ params }: Props) {
         <Container size="wide" className="relative z-10">
           <div className="max-w-[700px]">
             <p className="flex items-center gap-3 font-medium text-muted-foreground domtek-type-eyebrow"><span className="h-[3px] w-[34px] bg-brand" aria-hidden />{labels.briefTitle}</p>
-            <h2 id="service-contact" className="domtek-text-shadow mt-6 font-extrabold domtek-type-large"><span className="text-brand">.</span>{copy.ctaTitle}</h2>
+            <h2 id="service-contact" className="domtek-text-shadow mt-6 text-[34px] font-extrabold leading-[1.05] sm:text-[46px] md:text-[52px]"><span className="text-brand">.</span>{copy.ctaTitle}</h2>
             <p className="mt-6 max-w-[500px] font-medium text-muted-foreground domtek-type-body">{copy.ctaBody}</p>
             <Link href="/contact" className={`mt-7 ${buttonStyle}`}>{labels.contact}<ArrowRight className="size-4 shrink-0" aria-hidden /></Link>
           </div>
@@ -246,7 +246,7 @@ export default async function ServicePage({ params }: Props) {
 
       <nav aria-label={labels.other} className="pb-16">
         <Container size="wide">
-          <h2 className="font-extrabold domtek-type-heading">{labels.other}</h2>
+          <h2 className="text-[22px] font-extrabold">{labels.other}</h2>
           <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
             {services.filter((item) => item.slug !== service.slug).map((item) => (
               <li key={item.slug} className="min-w-0">

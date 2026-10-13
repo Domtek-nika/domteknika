@@ -1863,7 +1863,7 @@ export function PatentPageContent({
             </div>
             <h1
               id="patent-page-title"
-              className="domtek-text-shadow mt-[38px] font-extrabold text-foreground md:mt-[52px] min-[2400px]:!mt-[82px] domtek-type-display"
+              className="domtek-text-shadow mt-[38px] text-foreground md:mt-[52px] min-[2400px]:!mt-[82px] text-[42px] font-extrabold leading-none sm:text-[60px] md:text-[66px] min-[1800px]:!text-[74px] min-[2400px]:!text-[96px]"
             >
               {copy.hero.title}
               <span className="text-brand">.</span>
@@ -1889,7 +1889,7 @@ export function PatentPageContent({
             <div className="min-w-0 shrink-0">
               <h2
                 id="patent-archive-title"
-                className="font-extrabold text-foreground domtek-type-heading"
+                className="text-foreground text-[22px] font-extrabold leading-none min-[1800px]:!text-[28px] min-[2400px]:!text-[32px]"
               >
                 {copy.archiveTitle}
               </h2>
@@ -2204,7 +2204,7 @@ export function PatentPageContent({
                 </span>
                 <h2
                   id="patent-dialog-title"
-                  className="mt-3 max-w-[680px] break-words font-extrabold text-foreground domtek-type-section"
+                  className="mt-3 max-w-[680px] break-words text-foreground text-[27px] font-extrabold leading-[1.04] md:text-[34px] lg:text-[36px]"
                 >
                   {selectedPatent.title}
                 </h2>
@@ -2228,7 +2228,7 @@ export function PatentPageContent({
                     <div className="flex items-center gap-4 border-b border-border bg-muted/30 px-4 py-3 sm:px-5">
                       <div className="flex items-center gap-2.5">
                         <span className="size-2 bg-brand" aria-hidden />
-                        <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
+                        <h3 className="uppercase text-[12px] font-extrabold tracking-wide">
                           {copy.details.linkedProjects}
                         </h3>
                       </div>
@@ -2248,7 +2248,7 @@ export function PatentPageContent({
 
                 <div className="mt-7 grid gap-5 md:grid-cols-2">
                   <section>
-                    <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
+                    <h3 className="uppercase text-[12px] font-extrabold tracking-wide">
                       {copy.details.overview}
                     </h3>
                     <p className="mt-3 font-medium text-muted-foreground domtek-type-body">
@@ -2256,7 +2256,7 @@ export function PatentPageContent({
                     </p>
                   </section>
                   <section>
-                    <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
+                    <h3 className="uppercase text-[12px] font-extrabold tracking-wide">
                       {copy.details.tags}
                     </h3>
                     <div className="mt-3 flex flex-wrap gap-2">
@@ -2456,7 +2456,7 @@ function PatentLinkGroup({
 
   return (
     <div className="rounded-[4px] border border-border p-4">
-      <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
+      <h3 className="uppercase text-[12px] font-extrabold tracking-wide">
         {title}
       </h3>
       <div className="mt-3 flex flex-wrap gap-2">
@@ -2488,7 +2488,7 @@ function PatentPdfGroup({
 
   return (
     <div className="rounded-[4px] border border-border p-4">
-      <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
+      <h3 className="uppercase text-[12px] font-extrabold tracking-wide">
         {title}
       </h3>
       <div className="mt-3 flex flex-wrap gap-2">
@@ -2774,7 +2774,7 @@ function PatentDrawingGallery({
   return (
     <section className="mt-8">
       <div className="flex items-center justify-between gap-4">
-        <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
+        <h3 className="uppercase text-[12px] font-extrabold tracking-wide">
           {title}
         </h3>
         {hasMultiple && (
@@ -3509,7 +3509,7 @@ export function PatentPageCta({ locale }: { locale: string }) {
           </div>
           <h2
             id="patent-cta-title"
-            className="domtek-text-shadow mt-10 font-extrabold text-foreground domtek-type-large"
+            className="domtek-text-shadow mt-10 text-foreground text-[38px] font-extrabold leading-[1.02] sm:text-[54px] min-[1800px]:!text-[62px] min-[2400px]:!text-[72px]"
           >
             <span className="text-brand">{copy.titlePrefix}</span>
             {copy.title}

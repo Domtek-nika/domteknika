@@ -81,7 +81,7 @@ export function ExpertiseOverviewSection() {
                   </span>
 
                   <span className="min-w-0 flex-1 min-[920px]:block">
-                    <span className="block domtek-type-card font-extrabold tracking-[-0.01em] text-foreground min-[920px]:mt-3">
+                    <span className="block text-foreground min-[920px]:mt-3 text-[15px] font-extrabold leading-[1.2] tracking-[-0.01em]">
                       {t(`items.${item}.title`)}
                     </span>
                     <span className="mt-1 block text-pretty domtek-type-small font-medium text-muted-foreground sm:mt-1.5">

@@ -40,7 +40,7 @@ export function CtaSection() {
 
           <h2
             id="cta-title"
-            className="domtek-text-shadow mt-6 max-w-[860px] font-extrabold text-foreground min-[1800px]:max-w-[1000px] min-[2300px]:!max-w-[1020px] domtek-type-large"
+            className="domtek-text-shadow mt-6 max-w-[860px] text-foreground min-[1800px]:max-w-[1000px] min-[2300px]:!max-w-[1020px] text-[32px] font-extrabold leading-[1.08] sm:text-[42px] lg:text-[48px] min-[1800px]:text-[66px] min-[2300px]:!text-[68px]"
           >
             <span className="text-brand">.</span>
             {t("title")}

@@ -47,7 +47,7 @@ export function RelatedProjectCard({
         <span className="font-extrabold uppercase tracking-wide text-brand domtek-type-small">
           {project.category}
         </span>
-        <strong className="mt-2 font-extrabold text-foreground transition-colors group-hover/relatedProject:text-brand domtek-type-card">
+        <strong className="mt-2 text-foreground transition-colors group-hover/relatedProject:text-brand text-[18px] font-extrabold leading-tight">
           {project.title}
         </strong>
         <span className="mt-2 line-clamp-3 font-medium text-muted-foreground domtek-type-small">

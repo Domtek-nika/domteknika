@@ -41,7 +41,7 @@ export function PatentDetailPage({
               <p className="font-extrabold uppercase tracking-wide text-brand domtek-type-small">
                 {patent.publication}
               </p>
-              <h1 className="domtek-text-shadow mt-4 max-w-[900px] break-words font-extrabold text-foreground domtek-type-display">
+              <h1 className="domtek-text-shadow mt-4 max-w-[900px] break-words text-foreground text-[36px] font-extrabold leading-[1.02] sm:text-[52px]">
                 {patent.title}
                 <span className="text-brand">.</span>
               </h1>
@@ -83,7 +83,7 @@ export function PatentDetailPage({
 
           {patent.publicationAliases.length > 1 ? (
             <section className="mt-12">
-              <h2 className="font-extrabold text-foreground domtek-type-section">
+              <h2 className="text-foreground text-[24px] font-extrabold">
                 {copy.family}
               </h2>
               <div className="mt-4 flex flex-wrap gap-2">
@@ -104,7 +104,7 @@ export function PatentDetailPage({
             <section className="mt-12">
               <div className="flex items-center gap-3">
                 <span className="size-2.5 bg-brand" aria-hidden />
-                <h2 className="font-extrabold text-foreground domtek-type-section">
+                <h2 className="text-foreground text-[24px] font-extrabold">
                   {copy.relatedProjects}
                 </h2>
               </div>
@@ -122,7 +122,7 @@ export function PatentDetailPage({
 
           {patent.images.length ? (
             <section className="mt-14">
-              <h2 className="font-extrabold text-foreground domtek-type-section">
+              <h2 className="text-foreground text-[28px] font-extrabold">
                 {copy.gallery}
               </h2>
               <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -161,7 +161,7 @@ export function PatentDetailPage({
 
           {sourceLinks.length ? (
             <section className="mt-14 border-t border-border pt-10">
-              <h2 className="font-extrabold text-foreground domtek-type-section">
+              <h2 className="text-foreground text-[28px] font-extrabold">
                 {copy.sources}
               </h2>
               <div className="mt-5 flex flex-wrap gap-3">
@@ -220,7 +220,7 @@ function TextSection({
 }) {
   return (
     <section className="mt-14 border-t border-border pt-10">
-      <h2 className="font-extrabold text-foreground domtek-type-section">{title}</h2>
+      <h2 className="text-foreground text-[28px] font-extrabold">{title}</h2>
       {ordered ? (
         <ol className="mt-6 grid max-w-[1000px] list-decimal gap-4 pl-5">
           {paragraphs.map((paragraph, index) => (

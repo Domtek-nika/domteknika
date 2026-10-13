@@ -111,7 +111,7 @@ export function ProjectsSection({
           <div className="mb-5 flex flex-col items-start gap-3 md:mb-[38px] md:gap-4 lg:flex-row lg:items-center lg:justify-between min-[1800px]:mb-[50px] min-[2300px]:!mb-[50px]">
             <h2
               id="projects-title"
-              className="font-extrabold text-foreground domtek-type-heading"
+              className="text-foreground text-[20px] font-extrabold leading-none min-[1800px]:text-[32px] min-[2300px]:!text-[34px]"
             >
               {t("title")}
             </h2>
@@ -238,7 +238,7 @@ function ProjectCard({
           />
         </div>
         <div className="flex h-[186px] flex-col px-4 pb-4 pt-4 min-[1800px]:h-[270px] min-[1800px]:px-7 min-[1800px]:pb-7 min-[1800px]:pt-7 min-[2300px]:!h-[275px] min-[2300px]:!px-8 min-[2300px]:!pb-7 min-[2300px]:!pt-7">
-          <h3 className="font-extrabold text-foreground domtek-type-card">
+          <h3 className="text-foreground text-[14px] font-extrabold leading-tight min-[1800px]:text-[21px] min-[2300px]:!text-[22px]">
             {project.title}
           </h3>
           <p className="mt-2 font-medium text-muted-foreground min-[1800px]:mt-4 min-[2300px]:!mt-4 domtek-type-small">

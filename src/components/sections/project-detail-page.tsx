@@ -37,7 +37,7 @@ export function ProjectDetailPage({
               <p className="font-extrabold uppercase tracking-wide text-brand domtek-type-small">
                 {project.category}
               </p>
-              <h1 className="domtek-text-shadow mt-4 font-extrabold text-foreground domtek-type-display">
+              <h1 className="domtek-text-shadow mt-4 text-foreground text-[42px] font-extrabold leading-[0.98] sm:text-[60px]">
                 {project.title}<span className="text-brand">.</span>
               </h1>
               <p className="mt-7 max-w-[700px] font-medium text-muted-foreground domtek-type-body">
@@ -67,12 +67,12 @@ export function ProjectDetailPage({
 
           <div className="mt-14 grid gap-10 border-t border-border pt-10 lg:grid-cols-2 lg:gap-16">
             <section>
-              <h2 className="font-extrabold text-foreground domtek-type-section">{copy.overview}</h2>
+              <h2 className="text-foreground text-[24px] font-extrabold">{copy.overview}</h2>
               <p className="mt-5 font-medium text-muted-foreground domtek-type-body">{project.overview}</p>
             </section>
             {project.scope?.length ? (
               <section>
-                <h2 className="font-extrabold text-foreground domtek-type-section">{copy.scope}</h2>
+                <h2 className="text-foreground text-[24px] font-extrabold">{copy.scope}</h2>
                 <ul className="mt-5 grid gap-3">
                   {project.scope.map((item) => (
                     <li key={item} className="border-l-2 border-brand pl-4 font-medium text-muted-foreground domtek-type-body">{item}</li>
@@ -84,7 +84,7 @@ export function ProjectDetailPage({
 
           {gallery.length > 1 ? (
             <section className="mt-16" aria-labelledby="project-gallery-title">
-              <h2 id="project-gallery-title" className="font-extrabold text-foreground domtek-type-section">{copy.gallery}</h2>
+              <h2 id="project-gallery-title" className="text-foreground text-[28px] font-extrabold">{copy.gallery}</h2>
               <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {gallery.map((image, index) => (
                   <div key={image} className="relative aspect-[4/3] overflow-hidden rounded-[7px] border border-border bg-muted">
@@ -97,12 +97,12 @@ export function ProjectDetailPage({
 
           {project.relatedPatents?.length ? (
             <section className="mt-16 border-t border-border pt-10">
-              <h2 className="font-extrabold text-foreground domtek-type-section">{copy.relatedPatents}</h2>
+              <h2 className="text-foreground text-[28px] font-extrabold">{copy.relatedPatents}</h2>
               <div className="mt-6 grid gap-3 md:grid-cols-2">
                 {project.relatedPatents.map((patent) => (
                   <Link key={patent.patentId} href={`/patents/${patent.patentId.toLowerCase()}`} className="group rounded-[7px] border border-border bg-white p-5 transition-[transform,border-color,box-shadow] hover:-translate-y-0.5 hover:border-brand/35 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)]">
                     <span className="flex items-start justify-between gap-4 font-extrabold text-brand domtek-type-small">{patent.publication}<ArrowUpRight className="size-4 shrink-0" aria-hidden /></span>
-                    <strong className="mt-3 block text-foreground domtek-type-card">{patent.title}</strong>
+                    <strong className="mt-3 block text-foreground text-[15px] leading-tight">{patent.title}</strong>
                     <span className="mt-2 block font-medium text-muted-foreground domtek-type-small">{patent.note}</span>
                   </Link>
                 ))}
@@ -112,7 +112,7 @@ export function ProjectDetailPage({
 
           {relatedServices.length > 0 ? (
             <section className="mt-12 border-t border-border pt-8">
-              <h2 className="font-extrabold domtek-type-section">{serviceCopy.labels.related}</h2>
+              <h2 className="text-2xl font-extrabold">{serviceCopy.labels.related}</h2>
               <ul className="mt-4 flex flex-wrap gap-x-8 gap-y-2">
                 {relatedServices.map((service) => (
                   <li key={service.slug}>

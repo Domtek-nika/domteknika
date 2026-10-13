@@ -23,7 +23,7 @@ export function HomePositioningSection() {
             </p>
             <h2
               id="positioning-title"
-              className="mx-auto mt-5 scroll-mt-36 text-balance font-extrabold text-foreground sm:mt-6 domtek-type-section"
+              className="mx-auto mt-5 scroll-mt-36 text-balance text-foreground sm:mt-6 text-[28px] font-extrabold leading-[1.15] sm:text-[32px] lg:text-[36px] min-[1800px]:text-[42px]"
             >
               {innovation("title")}
               <span className="text-brand">.</span>
