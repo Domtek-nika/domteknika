@@ -68,9 +68,9 @@ export function ExpertiseOverviewSection() {
                 <Link
                   key={item}
                   href={getServicePath(item)}
-                  className="flex min-w-0 snap-none items-start gap-3.5 border-0 border-b border-border/80 bg-transparent px-5 py-3.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand last:border-b-0 sm:min-w-[44%] sm:snap-start sm:gap-4 sm:rounded-[14px] sm:border sm:bg-white sm:px-4 sm:py-4 sm:last:border-b min-[920px]:block min-[920px]:min-w-0 min-[920px]:snap-none min-[920px]:rounded-none min-[920px]:border-b-0 min-[920px]:border-l min-[920px]:border-r-0 min-[920px]:border-t-0 min-[920px]:bg-transparent min-[920px]:px-6 min-[920px]:py-5 lg:py-6"
+                  className="group flex min-w-0 snap-none items-start gap-3.5 border-0 border-b border-border/80 bg-transparent px-5 py-3.5 transition-colors duration-300 hover:bg-muted/50 focus-visible:bg-muted/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand last:border-b-0 sm:min-w-[44%] sm:snap-start sm:gap-4 sm:rounded-[14px] sm:border sm:bg-white sm:px-4 sm:py-4 sm:last:border-b min-[920px]:block min-[920px]:min-w-0 min-[920px]:snap-none min-[920px]:rounded-none min-[920px]:border-b-0 min-[920px]:border-l min-[920px]:border-r-0 min-[920px]:border-t-0 min-[920px]:bg-transparent min-[920px]:px-6 min-[920px]:py-5 lg:py-6 motion-reduce:transition-none"
                 >
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-[11px] bg-brand/[0.07] ring-1 ring-brand/[0.06] sm:size-11 sm:rounded-[12px] min-[920px]:size-10 min-[920px]:rounded-full min-[920px]:ring-0">
+                  <span className="flex size-10 shrink-0 items-center justify-center rounded-[11px] bg-brand/[0.07] ring-1 ring-brand/[0.06] transition-transform duration-300 motion-safe:group-hover:-translate-y-1 motion-safe:group-focus-visible:-translate-y-1 sm:size-11 sm:rounded-[12px] min-[920px]:size-10 min-[920px]:rounded-full min-[920px]:ring-0 motion-reduce:transition-none">
                     <Image
                       src={expertiseIcons[item]}
                       alt=""
@@ -81,7 +81,7 @@ export function ExpertiseOverviewSection() {
                   </span>
 
                   <span className="min-w-0 flex-1 min-[920px]:block">
-                    <span className="block text-foreground min-[920px]:mt-3 text-[15px] font-extrabold leading-[1.2] tracking-[-0.01em]">
+                    <span className="block text-foreground transition-colors duration-300 group-hover:text-brand group-focus-visible:text-brand min-[920px]:mt-3 text-[15px] font-extrabold leading-[1.2] tracking-[-0.01em] motion-reduce:transition-none">
                       {t(`items.${item}.title`)}
                     </span>
                     <span className="mt-1 block text-pretty text-muted-foreground sm:mt-1.5 text-[12px] font-medium leading-[1.4] sm:leading-[1.45]">

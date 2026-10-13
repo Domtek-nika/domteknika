@@ -54,7 +54,7 @@ export function ProcessSection() {
                 >
                   {t("processTitle")}
                 </h2>
-                <p className="mt-4 min-[1800px]:!mt-3 min-[2300px]:!mt-4 text-[13px] font-medium leading-[1.28] md:text-[15px] lg:text-[13px] min-[1800px]:!text-[16px] min-[2300px]:!text-[17px]">
+                <p className="mt-4 min-[1800px]:!mt-3 min-[2300px]:!mt-4 text-[13px] font-medium leading-[1.3] md:text-[14px] min-[1800px]:!text-[16px] min-[2300px]:!text-[17px]">
                   {t("processBody")}
                 </p>
               </div>

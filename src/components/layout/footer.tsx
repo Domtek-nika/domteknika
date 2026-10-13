@@ -65,7 +65,7 @@ export function Footer() {
                 contact@domteknika.ch
               </FooterAnchor>
               <FooterAnchor href="https://www.linkedin.com/company/domteknika1/" external>
-                LinkedIn <span aria-hidden>↗</span>
+                LinkedIn
               </FooterAnchor>
             </div>
           </address>
