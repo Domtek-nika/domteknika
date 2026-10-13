@@ -110,7 +110,7 @@ export function HeroSection() {
         className="relative z-10 min-[2400px]:!max-w-[1900px]"
       >
         <div className="w-full max-w-[620px] min-[1800px]:max-w-[760px] min-[2300px]:!max-w-[800px]">
-          <div className="mb-[38px] flex items-start gap-3 text-[15px] font-medium leading-none text-muted-foreground md:mb-[52px] md:items-center md:text-[16px] min-[2400px]:!mb-[82px] min-[2400px]:!gap-5 min-[2400px]:!text-[26px]">
+          <div className="mb-[38px] flex items-start gap-3 font-medium text-muted-foreground md:mb-[52px] md:items-center min-[2400px]:!mb-[82px] min-[2400px]:!gap-5 domtek-type-eyebrow">
             <span
               className="mt-[6px] h-[3px] w-[34px] shrink-0 bg-[#e30613] md:mt-0 min-[2400px]:!h-1 min-[2400px]:!w-[74px]"
               style={{ backgroundImage: "none" }}
@@ -162,7 +162,7 @@ export function HeroSection() {
             </h1>
           </div>
 
-          <p className="mt-8 max-w-[280px] text-[14px] font-medium leading-[1.34] text-muted-foreground min-[390px]:max-w-[320px] sm:max-w-[390px] min-[1800px]:mt-10 min-[1800px]:max-w-[580px] min-[1800px]:text-[18px] min-[2300px]:!max-w-[620px] min-[2300px]:!text-[19px]">
+          <p className="mt-8 max-w-[280px] font-medium text-muted-foreground min-[390px]:max-w-[320px] sm:max-w-[390px] min-[1800px]:mt-10 min-[1800px]:max-w-[580px] min-[2300px]:!max-w-[620px] domtek-type-body">
             {t.rich("lead", {
               brand: (chunks) => (
                 <strong className="font-extrabold text-foreground underline decoration-brand decoration-[2px] underline-offset-[3px]">

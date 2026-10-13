@@ -14,11 +14,12 @@
     "noResultsTitle": "Ninguna pregunta coincide con su búsqueda.",
     "noResultsBody": "Pruebe otra palabra o seleccione un tema más amplio.",
     "resetFilters": "Restablecer la búsqueda y los filtros",
-    "resultRange": "Preguntas {from}–{to} de {count}",
+    "resultRange": "Mostrando las preguntas {from} a {to} de {count}",
+    "resultRangeSingle": "Mostrando la pregunta {from} de {count}",
     "paginationLabel": "Navegación de preguntas",
     "previousPage": "Anterior",
     "nextPage": "Siguiente",
-    "pageLabel": "{current} / {total}"
+    "pageLabel": "Página {current} de {total}"
   },
   "general": [
     {

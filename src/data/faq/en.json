@@ -14,11 +14,12 @@
     "noResultsTitle": "No questions match your search.",
     "noResultsBody": "Try another word or select a broader topic.",
     "resetFilters": "Reset search and filters",
-    "resultRange": "{from}–{to} of {count} questions",
+    "resultRange": "Showing questions {from}–{to} of {count}",
+    "resultRangeSingle": "Showing question {from} of {count}",
     "paginationLabel": "Question navigation",
     "previousPage": "Previous",
     "nextPage": "Next",
-    "pageLabel": "{current} / {total}"
+    "pageLabel": "Page {current} of {total}"
   },
   "general": [
     {

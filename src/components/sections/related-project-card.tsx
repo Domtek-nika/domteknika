@@ -44,13 +44,13 @@ export function RelatedProjectCard({
       </span>
 
       <span className="flex min-w-0 flex-col p-4 sm:p-5">
-        <span className="text-[10px] font-extrabold uppercase tracking-wide text-brand">
+        <span className="font-extrabold uppercase tracking-wide text-brand domtek-type-small">
           {project.category}
         </span>
-        <strong className="mt-2 text-[18px] font-extrabold leading-tight text-foreground transition-colors group-hover/relatedProject:text-brand">
+        <strong className="mt-2 font-extrabold text-foreground transition-colors group-hover/relatedProject:text-brand domtek-type-card">
           {project.title}
         </strong>
-        <span className="mt-2 line-clamp-3 text-[12px] font-medium leading-[1.5] text-muted-foreground">
+        <span className="mt-2 line-clamp-3 font-medium text-muted-foreground domtek-type-small">
           {project.description}
         </span>
 
@@ -59,7 +59,7 @@ export function RelatedProjectCard({
             {project.tags.slice(0, 3).map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-muted px-2.5 py-1 text-[9px] font-bold text-muted-foreground"
+                className="rounded-full bg-muted px-2.5 py-1 font-bold text-muted-foreground domtek-type-small"
               >
                 {tag}
               </span>

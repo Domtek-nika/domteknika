@@ -120,7 +120,7 @@ export function ContactForm({
       onInput={resetSubmissionState}
       aria-busy={status === "sending"}
     >
-      <h2 className="text-[19px] font-extrabold leading-none text-foreground md:text-[20px] min-[1800px]:!text-[26px] min-[2400px]:!text-[30px]">
+      <h2 className="font-extrabold text-foreground domtek-type-heading">
         {copy.title}
       </h2>
 
@@ -190,7 +190,7 @@ export function ContactForm({
           maxLength={5000}
           disabled={status === "sending"}
           required
-          className="min-h-[88px] resize-y rounded-[7px] border border-input bg-white px-3.5 py-3 text-[13px] font-medium leading-[1.45] text-foreground outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-muted-foreground focus:border-brand/45 focus:shadow-[0_0_0_3px_rgba(227,6,19,0.08)] min-[1800px]:!min-h-[130px] min-[1800px]:!rounded-[10px] min-[1800px]:!px-5 min-[1800px]:!py-4 min-[1800px]:!text-[15px] min-[2400px]:!min-h-[160px] min-[2400px]:!rounded-[12px] min-[2400px]:!px-6 min-[2400px]:!py-5 min-[2400px]:!text-[17px]"
+          className="min-h-[88px] resize-y rounded-[7px] border border-input bg-white px-3.5 py-3 font-medium text-foreground outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-muted-foreground focus:border-brand/45 focus:shadow-[0_0_0_3px_rgba(227,6,19,0.08)] min-[1800px]:!min-h-[130px] min-[1800px]:!rounded-[10px] min-[1800px]:!px-5 min-[1800px]:!py-4 min-[2400px]:!min-h-[160px] min-[2400px]:!rounded-[12px] min-[2400px]:!px-6 min-[2400px]:!py-5 domtek-type-body"
         />
       </div>
 
@@ -210,7 +210,7 @@ export function ContactForm({
       {feedback && (
         <p
           className={cn(
-            "mt-3 flex items-start gap-2 text-[12px] font-medium leading-[1.35] min-[1800px]:!mt-4 min-[1800px]:!gap-3 min-[1800px]:!text-[14px] min-[2400px]:!text-[16px]",
+            "mt-3 flex items-start gap-2 font-medium min-[1800px]:!mt-4 min-[1800px]:!gap-3 domtek-type-small",
             feedback.isError ? "text-brand" : "text-foreground",
           )}
           role={feedback.isError ? "alert" : "status"}
@@ -282,7 +282,7 @@ function ContactInput({
       <input
         id={inputId}
         className={cn(
-          "h-[40px] rounded-[7px] border border-input bg-white px-3.5 text-[13px] font-medium text-foreground outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-muted-foreground focus:border-brand/45 focus:shadow-[0_0_0_3px_rgba(227,6,19,0.08)] min-[1800px]:!h-[52px] min-[1800px]:!rounded-[10px] min-[1800px]:!px-5 min-[1800px]:!text-[15px] min-[2400px]:!h-[58px] min-[2400px]:!rounded-[12px] min-[2400px]:!px-6 min-[2400px]:!text-[17px]",
+          "h-[40px] rounded-[7px] border border-input bg-white px-3.5 domtek-type-body font-medium text-foreground outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-muted-foreground focus:border-brand/45 focus:shadow-[0_0_0_3px_rgba(227,6,19,0.08)] min-[1800px]:!h-[52px] min-[1800px]:!rounded-[10px] min-[1800px]:!px-5 min-[2400px]:!h-[58px] min-[2400px]:!rounded-[12px] min-[2400px]:!px-6",
           className,
         )}
         {...props}

@@ -24,10 +24,10 @@ export function ProcessSection() {
             className="group flex min-h-[200px] flex-col justify-start rounded-[15px] border border-border bg-white p-4 transition-shadow duration-300 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] md:min-h-[220px] md:p-5 md:pt-6 min-[1800px]:!min-h-[260px] min-[1800px]:!rounded-[18px] min-[1800px]:!p-6 min-[2300px]:!min-h-[300px] min-[2300px]:!p-7"
           >
             <AccentLine />
-            <h2 className="mt-3 text-[18px] font-extrabold leading-tight text-foreground md:text-[19px] min-[1800px]:!text-[24px] min-[2300px]:!text-[27px]">
+            <h2 className="mt-3 font-extrabold text-foreground domtek-type-heading">
               {t("ideaTitle")}
             </h2>
-            <div className="mt-4 max-w-[390px] text-[13px] font-medium leading-[1.3] text-foreground md:text-[14px] min-[1800px]:!mt-3 min-[1800px]:max-w-[520px] min-[1800px]:!text-[16px] min-[2300px]:!text-[17px]">
+            <div className="mt-4 max-w-[390px] font-medium text-foreground min-[1800px]:!mt-3 min-[1800px]:max-w-[520px] domtek-type-small">
               <p>{t("ideaIntro")}</p>
               <p className="mt-4 min-[1800px]:!mt-3 min-[2300px]:!mt-4">
                 {t.rich("ideaBody", {
@@ -50,11 +50,11 @@ export function ProcessSection() {
                 <AccentLine light />
                 <h2
                   id="process-title"
-                  className="mt-3 text-[20px] font-extrabold leading-tight md:text-[22px] lg:text-[20px] min-[1800px]:!text-[26px] min-[2300px]:!text-[29px]"
+                  className="mt-3 font-extrabold domtek-type-heading"
                 >
                   {t("processTitle")}
                 </h2>
-                <p className="mt-4 text-[13px] font-medium leading-[1.28] md:text-[15px] lg:text-[13px] min-[1800px]:!mt-3 min-[1800px]:!text-[16px] min-[2300px]:!mt-4 min-[2300px]:!text-[17px]">
+                <p className="mt-4 font-medium min-[1800px]:!mt-3 min-[2300px]:!mt-4 domtek-type-small">
                   {t("processBody")}
                 </p>
               </div>
@@ -76,10 +76,10 @@ export function ProcessSection() {
             <div className="grid h-full grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:flex lg:min-h-[inherit] lg:flex-col lg:justify-between">
               <div className="px-4 pb-4 pt-4 md:px-5 md:pt-6 lg:pb-0 min-[1800px]:!px-6 min-[1800px]:!pt-6 min-[2300px]:!px-7 min-[2300px]:!pt-7">
                 <AccentLine />
-                <h2 className="mt-3 text-[18px] font-extrabold leading-tight text-foreground md:text-[19px] min-[1800px]:!text-[24px] min-[2300px]:!text-[27px]">
+                <h2 className="mt-3 font-extrabold text-foreground domtek-type-heading">
                   {t("productTitle")}
                 </h2>
-                <p className="mt-4 text-left text-[13px] font-medium leading-[1.3] text-foreground md:text-[14px] lg:mt-3 lg:max-w-[760px] min-[1800px]:!text-[16px] min-[2300px]:!mt-4 min-[2300px]:!text-[17px]">
+                <p className="mt-4 text-left font-medium text-foreground lg:mt-3 lg:max-w-[760px] min-[2300px]:!mt-4 domtek-type-small">
                   {t("productBody")}
                 </p>
               </div>

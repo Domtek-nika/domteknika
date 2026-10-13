@@ -46,6 +46,23 @@ Règles:
 
 Ombre typographique de référence: `.domtek-text-shadow`.
 
+Les textes communs utilisent les rôles `.domtek-type-*` définis dans
+`src/app/globals.css`, avec les mêmes seuils responsive sur toutes les pages.
+
+| Rôle | Mobile / écran courant | Dès 1800px | Dès 2300px |
+| --- | --- | --- | --- |
+| Petit texte, libellé | 12px | 15px | 16px |
+| Texte courant | 15px | 18px | 19px |
+| Titre de carte | 16px | 20px | 22px |
+| Titre compact | 20px | 24px | 27px |
+| Titre de section | 28px, puis 32px à 640px et 36px à 1024px | 42px | 42px |
+| Grand titre / CTA | 32px, puis 42px à 640px et 48px à 1024px | 66px | 68px |
+| Très grand titre | clamp mobile, puis 42px à 640px, 48px à 1024px et 50px à 1536px | 68px | 70px |
+
+Les dimensions et la disposition des composants restent propres à chaque
+composition. Les textes placés sur un schéma et les cartes compactes à hauteur
+fixe gardent leurs contraintes de lecture et de cadrage.
+
 ## Rayons
 
 - Rayon de base Figma: `7px`.

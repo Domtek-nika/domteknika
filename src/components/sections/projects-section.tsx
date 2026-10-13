@@ -90,7 +90,7 @@ export function ProjectsSection({
           <div className="mb-5 flex flex-col items-start gap-3 md:mb-[38px] md:gap-4 lg:flex-row lg:items-center lg:justify-between min-[1800px]:mb-[50px] min-[2300px]:!mb-[50px]">
             <h2
               id="projects-title"
-              className="text-[20px] font-extrabold leading-none text-foreground min-[1800px]:text-[32px] min-[2300px]:!text-[34px]"
+              className="font-extrabold text-foreground domtek-type-heading"
             >
               {t("title")}
             </h2>
@@ -213,13 +213,13 @@ function ProjectCard({
           />
         </div>
         <div className="flex h-[186px] flex-col px-4 pb-4 pt-4 min-[1800px]:h-[270px] min-[1800px]:px-7 min-[1800px]:pb-7 min-[1800px]:pt-7 min-[2300px]:!h-[275px] min-[2300px]:!px-8 min-[2300px]:!pb-7 min-[2300px]:!pt-7">
-          <h3 className="text-[14px] font-extrabold leading-tight text-foreground min-[1800px]:text-[21px] min-[2300px]:!text-[22px]">
+          <h3 className="font-extrabold text-foreground domtek-type-card">
             {project.title}
           </h3>
-          <p className="mt-2 text-[12.5px] font-medium leading-[1.24] text-muted-foreground min-[1800px]:mt-4 min-[1800px]:text-[16px] min-[1800px]:leading-[1.34] min-[2300px]:!mt-4 min-[2300px]:!text-[16px]">
+          <p className="mt-2 font-medium text-muted-foreground min-[1800px]:mt-4 min-[2300px]:!mt-4 domtek-type-small">
             {project.description}
           </p>
-          <p className="mt-auto text-[12px] font-extrabold leading-none text-brand min-[1800px]:text-[16px] min-[2300px]:!text-[16px]">
+          <p className="mt-auto font-extrabold text-brand domtek-type-small">
             {tag}
           </p>
         </div>

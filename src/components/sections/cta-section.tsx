@@ -33,21 +33,21 @@ export function CtaSection() {
         className="relative z-10 min-[2300px]:!max-w-[1900px]"
       >
         <Reveal initiallyHidden className="max-w-[920px] min-[1800px]:max-w-[1000px] min-[2300px]:!max-w-[1040px]">
-          <div className="flex items-center gap-3 text-[16px] font-medium text-muted-foreground min-[1800px]:gap-4 min-[1800px]:text-[20px] min-[2300px]:!gap-4 min-[2300px]:!text-[20px]">
+          <div className="flex items-center gap-3 font-medium text-muted-foreground min-[1800px]:gap-4 min-[2300px]:!gap-4 domtek-type-eyebrow">
             <span className="h-[3px] w-[34px] bg-brand min-[1800px]:h-[3px] min-[1800px]:w-[52px] min-[2300px]:!h-[3px] min-[2300px]:!w-[52px]" aria-hidden />
             {t("eyebrow")}
           </div>
 
           <h2
             id="cta-title"
-            className="domtek-text-shadow mt-6 max-w-[860px] text-[32px] font-extrabold leading-[1.08] text-foreground sm:text-[42px] lg:text-[48px] min-[1800px]:max-w-[1000px] min-[1800px]:text-[66px] min-[2300px]:!max-w-[1020px] min-[2300px]:!text-[68px]"
+            className="domtek-text-shadow mt-6 max-w-[860px] font-extrabold text-foreground min-[1800px]:max-w-[1000px] min-[2300px]:!max-w-[1020px] domtek-type-large"
           >
             <span className="text-brand">.</span>
             {t("title")}
             <span className="whitespace-nowrap text-brand">&nbsp;?</span>
           </h2>
 
-          <p className="mt-7 max-w-[500px] text-[15px] font-medium leading-[1.34] text-muted-foreground min-[1800px]:max-w-[650px] min-[1800px]:text-[19px] min-[2300px]:!max-w-[680px] min-[2300px]:!text-[20px]">
+          <p className="mt-7 max-w-[500px] font-medium text-muted-foreground min-[1800px]:max-w-[650px] min-[2300px]:!max-w-[680px] domtek-type-body">
             {t("subtitle")}
           </p>
 

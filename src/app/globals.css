@@ -99,6 +99,14 @@
   --chart-4: oklch(0.62 0.12 248);
   --chart-5: oklch(0.4 0.05 244);
   --radius: 0.4375rem; /* 7px */
+  --domtek-type-small: 12px;
+  --domtek-type-body: 15px;
+  --domtek-type-eyebrow: 15px;
+  --domtek-type-card: 16px;
+  --domtek-type-heading: 20px;
+  --domtek-type-section: 28px;
+  --domtek-type-large: 32px;
+  --domtek-type-display: clamp(30px, 8.4vw, 38px);
   --sidebar: #fbfbfb;
   --sidebar-foreground: var(--ink);
   --sidebar-primary: var(--brand);
@@ -107,6 +115,65 @@
   --sidebar-accent-foreground: var(--ink);
   --sidebar-border: #e5e5e5;
   --sidebar-ring: var(--brand);
+}
+
+/* Shared text levels follow the homepage. Each component opts into its role;
+   diagrams, image captions and the branded hero composition keep their fit. */
+.domtek-type-small { font-size: var(--domtek-type-small); line-height: 1.45; }
+.domtek-type-body { font-size: var(--domtek-type-body); line-height: 1.5; }
+.domtek-type-eyebrow { font-size: var(--domtek-type-eyebrow); line-height: 1.25; }
+.domtek-type-card { font-size: var(--domtek-type-card); line-height: 1.2; }
+.domtek-type-heading { font-size: var(--domtek-type-heading); line-height: 1.2; }
+.domtek-type-section { font-size: var(--domtek-type-section); line-height: 1.15; }
+.domtek-type-large { font-size: var(--domtek-type-large); line-height: 1.08; }
+.domtek-type-display { font-size: var(--domtek-type-display); line-height: 1.05; }
+
+@media (min-width: 640px) {
+  :root {
+    --domtek-type-section: 32px;
+    --domtek-type-large: 42px;
+    --domtek-type-display: 42px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root { --domtek-type-eyebrow: 16px; }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --domtek-type-section: 36px;
+    --domtek-type-large: 48px;
+    --domtek-type-display: 48px;
+  }
+}
+
+@media (min-width: 1536px) {
+  :root { --domtek-type-display: 50px; }
+}
+
+@media (min-width: 1800px) {
+  :root {
+    --domtek-type-small: 15px;
+    --domtek-type-body: 18px;
+    --domtek-type-eyebrow: 20px;
+    --domtek-type-card: 20px;
+    --domtek-type-heading: 24px;
+    --domtek-type-section: 42px;
+    --domtek-type-large: 66px;
+    --domtek-type-display: 68px;
+  }
+}
+
+@media (min-width: 2300px) {
+  :root {
+    --domtek-type-small: 16px;
+    --domtek-type-body: 19px;
+    --domtek-type-card: 22px;
+    --domtek-type-heading: 27px;
+    --domtek-type-large: 68px;
+    --domtek-type-display: 70px;
+  }
 }
 
 .dark {

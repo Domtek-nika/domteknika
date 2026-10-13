@@ -927,18 +927,18 @@ export function OurStoryPageContent({ locale }: { locale: string }) {
       <Container size="wide" className="relative z-10 pb-14 md:pb-[72px] min-[1800px]:!pb-[100px] min-[2400px]:!pb-[120px]">
         <div className="max-w-[540px] min-[1800px]:!max-w-[720px] min-[2400px]:!max-w-[900px]">
           <Reveal>
-            <div className="flex items-center gap-3 text-[15px] font-medium leading-none text-muted-foreground md:text-[16px] min-[2400px]:!gap-5 min-[2400px]:!text-[26px]">
+            <div className="flex items-center gap-3 font-medium text-muted-foreground min-[2400px]:!gap-5 domtek-type-eyebrow">
               <span className="h-[3px] w-[34px] shrink-0 bg-brand min-[2400px]:!h-1 min-[2400px]:!w-[74px]" aria-hidden />
               {copy.eyebrow}
             </div>
             <h1
               id="our-story-title"
-              className="domtek-text-shadow mt-[38px] text-[42px] font-extrabold leading-none text-foreground sm:text-[60px] md:mt-[52px] md:text-[66px] min-[1800px]:!text-[74px] min-[2400px]:!mt-[82px] min-[2400px]:!text-[78px]"
+              className="domtek-text-shadow mt-[38px] font-extrabold text-foreground md:mt-[52px] min-[2400px]:!mt-[82px] domtek-type-display"
             >
               {copy.title}
               <span className="text-brand">.</span>
             </h1>
-            <p className="mt-8 max-w-[430px] text-[15px] font-medium leading-[1.35] text-muted-foreground sm:text-[16px] min-[1800px]:!max-w-[620px] min-[1800px]:!text-[18px] min-[2400px]:!max-w-[760px] min-[2400px]:!text-[21px]">
+            <p className="mt-8 max-w-[430px] font-medium text-muted-foreground min-[1800px]:!max-w-[620px] min-[2400px]:!max-w-[760px] domtek-type-body">
               {copy.intro}
             </p>
           </Reveal>
@@ -1229,10 +1229,10 @@ function TimelineCard({
         <span className="block text-[13px] font-extrabold leading-none text-brand md:text-[14px] min-[1800px]:!text-[16px] min-[2400px]:!text-[18px]">
           {card.year}
         </span>
-        <h3 className="mt-3 text-[16px] font-extrabold leading-tight text-foreground md:text-[17px] min-[1800px]:!text-[20px] min-[2400px]:!text-[22px]">
+        <h3 className="mt-3 font-extrabold text-foreground domtek-type-card">
           {card.title}
         </h3>
-        <p className="mt-2.5 text-[12px] font-medium leading-[1.5] text-muted-foreground md:text-[13px] min-[1800px]:!mt-3 min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]">
+        <p className="mt-2.5 font-medium text-muted-foreground min-[1800px]:!mt-3 domtek-type-small">
           {card.description}
         </p>
       </div>
@@ -1402,12 +1402,12 @@ function OurStoryLocationDialog({
       >
         <div className="flex shrink-0 items-start justify-between gap-5 border-b border-border px-5 py-4 sm:px-7 sm:py-5 min-[1800px]:!gap-8 min-[1800px]:!px-10 min-[1800px]:!py-8 min-[2400px]:!px-12 min-[2400px]:!py-10">
           <div>
-            <p className="text-[11px] font-extrabold uppercase tracking-wide text-brand min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]">
+            <p className="font-extrabold uppercase tracking-wide text-brand domtek-type-small">
               {copy.eyebrow}
             </p>
             <h2
               id="our-story-location-title"
-              className="mt-1 text-[22px] font-extrabold leading-tight text-foreground sm:text-[28px] min-[1800px]:!mt-2 min-[1800px]:!text-[36px] min-[2400px]:!text-[42px]"
+              className="mt-1 font-extrabold text-foreground min-[1800px]:!mt-2 domtek-type-heading"
             >
               {copy.title}
             </h2>
@@ -1426,7 +1426,7 @@ function OurStoryLocationDialog({
             <LazyContactMap label="DOMTEKNIKA" />
           </div>
           <div className="flex min-h-0 flex-col justify-between rounded-[7px] border border-border bg-muted/30 p-4 sm:p-5 min-[1800px]:!rounded-[14px] min-[1800px]:!p-8 min-[2400px]:!rounded-[16px] min-[2400px]:!p-10">
-            <p className="whitespace-pre-line text-[14px] font-medium leading-[1.5] text-muted-foreground min-[1800px]:!text-[16px] min-[2400px]:!text-[18px]">
+            <p className="whitespace-pre-line font-medium text-muted-foreground domtek-type-body">
               {copy.address}
             </p>
             <a

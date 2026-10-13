@@ -24,41 +24,41 @@ export function LegalDocumentPage({
     <section className="bg-background pb-20 pt-[132px] md:pb-28 md:pt-[152px]">
       <Container size="default">
         <div className="mx-auto max-w-[920px]">
-          <div className="flex items-center gap-3 text-[14px] font-medium leading-none text-muted-foreground md:text-[15px]">
+          <div className="flex items-center gap-3 font-medium text-muted-foreground domtek-type-eyebrow">
             <span className="h-[3px] w-[34px] shrink-0 bg-brand" aria-hidden />
             {eyebrow}
           </div>
 
-          <h1 className="mt-9 text-balance text-[36px] font-extrabold leading-[1.05] text-foreground sm:text-[44px] md:mt-11 md:text-[50px]">
+          <h1 className="mt-9 text-balance font-extrabold text-foreground md:mt-11 domtek-type-display">
             {title}
             <span className="text-brand">.</span>
           </h1>
 
-          <p className="mt-5 max-w-[780px] text-pretty text-[14px] leading-[1.7] text-muted-foreground md:text-[15px]">
+          <p className="mt-5 max-w-[780px] text-pretty text-muted-foreground domtek-type-body">
             {intro}
           </p>
-          <p className="mt-3 text-[12px] font-medium text-muted-foreground/80 md:text-[13px]">
+          <p className="mt-3 font-medium text-muted-foreground/80 domtek-type-small">
             {updatedLabel}: {updated}
           </p>
 
           <div className="mt-10 grid gap-9 border-t border-border pt-9 md:mt-12 md:gap-11 md:pt-11">
             {sections.map((section) => (
               <article key={section.title} className="max-w-[820px]">
-                <h2 className="text-balance text-[19px] font-extrabold leading-[1.25] text-foreground md:text-[21px]">
+                <h2 className="text-balance font-extrabold text-foreground domtek-type-heading">
                   {section.title}
                 </h2>
 
                 {section.paragraphs?.map((paragraph) => (
                   <p
                     key={paragraph}
-                    className="mt-3 whitespace-pre-line text-pretty text-[13px] leading-[1.75] text-muted-foreground md:text-[14px]"
+                    className="mt-3 whitespace-pre-line text-pretty text-muted-foreground domtek-type-small"
                   >
                     {paragraph}
                   </p>
                 ))}
 
                 {section.items && (
-                  <ul className="mt-3 grid list-disc gap-1.5 pl-5 text-[13px] leading-[1.7] text-muted-foreground marker:text-brand md:text-[14px]">
+                  <ul className="mt-3 grid list-disc gap-1.5 pl-5 text-muted-foreground marker:text-brand domtek-type-body">
                     {section.items.map((item) => (
                       <li key={item}>{item}</li>
                     ))}

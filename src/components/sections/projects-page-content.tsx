@@ -5892,16 +5892,16 @@ export function ProjectDetailsDialog({
               data-lenis-prevent
               className="min-h-0 overflow-y-auto overscroll-contain px-5 py-7 md:px-9 md:py-10 min-[1800px]:px-16 min-[1800px]:py-16 min-[2400px]:px-20 min-[2400px]:py-[72px]"
             >
-              <span className="text-[11px] font-extrabold uppercase tracking-wide text-brand min-[1800px]:text-[17px] min-[2400px]:text-[19px]">
+              <span className="font-extrabold uppercase tracking-wide text-brand domtek-type-small">
                 {project.category}
               </span>
               <h2
                 id="project-dialog-title"
-                className="mt-4 max-w-[500px] text-[34px] font-extrabold leading-[0.98] tracking-[-0.02em] text-foreground md:text-[48px] min-[1800px]:max-w-[840px] min-[1800px]:text-[78px] min-[2400px]:max-w-[980px] min-[2400px]:text-[92px]"
+                className="mt-4 max-w-[500px] font-extrabold tracking-[-0.02em] text-foreground min-[1800px]:max-w-[840px] min-[2400px]:max-w-[980px] domtek-type-large"
               >
                 {project.title}
               </h2>
-              <p className="mt-6 max-w-[500px] text-[16px] font-medium leading-[1.45] text-muted-foreground md:text-[17px] min-[1800px]:max-w-[860px] min-[1800px]:text-[26px] min-[2400px]:max-w-[980px] min-[2400px]:text-[30px]">
+              <p className="mt-6 max-w-[500px] font-medium text-muted-foreground min-[1800px]:max-w-[860px] min-[2400px]:max-w-[980px] domtek-type-body">
                 {project.description}
               </p>
 
@@ -5918,22 +5918,22 @@ export function ProjectDetailsDialog({
 
               <div className="mt-8 grid gap-6 md:grid-cols-2 min-[1800px]:mt-14 min-[1800px]:gap-12 min-[2400px]:mt-16">
                 <section>
-                  <h3 className="text-[12px] font-extrabold uppercase tracking-wide min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
+                  <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
                     {modal.overview}
                   </h3>
-                  <p className="mt-4 text-[14px] font-medium leading-[1.65] text-muted-foreground min-[1800px]:text-[21px] min-[2400px]:text-[24px]">
+                  <p className="mt-4 font-medium text-muted-foreground domtek-type-body">
                     {project.overview}
                   </p>
                 </section>
                 <section>
-                  <h3 className="text-[12px] font-extrabold uppercase tracking-wide min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
+                  <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
                     {modal.tags}
                   </h3>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full bg-muted px-3 py-1.5 text-[11px] font-medium text-muted-foreground min-[1800px]:px-5 min-[1800px]:py-2.5 min-[1800px]:text-[17px] min-[2400px]:text-[19px]"
+                        className="rounded-full bg-muted px-3 py-1.5 font-medium text-muted-foreground min-[1800px]:px-5 min-[1800px]:py-2.5 domtek-type-small"
                       >
                         {tag}
                       </span>
@@ -5945,7 +5945,7 @@ export function ProjectDetailsDialog({
               {project.relatedPatents?.length ? (
                 <section className="mt-8 border border-border bg-white min-[1800px]:mt-14">
                   <div className="border-b border-border px-4 py-3 min-[1800px]:px-7 min-[1800px]:py-6">
-                    <h3 className="text-[12px] font-extrabold uppercase tracking-wide min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
+                    <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
                       {modal.relatedPatents}
                     </h3>
                   </div>
@@ -5956,13 +5956,13 @@ export function ProjectDetailsDialog({
                         href={`/patents/${patent.patentId.toLowerCase()}`}
                         className="group/patentLink grid gap-1 px-4 py-3 text-left transition-colors hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/30 min-[1800px]:gap-3 min-[1800px]:px-7 min-[1800px]:py-6"
                       >
-                        <span className="text-[11px] font-extrabold text-brand min-[1800px]:text-[17px] min-[2400px]:text-[19px]">
+                        <span className="font-extrabold text-brand domtek-type-small">
                           {patent.publication}
                         </span>
-                        <span className="text-[14px] font-extrabold leading-tight text-foreground transition-colors group-hover/patentLink:text-brand min-[1800px]:text-[22px] min-[2400px]:text-[25px]">
+                        <span className="font-extrabold text-foreground transition-colors group-hover/patentLink:text-brand domtek-type-card">
                           {patent.title}
                         </span>
-                        <span className="text-[12px] font-medium leading-[1.45] text-muted-foreground min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
+                        <span className="font-medium text-muted-foreground domtek-type-small">
                           {patent.note}
                         </span>
                       </Link>
@@ -6652,7 +6652,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
           className="relative z-10 flex items-start pb-14 md:min-h-[410px] md:pb-10 min-[2400px]:!min-h-[780px] min-[2400px]:!pb-20"
         >
           <Reveal className="max-w-[560px] pb-5 md:pb-0 min-[1800px]:!max-w-[720px] min-[2400px]:!max-w-[900px]">
-            <div className="flex items-center gap-3 text-[15px] font-medium leading-none text-muted-foreground md:text-[16px] min-[2400px]:!gap-5 min-[2400px]:!text-[26px]">
+            <div className="flex items-center gap-3 font-medium text-muted-foreground min-[2400px]:!gap-5 domtek-type-eyebrow">
               <span
                 className="h-[3px] w-[34px] shrink-0 bg-brand min-[2400px]:!h-1 min-[2400px]:!w-[74px]"
                 aria-hidden
@@ -6661,16 +6661,16 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
             </div>
             <h1
               id="projects-page-title"
-              className="domtek-text-shadow mt-[38px] max-w-full text-[42px] font-extrabold leading-none text-foreground sm:text-[60px] md:mt-[52px] md:text-[66px] min-[1800px]:!text-[74px] min-[2400px]:!mt-[82px] min-[2400px]:!text-[96px]"
+              className="domtek-text-shadow mt-[38px] max-w-full font-extrabold text-foreground md:mt-[52px] min-[2400px]:!mt-[82px] domtek-type-display"
             >
               {copy.hero.title}
               <span className="text-brand">.</span>
             </h1>
-            <p className="mt-8 max-w-[430px] text-[15px] font-medium leading-[1.35] text-muted-foreground sm:text-[16px] min-[1800px]:!max-w-[620px] min-[1800px]:!text-[18px] min-[2400px]:!max-w-[760px] min-[2400px]:!text-[21px]">
+            <p className="mt-8 max-w-[430px] font-medium text-muted-foreground min-[1800px]:!max-w-[620px] min-[2400px]:!max-w-[760px] domtek-type-body">
               <strong className="font-extrabold">{copy.hero.strong}</strong>{" "}
               {copy.hero.rest}
             </p>
-            <p className="mt-5 max-w-[430px] text-[15px] font-medium leading-[1.35] text-muted-foreground sm:text-[16px] min-[1800px]:!max-w-[620px] min-[1800px]:!text-[18px] min-[2400px]:!max-w-[760px] min-[2400px]:!text-[21px]">
+            <p className="mt-5 max-w-[430px] font-medium text-muted-foreground min-[1800px]:!max-w-[620px] min-[2400px]:!max-w-[760px] domtek-type-body">
               {copy.hero.lead}
             </p>
           </Reveal>
@@ -6689,11 +6689,11 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
             <div className="min-w-0 shrink-0">
               <h2
                 id="selected-projects"
-                className="text-[22px] font-extrabold leading-none text-foreground min-[2400px]:!text-[40px]"
+                className="font-extrabold text-foreground domtek-type-heading"
               >
                 {copy.selectedTitle}
               </h2>
-              <p className="mt-3 text-[12px] font-medium text-muted-foreground min-[2400px]:!mt-5 min-[2400px]:!text-[20px]">
+              <p className="mt-3 font-medium text-muted-foreground min-[2400px]:!mt-5 domtek-type-small">
                 {visibleProjects.length} / {copy.projects.length}{" "}
                 {copy.resultsLabel}
               </p>
@@ -6919,16 +6919,16 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                 data-lenis-prevent
                 className="min-h-0 overflow-y-auto overscroll-contain px-5 py-7 md:px-9 md:py-10 min-[1800px]:px-16 min-[1800px]:py-16 min-[2400px]:px-20 min-[2400px]:py-[72px]"
               >
-                <span className="text-[11px] font-extrabold uppercase tracking-wide text-brand min-[1800px]:text-[17px] min-[2400px]:text-[19px]">
+                <span className="font-extrabold uppercase tracking-wide text-brand domtek-type-small">
                   {selectedProject.category}
                 </span>
                 <h2
                   id="project-dialog-title"
-                  className="mt-4 max-w-[500px] text-[34px] font-extrabold leading-[0.98] tracking-[-0.02em] text-foreground md:text-[48px] min-[1800px]:max-w-[840px] min-[1800px]:text-[78px] min-[2400px]:max-w-[980px] min-[2400px]:text-[92px]"
+                  className="mt-4 max-w-[500px] font-extrabold tracking-[-0.02em] text-foreground min-[1800px]:max-w-[840px] min-[2400px]:max-w-[980px] domtek-type-large"
                 >
                   {selectedProject.title}
                 </h2>
-                <p className="mt-6 max-w-[500px] text-[16px] font-medium leading-[1.45] text-muted-foreground md:text-[17px] min-[1800px]:max-w-[860px] min-[1800px]:text-[26px] min-[2400px]:max-w-[980px] min-[2400px]:text-[30px]">
+                <p className="mt-6 max-w-[500px] font-medium text-muted-foreground min-[1800px]:max-w-[860px] min-[2400px]:max-w-[980px] domtek-type-body">
                   {selectedProject.description}
                 </p>
 
@@ -6945,22 +6945,22 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
 
                 <div className="mt-8 grid gap-6 md:grid-cols-2 min-[1800px]:mt-14 min-[1800px]:gap-12 min-[2400px]:mt-16">
                   <section>
-                    <h3 className="text-[12px] font-extrabold uppercase tracking-wide min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
+                    <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
                       {copy.modal.overview}
                     </h3>
-                    <p className="mt-4 text-[14px] font-medium leading-[1.65] text-muted-foreground min-[1800px]:text-[21px] min-[2400px]:text-[24px]">
+                    <p className="mt-4 font-medium text-muted-foreground domtek-type-body">
                       {selectedProject.overview}
                     </p>
                   </section>
                   <section>
-                    <h3 className="text-[12px] font-extrabold uppercase tracking-wide min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
+                    <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
                       {copy.modal.tags}
                     </h3>
                     <div className="mt-3 flex flex-wrap gap-2">
                       {selectedProject.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-full bg-muted px-3 py-1.5 text-[11px] font-medium text-muted-foreground min-[1800px]:px-5 min-[1800px]:py-2.5 min-[1800px]:text-[17px] min-[2400px]:text-[19px]"
+                          className="rounded-full bg-muted px-3 py-1.5 font-medium text-muted-foreground min-[1800px]:px-5 min-[1800px]:py-2.5 domtek-type-small"
                         >
                           {tag}
                         </span>
@@ -6972,7 +6972,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                 {selectedProject.relatedPatents?.length ? (
                   <section className="mt-8 border border-border bg-white min-[1800px]:mt-14">
                     <div className="border-b border-border px-4 py-3 min-[1800px]:px-7 min-[1800px]:py-6">
-                      <h3 className="text-[12px] font-extrabold uppercase tracking-wide min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
+                      <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
                         {copy.modal.relatedPatents}
                       </h3>
                     </div>
@@ -6983,13 +6983,13 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                           href={`/patents/${patent.patentId.toLowerCase()}`}
                           className="group/patentLink grid gap-1 px-4 py-3 text-left transition-colors hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/30 min-[1800px]:gap-3 min-[1800px]:px-7 min-[1800px]:py-6"
                         >
-                          <span className="text-[11px] font-extrabold text-brand min-[1800px]:text-[17px] min-[2400px]:text-[19px]">
+                          <span className="font-extrabold text-brand domtek-type-small">
                             {patent.publication}
                           </span>
-                          <span className="text-[14px] font-extrabold leading-tight text-foreground transition-colors group-hover/patentLink:text-brand min-[1800px]:text-[22px] min-[2400px]:text-[25px]">
+                          <span className="font-extrabold text-foreground transition-colors group-hover/patentLink:text-brand domtek-type-card">
                             {patent.title}
                           </span>
-                          <span className="text-[12px] font-medium leading-[1.45] text-muted-foreground min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
+                          <span className="font-medium text-muted-foreground domtek-type-small">
                             {patent.note}
                           </span>
                         </Link>
@@ -7126,13 +7126,13 @@ function ProjectCard({
         </span>
 
         <span className="flex min-h-[150px] flex-1 flex-col px-5 pb-5 pt-5 min-[2400px]:!min-h-[210px] min-[2400px]:!px-6 min-[2400px]:!pb-6 min-[2400px]:!pt-6">
-          <span className="text-[11px] font-extrabold text-brand min-[2400px]:!text-[14px]">
+          <span className="font-extrabold text-brand domtek-type-small">
             {project.category}
           </span>
-          <strong className="mt-2 text-[19px] font-extrabold leading-tight text-foreground min-[2400px]:!mt-3 min-[2400px]:!text-[24px]">
+          <strong className="mt-2 font-extrabold text-foreground min-[2400px]:!mt-3 domtek-type-card">
             {project.title}
           </strong>
-          <span className="mt-2 text-[13px] font-medium leading-[1.4] text-muted-foreground min-[2400px]:!mt-3 min-[2400px]:!text-[16px]">
+          <span className="mt-2 font-medium text-muted-foreground min-[2400px]:!mt-3 domtek-type-body">
             {project.description}
           </span>
 
@@ -7144,7 +7144,7 @@ function ProjectCard({
                 aria-hidden
               />
             </span>
-            <span className="text-right text-[10px] font-medium text-muted-foreground min-[2400px]:!text-[12px]">
+            <span className="text-right font-medium text-muted-foreground domtek-type-small">
               {project.tags.join(" ")}
             </span>
           </span>
@@ -7177,7 +7177,7 @@ export function ProjectsPageCta({ locale }: { locale: string }) {
 
       <Container size="wide" className="relative z-10">
         <Reveal className="max-w-[590px] min-[2400px]:!max-w-[1160px]">
-          <div className="flex items-center gap-3 text-[15px] font-medium text-muted-foreground min-[2400px]:!gap-5 min-[2400px]:!text-[26px]">
+          <div className="flex items-center gap-3 font-medium text-muted-foreground min-[2400px]:!gap-5 domtek-type-eyebrow">
             <span
               className="h-[2px] w-[26px] bg-brand min-[2400px]:!h-1 min-[2400px]:!w-[74px]"
               aria-hidden
@@ -7186,12 +7186,12 @@ export function ProjectsPageCta({ locale }: { locale: string }) {
           </div>
           <h2
             id="projects-cta-title"
-            className="domtek-text-shadow mt-8 text-[36px] font-extrabold leading-[1.05] text-foreground sm:text-[48px] min-[2400px]:!mt-[82px] min-[2400px]:!max-w-[1100px] min-[2400px]:!text-[96px]"
+            className="domtek-text-shadow mt-8 font-extrabold text-foreground min-[2400px]:!mt-[82px] min-[2400px]:!max-w-[1100px] domtek-type-large"
           >
             <span className="text-brand">.</span>
             {copy.title} <span className="text-brand">?</span>
           </h2>
-          <p className="mt-6 max-w-[560px] text-[16px] font-medium leading-[1.35] text-muted-foreground min-[2400px]:!mt-10 min-[2400px]:!max-w-[900px] min-[2400px]:!text-[29px]">
+          <p className="mt-6 max-w-[560px] font-medium text-muted-foreground min-[2400px]:!mt-10 min-[2400px]:!max-w-[900px] domtek-type-body">
             <strong className="font-extrabold">{copy.bodyStrong}</strong>{" "}
             {copy.body}
           </p>

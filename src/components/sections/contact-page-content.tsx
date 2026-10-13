@@ -88,7 +88,7 @@ export function ContactPageContent() {
           <div className="grid gap-7 lg:grid-cols-[340px_minmax(380px,500px)_1fr] lg:items-start lg:gap-10 xl:gap-[54px] min-[1800px]:!grid-cols-[560px_minmax(600px,680px)_1fr] min-[1800px]:!gap-14 min-[2400px]:!grid-cols-[620px_minmax(700px,760px)_1fr] min-[2400px]:!gap-20">
             <div>
               <Reveal>
-                <div className="flex items-center gap-3 text-[15px] font-medium leading-none text-muted-foreground md:text-[16px] min-[2400px]:!gap-5 min-[2400px]:!text-[26px]">
+                <div className="flex items-center gap-3 font-medium text-muted-foreground min-[2400px]:!gap-5 domtek-type-eyebrow">
                   <span
                     className="h-[3px] w-[34px] shrink-0 bg-brand min-[2400px]:!h-1 min-[2400px]:!w-[74px]"
                     aria-hidden
@@ -98,13 +98,13 @@ export function ContactPageContent() {
 
                 <h1
                   id="contact-page-title"
-                  className="domtek-text-shadow mt-[38px] text-[42px] font-extrabold leading-none text-foreground sm:whitespace-nowrap sm:text-[60px] md:mt-[52px] md:text-[66px] min-[1800px]:!text-[74px] min-[2400px]:!mt-[82px] min-[2400px]:!text-[96px]"
+                  className="domtek-text-shadow mt-[38px] font-extrabold text-foreground sm:whitespace-nowrap md:mt-[52px] min-[2400px]:!mt-[82px] domtek-type-display"
                 >
                   {t("Hero.title")}
                   <span className="text-brand">.</span>
                 </h1>
 
-                <p className="mt-8 max-w-[430px] text-[15px] font-medium leading-[1.35] text-muted-foreground sm:text-[16px] min-[1800px]:!max-w-[500px] min-[1800px]:!text-[18px] min-[2400px]:!max-w-[560px] min-[2400px]:!text-[21px]">
+                <p className="mt-8 max-w-[430px] font-medium text-muted-foreground min-[1800px]:!max-w-[500px] min-[2400px]:!max-w-[560px] domtek-type-body">
                   {t("Hero.lead")}
                 </p>
               </Reveal>
@@ -137,10 +137,10 @@ export function ContactPageContent() {
                           className="size-8 shrink-0 text-brand transition-transform duration-300 group-hover/contact-card:-translate-y-1 motion-reduce:transition-none min-[1800px]:!size-10 min-[2400px]:!size-11"
                         />
                         <div>
-                          <h2 className="text-[14px] font-extrabold leading-tight text-foreground min-[1800px]:!text-[17px] min-[2400px]:!text-[19px]">
+                          <h2 className="font-extrabold text-foreground domtek-type-card">
                             {t(`Cards.${card.key}.title`)}
                           </h2>
-                          <p className="mt-1.5 whitespace-pre-line text-[12px] font-medium leading-[1.38] text-muted-foreground min-[1800px]:!mt-2 min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]">
+                          <p className="mt-1.5 whitespace-pre-line font-medium text-muted-foreground min-[1800px]:!mt-2 domtek-type-small">
                             {t(`Cards.${card.key}.body`)}
                           </p>
                         </div>
@@ -174,7 +174,7 @@ export function ContactPageContent() {
           <Reveal>
             <div className="grid gap-7 lg:grid-cols-[360px_1fr] lg:items-start min-[1800px]:!grid-cols-[480px_1fr] min-[1800px]:!gap-12 min-[2400px]:!grid-cols-[560px_1fr] min-[2400px]:!gap-16">
               <div>
-                <div className="flex items-center gap-3 text-[15px] font-medium leading-none text-muted-foreground md:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!gap-4 min-[2400px]:!text-[21px]">
+                <div className="flex items-center gap-3 font-medium text-muted-foreground min-[2400px]:!gap-4 domtek-type-eyebrow">
                   <span
                     className="h-[3px] w-[34px] shrink-0 bg-brand min-[1800px]:!w-[44px] min-[2400px]:!h-1 min-[2400px]:!w-[52px]"
                     aria-hidden
@@ -183,7 +183,7 @@ export function ContactPageContent() {
                 </div>
                 <h2
                   id="contact-map-title"
-                  className="mt-5 max-w-[340px] text-[32px] font-extrabold leading-[1.05] text-foreground md:text-[40px] min-[1800px]:!mt-7 min-[1800px]:!max-w-[460px] min-[1800px]:!text-[52px] min-[2400px]:!max-w-[540px] min-[2400px]:!text-[60px]"
+                  className="mt-5 max-w-[340px] font-extrabold text-foreground min-[1800px]:!mt-7 min-[1800px]:!max-w-[460px] min-[2400px]:!max-w-[540px] domtek-type-large"
                 >
                   {t("Map.title")}
                   <span className="text-brand">.</span>
@@ -193,10 +193,10 @@ export function ContactPageContent() {
               <div className="relative h-[360px] overflow-hidden rounded-[10px] border border-border bg-white shadow-[0_20px_56px_rgba(0,0,0,0.08)] md:h-[380px] min-[1800px]:!h-[520px] min-[1800px]:!rounded-[14px] min-[2400px]:!h-[620px] min-[2400px]:!rounded-[16px]">
                 <LazyContactMap label={t("Map.marker")} />
                 <div className="pointer-events-none absolute bottom-4 left-4 rounded-[7px] border border-border bg-white/92 px-3.5 py-3 shadow-[0_10px_24px_rgba(0,0,0,0.08)] backdrop-blur-sm min-[1800px]:!bottom-6 min-[1800px]:!left-6 min-[1800px]:!rounded-[10px] min-[1800px]:!px-5 min-[1800px]:!py-4 min-[2400px]:!bottom-8 min-[2400px]:!left-8 min-[2400px]:!rounded-[12px] min-[2400px]:!px-6 min-[2400px]:!py-5">
-                  <p className="text-[11px] font-extrabold uppercase tracking-wide text-brand min-[1800px]:!text-[14px] min-[2400px]:!text-[16px]">
+                  <p className="font-extrabold uppercase tracking-wide text-brand domtek-type-small">
                     {t("Map.marker")}
                   </p>
-                  <p className="mt-1 whitespace-pre-line text-[12px] font-medium leading-[1.35] text-muted-foreground min-[1800px]:!mt-2 min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]">
+                  <p className="mt-1 whitespace-pre-line font-medium text-muted-foreground min-[1800px]:!mt-2 domtek-type-small">
                     {t("Cards.location.body")}
                   </p>
                 </div>

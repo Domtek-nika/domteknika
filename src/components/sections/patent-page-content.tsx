@@ -1850,7 +1850,7 @@ export function PatentPageContent({
           className="relative z-10 grid min-h-[440px] items-start min-[1800px]:!min-h-[540px] min-[2400px]:!min-h-[660px]"
         >
           <Reveal className="max-w-[515px] min-[1800px]:!max-w-[720px] min-[2400px]:!max-w-[900px]">
-            <div className="flex items-center gap-3 text-[15px] font-medium leading-none text-muted-foreground md:text-[16px] min-[2400px]:!gap-5 min-[2400px]:!text-[26px]">
+            <div className="flex items-center gap-3 font-medium text-muted-foreground min-[2400px]:!gap-5 domtek-type-eyebrow">
               <span
                 className="h-[3px] w-[34px] shrink-0 bg-brand min-[2400px]:!h-1 min-[2400px]:!w-[74px]"
                 aria-hidden
@@ -1859,15 +1859,15 @@ export function PatentPageContent({
             </div>
             <h1
               id="patent-page-title"
-              className="domtek-text-shadow mt-[38px] text-[42px] font-extrabold leading-none text-foreground sm:text-[60px] md:mt-[52px] md:text-[66px] min-[1800px]:!text-[74px] min-[2400px]:!mt-[82px] min-[2400px]:!text-[96px]"
+              className="domtek-text-shadow mt-[38px] font-extrabold text-foreground md:mt-[52px] min-[2400px]:!mt-[82px] domtek-type-display"
             >
               {copy.hero.title}
               <span className="text-brand">.</span>
             </h1>
-            <p className="mt-8 max-w-[430px] text-[15px] font-medium leading-[1.35] text-muted-foreground sm:text-[16px] min-[1800px]:!max-w-[620px] min-[1800px]:!text-[18px] min-[2400px]:!max-w-[760px] min-[2400px]:!text-[21px]">
+            <p className="mt-8 max-w-[430px] font-medium text-muted-foreground min-[1800px]:!max-w-[620px] min-[2400px]:!max-w-[760px] domtek-type-body">
               {copy.hero.leadOne}
             </p>
-            <p className="mt-5 max-w-[430px] text-[15px] font-medium leading-[1.35] text-muted-foreground sm:text-[16px] min-[1800px]:!max-w-[620px] min-[1800px]:!text-[18px] min-[2400px]:!max-w-[760px] min-[2400px]:!text-[21px]">
+            <p className="mt-5 max-w-[430px] font-medium text-muted-foreground min-[1800px]:!max-w-[620px] min-[2400px]:!max-w-[760px] domtek-type-body">
               {copy.hero.leadTwo}
             </p>
           </Reveal>
@@ -1885,11 +1885,11 @@ export function PatentPageContent({
             <div className="min-w-0 shrink-0">
               <h2
                 id="patent-archive-title"
-                className="text-[22px] font-extrabold leading-none text-foreground min-[1800px]:!text-[28px] min-[2400px]:!text-[32px]"
+                className="font-extrabold text-foreground domtek-type-heading"
               >
                 {copy.archiveTitle}
               </h2>
-              <p className="mt-3 text-[12px] font-medium text-muted-foreground min-[1800px]:!text-[14px] min-[2400px]:!text-[16px]">
+              <p className="mt-3 font-medium text-muted-foreground domtek-type-small">
                 {visiblePatents.length} / {PATENTS.length} {copy.resultsLabel}
               </p>
             </div>
@@ -2200,11 +2200,11 @@ export function PatentPageContent({
                 </span>
                 <h2
                   id="patent-dialog-title"
-                  className="mt-3 max-w-[680px] break-words text-[27px] font-extrabold leading-[1.04] text-foreground md:text-[34px] lg:text-[36px]"
+                  className="mt-3 max-w-[680px] break-words font-extrabold text-foreground domtek-type-section"
                 >
                   {selectedPatent.title}
                 </h2>
-                <p className="mt-4 max-w-[680px] text-[14px] font-medium leading-[1.55] text-muted-foreground md:text-[15px]">
+                <p className="mt-4 max-w-[680px] font-medium text-muted-foreground domtek-type-body">
                   {selectedPatent.abstract || copy.details.unavailable}
                 </p>
 
@@ -2224,7 +2224,7 @@ export function PatentPageContent({
                     <div className="flex items-center gap-4 border-b border-border bg-muted/30 px-4 py-3 sm:px-5">
                       <div className="flex items-center gap-2.5">
                         <span className="size-2 bg-brand" aria-hidden />
-                        <h3 className="text-[12px] font-extrabold uppercase tracking-wide">
+                        <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
                           {copy.details.linkedProjects}
                         </h3>
                       </div>
@@ -2244,15 +2244,15 @@ export function PatentPageContent({
 
                 <div className="mt-7 grid gap-5 md:grid-cols-2">
                   <section>
-                    <h3 className="text-[12px] font-extrabold uppercase tracking-wide">
+                    <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
                       {copy.details.overview}
                     </h3>
-                    <p className="mt-3 text-[14px] font-medium leading-[1.65] text-muted-foreground">
+                    <p className="mt-3 font-medium text-muted-foreground domtek-type-body">
                       {selectedPatent.abstract || copy.details.unavailable}
                     </p>
                   </section>
                   <section>
-                    <h3 className="text-[12px] font-extrabold uppercase tracking-wide">
+                    <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
                       {copy.details.tags}
                     </h3>
                     <div className="mt-3 flex flex-wrap gap-2">
@@ -2336,7 +2336,7 @@ export function PatentPageContent({
 
                 <section className="mt-8 grid gap-4">
                   {detailError ? (
-                    <p className="rounded-[4px] border border-border bg-muted px-4 py-3 text-[13px] font-medium text-muted-foreground">
+                    <p className="rounded-[4px] border border-border bg-muted px-4 py-3 font-medium text-muted-foreground domtek-type-small">
                       {copy.details.unavailable}
                     </p>
                   ) : selectedPatentDetails ? (
@@ -2345,7 +2345,7 @@ export function PatentPageContent({
                       detail={selectedPatentDetails}
                     />
                   ) : (
-                    <p className="rounded-[4px] border border-border bg-muted px-4 py-3 text-[13px] font-medium text-muted-foreground">
+                    <p className="rounded-[4px] border border-border bg-muted px-4 py-3 font-medium text-muted-foreground domtek-type-small">
                       {copy.details.loading}
                     </p>
                   )}
@@ -2457,7 +2457,7 @@ function PatentLinkGroup({
 
   return (
     <div className="rounded-[4px] border border-border p-4">
-      <h3 className="text-[12px] font-extrabold uppercase tracking-wide">
+      <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
         {title}
       </h3>
       <div className="mt-3 flex flex-wrap gap-2">
@@ -2489,7 +2489,7 @@ function PatentPdfGroup({
 
   return (
     <div className="rounded-[4px] border border-border p-4">
-      <h3 className="text-[12px] font-extrabold uppercase tracking-wide">
+      <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
         {title}
       </h3>
       <div className="mt-3 flex flex-wrap gap-2">
@@ -2593,7 +2593,7 @@ function PatentTextSection({
   return (
     <PatentSectionShell title={title} defaultOpen={defaultOpen}>
       {paragraphs.length ? (
-        <div className="max-h-[360px] space-y-3 overflow-y-auto pr-2 text-[13px] font-medium leading-[1.65] text-muted-foreground">
+        <div className="max-h-[360px] space-y-3 overflow-y-auto pr-2 font-medium text-muted-foreground domtek-type-body">
           {paragraphs.map((paragraph, index) => (
             <p key={`${paragraph.slice(0, 28)}-${index}`}>{paragraph}</p>
           ))}
@@ -2621,7 +2621,7 @@ function PatentClaimsSection({
           {claims.map((claim, index) => (
             <p
               key={`${claim.slice(0, 28)}-${index}`}
-              className="rounded-[4px] bg-muted px-4 py-3 text-[12px] font-medium leading-[1.55] text-muted-foreground"
+              className="rounded-[4px] bg-muted px-4 py-3 font-medium text-muted-foreground domtek-type-small"
             >
               {claim}
             </p>
@@ -2658,7 +2658,7 @@ function PatentLegalSection({
                   {headline}
                 </strong>
                 {details.length > 0 && (
-                  <p className="mt-2 whitespace-pre-line text-[12px] font-medium leading-[1.55] text-muted-foreground">
+                  <p className="mt-2 whitespace-pre-line font-medium text-muted-foreground domtek-type-small">
                     {details.join("\n")}
                   </p>
                 )}
@@ -2742,7 +2742,7 @@ function PatentReferenceCard({ row }: { row: PatentReferenceRow }) {
 
 function PatentEmptyText({ children }: { children: ReactNode }) {
   return (
-    <p className="rounded-[4px] bg-muted px-4 py-3 text-[12px] font-medium text-muted-foreground">
+    <p className="rounded-[4px] bg-muted px-4 py-3 font-medium text-muted-foreground domtek-type-small">
       {children}
     </p>
   );
@@ -2775,7 +2775,7 @@ function PatentDrawingGallery({
   return (
     <section className="mt-8">
       <div className="flex items-center justify-between gap-4">
-        <h3 className="text-[12px] font-extrabold uppercase tracking-wide">
+        <h3 className="font-extrabold uppercase tracking-wide domtek-type-small">
           {title}
         </h3>
         {hasMultiple && (
@@ -3510,7 +3510,7 @@ export function PatentPageCta({ locale }: { locale: string }) {
           </div>
           <h2
             id="patent-cta-title"
-            className="domtek-text-shadow mt-10 text-[38px] font-extrabold leading-[1.02] text-foreground sm:text-[54px] min-[1800px]:!text-[62px] min-[2400px]:!text-[72px]"
+            className="domtek-text-shadow mt-10 font-extrabold text-foreground domtek-type-large"
           >
             <span className="text-brand">{copy.titlePrefix}</span>
             {copy.title}
@@ -3518,7 +3518,7 @@ export function PatentPageCta({ locale }: { locale: string }) {
               &nbsp;{copy.titleQuestion}
             </span>
           </h2>
-          <p className="mt-8 max-w-[560px] text-[15px] font-medium leading-[1.35] text-muted-foreground sm:text-[16px] min-[1800px]:!max-w-[680px] min-[1800px]:!text-[18px] min-[2400px]:!max-w-[780px] min-[2400px]:!text-[20px]">
+          <p className="mt-8 max-w-[560px] font-medium text-muted-foreground min-[1800px]:!max-w-[680px] min-[2400px]:!max-w-[780px] domtek-type-body">
             {copy.body}
           </p>
           <Button
