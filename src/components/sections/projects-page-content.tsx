@@ -5892,7 +5892,7 @@ export function ProjectDetailsDialog({
               data-lenis-prevent
               className="min-h-0 overflow-y-auto overscroll-contain px-5 py-7 md:px-9 md:py-10 min-[1800px]:px-16 min-[1800px]:py-16 min-[2400px]:px-20 min-[2400px]:py-[72px]"
             >
-              <span className="font-extrabold uppercase tracking-wide text-brand domtek-type-small">
+              <span className="uppercase text-brand text-[11px] font-extrabold tracking-wide min-[1800px]:text-[17px] min-[2400px]:text-[19px]">
                 {project.category}
               </span>
               <h2
@@ -5901,7 +5901,7 @@ export function ProjectDetailsDialog({
               >
                 {project.title}
               </h2>
-              <p className="mt-6 max-w-[500px] font-medium text-muted-foreground min-[1800px]:max-w-[860px] min-[2400px]:max-w-[980px] domtek-type-body">
+              <p className="mt-6 max-w-[500px] text-muted-foreground min-[1800px]:max-w-[860px] min-[2400px]:max-w-[980px] text-[16px] font-medium leading-[1.45] md:text-[17px] min-[1800px]:text-[26px] min-[2400px]:text-[30px]">
                 {project.description}
               </p>
 
@@ -5921,7 +5921,7 @@ export function ProjectDetailsDialog({
                   <h3 className="uppercase text-[12px] font-extrabold tracking-wide min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
                     {modal.overview}
                   </h3>
-                  <p className="mt-4 font-medium text-muted-foreground domtek-type-body">
+                  <p className="mt-4 text-muted-foreground text-[14px] font-medium leading-[1.65] min-[1800px]:text-[21px] min-[2400px]:text-[24px]">
                     {project.overview}
                   </p>
                 </section>
@@ -5933,7 +5933,7 @@ export function ProjectDetailsDialog({
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full bg-muted px-3 py-1.5 font-medium text-muted-foreground min-[1800px]:px-5 min-[1800px]:py-2.5 domtek-type-small"
+                        className="rounded-full bg-muted px-3 py-1.5 text-muted-foreground min-[1800px]:px-5 min-[1800px]:py-2.5 text-[11px] font-medium min-[1800px]:text-[17px] min-[2400px]:text-[19px]"
                       >
                         {tag}
                       </span>
@@ -5956,13 +5956,13 @@ export function ProjectDetailsDialog({
                         href={`/patents/${patent.patentId.toLowerCase()}`}
                         className="group/patentLink grid gap-1 px-4 py-3 text-left transition-colors hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/30 min-[1800px]:gap-3 min-[1800px]:px-7 min-[1800px]:py-6"
                       >
-                        <span className="font-extrabold text-brand domtek-type-small">
+                        <span className="text-brand text-[11px] font-extrabold min-[1800px]:text-[17px] min-[2400px]:text-[19px]">
                           {patent.publication}
                         </span>
                         <span className="text-foreground transition-colors group-hover/patentLink:text-brand text-[14px] font-extrabold leading-tight min-[1800px]:text-[22px] min-[2400px]:text-[25px]">
                           {patent.title}
                         </span>
-                        <span className="font-medium text-muted-foreground domtek-type-small">
+                        <span className="text-muted-foreground text-[12px] font-medium leading-[1.45] min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
                           {patent.note}
                         </span>
                       </Link>
@@ -6130,7 +6130,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                 key={option.key}
                 type="button"
                 className={cn(
-                  "flex items-center justify-between gap-4 rounded-[5px] px-3 py-2 text-left text-[13px] font-bold text-foreground transition-colors hover:bg-brand/10 focus-visible:bg-brand/10 focus-visible:outline-none min-[2400px]:rounded-[8px] min-[2400px]:px-5 min-[2400px]:py-4 min-[2400px]:text-[20px]",
+                  "flex items-center justify-between gap-4 rounded-[5px] px-3 py-2 text-left text-foreground transition-colors hover:bg-brand/10 focus-visible:bg-brand/10 focus-visible:outline-none min-[2400px]:rounded-[8px] min-[2400px]:px-5 min-[2400px]:py-4 text-[13px] font-bold min-[2400px]:text-[20px]",
                   active && "bg-brand text-white hover:bg-brand",
                 )}
                 aria-pressed={active}
@@ -6165,7 +6165,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
           value={searchQuery}
           onChange={(event) => setSearchQuery(event.target.value)}
           placeholder={copy.searchPlaceholder}
-          className="h-12 w-full rounded-[4px] border border-border bg-white pl-11 pr-4 text-[13px] font-medium text-foreground outline-none shadow-[0_2px_7px_rgba(0,0,0,0.05)] transition-[border-color,box-shadow] duration-300 placeholder:text-muted-foreground/75 focus:border-brand/50 focus:shadow-[0_10px_24px_rgba(0,0,0,0.08)] min-[1800px]:!h-[58px] min-[2400px]:!h-[64px] min-[2400px]:!rounded-[7px] min-[2400px]:!pl-[58px] min-[2400px]:!pr-6 min-[2400px]:!text-[20px]"
+          className="h-12 w-full rounded-[4px] border border-border bg-white pl-11 pr-4 text-foreground outline-none shadow-[0_2px_7px_rgba(0,0,0,0.05)] transition-[border-color,box-shadow] duration-300 placeholder:text-muted-foreground/75 focus:border-brand/50 focus:shadow-[0_10px_24px_rgba(0,0,0,0.08)] min-[1800px]:!h-[58px] min-[2400px]:!h-[64px] min-[2400px]:!rounded-[7px] min-[2400px]:!pl-[58px] min-[2400px]:!pr-6 text-[13px] font-medium min-[2400px]:!text-[20px]"
         />
       </label>
     </div>
@@ -6652,7 +6652,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
           className="relative z-10 flex items-start pb-14 md:min-h-[410px] md:pb-10 min-[2400px]:!min-h-[780px] min-[2400px]:!pb-20"
         >
           <Reveal className="max-w-[560px] pb-5 md:pb-0 min-[1800px]:!max-w-[720px] min-[2400px]:!max-w-[900px]">
-            <div className="flex items-center gap-3 font-medium text-muted-foreground min-[2400px]:!gap-5 domtek-type-eyebrow">
+            <div className="flex items-center gap-3 text-muted-foreground min-[2400px]:!gap-5 text-[15px] font-medium leading-none md:text-[16px] min-[2400px]:!text-[26px]">
               <span
                 className="h-[3px] w-[34px] shrink-0 bg-brand min-[2400px]:!h-1 min-[2400px]:!w-[74px]"
                 aria-hidden
@@ -6666,18 +6666,17 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
               {copy.hero.title}
               <span className="text-brand">.</span>
             </h1>
-            <p className="mt-8 max-w-[430px] font-medium text-muted-foreground min-[1800px]:!max-w-[620px] min-[2400px]:!max-w-[760px] domtek-type-body">
+            <p className="mt-8 max-w-[430px] text-muted-foreground min-[1800px]:!max-w-[620px] min-[2400px]:!max-w-[760px] text-[15px] font-medium leading-[1.35] sm:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[21px]">
               <strong className="font-extrabold">{copy.hero.strong}</strong>{" "}
               {copy.hero.rest}
             </p>
-            <p className="mt-5 max-w-[430px] font-medium text-muted-foreground min-[1800px]:!max-w-[620px] min-[2400px]:!max-w-[760px] domtek-type-body">
+            <p className="mt-5 max-w-[430px] text-muted-foreground min-[1800px]:!max-w-[620px] min-[2400px]:!max-w-[760px] text-[15px] font-medium leading-[1.35] sm:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[21px]">
               {copy.hero.lead}
             </p>
           </Reveal>
         </Container>
+        <ProjectsStatsSection stats={copy.stats} ariaLabel={copy.statsLabel} />
       </section>
-
-      <ProjectsStatsSection stats={copy.stats} ariaLabel={copy.statsLabel} />
 
       <section
         id="projects"
@@ -6693,7 +6692,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
               >
                 {copy.selectedTitle}
               </h2>
-              <p className="mt-3 font-medium text-muted-foreground min-[2400px]:!mt-5 domtek-type-small">
+              <p className="mt-3 text-muted-foreground min-[2400px]:!mt-5 text-[12px] font-medium min-[2400px]:!text-[20px]">
                 {visibleProjects.length} / {copy.projects.length}{" "}
                 {copy.resultsLabel}
               </p>
@@ -6764,7 +6763,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                         {filter.key !== "all" && (
                           <span
                             className={cn(
-                              "mt-1 truncate text-[9px] font-medium leading-none text-muted-foreground min-[2400px]:!mt-2 min-[2400px]:!text-[15px]",
+                              "mt-1 truncate text-muted-foreground min-[2400px]:!mt-2 text-[9px] font-medium leading-none min-[2400px]:!text-[15px]",
                               active && "text-white/85",
                             )}
                           >
@@ -6919,7 +6918,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                 data-lenis-prevent
                 className="min-h-0 overflow-y-auto overscroll-contain px-5 py-7 md:px-9 md:py-10 min-[1800px]:px-16 min-[1800px]:py-16 min-[2400px]:px-20 min-[2400px]:py-[72px]"
               >
-                <span className="font-extrabold uppercase tracking-wide text-brand domtek-type-small">
+                <span className="uppercase text-brand text-[11px] font-extrabold tracking-wide min-[1800px]:text-[17px] min-[2400px]:text-[19px]">
                   {selectedProject.category}
                 </span>
                 <h2
@@ -6928,7 +6927,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                 >
                   {selectedProject.title}
                 </h2>
-                <p className="mt-6 max-w-[500px] font-medium text-muted-foreground min-[1800px]:max-w-[860px] min-[2400px]:max-w-[980px] domtek-type-body">
+                <p className="mt-6 max-w-[500px] text-muted-foreground min-[1800px]:max-w-[860px] min-[2400px]:max-w-[980px] text-[16px] font-medium leading-[1.45] md:text-[17px] min-[1800px]:text-[26px] min-[2400px]:text-[30px]">
                   {selectedProject.description}
                 </p>
 
@@ -6948,7 +6947,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                     <h3 className="uppercase text-[12px] font-extrabold tracking-wide min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
                       {copy.modal.overview}
                     </h3>
-                    <p className="mt-4 font-medium text-muted-foreground domtek-type-body">
+                    <p className="mt-4 text-muted-foreground text-[14px] font-medium leading-[1.65] min-[1800px]:text-[21px] min-[2400px]:text-[24px]">
                       {selectedProject.overview}
                     </p>
                   </section>
@@ -6960,7 +6959,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                       {selectedProject.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-full bg-muted px-3 py-1.5 font-medium text-muted-foreground min-[1800px]:px-5 min-[1800px]:py-2.5 domtek-type-small"
+                          className="rounded-full bg-muted px-3 py-1.5 text-muted-foreground min-[1800px]:px-5 min-[1800px]:py-2.5 text-[11px] font-medium min-[1800px]:text-[17px] min-[2400px]:text-[19px]"
                         >
                           {tag}
                         </span>
@@ -6983,13 +6982,13 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                           href={`/patents/${patent.patentId.toLowerCase()}`}
                           className="group/patentLink grid gap-1 px-4 py-3 text-left transition-colors hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/30 min-[1800px]:gap-3 min-[1800px]:px-7 min-[1800px]:py-6"
                         >
-                          <span className="font-extrabold text-brand domtek-type-small">
+                          <span className="text-brand text-[11px] font-extrabold min-[1800px]:text-[17px] min-[2400px]:text-[19px]">
                             {patent.publication}
                           </span>
                           <span className="text-foreground transition-colors group-hover/patentLink:text-brand text-[14px] font-extrabold leading-tight min-[1800px]:text-[22px] min-[2400px]:text-[25px]">
                             {patent.title}
                           </span>
-                          <span className="font-medium text-muted-foreground domtek-type-small">
+                          <span className="text-muted-foreground text-[12px] font-medium leading-[1.45] min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
                             {patent.note}
                           </span>
                         </Link>
@@ -7028,11 +7027,11 @@ function ProjectsStatsSection({
 }) {
   return (
     <section
-      className="bg-background py-[28px] min-[1180px]:pb-5 min-[1180px]:pt-[52px] min-[2400px]:!pb-6 min-[2400px]:!pt-14"
+      className="relative z-20 pb-9 min-[1180px]:absolute min-[1180px]:inset-x-0 min-[1180px]:bottom-9 min-[1180px]:pb-0 min-[1800px]:!bottom-12 min-[2400px]:!bottom-14"
       aria-label={ariaLabel}
     >
       <Container size="wide">
-        <div className="grid grid-cols-2 overflow-hidden rounded-[7px] border border-border bg-white min-[1180px]:grid-cols-[0.8fr_1.1fr_1.2fr_1.35fr_1fr]">
+        <div className="grid grid-cols-2 overflow-hidden rounded-[9px] border border-border/80 bg-white shadow-[0_7px_14px_rgba(0,0,0,0.20)] min-[1180px]:grid-cols-[0.8fr_1.1fr_1.2fr_1.35fr_1fr]">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
 
@@ -7059,11 +7058,11 @@ function ProjectsStatsSection({
                   strokeWidth={1.65}
                   className="h-[36px] w-[40px] text-brand transition-transform duration-500 group-hover/stat:-translate-y-1 sm:h-[40px] sm:w-[44px] min-[1180px]:relative min-[1180px]:h-[30px] min-[1180px]:w-[32px] min-[1180px]:justify-self-start min-[2400px]:!h-[46px] min-[2400px]:!w-[48px] motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]"
                 />
-                <div className="grid w-full min-w-0 max-w-full grid-rows-[44px_calc(var(--domtek-type-small)*2.9)] gap-y-1 min-[1180px]:grid-rows-[22px_calc(var(--domtek-type-small)*2.9)] min-[2400px]:!grid-rows-[28px_calc(var(--domtek-type-small)*2.9)]">
+                <div className="grid w-full min-w-0 max-w-full grid-rows-[44px_auto] gap-y-1 min-[1180px]:grid-rows-[22px_auto] min-[2400px]:!grid-rows-[28px_auto]">
                   <strong className={cn("block max-w-full text-[18px] font-extrabold leading-[1.2] text-foreground sm:text-[19px] min-[1180px]:text-[17px] min-[1180px]:whitespace-nowrap 2xl:text-[18px] min-[2400px]:!text-[22px]", index === 2 ? "whitespace-nowrap" : "break-words [hyphens:auto]")}>
                     {stat.value}
                   </strong>
-                  {stat.label && <span className="block max-w-full break-words font-medium text-muted-foreground [hyphens:auto] domtek-type-small">
+                  {stat.label && <span className="block max-w-full break-words text-muted-foreground [hyphens:auto] text-[12px] font-medium leading-tight min-[1180px]:text-[11px] min-[1180px]:leading-[14px] 2xl:text-[12px] min-[2400px]:!text-[15px] min-[2400px]:!leading-[17px]">
                     {stat.label}
                     {stat.detail ? ` ${stat.detail}` : null}
                   </span>}
@@ -7126,13 +7125,13 @@ function ProjectCard({
         </span>
 
         <span className="flex min-h-[150px] flex-1 flex-col px-5 pb-5 pt-5 min-[2400px]:!min-h-[210px] min-[2400px]:!px-6 min-[2400px]:!pb-6 min-[2400px]:!pt-6">
-          <span className="font-extrabold text-brand domtek-type-small">
+          <span className="text-brand text-[11px] font-extrabold min-[2400px]:!text-[14px]">
             {project.category}
           </span>
           <strong className="mt-2 text-foreground min-[2400px]:!mt-3 text-[19px] font-extrabold leading-tight min-[2400px]:!text-[24px]">
             {project.title}
           </strong>
-          <span className="mt-2 font-medium text-muted-foreground min-[2400px]:!mt-3 domtek-type-body">
+          <span className="mt-2 text-muted-foreground min-[2400px]:!mt-3 text-[13px] font-medium leading-[1.4] min-[2400px]:!text-[16px]">
             {project.description}
           </span>
 
@@ -7144,7 +7143,7 @@ function ProjectCard({
                 aria-hidden
               />
             </span>
-            <span className="text-right font-medium text-muted-foreground domtek-type-small">
+            <span className="text-right text-muted-foreground text-[10px] font-medium min-[2400px]:!text-[12px]">
               {project.tags.join(" ")}
             </span>
           </span>
@@ -7177,7 +7176,7 @@ export function ProjectsPageCta({ locale }: { locale: string }) {
 
       <Container size="wide" className="relative z-10">
         <Reveal className="max-w-[590px] min-[2400px]:!max-w-[1160px]">
-          <div className="flex items-center gap-3 font-medium text-muted-foreground min-[2400px]:!gap-5 domtek-type-eyebrow">
+          <div className="flex items-center gap-3 text-muted-foreground min-[2400px]:!gap-5 text-[15px] font-medium min-[2400px]:!text-[26px]">
             <span
               className="h-[2px] w-[26px] bg-brand min-[2400px]:!h-1 min-[2400px]:!w-[74px]"
               aria-hidden
@@ -7191,7 +7190,7 @@ export function ProjectsPageCta({ locale }: { locale: string }) {
             <span className="text-brand">.</span>
             {copy.title} <span className="text-brand">?</span>
           </h2>
-          <p className="mt-6 max-w-[560px] font-medium text-muted-foreground min-[2400px]:!mt-10 min-[2400px]:!max-w-[900px] domtek-type-body">
+          <p className="mt-6 max-w-[560px] text-muted-foreground min-[2400px]:!mt-10 min-[2400px]:!max-w-[900px] text-[16px] font-medium leading-[1.35] min-[2400px]:!text-[29px]">
             <strong className="font-extrabold">{copy.bodyStrong}</strong>{" "}
             {copy.body}
           </p>

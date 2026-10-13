@@ -132,7 +132,7 @@ function ExpertiseHero() {
       <Container size="wide" className="relative z-10">
         <div className="relative grid gap-12 md:block">
           <Reveal>
-            <div className="flex items-center gap-3 font-medium text-muted-foreground min-[2400px]:!gap-5 domtek-type-eyebrow">
+            <div className="flex items-center gap-3 text-muted-foreground min-[2400px]:!gap-5 text-[15px] font-medium leading-none md:text-[16px] min-[2400px]:!text-[26px]">
               <span
                 className="h-[3px] w-[34px] shrink-0 bg-brand min-[2400px]:!h-1 min-[2400px]:!w-[74px]"
                 aria-hidden
@@ -155,7 +155,7 @@ function ExpertiseHero() {
           >
             <div className="relative left-1/2 w-[min(calc(100vw-28px),380px)] -translate-x-1/2 pt-1 sm:w-[min(100%,520px)] md:left-auto md:ml-auto md:mr-0 md:w-full md:max-w-[520px] md:translate-x-0 lg:max-w-[580px] xl:max-w-[640px] 2xl:max-w-[660px] min-[1800px]:!max-w-[800px] min-[2400px]:!max-w-[880px]">
               <div className="mx-auto mb-4 flex w-fit flex-col items-center gap-1">
-                <p className="text-center font-medium text-muted-foreground domtek-type-small">
+                <p className="text-center text-muted-foreground text-[17px] font-medium leading-none md:text-[15px] min-[1800px]:!text-[20px] min-[2400px]:!text-[22px]">
                   {t("team")}
                 </p>
                 <span
@@ -235,7 +235,15 @@ function ExpertiseGrid({ faqLabel }: { faqLabel: string }) {
       <Container size="expanded">
         <div className="lg:mx-8 min-[1800px]:!mx-12">
           <Reveal>
-            <div className="flex items-center gap-3 font-medium text-muted-foreground min-[1800px]:!gap-4 domtek-type-eyebrow">
+            <h2
+              id="expertise-services"
+              className="domtek-text-shadow max-w-[320px] text-foreground sm:max-w-[560px] min-[1800px]:!max-w-[680px] min-[2400px]:!max-w-[760px] text-[30px] font-extrabold leading-[1.06] sm:text-[44px] md:text-[52px] min-[1800px]:!text-[58px] min-[2400px]:!text-[66px]"
+            >
+              {t("title")}
+              <span className="text-brand">.</span>
+            </h2>
+
+            <div className="mt-5 flex items-center gap-3 text-muted-foreground min-[1800px]:!gap-4 text-[15px] font-medium min-[1800px]:!text-[18px]">
               <span
                 className="h-[3px] w-[34px] bg-brand min-[1800px]:!w-[44px]"
                 aria-hidden
@@ -243,18 +251,10 @@ function ExpertiseGrid({ faqLabel }: { faqLabel: string }) {
               {t("eyebrow")}
             </div>
 
-            <h2
-              id="expertise-services"
-              className="domtek-text-shadow mt-8 max-w-[320px] text-foreground sm:max-w-[560px] min-[1800px]:!max-w-[680px] min-[2400px]:!max-w-[760px] text-[30px] font-extrabold leading-[1.06] sm:text-[44px] md:text-[52px] min-[1800px]:!text-[58px] min-[2400px]:!text-[66px]"
-            >
-              {t("title")}
-              <span className="text-brand">.</span>
-            </h2>
-
-            <p className="mt-7 max-w-[320px] font-medium text-muted-foreground sm:max-w-[610px] min-[1800px]:!max-w-[760px] domtek-type-body">
+            <p className="mt-7 max-w-[320px] text-muted-foreground sm:max-w-[610px] min-[1800px]:!max-w-[760px] text-[15px] font-medium leading-[1.42] min-[1800px]:!text-[17px] min-[2400px]:!text-[19px]">
               {t("intro")}
             </p>
-            <a href="#expertise-faq" className="mt-6 inline-flex min-h-11 items-center gap-3 rounded-[7px] border border-border bg-white px-4 py-3 domtek-type-body font-bold shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors hover:border-foreground/25 hover:bg-muted/40 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+            <a href="#expertise-faq" className="mt-6 inline-flex min-h-11 items-center gap-3 rounded-[7px] border border-border bg-white px-4 py-3 shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors hover:border-foreground/25 hover:bg-muted/40 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand text-[13px] font-bold">
               {faqLabel}<ArrowRight className="size-4 text-brand" aria-hidden />
             </a>
           </Reveal>
@@ -297,10 +297,10 @@ function ExpertiseServiceCards({
               <h3 className="mt-6 max-w-full break-words text-foreground [hyphens:auto] sm:mt-8 text-[14px] font-extrabold leading-tight sm:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[20px]">
                 {t(`items.${item.key}.title` as never)}
               </h3>
-              <p className="mt-5 max-w-[250px] font-medium text-muted-foreground sm:mt-8 min-[1800px]:!max-w-[320px] domtek-type-body">
+              <p className="mt-5 max-w-[250px] text-muted-foreground sm:mt-8 min-[1800px]:!max-w-[320px] text-[12.5px] font-medium leading-[1.28] sm:text-[14px] min-[1800px]:!text-[15px] min-[1800px]:!leading-[1.35] min-[2400px]:!text-[16px]">
                 {t(`items.${item.key}.description` as never)}
               </p>
-              <span className="mt-auto inline-flex min-h-11 items-center gap-2 pt-5 domtek-type-body font-bold text-brand">
+              <span className="mt-auto inline-flex min-h-11 items-center gap-2 pt-5 text-brand text-[11px] font-bold sm:text-xs">
                 {t("learnMore")}<ArrowRight className="size-3.5 shrink-0" aria-hidden />
               </span>
             </Link>
@@ -323,7 +323,7 @@ function BrainstormingSection() {
   return (
     <div className="mt-16 grid gap-8 md:mt-24 lg:grid-cols-[0.82fr_1.18fr] lg:items-center min-[1800px]:!mt-28 min-[1800px]:!grid-cols-[0.95fr_1.05fr] min-[1800px]:!gap-12">
       <div className="relative">
-        <div className="flex items-center gap-3 font-medium text-muted-foreground min-[1800px]:!gap-4 domtek-type-eyebrow">
+        <div className="flex items-center gap-3 text-muted-foreground min-[1800px]:!gap-4 text-[14px] font-medium min-[1800px]:!text-[17px]">
           <span
             className="h-[3px] w-[34px] bg-brand min-[1800px]:!w-[44px]"
             aria-hidden
@@ -334,11 +334,11 @@ function BrainstormingSection() {
           {t("eyebrow")}
           <span className="text-brand">.</span>
         </h3>
-        <p className="mt-6 max-w-[470px] font-medium text-muted-foreground min-[1800px]:!max-w-[620px] domtek-type-body">
+        <p className="mt-6 max-w-[470px] text-muted-foreground min-[1800px]:!max-w-[620px] text-[15px] font-medium leading-[1.45] min-[1800px]:!text-[18px] min-[2400px]:!text-[19px]">
           <span className="font-extrabold">{emphasizedLead}</span>
           {remainingLead}
         </p>
-        <p className="mt-4 max-w-[470px] font-medium text-muted-foreground min-[1800px]:!max-w-[620px] domtek-type-body">
+        <p className="mt-4 max-w-[470px] text-muted-foreground min-[1800px]:!max-w-[620px] text-[15px] font-medium leading-[1.45] min-[1800px]:!text-[18px] min-[2400px]:!text-[19px]">
           {t("body")}
         </p>
       </div>
@@ -479,10 +479,10 @@ function AddedValueSection() {
                       strokeWidth={1.65}
                       className="h-9 w-9 text-brand transition-transform duration-300 group-hover:-translate-y-1 sm:h-11 sm:w-11 min-[1800px]:!size-12 min-[2400px]:!size-[52px]"
                     />
-                    <h3 className="mt-4 flex min-h-[2.5em] w-full items-center justify-center text-foreground sm:mt-5 text-[13px] font-extrabold leading-tight sm:text-[15px] lg:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[19px]">
+                    <h3 className="mt-4 flex min-h-[2.5em] w-full items-center justify-center text-foreground sm:mt-5 text-[16px] font-extrabold leading-tight sm:text-[18px] min-[1800px]:!text-[20px] min-[2400px]:!text-[22px]">
                       {t(`values.${item.key}.title` as never)}
                     </h3>
-                    <p className="mt-3 font-medium text-muted-foreground sm:mt-4 domtek-type-body">
+                    <p className="mt-3 text-muted-foreground sm:mt-4 text-[11.5px] font-medium leading-[1.34] sm:text-[14px] sm:leading-[1.38] min-[1800px]:!text-[15px] min-[1800px]:!leading-[1.42] min-[2400px]:!text-[16px]">
                       {t(`values.${item.key}.description` as never)}
                     </p>
                   </Reveal>
@@ -592,7 +592,7 @@ function ExpertiseCta() {
         className="relative z-10 min-[1800px]:!max-w-[1600px] min-[2400px]:!max-w-[1900px]"
       >
         <Reveal className="max-w-[560px] md:max-w-[860px] min-[1800px]:!max-w-[1040px] min-[2400px]:!max-w-[1200px]">
-          <div className="flex items-center gap-3 font-medium text-muted-foreground min-[1800px]:!gap-4 domtek-type-eyebrow">
+          <div className="flex items-center gap-3 text-muted-foreground min-[1800px]:!gap-4 text-[14px] font-medium min-[1800px]:!text-[18px]">
             <span
               className="h-[3px] w-[34px] bg-brand min-[1800px]:!w-[44px]"
               aria-hidden
@@ -608,7 +608,7 @@ function ExpertiseCta() {
             {t("title")} <span className="text-brand">?</span>
           </h2>
 
-          <p className="mt-5 max-w-[450px] font-medium text-muted-foreground min-[1800px]:!max-w-[600px] domtek-type-body">
+          <p className="mt-5 max-w-[450px] text-muted-foreground min-[1800px]:!max-w-[600px] text-[14px] font-medium leading-[1.4] min-[1800px]:!text-[18px] min-[2400px]:!text-[20px]">
             {t("subtitle")}
           </p>
 

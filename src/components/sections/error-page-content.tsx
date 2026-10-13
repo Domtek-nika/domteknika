@@ -289,7 +289,7 @@ export function ErrorPageContent({
             <span className="text-brand">.</span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-[650px] font-medium text-muted-foreground domtek-type-body">
+          <p className="mx-auto mt-6 max-w-[650px] text-muted-foreground text-[17px] font-medium leading-[1.5] sm:text-[21px]">
             {copy.lead}
           </p>
 

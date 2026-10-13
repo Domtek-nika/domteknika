@@ -109,7 +109,7 @@ export function FaqSearch({
             setPage(0);
           }}
           placeholder={labels.searchPlaceholder}
-          className={`min-h-14 w-full rounded-[7px] border border-border bg-white py-3 pl-12 pr-12 domtek-type-body font-medium shadow-[0_3px_8px_rgba(0,0,0,0.06)] placeholder:text-muted-foreground [&::-webkit-search-cancel-button]:hidden ${focusStyle}`}
+          className={`min-h-14 w-full rounded-[7px] border border-border bg-white py-3 pl-12 pr-12 shadow-[0_3px_8px_rgba(0,0,0,0.06)] placeholder:text-muted-foreground [&::-webkit-search-cancel-button]:hidden text-[14px] font-medium ${focusStyle}`}
         />
         {query && (
           <button type="button" onClick={clearSearch} aria-label={labels.clearSearch} className={`absolute right-1 top-1/2 flex size-11 -translate-y-1/2 items-center justify-center rounded-[7px] text-muted-foreground hover:text-brand ${focusStyle}`}>
@@ -124,18 +124,18 @@ export function FaqSearch({
             <button key={topic.id} type="button" aria-pressed={activeTopic === topic.id} onClick={() => {
               setActiveTopic(topic.id);
               setPage(0);
-            }} className={`min-h-11 rounded-[7px] border px-4 py-2.5 text-left domtek-type-small font-bold transition-colors ${activeTopic === topic.id ? "border-brand bg-brand text-white" : "border-border bg-white text-foreground hover:border-foreground/25 hover:bg-muted/40"} ${focusStyle}`}>
+            }} className={`min-h-11 rounded-[7px] border px-4 py-2.5 text-left transition-colors text-[12px] font-bold leading-[1.35] ${activeTopic === topic.id ? "border-brand bg-brand text-white" : "border-border bg-white text-foreground hover:border-foreground/25 hover:bg-muted/40"} ${focusStyle}`}>
               {topic.label}
             </button>
           ))}
         </div>
       )}
 
-      <p aria-live="polite" aria-atomic="true" className="mb-4 mt-5 font-bold text-muted-foreground domtek-type-small">{resultLabel}</p>
+      <p aria-live="polite" aria-atomic="true" className="mb-4 mt-5 text-muted-foreground text-xs font-bold">{resultLabel}</p>
 
       {results.length > 0 ? (
         <div id={resultsId}>
-          {showTopics && activeTopic === "all" && singleTopic && <p className="mb-3 font-extrabold text-brand domtek-type-small">{visibleResults[0].topicLabel}</p>}
+          {showTopics && activeTopic === "all" && singleTopic && <p className="mb-3 text-brand text-[11px] font-extrabold">{visibleResults[0].topicLabel}</p>}
           <div className="border-t border-border">
             {/* Keep the answers in the initial HTML while pagination still
                 presents only six questions at a time. */}
@@ -145,24 +145,24 @@ export function FaqSearch({
                 hidden={index < firstResult || index >= firstResult + questionsPerPage}
                 className="group border-b border-border"
               >
-                <summary className={`flex min-h-16 cursor-pointer list-none items-center justify-between gap-5 py-5 domtek-type-body font-bold [&::-webkit-details-marker]:hidden ${focusStyle}`}>
+                <summary className={`flex min-h-16 cursor-pointer list-none items-center justify-between gap-5 py-5 [&::-webkit-details-marker]:hidden text-[16px] font-bold leading-relaxed ${focusStyle}`}>
                   <span>
-                    {showTopics && activeTopic === "all" && !singleTopic && <span className="mb-1.5 block domtek-type-small font-extrabold text-brand">{item.topicLabel}</span>}
+                    {showTopics && activeTopic === "all" && !singleTopic && <span className="mb-1.5 block text-brand text-[11px] font-extrabold">{item.topicLabel}</span>}
                     {item.question}
                   </span>
                   <Plus className="size-5 shrink-0 text-brand transition-transform group-open:rotate-45 motion-reduce:transition-none" aria-hidden />
                 </summary>
-                <p className="max-w-3xl pb-6 pr-7 font-medium text-muted-foreground domtek-type-body">{item.answer}</p>
+                <p className="max-w-3xl pb-6 pr-7 text-muted-foreground text-[14px] font-medium leading-[1.6]">{item.answer}</p>
               </details>
             ))}
           </div>
           {pageCount > 1 && (
             <nav aria-label={labels.paginationLabel} className="mt-5 flex flex-wrap items-center justify-between gap-3">
-              <button type="button" disabled={currentPage === 0} aria-controls={resultsId} onClick={() => setPage(currentPage - 1)} className={`inline-flex min-h-11 items-center gap-2 rounded-[7px] border border-border bg-white px-3 py-2.5 domtek-type-small font-bold transition-colors hover:border-foreground/25 hover:bg-muted/40 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-border disabled:hover:bg-white ${focusStyle}`}>
+              <button type="button" disabled={currentPage === 0} aria-controls={resultsId} onClick={() => setPage(currentPage - 1)} className={`inline-flex min-h-11 items-center gap-2 rounded-[7px] border border-border bg-white px-3 py-2.5 transition-colors hover:border-foreground/25 hover:bg-muted/40 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-border disabled:hover:bg-white text-[12px] font-bold ${focusStyle}`}>
                 <ChevronLeft className="size-4 shrink-0 text-brand" aria-hidden />{labels.previousPage}
               </button>
-              <span className="domtek-type-small font-bold text-muted-foreground">{pageLabel}</span>
-              <button type="button" disabled={currentPage === pageCount - 1} aria-controls={resultsId} onClick={() => setPage(currentPage + 1)} className={`inline-flex min-h-11 items-center gap-2 rounded-[7px] border border-border bg-white px-3 py-2.5 domtek-type-small font-bold transition-colors hover:border-foreground/25 hover:bg-muted/40 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-border disabled:hover:bg-white ${focusStyle}`}>
+              <span className="text-muted-foreground text-[12px] font-bold">{pageLabel}</span>
+              <button type="button" disabled={currentPage === pageCount - 1} aria-controls={resultsId} onClick={() => setPage(currentPage + 1)} className={`inline-flex min-h-11 items-center gap-2 rounded-[7px] border border-border bg-white px-3 py-2.5 transition-colors hover:border-foreground/25 hover:bg-muted/40 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-border disabled:hover:bg-white text-[12px] font-bold ${focusStyle}`}>
                 {labels.nextPage}<ChevronRight className="size-4 shrink-0 text-brand" aria-hidden />
               </button>
             </nav>
@@ -170,9 +170,9 @@ export function FaqSearch({
         </div>
       ) : (
         <div className="rounded-[7px] border border-border bg-white px-5 py-8 sm:px-7">
-          <p className="font-extrabold domtek-type-body">{labels.noResultsTitle}</p>
-          <p className="mt-2 text-muted-foreground domtek-type-body">{labels.noResultsBody}</p>
-          <button type="button" onClick={resetFilters} className={`mt-5 min-h-11 text-left domtek-type-small font-bold text-brand hover:underline ${focusStyle}`}>{labels.resetFilters}</button>
+          <p className="text-[16px] font-extrabold">{labels.noResultsTitle}</p>
+          <p className="mt-2 text-muted-foreground text-[14px] leading-[1.5]">{labels.noResultsBody}</p>
+          <button type="button" onClick={resetFilters} className={`mt-5 min-h-11 text-left text-brand hover:underline text-[13px] font-bold ${focusStyle}`}>{labels.resetFilters}</button>
         </div>
       )}
     </div>

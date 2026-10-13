@@ -34,18 +34,18 @@ export function ProjectDetailPage({
         <article className="mt-9">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(420px,1.1fr)] lg:items-center lg:gap-14">
             <div>
-              <p className="font-extrabold uppercase tracking-wide text-brand domtek-type-small">
+              <p className="uppercase text-brand text-[13px] font-extrabold tracking-wide">
                 {project.category}
               </p>
               <h1 className="domtek-text-shadow mt-4 text-foreground text-[42px] font-extrabold leading-[0.98] sm:text-[60px]">
                 {project.title}<span className="text-brand">.</span>
               </h1>
-              <p className="mt-7 max-w-[700px] font-medium text-muted-foreground domtek-type-body">
+              <p className="mt-7 max-w-[700px] text-muted-foreground text-[16px] font-medium leading-[1.55]">
                 {project.description}
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
-                  <span key={tag} className="rounded-full bg-muted px-3 py-1.5 font-bold text-muted-foreground domtek-type-small">
+                  <span key={tag} className="rounded-full bg-muted px-3 py-1.5 text-muted-foreground text-[11px] font-bold">
                     {tag}
                   </span>
                 ))}
@@ -68,14 +68,14 @@ export function ProjectDetailPage({
           <div className="mt-14 grid gap-10 border-t border-border pt-10 lg:grid-cols-2 lg:gap-16">
             <section>
               <h2 className="text-foreground text-[24px] font-extrabold">{copy.overview}</h2>
-              <p className="mt-5 font-medium text-muted-foreground domtek-type-body">{project.overview}</p>
+              <p className="mt-5 text-muted-foreground text-[15px] font-medium leading-[1.7]">{project.overview}</p>
             </section>
             {project.scope?.length ? (
               <section>
                 <h2 className="text-foreground text-[24px] font-extrabold">{copy.scope}</h2>
                 <ul className="mt-5 grid gap-3">
                   {project.scope.map((item) => (
-                    <li key={item} className="border-l-2 border-brand pl-4 font-medium text-muted-foreground domtek-type-body">{item}</li>
+                    <li key={item} className="border-l-2 border-brand pl-4 text-muted-foreground text-[15px] font-medium leading-[1.55]">{item}</li>
                   ))}
                 </ul>
               </section>
@@ -101,9 +101,9 @@ export function ProjectDetailPage({
               <div className="mt-6 grid gap-3 md:grid-cols-2">
                 {project.relatedPatents.map((patent) => (
                   <Link key={patent.patentId} href={`/patents/${patent.patentId.toLowerCase()}`} className="group rounded-[7px] border border-border bg-white p-5 transition-[transform,border-color,box-shadow] hover:-translate-y-0.5 hover:border-brand/35 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)]">
-                    <span className="flex items-start justify-between gap-4 font-extrabold text-brand domtek-type-small">{patent.publication}<ArrowUpRight className="size-4 shrink-0" aria-hidden /></span>
+                    <span className="flex items-start justify-between gap-4 text-brand text-[12px] font-extrabold">{patent.publication}<ArrowUpRight className="size-4 shrink-0" aria-hidden /></span>
                     <strong className="mt-3 block text-foreground text-[15px] leading-tight">{patent.title}</strong>
-                    <span className="mt-2 block font-medium text-muted-foreground domtek-type-small">{patent.note}</span>
+                    <span className="mt-2 block text-muted-foreground text-[12px] font-medium leading-[1.5]">{patent.note}</span>
                   </Link>
                 ))}
               </div>

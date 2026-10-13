@@ -38,14 +38,14 @@ export function PatentDetailPage({
         <article className="mt-9">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(360px,0.92fr)] lg:items-center lg:gap-14">
             <div>
-              <p className="font-extrabold uppercase tracking-wide text-brand domtek-type-small">
+              <p className="uppercase text-brand text-[13px] font-extrabold tracking-wide">
                 {patent.publication}
               </p>
               <h1 className="domtek-text-shadow mt-4 max-w-[900px] break-words text-foreground text-[36px] font-extrabold leading-[1.02] sm:text-[52px]">
                 {patent.title}
                 <span className="text-brand">.</span>
               </h1>
-              <p className="mt-7 max-w-[900px] font-medium text-muted-foreground domtek-type-body">
+              <p className="mt-7 max-w-[900px] text-muted-foreground text-[15px] font-medium leading-[1.65]">
                 {patent.abstract}
               </p>
             </div>
@@ -199,10 +199,10 @@ function PatentFact({
     <div
       className={`border-b border-r border-border p-5 ${wide ? "sm:col-span-2 lg:col-span-3" : ""}`}
     >
-      <dt className="font-extrabold uppercase tracking-wide text-brand domtek-type-small">
+      <dt className="uppercase text-brand text-[10px] font-extrabold tracking-wide">
         {label}
       </dt>
-      <dd className="mt-2 break-words font-medium text-muted-foreground domtek-type-small">
+      <dd className="mt-2 break-words text-muted-foreground text-[12px] font-medium leading-[1.5]">
         {value || "—"}
       </dd>
     </div>
@@ -226,7 +226,7 @@ function TextSection({
           {paragraphs.map((paragraph, index) => (
             <li
               key={`${index}-${paragraph.slice(0, 28)}`}
-              className="pl-2 font-medium text-muted-foreground domtek-type-body"
+              className="pl-2 text-muted-foreground text-[14px] font-medium leading-[1.7]"
             >
               {paragraph}
             </li>
@@ -237,7 +237,7 @@ function TextSection({
           {paragraphs.map((paragraph, index) => (
             <p
               key={`${index}-${paragraph.slice(0, 28)}`}
-              className="font-medium text-muted-foreground domtek-type-body"
+              className="text-muted-foreground text-[14px] font-medium leading-[1.7]"
             >
               {paragraph}
             </p>

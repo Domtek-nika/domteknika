@@ -1332,7 +1332,7 @@ export function PatentPageContent({
                 key={option.key}
                 type="button"
                 className={cn(
-                  "flex items-center justify-between gap-4 rounded-[5px] px-3 py-2 text-left text-[13px] font-bold text-foreground transition-colors hover:bg-brand/10 focus-visible:bg-brand/10 focus-visible:outline-none min-[1800px]:!px-4 min-[1800px]:!py-3 min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]",
+                  "flex items-center justify-between gap-4 rounded-[5px] px-3 py-2 text-left text-foreground transition-colors hover:bg-brand/10 focus-visible:bg-brand/10 focus-visible:outline-none min-[1800px]:!px-4 min-[1800px]:!py-3 text-[13px] font-bold min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]",
                   active && "bg-brand text-white hover:bg-brand",
                 )}
                 aria-pressed={active}
@@ -1362,7 +1362,7 @@ export function PatentPageContent({
           value={searchTerm}
           onChange={(event) => setSearchTerm(event.target.value)}
           placeholder={copy.searchPlaceholder}
-          className="h-11 w-full rounded-[4px] border border-border bg-white pl-11 pr-4 text-[13px] font-medium text-foreground outline-none shadow-[0_2px_7px_rgba(0,0,0,0.05)] transition-[border-color,box-shadow] duration-300 placeholder:text-muted-foreground/75 focus:border-brand/50 focus:shadow-[0_10px_24px_rgba(0,0,0,0.08)] min-[1800px]:!h-[52px] min-[1800px]:!pl-14 min-[1800px]:!pr-5 min-[1800px]:!text-[15px] min-[2400px]:!h-[58px] min-[2400px]:!text-[17px]"
+          className="h-11 w-full rounded-[4px] border border-border bg-white pl-11 pr-4 text-foreground outline-none shadow-[0_2px_7px_rgba(0,0,0,0.05)] transition-[border-color,box-shadow] duration-300 placeholder:text-muted-foreground/75 focus:border-brand/50 focus:shadow-[0_10px_24px_rgba(0,0,0,0.08)] min-[1800px]:!h-[52px] min-[1800px]:!pl-14 min-[1800px]:!pr-5 min-[2400px]:!h-[58px] text-[13px] font-medium min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]"
           type="search"
         />
       </label>
@@ -1854,7 +1854,7 @@ export function PatentPageContent({
           className="relative z-10 grid min-h-[440px] items-start min-[1800px]:!min-h-[540px] min-[2400px]:!min-h-[660px]"
         >
           <Reveal className="max-w-[515px] min-[1800px]:!max-w-[720px] min-[2400px]:!max-w-[900px]">
-            <div className="flex items-center gap-3 font-medium text-muted-foreground min-[2400px]:!gap-5 domtek-type-eyebrow">
+            <div className="flex items-center gap-3 text-muted-foreground min-[2400px]:!gap-5 text-[15px] font-medium leading-none md:text-[16px] min-[2400px]:!text-[26px]">
               <span
                 className="h-[3px] w-[34px] shrink-0 bg-brand min-[2400px]:!h-1 min-[2400px]:!w-[74px]"
                 aria-hidden
@@ -1868,10 +1868,10 @@ export function PatentPageContent({
               {copy.hero.title}
               <span className="text-brand">.</span>
             </h1>
-            <p className="mt-8 max-w-[430px] font-medium text-muted-foreground min-[1800px]:!max-w-[620px] min-[2400px]:!max-w-[760px] domtek-type-body">
+            <p className="mt-8 max-w-[430px] text-muted-foreground min-[1800px]:!max-w-[620px] min-[2400px]:!max-w-[760px] text-[15px] font-medium leading-[1.35] sm:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[21px]">
               {copy.hero.leadOne}
             </p>
-            <p className="mt-5 max-w-[430px] font-medium text-muted-foreground min-[1800px]:!max-w-[620px] min-[2400px]:!max-w-[760px] domtek-type-body">
+            <p className="mt-5 max-w-[430px] text-muted-foreground min-[1800px]:!max-w-[620px] min-[2400px]:!max-w-[760px] text-[15px] font-medium leading-[1.35] sm:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[21px]">
               {copy.hero.leadTwo}
             </p>
           </Reveal>
@@ -1893,7 +1893,7 @@ export function PatentPageContent({
               >
                 {copy.archiveTitle}
               </h2>
-              <p className="mt-3 font-medium text-muted-foreground domtek-type-small">
+              <p className="mt-3 text-muted-foreground text-[12px] font-medium min-[1800px]:!text-[14px] min-[2400px]:!text-[16px]">
                 {visiblePatents.length} / {PATENTS.length} {copy.resultsLabel}
               </p>
             </div>
@@ -1956,7 +1956,7 @@ export function PatentPageContent({
                       {filter.key !== "all" && (
                         <span
                           className={cn(
-                            "mt-1 text-[9px] font-medium leading-none text-muted-foreground min-[1800px]:!text-[10px] min-[2400px]:!text-[12px]",
+                            "mt-1 text-muted-foreground text-[9px] font-medium leading-none min-[1800px]:!text-[10px] min-[2400px]:!text-[12px]",
                             active && "text-white/85",
                           )}
                         >
@@ -2208,7 +2208,7 @@ export function PatentPageContent({
                 >
                   {selectedPatent.title}
                 </h2>
-                <p className="mt-4 max-w-[680px] font-medium text-muted-foreground domtek-type-body">
+                <p className="mt-4 max-w-[680px] text-muted-foreground text-[14px] font-medium leading-[1.55] md:text-[15px]">
                   {selectedPatent.abstract || copy.details.unavailable}
                 </p>
 
@@ -2251,7 +2251,7 @@ export function PatentPageContent({
                     <h3 className="uppercase text-[12px] font-extrabold tracking-wide">
                       {copy.details.overview}
                     </h3>
-                    <p className="mt-3 font-medium text-muted-foreground domtek-type-body">
+                    <p className="mt-3 text-muted-foreground text-[14px] font-medium leading-[1.65]">
                       {selectedPatent.abstract || copy.details.unavailable}
                     </p>
                   </section>
@@ -2340,7 +2340,7 @@ export function PatentPageContent({
 
                 <section className="mt-8 grid gap-4">
                   {detailError ? (
-                    <p className="rounded-[4px] border border-border bg-muted px-4 py-3 font-medium text-muted-foreground domtek-type-small">
+                    <p className="rounded-[4px] border border-border bg-muted px-4 py-3 text-muted-foreground text-[13px] font-medium">
                       {copy.details.unavailable}
                     </p>
                   ) : selectedPatentDetails ? (
@@ -2349,7 +2349,7 @@ export function PatentPageContent({
                       detail={selectedPatentDetails}
                     />
                   ) : (
-                    <p className="rounded-[4px] border border-border bg-muted px-4 py-3 font-medium text-muted-foreground domtek-type-small">
+                    <p className="rounded-[4px] border border-border bg-muted px-4 py-3 text-muted-foreground text-[13px] font-medium">
                       {copy.details.loading}
                     </p>
                   )}
@@ -2592,7 +2592,7 @@ function PatentTextSection({
   return (
     <PatentSectionShell title={title} defaultOpen={defaultOpen}>
       {paragraphs.length ? (
-        <div className="max-h-[360px] space-y-3 overflow-y-auto pr-2 font-medium text-muted-foreground domtek-type-body">
+        <div className="max-h-[360px] space-y-3 overflow-y-auto pr-2 text-muted-foreground text-[13px] font-medium leading-[1.65]">
           {paragraphs.map((paragraph, index) => (
             <p key={`${paragraph.slice(0, 28)}-${index}`}>{paragraph}</p>
           ))}
@@ -2620,7 +2620,7 @@ function PatentClaimsSection({
           {claims.map((claim, index) => (
             <p
               key={`${claim.slice(0, 28)}-${index}`}
-              className="rounded-[4px] bg-muted px-4 py-3 font-medium text-muted-foreground domtek-type-small"
+              className="rounded-[4px] bg-muted px-4 py-3 text-muted-foreground text-[12px] font-medium leading-[1.55]"
             >
               {claim}
             </p>
@@ -2657,7 +2657,7 @@ function PatentLegalSection({
                   {headline}
                 </strong>
                 {details.length > 0 && (
-                  <p className="mt-2 whitespace-pre-line font-medium text-muted-foreground domtek-type-small">
+                  <p className="mt-2 whitespace-pre-line text-muted-foreground text-[12px] font-medium leading-[1.55]">
                     {details.join("\n")}
                   </p>
                 )}
@@ -2741,7 +2741,7 @@ function PatentReferenceCard({ row }: { row: PatentReferenceRow }) {
 
 function PatentEmptyText({ children }: { children: ReactNode }) {
   return (
-    <p className="rounded-[4px] bg-muted px-4 py-3 font-medium text-muted-foreground domtek-type-small">
+    <p className="rounded-[4px] bg-muted px-4 py-3 text-muted-foreground text-[12px] font-medium">
       {children}
     </p>
   );
@@ -3517,7 +3517,7 @@ export function PatentPageCta({ locale }: { locale: string }) {
               &nbsp;{copy.titleQuestion}
             </span>
           </h2>
-          <p className="mt-8 max-w-[560px] font-medium text-muted-foreground min-[1800px]:!max-w-[680px] min-[2400px]:!max-w-[780px] domtek-type-body">
+          <p className="mt-8 max-w-[560px] text-muted-foreground min-[1800px]:!max-w-[680px] min-[2400px]:!max-w-[780px] text-[15px] font-medium leading-[1.35] sm:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[20px]">
             {copy.body}
           </p>
           <Button

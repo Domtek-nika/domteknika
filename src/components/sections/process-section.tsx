@@ -27,7 +27,7 @@ export function ProcessSection() {
             <h2 className="mt-3 text-foreground text-[18px] font-extrabold leading-tight md:text-[19px] min-[1800px]:!text-[24px] min-[2300px]:!text-[27px]">
               {t("ideaTitle")}
             </h2>
-            <div className="mt-4 max-w-[390px] font-medium text-muted-foreground min-[1800px]:!mt-3 min-[1800px]:max-w-[520px] domtek-type-body">
+            <div className="mt-4 max-w-[390px] text-muted-foreground min-[1800px]:!mt-3 min-[1800px]:max-w-[520px] text-[13px] font-medium leading-[1.3] md:text-[14px] min-[1800px]:!text-[16px] min-[2300px]:!text-[17px]">
               <p>{t("ideaIntro")}</p>
               <p className="mt-4 min-[1800px]:!mt-3 min-[2300px]:!mt-4">
                 {t.rich("ideaBody", {
@@ -54,7 +54,7 @@ export function ProcessSection() {
                 >
                   {t("processTitle")}
                 </h2>
-                <p className="mt-4 font-medium min-[1800px]:!mt-3 min-[2300px]:!mt-4 domtek-type-body">
+                <p className="mt-4 min-[1800px]:!mt-3 min-[2300px]:!mt-4 text-[13px] font-medium leading-[1.28] md:text-[15px] lg:text-[13px] min-[1800px]:!text-[16px] min-[2300px]:!text-[17px]">
                   {t("processBody")}
                 </p>
               </div>
@@ -79,7 +79,7 @@ export function ProcessSection() {
                 <h2 className="mt-3 text-foreground text-[18px] font-extrabold leading-tight md:text-[19px] min-[1800px]:!text-[24px] min-[2300px]:!text-[27px]">
                   {t("productTitle")}
                 </h2>
-                <p className="mt-4 text-left font-medium text-muted-foreground lg:mt-3 lg:max-w-[760px] min-[2300px]:!mt-4 domtek-type-body">
+                <p className="mt-4 text-left text-muted-foreground lg:mt-3 lg:max-w-[760px] min-[2300px]:!mt-4 text-[13px] font-medium leading-[1.3] md:text-[14px] min-[1800px]:!text-[16px] min-[2300px]:!text-[17px]">
                   {t("productBody")}
                 </p>
               </div>

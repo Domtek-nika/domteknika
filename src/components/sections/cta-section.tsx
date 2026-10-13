@@ -33,7 +33,7 @@ export function CtaSection() {
         className="relative z-10 min-[2300px]:!max-w-[1900px]"
       >
         <Reveal initiallyHidden className="max-w-[920px] min-[1800px]:max-w-[1000px] min-[2300px]:!max-w-[1040px]">
-          <div className="flex items-center gap-3 font-medium text-muted-foreground min-[1800px]:gap-4 min-[2300px]:!gap-4 domtek-type-eyebrow">
+          <div className="flex items-center gap-3 text-muted-foreground min-[1800px]:gap-4 min-[2300px]:!gap-4 text-[16px] font-medium min-[1800px]:text-[20px] min-[2300px]:!text-[20px]">
             <span className="h-[3px] w-[34px] bg-brand min-[1800px]:h-[3px] min-[1800px]:w-[52px] min-[2300px]:!h-[3px] min-[2300px]:!w-[52px]" aria-hidden />
             {t("eyebrow")}
           </div>
@@ -47,7 +47,7 @@ export function CtaSection() {
             <span className="whitespace-nowrap text-brand">&nbsp;?</span>
           </h2>
 
-          <p className="mt-7 max-w-[500px] font-medium text-muted-foreground min-[1800px]:max-w-[650px] min-[2300px]:!max-w-[680px] domtek-type-body">
+          <p className="mt-7 max-w-[500px] text-muted-foreground min-[1800px]:max-w-[650px] min-[2300px]:!max-w-[680px] text-[15px] font-medium leading-[1.34] min-[1800px]:text-[19px] min-[2300px]:!text-[20px]">
             {t("subtitle")}
           </p>
 

@@ -241,10 +241,10 @@ function ProjectCard({
           <h3 className="text-foreground text-[14px] font-extrabold leading-tight min-[1800px]:text-[21px] min-[2300px]:!text-[22px]">
             {project.title}
           </h3>
-          <p className="mt-2 font-medium text-muted-foreground min-[1800px]:mt-4 min-[2300px]:!mt-4 domtek-type-small">
+          <p className="mt-2 text-muted-foreground min-[1800px]:mt-4 min-[2300px]:!mt-4 text-[12.5px] font-medium leading-[1.24] min-[1800px]:text-[16px] min-[1800px]:leading-[1.34] min-[2300px]:!text-[16px]">
             {project.description}
           </p>
-          <p className="mt-auto font-extrabold text-brand domtek-type-small">
+          <p className="mt-auto text-brand text-[12px] font-extrabold leading-none min-[1800px]:text-[16px] min-[2300px]:!text-[16px]">
             {tag}
           </p>
         </div>

@@ -34,7 +34,7 @@ export function Footer() {
               />
             </Link>
             <div>
-              <p className="font-extrabold text-foreground lg:mt-4 min-[1800px]:!mt-5 domtek-type-small">
+              <p className="text-foreground lg:mt-4 min-[1800px]:!mt-5 text-[13px] font-extrabold min-[1800px]:!text-[18px] min-[2400px]:!text-[20px]">
                 DOMTEKNIKA SA
               </p>
               <address className="mt-2 grid gap-1 not-italic text-[12px] font-medium leading-[1.5] text-muted-foreground lg:text-[13px] min-[1800px]:!mt-3 min-[1800px]:!text-[16px] min-[2400px]:!text-[18px]">
@@ -84,7 +84,7 @@ export function Footer() {
           </nav>
         </div>
 
-        <p className="mt-8 border-t border-border/70 pt-5 text-center font-medium text-muted-foreground lg:mt-10 min-[1800px]:!mt-12 min-[1800px]:!pt-6 domtek-type-small">
+        <p className="mt-8 border-t border-border/70 pt-5 text-center text-muted-foreground lg:mt-10 min-[1800px]:!mt-12 min-[1800px]:!pt-6 text-[12px] font-medium leading-[1.5] lg:text-[13px] min-[1800px]:!text-[16px] min-[2400px]:!text-[18px]">
           © 2026 DOMTEKNIKA SA · {t("rights")}
         </p>
       </Container>

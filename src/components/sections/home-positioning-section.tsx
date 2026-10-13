@@ -17,7 +17,7 @@ export function HomePositioningSection() {
       <Container size="wide" className="max-w-[1460px] min-[1800px]:max-w-[1520px]">
         <div className="grid items-center gap-5 py-5 sm:py-6 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.45fr)] lg:gap-9">
           <div className={`${styles.copy} mx-auto w-full max-w-[680px] text-center lg:max-w-none lg:text-left`}>
-            <p className="flex items-center justify-center gap-3 font-medium text-muted-foreground lg:justify-start min-[2400px]:gap-5 domtek-type-eyebrow">
+            <p className="flex items-center justify-center gap-3 text-muted-foreground lg:justify-start min-[2400px]:gap-5 text-[15px] font-medium leading-none md:text-[16px] min-[2400px]:text-[26px]">
               <span className="h-[3px] w-[34px] shrink-0 bg-brand min-[2400px]:h-1 min-[2400px]:w-[74px]" aria-hidden />
               {innovation("eyebrow")}
             </p>
@@ -28,7 +28,7 @@ export function HomePositioningSection() {
               {innovation("title")}
               <span className="text-brand">.</span>
             </h2>
-            <p className="mx-auto mt-4 max-w-[720px] text-balance font-medium text-muted-foreground min-[1800px]:max-w-[820px] domtek-type-body">
+            <p className="mx-auto mt-4 max-w-[720px] text-balance text-muted-foreground min-[1800px]:max-w-[820px] text-[14px] font-medium leading-[1.5] sm:text-[15px] min-[1800px]:text-[18px]">
               {innovation("body")}
             </p>
           </div>

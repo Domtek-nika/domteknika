@@ -927,7 +927,7 @@ export function OurStoryPageContent({ locale }: { locale: string }) {
       <Container size="wide" className="relative z-10 pb-14 md:pb-[72px] min-[1800px]:!pb-[100px] min-[2400px]:!pb-[120px]">
         <div className="max-w-[540px] min-[1800px]:!max-w-[720px] min-[2400px]:!max-w-[900px]">
           <Reveal>
-            <div className="flex items-center gap-3 font-medium text-muted-foreground min-[2400px]:!gap-5 domtek-type-eyebrow">
+            <div className="flex items-center gap-3 text-muted-foreground min-[2400px]:!gap-5 text-[15px] font-medium leading-none md:text-[16px] min-[2400px]:!text-[26px]">
               <span className="h-[3px] w-[34px] shrink-0 bg-brand min-[2400px]:!h-1 min-[2400px]:!w-[74px]" aria-hidden />
               {copy.eyebrow}
             </div>
@@ -938,7 +938,7 @@ export function OurStoryPageContent({ locale }: { locale: string }) {
               {copy.title}
               <span className="text-brand">.</span>
             </h1>
-            <p className="mt-8 max-w-[430px] font-medium text-muted-foreground min-[1800px]:!max-w-[620px] min-[2400px]:!max-w-[760px] domtek-type-body">
+            <p className="mt-8 max-w-[430px] text-muted-foreground min-[1800px]:!max-w-[620px] min-[2400px]:!max-w-[760px] text-[15px] font-medium leading-[1.35] sm:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[21px]">
               {copy.intro}
             </p>
           </Reveal>
@@ -1232,7 +1232,7 @@ function TimelineCard({
         <h3 className="mt-3 text-foreground text-[16px] font-extrabold leading-tight md:text-[17px] min-[1800px]:!text-[20px] min-[2400px]:!text-[22px]">
           {card.title}
         </h3>
-        <p className="mt-2.5 font-medium text-muted-foreground min-[1800px]:!mt-3 domtek-type-small">
+        <p className="mt-2.5 text-muted-foreground min-[1800px]:!mt-3 text-[12px] font-medium leading-[1.5] md:text-[13px] min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]">
           {card.description}
         </p>
       </div>
@@ -1402,7 +1402,7 @@ function OurStoryLocationDialog({
       >
         <div className="flex shrink-0 items-start justify-between gap-5 border-b border-border px-5 py-4 sm:px-7 sm:py-5 min-[1800px]:!gap-8 min-[1800px]:!px-10 min-[1800px]:!py-8 min-[2400px]:!px-12 min-[2400px]:!py-10">
           <div>
-            <p className="font-extrabold uppercase tracking-wide text-brand domtek-type-small">
+            <p className="uppercase text-brand text-[11px] font-extrabold tracking-wide min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]">
               {copy.eyebrow}
             </p>
             <h2
@@ -1426,7 +1426,7 @@ function OurStoryLocationDialog({
             <LazyContactMap label="DOMTEKNIKA" />
           </div>
           <div className="flex min-h-0 flex-col justify-between rounded-[7px] border border-border bg-muted/30 p-4 sm:p-5 min-[1800px]:!rounded-[14px] min-[1800px]:!p-8 min-[2400px]:!rounded-[16px] min-[2400px]:!p-10">
-            <p className="whitespace-pre-line font-medium text-muted-foreground domtek-type-body">
+            <p className="whitespace-pre-line text-muted-foreground text-[14px] font-medium leading-[1.5] min-[1800px]:!text-[16px] min-[2400px]:!text-[18px]">
               {copy.address}
             </p>
             <a

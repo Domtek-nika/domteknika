@@ -97,7 +97,7 @@ export function ContactPageContent() {
           <div className="grid gap-7 lg:grid-cols-[340px_minmax(380px,500px)_1fr] lg:items-start lg:gap-10 xl:gap-[54px] min-[1800px]:!grid-cols-[560px_minmax(600px,680px)_1fr] min-[1800px]:!gap-14 min-[2400px]:!grid-cols-[620px_minmax(700px,760px)_1fr] min-[2400px]:!gap-20">
             <div>
               <Reveal>
-                <div className="flex items-center gap-3 font-medium text-muted-foreground min-[2400px]:!gap-5 domtek-type-eyebrow">
+                <div className="flex items-center gap-3 text-muted-foreground min-[2400px]:!gap-5 text-[15px] font-medium leading-none md:text-[16px] min-[2400px]:!text-[26px]">
                   <span
                     className="h-[3px] w-[34px] shrink-0 bg-brand min-[2400px]:!h-1 min-[2400px]:!w-[74px]"
                     aria-hidden
@@ -113,7 +113,7 @@ export function ContactPageContent() {
                   <span className="text-brand">.</span>
                 </h1>
 
-                <p className="mt-8 max-w-[430px] font-medium text-muted-foreground min-[1800px]:!max-w-[500px] min-[2400px]:!max-w-[560px] domtek-type-body">
+                <p className="mt-8 max-w-[430px] text-muted-foreground min-[1800px]:!max-w-[500px] min-[2400px]:!max-w-[560px] text-[15px] font-medium leading-[1.35] sm:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[21px]">
                   {t("Hero.lead")}
                 </p>
               </Reveal>
@@ -149,7 +149,7 @@ export function ContactPageContent() {
                           <h2 className="text-foreground text-[14px] font-extrabold leading-tight min-[1800px]:!text-[17px] min-[2400px]:!text-[19px]">
                             {t(`Cards.${card.key}.title`)}
                           </h2>
-                          <p className="mt-1.5 whitespace-pre-line font-medium text-muted-foreground min-[1800px]:!mt-2 domtek-type-small">
+                          <p className="mt-1.5 whitespace-pre-line text-muted-foreground min-[1800px]:!mt-2 text-[12px] font-medium leading-[1.38] min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]">
                             {t(`Cards.${card.key}.body`)}
                           </p>
                         </div>
@@ -183,7 +183,7 @@ export function ContactPageContent() {
           <Reveal>
             <div className="grid gap-7 lg:grid-cols-[360px_1fr] lg:items-start min-[1800px]:!grid-cols-[480px_1fr] min-[1800px]:!gap-12 min-[2400px]:!grid-cols-[560px_1fr] min-[2400px]:!gap-16">
               <div>
-                <div className="flex items-center gap-3 font-medium text-muted-foreground min-[2400px]:!gap-4 domtek-type-eyebrow">
+                <div className="flex items-center gap-3 text-muted-foreground min-[2400px]:!gap-4 text-[15px] font-medium leading-none md:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[21px]">
                   <span
                     className="h-[3px] w-[34px] shrink-0 bg-brand min-[1800px]:!w-[44px] min-[2400px]:!h-1 min-[2400px]:!w-[52px]"
                     aria-hidden
@@ -202,10 +202,10 @@ export function ContactPageContent() {
               <div className="relative h-[360px] overflow-hidden rounded-[10px] border border-border bg-white shadow-[0_20px_56px_rgba(0,0,0,0.08)] md:h-[380px] min-[1800px]:!h-[520px] min-[1800px]:!rounded-[14px] min-[2400px]:!h-[620px] min-[2400px]:!rounded-[16px]">
                 <LazyContactMap label={t("Map.marker")} />
                 <div className="pointer-events-none absolute bottom-4 left-4 rounded-[7px] border border-border bg-white/92 px-3.5 py-3 shadow-[0_10px_24px_rgba(0,0,0,0.08)] backdrop-blur-sm min-[1800px]:!bottom-6 min-[1800px]:!left-6 min-[1800px]:!rounded-[10px] min-[1800px]:!px-5 min-[1800px]:!py-4 min-[2400px]:!bottom-8 min-[2400px]:!left-8 min-[2400px]:!rounded-[12px] min-[2400px]:!px-6 min-[2400px]:!py-5">
-                  <p className="font-extrabold uppercase tracking-wide text-brand domtek-type-small">
+                  <p className="uppercase text-brand text-[11px] font-extrabold tracking-wide min-[1800px]:!text-[14px] min-[2400px]:!text-[16px]">
                     {t("Map.marker")}
                   </p>
-                  <p className="mt-1 whitespace-pre-line font-medium text-muted-foreground min-[1800px]:!mt-2 domtek-type-small">
+                  <p className="mt-1 whitespace-pre-line text-muted-foreground min-[1800px]:!mt-2 text-[12px] font-medium leading-[1.35] min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]">
                     {t("Cards.location.body")}
                   </p>
                 </div>

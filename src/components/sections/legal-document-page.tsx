@@ -24,7 +24,7 @@ export function LegalDocumentPage({
     <section className="bg-background pb-20 pt-[132px] md:pb-28 md:pt-[152px]">
       <Container size="default">
         <div className="mx-auto max-w-[920px]">
-          <div className="flex items-center gap-3 font-medium text-muted-foreground domtek-type-eyebrow">
+          <div className="flex items-center gap-3 text-muted-foreground text-[14px] font-medium leading-none md:text-[15px]">
             <span className="h-[3px] w-[34px] shrink-0 bg-brand" aria-hidden />
             {eyebrow}
           </div>
@@ -34,10 +34,10 @@ export function LegalDocumentPage({
             <span className="text-brand">.</span>
           </h1>
 
-          <p className="mt-5 max-w-[780px] text-pretty text-muted-foreground domtek-type-body">
+          <p className="mt-5 max-w-[780px] text-pretty text-muted-foreground text-[14px] leading-[1.7] md:text-[15px]">
             {intro}
           </p>
-          <p className="mt-3 font-medium text-muted-foreground/80 domtek-type-small">
+          <p className="mt-3 text-muted-foreground/80 text-[12px] font-medium md:text-[13px]">
             {updatedLabel}: {updated}
           </p>
 
@@ -51,14 +51,14 @@ export function LegalDocumentPage({
                 {section.paragraphs?.map((paragraph) => (
                   <p
                     key={paragraph}
-                    className="mt-3 whitespace-pre-line text-pretty text-muted-foreground domtek-type-small"
+                    className="mt-3 whitespace-pre-line text-pretty text-muted-foreground text-[13px] leading-[1.75] md:text-[14px]"
                   >
                     {paragraph}
                   </p>
                 ))}
 
                 {section.items && (
-                  <ul className="mt-3 grid list-disc gap-1.5 pl-5 text-muted-foreground marker:text-brand domtek-type-body">
+                  <ul className="mt-3 grid list-disc gap-1.5 pl-5 text-muted-foreground marker:text-brand text-[13px] leading-[1.7] md:text-[14px]">
                     {section.items.map((item) => (
                       <li key={item}>{item}</li>
                     ))}

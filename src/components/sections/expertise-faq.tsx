@@ -30,7 +30,7 @@ export async function ExpertiseFaq({ locale }: { locale: string }) {
           <div>
             <span className="block h-[3px] w-[34px] bg-brand" aria-hidden />
             <h2 id="expertise-faq-title" className="domtek-text-shadow mt-6 text-[32px] font-extrabold leading-[1.1] sm:text-[42px] min-[1800px]:text-[52px]">{copy.title}<span className="text-brand">.</span></h2>
-            <p className="mt-6 max-w-[440px] font-medium text-muted-foreground domtek-type-body">{copy.intro}</p>
+            <p className="mt-6 max-w-[440px] text-muted-foreground text-[15px] font-medium leading-[1.55]">{copy.intro}</p>
           </div>
           <FaqSearch questions={questions} topics={topics} labels={copy.labels} locale={locale} showTopics />
         </div>
