@@ -17,6 +17,7 @@ import { buildPageMetadata, localizedUrl, SITE_URL } from "@/lib/seo";
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
 const focusStyle = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
+const introTextStyle = "max-w-[520px] text-[15px] font-medium leading-[1.5] text-muted-foreground min-[1800px]:text-[18px]";
 const buttonStyle = `inline-flex min-h-11 items-center justify-between gap-4 rounded-[7px] bg-brand px-5 py-2.5 text-[13px] font-bold text-white shadow-[0_4px_10px_rgba(0,0,0,0.28)] transition-transform motion-safe:hover:-translate-y-0.5 ${focusStyle}`;
 const secondaryButtonStyle = `inline-flex min-h-11 items-center gap-3 rounded-[7px] border border-border bg-white px-4 py-3 text-[13px] font-bold text-foreground shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors hover:border-foreground/25 hover:bg-muted/40 ${focusStyle}`;
 
@@ -102,8 +103,8 @@ export default async function ServicePage({ params }: Props) {
               </h1>
             </div>
             <div>
-              <p className="max-w-[520px] text-[15px] font-medium leading-[1.5] text-muted-foreground min-[1800px]:text-[18px]">{copy.description}</p>
-              <p className="mt-5 max-w-[520px] text-[13px] font-medium leading-[1.55] text-muted-foreground min-[1800px]:text-[15px]">
+              <p className={introTextStyle}>{copy.description}</p>
+              <p className={`mt-5 ${introTextStyle}`}>
                 <strong className="mb-1.5 block font-extrabold text-foreground">{labels.projectStageTitle}</strong>
                 {labels.projectStageBody}
               </p>
