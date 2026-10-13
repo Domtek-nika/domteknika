@@ -4455,7 +4455,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
       { ...STATS[2], label: "Expertise technique", value: "Multisectorielle" },
       {
         ...STATS[3],
-        label: "",
+        label: "Partenariats techniques",
         value: "Projets internationaux",
       },
       {
