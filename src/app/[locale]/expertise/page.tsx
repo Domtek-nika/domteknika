@@ -446,6 +446,8 @@ function ExpertiseSwissBanner() {
 
 function AddedValueSection() {
   const t = useTranslations("ExpertisePage.AddedValue");
+  const titleTypography = "text-[16px] font-extrabold leading-[1.25] sm:text-[18px] min-[1800px]:!text-[20px] min-[2400px]:!text-[22px]";
+  const bodyTypography = "text-[13px] font-medium leading-[1.4] sm:text-[14px] min-[1800px]:!text-[15px] min-[2400px]:!text-[16px]";
 
   return (
     <section className="bg-background py-[78px] md:py-[92px] min-[1800px]:!py-[96px] min-[2400px]:!py-[112px]">
@@ -455,7 +457,7 @@ function AddedValueSection() {
       >
         <div className="grid gap-7 lg:grid-cols-[1.4fr_0.95fr] lg:items-stretch min-[1800px]:!grid-cols-[1.25fr_1fr] min-[1800px]:!gap-8">
           <Reveal className="transform-gpu rounded-[7px] border border-border bg-white px-6 py-5 transition-shadow duration-300 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] md:px-9 md:py-6">
-            <div className="flex items-center gap-4 text-[16px] font-extrabold leading-none text-foreground min-[1800px]:!text-[18px]">
+            <div className={cn("flex items-center gap-4 text-foreground", titleTypography)}>
               <span
                 className="h-[3px] w-[34px] bg-brand min-[1800px]:!w-[44px]"
                 aria-hidden
@@ -479,10 +481,10 @@ function AddedValueSection() {
                       strokeWidth={1.65}
                       className="h-9 w-9 text-brand transition-transform duration-300 group-hover:-translate-y-1 sm:h-11 sm:w-11 min-[1800px]:!size-12 min-[2400px]:!size-[52px]"
                     />
-                    <h3 className="mt-4 flex min-h-[2.5em] w-full items-center justify-center text-foreground sm:mt-5 text-[16px] font-extrabold leading-tight sm:text-[18px] min-[1800px]:!text-[20px] min-[2400px]:!text-[22px]">
+                    <h3 className={cn("mt-4 flex min-h-[2.5em] w-full items-center justify-center text-foreground sm:mt-5", titleTypography)}>
                       {t(`values.${item.key}.title` as never)}
                     </h3>
-                    <p className="mt-3 text-muted-foreground sm:mt-4 text-[11.5px] font-medium leading-[1.34] sm:text-[14px] sm:leading-[1.38] min-[1800px]:!text-[15px] min-[1800px]:!leading-[1.42] min-[2400px]:!text-[16px]">
+                    <p className={cn("mt-3 text-muted-foreground sm:mt-4", bodyTypography)}>
                       {t(`values.${item.key}.description` as never)}
                     </p>
                   </Reveal>
@@ -494,7 +496,7 @@ function AddedValueSection() {
           <div className="relative lg:min-h-0">
             <Reveal
               delay={0.1}
-              className="relative transform-gpu overflow-hidden rounded-[7px] bg-brand px-5 py-5 text-white shadow-[0_18px_38px_rgba(0,0,0,0.16)] transition-[box-shadow,transform] duration-300 hover:shadow-[0_24px_50px_rgba(0,0,0,0.22)] md:px-7 md:py-7 lg:absolute lg:inset-0 lg:h-full motion-safe:hover:-translate-y-1"
+              className="relative transform-gpu overflow-hidden rounded-[7px] bg-brand px-5 py-5 text-white shadow-[0_18px_38px_rgba(0,0,0,0.16)] transition-[box-shadow,transform] duration-300 hover:shadow-[0_24px_50px_rgba(0,0,0,0.22)] md:px-7 md:py-7 lg:h-full motion-safe:hover:-translate-y-1"
             >
               <div className="relative lg:h-full">
                 <div
@@ -534,7 +536,7 @@ function AddedValueSection() {
                                 "flex items-baseline gap-1.5 whitespace-nowrap sm:gap-2",
                             )}
                           >
-                            <strong className="block max-w-full text-[clamp(14px,3.8vw,18px)] font-extrabold leading-none tracking-normal sm:text-[clamp(17px,2.2vw,21px)] lg:text-[20px] min-[1800px]:!text-[22px] min-[2400px]:!text-[24px]">
+                            <strong className={cn("block max-w-full tracking-normal", titleTypography)}>
                               {t(`stats.${stat.key}.value` as never)}
                               {isIndustries && (
                                 <span className="ml-1.5 sm:ml-2">
@@ -543,13 +545,13 @@ function AddedValueSection() {
                               )}
                             </strong>
                             {!isIndustries && t(`stats.${stat.key}.label` as never) && (
-                              <span className="mt-1.5 block text-[12px] font-medium leading-tight text-white/88 sm:mt-2 sm:text-[13px] md:text-[13px] min-[1800px]:!text-[14px] min-[2400px]:!text-[15px]">
+                              <span className={cn("mt-1.5 block text-white/88 sm:mt-2", bodyTypography)}>
                                 {t(`stats.${stat.key}.label` as never)}
                               </span>
                             )}
                           </div>
                           {isIndustries && (
-                            <span className="mt-1.5 block max-w-[31ch] text-[10px] font-medium leading-[1.16] text-white/88 sm:mt-2 sm:text-[12px] md:text-[12px] min-[1800px]:!text-[13px] min-[2400px]:!text-[14px]">
+                            <span className={cn("mt-1.5 block max-w-[31ch] text-white/88 sm:mt-2", bodyTypography)}>
                               {t("stats.industries.detail")}
                             </span>
                           )}
