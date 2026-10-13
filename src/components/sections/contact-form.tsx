@@ -3,6 +3,7 @@
 import {
   useRef,
   useState,
+  useSyncExternalStore,
   type FormEvent,
   type InputHTMLAttributes,
 } from "react";
@@ -15,6 +16,16 @@ import {
 
 import { cn } from "@/lib/utils";
 import { trackContactLead } from "@/lib/analytics-events";
+import {
+  CONTACT_FIELDS,
+  CONTACT_FIELD_LIMITS,
+  isContactField,
+  readContactFieldErrors,
+  validateContactFields,
+  type ContactField,
+  type ContactFieldErrorCode,
+  type ContactFieldErrors,
+} from "@/lib/contact-validation";
 
 type ContactFormCopy = {
   title: string;
@@ -24,6 +35,8 @@ type ContactFormCopy = {
   email: string;
   phone: string;
   message: string;
+  requiredNotice: string;
+  errors: Record<ContactFieldErrorCode, string>;
   submit: string;
   sending: string;
   success: string;
@@ -34,6 +47,10 @@ type ContactFormCopy = {
 
 type SubmissionStatus = "idle" | "sending" | "success" | "invalid" | "rateLimited" | "error";
 
+const subscribeToHydration = () => () => {};
+const getClientHydrationSnapshot = () => true;
+const getServerHydrationSnapshot = () => false;
+
 export function ContactForm({
   copy,
   locale,
@@ -41,9 +58,28 @@ export function ContactForm({
   copy: ContactFormCopy;
   locale: string;
 }) {
+  const hydrated = useSyncExternalStore(
+    subscribeToHydration, getClientHydrationSnapshot, getServerHydrationSnapshot,
+  );
   const [status, setStatus] = useState<SubmissionStatus>("idle");
+  const [fieldErrors, setFieldErrors] = useState<ContactFieldErrors>({});
   const submissionIdRef = useRef<string | null>(null);
   const sendingRef = useRef(false);
+
+  const showFieldErrors = (errors: ContactFieldErrors, form: HTMLFormElement) => {
+    setFieldErrors(errors);
+    setStatus("invalid");
+    const firstField = CONTACT_FIELDS.find((field) => errors[field]);
+    if (firstField) {
+      window.requestAnimationFrame(() => {
+        if (!form.isConnected) return;
+        const control = form.elements.namedItem(firstField);
+        if (control instanceof HTMLInputElement || control instanceof HTMLTextAreaElement) {
+          control.focus();
+        }
+      });
+    }
+  };
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -51,6 +87,14 @@ export function ContactForm({
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const validation = validateContactFields(Object.fromEntries(
+      CONTACT_FIELDS.map((field) => [field, getFormString(formData, field)]),
+    ));
+    if (!validation.ok) {
+      showFieldErrors(validation.fieldErrors, form);
+      return;
+    }
+    setFieldErrors({});
     sendingRef.current = true;
     const submissionId = submissionIdRef.current ?? createSubmissionId();
     submissionIdRef.current = submissionId;
@@ -91,7 +135,11 @@ export function ContactForm({
       }
 
       if (response.status === 422) {
-        setStatus("invalid");
+        const body: unknown = await response.json().catch(() => null);
+        const errors = readContactFieldErrors(
+          body && typeof body === "object" && "fieldErrors" in body ? body.fieldErrors : null,
+        );
+        showFieldErrors(errors, form);
       } else if (response.status === 429) {
         setStatus("rateLimited");
       } else {
@@ -105,24 +153,44 @@ export function ContactForm({
     }
   };
 
-  const resetSubmissionState = () => {
+  const resetSubmissionState = (event: FormEvent<HTMLFormElement>) => {
     if (sendingRef.current) return;
     submissionIdRef.current = null;
+    const name = (event.target as HTMLInputElement | HTMLTextAreaElement).name;
+    if (isContactField(name)) {
+      setFieldErrors((current) => {
+        if (!current[name]) return current;
+        const next = { ...current };
+        delete next[name];
+        return next;
+      });
+    }
     if (status !== "idle" && status !== "sending") setStatus("idle");
   };
 
   const feedback = getFeedback(status, copy);
+  const fieldError = (field: ContactField) => {
+    const code = fieldErrors[field];
+    return code ? copy.errors[code]
+      .replace("{max}", String(CONTACT_FIELD_LIMITS[field].max))
+      .replace("{min}", String(CONTACT_FIELD_LIMITS[field].min)) : undefined;
+  };
 
   return (
     <form
       className="rounded-[12px] border border-border bg-white/88 px-5 py-5 shadow-[0_18px_46px_rgba(0,0,0,0.09)] backdrop-blur-sm md:px-6 md:py-6 min-[1800px]:!rounded-[16px] min-[1800px]:!px-8 min-[1800px]:!py-8 min-[2400px]:!rounded-[18px] min-[2400px]:!px-10 min-[2400px]:!py-10"
       onSubmit={onSubmit}
       onInput={resetSubmissionState}
+      method="post"
+      noValidate
       aria-busy={status === "sending"}
     >
       <h2 className="font-extrabold text-foreground domtek-type-heading">
         {copy.title}
       </h2>
+      <p className="mt-2 font-medium text-muted-foreground domtek-type-small">
+        {copy.requiredNotice}
+      </p>
 
       <div className="pointer-events-none absolute left-[-10000px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
         <label htmlFor="contact-website">Website</label>
@@ -138,7 +206,8 @@ export function ContactForm({
       <div className="mt-4 grid gap-2.5 sm:grid-cols-2 min-[1800px]:!mt-6 min-[1800px]:!gap-4 min-[2400px]:!mt-7 min-[2400px]:!gap-5">
         <ContactInput
           name="firstName"
-          placeholder={copy.firstName}
+          label={copy.firstName}
+          error={fieldError("firstName")}
           autoComplete="given-name"
           maxLength={80}
           disabled={status === "sending"}
@@ -146,7 +215,8 @@ export function ContactForm({
         />
         <ContactInput
           name="lastName"
-          placeholder={copy.lastName}
+          label={copy.lastName}
+          error={fieldError("lastName")}
           autoComplete="family-name"
           maxLength={80}
           disabled={status === "sending"}
@@ -157,7 +227,8 @@ export function ContactForm({
       <div className="mt-2.5 grid gap-2.5 min-[1800px]:!mt-4 min-[1800px]:!gap-4 min-[2400px]:!mt-5 min-[2400px]:!gap-5">
         <ContactInput
           name="company"
-          placeholder={copy.company}
+          label={copy.company}
+          error={fieldError("company")}
           autoComplete="organization"
           maxLength={120}
           disabled={status === "sending"}
@@ -165,7 +236,9 @@ export function ContactForm({
         <ContactInput
           name="email"
           type="email"
-          placeholder={copy.email}
+          label={copy.email}
+          error={fieldError("email")}
+          spellCheck={false}
           autoComplete="email"
           maxLength={254}
           disabled={status === "sending"}
@@ -174,29 +247,41 @@ export function ContactForm({
         <ContactInput
           name="phone"
           type="tel"
-          placeholder={copy.phone}
+          label={copy.phone}
+          error={fieldError("phone")}
           autoComplete="tel"
           maxLength={40}
           disabled={status === "sending"}
         />
-        <label className="sr-only" htmlFor="contact-message">
-          {copy.message}
-        </label>
-        <textarea
-          id="contact-message"
-          name="message"
-          placeholder={copy.message}
-          minLength={10}
-          maxLength={5000}
-          disabled={status === "sending"}
-          required
-          className="min-h-[88px] resize-y rounded-[7px] border border-input bg-white px-3.5 py-3 font-medium text-foreground outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-muted-foreground focus:border-brand/45 focus:shadow-[0_0_0_3px_rgba(227,6,19,0.08)] min-[1800px]:!min-h-[130px] min-[1800px]:!rounded-[10px] min-[1800px]:!px-5 min-[1800px]:!py-4 min-[2400px]:!min-h-[160px] min-[2400px]:!rounded-[12px] min-[2400px]:!px-6 min-[2400px]:!py-5 domtek-type-body"
-        />
+        <div className="grid gap-1.5">
+          <label className="font-medium text-foreground domtek-type-small" htmlFor="contact-message">
+            {copy.message}<span className="text-brand" aria-hidden="true"> *</span>
+          </label>
+          <textarea
+            id="contact-message"
+            name="message"
+            minLength={10}
+            maxLength={5000}
+            disabled={status === "sending"}
+            required
+            aria-invalid={Boolean(fieldErrors.message) || undefined}
+            aria-describedby={fieldErrors.message ? "contact-message-error" : undefined}
+            className={cn(
+              "min-h-[88px] resize-y rounded-[7px] border border-input bg-white px-3.5 py-3 font-medium text-foreground outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-muted-foreground focus:border-brand/45 focus:shadow-[0_0_0_3px_rgba(227,6,19,0.08)] min-[1800px]:!min-h-[130px] min-[1800px]:!rounded-[10px] min-[1800px]:!px-5 min-[1800px]:!py-4 min-[2400px]:!min-h-[160px] min-[2400px]:!rounded-[12px] min-[2400px]:!px-6 min-[2400px]:!py-5 domtek-type-body",
+              fieldErrors.message && "border-brand",
+            )}
+          />
+          {fieldErrors.message && (
+            <p id="contact-message-error" className="font-medium text-brand domtek-type-small">
+              {fieldError("message")}
+            </p>
+          )}
+        </div>
       </div>
 
       <button
         type="submit"
-        disabled={status === "sending"}
+        disabled={!hydrated || status === "sending"}
         className="mt-3 inline-flex h-[44px] w-full items-center justify-between rounded-[7px] bg-brand px-5 text-[14px] font-extrabold text-white shadow-[0_6px_12px_rgba(0,0,0,0.22)] transition-transform duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35 focus-visible:ring-offset-2 [transition-timing-function:var(--ease-smooth)] min-[1800px]:!mt-4 min-[1800px]:!h-[56px] min-[1800px]:!rounded-[10px] min-[1800px]:!px-7 min-[1800px]:!text-[17px] min-[2400px]:!mt-5 min-[2400px]:!h-[64px] min-[2400px]:!rounded-[12px] min-[2400px]:!px-8 min-[2400px]:!text-[19px]"
       >
         {status === "sending" ? copy.sending : copy.submit}
@@ -269,24 +354,30 @@ function getFeedback(status: SubmissionStatus, copy: ContactFormCopy) {
 
 function ContactInput({
   className,
+  label,
+  error,
   id,
   ...props
-}: InputHTMLAttributes<HTMLInputElement>) {
+}: InputHTMLAttributes<HTMLInputElement> & { label: string; error?: string }) {
   const inputId = id ?? `contact-${props.name}`;
 
   return (
-    <>
-      <label className="sr-only" htmlFor={inputId}>
-        {props.placeholder}
+    <div className="grid gap-1.5">
+      <label className="font-medium text-foreground domtek-type-small" htmlFor={inputId}>
+        {label}{props.required && <span className="text-brand" aria-hidden="true"> *</span>}
       </label>
       <input
         id={inputId}
         className={cn(
           "h-[40px] rounded-[7px] border border-input bg-white px-3.5 domtek-type-body font-medium text-foreground outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-muted-foreground focus:border-brand/45 focus:shadow-[0_0_0_3px_rgba(227,6,19,0.08)] min-[1800px]:!h-[52px] min-[1800px]:!rounded-[10px] min-[1800px]:!px-5 min-[2400px]:!h-[58px] min-[2400px]:!rounded-[12px] min-[2400px]:!px-6",
+          error && "border-brand",
           className,
         )}
+        aria-invalid={Boolean(error) || undefined}
+        aria-describedby={error ? `${inputId}-error` : undefined}
         {...props}
       />
-    </>
+      {error && <p id={`${inputId}-error`} className="font-medium text-brand domtek-type-small">{error}</p>}
+    </div>
   );
 }

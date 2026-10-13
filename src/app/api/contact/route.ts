@@ -2,6 +2,8 @@ import { createHash } from "node:crypto";
 
 import { Resend } from "resend";
 
+import { validateContactFields, type ContactFieldErrors } from "@/lib/contact-validation";
+
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const maxDuration = 10;
@@ -34,9 +36,6 @@ const ALLOWED_FIELDS = new Set([
   "website",
 ]);
 const CONTROL_CHARACTERS = /[\u0000-\u001f\u007f]/u;
-const MESSAGE_CONTROL_CHARACTERS = /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/u;
-const EMAIL_PATTERN = /^[A-Z0-9.!#$%&'*+/=?^_{}|~-]+@[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?(?:\.[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?)+$/iu;
-const PHONE_PATTERN = /^[+()\d\s./-]+$/u;
 const UUID_V4_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/iu;
 
 type ContactLocale = (typeof CONTACT_LOCALES)[number];
@@ -202,10 +201,11 @@ export async function POST(request: Request) {
     return successResponse();
   }
 
-  const payload = parseContactPayload(parsedBody);
-  if (!payload) {
-    return errorResponse("invalid", 422);
+  const payloadResult = parseContactPayload(parsedBody);
+  if (!payloadResult.ok) {
+    return errorResponse("invalid", 422, undefined, payloadResult.fieldErrors);
   }
+  const payload = payloadResult.payload;
 
   const rateLimitKeys = [
     `client:${getClientFingerprint(request)}`,
@@ -294,55 +294,24 @@ export async function POST(request: Request) {
   }
 }
 
-function parseContactPayload(value: unknown): ContactPayload | null {
-  if (!isRecord(value)) return null;
-  if (Object.keys(value).some((key) => !ALLOWED_FIELDS.has(key))) return null;
+function parseContactPayload(value: unknown):
+  | { ok: true; payload: ContactPayload }
+  | { ok: false; fieldErrors?: ContactFieldErrors } {
+  if (!isRecord(value)) return { ok: false };
+  if (Object.keys(value).some((key) => !ALLOWED_FIELDS.has(key))) return { ok: false };
 
-  const firstName = parseSingleLine(value.firstName, 1, 80);
-  const lastName = parseSingleLine(value.lastName, 1, 80);
-  const company = parseSingleLine(value.company, 0, 120);
-  const rawEmail = parseSingleLine(value.email, 3, 254);
-  const phone = parseSingleLine(value.phone, 0, 40);
-  const message = parseMessage(value.message);
   const rawLocale = parseSingleLine(value.locale, 2, 2);
   const rawSubmissionId = parseSingleLine(value.submissionId, 36, 36);
-
-  if (
-    !firstName ||
-    !lastName ||
-    company === null ||
-    !rawEmail ||
-    phone === null ||
-    !message ||
-    !rawLocale ||
-    !rawSubmissionId
-  ) {
-    return null;
-  }
-
-  const email = rawEmail.toLowerCase();
+  if (!rawLocale || !rawSubmissionId) return { ok: false };
   const locale = rawLocale.toLowerCase();
   const submissionId = rawSubmissionId.toLowerCase();
-
-  if (
-    !EMAIL_PATTERN.test(email) ||
-    (phone && !PHONE_PATTERN.test(phone)) ||
-    !isContactLocale(locale) ||
-    !UUID_V4_PATTERN.test(submissionId)
-  ) {
-    return null;
+  if (!isContactLocale(locale) || !UUID_V4_PATTERN.test(submissionId)) {
+    return { ok: false };
   }
 
-  return {
-    company,
-    email,
-    firstName,
-    lastName,
-    locale,
-    message,
-    phone,
-    submissionId,
-  };
+  const fields = validateContactFields(value);
+  if (!fields.ok) return { ok: false, fieldErrors: fields.fieldErrors };
+  return { ok: true, payload: { ...fields.values, locale, submissionId } };
 }
 
 function isContactLocale(value: string): value is ContactLocale {
@@ -392,25 +361,6 @@ function parseSingleLine(value: unknown, minLength: number, maxLength: number) {
     CONTROL_CHARACTERS.test(normalized)
   ) {
     return null;
-  }
-
-  return normalized;
-}
-
-function parseMessage(value: unknown) {
-  if (typeof value !== "string") return "";
-
-  const normalized = value
-    .replace(/\r\n?/gu, "\n")
-    .trim()
-    .normalize("NFC");
-
-  if (
-    normalized.length < 10 ||
-    normalized.length > 5_000 ||
-    MESSAGE_CONTROL_CHARACTERS.test(normalized)
-  ) {
-    return "";
   }
 
   return normalized;
@@ -687,12 +637,13 @@ function errorResponse(
   code: ContactResponseCode,
   status: number,
   headers?: HeadersInit,
+  fieldErrors?: ContactFieldErrors,
 ) {
-  return jsonResponse({ ok: false, code }, status, headers);
+  return jsonResponse({ ok: false, code, ...(fieldErrors ? { fieldErrors } : {}) }, status, headers);
 }
 
 function jsonResponse(
-  body: { ok: true } | { ok: false; code: ContactResponseCode },
+  body: { ok: true } | { ok: false; code: ContactResponseCode; fieldErrors?: ContactFieldErrors },
   status: number,
   extraHeaders?: HeadersInit,
 ) {

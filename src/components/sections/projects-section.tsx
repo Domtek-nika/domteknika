@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
@@ -55,6 +55,8 @@ export function ProjectsSection({
   const t = useTranslations("Projects");
   const locale = useLocale();
   const [api, setApi] = useState<CarouselApi>();
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [isNearViewport, setIsNearViewport] = useState(false);
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(
     null,
   );
@@ -65,6 +67,7 @@ export function ProjectsSection({
   const autoplay = useMemo(
     () =>
       Autoplay({
+        active: isNearViewport,
         delay: 3000,
         stopOnInteraction: true,
         stopOnMouseEnter: true,
@@ -72,12 +75,30 @@ export function ProjectsSection({
           "(prefers-reduced-motion: reduce)": { active: false },
         },
       }),
-    [],
+    [isNearViewport],
   );
   const closeProject = useCallback(() => setSelectedProjectId(null), []);
 
+  useEffect(() => {
+    if (!sectionRef.current) return;
+    if (!("IntersectionObserver" in window)) {
+      const timer = globalThis.setTimeout(() => setIsNearViewport(true), 0);
+      return () => globalThis.clearTimeout(timer);
+    }
+
+    // Do not advance to later project images while the visitor is still
+    // reading the top of the page.
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsNearViewport(entry.isIntersecting),
+      { rootMargin: "400px 0px" },
+    );
+    observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       id="projects"
       className="relative overflow-hidden scroll-mt-24 bg-background pb-10 pt-[72px] md:pb-[104px] md:pt-32 min-[1800px]:pb-[120px] min-[1800px]:pt-[136px] min-[2300px]:!pb-[120px] min-[2300px]:!pt-[136px]"
       aria-labelledby="projects-title"
@@ -186,12 +207,16 @@ function ProjectCard({
   tag: string;
 }) {
   return (
-    <button
-      type="button"
+    <Link
+      href={`/projects/${project.id}`}
+      prefetch={false}
       className="group block h-[334px] w-full overflow-hidden rounded-[7px] border border-border bg-white text-left outline-none transition-shadow duration-300 hover:shadow-[0_18px_45px_rgba(0,0,0,0.08)] focus-visible:ring-2 focus-visible:ring-brand/30 min-[1800px]:h-[500px] min-[2300px]:!h-[510px]"
       aria-label={project.title}
       aria-haspopup="dialog"
-      onClick={onOpen}
+      onNavigate={(event) => {
+        event.preventDefault();
+        onOpen();
+      }}
       onFocus={() => void loadProjectDetailsDialog()}
       onPointerEnter={() => void loadProjectDetailsDialog()}
     >
@@ -224,7 +249,7 @@ function ProjectCard({
           </p>
         </div>
       </article>
-    </button>
+    </Link>
   );
 }
 

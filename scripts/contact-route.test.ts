@@ -185,6 +185,25 @@ describe("contact API with simulated Resend transport", { concurrency: false }, 
     });
   });
 
+  test("returns precise field errors without exposing values or attempting email transport", async () => {
+    await withMockTransport({}, async (calls) => {
+      const response = await POST(contactRequest({
+        firstName: "   ", lastName: "", company: "x".repeat(121),
+        email: "not-an-email", phone: "call me", message: "short",
+      }));
+      assert.equal(response.status, 422);
+      assert.deepEqual(await response.json(), {
+        ok: false, code: "invalid", fieldErrors: {
+          firstName: "required", lastName: "required", company: "maxLength",
+          email: "invalidEmail", phone: "invalidPhone", message: "minLength",
+        },
+      });
+      assert.equal(calls.length, 0);
+      const invalidMetadata = await POST(contactRequest({ locale: "xx" }));
+      assert.deepEqual(await invalidMetadata.json(), { ok: false, code: "invalid" });
+    });
+  });
+
   test("silently accepts a filled honeypot without creating an email", async () => {
     await withMockTransport({}, async (calls) => {
       const response = await POST(contactRequest({ website: "https://bot.example.invalid" }));
