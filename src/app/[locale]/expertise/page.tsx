@@ -115,7 +115,7 @@ function ExpertiseHero() {
 
   return (
     <section
-      className="relative overflow-visible bg-background pb-[42px] pt-[132px] md:min-h-[376px] md:pb-[46px] md:pt-[152px] min-[1800px]:!min-h-[520px] min-[1800px]:!pb-[60px] min-[2400px]:!min-h-[700px] min-[2400px]:!pb-20 min-[2400px]:!pt-[152px]"
+      className="relative overflow-visible bg-background pb-[55px] pt-[132px] md:min-h-[403px] md:pb-[60px] md:pt-[152px] min-[1800px]:!min-h-[588px] min-[1800px]:!pb-[78px] min-[2400px]:!min-h-[803px] min-[2400px]:!pb-[104px] min-[2400px]:!pt-[152px]"
       aria-labelledby="expertise-hero-title"
     >
       <Image
@@ -496,11 +496,11 @@ function AddedValueSection() {
           <div className="relative lg:min-h-0">
             <Reveal
               delay={0.1}
-              className="relative transform-gpu overflow-hidden rounded-[7px] bg-brand px-5 py-5 text-white shadow-[0_18px_38px_rgba(0,0,0,0.16)] transition-[box-shadow,transform] duration-300 hover:shadow-[0_24px_50px_rgba(0,0,0,0.22)] md:px-7 md:py-7 lg:h-full motion-safe:hover:-translate-y-1"
+              className="relative transform-gpu overflow-hidden rounded-[7px] bg-brand px-5 py-5 text-white shadow-[0_18px_38px_rgba(0,0,0,0.16)] transition-[box-shadow,transform] duration-300 hover:shadow-[0_24px_50px_rgba(0,0,0,0.22)] md:px-7 md:py-7 lg:absolute lg:inset-0 lg:h-full motion-safe:hover:-translate-y-1"
             >
               <div className="relative lg:h-full">
                 <div
-                  className="pointer-events-none absolute inset-x-0 top-1/2 z-10 h-px -translate-y-1/2 bg-white/28"
+                  className="pointer-events-none absolute inset-x-0 top-1/2 z-10 h-px -translate-y-1/2 bg-white/28 lg:hidden"
                   aria-hidden
                 />
                 <div
@@ -508,7 +508,7 @@ function AddedValueSection() {
                   aria-hidden
                 />
 
-                <div className="relative grid grid-cols-2 auto-rows-fr lg:h-full lg:grid-rows-2">
+                <div className="relative grid grid-cols-2 auto-rows-fr lg:h-full lg:auto-rows-auto lg:grid-rows-[auto_auto]">
                   {STATS.map((stat, index) => {
                     const isIndustries = stat.key === "industries";
                     const Icon = stat.icon;
@@ -517,12 +517,12 @@ function AddedValueSection() {
                       <div
                         key={stat.key}
                         className={cn(
-                          "group flex min-h-[122px] min-w-0 flex-col justify-center gap-1.5 py-4 sm:min-h-[138px] sm:gap-2 sm:py-5 lg:grid lg:min-h-0 lg:content-start lg:grid-rows-[50px_auto] lg:justify-stretch lg:py-0",
+                          "group flex min-h-[122px] min-w-0 flex-col justify-center gap-1.5 py-4 sm:min-h-[138px] sm:gap-2 sm:py-5 lg:grid lg:min-h-0 lg:content-start lg:grid-rows-[44px_auto] lg:justify-stretch lg:py-0 min-[1800px]:!grid-rows-[48px_auto] min-[2400px]:!grid-rows-[52px_auto]",
                           index % 2 === 0 ? "pr-3 sm:pr-6" : "pl-3 sm:pl-6",
-                          index < 2 ? "lg:-translate-y-2 lg:pb-9" : "lg:pt-4",
+                          index < 2 ? "lg:pb-3" : "lg:border-t lg:border-white/28 lg:pt-3",
                         )}
                       >
-                        <div className="flex h-[40px] items-center sm:h-[46px] lg:h-[50px]">
+                        <div className="flex h-[40px] items-center sm:h-[46px] lg:h-[44px] min-[1800px]:!h-[48px] min-[2400px]:!h-[52px]">
                           <Icon
                             aria-hidden="true"
                             strokeWidth={1.65}
