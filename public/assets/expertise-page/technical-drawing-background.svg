@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1351" height="421" viewBox="0 0 1351 421" fill="none">
+  <defs>
+    <linearGradient id="housing" x1="0" y1="260" x2="392" y2="125" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d36b6b" stop-opacity=".025"/>
+      <stop offset="1" stop-color="#d36b6b" stop-opacity=".14"/>
+    </linearGradient>
+    <linearGradient id="lever" x1="355" y1="405" x2="735" y2="242" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#cc5555" stop-opacity=".09"/>
+      <stop offset="1" stop-color="#cc5555" stop-opacity=".22"/>
+    </linearGradient>
+    <linearGradient id="wheel" x1="995" y1="230" x2="1351" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d36b6b" stop-opacity=".025"/>
+      <stop offset="1" stop-color="#d36b6b" stop-opacity=".14"/>
+    </linearGradient>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(50)">
+      <path d="M0 0V6" stroke="#d36b6b" stroke-opacity=".075" stroke-width=".65"/>
+    </pattern>
+    <clipPath id="housing-section">
+      <path d="M0 27H298C348 27 371 51 371 102V340C371 375 358 389 321 389H0V372H318C343 372 354 363 354 337V109C354 64 335 43 296 43H0Z"/>
+    </clipPath>
+    <clipPath id="lower-section">
+      <path d="M154 322C203 323 241 318 263 306L352 363V386H237Z"/>
+    </clipPath>
+    <clipPath id="wheel-section">
+      <path d="M900 0H1245V421H900Z"/>
+    </clipPath>
+  </defs>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="url(#housing)" stroke-width=".85">
+      <path d="M0 4H300C366 4 401 39 401 103V421M0 19H297C352 19 382 49 382 105V335C382 378 366 400 321 400H0"/>
+      <path d="M0 24H296C351 24 375 49 375 103V340C375 376 359 392 321 392H0"/>
+      <path d="M0 28H294C345 28 370 51 370 104V339C370 371 357 387 320 387H0"/>
+      <path d="M0 43H294C335 43 355 65 355 109V336C355 363 344 373 317 373H0"/>
+      <path d="M0 72H134C233 72 289 97 289 161V257C289 296 272 309 236 315L153 323"/>
+      <path d="M153 323L246 386M173 322L265 386M194 321L285 386M216 319L306 386M237 315L327 383M257 309L345 371" stroke-width=".6"/>
+      <circle cx="135" cy="195" r="41"/>
+      <path d="M135 96V274M25 195H224M135 288V376M31 421L199 252M240 202L358 326M286 275L357 344" stroke-dasharray="15 5 2 5" stroke-width=".65"/>
+      <path d="M0 372H400M0 389H404M0 399H578M355 80V421M381 59V421" stroke-width=".5"/>
+    </g>
+    <path d="M0 0H410V421H0Z" fill="url(#hatch)" clip-path="url(#housing-section)"/>
+    <path d="M140 300H360V395H140Z" fill="url(#hatch)" clip-path="url(#lower-section)"/>
+    <g stroke="url(#lever)" stroke-width="1.15">
+      <path d="M393 421C369 402 354 379 362 351C369 326 382 312 409 302L603 237C619 232 629 211 650 206C682 196 712 214 722 243C734 274 719 303 697 314L524 370C509 377 501 395 489 421"/>
+      <path d="M402 421C377 399 367 378 374 352C380 331 394 319 414 311L610 245C628 239 635 222 654 215C679 206 703 222 714 246C724 270 712 293 691 306L519 362C499 368 490 397 481 421" stroke-width=".85"/>
+      <path d="M419 318L548 275C558 271 565 275 562 284L541 328C538 334 534 339 526 342L475 358C466 361 459 357 450 354L423 342C408 336 404 324 419 318Z"/>
+      <path d="M565 315L607 288C613 284 618 284 622 290L632 305C636 311 633 317 626 320L573 336C563 339 557 334 559 327C560 322 562 318 565 315Z"/>
+      <circle cx="669" cy="263" r="34" stroke-width=".75"/>
+      <circle cx="669" cy="263" r="30"/>
+      <circle cx="669" cy="263" r="25"/>
+      <path d="M399 333C432 332 462 351 474 379C479 391 478 407 468 421" stroke-width=".7"/>
+    </g>
+    <g stroke="#d36b6b" stroke-opacity=".055" stroke-width=".65">
+      <path d="M351 318L694 180M403 332L593 263M471 361L565 420M656 165L747 349M400 294V421M576 193V369M669 156V404M614 263H752M583 215H793M398 315H796M751 199V355M350 363H541M385 399H578"/>
+      <path d="M510 421L879 116M577 399L733 263M668 183V421" stroke-dasharray="15 6 2 6"/>
+      <path d="M657 169L669 188L669 157M658 267L681 256M396 327L402 337M396 335L406 330M497 394L510 400"/>
+    </g>
+    <g stroke="url(#wheel)" stroke-width=".85">
+      <g clip-path="url(#wheel-section)">
+        <circle cx="1169" cy="290" r="161"/>
+        <circle cx="1169" cy="290" r="118"/>
+        <circle cx="1169" cy="290" r="110" stroke-width="1.1"/>
+      </g>
+      <path d="M1245 97V226C1245 240 1251 247 1264 247H1351M1245 267H1312C1326 267 1330 274 1330 287V317H1351M1245 246H1351V316H1331V288C1331 273 1327 267 1311 267H1245" stroke-width="1.1"/>
+      <path d="M1245 317V401H1307L1336 379H1351M1260 269V401M1279 269V401M1308 291V401M1330 317L1336 379M1237 0L1349 44V95M1265 0L1349 59M1287 0L1349 36"/>
+      <path d="M1169 95V421M906 290H1351M1228 400H1351M1292 160V421" stroke-dasharray="16 5 2 5" stroke-width=".65"/>
+      <path d="M968 264V329M990 273V308M1148 119H1189M1230 246H1273M1267 316H1335" stroke-width=".6"/>
+    </g>
+    <path d="M1245 247H1351V317H1331V288C1331 273 1327 267 1311 267H1245Z" fill="url(#hatch)"/>
+  </g>
+</svg>

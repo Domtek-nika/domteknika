@@ -119,12 +119,12 @@ function ExpertiseHero() {
       aria-labelledby="expertise-hero-title"
     >
       <Image
-        src="/assets/expertise-page/image-fond-top-lossless.webp"
+        src="/assets/expertise-page/technical-drawing-background.svg"
         alt=""
         width={1351}
         height={421}
         priority
-        quality={100}
+        unoptimized
         sizes="(min-width: 1917px) 920px, (min-width: 1800px) 48vw, (min-width: 1256px) 728px, 58vw"
         className="pointer-events-none absolute left-1/2 top-[112px] z-0 h-auto w-[58vw] max-w-[728px] -translate-x-1/2 opacity-100 min-[1800px]:!top-[128px] min-[1800px]:!w-[48vw] min-[1800px]:!max-w-[920px]"
       />
