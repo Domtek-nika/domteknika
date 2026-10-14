@@ -129,7 +129,14 @@ function ExpertiseHero() {
         className="pointer-events-none absolute left-1/2 top-[112px] z-0 h-auto w-[58vw] max-w-[728px] -translate-x-1/2 opacity-100 min-[1800px]:!top-[128px] min-[1800px]:!w-[48vw] min-[1800px]:!max-w-[920px]"
       />
       <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/70 via-white/45 to-white/15" />
-      <div className="pointer-events-none absolute inset-0 z-0 hidden overflow-hidden md:block" aria-hidden>
+      <div
+        className="pointer-events-none absolute inset-0 z-0 hidden overflow-hidden md:block"
+        style={{
+          maskImage: "linear-gradient(to bottom, transparent, black 15%, black 65%, transparent)",
+          WebkitMaskImage: "linear-gradient(to bottom, transparent, black 15%, black 65%, transparent)",
+        }}
+        aria-hidden
+      >
         <Image
           src="/assets/expertise-page/technical-drawing-margin.svg"
           alt=""
@@ -137,7 +144,7 @@ function ExpertiseHero() {
           height={700}
           unoptimized
           sizes="360px"
-          className="absolute -left-5 top-[132px] h-auto w-[max(90px,calc((100vw-1160px)/2+20px))] max-w-[360px] opacity-80 min-[1800px]:!w-[max(90px,calc((100vw-1680px)/2+20px))] min-[2400px]:!w-[max(90px,calc((100vw-1900px)/2+20px))]"
+          className="absolute -left-5 top-[132px] h-auto w-[max(90px,calc((100vw-1160px)/2+45px))] max-w-[360px] opacity-80 min-[1800px]:!w-[max(90px,calc((100vw-1680px)/2+45px))] min-[2400px]:!w-[max(90px,calc((100vw-1900px)/2+45px))]"
         />
       </div>
 

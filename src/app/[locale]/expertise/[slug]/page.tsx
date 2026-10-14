@@ -83,6 +83,24 @@ export default async function ServicePage({ params }: Props) {
     <article className="bg-background">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
       <header className="relative overflow-hidden pb-12 pt-[112px] md:pb-[66px] md:pt-[152px]">
+        <div
+          className="pointer-events-none absolute inset-0 z-0 hidden overflow-hidden md:block"
+          style={{
+            maskImage: "linear-gradient(to bottom, transparent, black 15%, black 65%, transparent)",
+            WebkitMaskImage: "linear-gradient(to bottom, transparent, black 15%, black 65%, transparent)",
+          }}
+          aria-hidden
+        >
+          <Image
+            src="/assets/expertise-page/technical-drawing-margin.svg"
+            alt=""
+            width={360}
+            height={700}
+            unoptimized
+            sizes="360px"
+            className="absolute -left-5 top-[132px] h-auto w-[max(90px,calc((100vw-1160px)/2+45px))] max-w-[360px] opacity-80 min-[1800px]:!w-[max(90px,calc((100vw-1680px)/2+45px))] min-[2400px]:!w-[max(90px,calc((100vw-1900px)/2+45px))]"
+          />
+        </div>
         <Image
           src="/assets/expertise-page/technical-drawing-background.svg"
           alt=""
