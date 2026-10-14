@@ -7,6 +7,7 @@ import type { Project } from "@/data/project-types";
 import { Link } from "@/i18n/navigation";
 import { getProjectServices } from "@/data/services";
 import { getServiceCopy } from "@/data/service-copy";
+import { RELATED_CARD_MOTION_CLASS } from "@/lib/related-card-motion";
 
 export function ProjectDetailPage({
   locale,
@@ -100,7 +101,7 @@ export function ProjectDetailPage({
               <h2 className="text-foreground text-[28px] font-extrabold">{copy.relatedPatents}</h2>
               <div className="mt-6 grid gap-3 md:grid-cols-2">
                 {project.relatedPatents.map((patent) => (
-                  <Link key={patent.patentId} href={`/patents/${patent.patentId.toLowerCase()}`} className="group rounded-[7px] border border-border bg-white p-5 transition-[transform,border-color,box-shadow] hover:-translate-y-0.5 hover:border-brand/35 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)]">
+                  <Link key={patent.patentId} href={`/patents/${patent.patentId.toLowerCase()}`} className={`group rounded-[7px] border border-border bg-white p-5 ${RELATED_CARD_MOTION_CLASS}`}>
                     <span className="flex items-start justify-between gap-4 text-brand text-[12px] font-extrabold">{patent.publication}<ArrowUpRight className="size-4 shrink-0" aria-hidden /></span>
                     <strong className="mt-3 block text-foreground text-[15px] leading-tight">{patent.title}</strong>
                     <span className="mt-2 block text-muted-foreground text-[12px] font-medium leading-[1.5]">{patent.note}</span>

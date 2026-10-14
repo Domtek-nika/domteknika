@@ -105,6 +105,13 @@ export function Reveal({
     const element = elementRef.current;
     if (!element) return;
 
+    // A remount can interrupt the animation after visibility was requested.
+    // Restore its final state instead of leaving the content transparent.
+    if (currentStateRef.current === "visible") {
+      setStateImmediately("visible");
+      return;
+    }
+
     if (
       isDisabledOnCurrentScreen() ||
       window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -133,13 +140,32 @@ export function Reveal({
   ]);
 
   useEffect(() => {
-    if (!minimumScrollY && !disabledOnMobile && !disabledAtMinWidth) return;
+    if (
+      !initiallyHidden &&
+      !minimumScrollY &&
+      !disabledOnMobile &&
+      !disabledAtMinWidth
+    ) return;
+
+    const stopWatching = () => {
+      window.removeEventListener("scroll", revealAfterScrollStarts);
+      window.removeEventListener("pageshow", revealAfterScrollStarts);
+      window.removeEventListener("load", revealAfterScrollStarts);
+      window.removeEventListener("resize", revealAfterScrollStarts);
+    };
 
     const revealAfterScrollStarts = () => {
       const element = elementRef.current;
-      if (!element || currentStateRef.current === "visible") return;
-      if (isDisabledOnCurrentScreen()) {
+      if (!element || currentStateRef.current === "visible") {
+        stopWatching();
+        return;
+      }
+      if (
+        isDisabledOnCurrentScreen() ||
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ) {
         setStateImmediately("visible");
+        stopWatching();
         return;
       }
       if (window.scrollY < getEffectiveMinimumScrollY()) return;
@@ -148,17 +174,24 @@ export function Reveal({
       const viewportHeight =
         window.innerHeight || document.documentElement.clientHeight;
 
-      if (rect.top < viewportHeight + 120 && rect.bottom > -120) {
+      const margin = initiallyHidden ? 0 : 120;
+      if (rect.top < viewportHeight + margin && rect.bottom > -margin) {
         reveal();
+        stopWatching();
       }
     };
 
     window.addEventListener("scroll", revealAfterScrollStarts, { passive: true });
-    return () => window.removeEventListener("scroll", revealAfterScrollStarts);
+    window.addEventListener("pageshow", revealAfterScrollStarts);
+    window.addEventListener("load", revealAfterScrollStarts);
+    window.addEventListener("resize", revealAfterScrollStarts);
+    revealAfterScrollStarts();
+    return stopWatching;
   }, [
     disabledAtMinWidth,
     disabledOnMobile,
     getEffectiveMinimumScrollY,
+    initiallyHidden,
     isDisabledOnCurrentScreen,
     minimumScrollY,
     reveal,

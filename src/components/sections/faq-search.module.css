@@ -1,0 +1,65 @@
+.results {
+  animation: results-enter 240ms var(--ease-smooth) both;
+}
+
+.question[open] > p {
+  animation: answer-enter 280ms var(--ease-smooth) both;
+}
+
+@supports (interpolate-size: allow-keywords) and selector(::details-content) {
+  .question {
+    interpolate-size: allow-keywords;
+  }
+
+  .question::details-content {
+    block-size: 0;
+    overflow: clip;
+    opacity: 0;
+    transition:
+      block-size 320ms var(--ease-smooth),
+      opacity 240ms var(--ease-smooth),
+      content-visibility 320ms allow-discrete;
+  }
+
+  .question[open]::details-content {
+    block-size: auto;
+    opacity: 1;
+  }
+
+  .question[open] > p {
+    animation: none;
+  }
+}
+
+@keyframes results-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes answer-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .results,
+  .question[open] > p {
+    animation: none;
+  }
+
+  .question::details-content {
+    transition: none;
+  }
+}

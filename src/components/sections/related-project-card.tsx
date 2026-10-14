@@ -1,9 +1,12 @@
-import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
 import type { ProjectLink } from "@/data/project-types";
 import { Link } from "@/i18n/navigation";
 import { getProjectCardImageFitClass } from "@/lib/project-card-image";
+import {
+  RELATED_CARD_EMBEDDED_OUTLINE_CLASS,
+  RELATED_CARD_MOTION_CLASS,
+} from "@/lib/related-card-motion";
 import { cn } from "@/lib/utils";
 
 export function RelatedProjectCard({
@@ -22,8 +25,12 @@ export function RelatedProjectCard({
       href={`/projects/${project.id}`}
       aria-label={`${actionLabel}: ${project.title}`}
       className={cn(
-        "group/relatedProject grid min-w-0 overflow-hidden bg-white text-left transition-[background-color,box-shadow,transform] duration-300 hover:-translate-y-0.5 hover:bg-muted/35 hover:shadow-[0_14px_34px_rgba(0,0,0,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35 sm:grid-cols-[168px_minmax(0,1fr)]",
-        embedded ? "border-0" : "rounded-[8px] border border-border",
+        "group/relatedProject grid min-w-0 overflow-hidden bg-white text-left sm:grid-cols-[168px_minmax(0,1fr)]",
+        RELATED_CARD_MOTION_CLASS,
+        embedded && RELATED_CARD_EMBEDDED_OUTLINE_CLASS,
+        embedded
+          ? "border-0 last:rounded-b-[7px] last:after:rounded-b-[7px]"
+          : "rounded-[8px] border border-border",
       )}
     >
       <span className="relative block min-h-[150px] overflow-hidden bg-muted sm:min-h-full">
@@ -35,7 +42,7 @@ export function RelatedProjectCard({
           fetchPriority={eager ? "high" : "auto"}
           sizes="(max-width: 640px) 100vw, 168px"
           className={cn(
-            "transition-transform duration-500 group-hover/relatedProject:scale-[1.035]",
+            "transition-transform duration-700 group-hover/relatedProject:scale-105 motion-reduce:transition-none motion-reduce:group-hover/relatedProject:scale-100 [transition-timing-function:var(--ease-smooth)]",
             getProjectCardImageFitClass(project.id),
             project.id !== "velum-sky-screen" && "p-2",
           )}
@@ -47,7 +54,7 @@ export function RelatedProjectCard({
         <span className="uppercase text-brand text-[10px] font-extrabold tracking-wide">
           {project.category}
         </span>
-        <strong className="mt-2 text-foreground transition-colors group-hover/relatedProject:text-brand text-[18px] font-extrabold leading-tight">
+        <strong className="mt-2 text-foreground text-[18px] font-extrabold leading-tight">
           {project.title}
         </strong>
         <span className="mt-2 line-clamp-3 text-muted-foreground text-[12px] font-medium leading-[1.5]">
@@ -67,13 +74,6 @@ export function RelatedProjectCard({
           </span>
         ) : null}
 
-        <span className="mt-4 inline-flex items-center gap-2 text-[11px] font-extrabold text-foreground">
-          {actionLabel}
-          <ArrowUpRight
-            className="size-3.5 text-brand transition-transform duration-300 group-hover/relatedProject:-translate-y-0.5 group-hover/relatedProject:translate-x-0.5"
-            aria-hidden
-          />
-        </span>
       </span>
     </Link>
   );

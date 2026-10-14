@@ -3,6 +3,8 @@
 import { ChevronLeft, ChevronRight, Plus, Search, X } from "lucide-react";
 import { useId, useMemo, useRef, useState } from "react";
 
+import styles from "./faq-search.module.css";
+
 export type FaqQuestion = {
   id: string;
   topic: string;
@@ -36,6 +38,8 @@ function normalizeSearch(value: string) {
 }
 
 const focusStyle = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
+const buttonMotionStyle = "cursor-pointer transition-[translate,border-color,box-shadow,background-color,color] duration-500 motion-safe:enabled:hover:-translate-y-1 motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]";
+const inactiveButtonStyle = "border-border bg-white text-foreground shadow-[0_2px_6px_rgba(0,0,0,0.05)] enabled:hover:border-brand/35 enabled:hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)] active:border-brand focus-visible:border-brand";
 const questionsPerPage = 6;
 
 export function FaqSearch({
@@ -109,7 +113,7 @@ export function FaqSearch({
             setPage(0);
           }}
           placeholder={labels.searchPlaceholder}
-          className={`min-h-14 w-full rounded-[7px] border border-border bg-white py-3 pl-12 pr-12 shadow-[0_3px_8px_rgba(0,0,0,0.06)] placeholder:text-muted-foreground [&::-webkit-search-cancel-button]:hidden text-[14px] font-medium ${focusStyle}`}
+          className="min-h-14 w-full rounded-[7px] border border-border bg-white py-3 pl-12 pr-12 text-[14px] font-medium text-foreground outline-none shadow-[0_2px_7px_rgba(0,0,0,0.05)] transition-[border-color,box-shadow] duration-300 placeholder:text-muted-foreground/75 hover:border-brand/35 focus:border-brand/50 focus:shadow-[0_10px_24px_rgba(0,0,0,0.08)] motion-reduce:transition-none [&::-webkit-search-cancel-button]:hidden"
         />
         {query && (
           <button type="button" onClick={clearSearch} aria-label={labels.clearSearch} className={`absolute right-1 top-1/2 flex size-11 -translate-y-1/2 items-center justify-center rounded-[7px] text-muted-foreground hover:text-brand ${focusStyle}`}>
@@ -124,7 +128,7 @@ export function FaqSearch({
             <button key={topic.id} type="button" aria-pressed={activeTopic === topic.id} onClick={() => {
               setActiveTopic(topic.id);
               setPage(0);
-            }} className={`min-h-11 rounded-[7px] border px-4 py-2.5 text-left transition-colors text-[12px] font-bold leading-[1.35] ${activeTopic === topic.id ? "border-brand bg-brand text-white" : "border-border bg-white text-foreground hover:border-foreground/25 hover:bg-muted/40"} ${focusStyle}`}>
+            }} className={`min-h-11 rounded-[7px] border px-4 py-2.5 text-left text-[12px] font-bold leading-[1.35] ${buttonMotionStyle} ${activeTopic === topic.id ? "border-brand bg-brand text-white shadow-[0_10px_22px_rgba(0,0,0,0.18)] hover:border-brand hover:bg-brand hover:shadow-[0_12px_26px_rgba(0,0,0,0.18)]" : inactiveButtonStyle} ${focusStyle}`}>
               {topic.label}
             </button>
           ))}
@@ -135,34 +139,36 @@ export function FaqSearch({
 
       {results.length > 0 ? (
         <div id={resultsId}>
-          {showTopics && activeTopic === "all" && singleTopic && <p className="mb-3 text-brand text-[11px] font-extrabold">{visibleResults[0].topicLabel}</p>}
-          <div className="border-t border-border">
-            {/* Keep the answers in the initial HTML while pagination still
-                presents only six questions at a time. */}
-            {results.map((item, index) => (
-              <details
-                key={item.id}
-                hidden={index < firstResult || index >= firstResult + questionsPerPage}
-                className="group border-b border-border"
-              >
-                <summary className={`flex min-h-16 cursor-pointer list-none items-center justify-between gap-5 py-5 [&::-webkit-details-marker]:hidden text-[16px] font-bold leading-relaxed ${focusStyle}`}>
-                  <span>
-                    {showTopics && activeTopic === "all" && !singleTopic && <span className="mb-1.5 block text-brand text-[11px] font-extrabold">{item.topicLabel}</span>}
-                    {item.question}
-                  </span>
-                  <Plus className="size-5 shrink-0 text-brand transition-transform group-open:rotate-45 motion-reduce:transition-none" aria-hidden />
-                </summary>
-                <p className="max-w-3xl pb-6 pr-7 text-muted-foreground text-[14px] font-medium leading-[1.6]">{item.answer}</p>
-              </details>
-            ))}
+          <div key={`${activeTopic}:${currentPage}`} className={styles.results}>
+            {showTopics && activeTopic === "all" && singleTopic && <p className="mb-3 text-brand text-[11px] font-extrabold">{visibleResults[0].topicLabel}</p>}
+            <div className="border-t border-border">
+              {/* Keep the answers in the initial HTML while pagination still
+                  presents only six questions at a time. */}
+              {results.map((item, index) => (
+                <details
+                  key={item.id}
+                  hidden={index < firstResult || index >= firstResult + questionsPerPage}
+                  className={`group border-b border-border ${styles.question}`}
+                >
+                  <summary className={`flex min-h-16 cursor-pointer list-none items-center justify-between gap-5 py-5 [&::-webkit-details-marker]:hidden text-[16px] font-bold leading-relaxed ${focusStyle}`}>
+                    <span>
+                      {showTopics && activeTopic === "all" && !singleTopic && <span className="mb-1.5 block text-brand text-[11px] font-extrabold">{item.topicLabel}</span>}
+                      {item.question}
+                    </span>
+                    <Plus className="size-5 shrink-0 text-brand transition-transform duration-300 group-open:rotate-45 motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]" aria-hidden />
+                  </summary>
+                  <p className="max-w-3xl pb-6 pr-7 text-muted-foreground text-[14px] font-medium leading-[1.6]">{item.answer}</p>
+                </details>
+              ))}
+            </div>
           </div>
           {pageCount > 1 && (
             <nav aria-label={labels.paginationLabel} className="mt-5 flex flex-wrap items-center justify-between gap-3">
-              <button type="button" disabled={currentPage === 0} aria-controls={resultsId} onClick={() => setPage(currentPage - 1)} className={`inline-flex min-h-11 items-center gap-2 rounded-[7px] border border-border bg-white px-3 py-2.5 transition-colors hover:border-foreground/25 hover:bg-muted/40 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-border disabled:hover:bg-white text-[12px] font-bold ${focusStyle}`}>
+              <button type="button" disabled={currentPage === 0} aria-controls={resultsId} onClick={() => setPage(currentPage - 1)} className={`inline-flex min-h-11 items-center gap-2 rounded-[7px] border px-3 py-2.5 disabled:cursor-not-allowed disabled:opacity-40 text-[12px] font-bold ${buttonMotionStyle} ${inactiveButtonStyle} ${focusStyle}`}>
                 <ChevronLeft className="size-4 shrink-0 text-brand" aria-hidden />{labels.previousPage}
               </button>
               <span className="text-muted-foreground text-[12px] font-bold">{pageLabel}</span>
-              <button type="button" disabled={currentPage === pageCount - 1} aria-controls={resultsId} onClick={() => setPage(currentPage + 1)} className={`inline-flex min-h-11 items-center gap-2 rounded-[7px] border border-border bg-white px-3 py-2.5 transition-colors hover:border-foreground/25 hover:bg-muted/40 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-border disabled:hover:bg-white text-[12px] font-bold ${focusStyle}`}>
+              <button type="button" disabled={currentPage === pageCount - 1} aria-controls={resultsId} onClick={() => setPage(currentPage + 1)} className={`inline-flex min-h-11 items-center gap-2 rounded-[7px] border px-3 py-2.5 disabled:cursor-not-allowed disabled:opacity-40 text-[12px] font-bold ${buttonMotionStyle} ${inactiveButtonStyle} ${focusStyle}`}>
                 {labels.nextPage}<ChevronRight className="size-4 shrink-0 text-brand" aria-hidden />
               </button>
             </nav>

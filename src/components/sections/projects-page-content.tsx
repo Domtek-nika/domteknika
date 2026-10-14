@@ -4,7 +4,6 @@ import Image from "next/image";
 import {
   ArrowDownUp,
   ArrowRight,
-  ArrowUpRight,
   Box,
   Building2,
   CalendarDays,
@@ -40,6 +39,10 @@ import { Reveal } from "@/components/providers/reveal";
 import PATENT_TITLES from "@/data/patent-titles.json";
 import { Link } from "@/i18n/navigation";
 import { getProjectCardImageFitClass } from "@/lib/project-card-image";
+import {
+  RELATED_CARD_EMBEDDED_OUTLINE_CLASS,
+  RELATED_CARD_MOTION_CLASS,
+} from "@/lib/related-card-motion";
 import { cn } from "@/lib/utils";
 import projectAssetManifest from "../../../public/assets/projects/manifest.json";
 
@@ -5907,11 +5910,11 @@ export function ProjectDetailsDialog({
 
               <Link
                 href={`/projects/${project.id}`}
-                className="group/fullProject mt-7 inline-flex min-h-11 items-center justify-center gap-3 rounded-[7px] bg-foreground px-5 py-2.5 text-[13px] font-extrabold text-white shadow-[0_8px_22px_rgba(0,0,0,0.16)] transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35 min-[1800px]:mt-10 min-[1800px]:min-h-16 min-[1800px]:px-8 min-[1800px]:text-[20px] min-[2400px]:text-[22px]"
+                className="group/fullProject mt-7 inline-flex min-h-11 items-center justify-center gap-3 rounded-[7px] bg-brand px-5 py-2.5 text-[13px] font-extrabold text-white shadow-[0_8px_22px_rgba(0,0,0,0.16)] transition-[transform,background-color] duration-300 motion-safe:hover:-translate-y-0.5 hover:bg-primary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35 motion-reduce:transition-none min-[1800px]:mt-10 min-[1800px]:min-h-16 min-[1800px]:px-8 min-[1800px]:text-[20px] min-[2400px]:text-[22px]"
               >
                 <span>{modal.openFullPage}</span>
-                <ArrowUpRight
-                  className="size-4 transition-transform duration-300 group-hover/fullProject:-translate-y-0.5 group-hover/fullProject:translate-x-0.5 min-[1800px]:size-6"
+                <ArrowRight
+                  className="size-4 transition-transform duration-300 motion-safe:group-hover/fullProject:translate-x-1 motion-reduce:transition-none min-[1800px]:size-6"
                   aria-hidden
                 />
               </Link>
@@ -5954,12 +5957,12 @@ export function ProjectDetailsDialog({
                       <Link
                         key={patent.publication}
                         href={`/patents/${patent.patentId.toLowerCase()}`}
-                        className="group/patentLink grid gap-1 px-4 py-3 text-left transition-colors hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/30 min-[1800px]:gap-3 min-[1800px]:px-7 min-[1800px]:py-6"
+                        className={`group/patentLink grid gap-1 bg-white px-4 py-3 text-left min-[1800px]:gap-3 min-[1800px]:px-7 min-[1800px]:py-6 ${RELATED_CARD_MOTION_CLASS} ${RELATED_CARD_EMBEDDED_OUTLINE_CLASS}`}
                       >
                         <span className="text-brand text-[11px] font-extrabold min-[1800px]:text-[17px] min-[2400px]:text-[19px]">
                           {patent.publication}
                         </span>
-                        <span className="text-foreground transition-colors group-hover/patentLink:text-brand text-[14px] font-extrabold leading-tight min-[1800px]:text-[22px] min-[2400px]:text-[25px]">
+                        <span className="text-foreground text-[14px] font-extrabold leading-tight min-[1800px]:text-[22px] min-[2400px]:text-[25px]">
                           {patent.title}
                         </span>
                         <span className="text-muted-foreground text-[12px] font-medium leading-[1.45] min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
@@ -6933,11 +6936,11 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
 
                 <Link
                   href={`/projects/${selectedProject.id}`}
-                  className="group/fullProject mt-7 inline-flex min-h-11 items-center justify-center gap-3 rounded-[7px] bg-foreground px-5 py-2.5 text-[13px] font-extrabold text-white shadow-[0_8px_22px_rgba(0,0,0,0.16)] transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35 min-[1800px]:mt-10 min-[1800px]:min-h-16 min-[1800px]:px-8 min-[1800px]:text-[20px] min-[2400px]:text-[22px]"
+                  className="group/fullProject mt-7 inline-flex min-h-11 items-center justify-center gap-3 rounded-[7px] bg-brand px-5 py-2.5 text-[13px] font-extrabold text-white shadow-[0_8px_22px_rgba(0,0,0,0.16)] transition-[transform,background-color] duration-300 motion-safe:hover:-translate-y-0.5 hover:bg-primary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35 motion-reduce:transition-none min-[1800px]:mt-10 min-[1800px]:min-h-16 min-[1800px]:px-8 min-[1800px]:text-[20px] min-[2400px]:text-[22px]"
                 >
                   <span>{copy.modal.openFullPage}</span>
-                  <ArrowUpRight
-                    className="size-4 transition-transform duration-300 group-hover/fullProject:-translate-y-0.5 group-hover/fullProject:translate-x-0.5 min-[1800px]:size-6"
+                  <ArrowRight
+                    className="size-4 transition-transform duration-300 motion-safe:group-hover/fullProject:translate-x-1 motion-reduce:transition-none min-[1800px]:size-6"
                     aria-hidden
                   />
                 </Link>
@@ -6980,12 +6983,12 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                         <Link
                           key={patent.publication}
                           href={`/patents/${patent.patentId.toLowerCase()}`}
-                          className="group/patentLink grid gap-1 px-4 py-3 text-left transition-colors hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/30 min-[1800px]:gap-3 min-[1800px]:px-7 min-[1800px]:py-6"
+                          className={`group/patentLink grid gap-1 bg-white px-4 py-3 text-left min-[1800px]:gap-3 min-[1800px]:px-7 min-[1800px]:py-6 ${RELATED_CARD_MOTION_CLASS} ${RELATED_CARD_EMBEDDED_OUTLINE_CLASS}`}
                         >
                           <span className="text-brand text-[11px] font-extrabold min-[1800px]:text-[17px] min-[2400px]:text-[19px]">
                             {patent.publication}
                           </span>
-                          <span className="text-foreground transition-colors group-hover/patentLink:text-brand text-[14px] font-extrabold leading-tight min-[1800px]:text-[22px] min-[2400px]:text-[25px]">
+                          <span className="text-foreground text-[14px] font-extrabold leading-tight min-[1800px]:text-[22px] min-[2400px]:text-[25px]">
                             {patent.title}
                           </span>
                           <span className="text-muted-foreground text-[12px] font-medium leading-[1.45] min-[1800px]:text-[18px] min-[2400px]:text-[20px]">
@@ -7092,11 +7095,11 @@ function ProjectCard({
   return (
     <article
       data-project-origin
-      className="group relative h-full overflow-hidden rounded-[7px] border border-border bg-white transition-shadow duration-300 hover:shadow-[0_16px_34px_rgba(0,0,0,0.07)] min-[2400px]:rounded-[8px]"
+      className="group relative z-0 h-full origin-center transform-gpu cursor-pointer overflow-hidden rounded-[7px] border border-border bg-white shadow-[0_4px_7px_rgba(0,0,0,0.18)] transition-[scale,box-shadow,border-color] duration-[1100ms] will-change-transform hover:z-10 hover:scale-[1.025] hover:border-brand/25 hover:shadow-[0_16px_34px_rgba(0,0,0,0.15)] focus-within:z-10 focus-within:scale-[1.025] focus-within:border-brand/25 focus-within:shadow-[0_16px_34px_rgba(0,0,0,0.15)] motion-reduce:transition-none motion-reduce:hover:scale-100 motion-reduce:focus-within:scale-100 min-[2400px]:rounded-[8px] [transition-timing-function:var(--ease-smooth)]"
     >
       <button
         type="button"
-        className="absolute inset-0 z-10 rounded-[7px] text-left outline-none focus-visible:ring-2 focus-visible:ring-brand/30"
+        className="absolute inset-0 z-10 cursor-pointer rounded-[7px] text-left outline-none focus-visible:ring-2 focus-visible:ring-brand/30"
         aria-haspopup="dialog"
         aria-label={`${openDetailsLabel}: ${project.title}`}
         onClick={() => onOpen(project)}
@@ -7111,17 +7114,10 @@ function ProjectCard({
             fetchPriority={imageFetchPriority}
             sizes="(min-width: 2400px) 580px, (max-width: 768px) 100vw, 560px"
             className={cn(
-              "transition-transform duration-500 group-hover:scale-[1.035]",
+              "transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100 [transition-timing-function:var(--ease-smooth)]",
               getProjectCardImageFitClass(project.id),
             )}
           />
-          <Link
-            href={`/projects/${project.id}`}
-            className="pointer-events-auto absolute right-4 top-4 z-30 grid size-9 place-items-center rounded-full bg-foreground/80 text-white transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:translate-x-0.5 hover:bg-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35 min-[2400px]:!right-5 min-[2400px]:!top-5 min-[2400px]:!size-10"
-            aria-label={`${openDetailsLabel}: ${project.title}`}
-          >
-            <ArrowUpRight className="size-4 min-[2400px]:!size-5" aria-hidden />
-          </Link>
         </span>
 
         <span className="flex min-h-[150px] flex-1 flex-col px-5 pb-5 pt-5 min-[2400px]:!min-h-[210px] min-[2400px]:!px-6 min-[2400px]:!pb-6 min-[2400px]:!pt-6">

@@ -17,9 +17,10 @@ import { buildPageMetadata, localizedUrl, SITE_URL } from "@/lib/seo";
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
 const focusStyle = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
-const introTextStyle = "max-w-[520px] text-[15px] font-medium leading-[1.5] text-muted-foreground min-[1800px]:text-[18px]";
-const buttonStyle = `inline-flex min-h-11 items-center justify-between gap-4 rounded-[7px] bg-brand px-5 py-2.5 text-[13px] font-bold text-white shadow-[0_4px_10px_rgba(0,0,0,0.28)] transition-transform motion-safe:hover:-translate-y-0.5 ${focusStyle}`;
-const secondaryButtonStyle = `inline-flex min-h-11 items-center gap-3 rounded-[7px] border border-border bg-white px-4 py-3 text-[13px] font-bold text-foreground shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors hover:border-foreground/25 hover:bg-muted/40 ${focusStyle}`;
+const introTextStyle = "max-w-[760px] text-[15px] font-medium leading-[1.5] text-muted-foreground min-[1800px]:text-[18px]";
+const buttonStyle = `inline-flex min-h-11 items-center justify-between gap-4 rounded-[7px] bg-brand px-5 py-2.5 text-[13px] font-bold text-white shadow-[0_4px_10px_rgba(0,0,0,0.28)] transition-[transform,background-color] hover:bg-primary/80 motion-safe:hover:-translate-y-0.5 ${focusStyle}`;
+const secondaryButtonStyle = `inline-flex min-h-11 items-center gap-3 rounded-[7px] border border-border bg-white px-4 py-3 text-[13px] font-bold text-foreground shadow-[0_2px_6px_rgba(0,0,0,0.05)] transition-[translate,border-color,box-shadow] duration-500 motion-safe:hover:-translate-y-1 hover:border-brand/35 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)] active:border-brand focus-visible:border-brand motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)] ${focusStyle}`;
+const homeAccentLineStyle = "block h-[3px] w-8 transition-[width] duration-300 group-hover:w-16 motion-reduce:transition-none motion-reduce:group-hover:w-8";
 
 export const dynamicParams = false;
 
@@ -57,12 +58,6 @@ export default async function ServicePage({ params }: Props) {
   const heroProject = projects[0];
   const path = `/expertise/${service.slug}`;
   const url = localizedUrl(locale as Locale, path);
-  const sections = [
-    { id: "service-insight", label: labels.technicalFocus },
-    { id: "service-projects", label: labels.projects },
-    { id: "service-method", label: labels.method },
-    { id: "service-faq", label: labels.faq },
-  ];
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -87,43 +82,28 @@ export default async function ServicePage({ params }: Props) {
   return (
     <article className="bg-background">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
-      <header className="relative overflow-hidden pb-10 pt-[112px] md:pb-14 md:pt-[152px]">
-        <Image src="/assets/expertise-page/image-fond-top.png" alt="" width={1351} height={421} sizes="100vw" className="pointer-events-none absolute right-[-10%] top-[112px] w-[85vw] max-w-[1150px] opacity-45 md:w-[70vw]" />
+      <header className="relative overflow-hidden pb-12 pt-[112px] md:pb-[66px] md:pt-[152px]">
+        <Image src="/assets/expertise-page/image-fond-top-lossless.webp" alt="" width={1351} height={421} quality={100} sizes="(min-width: 1643px) 1150px, (min-width: 768px) 70vw, 85vw" className="pointer-events-none absolute right-[-10%] top-[112px] w-[85vw] max-w-[1150px] opacity-45 md:w-[70vw]" />
         <Container size="wide" className="relative z-10">
-          <Link href="/expertise" className={secondaryButtonStyle}>
-            <ArrowLeft className="size-4 text-brand" aria-hidden />{labels.back}
+          <Link href="/expertise" className={buttonStyle}>
+            <ArrowLeft className="size-4 shrink-0" aria-hidden />{labels.back}
           </Link>
-          <div className="mt-6 grid gap-5 md:mt-9 md:gap-7 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14">
-            <div>
-              <p className="flex items-center gap-3 text-muted-foreground text-[15px] font-medium">
-                <span className="h-[3px] w-[34px] shrink-0 bg-brand" aria-hidden />{labels.eyebrow}
-              </p>
-              <h1 className="domtek-text-shadow mt-5 text-foreground md:mt-8 text-[42px] font-extrabold leading-[1.05] sm:text-[60px] md:text-[66px] min-[1800px]:text-[74px]">
-                {displayTitle}<span className="text-brand">.</span>
-              </h1>
-            </div>
-            <div>
-              <p className={introTextStyle}>{copy.description}</p>
-              <p className={`mt-5 ${introTextStyle}`}>
-                <strong className="mb-1.5 block font-extrabold text-foreground">{labels.projectStageTitle}</strong>
-                {labels.projectStageBody}
-              </p>
-              <Link href="/contact" className={`mt-7 ${buttonStyle}`}>
-                {labels.contact}<ArrowRight className="size-4 shrink-0" aria-hidden />
-              </Link>
-            </div>
+          <div className="mt-7 md:mt-[42px]">
+            <p className="flex items-center gap-3 text-muted-foreground text-[15px] font-medium">
+              <span className="h-[3px] w-[34px] shrink-0 bg-brand" aria-hidden />{labels.eyebrow}
+            </p>
+            <h1 className="domtek-text-shadow mt-6 max-w-[980px] text-foreground md:mt-[38px] text-[42px] font-extrabold leading-[1.05] sm:text-[60px] md:text-[66px] min-[1800px]:text-[74px]">
+              {displayTitle}<span className="text-brand">.</span>
+            </h1>
+            <p className={`mt-7 md:mt-9 ${introTextStyle}`}>{copy.description}</p>
+            <Link href="/contact" className={`mt-8 ${buttonStyle}`}>
+              {labels.contact}<ArrowRight className="size-4 shrink-0" aria-hidden />
+            </Link>
           </div>
-          <nav aria-label={labels.onThisPage} className="mt-5 grid grid-cols-2 gap-x-4 md:mt-8 sm:flex sm:flex-wrap sm:gap-x-6 sm:gap-y-1">
-            {sections.map(({ id, label }) => (
-              <a key={id} href={`#${id}`} className={`inline-flex min-h-11 items-center gap-2 text-muted-foreground transition-colors hover:text-brand text-[11px] font-bold sm:text-xs ${focusStyle}`}>
-                {label}<ArrowRight className="size-3 shrink-0 text-brand" aria-hidden />
-              </a>
-            ))}
-          </nav>
         </Container>
       </header>
 
-      <section id="service-insight" aria-labelledby="service-insight-title" className="scroll-mt-32 pb-16 md:pb-24">
+      <section id="service-insight" aria-labelledby="service-insight-title" className="scroll-mt-32 pb-[76px] md:pb-[114px]">
         <Container size="wide">
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.35fr] lg:gap-12">
             <div>
@@ -154,7 +134,7 @@ export default async function ServicePage({ params }: Props) {
         </Container>
       </section>
 
-      <section id="service-projects" aria-labelledby="service-projects-title" className="scroll-mt-32 bg-white pb-16 md:pb-24">
+      <section id="service-projects" aria-labelledby="service-projects-title" className="scroll-mt-32 bg-white pb-[76px] md:pb-[114px]">
         <Container size="wide">
           {heroProject && (
             <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14">
@@ -166,26 +146,31 @@ export default async function ServicePage({ params }: Props) {
                 <p className="mt-6 text-brand text-xs font-extrabold">{heroProject.title}</p>
                 <h2 id="service-projects-title" className="domtek-text-shadow mt-3 text-[30px] font-extrabold leading-[1.08] sm:text-[38px] min-[1800px]:text-[46px]">{copy.caseStudy.title}</h2>
                 <p className="mt-6 text-muted-foreground text-[15px] font-medium leading-[1.55]">{copy.caseStudy.body}</p>
-                <Link href={`/projects/${heroProject.id}`} className={`mt-5 inline-flex min-h-11 items-center gap-4 text-brand hover:underline text-[13px] font-bold ${focusStyle}`}>{labels.viewProject}<ArrowUpRight className="size-4" aria-hidden /></Link>
+                <Link href={`/projects/${heroProject.id}`} className={`mt-6 md:mt-8 ${buttonStyle}`}>{labels.viewProject}<ArrowUpRight className="size-4 shrink-0" aria-hidden /></Link>
               </div>
             </div>
           )}
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            {projects.slice(1).map((project) => (
-              <Link key={project.id} href={`/projects/${project.id}`} className={`group grid min-w-0 grid-cols-[100px_1fr] gap-4 rounded-[7px] border border-border bg-white p-4 transition-shadow hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)] sm:grid-cols-[120px_1fr] ${focusStyle}`}>
-                <div className="relative aspect-square self-start rounded-[7px] bg-muted/60"><Image src={project.image} alt={project.imageAlt} fill sizes="120px" className="object-contain p-2" /></div>
-                <div className="min-w-0"><h3 className="text-[14px] font-extrabold leading-tight">{project.title}</h3><p className="mt-2 text-muted-foreground text-xs font-medium leading-[1.45]">{project.scope?.[getServiceProjectScopeIndex(service.slug, project.id)] ?? project.description}</p><span className="mt-3 inline-flex items-center gap-2 text-brand text-xs font-bold">{labels.viewProject}<ArrowUpRight className="size-3.5" aria-hidden /></span></div>
-              </Link>
-            ))}
-          </div>
+          {projects.length > 1 && (
+            <div className="mt-14 md:mt-16">
+              <h3 className="text-[18px] font-extrabold leading-tight min-[1800px]:text-[20px]">{labels.relatedProjects}</h3>
+              <div className="mt-5 grid gap-6 sm:grid-cols-2">
+                {projects.slice(1).map((project) => (
+                  <Link key={project.id} href={`/projects/${project.id}`} className="group grid min-w-0 grid-cols-[100px_1fr] gap-4 rounded-[7px] border border-border bg-white p-4 transition-[border-color,box-shadow] duration-300 hover:border-brand/40 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)] active:border-brand focus-visible:border-brand focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-brand motion-reduce:transition-none sm:grid-cols-[120px_1fr]">
+                    <div className="relative aspect-square self-start rounded-[7px] bg-muted/60"><Image src={project.image} alt={project.imageAlt} fill sizes="120px" className="object-contain p-2" /></div>
+                    <div className="min-w-0"><h3 className="text-[14px] font-extrabold leading-tight">{project.title}</h3><p className="mt-2 text-muted-foreground text-xs font-medium leading-[1.45]">{project.scope?.[getServiceProjectScopeIndex(service.slug, project.id)] ?? project.description}</p><span className="mt-3 inline-flex items-center gap-2 text-brand text-xs font-bold">{labels.viewProject}<ArrowUpRight className="size-3.5" aria-hidden /></span></div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </Container>
       </section>
 
-      <section aria-label={labels.approach} className="pb-16 md:pb-24">
+      <section aria-label={labels.approach} className="pb-[76px] md:pb-[114px]">
         <Container size="wide" className="max-w-[1400px] px-4 sm:px-6 min-[1800px]:max-w-[1680px]">
           <div className="grid gap-4 lg:grid-cols-[0.9fr_1.25fr_1.15fr] lg:items-stretch min-[1800px]:gap-5">
-            <section id="service-needs" aria-labelledby="service-needs-title" className="scroll-mt-32 rounded-[15px] border border-border bg-white p-6 min-[1800px]:p-8">
-              <span className="block h-[3px] w-[34px] bg-brand" aria-hidden />
+            <section id="service-needs" aria-labelledby="service-needs-title" className="group scroll-mt-32 rounded-[15px] border border-border bg-white p-6 transition-shadow duration-300 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] motion-reduce:transition-none min-[1800px]:p-8">
+              <span className={`${homeAccentLineStyle} bg-brand`} aria-hidden />
               <h2 id="service-needs-title" className="mt-4 text-[20px] font-extrabold leading-tight">{labels.needs}</h2>
               <p className="mt-5 text-[14px] font-bold leading-[1.4]">{copy.outcome}</p>
               <ul className="mt-6 space-y-4">
@@ -193,8 +178,8 @@ export default async function ServicePage({ params }: Props) {
               </ul>
             </section>
 
-            <section id="service-method" aria-labelledby="service-method-title" className="relative z-10 scroll-mt-32 rounded-[15px] bg-brand p-6 text-white shadow-[0_24px_42px_rgba(0,0,0,0.18)] min-[1800px]:p-8">
-              <span className="block h-[3px] w-[34px] bg-white" aria-hidden />
+            <section id="service-method" aria-labelledby="service-method-title" className="group relative z-10 scroll-mt-32 rounded-[15px] bg-brand p-6 text-white shadow-[0_24px_42px_rgba(0,0,0,0.18)] transition-shadow duration-300 hover:shadow-[0_34px_70px_rgba(0,0,0,0.28)] motion-reduce:transition-none min-[1800px]:p-8">
+              <span className={`${homeAccentLineStyle} bg-white`} aria-hidden />
               <h2 id="service-method-title" className="mt-4 text-[22px] font-extrabold leading-tight">{labels.approach}</h2>
               <p className="mt-5 text-white/95 text-[13px] font-medium leading-[1.5]">{copy.approach}</p>
               <ol className="mt-6 space-y-5 border-t border-white/35 pt-6">
@@ -207,8 +192,8 @@ export default async function ServicePage({ params }: Props) {
               </ol>
             </section>
 
-            <section aria-labelledby="service-deliverables" className="rounded-[15px] border border-border bg-white p-6 min-[1800px]:p-8">
-              <span className="block h-[3px] w-[34px] bg-brand" aria-hidden />
+            <section aria-labelledby="service-deliverables" className="group rounded-[15px] border border-border bg-white p-6 transition-shadow duration-300 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] motion-reduce:transition-none min-[1800px]:p-8">
+              <span className={`${homeAccentLineStyle} bg-brand`} aria-hidden />
               <h2 id="service-deliverables" className="mt-4 text-[20px] font-extrabold leading-tight">{labels.deliverables}</h2>
               <ul className="mt-5 space-y-4">
                 {copy.deliverables.map((item) => <li key={item} className="flex gap-3 text-[13px] font-medium leading-[1.45]"><Check className="mt-0.5 size-4 shrink-0 text-brand" aria-hidden />{item}</li>)}
@@ -220,7 +205,7 @@ export default async function ServicePage({ params }: Props) {
         </Container>
       </section>
 
-      <section id="service-faq" aria-labelledby="service-faq-title" className="pb-8 md:pb-12">
+      <section id="service-faq" aria-labelledby="service-faq-title" className="pb-[38px] md:pb-[57px]">
         <Container size="wide">
           <div className="grid gap-6 lg:grid-cols-[0.85fr_1.35fr] lg:gap-12">
             <div>
@@ -232,7 +217,7 @@ export default async function ServicePage({ params }: Props) {
         </Container>
       </section>
 
-      <section aria-labelledby="service-contact" className="relative overflow-hidden bg-white py-16 md:py-24">
+      <section aria-labelledby="service-contact" className="relative overflow-hidden bg-white py-[76px] md:py-[114px]">
         <Image src="/assets/technical-drawing-bottom-2x.webp" alt="" width={2246} height={602} sizes="50vw" className="pointer-events-none absolute right-0 top-8 hidden w-[50vw] max-w-[960px] opacity-60 md:block" />
         <Container size="wide" className="relative z-10">
           <div className="max-w-[700px]">
@@ -244,7 +229,7 @@ export default async function ServicePage({ params }: Props) {
         </Container>
       </section>
 
-      <nav aria-label={labels.other} className="pb-16">
+      <nav aria-label={labels.other} className="pb-[76px]">
         <Container size="wide">
           <h2 className="text-[22px] font-extrabold">{labels.other}</h2>
           <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">

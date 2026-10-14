@@ -119,12 +119,13 @@ function ExpertiseHero() {
       aria-labelledby="expertise-hero-title"
     >
       <Image
-        src="/assets/expertise-page/image-fond-top.png"
+        src="/assets/expertise-page/image-fond-top-lossless.webp"
         alt=""
         width={1351}
         height={421}
         priority
-        sizes="100vw"
+        quality={100}
+        sizes="(min-width: 1917px) 920px, (min-width: 1800px) 48vw, (min-width: 1256px) 728px, 58vw"
         className="pointer-events-none absolute left-1/2 top-[112px] z-0 h-auto w-[58vw] max-w-[728px] -translate-x-1/2 opacity-100 min-[1800px]:!top-[128px] min-[1800px]:!w-[48vw] min-[1800px]:!max-w-[920px]"
       />
       <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/70 via-white/45 to-white/15" />
@@ -254,7 +255,7 @@ function ExpertiseGrid({ faqLabel }: { faqLabel: string }) {
             <p className="mt-7 max-w-[320px] text-muted-foreground sm:max-w-[610px] min-[1800px]:!max-w-[760px] text-[15px] font-medium leading-[1.42] min-[1800px]:!text-[17px] min-[2400px]:!text-[19px]">
               {t("intro")}
             </p>
-            <a href="#expertise-faq" className="mt-6 inline-flex min-h-11 items-center gap-3 rounded-[7px] border border-brand bg-brand px-4 py-3 text-white shadow-[0_4px_10px_rgba(0,0,0,0.28)] transition-transform motion-safe:hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand text-[13px] font-bold">
+            <a href="#expertise-faq" className="mt-6 inline-flex min-h-11 items-center gap-3 rounded-[7px] border border-brand bg-brand px-4 py-3 text-white shadow-[0_4px_10px_rgba(0,0,0,0.28)] transition-[transform,background-color] hover:bg-primary/80 motion-safe:hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand text-[13px] font-bold">
               {faqLabel}<ArrowRight className="size-4" aria-hidden />
             </a>
           </Reveal>
@@ -278,7 +279,7 @@ function ExpertiseServiceCards({
   const t = useTranslations("ExpertisePage.Services");
 
   return (
-    <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 md:mt-12 lg:grid-cols-3 min-[1800px]:!gap-6 min-[2400px]:!mt-16">
+    <div className="mt-10 grid auto-rows-fr grid-cols-2 gap-3 sm:gap-5 md:mt-12 lg:grid-cols-3 min-[1800px]:!gap-6 min-[2400px]:!mt-16">
       {items.map((item, index) => {
         const Icon = item.icon;
 
@@ -289,19 +290,22 @@ function ExpertiseServiceCards({
             delay={(startIndex + index) * 0.05}
             className="h-full"
           >
-            <Link href={getServicePath(item.key)} className="group flex h-full min-h-[220px] flex-col items-center rounded-[7px] border border-border bg-white px-3 py-6 text-center transition-[border-color,box-shadow] duration-300 hover:border-brand/30 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand sm:min-h-[246px] sm:px-6 sm:py-8 min-[1800px]:!min-h-[270px] min-[1800px]:!px-8 min-[2400px]:!min-h-[292px]">
-              <Icon
-                className="size-9 stroke-[1.8] text-brand sm:size-10 min-[1800px]:!size-12 min-[2400px]:!size-[52px]"
-                aria-hidden
-              />
-              <h3 className="mt-6 max-w-full break-words text-foreground [hyphens:auto] sm:mt-8 text-[14px] font-extrabold leading-tight sm:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[20px]">
-                {t(`items.${item.key}.title` as never)}
-              </h3>
-              <p className="mt-5 max-w-[250px] text-muted-foreground sm:mt-8 min-[1800px]:!max-w-[320px] text-[12.5px] font-medium leading-[1.28] sm:text-[14px] min-[1800px]:!text-[15px] min-[1800px]:!leading-[1.35] min-[2400px]:!text-[16px]">
+            <Link href={getServicePath(item.key)} className="group flex h-full min-h-[220px] flex-col items-start rounded-[7px] border border-border bg-white px-3 py-6 text-left transition-[border-color,box-shadow] duration-300 hover:border-brand/30 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand sm:min-h-[246px] sm:px-6 sm:py-6 min-[1800px]:!min-h-[270px] min-[1800px]:!px-8 min-[2400px]:!min-h-[292px]">
+              <div className="flex w-full min-w-0 flex-col items-start gap-4">
+                <Icon
+                  className="size-9 shrink-0 stroke-[1.8] text-brand sm:size-10 min-[1800px]:!size-12 min-[2400px]:!size-[52px]"
+                  aria-hidden
+                />
+                <h3 className="min-w-0 max-w-full break-words text-foreground [hyphens:auto] text-[14px] font-extrabold leading-tight sm:text-[16px] min-[1800px]:!text-[18px] min-[2400px]:!text-[20px]">
+                  {t(`items.${item.key}.title` as never)}
+                </h3>
+              </div>
+              <p className="mb-3 mt-4 w-full text-muted-foreground text-[12.5px] font-medium leading-[1.28] sm:text-[14px] min-[1800px]:!text-[15px] min-[1800px]:!leading-[1.35] min-[2400px]:!text-[16px]">
                 {t(`items.${item.key}.description` as never)}
               </p>
-              <span className="mt-auto inline-flex min-h-11 items-center gap-2 pt-5 text-brand text-[11px] font-bold sm:text-xs">
-                {t("learnMore")}<ArrowRight className="size-3.5 shrink-0" aria-hidden />
+              <span className="mt-auto inline-flex min-h-11 w-full items-center justify-between gap-2 text-brand text-[11px] font-bold sm:text-xs">
+                <span className="inline-block transition-transform duration-300 motion-safe:group-hover:translate-x-0.5 motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]">{t("learnMore")}</span>
+                <ArrowRight className="size-3.5 shrink-0 transition-transform duration-300 motion-safe:group-hover:translate-x-1 motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]" aria-hidden />
               </span>
             </Link>
           </Reveal>
@@ -322,7 +326,7 @@ function BrainstormingSection() {
 
   return (
     <div className="mt-16 grid gap-8 md:mt-24 lg:grid-cols-[0.82fr_1.18fr] lg:items-center min-[1800px]:!mt-28 min-[1800px]:!grid-cols-[0.95fr_1.05fr] min-[1800px]:!gap-12">
-      <div className="relative">
+      <Reveal initiallyHidden className="relative">
         <div className="flex items-center gap-3 text-muted-foreground min-[1800px]:!gap-4 text-[14px] font-medium min-[1800px]:!text-[17px]">
           <span
             className="h-[3px] w-[34px] bg-brand min-[1800px]:!w-[44px]"
@@ -341,11 +345,11 @@ function BrainstormingSection() {
         <p className="mt-4 max-w-[470px] text-muted-foreground min-[1800px]:!max-w-[620px] text-[15px] font-medium leading-[1.45] min-[1800px]:!text-[18px] min-[2400px]:!text-[19px]">
           {t("body")}
         </p>
-      </div>
+      </Reveal>
 
-      <div className="w-full min-w-0 min-[1800px]:justify-self-center">
+      <Reveal initiallyHidden delay={0.08} className="w-full min-w-0 min-[1800px]:justify-self-center">
         <BrainstormingCardSwap />
-      </div>
+      </Reveal>
     </div>
   );
 }

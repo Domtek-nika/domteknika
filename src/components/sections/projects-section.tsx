@@ -117,7 +117,7 @@ export function ProjectsSection({
             </h2>
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 text-[13px] font-extrabold text-foreground transition-colors hover:text-brand sm:gap-6 sm:text-[15px] min-[1800px]:text-[19px] min-[2300px]:!text-[20px]"
+              className="relative inline-flex items-center gap-2 text-[13px] font-extrabold text-foreground transition-colors before:absolute before:-inset-x-3 before:-inset-y-3 before:min-h-11 before:content-[''] hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand sm:gap-6 sm:text-[15px] min-[1800px]:text-[19px] min-[2300px]:!text-[20px]"
             >
               {t("viewAll")}
               <ArrowRight className="size-5 text-brand" aria-hidden />
@@ -139,7 +139,7 @@ export function ProjectsSection({
                 },
               }}
               plugins={[autoplay]}
-              className="w-full touch-pan-y"
+              className="-mb-8 w-full touch-pan-y"
               style={{
                 maskImage:
                   "linear-gradient(90deg, transparent 0%, black min(14vw, 170px), black calc(100% - min(14vw, 170px)), transparent 100%)",
@@ -149,7 +149,7 @@ export function ProjectsSection({
               onFocus={() => autoplay.stop()}
               onBlur={() => autoplay.reset()}
             >
-              <CarouselContent className="-ml-4">
+              <CarouselContent className="-ml-4 pb-8">
                 {carouselProjects.map((project, index) => (
                   <CarouselItem
                     key={`${project.id}-${index}`}
@@ -210,7 +210,7 @@ function ProjectCard({
     <Link
       href={`/projects/${project.id}`}
       prefetch={false}
-      className="group block h-[334px] w-full overflow-hidden rounded-[7px] border border-border bg-white text-left outline-none transition-shadow duration-300 hover:shadow-[0_18px_45px_rgba(0,0,0,0.08)] focus-visible:ring-2 focus-visible:ring-brand/30 min-[1800px]:h-[500px] min-[2300px]:!h-[510px]"
+      className="group block h-[334px] w-full overflow-hidden rounded-[7px] border border-border bg-white text-left shadow-[0_6px_16px_rgba(0,0,0,0.08)] outline-none transition-[border-color,box-shadow] duration-300 hover:border-brand/40 hover:shadow-[0_10px_22px_rgba(0,0,0,0.12)] active:border-brand focus-visible:border-brand focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-brand min-[1800px]:h-[500px] min-[2300px]:!h-[510px]"
       aria-label={project.title}
       aria-haspopup="dialog"
       onNavigate={(event) => {

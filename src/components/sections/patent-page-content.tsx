@@ -3,7 +3,6 @@
 import {
   ArrowRight,
   ArrowDownUp,
-  ArrowUpRight,
   CalendarDays,
   CarFront,
   Check,
@@ -2214,18 +2213,18 @@ export function PatentPageContent({
 
                 <Link
                   href={`/patents/${selectedPatent.id.toLowerCase()}`}
-                  className="group/fullPatent mt-6 inline-flex min-h-11 items-center justify-center gap-3 rounded-[7px] bg-foreground px-5 py-2.5 text-[13px] font-extrabold text-white shadow-[0_8px_22px_rgba(0,0,0,0.16)] transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35"
+                  className="group/fullPatent mt-6 inline-flex min-h-11 items-center justify-center gap-3 rounded-[7px] bg-brand px-5 py-2.5 text-[13px] font-extrabold text-white shadow-[0_8px_22px_rgba(0,0,0,0.16)] transition-[transform,background-color] duration-300 motion-safe:hover:-translate-y-0.5 hover:bg-primary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35 motion-reduce:transition-none"
                 >
                   <span>{copy.details.openFullPage}</span>
-                  <ArrowUpRight
-                    className="size-4 transition-transform duration-300 group-hover/fullPatent:-translate-y-0.5 group-hover/fullPatent:translate-x-0.5"
+                  <ArrowRight
+                    className="size-4 transition-transform duration-300 motion-safe:group-hover/fullPatent:translate-x-1 motion-reduce:transition-none"
                     aria-hidden
                   />
                 </Link>
 
                 {selectedPatentLinkedProjects.length > 0 && (
-                  <section className="mt-8 overflow-hidden rounded-[8px] border border-border bg-white shadow-[0_12px_34px_rgba(0,0,0,0.05)]">
-                    <div className="flex items-center gap-4 border-b border-border bg-muted/30 px-4 py-3 sm:px-5">
+                  <section className="mt-8 rounded-[8px] border border-border bg-white shadow-[0_12px_34px_rgba(0,0,0,0.05)]">
+                    <div className="flex items-center gap-4 rounded-t-[7px] border-b border-border bg-muted/30 px-4 py-3 sm:px-5">
                       <div className="flex items-center gap-2.5">
                         <span className="size-2 bg-brand" aria-hidden />
                         <h3 className="uppercase text-[12px] font-extrabold tracking-wide">
@@ -3409,7 +3408,7 @@ function PatentCard({
       </span>
 
       <span className="pointer-events-none relative z-20 flex min-w-0 flex-1 flex-col px-3 py-3 min-[390px]:px-4 min-[390px]:py-4 min-[1800px]:!px-6 min-[1800px]:!py-5 min-[2400px]:!px-7 min-[2400px]:!py-6">
-        <span className="grid grid-cols-[24px_1fr_auto] items-start gap-2 min-[390px]:grid-cols-[28px_1fr_auto] min-[390px]:gap-3 min-[1800px]:!grid-cols-[32px_1fr_auto] min-[1800px]:!gap-4 min-[2400px]:!grid-cols-[36px_1fr_auto]">
+        <span className="grid grid-cols-[24px_1fr] items-start gap-2 min-[390px]:grid-cols-[28px_1fr] min-[390px]:gap-3 min-[1800px]:!grid-cols-[32px_1fr] min-[1800px]:!gap-4 min-[2400px]:!grid-cols-[36px_1fr]">
           <span
             className="grid size-6 place-items-center min-[390px]:size-7 min-[1800px]:!size-8 min-[2400px]:!size-9"
             aria-hidden
@@ -3430,16 +3429,6 @@ function PatentCard({
               </span>
             )}
           </span>
-          <Link
-            href={`/patents/${patent.id.toLowerCase()}`}
-            className="pointer-events-auto relative z-30 grid size-7 place-items-center rounded-full text-muted-foreground transition-[transform,color,background-color] duration-500 hover:-translate-y-0.5 hover:translate-x-0.5 hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35 min-[1800px]:!size-9 min-[2400px]:!size-10"
-            aria-label={`${openDetailsLabel}: ${patent.id}`}
-          >
-            <ArrowUpRight
-              className="size-[16px] min-[1800px]:!size-5 min-[2400px]:!size-6"
-              aria-hidden
-            />
-          </Link>
         </span>
 
         <span className="mt-3 max-w-none overflow-hidden text-[12px] font-extrabold leading-[1.08] text-foreground [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3] min-[390px]:mt-4 min-[390px]:text-[13px] lg:text-[14px] min-[1800px]:!text-[16px] min-[1800px]:!leading-[1.15] min-[2400px]:!text-[18px]">
