@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1351" height="421" viewBox="0 0 1351 421" fill="none">
   <defs>
     <linearGradient id="housing" x1="0" y1="260" x2="392" y2="125" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#d36b6b" stop-opacity=".025"/>
-      <stop offset="1" stop-color="#d36b6b" stop-opacity=".14"/>
+      <stop stop-color="#d36b6b" stop-opacity=".06"/>
+      <stop offset="1" stop-color="#d36b6b" stop-opacity=".34"/>
     </linearGradient>
     <linearGradient id="lever" x1="355" y1="405" x2="735" y2="242" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#cc5555" stop-opacity=".09"/>
-      <stop offset="1" stop-color="#cc5555" stop-opacity=".22"/>
+      <stop stop-color="#cc5555" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#cc5555" stop-opacity=".53"/>
     </linearGradient>
     <linearGradient id="wheel" x1="995" y1="230" x2="1351" y2="310" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#d36b6b" stop-opacity=".025"/>
-      <stop offset="1" stop-color="#d36b6b" stop-opacity=".14"/>
+      <stop stop-color="#d36b6b" stop-opacity=".06"/>
+      <stop offset="1" stop-color="#d36b6b" stop-opacity=".34"/>
     </linearGradient>
     <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(50)">
-      <path d="M0 0V6" stroke="#d36b6b" stroke-opacity=".075" stroke-width=".65"/>
+      <path d="M0 0V6" stroke="#d36b6b" stroke-opacity=".18" stroke-width=".65"/>
     </pattern>
     <clipPath id="housing-section">
       <path d="M0 27H298C348 27 371 51 371 102V340C371 375 358 389 321 389H0V372H318C343 372 354 363 354 337V109C354 64 335 43 296 43H0Z"/>
@@ -49,7 +49,7 @@
       <circle cx="669" cy="263" r="25"/>
       <path d="M399 333C432 332 462 351 474 379C479 391 478 407 468 421" stroke-width=".7"/>
     </g>
-    <g stroke="#d36b6b" stroke-opacity=".055" stroke-width=".65">
+    <g stroke="#d36b6b" stroke-opacity=".13" stroke-width=".65">
       <path d="M351 318L694 180M403 332L593 263M471 361L565 420M656 165L747 349M400 294V421M576 193V369M669 156V404M614 263H752M583 215H793M398 315H796M751 199V355M350 363H541M385 399H578"/>
       <path d="M510 421L879 116M577 399L733 263M668 183V421" stroke-dasharray="15 6 2 6"/>
       <path d="M657 169L669 188L669 157M658 267L681 256M396 327L402 337M396 335L406 330M497 394L510 400"/>
