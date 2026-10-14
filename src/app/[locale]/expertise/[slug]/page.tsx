@@ -89,13 +89,32 @@ export default async function ServicePage({ params }: Props) {
           width={1351}
           height={421}
           unoptimized
-          sizes="(min-width: 1643px) 1150px, (min-width: 768px) 70vw, 85vw"
-          className="pointer-events-none absolute right-[-10%] top-[112px] w-[85vw] max-w-[1150px] opacity-45 md:w-[70vw]"
+          sizes="(min-width: 1539px) 1200px, (min-width: 768px) 78vw, 85vw"
+          className="pointer-events-none absolute right-[-10%] top-[112px] w-[85vw] max-w-[1200px] opacity-45 md:right-[-3%] md:top-[100px] md:w-[78vw] md:opacity-65"
           style={{
-            maskImage: "linear-gradient(to right, transparent 0%, rgb(0 0 0 / 0.08) 35%, black 78%)",
-            WebkitMaskImage: "linear-gradient(to right, transparent 0%, rgb(0 0 0 / 0.08) 35%, black 78%)",
+            maskImage: "linear-gradient(to right, transparent 0%, rgb(0 0 0 / 0.16) 25%, black 65%)",
+            WebkitMaskImage: "linear-gradient(to right, transparent 0%, rgb(0 0 0 / 0.16) 25%, black 65%)",
           }}
         />
+        <div
+          className="pointer-events-none absolute bottom-0 right-0 hidden h-[128px] w-[48vw] max-w-[660px] overflow-hidden md:block min-[1800px]:h-[148px]"
+          style={{
+            maskImage: "linear-gradient(to right, transparent, black 30%), linear-gradient(to bottom, black 65%, transparent)",
+            WebkitMaskImage: "linear-gradient(to right, transparent, black 30%), linear-gradient(to bottom, black 65%, transparent)",
+            maskComposite: "intersect",
+            WebkitMaskComposite: "source-in",
+          }}
+          aria-hidden
+        >
+          <Image
+            src="/assets/expertise-page/technical-drawing-footer.svg"
+            alt=""
+            fill
+            unoptimized
+            sizes="(min-width: 1375px) 660px, 48vw"
+            className="object-contain opacity-80"
+          />
+        </div>
         <Container size="wide" className="relative z-10">
           <Link href="/expertise" className={buttonStyle}>
             <ArrowLeft className="size-4 shrink-0" aria-hidden />{labels.back}

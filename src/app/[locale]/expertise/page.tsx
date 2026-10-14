@@ -129,6 +129,17 @@ function ExpertiseHero() {
         className="pointer-events-none absolute left-1/2 top-[112px] z-0 h-auto w-[58vw] max-w-[728px] -translate-x-1/2 opacity-100 min-[1800px]:!top-[128px] min-[1800px]:!w-[48vw] min-[1800px]:!max-w-[920px]"
       />
       <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/70 via-white/45 to-white/15" />
+      <div className="pointer-events-none absolute inset-0 z-0 hidden overflow-hidden md:block" aria-hidden>
+        <Image
+          src="/assets/expertise-page/technical-drawing-margin.svg"
+          alt=""
+          width={360}
+          height={700}
+          unoptimized
+          sizes="360px"
+          className="absolute -left-5 top-[132px] h-auto w-[max(90px,calc((100vw-1160px)/2+20px))] max-w-[360px] opacity-80 min-[1800px]:!w-[max(90px,calc((100vw-1680px)/2+20px))] min-[2400px]:!w-[max(90px,calc((100vw-1900px)/2+20px))]"
+        />
+      </div>
 
       <Container size="wide" className="relative z-10">
         <div className="relative grid gap-12 md:block">
@@ -169,7 +180,24 @@ function ExpertiseHero() {
                   fill
                   unoptimized
                   sizes="(min-width: 1800px) 1040px, 760px"
-                  className="object-cover opacity-65"
+                  className="object-cover opacity-70"
+                />
+              </div>
+              <div
+                className="pointer-events-none absolute -left-10 right-0 top-[calc(100%+8px)] -z-10 hidden h-[96px] overflow-hidden md:block lg:h-[116px] min-[1800px]:!h-[148px]"
+                style={{
+                  maskImage: "linear-gradient(to bottom, black 65%, transparent 100%)",
+                  WebkitMaskImage: "linear-gradient(to bottom, black 65%, transparent 100%)",
+                }}
+                aria-hidden
+              >
+                <Image
+                  src="/assets/expertise-page/technical-drawing-footer.svg"
+                  alt=""
+                  fill
+                  unoptimized
+                  sizes="(min-width: 1800px) 850px, 660px"
+                  className="object-contain object-top opacity-80"
                 />
               </div>
               <div className="mx-auto mb-4 flex w-fit flex-col items-center gap-1">

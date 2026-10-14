@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="700" viewBox="0 0 360 700" fill="none">
+  <defs>
+    <linearGradient id="ink" x1="0" y1="0" x2="360" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c96a6a" stop-opacity=".48"/>
+      <stop offset=".65" stop-color="#c96a6a" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#c96a6a" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 0V9" stroke="#c96a6a" stroke-opacity=".2" stroke-width=".6"/>
+    </pattern>
+    <g id="contour">
+      <circle cx="-91" cy="325" r="208"/>
+      <circle cx="-91" cy="325" r="194"/>
+      <circle cx="146" cy="107" r="35"/>
+      <circle cx="146" cy="107" r="24"/>
+      <path d="M-15 560H94C116 560 126 571 126 593V627C126 649 115 661 93 661H-15M-15 578H88C100 578 108 585 108 598V623C108 637 101 644 88 644H-15"/>
+    </g>
+  </defs>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="url(#ink)" stroke-width="1.2">
+      <use href="#contour"/>
+      <use href="#contour" transform="translate(.9 -.8)" opacity=".24" stroke-width=".5" stroke-dasharray="3 .5"/>
+    </g>
+    <g stroke="#c96a6a" stroke-opacity=".16" stroke-width=".65" stroke-dasharray="16 5 2 5">
+      <path d="M0 325H241M146 34V181M70 107H221M94 510V699M-10 559H186M-10 661H186"/>
+    </g>
+    <path d="M0 561H70V577H0ZM0 645H69V659H0Z" fill="url(#hatch)"/>
+  </g>
+</svg>

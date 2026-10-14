@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="240" viewBox="0 0 900 240" fill="none">
+  <defs>
+    <linearGradient id="ink" x1="60" y1="120" x2="840" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c96a6a" stop-opacity=".1"/>
+      <stop offset=".3" stop-color="#c96a6a" stop-opacity=".48"/>
+      <stop offset=".7" stop-color="#c96a6a" stop-opacity=".48"/>
+      <stop offset="1" stop-color="#c96a6a" stop-opacity=".1"/>
+    </linearGradient>
+    <g id="part">
+      <path d="M220 59H650C687 59 711 84 711 120C711 158 687 183 650 183H220C182 183 157 158 157 120C157 84 181 59 220 59Z"/>
+      <path d="M220 67H650C682 67 703 88 703 120C703 153 682 175 650 175H220C186 175 165 153 165 120C165 89 186 67 220 67Z"/>
+      <circle cx="220" cy="120" r="39"/>
+      <circle cx="220" cy="120" r="29"/>
+      <circle cx="650" cy="120" r="36"/>
+      <circle cx="650" cy="120" r="26"/>
+      <path d="M343 105H528C538 105 544 111 544 121C544 131 538 137 528 137H343C333 137 327 131 327 121C327 111 333 105 343 105Z"/>
+    </g>
+  </defs>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="url(#ink)" stroke-width="1.15">
+      <use href="#part"/>
+      <use href="#part" transform="translate(1 -.8)" opacity=".25" stroke-width=".5" stroke-dasharray="3 .5"/>
+    </g>
+    <g stroke="#c96a6a" stroke-opacity=".2" stroke-width=".65" stroke-dasharray="18 5 2 5">
+      <path d="M71 120H825M220 21V219M650 21V219M302 120V200M568 120V200"/>
+    </g>
+    <g stroke="#c96a6a" stroke-opacity=".2" stroke-width=".65">
+      <path d="M220 193V226M650 193V226M220 216H650M228 212L220 216L228 220M642 212L650 216L642 220"/>
+    </g>
+  </g>
+</svg>
