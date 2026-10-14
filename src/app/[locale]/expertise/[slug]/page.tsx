@@ -83,7 +83,19 @@ export default async function ServicePage({ params }: Props) {
     <article className="bg-background">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
       <header className="relative overflow-hidden pb-12 pt-[112px] md:pb-[66px] md:pt-[152px]">
-        <Image src="/assets/expertise-page/technical-drawing-background.svg" alt="" width={1351} height={421} unoptimized sizes="(min-width: 1643px) 1150px, (min-width: 768px) 70vw, 85vw" className="pointer-events-none absolute right-[-10%] top-[112px] w-[85vw] max-w-[1150px] opacity-45 md:w-[70vw]" />
+        <Image
+          src="/assets/expertise-page/technical-drawing-background.svg"
+          alt=""
+          width={1351}
+          height={421}
+          unoptimized
+          sizes="(min-width: 1643px) 1150px, (min-width: 768px) 70vw, 85vw"
+          className="pointer-events-none absolute right-[-10%] top-[112px] w-[85vw] max-w-[1150px] opacity-45 md:w-[70vw]"
+          style={{
+            maskImage: "linear-gradient(to right, transparent 0%, rgb(0 0 0 / 0.08) 35%, black 78%)",
+            WebkitMaskImage: "linear-gradient(to right, transparent 0%, rgb(0 0 0 / 0.08) 35%, black 78%)",
+          }}
+        />
         <Container size="wide" className="relative z-10">
           <Link href="/expertise" className={buttonStyle}>
             <ArrowLeft className="size-4 shrink-0" aria-hidden />{labels.back}

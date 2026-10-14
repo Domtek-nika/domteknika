@@ -155,6 +155,23 @@ function ExpertiseHero() {
             className="min-h-[326px] sm:min-h-[356px] md:absolute md:right-0 md:top-[-32px] md:min-h-0 md:w-[52%] lg:right-[-36px] lg:top-[-48px] lg:w-[54%] xl:right-[-84px] xl:w-[58%] 2xl:right-[-148px] 2xl:w-[60%] min-[1800px]:!right-[40px] min-[1800px]:!top-[-24px] min-[1800px]:!w-[55%] min-[2300px]:!right-[80px] min-[2400px]:!top-[-10px]"
           >
             <div className="relative left-1/2 w-[min(calc(100vw-28px),380px)] -translate-x-1/2 pt-1 sm:w-[min(100%,520px)] md:left-auto md:ml-auto md:mr-0 md:w-full md:max-w-[520px] md:translate-x-0 lg:max-w-[580px] xl:max-w-[640px] 2xl:max-w-[660px] min-[1800px]:!max-w-[800px] min-[2400px]:!max-w-[880px]">
+              <div
+                className="pointer-events-none absolute -bottom-14 -left-10 right-0 -top-10 -z-10 hidden overflow-hidden md:block lg:-left-14 min-[1800px]:!-left-20"
+                style={{
+                  maskImage: "radial-gradient(ellipse at center, black 45%, transparent 78%)",
+                  WebkitMaskImage: "radial-gradient(ellipse at center, black 45%, transparent 78%)",
+                }}
+                aria-hidden
+              >
+                <Image
+                  src="/assets/expertise-page/team-pencil-background.svg"
+                  alt=""
+                  fill
+                  unoptimized
+                  sizes="(min-width: 1800px) 1040px, 760px"
+                  className="object-cover opacity-65"
+                />
+              </div>
               <div className="mx-auto mb-4 flex w-fit flex-col items-center gap-1">
                 <p className="text-center text-muted-foreground text-[17px] font-medium leading-none md:text-[15px] min-[1800px]:!text-[20px] min-[2400px]:!text-[22px]">
                   {t("team")}

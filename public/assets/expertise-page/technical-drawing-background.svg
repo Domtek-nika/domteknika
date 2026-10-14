@@ -25,7 +25,7 @@
       <path d="M900 0H1245V421H900Z"/>
     </clipPath>
   </defs>
-  <g stroke-linecap="round" stroke-linejoin="round">
+  <g id="drawing" stroke-linecap="round" stroke-linejoin="round">
     <g stroke="url(#housing)" stroke-width=".85">
       <path d="M0 4H300C366 4 401 39 401 103V421M0 19H297C352 19 382 49 382 105V335C382 378 366 400 321 400H0"/>
       <path d="M0 24H296C351 24 375 49 375 103V340C375 376 359 392 321 392H0"/>
@@ -35,11 +35,11 @@
       <path d="M153 323L246 386M173 322L265 386M194 321L285 386M216 319L306 386M237 315L327 383M257 309L345 371" stroke-width=".6"/>
       <circle cx="135" cy="195" r="41"/>
       <path d="M135 96V274M25 195H224M135 288V376M31 421L199 252M240 202L358 326M286 275L357 344" stroke-dasharray="15 5 2 5" stroke-width=".65"/>
-      <path d="M0 372H400M0 389H404M0 399H578M355 80V421M381 59V421" stroke-width=".5"/>
+      <path d="M0 372H400M0 389H404M0 399H410M355 80V421M381 59V421" stroke-width=".5"/>
     </g>
     <path d="M0 0H410V421H0Z" fill="url(#hatch)" clip-path="url(#housing-section)"/>
     <path d="M140 300H360V395H140Z" fill="url(#hatch)" clip-path="url(#lower-section)"/>
-    <g stroke="url(#lever)" stroke-width="1.15">
+    <g stroke="url(#lever)" stroke-width="1.15" transform="translate(80 0)">
       <path d="M393 421C369 402 354 379 362 351C369 326 382 312 409 302L603 237C619 232 629 211 650 206C682 196 712 214 722 243C734 274 719 303 697 314L524 370C509 377 501 395 489 421"/>
       <path d="M402 421C377 399 367 378 374 352C380 331 394 319 414 311L610 245C628 239 635 222 654 215C679 206 703 222 714 246C724 270 712 293 691 306L519 362C499 368 490 397 481 421" stroke-width=".85"/>
       <path d="M419 318L548 275C558 271 565 275 562 284L541 328C538 334 534 339 526 342L475 358C466 361 459 357 450 354L423 342C408 336 404 324 419 318Z"/>
@@ -49,7 +49,7 @@
       <circle cx="669" cy="263" r="25"/>
       <path d="M399 333C432 332 462 351 474 379C479 391 478 407 468 421" stroke-width=".7"/>
     </g>
-    <g stroke="#d36b6b" stroke-opacity=".13" stroke-width=".65">
+    <g stroke="#d36b6b" stroke-opacity=".13" stroke-width=".65" transform="translate(80 0)">
       <path d="M351 318L694 180M403 332L593 263M471 361L565 420M656 165L747 349M400 294V421M576 193V369M669 156V404M614 263H752M583 215H793M398 315H796M751 199V355M350 363H541M385 399H578"/>
       <path d="M510 421L879 116M577 399L733 263M668 183V421" stroke-dasharray="15 6 2 6"/>
       <path d="M657 169L669 188L669 157M658 267L681 256M396 327L402 337M396 335L406 330M497 394L510 400"/>
@@ -67,4 +67,5 @@
     </g>
     <path d="M1245 247H1351V317H1331V288C1331 273 1327 267 1311 267H1245Z" fill="url(#hatch)"/>
   </g>
+  <use href="#drawing" transform="translate(.55 -.45)" opacity=".22"/>
 </svg>
