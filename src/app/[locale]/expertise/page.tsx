@@ -115,7 +115,7 @@ function ExpertiseHero() {
 
   return (
     <section
-      className="relative overflow-visible bg-background pb-[55px] pt-[132px] md:min-h-[403px] md:pb-[60px] md:pt-[152px] min-[1800px]:!min-h-[588px] min-[1800px]:!pb-[78px] min-[2400px]:!min-h-[803px] min-[2400px]:!pb-[104px] min-[2400px]:!pt-[152px]"
+      className="relative overflow-visible bg-background pb-[68px] pt-[132px] sm:pb-[55px] md:min-h-[620px] md:pb-[60px] md:pt-[152px] min-[1200px]:min-h-[403px] min-[1800px]:!min-h-[588px] min-[1800px]:!pb-[78px] min-[2400px]:!min-h-[803px] min-[2400px]:!pb-[104px] min-[2400px]:!pt-[152px]"
       aria-labelledby="expertise-hero-title"
     >
       <Image
@@ -126,7 +126,11 @@ function ExpertiseHero() {
         priority
         unoptimized
         sizes="(min-width: 1917px) 920px, (min-width: 1800px) 48vw, (min-width: 1256px) 728px, 58vw"
-        className="pointer-events-none absolute left-1/2 top-[112px] z-0 h-auto w-[58vw] max-w-[728px] -translate-x-1/2 opacity-100 min-[1800px]:!top-[128px] min-[1800px]:!w-[48vw] min-[1800px]:!max-w-[920px]"
+        className="pointer-events-none absolute left-1/2 top-[112px] z-0 h-auto w-[58vw] max-w-[728px] -translate-x-1/2 opacity-100 md:left-[42%] min-[1800px]:!top-[128px] min-[1800px]:!w-[48vw] min-[1800px]:!max-w-[920px]"
+        style={{
+          maskImage: "linear-gradient(to right, black 0%, black 60%, transparent 72%)",
+          WebkitMaskImage: "linear-gradient(to right, black 0%, black 60%, transparent 72%)",
+        }}
       />
       <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/70 via-white/45 to-white/15" />
       <div
@@ -149,7 +153,7 @@ function ExpertiseHero() {
       </div>
 
       <Container size="wide" className="relative z-10">
-        <div className="relative grid gap-12 md:block">
+        <div className="relative grid gap-8 sm:gap-12 md:block">
           <Reveal>
             <div className="flex items-center gap-3 text-muted-foreground min-[2400px]:!gap-5 text-[15px] font-medium leading-none md:text-[16px] min-[2400px]:!text-[26px]">
               <span
@@ -170,11 +174,11 @@ function ExpertiseHero() {
 
           <Reveal
             delay={0.1}
-            className="min-h-[326px] sm:min-h-[356px] md:absolute md:right-0 md:top-[-32px] md:min-h-0 md:w-[52%] lg:right-[-36px] lg:top-[-48px] lg:w-[54%] xl:right-[-84px] xl:w-[58%] 2xl:right-[-148px] 2xl:w-[60%] min-[1800px]:!right-[40px] min-[1800px]:!top-[-24px] min-[1800px]:!w-[55%] min-[2300px]:!right-[80px] min-[2400px]:!top-[-10px]"
+            className="min-h-[280px] sm:min-h-[356px] md:absolute md:right-0 md:top-[-32px] md:min-h-0 md:w-[52%] lg:right-[-36px] lg:top-[-48px] lg:w-[54%] xl:right-[-84px] xl:w-[58%] 2xl:right-[-148px] 2xl:w-[60%] min-[1800px]:!right-[40px] min-[1800px]:!top-[-24px] min-[1800px]:!w-[55%] min-[2300px]:!right-[80px] min-[2400px]:!top-[-10px]"
           >
             <div className="relative left-1/2 w-[min(calc(100vw-28px),380px)] -translate-x-1/2 pt-1 sm:w-[min(100%,520px)] md:left-auto md:ml-auto md:mr-0 md:w-full md:max-w-[520px] md:translate-x-0 lg:max-w-[580px] xl:max-w-[640px] 2xl:max-w-[660px] min-[1800px]:!max-w-[800px] min-[2400px]:!max-w-[880px]">
               <div
-                className="pointer-events-none absolute -bottom-14 -left-10 right-0 -top-10 -z-10 hidden overflow-hidden md:block lg:-left-14 min-[1800px]:!-left-20"
+                className="pointer-events-none absolute -bottom-3 -left-4 right-0 -top-4 -z-10 overflow-hidden md:-bottom-14 md:-left-10 md:-top-10 lg:-left-14 min-[1800px]:!-left-20"
                 style={{
                   maskImage: "radial-gradient(ellipse at center, black 45%, transparent 78%)",
                   WebkitMaskImage: "radial-gradient(ellipse at center, black 45%, transparent 78%)",
@@ -186,12 +190,12 @@ function ExpertiseHero() {
                   alt=""
                   fill
                   unoptimized
-                  sizes="(min-width: 1800px) 1040px, 760px"
-                  className="object-cover opacity-70"
+                  sizes="(min-width: 1800px) 1040px, (min-width: 768px) 760px, 360px"
+                  className="object-cover opacity-50 md:object-contain md:opacity-70"
                 />
               </div>
               <div
-                className="pointer-events-none absolute -left-10 right-0 top-[calc(100%+8px)] -z-10 hidden h-[96px] overflow-hidden md:block lg:h-[116px] min-[1800px]:!h-[148px]"
+                className="pointer-events-none absolute -left-4 right-0 top-[calc(100%+8px)] -z-10 h-[52px] overflow-hidden md:-left-10 md:h-[96px] lg:h-[116px] min-[1800px]:!h-[148px]"
                 style={{
                   maskImage: "linear-gradient(to bottom, black 65%, transparent 100%)",
                   WebkitMaskImage: "linear-gradient(to bottom, black 65%, transparent 100%)",
@@ -203,8 +207,8 @@ function ExpertiseHero() {
                   alt=""
                   fill
                   unoptimized
-                  sizes="(min-width: 1800px) 850px, 660px"
-                  className="object-contain object-top opacity-80"
+                  sizes="(min-width: 1800px) 850px, (min-width: 768px) 660px, 360px"
+                  className="object-contain object-top opacity-65 md:opacity-80"
                 />
               </div>
               <div className="mx-auto mb-4 flex w-fit flex-col items-center gap-1">

@@ -82,7 +82,7 @@ export default async function ServicePage({ params }: Props) {
   return (
     <article className="bg-background">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
-      <header className="relative overflow-hidden pb-12 pt-[112px] md:pb-[66px] md:pt-[152px]">
+      <header className="relative overflow-hidden pb-[68px] pt-[112px] md:pb-[66px] md:pt-[152px]">
         <div
           className="pointer-events-none absolute inset-0 z-0 hidden overflow-hidden md:block"
           style={{
@@ -107,15 +107,15 @@ export default async function ServicePage({ params }: Props) {
           width={1351}
           height={421}
           unoptimized
-          sizes="(min-width: 1539px) 1200px, (min-width: 768px) 78vw, 85vw"
-          className="pointer-events-none absolute right-[-10%] top-[112px] w-[85vw] max-w-[1200px] opacity-45 md:right-[-3%] md:top-[100px] md:w-[78vw] md:opacity-65"
+          sizes="(min-width: 1539px) 1200px, (min-width: 768px) 78vw, 120vw"
+          className="pointer-events-none absolute right-[-35%] top-[108px] w-[120vw] max-w-[1200px] opacity-40 md:right-[-3%] md:top-[100px] md:w-[78vw] md:opacity-65"
           style={{
             maskImage: "linear-gradient(to right, transparent 0%, rgb(0 0 0 / 0.16) 25%, black 65%)",
             WebkitMaskImage: "linear-gradient(to right, transparent 0%, rgb(0 0 0 / 0.16) 25%, black 65%)",
           }}
         />
         <div
-          className="pointer-events-none absolute bottom-0 right-0 hidden h-[128px] w-[48vw] max-w-[660px] overflow-hidden md:block min-[1800px]:h-[148px]"
+          className="pointer-events-none absolute bottom-2 right-0 h-[56px] w-[74vw] max-w-[660px] overflow-hidden md:bottom-0 md:h-[128px] md:w-[48vw] min-[1800px]:h-[148px]"
           style={{
             maskImage: "linear-gradient(to right, transparent, black 30%), linear-gradient(to bottom, black 65%, transparent)",
             WebkitMaskImage: "linear-gradient(to right, transparent, black 30%), linear-gradient(to bottom, black 65%, transparent)",
@@ -129,8 +129,8 @@ export default async function ServicePage({ params }: Props) {
             alt=""
             fill
             unoptimized
-            sizes="(min-width: 1375px) 660px, 48vw"
-            className="object-contain opacity-80"
+            sizes="(min-width: 1375px) 660px, (min-width: 768px) 48vw, 74vw"
+            className="object-contain opacity-55 md:opacity-80"
           />
         </div>
         <Container size="wide" className="relative z-10">
