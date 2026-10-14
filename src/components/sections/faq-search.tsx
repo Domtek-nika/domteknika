@@ -40,7 +40,7 @@ function normalizeSearch(value: string) {
 const focusStyle = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
 const buttonMotionStyle = "cursor-pointer transition-[translate,border-color,box-shadow,background-color,color] duration-500 motion-safe:enabled:hover:-translate-y-1 motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]";
 const inactiveButtonStyle = "border-border bg-white text-foreground shadow-[0_2px_6px_rgba(0,0,0,0.05)] enabled:hover:border-brand/35 enabled:hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)] active:border-brand focus-visible:border-brand";
-const questionsPerPage = 6;
+const questionsPerPage = 7;
 
 export function FaqSearch({
   questions,
@@ -143,7 +143,7 @@ export function FaqSearch({
             {showTopics && activeTopic === "all" && singleTopic && <p className="mb-3 text-brand text-[11px] font-extrabold">{visibleResults[0].topicLabel}</p>}
             <div className="border-t border-border">
               {/* Keep the answers in the initial HTML while pagination still
-                  presents only six questions at a time. */}
+                  presents only seven questions at a time. */}
               {results.map((item, index) => (
                 <details
                   key={item.id}

@@ -7,6 +7,17 @@ import { getFaqCopy } from "@/data/faq-copy";
 import { getServiceCopy } from "@/data/service-copy";
 import { services } from "@/data/services";
 
+const priorityQuestionIds = [
+  "general-0",
+  "general-1",
+  "general-2",
+  "general-5",
+  "general-3",
+  "general-4",
+  "general-7",
+];
+const priorityQuestions = new Set(priorityQuestionIds);
+
 export async function ExpertiseFaq({ locale }: { locale: string }) {
   const copy = getFaqCopy(locale);
   const serviceCopy = getServiceCopy(locale);
@@ -15,13 +26,21 @@ export async function ExpertiseFaq({ locale }: { locale: string }) {
     { id: "general", label: copy.generalTopic },
     ...services.map((service) => ({ id: service.slug, label: t(`items.${service.key}.title`) })),
   ];
-  const questions = [
+  const allQuestions = [
     ...copy.general.map((item, index) => ({ ...item, topic: "general", id: `general-${index}` })),
     ...services.flatMap((service) => serviceCopy.items[service.slug].faq.map((item, index) => ({
       ...item,
       topic: service.slug,
       id: `${service.slug}-${index}`,
     }))),
+  ];
+  const questionsById = new Map(allQuestions.map((item) => [item.id, item]));
+  const questions = [
+    ...priorityQuestionIds.flatMap((id) => {
+      const question = questionsById.get(id);
+      return question ? [question] : [];
+    }),
+    ...allQuestions.filter((item) => !priorityQuestions.has(item.id)),
   ];
 
   return (

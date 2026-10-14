@@ -86,18 +86,89 @@ const CardSwap = ({
   const container = useRef(null);
 
   useEffect(() => {
+    const node = container.current;
+    if (!node) return;
+
     const total = refs.length;
     const dropDistance = Math.max(height * 1.08, 320);
-    refs.forEach((r, i) => placeNow(r.current, makeSlot(i, cardDistance, verticalDistance, total), skewAmount));
+    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let reducedMotion = reducedMotionQuery.matches;
+    let inViewport = typeof IntersectionObserver === 'undefined';
+    let pageVisible = !document.hidden;
+    let hoverPaused = false;
+    let activeManual = false;
+    let activeOrder = null;
+    let pendingManualTimeout;
+    let disposed = false;
+
+    if (order.current.length !== total) {
+      order.current = Array.from({ length: total }, (_, i) => i);
+    }
+    const placeCurrentOrder = () => {
+      order.current.forEach((idx, i) => {
+        placeNow(refs[idx].current, makeSlot(i, cardDistance, verticalDistance, total), skewAmount);
+      });
+    };
+    placeCurrentOrder();
+
+    const stopAutoplay = () => {
+      window.clearInterval(intervalRef.current);
+      intervalRef.current = undefined;
+    };
+    const canAutoplay = () =>
+      !disposed && inViewport && pageVisible && !reducedMotion && !hoverPaused && total > 1;
+    const startAutoplay = () => {
+      stopAutoplay();
+      if (canAutoplay()) intervalRef.current = window.setInterval(() => swap(), delay);
+    };
+    const finishSwap = nextOrder => {
+      order.current = nextOrder;
+      activeOrder = null;
+      activeManual = false;
+      isAnimatingRef.current = false;
+      if (pendingManualSwapRef.current) {
+        pendingManualSwapRef.current = false;
+        pendingManualTimeout = window.setTimeout(() => {
+          pendingManualTimeout = undefined;
+          if (!disposed) manualSwapRef.current?.();
+        }, 0);
+      }
+    };
+    const finishWithoutMotion = () => {
+      tlRef.current?.kill();
+      tlRef.current = null;
+      finishSwap(activeOrder ?? order.current);
+      placeCurrentOrder();
+    };
+    const syncActivity = () => {
+      startAutoplay();
+      if (!isAnimatingRef.current) return;
+      if (reducedMotion) {
+        finishWithoutMotion();
+      } else if (!inViewport || !pageVisible || (hoverPaused && !activeManual)) {
+        tlRef.current?.pause();
+      } else {
+        tlRef.current?.play();
+      }
+    };
 
     const swap = (isManual = false) => {
+      if (disposed || (!isManual && !canAutoplay())) return;
       if (order.current.length < 2) return;
       if (isAnimatingRef.current) return;
 
-      isAnimatingRef.current = true;
-      const activeConfig = isManual ? manualConfig : autoConfig;
-
       const [front, ...rest] = order.current;
+      const nextOrder = [...rest, front];
+      if (reducedMotion || !inViewport || !pageVisible) {
+        finishSwap(nextOrder);
+        placeCurrentOrder();
+        return;
+      }
+
+      isAnimatingRef.current = true;
+      activeManual = isManual;
+      activeOrder = nextOrder;
+      const activeConfig = isManual ? manualConfig : autoConfig;
       const elFront = refs[front].current;
       const tl = gsap.timeline();
       tlRef.current = tl;
@@ -148,55 +219,80 @@ const CardSwap = ({
       );
 
       tl.call(() => {
-        order.current = [...rest, front];
-        isAnimatingRef.current = false;
-        if (pendingManualSwapRef.current) {
-          pendingManualSwapRef.current = false;
-          window.setTimeout(() => manualSwapRef.current?.(), 0);
-        }
+        if (!disposed) finishSwap(nextOrder);
       });
     };
 
     swapRef.current = swap;
     manualSwapRef.current = () => {
-      clearInterval(intervalRef.current);
+      if (disposed) return;
+      stopAutoplay();
       if (isAnimatingRef.current) {
         pendingManualSwapRef.current = true;
-        tlRef.current?.timeScale(4);
+        activeManual = true;
+        if (reducedMotion || !inViewport || !pageVisible) {
+          finishWithoutMotion();
+        } else {
+          tlRef.current?.timeScale(4).play();
+        }
+        startAutoplay();
         return;
       }
       swap(true);
-      intervalRef.current = window.setInterval(swap, delay);
+      startAutoplay();
     };
-    intervalRef.current = window.setInterval(swap, delay);
 
-    const node = container.current;
+    const observer = typeof IntersectionObserver === 'undefined'
+      ? null
+      : new IntersectionObserver(entries => {
+          inViewport = entries.some(entry => entry.isIntersecting);
+          syncActivity();
+        });
+    observer?.observe(node.closest('.domtek-card-swap') ?? node);
 
+    const handleVisibilityChange = () => {
+      pageVisible = !document.hidden;
+      syncActivity();
+    };
+    const handleReducedMotionChange = event => {
+      reducedMotion = event.matches;
+      syncActivity();
+    };
+    const pause = () => {
+      hoverPaused = true;
+      syncActivity();
+    };
+    const resume = () => {
+      hoverPaused = false;
+      syncActivity();
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    reducedMotionQuery.addEventListener('change', handleReducedMotionChange);
     if (pauseOnHover) {
-      const pause = () => {
-        tlRef.current?.pause();
-        clearInterval(intervalRef.current);
-      };
-      const resume = () => {
-        tlRef.current?.play();
-        clearInterval(intervalRef.current);
-        intervalRef.current = window.setInterval(swap, delay);
-      };
       node.addEventListener('mouseenter', pause);
       node.addEventListener('mouseleave', resume);
-      return () => {
-        node.removeEventListener('mouseenter', pause);
-        node.removeEventListener('mouseleave', resume);
-        clearInterval(intervalRef.current);
-      };
     }
+    syncActivity();
 
     return () => {
-      clearInterval(intervalRef.current);
+      disposed = true;
+      observer?.disconnect();
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
+      node.removeEventListener('mouseenter', pause);
+      node.removeEventListener('mouseleave', resume);
+      stopAutoplay();
+      window.clearTimeout(pendingManualTimeout);
       tlRef.current?.kill();
+      tlRef.current = null;
+      swapRef.current = null;
+      manualSwapRef.current = null;
+      isAnimatingRef.current = false;
+      pendingManualSwapRef.current = false;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cardDistance, verticalDistance, delay, pauseOnHover, skewAmount, easing, height]);
+  }, [cardDistance, verticalDistance, delay, pauseOnHover, skewAmount, easing, height, refs]);
 
   useEffect(() => {
     if (manualSwapSignal === 0) return;

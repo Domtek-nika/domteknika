@@ -157,7 +157,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
             id={menuId}
             role="menu"
             onKeyDown={handleMenuKeyDown}
-              className="fixed z-[950] rounded-[10px] border border-white/80 bg-white/90 p-1 shadow-[0_16px_34px_rgba(0,0,0,0.14)] backdrop-blur-2xl min-[1800px]:!rounded-[12px] min-[1800px]:!p-1.5"
+            className="fixed z-[950] rounded-[10px] border border-white/80 bg-white/90 p-1 shadow-[0_16px_34px_rgba(0,0,0,0.14)] backdrop-blur-2xl motion-safe:animate-in motion-safe:fade-in-0 motion-safe:slide-in-from-top-1 motion-safe:duration-200 motion-reduce:animate-none [--tw-ease:var(--ease-smooth)] min-[1800px]:!rounded-[12px] min-[1800px]:!p-1.5"
             style={{
               left: menuPosition.left,
               minWidth: menuPosition.minWidth,
@@ -178,8 +178,8 @@ export function LanguageSwitcher({ className }: { className?: string }) {
                   disabled={isPending}
                   onClick={() => switchTo(locale)}
                   className={cn(
-                    "flex w-full items-center justify-between gap-4 rounded-[7px] px-3 py-2 text-left text-[13px] font-bold text-foreground transition-colors hover:bg-brand/10 focus-visible:bg-brand/10 focus-visible:outline-none disabled:opacity-60 min-[1800px]:!gap-4 min-[1800px]:!rounded-[9px] min-[1800px]:!px-3 min-[1800px]:!py-2 min-[1800px]:!text-[14px] min-[2400px]:!text-[15px]",
-                    active && "bg-brand text-white hover:bg-brand",
+                    "flex w-full cursor-pointer items-center justify-between gap-4 rounded-[7px] px-3 py-2 text-left text-[13px] font-bold text-foreground transition-[background-color,color,box-shadow] duration-200 enabled:hover:bg-brand/10 enabled:hover:text-brand enabled:hover:shadow-[inset_2px_0_0_var(--brand)] focus-visible:bg-brand/10 focus-visible:text-brand focus-visible:shadow-[inset_2px_0_0_var(--brand)] focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-60 motion-reduce:transition-none [--tw-ease:var(--ease-smooth)] min-[1800px]:!gap-4 min-[1800px]:!rounded-[9px] min-[1800px]:!px-3 min-[1800px]:!py-2 min-[1800px]:!text-[14px] min-[2400px]:!text-[15px]",
+                    active && "bg-brand text-white enabled:hover:bg-primary/80 enabled:hover:text-white focus-visible:bg-brand focus-visible:text-white",
                   )}
                 >
                   <span>{LANGUAGE_NAMES[locale]}</span>
@@ -206,7 +206,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
           setOpen(true);
         }}
         disabled={isPending}
-        className="inline-flex h-[42px] min-w-[64px] items-center justify-center gap-1.5 rounded-[10px] border border-white/75 bg-white/[0.72] px-3 text-[13px] font-extrabold text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.95),0_6px_16px_rgba(0,0,0,0.08)] backdrop-blur-2xl transition-[background-color,transform] hover:bg-white/[0.92] active:scale-[0.96] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40 disabled:opacity-60 min-[1800px]:!h-[44px] min-[1800px]:!min-w-[76px] min-[1800px]:!gap-2 min-[1800px]:!rounded-[9px] min-[1800px]:!px-3 min-[1800px]:!text-[14px] min-[2400px]:!h-[48px] min-[2400px]:!min-w-[82px] min-[2400px]:!gap-2 min-[2400px]:!rounded-[10px] min-[2400px]:!px-3.5 min-[2400px]:!text-[15px]"
+        className="inline-flex h-[42px] min-w-[64px] cursor-pointer items-center justify-center gap-1.5 rounded-[10px] border border-white/75 bg-white/[0.72] px-3 text-[13px] font-extrabold text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.95),0_6px_16px_rgba(0,0,0,0.08)] backdrop-blur-2xl !transition-[background-color,border-color,box-shadow,color,translate,scale] duration-300 enabled:hover:border-brand/35 enabled:hover:bg-white/[0.92] enabled:hover:text-brand enabled:hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.95),0_9px_20px_rgba(0,0,0,0.12)] motion-safe:enabled:hover:-translate-y-0.5 active:scale-[0.96] aria-expanded:border-brand/35 aria-expanded:bg-white/[0.92] aria-expanded:text-brand aria-expanded:shadow-[inset_0_1px_0_rgba(255,255,255,0.95),0_9px_20px_rgba(0,0,0,0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40 disabled:cursor-not-allowed disabled:opacity-60 disabled:!translate-y-0 motion-reduce:!transition-none motion-reduce:hover:!translate-y-0 motion-reduce:active:!scale-100 [--tw-ease:var(--ease-smooth)] min-[1800px]:!h-[44px] min-[1800px]:!min-w-[76px] min-[1800px]:!gap-2 min-[1800px]:!rounded-[9px] min-[1800px]:!px-3 min-[1800px]:!text-[14px] min-[2400px]:!h-[48px] min-[2400px]:!min-w-[82px] min-[2400px]:!gap-2 min-[2400px]:!rounded-[10px] min-[2400px]:!px-3.5 min-[2400px]:!text-[15px]"
         aria-expanded={open}
         aria-haspopup="menu"
         aria-controls={open ? menuId : undefined}
@@ -215,7 +215,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         {LANGUAGE_BADGES[current]}
         <ChevronDown
           className={cn(
-            "size-3.5 transition-transform duration-200 min-[1800px]:!size-4 min-[2400px]:!size-[18px]",
+            "size-3.5 transition-transform duration-200 motion-reduce:transition-none min-[1800px]:!size-4 min-[2400px]:!size-[18px]",
             open && "rotate-180",
           )}
           aria-hidden
