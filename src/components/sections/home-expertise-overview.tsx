@@ -53,7 +53,7 @@ export function ExpertiseOverviewSection() {
                 href="/expertise"
                 className="group mt-5 flex w-full items-center justify-between gap-3 rounded-sm text-[10.5px] font-bold uppercase tracking-[0.08em] text-foreground transition-colors duration-300 hover:text-brand focus-visible:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-4 sm:inline-flex sm:w-fit sm:text-[11px]"
               >
-                <span className="border-b border-current pb-1">{t("cta")}</span>
+                <span className="border-b border-brand pb-1">{t("cta")}</span>
                 <span
                   className="flex size-7 shrink-0 items-center justify-center rounded-full bg-brand/[0.07] text-base leading-none transition-transform duration-300 group-hover:translate-x-1 sm:size-auto sm:bg-transparent"
                   aria-hidden

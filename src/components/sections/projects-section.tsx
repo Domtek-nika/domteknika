@@ -111,7 +111,7 @@ export function ProjectsSection({
           <div className="mb-5 flex flex-col items-start gap-3 md:mb-[38px] md:gap-4 lg:flex-row lg:items-center lg:justify-between min-[1800px]:mb-[50px] min-[2300px]:!mb-[50px]">
             <h2
               id="projects-title"
-              className="text-foreground text-[20px] font-extrabold leading-none min-[1800px]:text-[32px] min-[2300px]:!text-[34px]"
+              className="text-foreground text-[28px] font-extrabold leading-none sm:text-[32px] lg:text-[36px] min-[1800px]:!text-[42px]"
             >
               {t("title")}
             </h2>
