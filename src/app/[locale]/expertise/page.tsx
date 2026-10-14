@@ -115,7 +115,7 @@ function ExpertiseHero() {
 
   return (
     <section
-      className="relative overflow-visible bg-background pb-[55px] pt-[132px] md:min-h-[403px] md:pb-[60px] md:pt-[152px] min-[1800px]:!min-h-[588px] min-[1800px]:!pb-[78px] min-[2400px]:!min-h-[803px] min-[2400px]:!pb-[104px] min-[2400px]:!pt-[152px]"
+      className="relative overflow-visible bg-background pb-[55px] pt-[132px] md:min-h-[438px] md:pb-[60px] md:pt-[152px] min-[1800px]:!min-h-[676px] min-[1800px]:!pb-[78px] min-[2400px]:!min-h-[937px] min-[2400px]:!pb-[104px] min-[2400px]:!pt-[152px]"
       aria-labelledby="expertise-hero-title"
     >
       <Image
@@ -254,8 +254,8 @@ function ExpertiseGrid({ faqLabel }: { faqLabel: string }) {
             <p className="mt-7 max-w-[320px] text-muted-foreground sm:max-w-[610px] min-[1800px]:!max-w-[760px] text-[15px] font-medium leading-[1.42] min-[1800px]:!text-[17px] min-[2400px]:!text-[19px]">
               {t("intro")}
             </p>
-            <a href="#expertise-faq" className="mt-6 inline-flex min-h-11 items-center gap-3 rounded-[7px] border border-border bg-white px-4 py-3 shadow-[0_3px_8px_rgba(0,0,0,0.08)] transition-colors hover:border-foreground/25 hover:bg-muted/40 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand text-[13px] font-bold">
-              {faqLabel}<ArrowRight className="size-4 text-brand" aria-hidden />
+            <a href="#expertise-faq" className="mt-6 inline-flex min-h-11 items-center gap-3 rounded-[7px] border border-brand bg-brand px-4 py-3 text-white shadow-[0_4px_10px_rgba(0,0,0,0.28)] transition-transform motion-safe:hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand text-[13px] font-bold">
+              {faqLabel}<ArrowRight className="size-4" aria-hidden />
             </a>
           </Reveal>
         </div>

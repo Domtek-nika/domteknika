@@ -1950,13 +1950,13 @@ export function PatentPageContent({
                         !FilterIcon && "place-items-center text-center",
                       )}
                     >
-                      <strong className="text-[12px] font-extrabold leading-none min-[1800px]:!text-[14px] min-[2400px]:!text-[16px]">
+                      <strong className="line-clamp-2 text-[12px] font-extrabold leading-[1.1] min-[1800px]:!text-[14px] min-[2400px]:!text-[16px]">
                         {filter.label}
                       </strong>
                       {filter.key !== "all" && (
                         <span
                           className={cn(
-                            "mt-1 text-muted-foreground text-[9px] font-medium leading-none min-[1800px]:!text-[10px] min-[2400px]:!text-[12px]",
+                            "mt-1 truncate text-muted-foreground text-[9px] font-medium leading-none min-[1800px]:!text-[10px] min-[2400px]:!text-[12px]",
                             active && "text-white/85",
                           )}
                         >
@@ -2378,7 +2378,7 @@ function PatentStatsBar({ stats }: { stats: PatentStat[] }) {
   return (
     <Reveal
       delay={0.1}
-      className="relative z-20 mx-auto mt-10 w-full max-w-[980px] lg:absolute lg:bottom-9 lg:left-1/2 lg:mt-0 lg:-translate-x-1/2 min-[1800px]:!bottom-12 min-[1800px]:!max-w-[1120px] min-[2400px]:!bottom-14 min-[2400px]:!max-w-[1280px]"
+      className="relative z-20 mx-auto mt-10 w-full max-w-[980px] lg:absolute lg:bottom-9 lg:left-1/2 lg:mt-0 lg:w-max lg:-translate-x-1/2 min-[1800px]:!bottom-12 min-[1800px]:!max-w-[1120px] min-[2400px]:!bottom-14 min-[2400px]:!max-w-[1280px]"
     >
       <div className="grid overflow-hidden rounded-[9px] border border-border/80 bg-white shadow-[0_7px_14px_rgba(0,0,0,0.20)] lg:grid-cols-3">
         {stats.map((stat, index) => {
@@ -2388,7 +2388,7 @@ function PatentStatsBar({ stats }: { stats: PatentStat[] }) {
             <article
               key={stat.label}
               className={cn(
-                "group/stat grid min-h-[64px] grid-cols-[32px_minmax(0,1fr)] items-center gap-2 px-3 py-2.5 lg:gap-3 lg:px-4 transition-shadow duration-500 hover:z-10 hover:shadow-[0_18px_42px_rgba(0,0,0,0.08)] [transition-timing-function:var(--ease-smooth)] min-[1800px]:!min-h-[76px] min-[1800px]:!grid-cols-[40px_minmax(0,1fr)] min-[1800px]:!px-5 min-[1800px]:!py-3 min-[2400px]:!min-h-[84px] min-[2400px]:!grid-cols-[44px_minmax(0,1fr)] min-[2400px]:!px-6",
+                "group/stat grid min-h-[64px] grid-cols-[32px_max-content] items-center justify-center gap-2 px-3 py-2.5 lg:gap-3 lg:px-4 transition-shadow duration-500 hover:z-10 hover:shadow-[0_18px_42px_rgba(0,0,0,0.08)] [transition-timing-function:var(--ease-smooth)] min-[1800px]:!min-h-[76px] min-[1800px]:!grid-cols-[40px_max-content] min-[1800px]:!px-5 min-[1800px]:!py-3 min-[2400px]:!min-h-[84px] min-[2400px]:!grid-cols-[44px_max-content] min-[2400px]:!px-6",
                 index < stats.length - 1 &&
                   "border-b border-border lg:border-b-0 lg:border-r",
               )}

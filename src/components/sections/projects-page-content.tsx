@@ -4380,7 +4380,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
     sort: {
       label: "Sort",
       options: [
-        { key: "default", label: "Default" },
+        { key: "default", label: "None" },
         { key: "date-desc", label: "Newest first" },
         { key: "date-asc", label: "Oldest first" },
         { key: "title-asc", label: "Title A-Z" },
@@ -4471,7 +4471,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
     sort: {
       label: "Trier",
       options: [
-        { key: "default", label: "Initial" },
+        { key: "default", label: "Aucun" },
         { key: "date-desc", label: "Plus récents" },
         { key: "date-asc", label: "Plus anciens" },
         { key: "title-asc", label: "Titre A-Z" },
@@ -4554,7 +4554,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
     sort: {
       label: "Sortieren",
       options: [
-        { key: "default", label: "Standard" },
+        { key: "default", label: "Keine" },
         { key: "date-desc", label: "Neueste zuerst" },
         { key: "date-asc", label: "Älteste zuerst" },
         { key: "title-asc", label: "Titel A-Z" },
@@ -4637,7 +4637,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
     sort: {
       label: "Ordenar",
       options: [
-        { key: "default", label: "Inicial" },
+        { key: "default", label: "Ninguno" },
         { key: "date-desc", label: "Más recientes" },
         { key: "date-asc", label: "Más antiguos" },
         { key: "title-asc", label: "Título A-Z" },
@@ -4720,7 +4720,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
     sort: {
       label: "정렬",
       options: [
-        { key: "default", label: "기본 순서" },
+        { key: "default", label: "없음" },
         { key: "date-desc", label: "최신순" },
         { key: "date-asc", label: "오래된순" },
         { key: "title-asc", label: "제목 A-Z" },
@@ -4803,7 +4803,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
     sort: {
       label: "排序",
       options: [
-        { key: "default", label: "默认顺序" },
+        { key: "default", label: "无" },
         { key: "date-desc", label: "最新优先" },
         { key: "date-asc", label: "最早优先" },
         { key: "title-asc", label: "标题 A-Z" },
@@ -4886,7 +4886,7 @@ const PROJECTS_COPY: Record<ProjectsLocale, ProjectsPageCopy> = {
     sort: {
       label: "並べ替える",
       options: [
-        { key: "default", label: "デフォルトの順序" },
+        { key: "default", label: "なし" },
         { key: "date-desc", label: "最新順" },
         { key: "date-asc", label: "古い順" },
         { key: "title-asc", label: "名前 A–Z" },
@@ -6107,7 +6107,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
     <div className={wrapperClassName}>
       <details data-project-sort-details className={sortClassName}>
         <summary
-          className="flex h-12 w-full cursor-pointer list-none items-center justify-between gap-2 rounded-[4px] border border-border bg-white px-4 text-[13px] font-extrabold text-foreground shadow-[0_2px_7px_rgba(0,0,0,0.05)] outline-none transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-0.5 hover:border-brand/35 focus-visible:ring-2 focus-visible:ring-brand/35 min-[520px]:px-2 md:px-3 xl:px-4 min-[1800px]:!h-[58px] min-[2400px]:!h-[64px] min-[2400px]:!gap-4 min-[2400px]:!rounded-[7px] min-[2400px]:!px-6 min-[2400px]:!text-[20px] [&::-webkit-details-marker]:hidden"
+          className="flex h-12 w-full cursor-pointer list-none items-center justify-between gap-2 rounded-[4px] border border-border bg-white px-4 text-[13px] font-extrabold text-foreground shadow-[0_2px_7px_rgba(0,0,0,0.05)] outline-none transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-0.5 hover:border-brand/35 focus-visible:ring-2 focus-visible:ring-brand/35 min-[520px]:px-2 md:px-3 xl:px-4 min-[1800px]:!h-[58px] min-[2400px]:!h-[64px] min-[2400px]:!gap-4 min-[2400px]:!rounded-[7px] min-[2400px]:!px-6 min-[1800px]:!text-[15px] min-[2400px]:!text-[17px] [&::-webkit-details-marker]:hidden"
           aria-label={copy.sort.label}
         >
           <span className="inline-flex min-w-0 items-center gap-2">
@@ -6117,7 +6117,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
             />
             <span className="shrink-0">{copy.sort.label}</span>
           </span>
-          <span className="max-w-[110px] truncate text-[12px] font-medium text-muted-foreground min-[520px]:max-w-[48px] md:max-w-[74px] xl:max-w-[110px] min-[2400px]:!max-w-[190px] min-[2400px]:!text-[18px]">
+          <span className="max-w-[110px] truncate text-[12px] font-medium text-muted-foreground min-[520px]:max-w-[48px] md:max-w-[74px] xl:max-w-[110px] min-[1800px]:!text-[14px] min-[2400px]:!max-w-[190px] min-[2400px]:!text-[15px]">
             {activeSortLabel}
           </span>
         </summary>
@@ -6130,7 +6130,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                 key={option.key}
                 type="button"
                 className={cn(
-                  "flex items-center justify-between gap-4 rounded-[5px] px-3 py-2 text-left text-foreground transition-colors hover:bg-brand/10 focus-visible:bg-brand/10 focus-visible:outline-none min-[2400px]:rounded-[8px] min-[2400px]:px-5 min-[2400px]:py-4 text-[13px] font-bold min-[2400px]:text-[20px]",
+                  "flex items-center justify-between gap-4 rounded-[5px] px-3 py-2 text-left text-foreground transition-colors hover:bg-brand/10 focus-visible:bg-brand/10 focus-visible:outline-none min-[2400px]:rounded-[8px] min-[2400px]:px-5 min-[2400px]:py-4 text-[13px] font-bold min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]",
                   active && "bg-brand text-white hover:bg-brand",
                 )}
                 aria-pressed={active}
@@ -6165,7 +6165,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
           value={searchQuery}
           onChange={(event) => setSearchQuery(event.target.value)}
           placeholder={copy.searchPlaceholder}
-          className="h-12 w-full rounded-[4px] border border-border bg-white pl-11 pr-4 text-foreground outline-none shadow-[0_2px_7px_rgba(0,0,0,0.05)] transition-[border-color,box-shadow] duration-300 placeholder:text-muted-foreground/75 focus:border-brand/50 focus:shadow-[0_10px_24px_rgba(0,0,0,0.08)] min-[1800px]:!h-[58px] min-[2400px]:!h-[64px] min-[2400px]:!rounded-[7px] min-[2400px]:!pl-[58px] min-[2400px]:!pr-6 text-[13px] font-medium min-[2400px]:!text-[20px]"
+          className="h-12 w-full rounded-[4px] border border-border bg-white pl-11 pr-4 text-foreground outline-none shadow-[0_2px_7px_rgba(0,0,0,0.05)] transition-[border-color,box-shadow] duration-300 placeholder:text-muted-foreground/75 focus:border-brand/50 focus:shadow-[0_10px_24px_rgba(0,0,0,0.08)] min-[1800px]:!h-[58px] min-[2400px]:!h-[64px] min-[2400px]:!rounded-[7px] min-[2400px]:!pl-[58px] min-[2400px]:!pr-6 text-[13px] font-medium min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]"
         />
       </label>
     </div>
@@ -6584,7 +6584,7 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
   return (
     <>
       <section
-        className="relative overflow-hidden border-b border-border bg-background pt-[132px] md:min-h-[590px] md:pt-[152px] min-[2400px]:!min-h-[1060px] min-[2400px]:!pt-[152px]"
+        className="relative overflow-hidden border-b border-border bg-background pt-[132px] md:max-[1180px]:min-h-[640px] md:pt-[152px] min-[1180px]:min-h-[590px] min-[2400px]:!min-h-[1060px] min-[2400px]:!pt-[152px]"
         aria-labelledby="projects-page-title"
       >
         <Image
@@ -6688,11 +6688,11 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
             <div className="min-w-0 shrink-0">
               <h2
                 id="selected-projects"
-                className="text-foreground text-[22px] font-extrabold leading-none min-[2400px]:!text-[40px]"
+                className="text-foreground text-[22px] font-extrabold leading-none min-[1800px]:!text-[28px] min-[2400px]:!text-[32px]"
               >
                 {copy.selectedTitle}
               </h2>
-              <p className="mt-3 text-muted-foreground min-[2400px]:!mt-5 text-[12px] font-medium min-[2400px]:!text-[20px]">
+              <p className="mt-3 text-muted-foreground min-[2400px]:!mt-5 text-[12px] font-medium min-[1800px]:!text-[14px] min-[2400px]:!text-[16px]">
                 {visibleProjects.length} / {copy.projects.length}{" "}
                 {copy.resultsLabel}
               </p>
@@ -6757,13 +6757,13 @@ export function ProjectsPageContent({ locale }: { locale: string }) {
                           !FilterIcon && "place-items-center text-center",
                         )}
                       >
-                        <strong className="line-clamp-2 text-[12px] font-extrabold leading-[1.05] sm:text-[11px] md:text-[12px] min-[2400px]:!text-[20px]">
+                        <strong className="line-clamp-2 text-[12px] font-extrabold leading-[1.1] min-[1800px]:!text-[14px] min-[2400px]:!text-[16px]">
                           {filter.label}
                         </strong>
                         {filter.key !== "all" && (
                           <span
                             className={cn(
-                              "mt-1 truncate text-muted-foreground min-[2400px]:!mt-2 text-[9px] font-medium leading-none min-[2400px]:!text-[15px]",
+                              "mt-1 truncate text-muted-foreground min-[2400px]:!mt-2 text-[9px] font-medium leading-none min-[1800px]:!text-[10px] min-[2400px]:!text-[12px]",
                               active && "text-white/85",
                             )}
                           >
@@ -7027,11 +7027,11 @@ function ProjectsStatsSection({
 }) {
   return (
     <section
-      className="relative z-20 pb-9 min-[1180px]:absolute min-[1180px]:inset-x-0 min-[1180px]:bottom-9 min-[1180px]:pb-0 min-[1800px]:!bottom-12 min-[2400px]:!bottom-14"
+      className="relative z-20 pb-9 md:absolute md:inset-x-0 md:bottom-9 md:pb-0 min-[1800px]:!bottom-12 min-[2400px]:!bottom-14"
       aria-label={ariaLabel}
     >
       <Container size="wide">
-        <div className="grid grid-cols-2 overflow-hidden rounded-[9px] border border-border/80 bg-white shadow-[0_7px_14px_rgba(0,0,0,0.20)] min-[1180px]:grid-cols-[0.8fr_1.1fr_1.2fr_1.35fr_1fr]">
+        <div className="grid grid-cols-2 overflow-hidden rounded-[9px] border border-border/80 bg-white shadow-[0_7px_14px_rgba(0,0,0,0.20)] md:max-[1180px]:grid-cols-5 min-[1180px]:grid-cols-[0.8fr_1.1fr_1.2fr_1.35fr_1fr]">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
 
@@ -7041,28 +7041,28 @@ function ProjectsStatsSection({
                 key={`${index}-${stat.label}`}
                 delay={index * 0.05}
                 className={cn(
-                  "group/stat relative flex min-h-[116px] transform-gpu flex-col items-center justify-center gap-1 bg-white px-4 py-2.5 text-center transition-shadow duration-500 hover:z-10 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] sm:min-h-[92px] sm:px-7 sm:py-1.5 min-[1180px]:grid min-[1180px]:min-h-[76px] min-[1180px]:grid-cols-[34px_minmax(0,1fr)] min-[1180px]:items-center min-[1180px]:gap-3 min-[1180px]:py-2 min-[1180px]:!pl-3 min-[1180px]:!pr-3 min-[1180px]:text-left min-[2400px]:!min-h-[90px] min-[2400px]:!grid-cols-[48px_1fr] min-[2400px]:!gap-4 min-[2400px]:!px-5 min-[2400px]:!py-3 motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]",
+                  "group/stat relative flex min-h-[116px] transform-gpu flex-col items-center justify-center gap-1 bg-white px-4 py-2.5 text-center transition-shadow duration-500 hover:z-10 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] sm:min-h-[92px] sm:px-7 sm:py-1.5 md:max-[1180px]:min-h-[128px] md:max-[1180px]:gap-2 md:max-[1180px]:px-2 md:max-[1180px]:py-3 min-[1180px]:grid min-[1180px]:min-h-[76px] min-[1180px]:grid-cols-[34px_minmax(0,1fr)] min-[1180px]:items-center min-[1180px]:gap-3 min-[1180px]:!py-2 min-[1180px]:!pl-3 min-[1180px]:!pr-3 min-[1180px]:text-left min-[2400px]:!min-h-[90px] min-[2400px]:!grid-cols-[48px_1fr] min-[2400px]:!gap-4 min-[2400px]:!px-5 min-[2400px]:!py-3 motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]",
                   index % 2 === 0 &&
                     index < stats.length - 1 &&
-                    "border-r border-border min-[1180px]:border-r-0",
+                    "border-r border-border md:border-r-0",
                   index < stats.length - 1 &&
-                    "border-b border-border min-[1180px]:border-b-0",
+                    "border-b border-border md:border-b-0",
                   index < stats.length - 1 &&
-                    "min-[1180px]:border-r min-[1180px]:border-border",
+                    "md:border-r md:border-border",
                   index === stats.length - 1 &&
-                    "col-span-2 min-[1180px]:col-span-1",
+                    "col-span-2 md:col-span-1",
                 )}
               >
                 <Icon
                   aria-hidden="true"
                   strokeWidth={1.65}
-                  className="h-[36px] w-[40px] text-brand transition-transform duration-500 group-hover/stat:-translate-y-1 sm:h-[40px] sm:w-[44px] min-[1180px]:relative min-[1180px]:h-[30px] min-[1180px]:w-[32px] min-[1180px]:justify-self-start min-[2400px]:!h-[46px] min-[2400px]:!w-[48px] motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]"
+                  className="h-[36px] w-[40px] text-brand transition-transform duration-500 group-hover/stat:-translate-y-1 sm:h-[40px] sm:w-[44px] md:max-[1180px]:h-[28px] md:max-[1180px]:w-[30px] min-[1180px]:relative min-[1180px]:h-[30px] min-[1180px]:w-[32px] min-[1180px]:justify-self-start min-[2400px]:!h-[46px] min-[2400px]:!w-[48px] motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]"
                 />
-                <div className="grid w-full min-w-0 max-w-full grid-rows-[44px_auto] gap-y-1 min-[1180px]:grid-rows-[22px_auto] min-[2400px]:!grid-rows-[28px_auto]">
-                  <strong className={cn("block max-w-full text-[18px] font-extrabold leading-[1.2] text-foreground sm:text-[19px] min-[1180px]:text-[17px] min-[1180px]:whitespace-nowrap 2xl:text-[18px] min-[2400px]:!text-[22px]", index === 2 ? "whitespace-nowrap" : "break-words [hyphens:auto]")}>
+                <div className="grid w-full min-w-0 max-w-full grid-rows-[44px_auto] gap-y-1 md:max-[1180px]:grid-rows-[34px_auto] min-[1180px]:grid-rows-[22px_auto] min-[2400px]:!grid-rows-[28px_auto]">
+                  <strong className={cn("block max-w-full text-[18px] font-extrabold leading-[1.2] text-foreground sm:text-[19px] md:max-[1180px]:text-[14px] min-[1180px]:text-[17px] min-[1180px]:whitespace-nowrap 2xl:text-[18px] min-[2400px]:!text-[22px]", index === 2 ? "whitespace-nowrap" : "break-words [hyphens:auto]")}>
                     {stat.value}
                   </strong>
-                  {stat.label && <span className="block max-w-full break-words text-muted-foreground [hyphens:auto] text-[12px] font-medium leading-tight min-[1180px]:text-[11px] min-[1180px]:leading-[14px] 2xl:text-[12px] min-[2400px]:!text-[15px] min-[2400px]:!leading-[17px]">
+                  {stat.label && <span className="block max-w-full break-words text-muted-foreground [hyphens:auto] text-[12px] font-medium leading-tight md:max-[1180px]:text-[11px] min-[1180px]:text-[11px] min-[1180px]:leading-[14px] 2xl:text-[12px] min-[2400px]:!text-[15px] min-[2400px]:!leading-[17px]">
                     {stat.label}
                     {stat.detail ? ` ${stat.detail}` : null}
                   </span>}
