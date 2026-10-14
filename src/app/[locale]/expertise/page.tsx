@@ -115,7 +115,7 @@ function ExpertiseHero() {
 
   return (
     <section
-      className="relative overflow-visible bg-background pb-[68px] pt-[132px] sm:pb-[55px] md:min-h-[620px] md:pb-[60px] md:pt-[152px] min-[1200px]:min-h-[403px] xl:min-h-[344.5px] xl:pb-[30px] min-[1800px]:!min-h-[441px] min-[1800px]:!pb-[78px] min-[2400px]:!min-h-[579.5px] min-[2400px]:!pb-[104px] min-[2400px]:!pt-[152px]"
+      className="relative overflow-visible bg-background pb-[68px] pt-[132px] sm:pb-[55px] md:min-h-[620px] md:pb-[60px] md:pt-[152px] min-[1200px]:min-h-[403px] xl:min-h-[362.05px] xl:pb-[30px] min-[1800px]:!min-h-[485.1px] min-[1800px]:!pb-[78px] min-[2400px]:!min-h-[646.55px] min-[2400px]:!pb-[104px] min-[2400px]:!pt-[152px]"
       aria-labelledby="expertise-hero-title"
     >
       <Image

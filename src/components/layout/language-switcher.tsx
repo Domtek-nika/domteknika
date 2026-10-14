@@ -16,6 +16,7 @@ import type { KeyboardEvent as ReactKeyboardEvent } from "react";
 import { locales, type Locale } from "@/i18n/routing";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+import styles from "./language-switcher.module.css";
 
 const LANGUAGE_NAMES: Record<Locale, string> = {
   fr: "Français",
@@ -47,6 +48,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   const triggerRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
+  const [closing, setClosing] = useState(false);
   const [menuPosition, setMenuPosition] = useState<{
     left: number;
     minWidth: number;
@@ -54,6 +56,21 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   } | null>(null);
   const [isPending, startTransition] = useTransition();
   const menuReady = menuPosition !== null;
+
+  const closeMenu = useCallback(() => {
+    setClosing(
+      menuRef.current !== null
+      && !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+    );
+    setOpen(false);
+  }, []);
+
+  useEffect(() => {
+    if (!closing) return;
+    // Also remove the inert menu if an animation-end event is interrupted.
+    const timeout = window.setTimeout(() => setClosing(false), 240);
+    return () => window.clearTimeout(timeout);
+  }, [closing]);
 
   const updateMenuPosition = useCallback(() => {
     const rect = rootRef.current?.getBoundingClientRect();
@@ -82,12 +99,12 @@ export function LanguageSwitcher({ className }: { className?: string }) {
       if (rootRef.current?.contains(target) || menuRef.current?.contains(target)) {
         return;
       }
-      setOpen(false);
+      closeMenu();
     };
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         event.preventDefault();
-        setOpen(false);
+        closeMenu();
         triggerRef.current?.focus({ preventScroll: true });
       }
     };
@@ -103,7 +120,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
       window.removeEventListener("resize", updateMenuPosition);
       window.removeEventListener("scroll", updateMenuPosition, true);
     };
-  }, [open, updateMenuPosition]);
+  }, [open, updateMenuPosition, closeMenu]);
 
   useEffect(() => {
     if (!open || !menuReady) return;
@@ -112,7 +129,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
 
   function handleMenuKeyDown(event: ReactKeyboardEvent<HTMLDivElement>) {
     if (event.key === "Tab") {
-      setOpen(false);
+      closeMenu();
       triggerRef.current?.focus({ preventScroll: true });
       return;
     }
@@ -130,7 +147,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   }
 
   function switchTo(next: Locale) {
-    setOpen(false);
+    closeMenu();
     triggerRef.current?.focus({ preventScroll: true });
     if (next === current) return;
     try {
@@ -150,14 +167,22 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   }
 
   const menu =
-    typeof document !== "undefined" && open && menuPosition
+    typeof document !== "undefined" && (open || closing) && menuPosition
       ? createPortal(
           <div
             ref={menuRef}
             id={menuId}
             role="menu"
+            aria-hidden={!open}
+            inert={!open}
             onKeyDown={handleMenuKeyDown}
-            className="fixed z-[950] rounded-[10px] border border-white/80 bg-white/90 p-1 shadow-[0_16px_34px_rgba(0,0,0,0.14)] backdrop-blur-2xl motion-safe:animate-in motion-safe:fade-in-0 motion-safe:slide-in-from-top-1 motion-safe:duration-200 motion-reduce:animate-none [--tw-ease:var(--ease-smooth)] min-[1800px]:!rounded-[12px] min-[1800px]:!p-1.5"
+            onAnimationEnd={(event) => {
+              if (event.target === event.currentTarget && !open) setClosing(false);
+            }}
+            className={cn(
+              "fixed z-[950] rounded-[10px] border border-white/80 bg-white/90 p-1 shadow-[0_16px_34px_rgba(0,0,0,0.14)] backdrop-blur-2xl min-[1800px]:!rounded-[12px] min-[1800px]:!p-1.5",
+              open ? styles.enter : styles.exit,
+            )}
             style={{
               left: menuPosition.left,
               minWidth: menuPosition.minWidth,
@@ -199,10 +224,17 @@ export function LanguageSwitcher({ className }: { className?: string }) {
       <button
         ref={triggerRef}
         type="button"
-        onClick={() => setOpen((value) => !value)}
+        onClick={() => {
+          if (open) closeMenu();
+          else {
+            setClosing(false);
+            setOpen(true);
+          }
+        }}
         onKeyDown={(event) => {
           if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
           event.preventDefault();
+          setClosing(false);
           setOpen(true);
         }}
         disabled={isPending}
