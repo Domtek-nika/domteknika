@@ -19,7 +19,7 @@ export function Footer() {
   const nav = useTranslations("Nav");
 
   return (
-    <footer className="border-t border-brand/35 bg-background py-8 sm:py-10 lg:py-14 min-[1800px]:!py-16 min-[2400px]:!py-16">
+    <footer className="border-t border-brand/35 bg-background py-8 sm:py-10 lg:py-14 min-[1800px]:!py-16 min-[2400px]:!py-16" style={{ viewTransitionName: "persistent-footer" }}>
       <Container size="wide">
         <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:gap-x-10 lg:grid-cols-[1.25fr_1fr_1fr_1fr] lg:gap-10 min-[1800px]:!gap-16 min-[2400px]:!gap-20">
           <div className="col-span-2 grid grid-cols-[96px_minmax(0,1fr)] items-start gap-4 lg:col-span-1 lg:block">

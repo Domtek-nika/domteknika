@@ -230,7 +230,7 @@ export function Navbar() {
   const contactBubbleVisible = contactBubbleReady && mobileNavVisible && !mobileOpen;
 
   return (
-    <header className="fixed inset-x-0 top-0 z-[900]">
+    <header className="fixed inset-x-0 top-0 z-[900]" style={{ viewTransitionName: "persistent-nav" }}>
       <nav
         className="relative isolate mx-auto hidden h-[80px] max-w-[1180px] rounded-b-[50px] min-[810px]:block min-[1800px]:h-[84px] min-[1800px]:max-w-[1480px] min-[2400px]:h-[92px] min-[2400px]:max-w-[1600px]"
         aria-label={footerT("navigationLabel")}

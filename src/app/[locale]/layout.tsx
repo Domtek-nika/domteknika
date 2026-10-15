@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import type {} from "react/canary";
+import { ViewTransition } from "react";
 import "../globals.css";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -78,7 +80,13 @@ export default async function LocaleLayout({
           <SmoothScrollProvider>
             <RouteRecovery />
             <Navbar />
-            <main className="relative">{children}</main>
+            <ViewTransition
+              name="page-content"
+              default="none"
+              update={{ "page-navigation": "page-fade", default: "none" }}
+            >
+              <main className="relative">{children}</main>
+            </ViewTransition>
             <Footer />
           </SmoothScrollProvider>
         </NextIntlClientProvider>

@@ -903,7 +903,7 @@ export function OurStoryPageContent({ locale }: { locale: string }) {
 
   const openProject = useCallback(
     (projectId: string) => {
-      router.push(`/projects/${projectId}`);
+      router.push(`/projects/${projectId}`, { transitionTypes: ["page-navigation"] });
     },
     [router],
   );
