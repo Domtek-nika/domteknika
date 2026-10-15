@@ -906,7 +906,7 @@ export function OurStoryPageContent({ locale }: { locale: string }) {
   const openProject = useCallback(
     (projectId: string) => {
       startNavigation(() => {
-        router.push(`/projects/${projectId}`, { transitionTypes: ["page-navigation"] });
+        router.push(`/projects/${projectId}`);
       });
     },
     [router],

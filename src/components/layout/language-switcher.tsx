@@ -163,7 +163,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
       // Language navigation must still work when browser storage is unavailable.
     }
     startTransition(() => {
-      router.push(`${pathname}${window.location.search}${window.location.hash}`, { locale: next, scroll: false, transitionTypes: ["page-navigation"] });
+      router.push(`${pathname}${window.location.search}${window.location.hash}`, { locale: next, scroll: false });
     });
   }
 

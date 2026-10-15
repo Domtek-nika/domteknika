@@ -9,16 +9,14 @@ import { routing } from "./routing";
  * ones from `next/navigation` so locale prefixes are handled automatically.
  */
 const navigation = createNavigation(routing);
-const pageNavigationTypes = ["page-navigation"];
 
 export const { redirect, usePathname, useRouter, getPathname } = navigation;
 
 export function Link(props: ComponentProps<typeof navigation.Link>) {
-  // Tag actual navigation so filters and background updates do not fade the page.
   const { children, ...linkProps } = props;
   return createElement(
     navigation.Link,
-    { ...linkProps, transitionTypes: props.transitionTypes ?? pageNavigationTypes },
+    linkProps,
     createElement(Fragment, null, children, createElement(LinkNavigationProgress)),
   );
 }

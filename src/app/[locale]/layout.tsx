@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import type {} from "react/canary";
-import { ViewTransition } from "react";
 import "../globals.css";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -9,6 +7,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { domtekSans } from "@/app/domtek-font";
 import { Navbar } from "@/components/layout/navbar";
+import { PageContent } from "@/components/layout/page-content";
 import { Footer } from "@/components/layout/footer";
 import { AnalyticsConsent } from "@/components/providers/analytics-consent";
 import { RouteRecovery } from "@/components/providers/route-recovery";
@@ -80,13 +79,7 @@ export default async function LocaleLayout({
           <SmoothScrollProvider>
             <RouteRecovery />
             <Navbar />
-            <ViewTransition
-              name="page-content"
-              default="none"
-              update={{ "page-navigation": "page-fade", default: "none" }}
-            >
-              <main className="relative bg-background">{children}</main>
-            </ViewTransition>
+            <PageContent>{children}</PageContent>
             <Footer />
           </SmoothScrollProvider>
         </NextIntlClientProvider>
