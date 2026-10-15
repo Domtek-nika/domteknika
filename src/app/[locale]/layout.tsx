@@ -85,7 +85,7 @@ export default async function LocaleLayout({
               default="none"
               update={{ "page-navigation": "page-fade", default: "none" }}
             >
-              <main className="relative">{children}</main>
+              <main className="relative bg-background">{children}</main>
             </ViewTransition>
             <Footer />
           </SmoothScrollProvider>

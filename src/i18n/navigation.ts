@@ -1,5 +1,6 @@
 import { createNavigation } from "next-intl/navigation";
-import { createElement, type ComponentProps } from "react";
+import { createElement, Fragment, type ComponentProps } from "react";
+import { LinkNavigationProgress } from "@/components/layout/navigation-progress";
 import { routing } from "./routing";
 
 /**
@@ -14,8 +15,10 @@ export const { redirect, usePathname, useRouter, getPathname } = navigation;
 
 export function Link(props: ComponentProps<typeof navigation.Link>) {
   // Tag actual navigation so filters and background updates do not fade the page.
-  return createElement(navigation.Link, {
-    ...props,
-    transitionTypes: props.transitionTypes ?? pageNavigationTypes,
-  });
+  const { children, ...linkProps } = props;
+  return createElement(
+    navigation.Link,
+    { ...linkProps, transitionTypes: props.transitionTypes ?? pageNavigationTypes },
+    createElement(Fragment, null, children, createElement(LinkNavigationProgress)),
+  );
 }

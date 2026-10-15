@@ -151,19 +151,25 @@
   }
 }
 
-/* Keep route changes brief; preserve the App Router tree and scroll restoration. */
-:root {
-  --duration-exit: 100ms;
-  --duration-enter: 180ms;
-  --duration-move: 280ms;
+/* Keep the old page underneath until the ready destination has fully appeared.
+   No blank frame, blur, or interpolation between different page heights. */
+::view-transition-group(.page-fade) {
+  animation: none;
 }
 
 ::view-transition-old(.page-fade) {
-  animation: var(--duration-exit) ease-in fade reverse;
+  animation: none;
+  opacity: 1;
 }
 
 ::view-transition-new(.page-fade) {
-  animation: var(--duration-enter) ease-out var(--duration-exit) both fade;
+  animation: 220ms cubic-bezier(0.22, 1, 0.36, 1) both page-reveal;
+  mix-blend-mode: normal;
+}
+
+@keyframes page-reveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 ::view-transition-old(root),
@@ -185,4 +191,43 @@
 
 ::view-transition {
   pointer-events: none;
+}
+
+/* Pending UI lives outside the links, so cards and buttons keep their geometry.
+   Fast cached routes never show it; slow routes keep the current page usable. */
+.navigation-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 2000;
+  height: 3px;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  background: color-mix(in srgb, var(--brand) 12%, transparent);
+  animation: page-reveal 140ms ease-out 160ms both;
+}
+
+.navigation-progress-bar {
+  display: block;
+  width: 35%;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--brand);
+  animation: navigation-pending 1.2s ease-in-out infinite;
+}
+
+@keyframes navigation-pending {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(386%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navigation-progress {
+    animation-duration: 0s;
+  }
+
+  .navigation-progress-bar {
+    width: 100%;
+    animation: none;
+  }
 }

@@ -17,6 +17,7 @@ import { locales, type Locale } from "@/i18n/routing";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import styles from "./language-switcher.module.css";
+import { NavigationProgress } from "./navigation-progress";
 
 const LANGUAGE_NAMES: Record<Locale, string> = {
   fr: "Français",
@@ -254,6 +255,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         />
       </button>
       {menu}
+      <NavigationProgress pending={isPending} />
     </div>
   );
 }

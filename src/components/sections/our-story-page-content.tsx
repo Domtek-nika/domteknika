@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { useLocale } from "next-intl";
 import { ArrowUpRight, X } from "lucide-react";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, useTransition } from "react";
+import { NavigationProgress } from "@/components/layout/navigation-progress";
 
 import { Container } from "@/components/layout/container";
 import { LazyContactMap } from "@/components/sections/lazy-contact-map";
@@ -899,11 +900,14 @@ function isStoryLocale(locale: string): locale is StoryLocale {
 export function OurStoryPageContent({ locale }: { locale: string }) {
   const copy = getOurStoryCopy(locale);
   const router = useRouter();
+  const [isNavigating, startNavigation] = useTransition();
   const [locationMapOpen, setLocationMapOpen] = useState(false);
 
   const openProject = useCallback(
     (projectId: string) => {
-      router.push(`/projects/${projectId}`, { transitionTypes: ["page-navigation"] });
+      startNavigation(() => {
+        router.push(`/projects/${projectId}`, { transitionTypes: ["page-navigation"] });
+      });
     },
     [router],
   );
@@ -913,6 +917,7 @@ export function OurStoryPageContent({ locale }: { locale: string }) {
       className="relative overflow-hidden bg-background pt-[132px] md:pt-[152px]"
       aria-labelledby="our-story-title"
     >
+      <NavigationProgress pending={isNavigating} />
       <Image
         src="/assets/our-story/background/technical-front-flange.png"
         alt=""
