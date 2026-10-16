@@ -1,8 +1,9 @@
 "use client";
 
-import { ChevronLeft, ChevronRight, Plus, Search, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Search, X } from "lucide-react";
 import { useId, useMemo, useRef, useState } from "react";
 
+import { FaqAnswer } from "./faq-answer";
 import styles from "./faq-search.module.css";
 
 export type FaqQuestion = {
@@ -38,7 +39,7 @@ function normalizeSearch(value: string) {
 }
 
 const focusStyle = "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand";
-const buttonMotionStyle = "cursor-pointer transition-[translate,border-color,box-shadow,background-color,color] duration-500 motion-safe:enabled:hover:-translate-y-1 motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]";
+const buttonMotionStyle = "cursor-pointer transition-[translate,scale,border-color,box-shadow,background-color,color] duration-500 motion-safe:enabled:hover:-translate-y-1 motion-safe:enabled:active:scale-[0.98] motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]";
 const inactiveButtonStyle = "border-border bg-white text-foreground shadow-[0_2px_6px_rgba(0,0,0,0.05)] enabled:hover:border-brand/35 enabled:hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)] active:border-brand focus-visible:border-brand";
 const questionsPerPage = 7;
 
@@ -145,20 +146,15 @@ export function FaqSearch({
               {/* Keep the answers in the initial HTML while pagination still
                   presents only seven questions at a time. */}
               {results.map((item, index) => (
-                <details
+                <FaqAnswer
                   key={item.id}
                   hidden={index < firstResult || index >= firstResult + questionsPerPage}
-                  className={`group border-b border-border ${styles.question}`}
+                  answer={item.answer}
+                  focusClassName={focusStyle}
                 >
-                  <summary className={`flex min-h-16 cursor-pointer list-none items-center justify-between gap-5 py-5 [&::-webkit-details-marker]:hidden text-[16px] font-bold leading-relaxed ${focusStyle}`}>
-                    <span>
-                      {showTopics && activeTopic === "all" && !singleTopic && <span className="mb-1.5 block text-brand text-[11px] font-extrabold">{item.topicLabel}</span>}
-                      {item.question}
-                    </span>
-                    <Plus className="size-5 shrink-0 text-brand transition-transform duration-300 group-open:rotate-45 motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)]" aria-hidden />
-                  </summary>
-                  <p className="max-w-3xl pb-6 pr-7 text-muted-foreground text-[14px] font-medium leading-[1.6]">{item.answer}</p>
-                </details>
+                  {showTopics && activeTopic === "all" && !singleTopic && <span className="mb-1.5 block text-brand text-[11px] font-extrabold">{item.topicLabel}</span>}
+                  {item.question}
+                </FaqAnswer>
               ))}
             </div>
           </div>
