@@ -11,6 +11,11 @@ import { getProjectBySlug } from "@/data/projects";
 import { getServiceCopy } from "@/data/service-copy";
 import { getService, getServiceProjectScopeIndex, services } from "@/data/services";
 import { Link } from "@/i18n/navigation";
+import {
+  expertiseDrawingBackground,
+  expertiseDrawingFooter,
+  expertiseDrawingMargin,
+} from "@/lib/decorative-assets";
 import type { Locale } from "@/i18n/routing";
 import { buildPageMetadata, localizedUrl, SITE_URL } from "@/lib/seo";
 
@@ -92,7 +97,7 @@ export default async function ServicePage({ params }: Props) {
           aria-hidden
         >
           <Image
-            src="/assets/expertise-page/technical-drawing-margin.svg"
+            src={expertiseDrawingMargin}
             alt=""
             width={360}
             height={700}
@@ -102,7 +107,7 @@ export default async function ServicePage({ params }: Props) {
           />
         </div>
         <Image
-          src="/assets/expertise-page/technical-drawing-background.svg"
+          src={expertiseDrawingBackground}
           alt=""
           width={1351}
           height={421}
@@ -125,7 +130,7 @@ export default async function ServicePage({ params }: Props) {
           aria-hidden
         >
           <Image
-            src="/assets/expertise-page/technical-drawing-footer.svg"
+            src={expertiseDrawingFooter}
             alt=""
             fill
             unoptimized

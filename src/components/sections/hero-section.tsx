@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
+import { DesktopHeroImage } from "@/components/ui/desktop-hero-image";
 import { Link } from "@/i18n/navigation";
 
 function LeftHeroArrow({ className }: { className: string }) {
@@ -81,12 +82,8 @@ export function HeroSection() {
               "linear-gradient(to bottom, black 0%, black 82%, rgb(0 0 0 / 0.42) 92%, transparent 100%)",
           }}
         >
-          <Image
+          <DesktopHeroImage
             src="/assets/rv01-hero.png"
-            alt=""
-            fill
-            loading="lazy"
-            fetchPriority="high"
             sizes="(min-width: 2300px) 1360px, (min-width: 1800px) 1280px, (min-width: 1406px) 1040px, (min-width: 768px) 74vw, 1px"
             className="object-contain object-bottom"
           />

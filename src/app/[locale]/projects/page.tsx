@@ -6,6 +6,7 @@ import {
   ProjectsPageCta,
 } from "@/components/sections/projects-page-content";
 import { buildPageMetadata } from "@/lib/seo";
+import { getPreparedProjectsPageCopy } from "@/data/project-page-copy";
 
 export async function generateMetadata({
   params,
@@ -30,11 +31,12 @@ export default async function ProjectsPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const copy = getPreparedProjectsPageCopy(locale);
 
   return (
     <>
-      <ProjectsPageContent locale={locale} />
-      <ProjectsPageCta locale={locale} />
+      <ProjectsPageContent locale={locale} copy={copy} />
+      <ProjectsPageCta copy={copy.cta} />
     </>
   );
 }

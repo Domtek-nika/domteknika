@@ -19,6 +19,7 @@ import {
   ZoomOut,
 } from "lucide-react";
 import Image from "next/image";
+import { patentHeroSketch } from "@/lib/decorative-assets";
 import { useTranslations } from "next-intl";
 import {
   type CSSProperties,
@@ -87,7 +88,6 @@ type PatentDialogCopy = {
   unavailable: string;
 };
 
-const ASSET_BASE = "/assets/patent-page";
 const MODAL_TRANSITION_MS = 320;
 const MODAL_CLOSE_FALLBACK_MS = 360;
 
@@ -976,7 +976,7 @@ export function PatentDialog({
               />
             ) : (
               <Image
-                src={`${ASSET_BASE}/hero-sketch.png`}
+                src={patentHeroSketch}
                 alt=""
                 fill
                 sizes="(max-width: 768px) 100vw, 390px"

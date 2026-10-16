@@ -1,10 +1,8 @@
 import { writeFile } from "node:fs/promises";
 import path from "node:path";
 
-import {
-  getProjectsForLocale,
-  type Project,
-} from "../src/components/sections/projects-page-content";
+import { getProjectsForLocale } from "../src/data/project-page-copy";
+import type { Project } from "../src/data/project-types";
 
 const LOCALES = ["en", "fr", "de", "es", "ko", "zh", "ja"] as const;
 const outputPath = path.join(

@@ -28,6 +28,12 @@ import { Link } from "@/i18n/navigation";
 import { getServicePath } from "@/data/services";
 import { buildPageMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
+import {
+  expertiseDrawingBackground,
+  expertiseDrawingFooter,
+  expertiseDrawingMargin,
+  expertiseTeamBackground,
+} from "@/lib/decorative-assets";
 
 function RunningPersonIcon({ className }: { className?: string }) {
   return (
@@ -119,7 +125,7 @@ function ExpertiseHero() {
       aria-labelledby="expertise-hero-title"
     >
       <Image
-        src="/assets/expertise-page/technical-drawing-background.svg"
+        src={expertiseDrawingBackground}
         alt=""
         width={1351}
         height={421}
@@ -142,7 +148,7 @@ function ExpertiseHero() {
         aria-hidden
       >
         <Image
-          src="/assets/expertise-page/technical-drawing-margin.svg"
+          src={expertiseDrawingMargin}
           alt=""
           width={360}
           height={700}
@@ -186,7 +192,7 @@ function ExpertiseHero() {
                 aria-hidden
               >
                 <Image
-                  src="/assets/expertise-page/team-pencil-background.svg"
+                  src={expertiseTeamBackground}
                   alt=""
                   fill
                   unoptimized
@@ -203,7 +209,7 @@ function ExpertiseHero() {
                 aria-hidden
               >
                 <Image
-                  src="/assets/expertise-page/technical-drawing-footer.svg"
+                  src={expertiseDrawingFooter}
                   alt=""
                   fill
                   unoptimized

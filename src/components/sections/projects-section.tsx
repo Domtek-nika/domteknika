@@ -20,7 +20,7 @@ import { getProjectCardImageFitClass } from "@/lib/project-card-image";
 import { cn } from "@/lib/utils";
 
 const importProjectDetailsDialog = () =>
-  import("@/components/sections/projects-page-content");
+  import("@/components/sections/home-project-details-dialog");
 let projectDetailsDialogPromise: ReturnType<
   typeof importProjectDetailsDialog
 > | null = null;

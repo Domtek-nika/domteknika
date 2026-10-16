@@ -3,7 +3,7 @@ import path from "node:path";
 import ts from "typescript";
 
 const LOCALES = ["en", "fr", "de", "es", "ko", "zh", "ja"];
-const PROJECTS_SOURCE = "src/components/sections/projects-page-content.tsx";
+const PROJECTS_SOURCE = "src/data/project-page-copy.ts";
 const PATENTS_SOURCE = "src/data/patents.ts";
 const PATENT_TITLES = "src/data/patent-titles.json";
 const PATENT_LOCALIZATIONS = "src/data/patent-localizations.json";

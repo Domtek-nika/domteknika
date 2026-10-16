@@ -42,13 +42,11 @@ import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/providers/reveal";
 import { RelatedProjectCard } from "@/components/sections/related-project-card";
 import { Button } from "@/components/ui/button";
-import PATENT_LOCALIZATIONS from "@/data/patent-localizations.json";
-import PATENT_TITLES from "@/data/patent-titles.json";
 import type { ProjectLink } from "@/data/project-types";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+import { patentHeroSketch } from "@/lib/decorative-assets";
 import {
-  PATENTS,
   PATENT_STATS,
   type PatentAsset,
   type PatentDetail,
@@ -61,13 +59,6 @@ import {
 type PatentLocale = "en" | "fr" | "de" | "es" | "ko" | "zh" | "ja";
 type FilterKey = "all" | PatentFilterKey;
 type PatentSortKey = "date-desc" | "date-asc" | "publication" | "title";
-type PatentTranslation = Pick<PatentRecord, "abstract">;
-
-const PATENT_TRANSLATIONS = PATENT_LOCALIZATIONS as Record<
-  Exclude<PatentLocale, "en">,
-  Record<string, PatentTranslation>
->;
-
 type PatentItem = PatentRecord;
 
 type PanelRect = {
@@ -1117,7 +1108,7 @@ function getPatentCategoryLabel(
 }
 
 function getFilterCount(filter: FilterKey) {
-  if (filter === "all") return PATENTS.length;
+  if (filter === "all") return PATENT_STATS.total;
   return PATENT_STATS.byCategory[filter] ?? 0;
 }
 
@@ -1187,30 +1178,16 @@ function sortPatents(
 export function PatentPageContent({
   linkedProjectsByPatent,
   locale,
+  localizedPatents,
 }: {
   linkedProjectsByPatent: Record<string, ProjectLink[]>;
   locale: string;
+  localizedPatents: PatentRecord[];
 }) {
   const resolvedLocale = resolveLocale(locale);
   const copy = COPY[resolvedLocale];
   const stats = STATS[resolvedLocale];
   const filters = FILTERS[resolvedLocale];
-  const localizedPatents = useMemo(() => {
-    const translations = resolvedLocale === "en"
-      ? undefined
-      : PATENT_TRANSLATIONS[resolvedLocale as Exclude<PatentLocale, "en">];
-    const titles = PATENT_TITLES[resolvedLocale] as Record<string, string>;
-
-    return PATENTS.map((patent) => {
-      const translation = translations?.[patent.id];
-
-      return {
-        ...patent,
-        title: titles[patent.id] || patent.title,
-        abstract: translation?.abstract || patent.abstract,
-      };
-    });
-  }, [resolvedLocale]);
   const [activeFilter, setActiveFilter] = useState<FilterKey>("all");
   const [sortKey, setSortKey] = useState<PatentSortKey>("date-desc");
   const [searchTerm, setSearchTerm] = useState("");
@@ -1836,7 +1813,7 @@ export function PatentPageContent({
         aria-labelledby="patent-page-title"
       >
         <Image
-          src={`${ASSET_BASE}/hero-sketch.png`}
+          src={patentHeroSketch}
           alt=""
           width={897}
           height={738}
@@ -1893,7 +1870,7 @@ export function PatentPageContent({
                 {copy.archiveTitle}
               </h2>
               <p className="mt-3 text-muted-foreground text-[12px] font-medium min-[1800px]:!text-[14px] min-[2400px]:!text-[16px]">
-                {visiblePatents.length} / {PATENTS.length} {copy.resultsLabel}
+                {visiblePatents.length} / {localizedPatents.length} {copy.resultsLabel}
               </p>
             </div>
             {renderPatentControls({
@@ -2093,7 +2070,7 @@ export function PatentPageContent({
                   />
                 ) : (
                   <Image
-                    src={`${ASSET_BASE}/hero-sketch.png`}
+                    src={patentHeroSketch}
                     alt=""
                     fill
                     sizes="(max-width: 768px) 100vw, 390px"
