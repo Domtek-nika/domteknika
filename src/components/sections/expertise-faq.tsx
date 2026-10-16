@@ -44,7 +44,7 @@ export async function ExpertiseFaq({ locale }: { locale: string }) {
   ];
 
   return (
-    <section id="expertise-faq" aria-labelledby="expertise-faq-title" className="bg-background pb-20 pt-4 md:pb-24">
+    <section id="expertise-faq" aria-labelledby="expertise-faq-title" className="bg-background pb-8 pt-12 md:pt-16">
       <Container size="wide">
         <div className="grid gap-8 lg:grid-cols-[0.75fr_1.45fr] lg:gap-12">
           <Reveal initiallyHidden>

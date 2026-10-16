@@ -77,7 +77,9 @@ export function FaqSearch({
   const currentPage = Math.min(page, Math.max(0, pageCount - 1));
   const firstResult = currentPage * questionsPerPage;
   const visibleResults = results.slice(firstResult, firstResult + questionsPerPage);
-  const singleTopic = visibleResults.every((item) => item.topic === visibleResults[0]?.topic);
+  const resultPages = Array.from({ length: pageCount }, (_, index) =>
+    results.slice(index * questionsPerPage, (index + 1) * questionsPerPage),
+  );
   const count = formatNumber.format(results.length);
   const resultLabel = results.length > questionsPerPage
     ? (visibleResults.length === 1 ? labels.resultRangeSingle : labels.resultRange)
@@ -140,23 +142,29 @@ export function FaqSearch({
 
       {results.length > 0 ? (
         <div id={resultsId}>
-          <div key={`${activeTopic}:${currentPage}`} className={styles.results}>
-            {showTopics && activeTopic === "all" && singleTopic && <p className="mb-3 text-brand text-[11px] font-extrabold">{visibleResults[0].topicLabel}</p>}
-            <div className="border-t border-border">
-              {/* Keep the answers in the initial HTML while pagination still
-                  presents only seven questions at a time. */}
-              {results.map((item, index) => (
-                <FaqAnswer
-                  key={item.id}
-                  hidden={index < firstResult || index >= firstResult + questionsPerPage}
-                  answer={item.answer}
-                  focusClassName={focusStyle}
-                >
-                  {showTopics && activeTopic === "all" && !singleTopic && <span className="mb-1.5 block text-brand text-[11px] font-extrabold">{item.topicLabel}</span>}
-                  {item.question}
-                </FaqAnswer>
-              ))}
-            </div>
+          <div key={`${activeTopic}:${currentPage}`} className={`${styles.results} grid items-start`}>
+            {/* Overlapping pages reserve the tallest page's natural height at
+                every screen size. Inactive pages cannot be seen or focused. */}
+            {resultPages.map((items, pageIndex) => (
+              <div
+                key={pageIndex}
+                aria-hidden={pageIndex !== currentPage ? true : undefined}
+                inert={pageIndex !== currentPage}
+                className={`col-start-1 row-start-1 border-t border-border ${pageIndex !== currentPage ? "invisible pointer-events-none" : ""}`}
+              >
+                {items.map((item) => (
+                  <FaqAnswer
+                    key={item.id}
+                    hidden={false}
+                    answer={item.answer}
+                    focusClassName={focusStyle}
+                  >
+                    {showTopics && <span className="mb-1.5 block text-brand text-[11px] font-extrabold">{item.topicLabel}</span>}
+                    {item.question}
+                  </FaqAnswer>
+                ))}
+              </div>
+            ))}
           </div>
           {pageCount > 1 && (
             <nav aria-label={labels.paginationLabel} className="mt-5 flex flex-wrap items-center justify-between gap-3">
