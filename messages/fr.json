@@ -240,19 +240,19 @@
       "items": {
         "creativity": {
           "title": "Créativité & Innovation",
-          "description": "Nous partons du besoin, des contraintes et de l'usage pour imaginer des solutions nouvelles, réalistes et techniquement solides."
+          "description": "Nous dessinons plusieurs pistes et les comparons sur des critères définis avec vous, puis ciblons les premiers points à vérifier."
         },
         "design": {
           "title": "Design produit",
-          "description": "Nous concevons des produits et des systèmes mécaniques en intégrant les matériaux, l’assemblage et les contraintes de fabrication."
+          "description": "Nous concevons pièces et mécanismes en tenant compte de leur fabrication, de leur utilisation et de leur fin de vie."
         },
         "prototyping": {
           "title": "Prototypage",
-          "description": "Des prototypes adaptés à ce que vous devez vérifier : mouvement, ergonomie ou fonctionnement du produit."
+          "description": "Du POC au prototype fonctionnel, nous adaptons la réalisation à ce que vous devez valider : principe, ergonomie ou tenue mécanique."
         },
         "simulation": {
           "title": "Simulation & Analyse",
-          "description": "Nous comparons les conceptions et analysons les efforts et les déformations pour orienter les choix techniques et les essais."
+          "description": "Nous calculons les efforts et les déformations à l’assemblage et en usage, y compris les grandes déformations selon le besoin."
         },
         "polymer": {
           "title": "Polymères & Injection",

@@ -52,7 +52,7 @@
     },
     {
       "question": "What deliverables can we receive at the end of an assignment?",
-      "answer": "Depending on the assignment: concepts, 3D models, drawings, a prototype, an analysis report or manufacturing documentation. The content and formats are agreed at the start so that the results support the next stage of your project."
+      "answer": "Depending on the assignment: concept sketches and a comparison matrix, CAD models, toleranced 2D drawings, a bill of materials, a POC, a prototype or a calculation report. Contents and formats are agreed at the start for the development stage."
     },
     {
       "question": "How do we prepare for handover to a manufacturer?",
@@ -60,7 +60,7 @@
     },
     {
       "question": "How can development costs be kept under control?",
-      "answer": "Start with uncertainties that could change the concept, then check them with a focused study or test before detailing the entire design. Distinguish design, prototype, tooling and manufacturing costs: the unit price alone does not represent the cost of the project."
+      "answer": "We first target uncertainties that could change the concept. A calculation, proof of concept (POC) or partial prototype can help examine them before full development. Engineering, prototype, tooling and manufacturing costs are distinguished to decide where to invest."
     }
   ]
 }

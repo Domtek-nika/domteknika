@@ -51,8 +51,8 @@ function RunningPersonIcon({ className }: { className?: string }) {
 const EXPERTISE_ITEMS = [
   { key: "creativity", icon: Lightbulb },
   { key: "design", icon: Box },
-  { key: "prototyping", icon: Hourglass },
   { key: "simulation", icon: Monitor },
+  { key: "prototyping", icon: Hourglass },
   { key: "polymer", icon: Factory },
   { key: "electronics", icon: Cpu },
 ] as const;

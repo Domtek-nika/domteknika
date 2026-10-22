@@ -52,7 +52,7 @@
     },
     {
       "question": "¿Qué entregables podemos recibir al terminar un encargo?",
-      "answer": "Según el encargo: conceptos, modelos 3D, planos, un prototipo, un informe de cálculo o documentación de fabricación. El contenido y los formatos se acuerdan al inicio para que los resultados sirvan al siguiente paso del proyecto."
+      "answer": "Según el encargo: bocetos de conceptos y matriz de comparación, modelos CAD, planos 2D con tolerancias, lista de materiales, POC, prototipo o informe de cálculo. El contenido y los formatos se acuerdan al inicio según la etapa de desarrollo."
     },
     {
       "question": "¿Cómo se prepara el paso a un fabricante?",
@@ -60,7 +60,7 @@
     },
     {
       "question": "¿Cómo se pueden controlar los costes de desarrollo?",
-      "answer": "Se empieza por las incertidumbres que podrían cambiar el concepto y se comprueban mediante un estudio o ensayo concreto antes de detallar todo el diseño. También conviene distinguir los costes de desarrollo, prototipo, utillaje y fabricación: el precio unitario no representa por sí solo el coste del proyecto."
+      "answer": "Primero abordamos las incertidumbres que podrían cambiar el concepto. Un cálculo, una prueba de concepto (POC) o un prototipo parcial puede ayudar a examinarlas antes del desarrollo completo. Distinguimos los costes de ingeniería, prototipos, utillaje y fabricación para decidir dónde invertir."
     }
   ]
 }

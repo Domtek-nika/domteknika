@@ -240,19 +240,19 @@
       "items": {
         "creativity": {
           "title": "Kreativität & Innovation",
-          "description": "Wir gehen von Bedarf, Randbedingungen und Anwendung aus, um neue, realistische und technisch belastbare Lösungen zu entwickeln."
+          "description": "Wir skizzieren mehrere Konzepte, vergleichen sie anhand gemeinsam vereinbarter Kriterien und bestimmen die ersten Prüfschritte."
         },
         "design": {
           "title": "Produktdesign",
-          "description": "Wir entwickeln Produkte und mechanische Systeme und berücksichtigen dabei Werkstoffe, Montage und Fertigungsbedingungen."
+          "description": "Wir konstruieren Bauteile und Mechanismen unter Berücksichtigung von Fertigung, Nutzung und Lebensende."
         },
         "prototyping": {
           "title": "Prototyping",
-          "description": "Prototypen passend zu Ihrem Prüfziel: Bewegung, Ergonomie oder Produktfunktion."
+          "description": "Vom Machbarkeitsnachweis bis zum Funktionsprototyp passen wir den Aufbau an das Prüfziel an: Prinzip, Ergonomie oder mechanische Belastbarkeit."
         },
         "simulation": {
           "title": "Simulation & Analyse",
-          "description": "Wir vergleichen Konstruktionen und analysieren Belastungen und Verformungen, um technische Entscheidungen und Versuche vorzubereiten."
+          "description": "Wir berechnen Belastungen und Verformungen bei Montage und Nutzung, bei Bedarf auch große Verformungen."
         },
         "polymer": {
           "title": "Polymer- & Spritzgusskompetenz",

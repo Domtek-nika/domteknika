@@ -240,19 +240,19 @@
       "items": {
         "creativity": {
           "title": "Creativity & Innovation",
-          "description": "We start from the need, the constraints and the use case to create new, realistic and technically sound solutions."
+          "description": "We sketch several concepts, compare them against criteria agreed with you and identify the first points to verify."
         },
         "design": {
           "title": "Product Design",
-          "description": "We develop products and mechanical systems with material choices, assembly and manufacturing constraints built into the design."
+          "description": "We design parts and mechanisms with manufacturing, use and end of life in mind."
         },
         "prototyping": {
           "title": "Prototyping",
-          "description": "Prototypes matched to what you need to verify: movement, ergonomics or product function."
+          "description": "From a proof of concept to a functional prototype, we match the build to the principle, ergonomics or mechanical performance you need to validate."
         },
         "simulation": {
           "title": "Simulation & Analysis",
-          "description": "We compare designs and analyse loads and deformation to guide technical decisions and physical testing."
+          "description": "We calculate assembly and operating loads and deformation, including large deformations where needed."
         },
         "polymer": {
           "title": "Polymer & Injection Expertise",

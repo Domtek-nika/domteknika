@@ -240,19 +240,19 @@
       "items": {
         "creativity": {
           "title": "Creatividad e innovación",
-          "description": "Partimos de la necesidad, las restricciones y el uso real para crear soluciones nuevas, realistas y técnicamente sólidas."
+          "description": "Dibujamos varias propuestas, las comparamos con criterios acordados con usted e identificamos los primeros puntos que comprobar."
         },
         "design": {
           "title": "Diseño de producto",
-          "description": "Desarrollamos productos y sistemas mecánicos considerando los materiales, el montaje y las restricciones de fabricación."
+          "description": "Diseñamos piezas y mecanismos teniendo en cuenta su fabricación, su uso y su fin de vida."
         },
         "prototyping": {
           "title": "Prototipado",
-          "description": "Prototipos adaptados a lo que necesita comprobar: movimiento, ergonomía o funcionamiento del producto."
+          "description": "Desde una prueba de concepto hasta un prototipo funcional, adaptamos la realización al principio, la ergonomía o la resistencia que se quiere validar."
         },
         "simulation": {
           "title": "Simulación y análisis",
-          "description": "Comparamos diseños y analizamos cargas y deformaciones para orientar las decisiones técnicas y los ensayos físicos."
+          "description": "Calculamos cargas y deformaciones durante el montaje y el uso, incluidas grandes deformaciones cuando es necesario."
         },
         "polymer": {
           "title": "Polímeros e inyección",

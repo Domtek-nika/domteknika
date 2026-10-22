@@ -28,12 +28,12 @@
     "creativity-innovation": {
       "title": "Kreativität und Produktinnovation",
       "description": "Sie möchten ein Problem lösen oder eine Idee umsetzen. Wir untersuchen mögliche Lösungen, bevor Sie sich auf eine Produktarchitektur festlegen.",
-      "approach": "Ausgangspunkt sind Anwendung, Funktionen sowie Kosten-, Bauraum- und Fertigungsanforderungen. Mechanik, Werkstoffe und Integration werden zusammen betrachtet, um umsetzbare Konzepte zu entwickeln.",
-      "validation": "Wir vergleichen Stärken, Grenzen und offene Fragen der Konzepte. Ziel ist eine klare Richtung mit den ersten notwendigen Validierungsschritten.",
+      "approach": "Wir vereinbaren mit Ihnen die Vergleichskriterien: Funktion, Kosten, Bauraum, Fertigung und Nutzung. Anschließend untersuchen wir mehrere mechanische Prinzipien und stellen sie als Skizzen dar, um die Optionen gemeinsam zu besprechen und zu vergleichen.",
+      "validation": "Je nach offenen Fragen ergänzen wir erste Berechnungen, eine SWOT-Analyse oder einen gezielten Machbarkeitsnachweis. Diese Ergänzungen und die nächsten Schritte stimmen wir mit Ihnen ab.",
       "deliverables": [
-        "Zusammenfassung von Bedarf und Anforderungen",
-        "Konzepte und Funktionsprinzipien",
-        "Konzeptvergleich und Prüfplan"
+        "Technische Lösungsansätze mit Handskizzen",
+        "Bewertungsmatrix anhand der vereinbarten Kriterien",
+        "Empfehlungen und nächste Prüfschritte"
       ],
       "outcome": "Aus einer offenen Frage werden vergleichbare technische Lösungswege.",
       "needs": [
@@ -44,7 +44,7 @@
       "steps": [
         {
           "title": "Problem eingrenzen",
-          "body": "Anwendung, Funktionen und Anforderungen klären."
+          "body": "Bedarf, Randbedingungen und Vergleichskriterien festlegen."
         },
         {
           "title": "Lösungswege untersuchen",
@@ -52,7 +52,7 @@
         },
         {
           "title": "Nächsten Schritt festlegen",
-          "body": "Konzepte vergleichen und vorrangige Prüfungen definieren."
+          "body": "Ideen anhand der vereinbarten Kriterien bewerten und offene Prüfpunkte bestimmen."
         }
       ],
       "faq": [
@@ -61,12 +61,12 @@
           "answer": "Nein. Eine Beschreibung des Problems, der Anwendung und der bekannten Anforderungen reicht aus, um den Bedarf zu strukturieren."
         },
         {
-          "question": "Gehört ein Prototyp zu dieser Phase?",
-          "answer": "Ein Funktionsmuster kann daraus entstehen. Ausführung und Prüfziele richten sich nach den offenen technischen Fragen."
+          "question": "Kann diese Phase einen POC umfassen?",
+          "answer": "Ja, wenn eine offene Frage dies rechtfertigt. Ein Machbarkeitsnachweis (POC, Proof of Concept) kann als einfacher Versuchsaufbau oder Teilprototyp ein Prinzip mit begrenztem Aufwand prüfen. Die zu testende Funktion und die Erfolgskriterien werden vor dem Aufbau festgelegt."
         },
         {
-          "question": "Wie lassen sich mehrere Konzepte vergleichen?",
-          "answer": "Anhand desselben Bedarfs: Funktionen, Bauraum, Fertigung, Kosten und offene technische Fragen. Der Vergleich macht Zielkonflikte sichtbar und zeigt, welche Ansätze eine weitere Untersuchung verdienen."
+          "question": "Wie vergleichen Sie verschiedene Konzepte?",
+          "answer": "Wir vereinbaren mit Ihnen die Kriterien und ihre Bedeutung: Funktion, Nutzung, Kosten, Bauraum oder Fertigung. Die skizzierten Ideen werden in einer Bewertungsmatrix beurteilt. Zielkonflikte und offene Fragen bleiben bei der Auswahl der weiterzuentwickelnden Konzepte sichtbar."
         },
         {
           "question": "Können Sie ein bestehendes Produkt verbessern?",
@@ -77,8 +77,8 @@
           "answer": "Das muss geprüft werden. Werkstoffe, Belastungen, Bauraum und Fertigungsverfahren beeinflussen die Machbarkeit. Eine erste Untersuchung zeigt die offenen Fragen und die vorrangigen Prüfungen."
         },
         {
-          "question": "Wozu dient ein Funktionsmuster?",
-          "answer": "Es prüft ein bestimmtes Prinzip, etwa eine Bewegung, eine Verriegelung oder eine Bedienhandlung. Ein einfacher Aufbau kann diese Frage beantworten, bevor die Details des fertigen Produkts ausgearbeitet werden."
+          "question": "Was unterscheidet einen POC von einem vollständigen Prototyp?",
+          "answer": "Ein Machbarkeitsnachweis (POC) prüft ein bestimmtes Prinzip oder eine einzelne Funktion mit einem bewusst begrenzten Aufbau. Ein umfassenderer Prototyp kann mehrere Funktionen und deren Zusammenspiel untersuchen. Ein erfolgreicher POC bestätigt daher weder das gesamte Produkt noch dessen Serienreife."
         }
       ],
       "caseStudy": {
@@ -88,28 +88,28 @@
       "ctaTitle": "Welche Idee möchten Sie umsetzen?",
       "ctaBody": "Beschreiben Sie den geplanten Einsatz und das Problem, das Ihr Produkt lösen soll. Gemeinsam untersuchen wir geeignete Konzepte und legen die ersten Prüfungen fest.",
       "technicalFocus": {
-        "title": "Eine gute Idee beginnt mit der richtigen Frage.",
-        "intro": "Zu Beginn eines Projekts kann eine attraktive Lösung den eigentlichen Bedarf verdecken. Beschreibt man die Handlung des Nutzers, die Umgebung und das erwartete Ergebnis, entstehen mehrere technische Ansätze. Diese lassen sich anhand konkreter Kriterien vergleichen, bevor Zeit in die CAD-Konstruktion fliesst.",
+        "title": "Skizzen und Konzepte gezielt überprüfen.",
+        "intro": "Die Ideenfindung bei DOMTEKNIKA liefert skizzierte Lösungsansätze und eine Vergleichsmatrix. Die Kriterien legen wir gemeinsam fest. Ausgewählte Konzepte können anschließend durch erste Berechnungen oder einen gezielten Machbarkeitsnachweis untersucht werden, bevor die detaillierte Entwicklung beginnt.",
         "columns": [
-          "Zu klären",
-          "Warum es wichtig ist",
-          "Die passende Frage"
+          "Unsere Arbeit",
+          "Ihr Ergebnis",
+          "Ihr Nutzen"
         ],
         "rows": [
           {
-            "title": "Nutzung",
-            "why": "Die Konstruktion eines Mechanismus hängt von der Bedienperson und der Nutzungshäufigkeit ab.",
-            "check": "Welche Handlung ist schwierig, wann und unter welchen Bedingungen?"
+            "title": "Erkunden",
+            "why": "Mehrere Funktionsprinzipien, dargestellt in Skizzen.",
+            "check": "Unterschiedliche Lösungen für denselben Bedarf vergleichen."
           },
           {
-            "title": "Funktion",
-            "why": "Eine Funktion beschreibt die Aufgabe des Produkts und lässt den technischen Lösungsweg offen.",
-            "check": "Was soll das Produkt leisten, und woran erkennen wir den Erfolg?"
+            "title": "Bewerten",
+            "why": "Bewertung nach vereinbarten Kriterien wie Nutzung, Kosten, Bauraum oder Fertigung.",
+            "check": "Konzepte zur Vertiefung auswählen und Zielkonflikte sichtbar machen."
           },
           {
-            "title": "Zielkonflikte",
-            "why": "Bauraum, Kosten, Wartung und Fertigung können unterschiedliche Architekturen begünstigen.",
-            "check": "Welches Kriterium hat Vorrang, und was prüfen wir zuerst?"
+            "title": "Unsicherheit klären",
+            "why": "Bei Bedarf eine Machbarkeitsberechnung oder ein POC für eine kritische Funktion.",
+            "check": "Einen entscheidenden Punkt prüfen, bevor das gesamte Produkt ausgearbeitet wird."
           }
         ]
       }
@@ -117,12 +117,12 @@
     "mechanical-design": {
       "title": "Mechanische Konstruktion in der Schweiz",
       "description": "DOMTEKNIKA entwickelt Produkte und Mechanismen für Industrieunternehmen und Innovatoren, von der Architektur bis zu Bauteilen für die Industrialisierung.",
-      "approach": "Ein individueller Mechanismus, ein neues Bauteil oder eine Überarbeitung beginnt mit Nutzung, Belastungen, Bauraum und Fertigungsbedingungen. Werkstoffe und Montage werden von Anfang an berücksichtigt.",
+      "approach": "Schon bei den ersten Prototypen verbinden wir Material- und Montageentscheidungen mit Fertigung, Nutzung und Lebensende der Bauteile. Mithilfe der CAD entwickeln wir eine Architektur, die diese Randbedingungen und die Schnittstellen des Produkts berücksichtigt.",
       "validation": "CAD-Modelle klären Schnittstellen und bereiten die Validierung vor. Je nach Projekt folgen Prototypen, Berechnungen oder die Weiterentwicklung für die Fertigung.",
       "deliverables": [
         "Mechanische Architektur und CAD-Modelle",
         "Definition von Bauteilen, Schnittstellen und Baugruppen",
-        "Technische Unterlagen passend zum Entwicklungsstand"
+        "Phasengerechte Dokumentation, nach Vereinbarung mit tolerierten 2D-Zeichnungen und Stückliste"
       ],
       "outcome": "Von der gewünschten Funktion zu einer umsetzbaren mechanischen Architektur.",
       "needs": [
@@ -146,8 +146,8 @@
       ],
       "faq": [
         {
-          "question": "Können Sie eine bestehende Konstruktion übernehmen?",
-          "answer": "Ja. Vorhandene Zeichnungen, Modelle oder Prototypen bilden die Grundlage, um Verbesserungen und beizubehaltende Schnittstellen zu bestimmen."
+          "question": "Muss bereits eine Konstruktion vorliegen?",
+          "answer": "Nein. Wir setzen an Ihrem aktuellen Stand an: bei einer ersten Idee, Skizzen, CAD-Modellen, einem Prototyp oder einem bestehenden Produkt. Anschließend klären wir die zu entwickelnden Funktionen, zu erhaltenden Schnittstellen und relevanten Randbedingungen."
         },
         {
           "question": "Ist die Fertigung in der Konstruktion enthalten?",
@@ -179,30 +179,30 @@
         "body": "Im Amphitheater Velum Sky in Genf sollten die Führungen bei angehobenem Bildschirm unsichtbar bleiben. Beim Absenken ist der Bildschirm vollständig freitragend. DOMTEKNIKA entwickelte Führung, Steifigkeit und Hebemechanismus anhand dieser Anforderungen und integrierte die Funktion in ihre Umgebung."
       },
       "ctaTitle": "Welchen Mechanismus möchten Sie entwickeln?",
-      "ctaBody": "Zeigen Sie uns Ihre Zeichnungen oder CAD-Modelle und die gewünschten Verbesserungen. Wir klären, welche Bauteile, Schnittstellen und Fertigungsanforderungen zu bearbeiten sind.",
+      "ctaBody": "Beschreiben Sie Ihre Idee oder das Produkt, das Sie verbessern möchten. Falls Skizzen, Zeichnungen oder CAD-Modelle vorliegen, helfen sie, Bauteile, Schnittstellen und Fertigungsanforderungen zu klären.",
       "technicalFocus": {
-        "title": "Das entscheidende Detail einer Baugruppe: Toleranzen.",
-        "intro": "Die Masse gefertigter Teile variieren innerhalb der Zeichnungsvorgaben. In einer Baugruppe wirken diese Abweichungen zusammen: Eine Führung kann klemmen, eine Dichtung falsch komprimiert sein oder die Ausrichtung abweichen. Die Konstruktion muss daher das Verhalten realer Teile berücksichtigen.",
+        "title": "Den gesamten Lebensweg eines Bauteils berücksichtigen.",
+        "intro": "Schon bei den ersten Prototypen prüfen wir, wie ein Bauteil gefertigt, montiert, genutzt und demontiert wird. Diese Randbedingungen bestimmen Geometrie, Werkstoffe und Schnittstellen, bevor die Produktdefinition festgelegt wird.",
         "columns": [
-          "Konstruktionspunkt",
-          "Mögliche Auswirkung",
-          "In der Zeichnung festlegen"
+          "Lebensphase",
+          "Was wir berücksichtigen",
+          "Folge für die Konstruktion"
         ],
         "rows": [
           {
-            "title": "Führung und Spiel",
-            "why": "Zu wenig Spiel kann die Bewegung blockieren; zu viel kann unerwünschte Beweglichkeit erzeugen.",
-            "check": "Funktionsmasse und den zulässigen Spielbereich."
+            "title": "Fertigung und Montage",
+            "why": "Vorgesehene Verfahren, Stückzahlen, funktionale Toleranzen und Montagereihenfolge.",
+            "check": "Geometrie, Befestigungen und Zeichnungen auf die Fertigungsmöglichkeiten abstimmen."
           },
           {
-            "title": "Montagebezüge",
-            "why": "Jede Positionierung ergänzt die Abweichungen der bereits montierten Teile.",
-            "check": "Bezugsflächen und die Montagefolge."
+            "title": "Nutzung und Wartung",
+            "why": "Belastungen, Verschleiß, Umgebung und Zugang zu austauschbaren Teilen.",
+            "check": "Bauteile dimensionieren und Wartungsarbeiten vorsehen."
           },
           {
-            "title": "Fertigung",
-            "why": "Hohe Präzision kann zusätzliche Bearbeitung und Prüfung erfordern.",
-            "check": "Funktionsgerechte Toleranzen und das vorgesehene Verfahren."
+            "title": "Lebensende",
+            "why": "Demontage, Materialtrennung und vorgesehene Recyclingwege.",
+            "check": "Verbindungen und Materialkombinationen bereits in der Konstruktion bewerten."
           }
         ]
       }
@@ -239,16 +239,16 @@
       ],
       "faq": [
         {
-          "question": "Muss ein Prototyp wie das Serienprodukt aussehen?",
-          "answer": "Nicht immer. Für einen Bewegungsnachweis kann ein einfacher Aufbau reichen. Für Anwendungstests sind eine repräsentative Form und Ergonomie wichtiger."
+          "question": "Muss ein Prototyp dem Endprodukt entsprechen?",
+          "answer": "Das hängt vom Prüfziel ab. Ein POC kann einen Mechanismus in einem einfachen Versuchsaufbau isolieren. Ergonomie erfordert eine repräsentative Form; Belastbarkeit oder Lebensdauer erfordern geeignete Werkstoffe, Verbindungen und Prüfbedingungen."
         },
         {
           "question": "Ist ein funktionierender Prototyp serienreif?",
           "answer": "Nicht unbedingt. Werkstoffe, Toleranzen, Montage und Serienverfahren können eine eigene Industrialisierungsphase erfordern."
         },
         {
-          "question": "Was lässt sich mit einem Prototyp prüfen?",
-          "answer": "Zum Beispiel ein Mechanismus, die Handhabung, der Bauraum oder die Integration von Komponenten. Die Prüfung soll eine konkrete Entscheidung unterstützen; Grenzen der Werkstoffe und des Aufbaus werden dabei berücksichtigt."
+          "question": "Was lässt sich mit einem Prototyp validieren?",
+          "answer": "Prinzip, Funktion, Ergonomie, Belastbarkeit oder Lebensdauer, abhängig vom Aufbau und den geplanten Versuchen. Die Kriterien definieren wir vor der Fertigung. Die Aussagen gelten nur für die tatsächlich abgebildeten Funktionen, Werkstoffe und Bedingungen."
         },
         {
           "question": "Warum sind manchmal mehrere Prototypen nötig?",
@@ -274,36 +274,36 @@
       "ctaTitle": "Was soll Ihr nächster Prototyp zeigen?",
       "ctaBody": "Ihre Skizzen, Modelle und vorhandenen Versuchsergebnisse helfen uns, das Prüfziel zu bestimmen und einen für Ihre Entscheidung geeigneten Prototyp auszuwählen.",
       "technicalFocus": {
-        "title": "Welcher Prototyp für welche Entscheidung?",
-        "intro": "Ein Prototyp kann eine Bewegung untersuchen, Nutzertests ermöglichen oder die Fertigung vorbereiten. Die zu beantwortende Frage bestimmt Material, Verfahren und erforderliche Ausführung. Wer das Lernziel festlegt, kann den Aufwand gezielt einsetzen.",
+        "title": "Was soll Ihr Prototyp nachweisen?",
+        "intro": "Zunächst legen wir fest, was der Versuch zeigen soll: Machbarkeit eines Prinzips, Funktion, Ergonomie, Belastbarkeit oder Lebensdauer. Die Erfolgskriterien bestimmen Werkstoffe, Verfahren und Ausführungsgrad. Ein Prototyp bestätigt nur die Aspekte, die er abbildet und die tatsächlich geprüft wurden.",
         "columns": [
-          "Prototyp",
-          "Welche Frage er beantwortet",
-          "Was noch zu prüfen ist"
+          "Prüfziel",
+          "Geeigneter Aufbau",
+          "Worauf es ankommt"
         ],
         "rows": [
           {
-            "title": "Funktionsprinzip",
-            "why": "Funktioniert die geplante Bewegung oder der Mechanismus?",
-            "check": "Endgültiger Bauraum, Lebensdauer und Fertigung."
+            "title": "Prinzip oder Funktion",
+            "why": "POC oder Teilprototyp für den noch ungeklärten Mechanismus.",
+            "check": "Das erwartete Ergebnis festlegen; das übrige Produkt kann außerhalb des Versuchs bleiben."
           },
           {
-            "title": "Nutzungsmodell",
-            "why": "Passen Handhabung, Zugänglichkeit und Bedienabläufe zu den Nutzern?",
-            "check": "Materialverhalten und Wiederholbarkeit in der Produktion."
+            "title": "Nutzung und Integration",
+            "why": "Funktions- oder Ergonomieprototyp, der Bedienhandlungen und Schnittstellen abbildet.",
+            "check": "Die für die Bewertung relevanten Nutzungsbedingungen nachbilden."
           },
           {
-            "title": "Seriennaher Prototyp",
-            "why": "Entsprechen Montage und Verhalten dem geplanten Verfahren?",
-            "check": "Prozessstreuung und Prüfungen für die Produktionsfreigabe."
+            "title": "Belastbarkeit und Lebensdauer",
+            "why": "Prototyp mit repräsentativen Werkstoffen, Verbindungen und Belastungen.",
+            "check": "Lasten und Zyklen festlegen; ein Anschauungsmodell belegt keine Dauerfestigkeit."
           }
         ]
       }
     },
     "simulation": {
       "title": "Mechanische Simulation und Analyse",
-      "description": "Sie möchten Konstruktionen vergleichen oder das Verhalten eines Bauteils besser verstehen. Unsere Finite-Elemente-Berechnungen unterstützen Ihre Entscheidungen vor den Versuchen.",
-      "approach": "Wir erstellen das Modell anhand von Geometrie, Werkstoffen, Lasten und realen Schnittstellen. Die Berechnung konzentriert sich auf die konstruktionsrelevanten Fragen.",
+      "description": "Wir dimensionieren Bauteile für Montage- und Betriebslasten. Unsere Finite-Elemente-Berechnungen umfassen bei Bedarf nichtlineare Analysen mit großen Verformungen.",
+      "approach": "Wir leiten Lastfälle aus Montage und Nutzung ab: Einclipsen, Lagerungen, Kontakte und übertragene Kräfte. Das Modell berücksichtigt Geometrie und Werkstoff; wenn das untersuchte Verhalten es erfordert, verwenden wir eine nichtlineare Analyse.",
       "validation": "Wir interpretieren die Ergebnisse mit ihren Annahmen. Sie unterstützen Geometrieänderungen und physische Validierung; Spritzgussanalysen erläutern wir im Bereich Polymere.",
       "deliverables": [
         "Abgestimmte Annahmen und Berechnungsfälle",
@@ -336,12 +336,12 @@
           "answer": "Die verfügbare Geometrie, mögliche Werkstoffe, Belastungen und Einsatzbedingungen. Fehlende Annahmen klären wir vor der Berechnung."
         },
         {
-          "question": "Wie ergänzt die Simulation physische Versuche?",
-          "answer": "Sie vergleicht Varianten und zeigt Bereiche, die genauer zu prüfen sind. So können Versuche gezielter geplant werden. Die Aussagekraft hängt von Annahmen, Werkstoffdaten und Modellvalidierung ab; ein berechnetes Ergebnis allein validiert das Produkt nicht."
+          "question": "Wie ergänzt Simulation die Versuche?",
+          "answer": "Sie hilft, zu schwache Konstruktionen vor der Fertigung zu erkennen, und kann die Zahl der Prototypeniterationen verringern. Außerdem ermöglicht sie Variantenvergleiche und gezielte Versuche. Auch ein günstiges Ergebnis muss mit repräsentativen Versuchen abgeglichen werden: Seine Aussagekraft hängt von Annahmen, Werkstoff und modellierten Bedingungen ab."
         },
         {
-          "question": "Was zeigt eine Finite-Elemente-Berechnung?",
-          "answer": "Sie kann Spannungen und Verformungen unter definierten Belastungen untersuchen. Die Ergebnisse werden anhand der Modellannahmen und der technischen Fragestellung interpretiert."
+          "question": "Führen Sie nichtlineare Berechnungen durch?",
+          "answer": "Ja, insbesondere zur Untersuchung großer Verformungen. Das Modell wird anhand des Bauteilverhaltens, der Werkstoffdaten und der Kontakte ausgewählt. Bei einem Clip können beispielsweise Montageverformung und übertragene Kräfte untersucht werden; die Ergebnisse werden anschließend mit geeigneten Versuchen verglichen."
         },
         {
           "question": "Warum sind Randbedingungen entscheidend?",
@@ -367,28 +367,28 @@
       "ctaTitle": "Welche technische Entscheidung möchten Sie absichern?",
       "ctaBody": "Zeigen Sie uns die Geometrie, vorgesehenen Werkstoffe und Lastfälle. Wir legen den Berechnungsumfang und die für Ihre Entscheidung benötigten Ergebnisse fest.",
       "technicalFocus": {
-        "title": "Was bedeutet ein roter Bereich im Ergebnis?",
-        "intro": "Die Farben einer Berechnung zeigen eine Grösse und eine gewählte Skala. Für die Interpretation eines roten Bereichs braucht es die Lasten, Lagerungen, das Material und die Modellgeometrie. Das Ergebnis wird nützlich, wenn es eine konkrete Konstruktionsfrage beantwortet.",
+        "title": "Bauteile für Montage und Nutzung dimensionieren.",
+        "intro": "Wir berechnen Spannungen und Verformungen zur Auslegung der Bauteile. Die Untersuchung berücksichtigt Montagelasten, etwa beim Einclipsen, und Belastungen im Betrieb. Große Verformungen lassen sich mit nichtlinearen Analysen untersuchen, deren Annahmen auf Werkstoff und Kontakte abgestimmt sind.",
         "columns": [
-          "Beobachtung",
-          "Was dahintersteht",
-          "Sinnvolle Prüfung"
+          "Untersuchte Situation",
+          "Unsere Berechnung",
+          "Konstruktionsentscheidung"
         ],
         "rows": [
           {
-            "title": "Grosse Verformung",
-            "why": "Verschiebungen können Montage oder Führung beeinträchtigen, bevor ein Teil bricht.",
-            "check": "Verschiebungen mit Spiel und Produktfunktionen vergleichen."
+            "title": "Montage",
+            "why": "Kräfte und Verformungen beim Einclipsen oder Einsetzen.",
+            "check": "Geometrie anpassen, um die Montage zu ermöglichen und Beanspruchungen zu begrenzen."
           },
           {
-            "title": "Sehr lokale Spitze",
-            "why": "Eine ideal scharfe Ecke oder Punktlast kann eine numerische Singularität erzeugen.",
-            "check": "Reale Details, Lagerungen und Netzabhängigkeit untersuchen."
+            "title": "Nutzung",
+            "why": "Spannungen, Verschiebungen und kritische Bereiche unter den vorgesehenen Lasten.",
+            "check": "Werkstoffe und Querschnitte vergleichen, um die geforderte Funktion zu erhalten."
           },
           {
-            "title": "Veränderliches Ergebnis",
-            "why": "Das Netz unterteilt das Bauteil in kleine Berechnungselemente. Seine Feinheit beeinflusst das Ergebnis.",
-            "check": "Das Netz verfeinern und prüfen, ob sich die betrachtete Grösse stabilisiert."
+            "title": "Große Verformungen",
+            "why": "Verhaltensänderungen, wenn die Verformung die Bauteilreaktion beeinflusst.",
+            "check": "Ein geeignetes nichtlineares Modell wählen und den Vergleich mit Versuchen planen."
           }
         ]
       }

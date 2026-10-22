@@ -28,12 +28,12 @@
     "creativity-innovation": {
       "title": "Creatividad e innovación de producto",
       "description": "Tiene un problema que resolver o una idea que desarrollar. Exploramos posibles soluciones antes de decidirse por una arquitectura de producto.",
-      "approach": "Partimos del uso, las funciones y las restricciones de coste, espacio y fabricación. La búsqueda de conceptos combina mecánica, materiales e integración para identificar opciones realizables.",
-      "validation": "Comparamos ventajas, limitaciones y cuestiones pendientes. El objetivo es elegir una dirección y preparar las primeras validaciones.",
+      "approach": "Acordamos con usted los criterios de comparación: función, coste, espacio disponible, fabricación y uso. Después exploramos varios principios mecánicos y los representamos con bocetos para discutir y comparar las opciones.",
+      "validation": "Según las incertidumbres, podemos añadir cálculos preliminares, un análisis FODA o una prueba de concepto específica. Estos complementos y los siguientes pasos se acuerdan con usted.",
       "deliverables": [
-        "Síntesis de necesidades y restricciones",
-        "Conceptos y principios de funcionamiento",
-        "Comparación de alternativas y plan de verificación"
+        "Propuestas técnicas ilustradas con bocetos a mano",
+        "Matriz de puntuación según los criterios acordados",
+        "Recomendaciones y próximas comprobaciones"
       ],
       "outcome": "Convertir un problema abierto en opciones técnicas que se puedan comparar.",
       "needs": [
@@ -44,7 +44,7 @@
       "steps": [
         {
           "title": "Delimitar el problema",
-          "body": "Aclarar el uso, las funciones y los requisitos."
+          "body": "Definir la necesidad, las restricciones y los criterios de comparación."
         },
         {
           "title": "Explorar alternativas",
@@ -52,7 +52,7 @@
         },
         {
           "title": "Elegir el siguiente paso",
-          "body": "Comparar conceptos y definir las comprobaciones prioritarias."
+          "body": "Puntuar las ideas según los criterios acordados y señalar lo que falta comprobar."
         }
       ],
       "faq": [
@@ -61,12 +61,12 @@
           "answer": "No. Basta con describir el problema, el uso previsto y las restricciones conocidas para empezar a estructurar la necesidad."
         },
         {
-          "question": "¿Esta etapa incluye un prototipo?",
-          "answer": "Puede dar lugar a una prueba de concepto. Su construcción y los puntos de validación dependen de las incertidumbres que haya que resolver."
+          "question": "¿Esta etapa puede incluir una prueba de concepto?",
+          "answer": "Sí, cuando una incertidumbre lo justifica. Una prueba de concepto (POC, Proof of Concept) puede consistir en un montaje sencillo o un prototipo parcial para comprobar un principio con un gasto limitado. La función que se ensayará y los criterios de éxito se definen antes de construirlo."
         },
         {
-          "question": "¿Cómo se comparan varios conceptos?",
-          "answer": "A partir de la misma necesidad: funciones, espacio disponible, fabricación, costes e incertidumbres técnicas. La comparación muestra las ventajas y limitaciones de cada opción y permite elegir las que merece la pena estudiar."
+          "question": "¿Cómo comparan distintos conceptos?",
+          "answer": "Acordamos con usted los criterios y su importancia: función, uso, coste, espacio o fabricación. Las ideas dibujadas se evalúan en una matriz de puntuación. Los compromisos y las incertidumbres quedan visibles para elegir qué propuestas desarrollar."
         },
         {
           "question": "¿Pueden mejorar un producto existente?",
@@ -77,8 +77,8 @@
           "answer": "Hay que comprobarlo. Los materiales, las cargas, el espacio disponible y los procesos de fabricación influyen en su viabilidad. Un estudio inicial identifica las incertidumbres y las primeras comprobaciones necesarias."
         },
         {
-          "question": "¿Para qué sirve un prototipo de prueba de concepto?",
-          "answer": "Para comprobar un principio concreto, como un movimiento, un cierre o una interacción. Un montaje sencillo puede resolver esa pregunta antes de desarrollar los detalles del producto final."
+          "question": "¿Qué diferencia hay entre una POC y un prototipo completo?",
+          "answer": "Una prueba de concepto (POC) comprueba la viabilidad de un principio o función concreta mediante una realización deliberadamente limitada. Un prototipo más completo permite estudiar varias funciones y su integración. Una POC satisfactoria no valida por sí sola todo el producto ni su preparación para la producción."
         }
       ],
       "caseStudy": {
@@ -88,28 +88,28 @@
       "ctaTitle": "¿Qué idea quiere convertir en producto?",
       "ctaBody": "Describa el uso previsto y el problema que su producto debe resolver. Exploraremos los conceptos más adecuados y definiremos las primeras comprobaciones.",
       "technicalFocus": {
-        "title": "Una buena idea empieza con la pregunta adecuada.",
-        "intro": "Al inicio de un proyecto, una solución atractiva puede ocultar la necesidad real. Describir la acción del usuario, el entorno y el resultado esperado abre varias opciones técnicas. Después pueden compararse con criterios concretos, antes de dedicar tiempo al CAD.",
+        "title": "De los bocetos a los conceptos por comprobar.",
+        "intro": "La búsqueda de ideas en DOMTEKNIKA produce propuestas dibujadas y una matriz de comparación. Acordamos los criterios con usted. Los conceptos seleccionados pueden someterse a cálculos preliminares o a una prueba de concepto específica antes de un desarrollo más detallado.",
         "columns": [
-          "Qué definir",
-          "Por qué importa",
-          "La pregunta que conviene hacer"
+          "Nuestro trabajo",
+          "Qué recibe",
+          "Para qué sirve"
         ],
         "rows": [
           {
-            "title": "El uso",
-            "why": "El diseño de un mecanismo depende de quién lo utiliza y de la frecuencia de uso.",
-            "check": "¿Qué acción resulta difícil, en qué momento y en qué condiciones?"
+            "title": "Explorar",
+            "why": "Varios principios de funcionamiento representados en bocetos.",
+            "check": "Comparar distintas soluciones para una misma necesidad."
           },
           {
-            "title": "La función",
-            "why": "La función describe lo que debe lograr el producto y deja abierto el medio técnico.",
-            "check": "¿Qué debe hacer el producto y cómo comprobaremos que funciona?"
+            "title": "Evaluar",
+            "why": "Puntuaciones según criterios acordados de uso, coste, espacio o fabricación.",
+            "check": "Elegir las propuestas que desarrollar y hacer explícitos los compromisos."
           },
           {
-            "title": "Las prioridades",
-            "why": "Espacio, coste, mantenimiento y fabricación pueden favorecer arquitecturas diferentes.",
-            "check": "¿Qué criterio es prioritario y qué conviene comprobar primero?"
+            "title": "Resolver una duda",
+            "why": "Cuando hace falta, un cálculo de viabilidad o una POC de una función crítica.",
+            "check": "Comprobar un punto decisivo antes de detallar todo el producto."
           }
         ]
       }
@@ -117,12 +117,12 @@
     "mechanical-design": {
       "title": "Diseño mecánico en Suiza",
       "description": "DOMTEKNIKA desarrolla productos y mecanismos para empresas industriales e innovadores, desde la arquitectura inicial hasta piezas preparadas para la industrialización.",
-      "approach": "Un mecanismo a medida, una pieza nueva o un rediseño parte del uso, las cargas, el espacio disponible y las restricciones de fabricación. Los materiales y el montaje se consideran desde el principio.",
+      "approach": "Desde los primeros prototipos relacionamos las decisiones de materiales y montaje con la fabricación, el uso y el fin de vida de las piezas. El diseño CAD permite construir una arquitectura coherente con estas restricciones y con las interfaces del producto.",
       "validation": "Los modelos CAD precisan las interfaces y preparan la validación. Según el proyecto, el desarrollo continúa con prototipos, cálculos o ajustes para producción.",
       "deliverables": [
         "Arquitectura mecánica y modelos CAD",
         "Definición de piezas, interfaces y conjuntos",
-        "Documentación técnica adaptada a la etapa de desarrollo"
+        "Documentación adaptada a la etapa, con planos 2D con tolerancias y lista de materiales según lo acordado"
       ],
       "outcome": "Pasar de la función deseada a una arquitectura mecánica realizable.",
       "needs": [
@@ -146,8 +146,8 @@
       ],
       "faq": [
         {
-          "question": "¿Pueden retomar un diseño existente?",
-          "answer": "Sí. Partimos de los planos, modelos o prototipos disponibles para identificar mejoras y las interfaces que deben conservarse."
+          "question": "¿Es necesario disponer ya de un diseño?",
+          "answer": "No. Partimos de su situación actual: una idea inicial, bocetos, modelos CAD, un prototipo o un producto existente. Después concretamos las funciones por desarrollar, las interfaces que conservar y las restricciones que resolver."
         },
         {
           "question": "¿El diseño incluye la fabricación?",
@@ -179,30 +179,30 @@
         "body": "En el anfiteatro Velum Sky de Ginebra, las guías debían quedar ocultas con la pantalla elevada. Durante el descenso, la pantalla está completamente en voladizo. DOMTEKNIKA diseñó el guiado, la rigidez y el mecanismo de elevación en torno a estas restricciones, integrando una función precisa en su entorno."
       },
       "ctaTitle": "¿Qué mecanismo quiere desarrollar?",
-      "ctaBody": "Comparta sus planos o modelos CAD y los puntos que quiere mejorar. Definiremos las piezas, interfaces y restricciones de fabricación que conviene abordar.",
+      "ctaBody": "Describa su idea o el producto que quiere mejorar. Si dispone de bocetos, planos o modelos CAD, ayudarán a precisar las piezas, interfaces y restricciones de fabricación.",
       "technicalFocus": {
-        "title": "El detalle que cambia un conjunto: las tolerancias.",
-        "intro": "Las dimensiones de una pieza fabricada varían dentro de los límites del plano. En un conjunto, estas variaciones se combinan: una guía puede atascarse, una junta comprimirse incorrectamente o la alineación desviarse. El diseño debe prever el comportamiento de las piezas reales.",
+        "title": "Diseñar para toda la vida de la pieza.",
+        "intro": "Desde los primeros prototipos examinamos cómo se fabricará, montará, utilizará y desmontará una pieza. Estas restricciones orientan la geometría, los materiales y las interfaces antes de fijar la definición del producto.",
         "columns": [
-          "Punto de diseño",
-          "Qué puede suceder",
-          "Qué definir en el plano"
+          "Etapa de vida",
+          "Qué consideramos",
+          "Consecuencia para el diseño"
         ],
         "rows": [
           {
-            "title": "Guiado y holgura",
-            "why": "Una holgura pequeña puede bloquear el movimiento; una excesiva puede generar juego.",
-            "check": "Las dimensiones funcionales y el intervalo de holgura admisible."
+            "title": "Producción y montaje",
+            "why": "Procesos previstos, volúmenes, tolerancias funcionales y secuencia de montaje.",
+            "check": "Adaptar geometría, fijaciones y planos a los medios de fabricación."
           },
           {
-            "title": "Referencias de montaje",
-            "why": "Cada posicionamiento añade variación a las piezas ya montadas.",
-            "check": "Las superficies de referencia y el orden de montaje."
+            "title": "Uso y mantenimiento",
+            "why": "Cargas, desgaste, entorno y acceso a las piezas reemplazables.",
+            "check": "Dimensionar los componentes y prever las operaciones de mantenimiento."
           },
           {
-            "title": "Fabricación",
-            "why": "Una precisión elevada puede exigir más operaciones y controles.",
-            "check": "Las tolerancias necesarias para la función y el proceso previsto."
+            "title": "Fin de vida",
+            "why": "Desmontaje, separación de materiales y vías de reciclaje previstas.",
+            "check": "Evaluar las uniones y las combinaciones de materiales desde el diseño."
           }
         ]
       }
@@ -240,15 +240,15 @@
       "faq": [
         {
           "question": "¿El prototipo debe parecerse al producto final?",
-          "answer": "No siempre. Un montaje sencillo puede bastar para comprobar un movimiento. Una forma y ergonomía representativas son importantes al probar el uso del producto."
+          "answer": "Depende de lo que se quiera validar. Una POC puede aislar un mecanismo en un montaje sencillo. La ergonomía requiere una forma representativa; la resistencia o la vida útil requieren materiales, uniones y condiciones de ensayo adecuados."
         },
         {
           "question": "¿Un prototipo funcional está listo para producirse?",
           "answer": "No necesariamente. Los materiales, tolerancias, montaje y proceso de serie pueden requerir una fase de industrialización específica."
         },
         {
-          "question": "¿Qué se puede comprobar con un prototipo?",
-          "answer": "Por ejemplo, un mecanismo, la manipulación, el espacio ocupado o la integración de componentes. Las pruebas deben servir para tomar una decisión concreta, teniendo en cuenta las limitaciones de los materiales y del montaje."
+          "question": "¿Qué se puede validar con un prototipo?",
+          "answer": "El principio, el funcionamiento, la ergonomía, la resistencia o la vida útil, según la realización y los ensayos previstos. Definimos los criterios antes de fabricar. Las conclusiones se limitan a las funciones, materiales y condiciones realmente representados."
         },
         {
           "question": "¿Por qué pueden ser necesarias varias versiones?",
@@ -274,36 +274,36 @@
       "ctaTitle": "¿Qué debe demostrar su próximo prototipo?",
       "ctaBody": "Sus bocetos, modelos y resultados de pruebas nos ayudarán a definir qué comprobar y elegir un prototipo adecuado a la decisión que necesita tomar.",
       "technicalFocus": {
-        "title": "¿Qué prototipo sirve para cada decisión?",
-        "intro": "Un prototipo puede explorar un movimiento, permitir pruebas con usuarios o preparar la fabricación. La pregunta que se quiere resolver determina el material, el proceso y el acabado necesarios. Elegir qué queremos aprender ayuda a dirigir la inversión.",
+        "title": "¿Qué debe validar su prototipo?",
+        "intro": "Primero definimos qué debe demostrar el ensayo: viabilidad de un principio, funcionamiento, ergonomía, resistencia o vida útil. Los criterios de éxito guían los materiales, el proceso y el nivel de realización. Un prototipo solo valida los aspectos que representa y que se han ensayado.",
         "columns": [
-          "Tipo de prototipo",
-          "La pregunta que aclara",
-          "Qué falta comprobar"
+          "Objetivo de validación",
+          "Realización adecuada",
+          "Punto de atención"
         ],
         "rows": [
           {
-            "title": "Prueba de principio",
-            "why": "¿Funciona el movimiento o el mecanismo propuesto?",
-            "check": "El espacio final, la durabilidad y la fabricación."
+            "title": "Principio o función",
+            "why": "POC o prototipo parcial centrado en el mecanismo que genera dudas.",
+            "check": "Definir el resultado esperado; el resto del producto puede quedar fuera del ensayo."
           },
           {
-            "title": "Evaluación de uso",
-            "why": "¿La manipulación, los accesos y los gestos se adaptan a los usuarios?",
-            "check": "El comportamiento del material y la repetibilidad en producción."
+            "title": "Uso e integración",
+            "why": "Prototipo funcional o ergonómico que represente los gestos y las interfaces.",
+            "check": "Reproducir las condiciones de uso pertinentes para la evaluación."
           },
           {
-            "title": "Representativo de la serie",
-            "why": "¿El montaje y el comportamiento corresponden al proceso previsto?",
-            "check": "La variabilidad del proceso y los ensayos para iniciar la producción."
+            "title": "Resistencia y vida útil",
+            "why": "Prototipo con materiales, uniones y cargas representativos.",
+            "check": "Definir cargas y ciclos; una maqueta por sí sola no valida la durabilidad."
           }
         ]
       }
     },
     "simulation": {
       "title": "Simulación y análisis mecánico",
-      "description": "Necesita comparar diseños o entender mejor el comportamiento de una pieza. Nuestros cálculos por elementos finitos orientan sus decisiones antes de los ensayos.",
-      "approach": "Definimos el modelo a partir de geometría, materiales, cargas e interfaces reales. El cálculo se centra en las cuestiones que influyen en el diseño.",
+      "description": "Dimensionamos piezas para las cargas de montaje y de uso. Nuestros cálculos por elementos finitos incluyen, cuando es necesario, análisis no lineales con grandes deformaciones.",
+      "approach": "Definimos los casos de carga a partir del montaje y el uso: encajes a presión, apoyos, contactos y fuerzas transmitidas. El modelo considera la geometría y el material; aplicamos un análisis no lineal cuando el comportamiento estudiado lo requiere.",
       "validation": "Interpretamos los resultados junto con sus hipótesis. Orientan cambios geométricos y validaciones físicas; los estudios de inyección se explican en nuestra especialidad de polímeros.",
       "deliverables": [
         "Hipótesis y casos de cálculo acordados",
@@ -336,12 +336,12 @@
           "answer": "La geometría disponible, los materiales previstos, las cargas y las condiciones de uso. Las hipótesis pendientes se aclaran antes del cálculo."
         },
         {
-          "question": "¿Cómo complementa la simulación los ensayos físicos?",
-          "answer": "Permite comparar variantes e identificar las zonas que conviene examinar para orientar mejor los ensayos. La confianza en los resultados depende de las hipótesis, los datos del material y la validación del modelo; un resultado calculado no valida por sí solo el producto."
+          "question": "¿Cómo complementa la simulación a los ensayos?",
+          "answer": "Ayuda a detectar diseños demasiado frágiles antes de fabricar y puede reducir las iteraciones de prototipos. También permite comparar variantes y orientar los ensayos. Incluso un resultado favorable debe contrastarse con ensayos representativos: su validez depende de las hipótesis, del material y de las condiciones modeladas."
         },
         {
-          "question": "¿Qué permite conocer un cálculo por elementos finitos?",
-          "answer": "Puede estudiar tensiones y deformaciones bajo cargas definidas. Los resultados se interpretan según las hipótesis del modelo y la pregunta técnica que se quiere resolver."
+          "question": "¿Realizan cálculos no lineales?",
+          "answer": "Sí, en particular para estudiar grandes deformaciones. El modelo se elige según el comportamiento de la pieza, los datos del material y los contactos. Para un clip, por ejemplo, puede estudiarse la deformación durante el montaje y las fuerzas transmitidas; después se comparan los resultados con los ensayos pertinentes."
         },
         {
           "question": "¿Por qué son importantes las condiciones de contorno?",
@@ -367,28 +367,28 @@
       "ctaTitle": "¿Qué decisión técnica necesita verificar?",
       "ctaBody": "Comparta la geometría, los materiales previstos y los casos de carga. Definiremos el alcance del cálculo y los resultados necesarios para su decisión.",
       "technicalFocus": {
-        "title": "¿Qué significa realmente una zona roja?",
-        "intro": "Los colores de un cálculo representan una magnitud y una escala elegidas. Para interpretar una zona roja hay que conocer las cargas, los apoyos, el material y la geometría del modelo. El resultado es útil cuando responde a una pregunta concreta de diseño.",
+        "title": "Dimensionar para el montaje y el uso.",
+        "intro": "Calculamos tensiones y deformaciones para orientar el dimensionamiento de las piezas. El estudio abarca las cargas de montaje, como las de un encaje a presión, y las de servicio. Las grandes deformaciones pueden tratarse mediante un análisis no lineal, con hipótesis adecuadas al material y a los contactos.",
         "columns": [
-          "Qué se observa",
-          "Qué hay que entender",
-          "La comprobación útil"
+          "Situación estudiada",
+          "Qué calculamos",
+          "Decisión de diseño"
         ],
         "rows": [
           {
-            "title": "Una gran deformación",
-            "why": "El desplazamiento puede afectar al montaje o al guiado antes de que la pieza se rompa.",
-            "check": "Comparar los desplazamientos con las holguras y las funciones del producto."
+            "title": "Montaje",
+            "why": "Fuerzas y deformaciones durante el encaje o la colocación.",
+            "check": "Ajustar la geometría para permitir el montaje y limitar las solicitaciones."
           },
           {
-            "title": "Un pico muy localizado",
-            "why": "Una esquina idealmente viva o una carga puntual pueden crear una singularidad numérica.",
-            "check": "Revisar los detalles reales, los apoyos y la sensibilidad a la malla."
+            "title": "Uso",
+            "why": "Tensiones, desplazamientos y zonas sensibles bajo las cargas previstas.",
+            "check": "Comparar materiales y secciones para mantener la función requerida."
           },
           {
-            "title": "Un resultado que cambia",
-            "why": "La malla divide la pieza en pequeños elementos de cálculo. Su nivel de detalle influye en el resultado.",
-            "check": "Refinar la malla y comprobar que la magnitud observada se estabiliza."
+            "title": "Grandes deformaciones",
+            "why": "Cambios de comportamiento cuando la deformación modifica la respuesta de la pieza.",
+            "check": "Elegir un modelo no lineal adecuado y preparar su comparación con ensayos físicos."
           }
         ]
       }

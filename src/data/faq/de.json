@@ -52,7 +52,7 @@
     },
     {
       "question": "Welche Ergebnisse erhalten wir am Ende einer Aufgabe?",
-      "answer": "Je nach Aufgabe: Konzepte, 3D-Modelle, Zeichnungen, einen Prototyp, einen Berechnungsbericht oder Fertigungsunterlagen. Inhalte und Formate werden zu Beginn vereinbart, damit die Ergebnisse den nächsten Projektschritt unterstützen."
+      "answer": "Je nach Auftrag: Konzeptskizzen und Vergleichsmatrix, CAD-Modelle, tolerierte 2D-Zeichnungen, Stückliste, POC, Prototyp oder Berechnungsbericht. Inhalt und Formate werden zu Beginn passend zur Entwicklungsphase vereinbart."
     },
     {
       "question": "Wie wird die Übergabe an einen Hersteller vorbereitet?",
@@ -60,7 +60,7 @@
     },
     {
       "question": "Wie lassen sich die Entwicklungskosten im Griff behalten?",
-      "answer": "Zuerst werden offene Fragen untersucht, die das Konzept verändern könnten. Gezielte Studien oder Versuche klären sie, bevor die gesamte Konstruktion ausgearbeitet wird. Entwicklungs-, Prototypen-, Werkzeug- und Fertigungskosten sind getrennt zu betrachten: Der Stückpreis allein bildet die Projektkosten nicht ab."
+      "answer": "Zunächst untersuchen wir Unsicherheiten, die das Konzept infrage stellen könnten. Eine Berechnung, ein Machbarkeitsnachweis (POC) oder ein Teilprototyp kann sie vor der vollständigen Entwicklung klären helfen. Entwicklungs-, Prototypen-, Werkzeug- und Fertigungskosten werden getrennt betrachtet, um Investitionen gezielt zu planen."
     }
   ]
 }

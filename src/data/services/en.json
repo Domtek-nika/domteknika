@@ -28,12 +28,12 @@
     "creativity-innovation": {
       "title": "Product creativity and innovation",
       "description": "You have a problem to solve or an idea to develop. We explore possible solutions before you commit to a product architecture.",
-      "approach": "We start with use, required functions, cost, space and manufacturing constraints. Concept exploration connects mechanics, materials and integration to identify feasible options.",
-      "validation": "Options are compared by their strengths, limitations and outstanding questions. The aim is to choose a direction and prepare the first validation work.",
+      "approach": "We agree the comparison criteria with you: function, cost, available space, manufacturing and use. We then explore several mechanical principles and sketch them so that the options can be discussed and compared.",
+      "validation": "Depending on the uncertainties, we can add initial calculations, a SWOT analysis or a focused proof of concept. These additions and the next steps are agreed with you.",
       "deliverables": [
-        "Requirements and constraints summary",
-        "Concepts and operating principles",
-        "Options comparison and verification plan"
+        "Technical concepts illustrated with hand sketches",
+        "A scoring matrix based on the agreed criteria",
+        "Recommendations and the next checks to carry out"
       ],
       "outcome": "Turn an open problem into technical options you can compare.",
       "needs": [
@@ -44,7 +44,7 @@
       "steps": [
         {
           "title": "Frame the problem",
-          "body": "Clarify use, functions and constraints."
+          "body": "Define the need, constraints and comparison criteria."
         },
         {
           "title": "Explore options",
@@ -52,7 +52,7 @@
         },
         {
           "title": "Choose the next step",
-          "body": "Compare concepts and identify the priority checks."
+          "body": "Score ideas against the agreed criteria and identify what needs checking."
         }
       ],
       "faq": [
@@ -61,12 +61,12 @@
           "answer": "No. A description of the problem, intended use and known constraints is enough to start structuring your requirements."
         },
         {
-          "question": "Does this stage include a prototype?",
-          "answer": "It can lead to a proof of concept. Its construction and validation points depend on the uncertainties to resolve."
+          "question": "Can this stage include a proof of concept?",
+          "answer": "Yes, when an uncertainty warrants it. A proof of concept (POC) can be a simple test assembly or partial prototype that checks a principle with limited expenditure. The function to test and the success criteria are defined before it is built."
         },
         {
           "question": "How do you compare different concepts?",
-          "answer": "We compare them against the same need: required functions, available space, manufacturing, cost and uncertainties. This makes trade-offs visible and helps identify which options deserve further development."
+          "answer": "We agree the criteria and their importance with you: function, use, cost, space or manufacturing. The sketched ideas are assessed in a scoring matrix. Trade-offs and uncertainties remain visible when choosing which concepts to develop."
         },
         {
           "question": "Can you improve an existing product?",
@@ -77,8 +77,8 @@
           "answer": "An idea still needs to be assessed against materials, loads, available space and manufacturing. Initial studies identify uncertainties and help decide what needs checking first."
         },
         {
-          "question": "What is a proof-of-principle prototype for?",
-          "answer": "It tests a specific function, such as a movement, locking mechanism or interaction. A simple assembly can answer that question before work begins on the details of the final product."
+          "question": "How does a POC differ from a complete prototype?",
+          "answer": "A proof of concept (POC) checks the feasibility of a specific principle or function through a deliberately limited build. A more complete prototype can examine several functions and their integration. A successful POC therefore does not validate the whole product or its readiness for production."
         }
       ],
       "caseStudy": {
@@ -88,28 +88,28 @@
       "ctaTitle": "Which idea would you like to develop?",
       "ctaBody": "Tell us how the product will be used and which problem it needs to solve. We can explore the most relevant concepts and define the first checks.",
       "technicalFocus": {
-        "title": "A useful idea starts with the right question.",
-        "intro": "An appealing solution can hide the actual need early in a project. Describing the user’s action, the environment and the expected result opens up several technical options. These can then be compared against clear criteria before investing time in CAD.",
+        "title": "From sketches to concepts worth testing.",
+        "intro": "At DOMTEKNIKA, concept exploration produces sketches and a comparison matrix. The criteria are agreed with you. Selected concepts can then undergo initial calculations or a focused proof of concept before more detailed development.",
         "columns": [
-          "Define",
-          "Why it matters",
-          "The question to ask"
+          "Our work",
+          "What you receive",
+          "What it enables"
         ],
         "rows": [
           {
-            "title": "Use",
-            "why": "A mechanism’s design depends on who uses it and how often it is used.",
-            "check": "Which action causes difficulty, when and under what conditions?"
+            "title": "Explore",
+            "why": "Several operating principles illustrated with sketches.",
+            "check": "Compare different solutions to the same need."
           },
           {
-            "title": "Function",
-            "why": "A function describes what the product must accomplish and keeps the technical solution open.",
-            "check": "What must the product do, and how will success be measured?"
+            "title": "Evaluate",
+            "why": "Scores against agreed criteria such as use, cost, space or manufacturing.",
+            "check": "Choose concepts to develop and make trade-offs explicit."
           },
           {
-            "title": "Trade-offs",
-            "why": "Space, cost, maintenance and manufacturing can favour different architectures.",
-            "check": "Which criterion takes priority, and what needs checking first?"
+            "title": "Resolve uncertainty",
+            "why": "Where needed, a feasibility calculation or a proof of concept for a critical function.",
+            "check": "Check a decisive point before detailing the whole product."
           }
         ]
       }
@@ -117,12 +117,12 @@
     "mechanical-design": {
       "title": "Mechanical design in Switzerland",
       "description": "DOMTEKNIKA develops products and mechanisms for industrial companies and innovators, from the initial architecture to components prepared for industrialisation.",
-      "approach": "A custom mechanism, a new component or a product redesign starts with its use, loads, available space and manufacturing constraints. Material and assembly choices are considered from the outset.",
+      "approach": "From the first prototypes, we relate material and assembly choices to manufacturing, use and the end of a part’s life. CAD helps develop an architecture that addresses these constraints and the product’s interfaces.",
       "validation": "CAD models clarify interfaces and prepare validation. Depending on the project, development continues through prototypes, calculations or refinement for production.",
       "deliverables": [
         "Mechanical architecture and CAD models",
         "Component, interface and assembly definition",
-        "Technical documentation appropriate to the development stage"
+        "Documentation for the stage, including toleranced 2D drawings and a bill of materials where agreed"
       ],
       "outcome": "Translate a required function into a feasible mechanical architecture.",
       "needs": [
@@ -146,8 +146,8 @@
       ],
       "faq": [
         {
-          "question": "Can you work on an existing design?",
-          "answer": "Yes. We use available drawings, models or prototypes to identify improvements and the interfaces that must be retained."
+          "question": "Do we need to have a design already?",
+          "answer": "No. We start where you are: a blank-sheet idea, sketches, CAD models, a prototype or an existing product. We then clarify the functions to develop, interfaces to preserve and constraints to address."
         },
         {
           "question": "Does design include manufacturing?",
@@ -179,30 +179,30 @@
         "body": "At the Velum Sky amphitheatre in Geneva, the guides had to remain hidden with the screen raised. During descent, the screen is fully cantilevered. DOMTEKNIKA designed the guidance, stiffness and lifting mechanism around these constraints, integrating a precise function into its surroundings."
       },
       "ctaTitle": "Which mechanism would you like to develop?",
-      "ctaBody": "Share your drawings or CAD models and the points you want to improve. We can define the components, interfaces and manufacturing constraints to address.",
+      "ctaBody": "Describe your idea or the product you want to improve. If you have sketches, drawings or CAD models, they will help clarify the components, interfaces and manufacturing constraints.",
       "technicalFocus": {
-        "title": "The detail that changes an assembly: tolerances.",
-        "intro": "Manufactured dimensions vary within the limits specified on a drawing. In an assembly, those variations combine: a guide can jam, a seal can be compressed incorrectly or alignment can drift. Design therefore needs to account for the behaviour of real parts.",
+        "title": "Designing for the whole life of a part.",
+        "intro": "From the first prototypes, we examine how a part will be manufactured, assembled, used and dismantled. These constraints inform geometry, materials and interfaces before the product definition is frozen.",
         "columns": [
-          "Design point",
-          "What can happen",
-          "Define on the drawing"
+          "Life stage",
+          "What we consider",
+          "Design implications"
         ],
         "rows": [
           {
-            "title": "Guidance and clearance",
-            "why": "Too little clearance can stop movement; too much can introduce play.",
-            "check": "Functional dimensions and the acceptable clearance range."
+            "title": "Production and assembly",
+            "why": "Intended processes, volumes, functional tolerances and assembly sequence.",
+            "check": "Adapt geometry, fasteners and drawings to the manufacturing methods."
           },
           {
-            "title": "Assembly references",
-            "why": "Each locating feature adds variation to the parts already assembled.",
-            "check": "Reference surfaces and the assembly sequence."
+            "title": "Use and maintenance",
+            "why": "Loads, wear, environment and access to replaceable parts.",
+            "check": "Size components and plan maintenance operations."
           },
           {
-            "title": "Manufacturing",
-            "why": "High precision may require more operations and inspection.",
-            "check": "Tolerances needed for function and the intended process."
+            "title": "End of life",
+            "why": "Disassembly, material separation and intended recycling routes.",
+            "check": "Assess joining methods and material combinations during design."
           }
         ]
       }
@@ -239,16 +239,16 @@
       ],
       "faq": [
         {
-          "question": "Must a prototype look like the final product?",
-          "answer": "Not always. A simple assembly may be enough to check a movement. Representative form and ergonomics matter when testing product use."
+          "question": "Does a prototype need to look like the final product?",
+          "answer": "It depends on what needs validation. A POC can isolate a mechanism in a simple test assembly. Ergonomics requires a representative shape; robustness or service life requires suitable materials, assemblies and test conditions."
         },
         {
           "question": "Is a working prototype ready for production?",
           "answer": "Not necessarily. Materials, tolerances, assembly and the production process may need a separate industrialisation stage."
         },
         {
-          "question": "What can you test with a prototype?",
-          "answer": "A prototype can check a mechanism, handling, available space or component integration. Tests are chosen for the decision to be made, with explicit limits related to the material and how the prototype was made."
+          "question": "What can a prototype validate?",
+          "answer": "A principle, function, ergonomics, robustness or service life, depending on the build and the planned tests. We define the criteria before manufacturing. Conclusions remain limited to the functions, materials and conditions actually represented."
         },
         {
           "question": "Why build several versions?",
@@ -274,36 +274,36 @@
       "ctaTitle": "What should your next prototype demonstrate?",
       "ctaBody": "Your sketches, models and existing test results will help us define what to test and choose a prototype suited to the decision you need to make.",
       "technicalFocus": {
-        "title": "Which prototype supports which decision?",
-        "intro": "A prototype can explore movement, support user trials or prepare for manufacturing. The question being answered determines the material, process and level of finish required. Choosing what you want to learn helps direct the investment.",
+        "title": "What should your prototype validate?",
+        "intro": "We first define what the test must establish: feasibility of a principle, function, ergonomics, robustness or service life. Success criteria then guide the materials, process and level of build. A prototype validates only the aspects it represents and that have actually been tested.",
         "columns": [
-          "Prototype type",
-          "The question it explores",
-          "Still to verify"
+          "Validation objective",
+          "Suitable build",
+          "What to watch"
         ],
         "rows": [
           {
-            "title": "Proof of principle",
-            "why": "Does the proposed motion or mechanism work?",
-            "check": "Final space requirements, durability and manufacturing."
+            "title": "Principle or function",
+            "why": "A proof of concept or partial prototype focused on the uncertain mechanism.",
+            "check": "Define the expected result; the rest of the product may be outside the test."
           },
           {
-            "title": "User trial",
-            "why": "Do handling, access and user actions work as intended?",
-            "check": "Material performance and production repeatability."
+            "title": "Use and integration",
+            "why": "A functional or ergonomic prototype representing user actions and interfaces.",
+            "check": "Reproduce the conditions of use relevant to the evaluation."
           },
           {
-            "title": "Production representative",
-            "why": "Are assembly and behaviour consistent with the intended process?",
-            "check": "Process variation and the tests needed for production release."
+            "title": "Robustness and service life",
+            "why": "A prototype with representative materials, assemblies and loading.",
+            "check": "Define loads and cycles; a mock-up alone cannot validate endurance."
           }
         ]
       }
     },
     "simulation": {
       "title": "Mechanical simulation and analysis",
-      "description": "You need to compare designs or better understand a component’s behaviour. Our finite element calculations inform design choices before physical testing.",
-      "approach": "We define the model from geometry, materials, loads and actual interfaces. The calculation focuses on the questions that influence design.",
+      "description": "We size parts for assembly and operating loads. Our finite element calculations include nonlinear analysis with large deformations where needed.",
+      "approach": "We define load cases from assembly and use: snap-fitting, supports, contacts and transmitted forces. The model accounts for geometry and material; nonlinear analysis is used when the behaviour under study requires it.",
       "validation": "Results are interpreted alongside their assumptions. They guide geometry changes and physical validation; injection studies are covered in our polymer expertise.",
       "deliverables": [
         "Agreed assumptions and calculation cases",
@@ -336,12 +336,12 @@
           "answer": "Available geometry, proposed materials, loads and operating conditions. Missing assumptions are clarified before calculations begin."
         },
         {
-          "question": "How does simulation complement physical tests?",
-          "answer": "It compares variants and identifies areas to examine, helping focus testing. Confidence in the results depends on assumptions, material data and model validation; a calculated result alone does not validate the product."
+          "question": "How does simulation complement physical testing?",
+          "answer": "It helps identify overly fragile designs before manufacturing and can reduce prototype iterations. It also supports comparison of variants and targeted testing. Even a favourable result must be checked against representative physical tests: its validity depends on the assumptions, material and modelled conditions."
         },
         {
-          "question": "What can a finite-element calculation show?",
-          "answer": "It can study stresses and deformation in a model under defined loading conditions. Interpretation depends on the assumptions and the design question the analysis needs to answer."
+          "question": "Do you perform nonlinear calculations?",
+          "answer": "Yes, including studies of large deformations. The model is selected according to part behaviour, material data and contacts. For a clip, for example, the study can examine assembly deformation and transmitted forces; results are then compared with relevant physical tests."
         },
         {
           "question": "Why do boundary conditions matter?",
@@ -367,28 +367,28 @@
       "ctaTitle": "Which technical decision do you need to verify?",
       "ctaBody": "Share your geometry, proposed materials and load cases. We can define the analysis scope and the results needed to inform your decision.",
       "technicalFocus": {
-        "title": "What does a red area actually mean?",
-        "intro": "The colours in a calculation represent a quantity and a selected scale. Interpreting a red area requires the applied loads, restraints, material and model geometry. A result becomes useful when it answers a specific design question.",
+        "title": "Sizing parts for assembly and use.",
+        "intro": "We calculate stress and deformation to guide part sizing. Studies cover assembly loads, such as snap-fitting, and loads encountered in service. Large deformations can be addressed through nonlinear analysis, using assumptions suited to the material and contacts.",
         "columns": [
-          "Observation",
-          "What to understand",
-          "A useful check"
+          "Situation studied",
+          "What we calculate",
+          "Design decision"
         ],
         "rows": [
           {
-            "title": "Large deformation",
-            "why": "Displacement can disrupt an assembly or guide before a part breaks.",
-            "check": "Compare displacement with product clearances and functions."
+            "title": "Assembly",
+            "why": "Forces and deformation during snap-fitting or installation.",
+            "check": "Adjust geometry to enable assembly and limit loading."
           },
           {
-            "title": "A very local peak",
-            "why": "An ideally sharp corner or point load can create a numerical singularity.",
-            "check": "Review real details, restraints and mesh sensitivity."
+            "title": "Use",
+            "why": "Stress, displacement and sensitive areas under the intended loads.",
+            "check": "Compare materials and sections to preserve the required function."
           },
           {
-            "title": "A changing result",
-            "why": "The mesh divides the part into small calculation elements. Its refinement influences the result.",
-            "check": "Refine the mesh and check that the quantity being tracked stabilises."
+            "title": "Large deformations",
+            "why": "Changes in behaviour when deformation affects the response of the part.",
+            "check": "Select a suitable nonlinear model and plan comparison with physical tests."
           }
         ]
       }

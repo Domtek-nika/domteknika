@@ -52,7 +52,7 @@
     },
     {
       "question": "Quels livrables peut-on recevoir à la fin d’une mission ?",
-      "answer": "Selon la mission : concepts, modèles 3D, plans, prototype, rapport de calcul ou dossier de fabrication. Le contenu et les formats sont définis au départ pour que les résultats servent à la suite de votre projet."
+      "answer": "Selon la mission : croquis de concepts et tableau de comparaison, modèles CAO, plans 2D tolérancés, nomenclature, POC, prototype ou rapport de calcul. Le contenu et les formats sont convenus au départ en fonction de l’étape de développement."
     },
     {
       "question": "Comment préparer le passage à un fabricant ?",
@@ -60,7 +60,7 @@
     },
     {
       "question": "Comment maîtriser les coûts de développement ?",
-      "answer": "On commence par les incertitudes qui peuvent changer le concept, puis on les vérifie par une étude ou un essai ciblé avant de détailler toute la conception. Il faut aussi distinguer les coûts d’étude, de prototype, d’outillage et de fabrication : le prix d’une pièce ne résume pas le coût du projet."
+      "answer": "Nous ciblons d’abord les incertitudes qui peuvent remettre en cause le concept. Un calcul, une preuve de concept (POC) ou un prototype partiel peut permettre de les examiner avant un développement complet. Les coûts d’étude, de prototype, d’outillage et de fabrication sont distingués pour décider où investir."
     }
   ]
 }
