@@ -2296,8 +2296,6 @@ function ProjectCard({
 }
 
 export function ProjectsPageCta({ copy }: { copy: ProjectsPageCopy["cta"] }) {
-  const mailSubject = encodeURIComponent(copy.subject);
-
   return (
     <section
       id="contact"
@@ -2335,13 +2333,13 @@ export function ProjectsPageCta({ copy }: { copy: ProjectsPageCopy["cta"] }) {
             <strong className="font-extrabold">{copy.bodyStrong}</strong>{" "}
             {copy.body}
           </p>
-          <a
-            href={`mailto:contact@domteknika.ch?subject=${mailSubject}`}
+          <Link
+            href="/contact"
             className="mt-8 inline-flex h-10 items-center justify-center gap-6 rounded-[7px] bg-brand px-5 text-[14px] font-extrabold text-white shadow-[0_4px_10px_rgba(0,0,0,0.28)] transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-brand/35 min-[2400px]:!mt-14 min-[2400px]:!h-[82px] min-[2400px]:!gap-8 min-[2400px]:!rounded-[10px] min-[2400px]:!px-14 min-[2400px]:!text-[29px]"
           >
             {copy.button}
             <ArrowRight className="size-4 min-[2400px]:!size-9" aria-hidden />
-          </a>
+          </Link>
         </Reveal>
       </Container>
     </section>
