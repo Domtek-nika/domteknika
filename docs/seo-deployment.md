@@ -1,15 +1,42 @@
-# Publication des optimisations SEO
+# Publication et mise à jour du site
 
 ## Sur le serveur Infomaniak
 
-Depuis le dossier du site, sur la branche `main` :
+Depuis le dossier du site (celui qui contient `package.json`), sur la branche `main` :
 
 ```sh
-git pull --ff-only origin main
+git pull --ff-only origin main &&
+npm ci --include=dev --include=optional &&
 npm run build
 ```
 
-Redémarrer ensuite l’application avec la procédure Infomaniak habituelle. Le push Git ne déploie pas automatiquement cette installation. Les fichiers `package.json` et le verrou de dépendances ne changent pas dans cette mise à jour.
+Les `&&` interrompent la séquence en cas d'erreur. `npm ci` réinstalle exactement les versions de `package-lock.json`, y compris les outils nécessaires au build et les binaires natifs Sharp/SWC adaptés au serveur. Cette étape est nécessaire quand les dépendances changent ; un build seul ne les met pas à jour. Garder les fichiers d'environnement du serveur ; ne pas transférer les `node_modules` du Mac.
+
+Redémarrer ensuite l'application avec le mécanisme déjà configuré sur cet hébergement. Si le site utilise l'offre Node.js du Manager Infomaniak, utiliser **Redémarrer** dans le tableau de bord et conserver `npm start` comme commande de lancement ainsi que le port existant. Si un gestionnaire comme PM2 est utilisé, redémarrer seulement le processus du site avec son nom réel. Le nom du processus et le gestionnaire de cette installation ne sont pas documentés dans le dépôt.
+
+Le push Git ne déploie pas automatiquement cette installation. La version publiée n'est corrigée qu'après installation, build et redémarrage réussis. Pour une mise à jour manuelle dans le dossier actif, prévoir une courte interruption : `npm ci` remplace les modules et le build remplace `.next`. Utiliser la construction du Manager si disponible, ou arrêter l'application avant de modifier son dossier actif, puis la relancer une fois la construction terminée.
+
+Documentation officielle : [configuration et construction Node.js Infomaniak](https://www.infomaniak.com/fr/support/faq/2535/modifier-la-configuration-dun-site-nodejs-infomaniak).
+
+### Mise à jour de sécurité du 22 octobre 2026
+
+- Next.js et eslint-config-next : `16.4.2`.
+- Sharp : `0.35.5` ; binaires précompilés avec librsvg corrigé.
+- source-map-js : `1.2.2`, via le verrou des dépendances.
+- Node.js minimal demandé par ces paquets : `20.9.0`, inchangé ; utiliser une version LTS encore maintenue. Vérifier que le terminal de build et l'application emploient la même version de Node.
+
+Vérifications après installation, depuis le même environnement Node que l'application :
+
+```sh
+node --version
+npm ls next sharp source-map-js
+node -p 'JSON.stringify(require("sharp").versions)'
+npm audit --omit=dev
+```
+
+Avec les binaires Sharp précompilés, la version `rsvg` doit inclure le correctif `2.63.2` ou ultérieur. Si Sharp utilise une bibliothèque système différente, vérifier aussi sa version côté hébergeur. Le dépôt n'établit pas la version Linux/libc de l'hôte. Les correctifs amont sont documentés dans [l'avis Next.js](https://github.com/advisories/GHSA-2464-fhr4-w9xw) et [l'avis Sharp](https://github.com/advisories/GHSA-wq5f-xc86-pv6w).
+
+Avant publication, `npm test` exécute les tests du formulaire et du consentement Analytics avec transport email simulé. `npm run build` inclut les contrôles TypeScript et de contenu.
 
 ## Vérifier la version publique
 
@@ -18,7 +45,7 @@ Redémarrer ensuite l’application avec la procédure Infomaniak habituelle. Le
 - `www.domteknika.ch` redirige vers `domteknika.ch`.
 - Les fichiers image et PDF répondent avec `X-Robots-Tag: noindex`, y compris `/_next/image` et `/social-image`. Les pages HTML restent indexables.
 - Le sitemap contient uniquement les 630 pages utiles, réparties dans les sept langues.
-- Sur téléphone, vérifier le menu, le bouton Contact, les six cartes Expertise et la FAQ avec recherche. La FAQ garde six questions affichées par page.
+- Sur téléphone, vérifier le menu, le bouton Contact, les six cartes Expertise et la FAQ avec recherche. La FAQ affiche jusqu'à sept questions par page.
 
 Quelques réponses HTTP à contrôler :
 
