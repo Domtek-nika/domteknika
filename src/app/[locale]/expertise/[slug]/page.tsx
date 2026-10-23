@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { Container } from "@/components/layout/container";
@@ -200,7 +200,7 @@ export default async function ServicePage({ params }: Props) {
                 <p className="mt-6 text-brand text-xs font-extrabold">{heroProject.title}</p>
                 <h2 id="service-projects-title" className="domtek-text-shadow mt-3 text-[30px] font-extrabold leading-[1.08] sm:text-[38px] min-[1800px]:text-[46px]">{copy.caseStudy.title}</h2>
                 <p className="mt-6 text-muted-foreground text-[15px] font-medium leading-[1.55]">{copy.caseStudy.body}</p>
-                <Link href={`/projects/${heroProject.id}`} className={`mt-6 md:mt-8 ${buttonStyle}`}>{labels.viewProject}<ArrowUpRight className="size-4 shrink-0" aria-hidden /></Link>
+                <Link href={`/projects/${heroProject.id}`} className={`mt-6 md:mt-8 ${buttonStyle}`}>{labels.viewProject}<ArrowRight className="size-4 shrink-0" aria-hidden /></Link>
               </div>
             </div>
           )}
@@ -251,7 +251,7 @@ export default async function ServicePage({ params }: Props) {
           <div className="grid gap-6 lg:grid-cols-[0.85fr_1.35fr] lg:gap-12">
             <div>
               <h2 id="service-faq-title" className="domtek-text-shadow max-w-sm text-[30px] font-extrabold leading-[1.1] sm:text-[36px]">{labels.faq}<span className="text-brand">.</span></h2>
-              <Link href="/expertise#expertise-faq" className={`mt-5 inline-flex min-h-11 items-center gap-3 text-brand hover:underline text-[13px] font-bold ${focusStyle}`}>{faqCopy.fullFaqLink}<ArrowUpRight className="size-4 shrink-0" aria-hidden /></Link>
+              <Link href="/expertise#expertise-faq" className={`mt-6 ${buttonStyle}`}>{faqCopy.fullFaqLink}<ArrowRight className="size-4 shrink-0" aria-hidden /></Link>
             </div>
             <FaqSearch questions={copy.faq.map((item, index) => ({ ...item, id: `${service.slug}-${index}`, topic: service.slug }))} topics={[{id: service.slug, label: displayTitle}]} labels={faqCopy.labels} locale={locale} />
           </div>

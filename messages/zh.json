@@ -121,6 +121,12 @@
     }
   },
   "ContactPage": {
+    "Copy": {
+      "email": "复制电子邮件地址",
+      "phone": "复制电话号码",
+      "copied": "已复制",
+      "selected": "文字已选中，可以复制。"
+    },
     "Meta": {
       "title": "DOMTEKNIKA - 联系",
       "description": "联系位于瑞士 La Neuveville 的 DOMTEKNIKA，讨论工程、原型开发和生产项目。"

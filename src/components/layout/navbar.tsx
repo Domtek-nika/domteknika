@@ -44,6 +44,7 @@ export function Navbar() {
   const contactBubbleRef = useRef<HTMLDivElement>(null);
   const contactBubbleProgressRef = useRef(0);
   const mobileMenuRef = useRef<HTMLElement>(null);
+  const mobileMenuTriggerRef = useRef<HTMLButtonElement>(null);
   const mobileMenuCloseRef = useRef<HTMLButtonElement>(null);
   const currentNavKey = NAV_ITEMS.find(({ href }) =>
     href === "/"
@@ -59,6 +60,7 @@ export function Navbar() {
     const previousFocus = document.activeElement instanceof HTMLElement
       ? document.activeElement
       : null;
+    const menuTrigger = mobileMenuTriggerRef.current;
     document.body.style.overflow = "hidden";
     mobileMenuCloseRef.current?.focus({ preventScroll: true });
 
@@ -97,7 +99,8 @@ export function Navbar() {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = previousOverflow;
-      if (previousFocus?.isConnected) previousFocus.focus({ preventScroll: true });
+      const focusTarget = menuTrigger ?? previousFocus;
+      if (focusTarget?.isConnected) focusTarget.focus({ preventScroll: true });
     };
   }, [mobileOpen]);
 
@@ -317,12 +320,12 @@ export function Navbar() {
       <motion.div
         className={cn(
           "fixed inset-x-4 top-3 z-[910] transform-gpu will-change-transform min-[810px]:hidden",
-          !mobileNavVisible && !mobileOpen && "pointer-events-none",
+          (!mobileNavVisible || mobileOpen) && "pointer-events-none",
         )}
         initial={false}
         animate={{
-          y: mobileNavVisible || mobileOpen ? 0 : -88,
-          opacity: mobileNavVisible || mobileOpen ? 1 : 0,
+          y: mobileNavVisible && !mobileOpen ? 0 : -88,
+          opacity: mobileNavVisible && !mobileOpen ? 1 : 0,
         }}
         transition={{
           y: { duration: 0.52, ease: [0.16, 1, 0.3, 1] },
@@ -339,8 +342,11 @@ export function Navbar() {
             <Logo className="w-[142px]" />
           </Link>
           <div className="flex shrink-0 items-center gap-2">
-            <LanguageSwitcher className="[&>button]:h-[52px] [&>button]:min-w-[56px] [&>button]:rounded-[12px] [&>button]:border-border [&>button]:bg-white [&>button]:px-2.5 [&>button]:shadow-[0_6px_18px_rgba(0,0,0,0.10)] [&>button]:transition-[border-color,background-color,transform] [&>button]:duration-300 [&>button]:hover:-translate-y-0.5 [&>button]:hover:border-brand/35" />
+            {!mobileOpen && (
+              <LanguageSwitcher className="shrink-0 [&>button]:h-[52px] [&>button]:min-w-[56px] [&>button]:shrink-0 [&>button]:rounded-[12px] [&>button]:border-border [&>button]:bg-white [&>button]:px-2.5 [&>button]:shadow-[0_6px_18px_rgba(0,0,0,0.10)] [&>button]:backdrop-blur-none [&>button]:transition-[border-color,background-color,transform] [&>button]:duration-300 [&>button]:hover:-translate-y-0.5 [&>button]:hover:border-brand/35" />
+            )}
             <button
+              ref={mobileMenuTriggerRef}
               type="button"
               className="grid size-[52px] shrink-0 place-items-center rounded-[12px] border border-border bg-white text-foreground shadow-[0_6px_18px_rgba(0,0,0,0.12)] transition-[border-color,background-color,transform] duration-300 hover:-translate-y-0.5 hover:border-brand/35 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35"
               aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
@@ -444,7 +450,7 @@ export function Navbar() {
               }}
               transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="relative z-10 flex h-full flex-col px-6 pb-7 pt-5">
+              <div className="relative z-10 flex h-full flex-col overflow-y-auto overscroll-contain px-6 pb-7 pt-5">
                 <div className="flex items-center justify-between gap-4">
                   <Link
                     href="/"

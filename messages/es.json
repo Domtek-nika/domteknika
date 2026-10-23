@@ -121,6 +121,12 @@
     }
   },
   "ContactPage": {
+    "Copy": {
+      "email": "Copiar dirección de correo",
+      "phone": "Copiar número de teléfono",
+      "copied": "Copiado",
+      "selected": "Texto seleccionado. Puedes copiarlo."
+    },
     "Meta": {
       "title": "DOMTEKNIKA - Contacto",
       "description": "Contacta con DOMTEKNIKA en La Neuveville, Suiza, para hablar de proyectos de ingeniería, prototipado y producción."

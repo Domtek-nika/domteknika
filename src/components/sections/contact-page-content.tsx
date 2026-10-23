@@ -1,20 +1,15 @@
 import Image from "next/image";
-import type { SVGProps } from "react";
+import type { ReactNode, SVGProps } from "react";
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 
 import { Container } from "@/components/layout/container";
 import { ContactForm } from "@/components/sections/contact-form";
+import { CopyContactValue } from "@/components/sections/copy-contact-value";
 import { LazyContactMap } from "@/components/sections/lazy-contact-map";
 import { Reveal } from "@/components/providers/reveal";
 
 const CONTACT_CARDS = [
-  {
-    key: "location",
-    icon: MapPin,
-    href: "https://www.google.com/maps/search/?api=1&query=Chemin%20de%20Saint-Joux%2016B%2C%202520%20La%20Neuveville%2C%20Switzerland",
-    external: true,
-  },
   {
     key: "email",
     icon: Mail,
@@ -26,6 +21,12 @@ const CONTACT_CARDS = [
     icon: Phone,
     href: "tel:+41327517146",
     external: false,
+  },
+  {
+    key: "location",
+    icon: MapPin,
+    href: "https://www.google.com/maps/search/?api=1&query=Chemin%20de%20Saint-Joux%2016B%2C%202520%20La%20Neuveville%2C%20Switzerland",
+    external: true,
   },
   {
     key: "linkedin",
@@ -121,39 +122,38 @@ export function ContactPageContent() {
               <div className="mt-6 grid gap-2.5 min-[1800px]:!mt-8 min-[1800px]:!gap-3.5 min-[2400px]:!mt-10 min-[2400px]:!gap-4">
                 {CONTACT_CARDS.map((card, index) => {
                   const Icon = card.icon;
+                  const isCopyable = card.key === "email" || card.key === "phone";
 
                   return (
                     <Reveal key={card.key} delay={0.08 * (index + 1)}>
-                      <a
-                        href={card.href}
-                        aria-label={t(`Cards.${card.key}.action`)}
-                        target={card.external ? "_blank" : undefined}
-                        rel={card.external ? "noreferrer" : undefined}
-                        className="group/contact-card relative grid min-h-[92px] transform-gpu grid-cols-[52px_1fr] items-center rounded-[10px] border border-border bg-white/85 px-5 py-3.5 pr-12 shadow-[0_12px_28px_rgba(0,0,0,0.04)] backdrop-blur-sm transition-[transform,box-shadow,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-brand/25 hover:bg-white hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/30 motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)] min-[1800px]:!min-h-[112px] min-[1800px]:!grid-cols-[64px_1fr] min-[1800px]:!rounded-[12px] min-[1800px]:!px-7 min-[1800px]:!py-5 min-[1800px]:!pr-16 min-[2400px]:!min-h-[128px] min-[2400px]:!grid-cols-[72px_1fr] min-[2400px]:!rounded-[14px] min-[2400px]:!px-8 min-[2400px]:!py-6 min-[2400px]:!pr-20"
-                      >
-                        <span
-                          className="absolute right-4 top-4 grid size-8 place-items-center rounded-full border border-border bg-white/90 text-foreground shadow-[0_8px_18px_rgba(0,0,0,0.06)] transition-[transform,background-color,color,border-color,box-shadow] duration-300 group-hover/contact-card:-translate-y-0.5 group-hover/contact-card:border-brand group-hover/contact-card:bg-brand group-hover/contact-card:text-white group-hover/contact-card:shadow-[0_10px_22px_rgba(227,6,19,0.22)] motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)] min-[1800px]:!right-5 min-[1800px]:!top-5 min-[1800px]:!size-10 min-[2400px]:!right-6 min-[2400px]:!top-6 min-[2400px]:!size-11"
-                          aria-hidden
-                        >
-                          <ArrowUpRight
-                            className="size-4 min-[1800px]:!size-5 min-[2400px]:!size-6"
+                      <ContactCardFrame card={card} label={t(`Cards.${card.key}.action`)}>
+                        {!isCopyable && (
+                          <span
+                            className="absolute right-4 top-4 grid size-8 place-items-center rounded-full border border-border bg-white/90 text-foreground shadow-[0_8px_18px_rgba(0,0,0,0.06)] transition-[transform,background-color,color,border-color,box-shadow] duration-300 group-hover/contact-card:-translate-y-0.5 group-hover/contact-card:border-brand group-hover/contact-card:bg-brand group-hover/contact-card:text-white group-hover/contact-card:shadow-[0_10px_22px_rgba(227,6,19,0.22)] motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)] min-[1800px]:!right-5 min-[1800px]:!top-5 min-[1800px]:!size-10 min-[2400px]:!right-6 min-[2400px]:!top-6 min-[2400px]:!size-11"
                             aria-hidden
-                          />
-                        </span>
+                          >
+                            <ArrowUpRight className="size-4 min-[1800px]:!size-5 min-[2400px]:!size-6" aria-hidden />
+                          </span>
+                        )}
                         <Icon
                           aria-hidden
                           strokeWidth={1.8}
                           className="size-8 shrink-0 text-brand transition-transform duration-300 group-hover/contact-card:-translate-y-1 motion-reduce:transition-none min-[1800px]:!size-10 min-[2400px]:!size-11"
                         />
-                        <div>
+                        <div className="min-w-0">
                           <h2 className="text-foreground text-[14px] font-extrabold leading-tight min-[1800px]:!text-[17px] min-[2400px]:!text-[19px]">
                             {t(`Cards.${card.key}.title`)}
                           </h2>
                           <p className="mt-1.5 whitespace-pre-line text-muted-foreground min-[1800px]:!mt-2 text-[12px] font-medium leading-[1.38] min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]">
-                            {t(`Cards.${card.key}.body`)}
+                            {isCopyable ? (
+                              <CopyContactValue
+                                value={t(`Cards.${card.key}.body`)}
+                                labels={{ copy: t(`Copy.${card.key}`), copied: t("Copy.copied"), selected: t("Copy.selected") }}
+                              />
+                            ) : t(`Cards.${card.key}.body`)}
                           </p>
                         </div>
-                      </a>
+                      </ContactCardFrame>
                     </Reveal>
                   );
                 })}
@@ -216,4 +216,18 @@ export function ContactPageContent() {
       </section>
     </>
   );
+}
+
+function ContactCardFrame({ card, label, children }: {
+  card: (typeof CONTACT_CARDS)[number];
+  label: string;
+  children: ReactNode;
+}) {
+  const className = "group/contact-card relative grid min-h-[92px] transform-gpu grid-cols-[52px_minmax(0,1fr)] items-center rounded-[10px] border border-border bg-white/85 px-5 py-3.5 pr-12 shadow-[0_12px_28px_rgba(0,0,0,0.04)] backdrop-blur-sm transition-[transform,box-shadow,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-brand/25 hover:bg-white hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/30 motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)] min-[1800px]:!min-h-[112px] min-[1800px]:!grid-cols-[64px_minmax(0,1fr)] min-[1800px]:!rounded-[12px] min-[1800px]:!px-7 min-[1800px]:!py-5 min-[1800px]:!pr-16 min-[2400px]:!min-h-[128px] min-[2400px]:!grid-cols-[72px_minmax(0,1fr)] min-[2400px]:!rounded-[14px] min-[2400px]:!px-8 min-[2400px]:!py-6 min-[2400px]:!pr-20";
+
+  if (card.key === "email" || card.key === "phone") {
+    return <div className={className}>{children}</div>;
+  }
+
+  return <a href={card.href} aria-label={label} target={card.external ? "_blank" : undefined} rel={card.external ? "noreferrer" : undefined} className={className}>{children}</a>;
 }

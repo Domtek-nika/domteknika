@@ -121,6 +121,12 @@
     }
   },
   "ContactPage": {
+    "Copy": {
+      "email": "이메일 주소 복사",
+      "phone": "전화번호 복사",
+      "copied": "복사됨",
+      "selected": "텍스트가 선택되었습니다. 복사할 수 있습니다."
+    },
     "Meta": {
       "title": "DOMTEKNIKA - 문의",
       "description": "엔지니어링, 프로토타이핑, 생산 프로젝트를 논의하려면 스위스 라 뇌브빌의 DOMTEKNIKA에 문의하세요."

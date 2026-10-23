@@ -121,6 +121,12 @@
     }
   },
   "ContactPage": {
+    "Copy": {
+      "email": "メールアドレスをコピー",
+      "phone": "電話番号をコピー",
+      "copied": "コピーしました",
+      "selected": "テキストを選択しました。コピーできます。"
+    },
     "Meta": {
       "title": "DOMTEKNIKA | お問い合わせ",
       "description": "設計、試作、製造のご相談は、スイス・ラ・ヌーヴヴィルの DOMTEKNIKA へお問い合わせください。"
