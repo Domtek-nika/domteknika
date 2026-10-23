@@ -36,6 +36,27 @@ const HREF_LANGS: Record<Locale, string> = {
   zh: "zh-Hans",
 };
 
+const PATENT_DESCRIPTION_FALLBACKS: Record<Locale, string> = {
+  fr: "{title}. Fiche de brevet {publication} : informations bibliographiques et documents disponibles.",
+  en: "{title}. Patent record {publication}: bibliographic information and available documents.",
+  de: "{title}. Patentdatensatz {publication}: bibliografische Angaben und verfügbare Dokumente.",
+  es: "{title}. Ficha de patente {publication}: información bibliográfica y documentos disponibles.",
+  ko: "{title}. 특허 {publication}의 서지 정보 및 제공되는 문서.",
+  zh: "{title}。专利 {publication} 的书目信息及可用文献。",
+  ja: "{title}。特許 {publication} の書誌情報と利用可能な文献。",
+};
+
+export function patentMetadataDescription(
+  locale: string,
+  patent: { abstract: string; title: string; publication: string },
+) {
+  // Some source records have no abstract. Describe the available page without
+  // inventing technical claims or changing the original patent record.
+  return patent.abstract.trim() || PATENT_DESCRIPTION_FALLBACKS[resolveLocale(locale)]
+    .replace("{title}", () => patent.title)
+    .replace("{publication}", () => patent.publication);
+}
+
 type PageMetadataInput = {
   description: string;
   image?: string;

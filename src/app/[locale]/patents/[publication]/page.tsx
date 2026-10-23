@@ -14,7 +14,7 @@ import {
 import type { PatentDetail } from "@/data/patents";
 import { getPatentProjectLinks } from "@/data/projects";
 import type { Locale } from "@/i18n/routing";
-import { buildPageMetadata, localizedUrl, SITE_URL } from "@/lib/seo";
+import { buildPageMetadata, localizedUrl, patentMetadataDescription, SITE_URL } from "@/lib/seo";
 
 export function generateStaticParams() {
   return getCanonicalPatentSlugs().map((publication) => ({ publication }));
@@ -30,7 +30,7 @@ export async function generateMetadata({
   if (!patent) return {};
 
   return buildPageMetadata({
-    description: patent.abstract,
+    description: patentMetadataDescription(locale, patent),
     image: patent.coverImage ?? undefined,
     imageAlt: `${patent.publication} — ${patent.title}`,
     locale,
@@ -72,7 +72,7 @@ export default async function PatentPage({
     "@context": "https://schema.org",
     "@type": "TechArticle",
     headline: patent.title,
-    description: patent.abstract,
+    description: patentMetadataDescription(locale, patent),
     datePublished: patent.date,
     image: patent.coverImage
       ? new URL(patent.coverImage, SITE_URL).toString()
