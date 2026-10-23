@@ -2,6 +2,7 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
 import { Container } from "@/components/layout/container";
+import { Reveal } from "@/components/providers/reveal";
 import { getDetailPageCopy } from "@/data/detail-page-copy";
 import type { Project } from "@/data/project-types";
 import { Link } from "@/i18n/navigation";
@@ -67,37 +68,37 @@ export function ProjectDetailPage({
           </div>
 
           <div className="mt-14 grid gap-10 border-t border-border pt-10 lg:grid-cols-2 lg:gap-16">
-            <section>
+            <Reveal subtle as="section">
               <h2 className="text-foreground text-[24px] font-extrabold">{copy.overview}</h2>
               <p className="mt-5 text-muted-foreground text-[15px] font-medium leading-[1.7]">{project.overview}</p>
-            </section>
+            </Reveal>
             {project.scope?.length ? (
-              <section>
+              <Reveal subtle as="section" delay={0.07}>
                 <h2 className="text-foreground text-[24px] font-extrabold">{copy.scope}</h2>
                 <ul className="mt-5 grid gap-3">
                   {project.scope.map((item) => (
                     <li key={item} className="border-l-2 border-brand pl-4 text-muted-foreground text-[15px] font-medium leading-[1.55]">{item}</li>
                   ))}
                 </ul>
-              </section>
+              </Reveal>
             ) : null}
           </div>
 
           {gallery.length > 1 ? (
             <section className="mt-16" aria-labelledby="project-gallery-title">
-              <h2 id="project-gallery-title" className="text-foreground text-[28px] font-extrabold">{copy.gallery}</h2>
+              <Reveal subtle><h2 id="project-gallery-title" className="text-foreground text-[28px] font-extrabold">{copy.gallery}</h2></Reveal>
               <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {gallery.map((image, index) => (
-                  <div key={image} className="relative aspect-[4/3] overflow-hidden rounded-[7px] border border-border bg-muted">
+                  <Reveal subtle key={image} delay={(index % 3) * 0.05} className="relative aspect-[4/3] overflow-hidden rounded-[7px] border border-border bg-muted">
                     <Image src={image} alt={`${project.title} — ${index + 1}`} fill loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-contain p-3" />
-                  </div>
+                  </Reveal>
                 ))}
               </div>
             </section>
           ) : null}
 
           {project.relatedPatents?.length ? (
-            <section className="mt-16 border-t border-border pt-10">
+            <Reveal subtle as="section" className="mt-16 border-t border-border pt-10">
               <h2 className="text-foreground text-[28px] font-extrabold">{copy.relatedPatents}</h2>
               <div className="mt-6 grid gap-3 md:grid-cols-2">
                 {project.relatedPatents.map((patent) => (
@@ -108,11 +109,11 @@ export function ProjectDetailPage({
                   </Link>
                 ))}
               </div>
-            </section>
+            </Reveal>
           ) : null}
 
           {relatedServices.length > 0 ? (
-            <section className="mt-12 border-t border-border pt-8">
+            <Reveal subtle as="section" className="mt-12 border-t border-border pt-8">
               <h2 className="text-2xl font-extrabold">{serviceCopy.labels.related}</h2>
               <ul className="mt-4 flex flex-wrap gap-x-8 gap-y-2">
                 {relatedServices.map((service) => (
@@ -123,12 +124,14 @@ export function ProjectDetailPage({
                   </li>
                 ))}
               </ul>
-            </section>
+            </Reveal>
           ) : null}
 
-          <Link href="/contact" className="mt-14 inline-flex min-h-12 items-center gap-5 rounded-[7px] bg-brand px-6 py-3 text-[14px] font-extrabold text-white shadow-[0_10px_24px_rgba(227,6,19,0.2)]">
-            {serviceCopy.labels.contact}<ArrowUpRight className="size-4 shrink-0" aria-hidden />
-          </Link>
+          <Reveal subtle className="mt-14">
+            <Link href="/contact" className="inline-flex min-h-12 items-center gap-5 rounded-[7px] bg-brand px-6 py-3 text-[14px] font-extrabold text-white shadow-[0_10px_24px_rgba(227,6,19,0.2)]">
+              {serviceCopy.labels.contact}<ArrowUpRight className="size-4 shrink-0" aria-hidden />
+            </Link>
+          </Reveal>
         </article>
       </Container>
     </main>

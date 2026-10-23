@@ -2,6 +2,7 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import Image from "next/image";
 
 import { Container } from "@/components/layout/container";
+import { Reveal } from "@/components/providers/reveal";
 import { RelatedProjectCard } from "@/components/sections/related-project-card";
 import { getDetailPageCopy } from "@/data/detail-page-copy";
 import type { ProjectLink } from "@/data/project-types";
@@ -64,7 +65,7 @@ export function PatentDetailPage({
             </div>
           </div>
 
-          <dl className="mt-12 grid overflow-hidden rounded-[7px] border border-border bg-white sm:grid-cols-2 lg:grid-cols-3">
+          <Reveal subtle as="dl" className="mt-12 grid overflow-hidden rounded-[7px] border border-border bg-white sm:grid-cols-2 lg:grid-cols-3">
             <PatentFact label={copy.publication} value={patent.publication} />
             <PatentFact label={copy.publicationDate} value={patent.date} />
             <PatentFact label={copy.priorityDate} value={patent.priorityDate} />
@@ -79,10 +80,10 @@ export function PatentDetailPage({
               value={patent.classification}
               wide
             />
-          </dl>
+          </Reveal>
 
           {patent.publicationAliases.length > 1 ? (
-            <section className="mt-12">
+            <Reveal subtle as="section" className="mt-12">
               <h2 className="text-foreground text-[24px] font-extrabold">
                 {copy.family}
               </h2>
@@ -97,11 +98,11 @@ export function PatentDetailPage({
                   </Link>
                 ))}
               </div>
-            </section>
+            </Reveal>
           ) : null}
 
           {linkedProjects.length ? (
-            <section className="mt-12">
+            <Reveal subtle as="section" className="mt-12">
               <div className="flex items-center gap-3">
                 <span className="size-2.5 bg-brand" aria-hidden />
                 <h2 className="text-foreground text-[24px] font-extrabold">
@@ -117,17 +118,21 @@ export function PatentDetailPage({
                   />
                 ))}
               </div>
-            </section>
+            </Reveal>
           ) : null}
 
           {patent.images.length ? (
             <section className="mt-14">
-              <h2 className="text-foreground text-[28px] font-extrabold">
-                {copy.gallery}
-              </h2>
+              <Reveal subtle>
+                <h2 className="text-foreground text-[28px] font-extrabold">
+                  {copy.gallery}
+                </h2>
+              </Reveal>
               <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {patent.images.slice(0, 12).map((image, index) => (
-                  <div
+                  <Reveal
+                    subtle
+                    delay={(index % 3) * 0.05}
                     key={image.href}
                     className="relative aspect-[4/3] overflow-hidden rounded-[7px] border border-border bg-[#f7f7f7]"
                   >
@@ -139,7 +144,7 @@ export function PatentDetailPage({
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-contain p-3"
                     />
-                  </div>
+                  </Reveal>
                 ))}
               </div>
             </section>
@@ -160,7 +165,7 @@ export function PatentDetailPage({
           ) : null}
 
           {sourceLinks.length ? (
-            <section className="mt-14 border-t border-border pt-10">
+            <Reveal subtle as="section" className="mt-14 border-t border-border pt-10">
               <h2 className="text-foreground text-[28px] font-extrabold">
                 {copy.sources}
               </h2>
@@ -178,7 +183,7 @@ export function PatentDetailPage({
                   </a>
                 ))}
               </div>
-            </section>
+            </Reveal>
           ) : null}
         </article>
       </Container>
@@ -219,7 +224,7 @@ function TextSection({
   title: string;
 }) {
   return (
-    <section className="mt-14 border-t border-border pt-10">
+    <Reveal subtle as="section" className="mt-14 border-t border-border pt-10">
       <h2 className="text-foreground text-[28px] font-extrabold">{title}</h2>
       {ordered ? (
         <ol className="mt-6 grid max-w-[1000px] list-decimal gap-4 pl-5">
@@ -244,6 +249,6 @@ function TextSection({
           ))}
         </div>
       )}
-    </section>
+    </Reveal>
   );
 }

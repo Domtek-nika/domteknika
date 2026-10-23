@@ -1,6 +1,6 @@
 "use client";
 
-import { type ReactNode, useCallback, useEffect, useRef } from "react";
+import { type AriaAttributes, type ReactNode, useCallback, useEffect, useRef } from "react";
 import { motion, useAnimationControls, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -15,9 +15,26 @@ const variants: Variants = {
   },
 };
 
-interface RevealProps {
+const subtleTransition = {
+  duration: 0.42,
+  ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
+};
+
+const subtleVariants: Variants = {
+  hidden: { opacity: 0, y: 12 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: subtleTransition,
+  },
+};
+
+interface RevealProps extends AriaAttributes {
   children: ReactNode;
   className?: string;
+  id?: string;
+  /** Shorter movement for reading-focused sections and detail pages. */
+  subtle?: boolean;
   /** Begin hidden so an in-view block can animate when first revealed. */
   initiallyHidden?: boolean;
   /** Delay in seconds before the reveal animation starts. */
@@ -31,17 +48,19 @@ interface RevealProps {
   /** Render visible without reveal animation when the viewport is at least this wide. */
   disabledAtMinWidth?: number;
   /** Render as a different element. */
-  as?: "article" | "div" | "section" | "li" | "span";
+  as?: "article" | "div" | "section" | "li" | "span" | "dl";
 }
 
 /**
  * Reveal — fades + slides content up once it enters the viewport.
- * Respects prefers-reduced-motion via Framer Motion's default behavior
- * (motion is disabled when the user opts out).
+ * Content is visible in the HTML by default; only off-screen blocks are armed
+ * after hydration. The visibility checks also respect prefers-reduced-motion.
  */
 export function Reveal({
   children,
   className,
+  id,
+  subtle = false,
   initiallyHidden = false,
   delay = 0,
   minimumScrollY = 0,
@@ -49,6 +68,7 @@ export function Reveal({
   disabledOnMobile = false,
   disabledAtMinWidth,
   as = "div",
+  ...ariaAttributes
 }: RevealProps) {
   const MotionTag = motion[as];
   const controls = useAnimationControls();
@@ -68,8 +88,9 @@ export function Reveal({
     if (currentStateRef.current === "visible") return;
 
     currentStateRef.current = "visible";
-    void controls.start("visible", { delay });
-  }, [controls, delay]);
+    // A delay-only override would replace the variant's easing with a spring.
+    void controls.start("visible", subtle ? { ...subtleTransition, delay } : { delay });
+  }, [controls, delay, subtle]);
 
   const getEffectiveMinimumScrollY = useCallback(() => {
     if (
@@ -200,11 +221,13 @@ export function Reveal({
 
   return (
     <MotionTag
+      {...ariaAttributes}
+      id={id}
       ref={(node: HTMLElement | null) => {
         elementRef.current = node;
       }}
       data-reveal
-      variants={variants}
+      variants={subtle ? subtleVariants : variants}
       initial={initiallyHidden ? "hidden" : false}
       animate={controls}
       viewport={{ once: true, margin: "-80px" }}

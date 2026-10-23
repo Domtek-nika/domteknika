@@ -1,4 +1,5 @@
 import { Container } from "@/components/layout/container";
+import { Reveal } from "@/components/providers/reveal";
 import type { LegalSection } from "@/data/legal-pages";
 
 function isExternalLink(href: string) {
@@ -43,7 +44,7 @@ export function LegalDocumentPage({
 
           <div className="mt-10 grid gap-9 border-t border-border pt-9 md:mt-12 md:gap-11 md:pt-11">
             {sections.map((section) => (
-              <article key={section.title} className="max-w-[820px]">
+              <Reveal subtle as="article" key={section.title} className="max-w-[820px]">
                 <h2 className="text-balance text-foreground text-[19px] font-extrabold leading-[1.25] md:text-[21px]">
                   {section.title}
                 </h2>
@@ -80,7 +81,7 @@ export function LegalDocumentPage({
                     ))}
                   </div>
                 )}
-              </article>
+              </Reveal>
             ))}
           </div>
         </div>

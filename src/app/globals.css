@@ -365,4 +365,16 @@
   .animate-marquee {
     animation: none !important;
   }
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Printing must include sections the visitor has not scrolled to yet. */
+@media print {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
