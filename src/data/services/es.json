@@ -18,7 +18,6 @@
     "faq": "Preguntas frecuentes",
     "briefTitle": "Para preparar la primera conversación",
     "viewProject": "Ver el proyecto",
-    "relatedProjects": "Más proyectos en esta especialidad",
     "caseStudy": "Un reto, un proyecto real",
     "technicalFocus": "Comprender la técnica",
     "projectStageTitle": "En cualquier etapa de su proyecto.",
@@ -268,8 +267,8 @@
         }
       ],
       "caseStudy": {
-        "title": "De configuraciones de tres y cuatro ruedas a prototipos físicos.",
-        "body": "Aventor comenzó en 2012 como proyecto interno. DOMTEKNIKA desarrolló las arquitecturas eléctrica y mecánica, estudió configuraciones de tres y cuatro ruedas y construyó los prototipos físicos. El proyecto muestra el paso de un concepto a un sistema completo, antes de crear una startup independiente."
+        "title": "Del prototipo funcional a la primera serie inyectada.",
+        "body": "Para la aplicación de implantes esternales ZipFix, DOMTEKNIKA desarrolló una alternativa de polímero al instrumento reutilizable de acero. El proyecto combinó la búsqueda de conceptos, el desarrollo del producto y la validación mediante prototipos funcionales, antes de supervisar una primera serie de piezas inyectadas."
       },
       "ctaTitle": "¿Qué debe demostrar su próximo prototipo?",
       "ctaBody": "Sus bocetos, modelos y resultados de pruebas nos ayudarán a definir qué comprobar y elegir un prototipo adecuado a la decisión que necesita tomar.",
@@ -361,8 +360,8 @@
         }
       ],
       "caseStudy": {
-        "title": "Del cálculo a una pieza de PEEK preparada para producción.",
-        "body": "Los componentes de PEEK del portafresa acetabular debían cumplir requisitos mecánicos y de inyección. Los cálculos por elementos finitos y los análisis reológicos guiaron la optimización geométrica. El trabajo continuó con los moldes y el ajuste del proceso de producción."
+        "title": "Dimensionar un mecanismo de liberación.",
+        "body": "En los sistemas de seguridad primarios y secundarios de kitesurf, la fuerza de activación fue un aspecto central del desarrollo. DOMTEKNIKA diseñó las piezas de polímero inyectado, realizó cálculos mecánicos y reológicos y estudió esta fuerza mediante prototipos."
       },
       "ctaTitle": "¿Qué decisión técnica necesita verificar?",
       "ctaBody": "Comparta la geometría, los materiales previstos y los casos de carga. Definiremos el alcance del cálculo y los resultados necesarios para su decisión.",

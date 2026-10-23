@@ -18,7 +18,6 @@
     "faq": "Frequently asked questions",
     "briefTitle": "For our first conversation",
     "viewProject": "View project",
-    "relatedProjects": "More projects in this field",
     "caseStudy": "A challenge, a real project",
     "technicalFocus": "Technical insight",
     "projectStageTitle": "At any stage of your project.",
@@ -268,8 +267,8 @@
         }
       ],
       "caseStudy": {
-        "title": "Three- and four-wheel concepts brought to physical prototypes.",
-        "body": "Aventor began in 2012 as an internal project. DOMTEKNIKA developed its electrical and mechanical architectures, studied three- and four-wheel configurations and built physical prototypes. The project shows the progression from a concept to a complete system, before a separate startup was established."
+        "title": "From functional prototypes to the first injection-moulded series.",
+        "body": "For the application of ZipFix sternal implants, DOMTEKNIKA developed a polymer alternative to the reusable steel instrument. The project combined concept exploration, product development and validation through functional prototypes, followed by supervision of the first injection-moulded series."
       },
       "ctaTitle": "What should your next prototype demonstrate?",
       "ctaBody": "Your sketches, models and existing test results will help us define what to test and choose a prototype suited to the decision you need to make.",
@@ -361,8 +360,8 @@
         }
       ],
       "caseStudy": {
-        "title": "From calculations to a PEEK component prepared for production.",
-        "body": "The acetabular reamer holder’s PEEK components had to meet both mechanical and injection moulding constraints. Finite element calculations and rheological analyses guided geometry optimisation. The work continued through tooling and refinement of the production process."
+        "title": "Sizing a release mechanism.",
+        "body": "For the primary and secondary kitesurf safety releases, activation force was a central development concern. DOMTEKNIKA designed the injection-moulded polymer parts, carried out mechanical and rheological calculations, and studied this force with prototypes."
       },
       "ctaTitle": "Which technical decision do you need to verify?",
       "ctaBody": "Share your geometry, proposed materials and load cases. We can define the analysis scope and the results needed to inform your decision.",

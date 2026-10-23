@@ -18,7 +18,6 @@
     "faq": "Questions fréquentes",
     "briefTitle": "Pour préparer notre premier échange",
     "viewProject": "Voir le projet",
-    "relatedProjects": "Autres réalisations liées à cette expertise",
     "caseStudy": "Un défi, une réalisation",
     "technicalFocus": "À comprendre",
     "projectStageTitle": "À chaque stade de votre projet.",
@@ -268,8 +267,8 @@
         }
       ],
       "caseStudy": {
-        "title": "Des versions trois et quatre roues jusqu’aux prototypes.",
-        "body": "Aventor a commencé en 2012 comme projet interne. DOMTEKNIKA a développé les architectures électrique et mécanique, étudié des configurations à trois et quatre roues, puis réalisé les prototypes physiques. Le projet illustre le passage du concept à un système complet, avant la création d’une startup distincte."
+        "title": "Du prototype fonctionnel à la première série injectée.",
+        "body": "Pour l’application des implants sternaux ZipFix, DOMTEKNIKA a développé une alternative polymère à l’instrument réutilisable en acier. Le projet a associé recherche de concepts, développement du produit et validation par prototypes fonctionnels, avant le pilotage d’une première série injectée."
       },
       "ctaTitle": "Que doit démontrer votre prochain prototype ?",
       "ctaBody": "Vos croquis, modèles et essais existants nous aideront à définir la question à tester, puis le prototype adapté à la décision que vous devez prendre.",
@@ -361,8 +360,8 @@
         }
       ],
       "caseStudy": {
-        "title": "Du calcul à une pièce en PEEK industrialisable.",
-        "body": "Sur le porte-fraise acétabulaire, les composants en PEEK devaient répondre aux contraintes mécaniques et à celles de l’injection. Les calculs par éléments finis et les analyses rhéologiques ont guidé l’optimisation des géométries. Le travail s’est prolongé par les outillages et la mise au point du procédé de production."
+        "title": "Dimensionner un mécanisme de déclenchement.",
+        "body": "Sur les sécurités de kitesurf primaires et secondaires, l’effort de déclenchement était un point central du développement. DOMTEKNIKA a conçu les pièces en polymère injecté, réalisé les calculs mécaniques et rhéologiques et étudié cet effort avec des prototypes."
       },
       "ctaTitle": "Quel choix technique devez-vous sécuriser ?",
       "ctaBody": "Partagez votre géométrie, vos matériaux et les charges envisagées. Nous pourrons cadrer le calcul et préciser les résultats nécessaires à votre décision.",

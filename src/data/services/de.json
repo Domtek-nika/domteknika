@@ -18,7 +18,6 @@
     "faq": "Häufige Fragen",
     "briefTitle": "Für unser erstes Gespräch",
     "viewProject": "Projekt ansehen",
-    "relatedProjects": "Weitere Projekte in diesem Bereich",
     "caseStudy": "Eine Aufgabe, ein konkretes Projekt",
     "technicalFocus": "Technik verstehen",
     "projectStageTitle": "In jeder Phase Ihres Projekts.",
@@ -268,8 +267,8 @@
         }
       ],
       "caseStudy": {
-        "title": "Von Konzepten mit drei und vier Rädern zu physischen Prototypen.",
-        "body": "Aventor begann 2012 als internes Projekt. DOMTEKNIKA entwickelte die elektrische und mechanische Architektur, untersuchte Varianten mit drei und vier Rädern und baute physische Prototypen. Das Projekt zeigt den Weg vom Konzept zum vollständigen System, bevor ein eigenständiges Startup gegründet wurde."
+        "title": "Vom Funktionsprototyp zur ersten Spritzgussserie.",
+        "body": "Für das Anbringen von ZipFix-Sternumimplantaten entwickelte DOMTEKNIKA eine Polymeralternative zum wiederverwendbaren Stahlinstrument. Das Projekt umfasste die Konzeptsuche, die Produktentwicklung und die Validierung mit Funktionsprototypen sowie die anschließende Betreuung einer ersten Spritzgussserie."
       },
       "ctaTitle": "Was soll Ihr nächster Prototyp zeigen?",
       "ctaBody": "Ihre Skizzen, Modelle und vorhandenen Versuchsergebnisse helfen uns, das Prüfziel zu bestimmen und einen für Ihre Entscheidung geeigneten Prototyp auszuwählen.",
@@ -361,8 +360,8 @@
         }
       ],
       "caseStudy": {
-        "title": "Von der Berechnung zum fertigungsgeeigneten PEEK-Bauteil.",
-        "body": "Die PEEK-Komponenten des Halters für Acetabulumfräsen mussten mechanische und spritzgusstechnische Anforderungen erfüllen. Finite-Elemente-Berechnungen und rheologische Analysen unterstützten die Geometrieoptimierung. Es folgten Werkzeugentwicklung und die Abstimmung des Produktionsverfahrens."
+        "title": "Einen Auslösemechanismus dimensionieren.",
+        "body": "Bei den primären und sekundären Kitesurf-Sicherheitsauslösern stand die erforderliche Auslösekraft im Mittelpunkt der Entwicklung. DOMTEKNIKA konstruierte die spritzgegossenen Polymerteile, führte mechanische und rheologische Berechnungen durch und untersuchte diese Kraft anhand von Prototypen."
       },
       "ctaTitle": "Welche technische Entscheidung möchten Sie absichern?",
       "ctaBody": "Zeigen Sie uns die Geometrie, vorgesehenen Werkstoffe und Lastfälle. Wir legen den Berechnungsumfang und die für Ihre Entscheidung benötigten Ergebnisse fest.",

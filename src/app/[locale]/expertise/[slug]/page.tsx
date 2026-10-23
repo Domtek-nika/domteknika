@@ -9,7 +9,7 @@ import { FaqSearch } from "@/components/sections/faq-search";
 import { getFaqCopy } from "@/data/faq-copy";
 import { getProjectBySlug } from "@/data/projects";
 import { getServiceCopy } from "@/data/service-copy";
-import { getService, getServiceProjectScopeIndex, services } from "@/data/services";
+import { getService, services } from "@/data/services";
 import { Link } from "@/i18n/navigation";
 import {
   expertiseDrawingBackground,
@@ -201,19 +201,6 @@ export default async function ServicePage({ params }: Props) {
                 <h2 id="service-projects-title" className="domtek-text-shadow mt-3 text-[30px] font-extrabold leading-[1.08] sm:text-[38px] min-[1800px]:text-[46px]">{copy.caseStudy.title}</h2>
                 <p className="mt-6 text-muted-foreground text-[15px] font-medium leading-[1.55]">{copy.caseStudy.body}</p>
                 <Link href={`/projects/${heroProject.id}`} className={`mt-6 md:mt-8 ${buttonStyle}`}>{labels.viewProject}<ArrowUpRight className="size-4 shrink-0" aria-hidden /></Link>
-              </div>
-            </div>
-          )}
-          {projects.length > 1 && (
-            <div className="mt-14 md:mt-16">
-              <h3 className="text-[18px] font-extrabold leading-tight min-[1800px]:text-[20px]">{labels.relatedProjects}</h3>
-              <div className="mt-5 grid gap-6 sm:grid-cols-2">
-                {projects.slice(1).map((project) => (
-                  <Link key={project.id} href={`/projects/${project.id}`} className="group grid min-w-0 grid-cols-[100px_1fr] gap-4 rounded-[7px] border border-border bg-white p-4 transition-[border-color,box-shadow] duration-300 hover:border-brand/40 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)] active:border-brand focus-visible:border-brand focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-brand motion-reduce:transition-none sm:grid-cols-[120px_1fr]">
-                    <div className="relative aspect-square self-start rounded-[7px] bg-muted/60"><Image src={project.image} alt={project.imageAlt} fill sizes="120px" className="object-contain p-2" /></div>
-                    <div className="min-w-0"><h3 className="text-[14px] font-extrabold leading-tight">{project.title}</h3><p className="mt-2 text-muted-foreground text-xs font-medium leading-[1.45]">{project.scope?.[getServiceProjectScopeIndex(service.slug, project.id)] ?? project.description}</p><span className="mt-3 inline-flex items-center gap-2 text-brand text-xs font-bold">{labels.viewProject}<ArrowUpRight className="size-3.5" aria-hidden /></span></div>
-                  </Link>
-                ))}
               </div>
             </div>
           )}
