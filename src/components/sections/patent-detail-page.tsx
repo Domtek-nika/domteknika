@@ -65,7 +65,7 @@ export function PatentDetailPage({
             </div>
           </div>
 
-          <Reveal subtle as="dl" className="mt-12 grid overflow-hidden rounded-[7px] border border-border bg-white sm:grid-cols-2 lg:grid-cols-3">
+          <Reveal initiallyHidden as="dl" className="mt-12 grid overflow-hidden rounded-[7px] border border-border bg-white sm:grid-cols-2 lg:grid-cols-3">
             <PatentFact label={copy.publication} value={patent.publication} />
             <PatentFact label={copy.publicationDate} value={patent.date} />
             <PatentFact label={copy.priorityDate} value={patent.priorityDate} />
@@ -83,7 +83,7 @@ export function PatentDetailPage({
           </Reveal>
 
           {patent.publicationAliases.length > 1 ? (
-            <Reveal subtle as="section" className="mt-12">
+            <Reveal initiallyHidden as="section" className="mt-12">
               <h2 className="text-foreground text-[24px] font-extrabold">
                 {copy.family}
               </h2>
@@ -102,7 +102,7 @@ export function PatentDetailPage({
           ) : null}
 
           {linkedProjects.length ? (
-            <Reveal subtle as="section" className="mt-12">
+            <Reveal initiallyHidden as="section" className="mt-12">
               <div className="flex items-center gap-3">
                 <span className="size-2.5 bg-brand" aria-hidden />
                 <h2 className="text-foreground text-[24px] font-extrabold">
@@ -123,7 +123,7 @@ export function PatentDetailPage({
 
           {patent.images.length ? (
             <section className="mt-14">
-              <Reveal subtle>
+              <Reveal initiallyHidden>
                 <h2 className="text-foreground text-[28px] font-extrabold">
                   {copy.gallery}
                 </h2>
@@ -131,8 +131,8 @@ export function PatentDetailPage({
               <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {patent.images.slice(0, 12).map((image, index) => (
                   <Reveal
-                    subtle
-                    delay={(index % 3) * 0.05}
+                    initiallyHidden
+                    delay={(index % 3) * 0.08}
                     key={image.href}
                     className="relative aspect-[4/3] overflow-hidden rounded-[7px] border border-border bg-[#f7f7f7]"
                   >
@@ -165,7 +165,7 @@ export function PatentDetailPage({
           ) : null}
 
           {sourceLinks.length ? (
-            <Reveal subtle as="section" className="mt-14 border-t border-border pt-10">
+            <Reveal initiallyHidden as="section" className="mt-14 border-t border-border pt-10">
               <h2 className="text-foreground text-[28px] font-extrabold">
                 {copy.sources}
               </h2>
@@ -224,7 +224,7 @@ function TextSection({
   title: string;
 }) {
   return (
-    <Reveal subtle as="section" className="mt-14 border-t border-border pt-10">
+    <Reveal initiallyHidden as="section" className="mt-14 border-t border-border pt-10">
       <h2 className="text-foreground text-[28px] font-extrabold">{title}</h2>
       {ordered ? (
         <ol className="mt-6 grid max-w-[1000px] list-decimal gap-4 pl-5">

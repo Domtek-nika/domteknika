@@ -161,12 +161,12 @@ export default async function ServicePage({ params }: Props) {
       <section id="service-insight" aria-labelledby="service-insight-title" className="scroll-mt-32 pb-[76px] md:pb-[114px]">
         <Container size="wide">
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.35fr] lg:gap-12">
-            <Reveal subtle>
+            <Reveal initiallyHidden>
               <p className="flex items-center gap-3 text-muted-foreground text-[14px] font-medium"><span className="h-[3px] w-[34px] shrink-0 bg-brand" aria-hidden />{labels.technicalFocus}</p>
               <h2 id="service-insight-title" className="domtek-text-shadow mt-6 text-[30px] font-extrabold leading-[1.1] sm:text-[36px] min-[1800px]:text-[42px]">{copy.technicalFocus.title}</h2>
               <p className="mt-6 text-muted-foreground text-[15px] font-medium leading-[1.6]">{copy.technicalFocus.intro}</p>
             </Reveal>
-            <Reveal subtle delay={0.07} className="min-w-0">
+            <Reveal initiallyHidden delay={0.08} className="min-w-0">
               <table className="w-full table-fixed text-left text-[13px] leading-[1.5]">
                 <caption className="sr-only">{copy.technicalFocus.title}</caption>
                 <thead className="sr-only md:not-sr-only">
@@ -193,12 +193,12 @@ export default async function ServicePage({ params }: Props) {
         <Container size="wide">
           {heroProject && (
             <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14">
-              <Reveal subtle>
+              <Reveal initiallyHidden>
                 <Link href={`/projects/${heroProject.id}`} aria-label={`${labels.viewProject} : ${heroProject.title}`} className={`relative block aspect-[4/3] overflow-hidden rounded-[7px] bg-muted ${focusStyle}`}>
                   <Image src={heroProject.image} alt={heroProject.imageAlt} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-contain p-5 sm:p-8" />
                 </Link>
               </Reveal>
-              <Reveal subtle delay={0.07}>
+              <Reveal initiallyHidden delay={0.08}>
                 <p className="flex items-center gap-3 text-muted-foreground text-[14px] font-medium"><span className="h-[3px] w-[34px] bg-brand" aria-hidden />{labels.caseStudy}</p>
                 <p className="mt-6 text-brand text-xs font-extrabold">{heroProject.title}</p>
                 <h2 id="service-projects-title" className="domtek-text-shadow mt-3 text-[30px] font-extrabold leading-[1.08] sm:text-[38px] min-[1800px]:text-[46px]">{copy.caseStudy.title}</h2>
@@ -213,7 +213,7 @@ export default async function ServicePage({ params }: Props) {
       <section aria-label={labels.approach} className="pb-[76px] md:pb-[114px]">
         <Container size="wide" className="max-w-[1400px] px-4 sm:px-6 min-[1800px]:max-w-[1680px]">
           <div className="grid gap-4 lg:grid-cols-[0.9fr_1.25fr_1.15fr] lg:items-stretch min-[1800px]:gap-5">
-            <Reveal subtle as="section" id="service-needs" aria-labelledby="service-needs-title" className="group scroll-mt-32 rounded-[15px] border border-border bg-white p-6 transition-shadow duration-300 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] motion-reduce:transition-none min-[1800px]:p-8">
+            <Reveal initiallyHidden as="section" id="service-needs" aria-labelledby="service-needs-title" className="group scroll-mt-32 rounded-[15px] border border-border bg-white p-6 transition-shadow duration-300 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] motion-reduce:transition-none min-[1800px]:p-8">
               <span className={`${homeAccentLineStyle} bg-brand`} aria-hidden />
               <h2 id="service-needs-title" className="mt-4 text-[20px] font-extrabold leading-tight">{labels.needs}</h2>
               <p className="mt-5 text-[14px] font-bold leading-[1.4]">{copy.outcome}</p>
@@ -222,7 +222,7 @@ export default async function ServicePage({ params }: Props) {
               </ul>
             </Reveal>
 
-            <Reveal subtle delay={0.07} as="section" id="service-method" aria-labelledby="service-method-title" className="group relative z-10 scroll-mt-32 rounded-[15px] bg-brand p-6 text-white shadow-[0_24px_42px_rgba(0,0,0,0.18)] transition-shadow duration-300 hover:shadow-[0_34px_70px_rgba(0,0,0,0.28)] motion-reduce:transition-none min-[1800px]:p-8">
+            <Reveal initiallyHidden delay={0.08} as="section" id="service-method" aria-labelledby="service-method-title" className="group relative z-10 scroll-mt-32 rounded-[15px] bg-brand p-6 text-white shadow-[0_24px_42px_rgba(0,0,0,0.18)] transition-shadow duration-300 hover:shadow-[0_34px_70px_rgba(0,0,0,0.28)] motion-reduce:transition-none min-[1800px]:p-8">
               <span className={`${homeAccentLineStyle} bg-white`} aria-hidden />
               <h2 id="service-method-title" className="mt-4 text-[22px] font-extrabold leading-tight">{labels.approach}</h2>
               <p className="mt-5 text-white/95 text-[13px] font-medium leading-[1.5]">{copy.approach}</p>
@@ -236,7 +236,7 @@ export default async function ServicePage({ params }: Props) {
               </ol>
             </Reveal>
 
-            <Reveal subtle delay={0.14} as="section" aria-labelledby="service-deliverables" className="group rounded-[15px] border border-border bg-white p-6 transition-shadow duration-300 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] motion-reduce:transition-none min-[1800px]:p-8">
+            <Reveal initiallyHidden delay={0.16} as="section" aria-labelledby="service-deliverables" className="group rounded-[15px] border border-border bg-white p-6 transition-shadow duration-300 hover:shadow-[0_18px_42px_rgba(0,0,0,0.07)] motion-reduce:transition-none min-[1800px]:p-8">
               <span className={`${homeAccentLineStyle} bg-brand`} aria-hidden />
               <h2 id="service-deliverables" className="mt-4 text-[20px] font-extrabold leading-tight">{labels.deliverables}</h2>
               <ul className="mt-5 space-y-4">
@@ -252,11 +252,11 @@ export default async function ServicePage({ params }: Props) {
       <section id="service-faq" aria-labelledby="service-faq-title" className="pb-[38px] md:pb-[57px]">
         <Container size="wide">
           <div className="grid gap-6 lg:grid-cols-[0.85fr_1.35fr] lg:gap-12">
-            <Reveal subtle>
+            <Reveal initiallyHidden>
               <h2 id="service-faq-title" className="domtek-text-shadow max-w-sm text-[30px] font-extrabold leading-[1.1] sm:text-[36px]">{labels.faq}<span className="text-brand">.</span></h2>
               <Link href="/expertise#expertise-faq" className={`mt-6 ${buttonStyle}`}>{faqCopy.fullFaqLink}<ArrowRight className="size-4 shrink-0" aria-hidden /></Link>
             </Reveal>
-            <Reveal subtle delay={0.07} className="min-w-0">
+            <Reveal initiallyHidden delay={0.08} className="min-w-0">
               <FaqSearch questions={copy.faq.map((item, index) => ({ ...item, id: `${service.slug}-${index}`, topic: service.slug }))} topics={[{id: service.slug, label: displayTitle}]} labels={faqCopy.labels} locale={locale} />
             </Reveal>
           </div>
@@ -266,7 +266,7 @@ export default async function ServicePage({ params }: Props) {
       <section aria-labelledby="service-contact" className="relative overflow-hidden bg-white py-[76px] md:py-[114px]">
         <Image src="/assets/technical-drawing-bottom-2x.webp" alt="" width={2246} height={602} sizes="50vw" className="pointer-events-none absolute right-0 top-8 hidden w-[50vw] max-w-[960px] opacity-60 md:block" />
         <Container size="wide" className="relative z-10">
-          <Reveal subtle className="max-w-[700px]">
+          <Reveal initiallyHidden className="max-w-[700px]">
             <p className="flex items-center gap-3 text-muted-foreground text-[14px] font-medium"><span className="h-[3px] w-[34px] bg-brand" aria-hidden />{labels.briefTitle}</p>
             <h2 id="service-contact" className="domtek-text-shadow mt-6 text-[34px] font-extrabold leading-[1.05] sm:text-[46px] md:text-[52px]"><span className="text-brand">.</span>{copy.ctaTitle}</h2>
             <p className="mt-6 max-w-[500px] text-muted-foreground text-[14px] font-medium leading-[1.5]">{copy.ctaBody}</p>
@@ -277,10 +277,10 @@ export default async function ServicePage({ params }: Props) {
 
       <nav aria-label={labels.other} className="pb-[76px]">
         <Container size="wide">
-          <Reveal subtle><h2 className="text-[22px] font-extrabold">{labels.other}</h2></Reveal>
+          <Reveal initiallyHidden><h2 className="text-[22px] font-extrabold">{labels.other}</h2></Reveal>
           <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
             {services.filter((item) => item.slug !== service.slug).map((item, index) => (
-              <Reveal subtle as="li" key={item.slug} delay={index * 0.035} className="min-w-0">
+              <Reveal initiallyHidden as="li" key={item.slug} delay={index * 0.08} className="min-w-0">
                 <Link href={`/expertise/${item.slug}`} className={`${secondaryButtonStyle} h-full min-h-[72px] w-full justify-between leading-[1.4]`}>
                   <span>{t(`items.${item.key}.title`)}</span><ArrowRight className="size-4 shrink-0 text-brand" aria-hidden />
                 </Link>

@@ -1,5 +1,9 @@
 # Apparition des sections — 23 octobre 2026
 
+## Ajustement après retour visuel
+
+La première variante douce a été écartée. Les nouveaux blocs utilisent désormais exactement le `Reveal initiallyHidden` de l’accueil : même déplacement de 24 px, même transition et même déclenchement. Les trois cartes reprennent les délais de `ProcessSection` : 0, 80 et 160 ms. Aucun réglage de l’accueil n’a été modifié.
+
 ## Vérification publique avant modification
 
 - `https://domteknika.ch/fr` affiche à nouveau le site, en HTTP 200.
@@ -10,7 +14,7 @@
 
 ## Modifications
 
-- Réemploi de `Reveal`, déjà utilisé sur le site : variante douce de 12 px / 420 ms, sans rebond, une fois par bloc. Décalage de 70 ms entre les trois cartes.
+- Réemploi de `Reveal initiallyHidden`, déjà utilisé sur l’accueil, une fois par bloc. Suppression complète de la variante `subtle`.
 - Six pages Expertise : introduction technique, tableau, réalisation, trois cartes, FAQ, appel au contact et autres expertises.
 - Pages détaillées Projets : présentation, périmètre, galerie, liens associés et contact.
 - Pages détaillées Brevets : informations, famille, projets liés, galerie, description, revendications et sources.
@@ -21,7 +25,7 @@
 
 - Aucune dépendance ajoutée ; Framer Motion était déjà chargé par la navigation commune.
 - Animation limitée à l'opacité et à la transformation, sans animation de la hauteur ni boucle permanente.
-- Le HTML initial contient les sections visibles. Seuls les blocs hors écran sont préparés après hydratation ; le contenu déjà visible lors d'un rechargement reste visible.
+- Comme sur l’accueil, les blocs commencent masqués pour déclencher leur apparition même lorsqu’ils sont déjà proches de la zone visible au chargement. Les textes restent présents dans le HTML ; le composant existant gère le défilement, le rechargement et les retours de navigation.
 - Les titres et images principaux ne sont pas masqués au chargement ; qualités, tailles et priorités de téléchargement des images conservées.
 - Identifiants d'ancrage et attributs ARIA transmis aux éléments animés.
 - Réduction des animations respectée, y compris lorsqu'elle est activée après chargement.
@@ -30,8 +34,8 @@
 ## Contrôles
 
 - ESLint ciblé, TypeScript et compilation de production réussis (778 pages générées).
-- Inspection du HTML généré : 42 prestations, 196 projets, 336 brevets et 14 pages légales. Présence des marqueurs d'animation, un H1 par page, aucun de ces nouveaux blocs masqué dans le HTML initial.
-- Chrome : apparition progressive mesurée sur ordinateur et à 390 × 844 ; retour final à opacité 1 et transformation nulle.
+- Les composants partagés couvrent les 42 prestations localisées et les pages détaillées Projets/Brevets et légales. Le contenu, les balises de titres, les liens et les données structurées restent inchangés.
+- Chrome après l’ajustement : apparition progressive mesurée sur ordinateur et à 390 × 844 ; même déplacement de 24 px et décalage des cartes que sur l’accueil ; retour final à opacité 1 et transformation nulle.
 - 16 blocs vérifiés sur les pages de prestations représentatives, tous visibles après défilement.
 - Passage d'une expertise à une autre, retour arrière, rechargement en milieu de page, accès direct à la FAQ et ouverture d'une réponse vérifiés.
 - Pages détaillées projet/brevet/confidentialité : apparition mesurée, pas de débordement horizontal observé.
