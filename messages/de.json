@@ -79,7 +79,7 @@
         },
         "electronics": {
           "title": "Elektronik",
-          "body": "Integration elektronischer und vernetzter Funktionen."
+          "body": "Elektronik für Prototypen, vom Versuchsaufbau bis zur Leiterplatte."
         }
       }
     }
@@ -216,7 +216,7 @@
   "ExpertisePage": {
     "Meta": {
       "title": "DOMTEKNIKA - Industrieexpertise",
-      "description": "Entdecken Sie DOMTEKNIKAs Expertise: Innovation, Produktdesign, Prototyping, Simulation, Polymere und Elektronik-Integration aus der Schweiz."
+      "description": "DOMTEKNIKA in der Schweiz: Innovation, Produktdesign, Simulation, Prototypenbau, Polymere und Elektronikentwicklung."
     },
     "Hero": {
       "eyebrow": "From engineering challenges to industrial solutions",
@@ -265,8 +265,8 @@
           "description": "Expertise in Polymerwerkstoffen, Spritzguss und Prozessoptimierung für Präzisionskomponenten."
         },
         "electronics": {
-          "title": "Elektronik-Integration",
-          "description": "Wir integrieren Stromversorgung, Steuerung und elektronische Komponenten in die mechanische Architektur Ihrer Produkte."
+          "title": "Elektronikentwicklung",
+          "description": "Wir entwickeln Prototypenelektronik, vom Aufbau im Gehäuse bis zur kompakten Leiterplatte, einschließlich der mechanischen Integration."
         }
       },
       "learnMore": "Leistung entdecken"

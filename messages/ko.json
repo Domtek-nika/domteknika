@@ -79,7 +79,7 @@
         },
         "electronics": {
           "title": "전자 기술",
-          "body": "전자 및 연결 기능 통합."
+          "body": "회로 구성부터 PCB까지, 프로토타입용 전자회로 개발."
         }
       }
     }
@@ -216,7 +216,7 @@
   "ExpertisePage": {
     "Meta": {
       "title": "DOMTEKNIKA - 산업 전문성",
-      "description": "스위스 기반 DOMTEKNIKA의 혁신, 제품 디자인, 프로토타이핑, 시뮬레이션, 폴리머, 전자 통합 전문성을 살펴보세요."
+      "description": "스위스 DOMTEKNIKA의 혁신, 제품 설계, 시뮬레이션, 프로토타이핑, 폴리머 및 전자회로 개발 역량을 확인하세요."
     },
     "Hero": {
       "eyebrow": "From engineering challenges to industrial solutions",
@@ -265,8 +265,8 @@
           "description": "정밀 부품을 위한 폴리머 소재, 사출 성형, 공정 최적화 전문성."
         },
         "electronics": {
-          "title": "전자 통합",
-          "description": "제품의 기계 구조에 전원, 제어와 전자 부품을 통합합니다."
+          "title": "전자회로 개발",
+          "description": "하우징 내 회로 구성부터 소형 PCB까지, 기계적 통합과 함께 프로토타입용 전자회로를 개발합니다."
         }
       },
       "learnMore": "서비스 살펴보기"

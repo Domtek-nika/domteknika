@@ -1,5 +1,7 @@
 # Relecture des remarques d’Étienne — 22 octobre 2026
 
+> Compte rendu historique, remplacé comme référence par [la relecture de la V2 du 23 octobre 2026](etienne-review-v2-2026-10-23.md). La décision électronique laissée en suspens ci-dessous a été confirmée dans la V2 et appliquée.
+
 Source : « Remarques Etienne.pptx », 29 diapositives. Toutes les diapositives ont été rendues en images. Les captures annotées ont été examinées en grand et leur texte vérifié par OCR, en complément de l’extraction des zones de texte du PowerPoint.
 
 La comparaison porte sur les six pages de prestation et leur FAQ partagée. Les remarques déjà intégrées ont été vérifiées dans le contenu actuel. Les modifications complémentaires ci-dessous s’appliquent aux sept langues.

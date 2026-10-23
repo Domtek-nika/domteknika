@@ -79,7 +79,7 @@
         },
         "electronics": {
           "title": "电子技术",
-          "body": "集成电子与互联功能。"
+          "body": "原型电子系统开发，从电路组件到 PCB。"
         }
       }
     }
@@ -216,7 +216,7 @@
   "ExpertisePage": {
     "Meta": {
       "title": "DOMTEKNIKA - 工业专长",
-      "description": "了解 DOMTEKNIKA 源自瑞士的创新、产品设计、原型开发、仿真、聚合物和电子集成专长。"
+      "description": "了解瑞士 DOMTEKNIKA 在创新、产品设计、仿真、原型制作、聚合物及电子系统开发方面的专业能力。"
     },
     "Hero": {
       "eyebrow": "From engineering challenges to industrial solutions",
@@ -265,8 +265,8 @@
           "description": "面向精密组件的聚合物材料、注塑成型和工艺优化专长。"
         },
         "electronics": {
-          "title": "电子集成",
-          "description": "将电源、控制和电子组件集成到产品的机械架构中。"
+          "title": "电子系统开发",
+          "description": "从机箱内的电路组件到紧凑型 PCB，我们结合机械集成开发原型电子系统。"
         }
       },
       "learnMore": "了解服务"

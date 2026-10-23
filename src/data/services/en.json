@@ -486,94 +486,94 @@
       }
     },
     "electronics-integration": {
-      "title": "Electrical and electronics integration",
-      "description": "DOMTEKNIKA integrates electrical and electronic functions into the mechanical architecture of products and demonstrators.",
-      "approach": "Development begins with the required functions and interfaces: power supply, control, components and packaging. Integration is considered alongside the mechanics to create a coherent, accessible system.",
-      "validation": "Our projects include electric mobility architectures and an automatically synchronised clock. Development depth, testing and preparation for production are defined around each project.",
+      "title": "Electronics development for prototypes",
+      "description": "DOMTEKNIKA develops electronics for your prototypes, from simple circuits in an enclosure to printed circuit boards (PCBs), alongside the product’s mechanical design.",
+      "approach": "We start with the required functions to design circuits and select components. Depending on the project stage, we develop a simple assembly in an enclosure or a compact PCB. Control and power are developed together with the prototype’s mechanisms.",
+      "validation": "Tests cover the agreed functions and the operation of the complete electromechanical system. The results guide changes to the circuits and their integration before the next development stage.",
       "deliverables": [
-        "Functional architecture and interfaces",
-        "Component integration into the product",
-        "Prototype and functional checks within the agreed scope"
+        "Schematics and component selection for the agreed functions",
+        "Electronic assembly or PCB suited to the prototype",
+        "Functional development and results of the agreed checks"
       ],
-      "outcome": "Make mechanics, power supply and control work together.",
+      "outcome": "Develop the electronics that make your prototype work.",
       "needs": [
-        "Add an electrical function to a product",
-        "Develop an electromechanical demonstrator",
-        "Resolve interfaces between components and mechanics"
+        "Develop electronics for a new prototype",
+        "Move from a test assembly to a compact board",
+        "Develop the electronics alongside the product’s mechanics"
       ],
       "steps": [
         {
-          "title": "Define functions",
-          "body": "Clarify power, control and interfaces."
+          "title": "Define the functions",
+          "body": "Specify the controls, power supply and prototype interfaces."
         },
         {
-          "title": "Integrate components",
-          "body": "Plan packaging, assembly and access within the product."
+          "title": "Develop the electronics",
+          "body": "Design the circuits and build an assembly or PCB."
         },
         {
-          "title": "Verify the system",
-          "body": "Test functions and refine integration."
+          "title": "Refine the prototype",
+          "body": "Test the functions with the mechanics and adjust the design."
         }
       ],
       "faq": [
         {
+          "question": "Do you develop electronics or only integrate them?",
+          "answer": "We develop our own electronics to operate the prototypes of products we design. This covers circuits, component selection and development of the agreed functions, alongside the mechanical design."
+        },
+        {
+          "question": "Does the first prototype need a PCB?",
+          "answer": "Not always. A simple assembly in an enclosure may be enough to verify a function. A printed circuit board (PCB) can then provide a more compact implementation when the project needs it."
+        },
+        {
+          "question": "Can you develop compact electronics?",
+          "answer": "Yes. We can design PCB electronics to fit the space available in the prototype. Functions, power, connections and mechanical constraints are defined together."
+        },
+        {
           "question": "Can you work with our electronics team?",
-          "answer": "Yes. We can focus on interfaces and mechanical integration, coordinating with your project teams or partners."
+          "answer": "Yes. We agree how development is shared with your teams or partners and define the interfaces between the circuits and mechanics. Work can cover new electronics or integration of an existing design."
         },
         {
           "question": "What information should we prepare?",
-          "answer": "Required functions, selected components, power constraints and available drawings. We then define the necessary development work and checks."
+          "answer": "The required functions, intended use, available space and power constraints. Existing components, schematics or prototypes can provide a starting point."
         },
         {
-          "question": "What does electronics integration cover?",
-          "answer": "It covers component placement, power, connections and interfaces with the mechanical design. Any electronics design or software work needed is defined in the project scope."
+          "question": "How do you validate the prototype’s electronics?",
+          "answer": "We check power, controls and functions together with the product’s mechanisms. Criteria and test conditions are agreed beforehand; the results guide corrections and subsequent versions."
         },
         {
-          "question": "Do the components need to be selected already?",
-          "answer": "No. Work can start from required functions or components you already have. Data sheets, dimensions and power requirements then help define the architecture and integration constraints."
-        },
-        {
-          "question": "Why does the enclosure affect electronics?",
-          "answer": "It determines available space, mounting, cable routing and access to connections. It also contributes to heat removal; these constraints are addressed together with the product’s operating conditions."
-        },
-        {
-          "question": "How is the combined mechanical and electronic system tested?",
-          "answer": "Interfaces are checked progressively: power, control, movement and behaviour during use. Tests should match the required functions and intended operating conditions, with criteria defined in advance."
-        },
-        {
-          "question": "How can the runtime of a battery-powered product be estimated?",
-          "answer": "Account for consumption in each operating mode, the time spent in those modes and the usable battery capacity. Standby consumption matters too. An estimate based on the intended use should then be checked against measurements on the system."
+          "question": "Are prototype electronics ready for production?",
+          "answer": "Not automatically. The prototype verifies the intended functions. Production preparation, further testing and any applicable compliance requirements need to be defined for industrialisation."
         }
       ],
       "caseStudy": {
-        "title": "Telling the time without a visible central pivot.",
-        "body": "The transparent clock combines peripherally driven discs with automatic atomic-clock synchronisation. DOMTEKNIKA developed the complete electrical and mechanical concept, coordinated the design study and built a working prototype with moulded gear segments. Integration makes the product’s visual principle possible."
+        "title": "A synchronised clock with no visible central pivot.",
+        "body": "For the transparent clock, DOMTEKNIKA developed the complete electrical and mechanical system. The discs are driven at their edges and the time is automatically synchronised to an atomic clock. A working prototype brought the electrical control and mechanism together in the product."
       },
-      "ctaTitle": "Which functions would you like to integrate?",
-      "ctaBody": "Tell us about the required functions, components and power or enclosure constraints. We can define the interfaces and the checks needed.",
+      "ctaTitle": "What electronics does your prototype need?",
+      "ctaBody": "Describe the functions, available space and work already completed. We can define the electronics and tests suited to your prototype.",
       "technicalFocus": {
-        "title": "Electronics integration also depends on mechanics.",
-        "intro": "Integrating a board, sensor or motor requires space for connections, mounting and operating conditions. The mechanical enclosure also influences access, wiring and heat removal. These interfaces need defining as part of the product architecture.",
+        "title": "Electronics designed for your prototype.",
+        "intro": "We develop our own electronics to operate the prototypes we design. An early assembly may have room inside an enclosure; a more compact prototype may need a dedicated printed circuit board. The choice depends on the functions to verify and the target size.",
         "columns": [
-          "Interface",
-          "The detail often missed",
-          "Define together"
+          "Prototype need",
+          "Our development work",
+          "What we verify"
         ],
         "rows": [
           {
-            "title": "Power supply",
-            "why": "Current at start-up or during an action can differ from average consumption.",
-            "check": "Operating modes, current peaks and connections."
+            "title": "Make the concept work",
+            "why": "Circuits and components combined in a simple enclosed assembly.",
+            "check": "Control response and operation of the mechanisms."
           },
           {
-            "title": "Space and access",
-            "why": "A connector needs room to be plugged in; replaceable components need access.",
-            "check": "Reserved volumes, cable routing and assembly sequence."
+            "title": "Reduce the size",
+            "why": "Electronics on a printed circuit board (PCB), sized for the available space.",
+            "check": "Connections, mounting and access within the prototype."
           },
           {
-            "title": "Heat",
-            "why": "Power losses heat components; the board and enclosure contribute to the thermal path.",
-            "check": "The environment, heat to remove and its path to the outside."
+            "title": "Refine the complete system",
+            "why": "Adjustments to the electronics alongside the product’s mechanics.",
+            "check": "Power and functions under the agreed test conditions."
           }
         ]
       }

@@ -7,8 +7,8 @@ import { getServicePath } from "@/data/services";
 
 const expertiseItems = [
   "creativity",
-  "prototyping",
   "simulation",
+  "prototyping",
   "electronics",
 ] as const;
 

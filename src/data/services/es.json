@@ -486,94 +486,94 @@
       }
     },
     "electronics-integration": {
-      "title": "Integración eléctrica y electrónica",
-      "description": "DOMTEKNIKA integra funciones eléctricas y electrónicas en la arquitectura mecánica de productos y demostradores.",
-      "approach": "El desarrollo parte de las funciones y sus interfaces: alimentación, control, componentes y espacio disponible. La integración se estudia junto con la mecánica para obtener un conjunto coherente y accesible.",
-      "validation": "Nuestros proyectos incluyen arquitecturas de movilidad eléctrica y un reloj sincronizado automáticamente. El desarrollo, las pruebas y la preparación industrial se adaptan a cada proyecto.",
+      "title": "Desarrollo electrónico para prototipos",
+      "description": "DOMTEKNIKA desarrolla la electrónica de sus prototipos, desde montajes sencillos en una caja hasta placas de circuito impreso (PCB), junto con la mecánica del producto.",
+      "approach": "Partimos de las funciones necesarias para diseñar los circuitos y elegir los componentes. Según la fase del proyecto, desarrollamos un montaje sencillo en una caja o una PCB compacta. El control y la alimentación se ponen a punto junto con los mecanismos del prototipo.",
+      "validation": "Los ensayos comprueban las funciones acordadas y el funcionamiento del conjunto electromecánico. Los resultados orientan la evolución de los circuitos y su integración antes de las siguientes fases del proyecto.",
       "deliverables": [
-        "Arquitectura funcional e interfaces",
-        "Integración de componentes en el producto",
-        "Prototipo y verificaciones funcionales según el alcance"
+        "Esquemas y selección de componentes para las funciones acordadas",
+        "Montaje electrónico o PCB adaptado al prototipo",
+        "Puesta a punto y resultados de las verificaciones previstas"
       ],
-      "outcome": "Hacer que mecánica, alimentación y control funcionen juntos.",
+      "outcome": "Desarrollar la electrónica que hace funcionar su prototipo.",
       "needs": [
-        "Integrar una función eléctrica en un producto",
-        "Desarrollar un demostrador electromecánico",
-        "Resolver interfaces entre componentes y mecánica"
+        "Desarrollar la electrónica de un nuevo prototipo",
+        "Pasar de un montaje de validación a una placa compacta",
+        "Desarrollar la electrónica junto con la mecánica del producto"
       ],
       "steps": [
         {
           "title": "Definir las funciones",
-          "body": "Aclarar alimentación, control e interfaces."
+          "body": "Precisar el control, la alimentación y las interfaces del prototipo."
         },
         {
-          "title": "Integrar los componentes",
-          "body": "Organizar espacio, montaje y acceso dentro del producto."
+          "title": "Desarrollar la electrónica",
+          "body": "Diseñar los circuitos y realizar un montaje o una PCB."
         },
         {
-          "title": "Verificar el conjunto",
-          "body": "Probar las funciones y ajustar la integración."
+          "title": "Poner a punto el prototipo",
+          "body": "Probar las funciones con la mecánica y ajustar la realización."
         }
       ],
       "faq": [
         {
-          "question": "¿Pueden trabajar con nuestro equipo electrónico?",
-          "answer": "Sí. Podemos centrarnos en las interfaces y la integración mecánica, en coordinación con los equipos o colaboradores del proyecto."
+          "question": "¿Desarrollan la electrónica o solo la integran?",
+          "answer": "Desarrollamos nuestra propia electrónica para hacer funcionar los prototipos de los productos que diseñamos. Incluye los circuitos, la selección de componentes y la puesta a punto de las funciones acordadas, junto con la mecánica."
+        },
+        {
+          "question": "¿El primer prototipo necesita una PCB?",
+          "answer": "No siempre. Un montaje sencillo en una caja puede bastar para verificar una función. Una placa de circuito impreso (PCB) permite después una realización más compacta si el proyecto lo necesita."
+        },
+        {
+          "question": "¿Pueden desarrollar electrónica compacta?",
+          "answer": "Sí. Podemos diseñar electrónica sobre PCB adaptada al espacio disponible en el prototipo. Las funciones, la alimentación, las conexiones y las restricciones mecánicas se definen conjuntamente."
+        },
+        {
+          "question": "¿Pueden trabajar con nuestro equipo de electrónica?",
+          "answer": "Sí. Acordamos el reparto del desarrollo con sus equipos o socios y definimos las interfaces entre los circuitos y la mecánica. El trabajo puede abarcar nueva electrónica o la integración de una realización existente."
         },
         {
           "question": "¿Qué información debemos preparar?",
-          "answer": "Las funciones deseadas, componentes seleccionados, requisitos de alimentación y planos disponibles. Después concretamos los desarrollos y verificaciones necesarios."
+          "answer": "Las funciones esperadas, el escenario de uso, el espacio disponible y las restricciones de alimentación. Los componentes, esquemas o prototipos existentes sirven como punto de partida."
         },
         {
-          "question": "¿Qué incluye la integración electrónica?",
-          "answer": "Se coordinan la ubicación, la alimentación, las conexiones y las interfaces mecánicas de los componentes. Si se necesita diseño electrónico o software, su alcance se define expresamente."
+          "question": "¿Cómo validan la electrónica del prototipo?",
+          "answer": "Verificamos la alimentación, el control y las funciones junto con los mecanismos del producto. Los criterios y las condiciones de ensayo se acuerdan previamente; los resultados orientan las correcciones y las siguientes versiones."
         },
         {
-          "question": "¿Deben estar elegidos los componentes electrónicos?",
-          "answer": "No. Podemos partir de las funciones necesarias o de componentes disponibles. Las fichas técnicas, las dimensiones y la alimentación ayudan a definir la arquitectura y sus restricciones."
-        },
-        {
-          "question": "¿Por qué influye la carcasa en la electrónica?",
-          "answer": "El espacio, las fijaciones, los cables y el acceso dependen del diseño mecánico. También debe considerarse la evacuación del calor en las condiciones de uso previstas."
-        },
-        {
-          "question": "¿Cómo se prueba el conjunto mecánico y electrónico?",
-          "answer": "De forma progresiva: alimentación, control, movimiento y uso. Las pruebas se centran en las funciones necesarias y las condiciones previstas, con criterios definidos de antemano."
-        },
-        {
-          "question": "¿Cómo se estima la autonomía de un producto con batería?",
-          "answer": "Se considera el consumo en cada modo, el tiempo de funcionamiento en esos modos y la capacidad realmente utilizable de la batería. El consumo en espera también cuenta. La estimación basada en el uso previsto debe contrastarse después con mediciones del sistema."
+          "question": "¿La electrónica de un prototipo está lista para producirse en serie?",
+          "answer": "No automáticamente. El prototipo permite verificar las funciones previstas. La preparación de la producción, los ensayos adicionales y los posibles requisitos de conformidad se deben definir para la industrialización."
         }
       ],
       "caseStudy": {
-        "title": "Dar la hora sin un pivote central visible.",
-        "body": "El reloj transparente combina discos accionados por su periferia con sincronización automática con el reloj atómico. DOMTEKNIKA desarrolló el concepto eléctrico y mecánico completo, coordinó el estudio de diseño y construyó un prototipo funcional con segmentos de engranaje inyectados. La integración hace posible el principio visual del producto."
+        "title": "Un reloj sincronizado sin eje central visible.",
+        "body": "Para el reloj de fondo transparente, DOMTEKNIKA desarrolló el sistema eléctrico y mecánico completo. Los discos se accionan desde la periferia y la hora se sincroniza automáticamente con el reloj atómico. Un prototipo funcional permitió reunir el control eléctrico y el mecanismo en el producto."
       },
-      "ctaTitle": "¿Qué funciones quiere integrar?",
-      "ctaBody": "Describa las funciones, los componentes y las restricciones de alimentación o de la carcasa. Definiremos las interfaces y las comprobaciones necesarias.",
+      "ctaTitle": "¿Qué electrónica necesita su prototipo?",
+      "ctaBody": "Describa las funciones, el espacio disponible y los elementos ya desarrollados. Definiremos la electrónica y los ensayos adecuados para su prototipo.",
       "technicalFocus": {
-        "title": "La integración electrónica también depende de la mecánica.",
-        "intro": "Integrar una placa, un sensor o un motor exige espacio para sus conexiones, su fijación y su funcionamiento. La envolvente mecánica también influye en el acceso, el cableado y la evacuación de calor. Estas interfaces se definen desde la arquitectura del producto.",
+        "title": "Electrónica diseñada para su prototipo.",
+        "intro": "Desarrollamos nuestra propia electrónica para hacer funcionar los prototipos que diseñamos. Un primer montaje puede disponer de espacio en una caja; un prototipo más compacto puede requerir un circuito impreso específico. La elección depende de las funciones que se deben verificar y del tamaño previsto.",
         "columns": [
-          "Interfaz",
-          "El detalle que suele olvidarse",
-          "Qué definir juntos"
+          "Necesidad del prototipo",
+          "Nuestro desarrollo",
+          "Qué verificamos"
         ],
         "rows": [
           {
-            "title": "Alimentación",
-            "why": "La corriente de arranque o durante una acción puede diferir del consumo medio.",
-            "check": "Los modos de funcionamiento, los picos de corriente y las conexiones."
+            "title": "Hacer funcionar el principio",
+            "why": "Circuitos y componentes reunidos en un montaje sencillo dentro de una caja.",
+            "check": "La respuesta del control y el funcionamiento de los mecanismos."
           },
           {
-            "title": "Espacio y acceso",
-            "why": "Un conector necesita espacio para conectarse; un componente sustituible debe ser accesible.",
-            "check": "Los volúmenes reservados, el recorrido del cableado y el orden de montaje."
+            "title": "Reducir el tamaño",
+            "why": "Electrónica sobre una placa de circuito impreso (PCB), adaptada al espacio disponible.",
+            "check": "Las conexiones, las fijaciones y el acceso en el prototipo."
           },
           {
-            "title": "Calor",
-            "why": "Las pérdidas calientan los componentes; la placa y la carcasa participan en el camino térmico.",
-            "check": "El entorno, el calor que se debe evacuar y su recorrido hasta el exterior."
+            "title": "Poner a punto el conjunto",
+            "why": "Ajustes de la electrónica junto con la mecánica del producto.",
+            "check": "La alimentación y las funciones en las condiciones de ensayo acordadas."
           }
         ]
       }

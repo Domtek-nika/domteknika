@@ -486,94 +486,94 @@
       }
     },
     "electronics-integration": {
-      "title": "Intégration électrique et électronique",
-      "description": "DOMTEKNIKA intègre les fonctions électriques et électroniques à l’architecture mécanique de produits et de démonstrateurs.",
-      "approach": "Le développement part des fonctions attendues et de leurs interfaces : alimentation, commande, composants et encombrement. L’intégration est étudiée avec la mécanique pour rendre l’ensemble cohérent et accessible.",
-      "validation": "Nous avons notamment développé des architectures de mobilité électrique et une horloge synchronisée automatiquement. Le niveau de développement, les essais et la préparation industrielle sont définis selon les besoins du projet.",
+      "title": "Développement électronique pour prototypes",
+      "description": "DOMTEKNIKA développe l’électronique de vos prototypes, du montage simple en boîtier à la carte sur circuit imprimé (PCB), en lien avec la mécanique du produit.",
+      "approach": "Nous partons des fonctions à réaliser pour concevoir les circuits et choisir les composants. Selon le stade du projet, nous développons un montage simple en boîtier ou une carte PCB compacte. La commande et l’alimentation sont mises au point avec les mécanismes du prototype.",
+      "validation": "Les essais portent sur les fonctions convenues et sur le fonctionnement de l’ensemble électromécanique. Ils permettent de faire évoluer les circuits et leur intégration avant les étapes suivantes du projet.",
       "deliverables": [
-        "Architecture fonctionnelle et interfaces",
-        "Intégration des composants au produit",
-        "Prototype et vérifications fonctionnelles selon le périmètre"
+        "Schémas et choix des composants pour les fonctions convenues",
+        "Réalisation électronique adaptée au prototype : montage ou carte PCB",
+        "Mise au point et résultats des vérifications prévues"
       ],
-      "outcome": "Faire fonctionner ensemble la mécanique, l’alimentation et la commande.",
+      "outcome": "Concevoir l’électronique qui fait fonctionner votre prototype.",
       "needs": [
-        "Intégrer une fonction électrique dans un produit",
-        "Développer un démonstrateur électromécanique",
-        "Résoudre les interfaces entre composants et mécanique"
+        "Développer l’électronique d’un nouveau prototype",
+        "Passer d’un montage de validation à une carte compacte",
+        "Faire évoluer l’électronique avec la mécanique du produit"
       ],
       "steps": [
         {
           "title": "Définir les fonctions",
-          "body": "Clarifier l’alimentation, la commande et les interfaces."
+          "body": "Préciser les commandes, l’alimentation et les interfaces du prototype."
         },
         {
-          "title": "Intégrer les composants",
-          "body": "Organiser encombrement, montage et accès dans le produit."
+          "title": "Développer l’électronique",
+          "body": "Concevoir les circuits et réaliser un montage ou une carte PCB."
         },
         {
-          "title": "Vérifier l’ensemble",
-          "body": "Tester les fonctions et faire évoluer l’intégration."
+          "title": "Mettre au point le prototype",
+          "body": "Tester les fonctions avec la mécanique et ajuster la réalisation."
         }
       ],
       "faq": [
         {
-          "question": "Pouvez-vous intervenir avec notre équipe électronique ?",
-          "answer": "Oui. Le travail peut porter sur les interfaces et l’intégration mécanique, en coordination avec les équipes ou partenaires du projet."
+          "question": "Développez-vous l’électronique ou seulement son intégration ?",
+          "answer": "Nous développons nos propres électroniques pour faire fonctionner les prototypes des produits que nous concevons. Cela comprend les circuits, le choix des composants et la mise au point des fonctions convenues, en lien avec la mécanique."
         },
         {
-          "question": "Quels documents faut-il préparer ?",
-          "answer": "Les fonctions attendues, les composants déjà retenus, les contraintes d’alimentation et les plans disponibles. Nous précisons ensuite les développements et vérifications nécessaires."
+          "question": "Faut-il une carte PCB dès le premier prototype ?",
+          "answer": "Pas toujours. Un montage simple dans un boîtier peut suffire pour vérifier une fonction. Une carte sur circuit imprimé (PCB) permet ensuite, si le besoin le justifie, d’adapter la réalisation à un encombrement plus compact."
         },
         {
-          "question": "Que couvre l’intégration électronique ?",
-          "answer": "Elle concerne la place des composants dans le produit, leur alimentation, leurs connexions et leurs interfaces avec la mécanique. Les besoins de conception électronique ou de logiciel sont précisés dans le périmètre du projet."
+          "question": "Pouvez-vous développer une électronique compacte ?",
+          "answer": "Oui. Nous pouvons concevoir une électronique sur PCB adaptée à la place disponible dans le prototype. Les fonctions, l’alimentation, les connexions et les contraintes mécaniques sont définies ensemble."
         },
         {
-          "question": "Les composants doivent-ils déjà être choisis ?",
-          "answer": "Non. Le travail peut partir des fonctions attendues ou de composants déjà disponibles. Les fiches techniques, dimensions et besoins d’alimentation aident ensuite à préciser l’architecture et les contraintes d’intégration."
+          "question": "Pouvez-vous travailler avec notre équipe électronique ?",
+          "answer": "Oui. Nous définissons la répartition du développement avec vos équipes ou partenaires, ainsi que les interfaces entre les circuits et la mécanique. Le travail peut porter sur l’électronique à créer ou sur une réalisation existante à intégrer."
         },
         {
-          "question": "Pourquoi le boîtier influence-t-il l’électronique ?",
-          "answer": "Il détermine l’espace disponible, les fixations, le passage des câbles et l’accès aux connexions. Il participe aussi à l’évacuation de la chaleur ; ces contraintes se traitent avec les conditions d’utilisation du produit."
+          "question": "Quelles informations faut-il préparer ?",
+          "answer": "Les fonctions attendues, le scénario d’utilisation, l’encombrement disponible et les contraintes d’alimentation. Si vous disposez déjà de composants, de schémas ou d’un prototype, ils servent de point de départ."
         },
         {
-          "question": "Comment teste-t-on l’ensemble mécanique et électronique ?",
-          "answer": "Les interfaces sont vérifiées progressivement : alimentation, commande, mouvements et comportement en usage. Les essais doivent correspondre aux fonctions attendues et aux conditions retenues pour le produit, avec des critères définis à l’avance."
+          "question": "Comment validez-vous l’électronique du prototype ?",
+          "answer": "Nous vérifions l’alimentation, les commandes et les fonctions avec les mécanismes du produit. Les critères et les conditions d’essai sont définis en amont ; les résultats guident les corrections et les versions suivantes."
         },
         {
-          "question": "Comment estimer l’autonomie d’un produit sur batterie ?",
-          "answer": "Il faut connaître la consommation dans les différents modes, leur durée et la capacité réellement utilisable de la batterie. La consommation en veille compte aussi. Une estimation fondée sur le scénario d’usage doit ensuite être confrontée à des mesures sur le système."
+          "question": "Une électronique de prototype est-elle prête pour la série ?",
+          "answer": "Pas automatiquement. Le prototype sert à vérifier les fonctions prévues. La préparation à la production, les essais complémentaires et les éventuelles exigences de conformité doivent être définis pour la phase d’industrialisation."
         }
       ],
       "caseStudy": {
-        "title": "Donner l’heure sans pivot central visible.",
-        "body": "L’horloge à fond transparent associe des disques entraînés en périphérie à une synchronisation automatique sur l’horloge atomique. DOMTEKNIKA a développé le concept électrique et mécanique complet, piloté l’étude de design et réalisé un prototype fonctionnel avec des segments de pignon injectés. L’intégration rend possible le principe visuel du produit."
+        "title": "Une horloge synchronisée, sans pivot central visible.",
+        "body": "Pour l’horloge à fond transparent, DOMTEKNIKA a développé le système électrique et mécanique complet. Les disques sont entraînés en périphérie et l’heure est synchronisée automatiquement sur l’horloge atomique. Un prototype fonctionnel a permis de réunir la commande électrique et le mécanisme dans le produit."
       },
-      "ctaTitle": "Quelles fonctions souhaitez-vous intégrer ?",
-      "ctaBody": "Présentez les fonctions, les composants et les contraintes d’alimentation ou de boîtier. Nous pourrons définir les interfaces et les vérifications à mener.",
+      "ctaTitle": "Quelle électronique pour votre prototype ?",
+      "ctaBody": "Décrivez les fonctions à faire fonctionner, la place disponible et les éléments déjà développés. Nous définirons l’électronique et les essais adaptés à votre prototype.",
       "technicalFocus": {
-        "title": "L’électronique se joue aussi dans la mécanique.",
-        "intro": "Intégrer une carte, un capteur ou un moteur demande de réserver de la place pour ses connexions, ses fixations et ses conditions de fonctionnement. L’enveloppe mécanique influence aussi l’accès, le câblage et l’évacuation de la chaleur. Ces interfaces se définissent dès l’architecture du produit.",
+        "title": "Une électronique conçue pour votre prototype.",
+        "intro": "Nous développons nos propres électroniques pour faire fonctionner les prototypes que nous concevons. Un premier montage peut disposer de place dans un boîtier ; un prototype plus compact peut demander un circuit imprimé dédié. Le choix dépend des fonctions à vérifier et de l’encombrement visé.",
         "columns": [
-          "Interface",
-          "Le point souvent oublié",
-          "À préciser ensemble"
+          "Besoin du prototype",
+          "Notre développement",
+          "Ce que nous vérifions"
         ],
         "rows": [
           {
-            "title": "Alimentation",
-            "why": "Le courant au démarrage ou pendant une action peut différer de la consommation moyenne.",
-            "check": "Les modes de fonctionnement, les pointes de courant et les connexions."
+            "title": "Faire fonctionner le principe",
+            "why": "Circuits et composants réunis dans un montage simple en boîtier.",
+            "check": "La réponse des commandes et le fonctionnement des mécanismes."
           },
           {
-            "title": "Encombrement et accès",
-            "why": "Un connecteur doit pouvoir être branché ; un composant à remplacer doit rester accessible.",
-            "check": "Les volumes réservés, le passage des câbles et l’ordre d’assemblage."
+            "title": "Réduire l’encombrement",
+            "why": "Électronique sur circuit imprimé (PCB), adaptée à la place disponible.",
+            "check": "Les connexions, les fixations et l’accès dans le prototype."
           },
           {
-            "title": "Chaleur",
-            "why": "Les pertes dissipées chauffent les composants ; la carte et le boîtier participent au chemin thermique.",
-            "check": "L’environnement, la chaleur à évacuer et le chemin jusqu’à l’extérieur."
+            "title": "Mettre au point l’ensemble",
+            "why": "Ajustements de l’électronique avec la mécanique du produit.",
+            "check": "L’alimentation et les fonctions dans les conditions d’essai convenues."
           }
         ]
       }

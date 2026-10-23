@@ -79,7 +79,7 @@
         },
         "electronics": {
           "title": "Electronics",
-          "body": "Integration of electronic and connected functions."
+          "body": "Electronics development for prototypes, from assemblies to PCBs."
         }
       }
     }
@@ -216,7 +216,7 @@
   "ExpertisePage": {
     "Meta": {
       "title": "DOMTEKNIKA - Industrial expertise",
-      "description": "Explore DOMTEKNIKA expertise: innovation, product design, prototyping, simulation, polymers and electronics integration from Switzerland."
+      "description": "Explore DOMTEKNIKA expertise in Switzerland: innovation, product design, simulation, prototyping, polymers and electronics development."
     },
     "Hero": {
       "eyebrow": "From engineering challenges to industrial solutions",
@@ -265,8 +265,8 @@
           "description": "Expertise in polymer materials, injection molding and process optimization for precision components."
         },
         "electronics": {
-          "title": "Electronics Integration",
-          "description": "We integrate power, control and electronic components into your product’s mechanical architecture."
+          "title": "Electronics Development",
+          "description": "We develop prototype electronics, from enclosed assemblies to compact PCBs, together with their mechanical integration."
         }
       },
       "learnMore": "Explore this service"

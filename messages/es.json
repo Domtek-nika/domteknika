@@ -79,7 +79,7 @@
         },
         "electronics": {
           "title": "Electrónica",
-          "body": "Integración de funciones electrónicas y conectadas."
+          "body": "Desarrollo electrónico para prototipos, desde montajes hasta PCB."
         }
       }
     }
@@ -216,7 +216,7 @@
   "ExpertisePage": {
     "Meta": {
       "title": "DOMTEKNIKA - Experiencia industrial",
-      "description": "Explora la experiencia de DOMTEKNIKA: innovación, diseño de producto, prototipado, simulación, polímeros e integración electrónica desde Suiza."
+      "description": "Conozca la experiencia de DOMTEKNIKA en Suiza: innovación, diseño de producto, simulación, prototipado, polímeros y desarrollo electrónico."
     },
     "Hero": {
       "eyebrow": "From engineering challenges to industrial solutions",
@@ -265,8 +265,8 @@
           "description": "Experiencia en materiales poliméricos, moldeo por inyección y optimización de procesos para componentes de precisión."
         },
         "electronics": {
-          "title": "Integración electrónica",
-          "description": "Integramos alimentación, control y componentes electrónicos en la arquitectura mecánica de sus productos."
+          "title": "Desarrollo electrónico",
+          "description": "Desarrollamos electrónica para prototipos, desde montajes en caja hasta PCB compactas, junto con su integración mecánica."
         }
       },
       "learnMore": "Ver el servicio"

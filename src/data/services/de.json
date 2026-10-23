@@ -486,94 +486,94 @@
       }
     },
     "electronics-integration": {
-      "title": "Elektrische und elektronische Integration",
-      "description": "DOMTEKNIKA integriert elektrische und elektronische Funktionen in die mechanische Architektur von Produkten und Demonstratoren.",
-      "approach": "Ausgangspunkt sind Funktionen und Schnittstellen: Versorgung, Steuerung, Komponenten und Bauraum. Die Integration wird gemeinsam mit der Mechanik entwickelt.",
-      "validation": "Zu unseren Projekten gehören elektrische Mobilitätsarchitekturen und eine automatisch synchronisierte Uhr. Entwicklungstiefe, Prüfungen und Produktionsvorbereitung werden projektspezifisch festgelegt.",
+      "title": "Elektronikentwicklung für Prototypen",
+      "description": "DOMTEKNIKA entwickelt die Elektronik Ihrer Prototypen, vom einfachen Aufbau im Gehäuse bis zur kompakten Leiterplatte (PCB), abgestimmt auf die Produktmechanik.",
+      "approach": "Ausgehend von den benötigten Funktionen entwerfen wir Schaltungen und wählen die Bauteile aus. Je nach Projektstand entwickeln wir einen einfachen Aufbau im Gehäuse oder eine kompakte Leiterplatte. Steuerung und Stromversorgung werden gemeinsam mit den Mechanismen des Prototyps abgestimmt.",
+      "validation": "Die Tests prüfen die vereinbarten Funktionen und das Zusammenspiel des elektromechanischen Systems. Ihre Ergebnisse fließen in die Weiterentwicklung der Schaltungen und ihrer Integration ein.",
       "deliverables": [
-        "Funktionsarchitektur und Schnittstellen",
-        "Integration der Komponenten in das Produkt",
-        "Prototyp und Funktionsprüfungen im vereinbarten Umfang"
+        "Schaltpläne und Bauteilauswahl für die vereinbarten Funktionen",
+        "Elektronischer Aufbau oder Leiterplatte passend zum Prototyp",
+        "Inbetriebnahme und Ergebnisse der vereinbarten Prüfungen"
       ],
-      "outcome": "Mechanik, Stromversorgung und Steuerung zu einem funktionierenden System verbinden.",
+      "outcome": "Elektronik entwickeln, die Ihren Prototyp funktionsfähig macht.",
       "needs": [
-        "Eine elektrische Funktion in ein Produkt integrieren",
-        "Einen elektromechanischen Demonstrator entwickeln",
-        "Schnittstellen zwischen Komponenten und Mechanik klären"
+        "Elektronik für einen neuen Prototyp entwickeln",
+        "Einen Versuchsaufbau in eine kompakte Platine überführen",
+        "Elektronik und Produktmechanik gemeinsam weiterentwickeln"
       ],
       "steps": [
         {
           "title": "Funktionen definieren",
-          "body": "Stromversorgung, Steuerung und Schnittstellen klären."
+          "body": "Steuerung, Stromversorgung und Schnittstellen des Prototyps festlegen."
         },
         {
-          "title": "Komponenten integrieren",
-          "body": "Bauraum, Montage und Zugänglichkeit planen."
+          "title": "Elektronik entwickeln",
+          "body": "Schaltungen entwerfen und einen Aufbau oder eine Leiterplatte realisieren."
         },
         {
-          "title": "Gesamtsystem prüfen",
-          "body": "Funktionen testen und Integration weiterentwickeln."
+          "title": "Prototyp abstimmen",
+          "body": "Funktionen zusammen mit der Mechanik testen und die Ausführung anpassen."
         }
       ],
       "faq": [
         {
-          "question": "Arbeiten Sie mit unserem Elektronikteam zusammen?",
-          "answer": "Ja. Wir können Schnittstellen und mechanische Integration gemeinsam mit Ihren Projektteams oder Partnern bearbeiten."
+          "question": "Entwickeln Sie Elektronik oder integrieren Sie diese nur?",
+          "answer": "Wir entwickeln eigene Elektronik für die Prototypen der von uns konstruierten Produkte. Dazu gehören Schaltungen, Bauteilauswahl und die Abstimmung der vereinbarten Funktionen mit der Mechanik."
         },
         {
-          "question": "Welche Unterlagen sollen wir vorbereiten?",
-          "answer": "Gewünschte Funktionen, ausgewählte Komponenten, Anforderungen an die Stromversorgung und vorhandene Zeichnungen. Darauf aufbauend legen wir Entwicklung und Prüfungen fest."
+          "question": "Braucht der erste Prototyp bereits eine Leiterplatte?",
+          "answer": "Nicht immer. Ein einfacher Aufbau im Gehäuse kann ausreichen, um eine Funktion zu prüfen. Wenn das Projekt es erfordert, ermöglicht eine Leiterplatte (PCB) anschließend eine kompaktere Ausführung."
         },
         {
-          "question": "Was umfasst die Integration elektronischer Komponenten?",
-          "answer": "Einbau, Stromversorgung, Verbindungen und mechanische Schnittstellen werden aufeinander abgestimmt. Falls Elektronikentwicklung oder Software erforderlich sind, wird deren Umfang ausdrücklich festgelegt."
+          "question": "Können Sie kompakte Elektronik entwickeln?",
+          "answer": "Ja. Wir können eine Elektronik auf Leiterplatte entwickeln, die zum Bauraum des Prototyps passt. Funktionen, Stromversorgung, Anschlüsse und mechanische Randbedingungen werden gemeinsam definiert."
         },
         {
-          "question": "Müssen die elektronischen Komponenten schon ausgewählt sein?",
-          "answer": "Nein. Ausgangspunkt können die benötigten Funktionen oder bereits verfügbare Komponenten sein. Datenblätter, Abmessungen und Anforderungen an die Stromversorgung helfen, Architektur und Randbedingungen festzulegen."
+          "question": "Können Sie mit unserem Elektronikteam zusammenarbeiten?",
+          "answer": "Ja. Wir stimmen die Aufteilung der Entwicklung mit Ihren Teams oder Partnern ab und definieren die Schnittstellen zwischen Schaltungen und Mechanik. Die Arbeit kann neue Elektronik oder die Integration einer vorhandenen Lösung umfassen."
         },
         {
-          "question": "Warum beeinflusst das Gehäuse die Elektronik?",
-          "answer": "Bauraum, Befestigung, Kabel und Zugang hängen von der mechanischen Konstruktion ab. Auch die Wärmeabfuhr unter den vorgesehenen Betriebsbedingungen muss berücksichtigt werden."
+          "question": "Welche Informationen sollten wir vorbereiten?",
+          "answer": "Die benötigten Funktionen, das Nutzungsszenario, den verfügbaren Platz und die Anforderungen an die Stromversorgung. Vorhandene Bauteile, Schaltpläne oder Prototypen dienen als Ausgangspunkt."
         },
         {
-          "question": "Wie wird das Zusammenspiel von Mechanik und Elektronik geprüft?",
-          "answer": "Schrittweise, etwa über Stromversorgung, Steuerung, Bewegung und Nutzung. Die Prüfungen beziehen sich auf die benötigten Funktionen und vorgesehenen Bedingungen, mit vorab festgelegten Kriterien."
+          "question": "Wie prüfen Sie die Elektronik des Prototyps?",
+          "answer": "Wir prüfen Stromversorgung, Steuerung und Funktionen zusammen mit den Mechanismen des Produkts. Kriterien und Testbedingungen werden vorab vereinbart; die Ergebnisse bestimmen Korrekturen und weitere Versionen."
         },
         {
-          "question": "Wie wird die Laufzeit eines batteriebetriebenen Produkts abgeschätzt?",
-          "answer": "Erforderlich sind der Verbrauch in den verschiedenen Betriebsarten, deren Dauer und die tatsächlich nutzbare Batteriekapazität. Auch der Standby-Verbrauch zählt. Die Abschätzung für den vorgesehenen Einsatz wird anschliessend mit Messungen am System abgeglichen."
+          "question": "Ist Prototypenelektronik bereits serienreif?",
+          "answer": "Nicht automatisch. Der Prototyp dient zur Prüfung der vorgesehenen Funktionen. Produktionsvorbereitung, zusätzliche Tests und mögliche Konformitätsanforderungen werden für die Industrialisierung festgelegt."
         }
       ],
       "caseStudy": {
-        "title": "Die Zeit anzeigen, ohne sichtbare zentrale Achse.",
-        "body": "Die transparente Uhr verbindet am Umfang angetriebene Scheiben mit automatischer Synchronisation über die Atomuhr. DOMTEKNIKA entwickelte das vollständige elektrische und mechanische Konzept, koordinierte die Designstudie und baute einen Funktionsprototyp mit gespritzten Zahnsegmenten. Die Integration ermöglicht das visuelle Prinzip des Produkts."
+        "title": "Eine synchronisierte Uhr ohne sichtbare Mittelachse.",
+        "body": "Für die transparente Uhr entwickelte DOMTEKNIKA das komplette elektrische und mechanische System. Die Scheiben werden am Rand angetrieben; die Zeit wird automatisch mit einer Atomuhr synchronisiert. Ein funktionsfähiger Prototyp führte die elektrische Steuerung und den Mechanismus im Produkt zusammen."
       },
-      "ctaTitle": "Welche Funktionen möchten Sie integrieren?",
-      "ctaBody": "Beschreiben Sie Funktionen, Komponenten sowie die Bedingungen für Stromversorgung und Gehäuse. Daraus bestimmen wir Schnittstellen und notwendige Prüfungen.",
+      "ctaTitle": "Welche Elektronik braucht Ihr Prototyp?",
+      "ctaBody": "Beschreiben Sie die Funktionen, den verfügbaren Platz und den bisherigen Entwicklungsstand. Gemeinsam legen wir die passende Elektronik und die Prüfungen fest.",
       "technicalFocus": {
-        "title": "Elektronikintegration braucht auch Mechanik.",
-        "intro": "Eine Platine, ein Sensor oder ein Motor benötigt Platz für Anschlüsse, Befestigung und Betrieb. Das mechanische Gehäuse beeinflusst ausserdem Zugänglichkeit, Verkabelung und Wärmeabfuhr. Diese Schnittstellen werden bereits in der Produktarchitektur festgelegt.",
+        "title": "Elektronik für Ihren Prototyp.",
+        "intro": "Wir entwickeln eigene Elektronik für die Prototypen, die wir konstruieren. Ein erster Aufbau kann ausreichend Platz im Gehäuse haben; ein kompakterer Prototyp kann eine eigene Leiterplatte erfordern. Entscheidend sind die zu prüfenden Funktionen und der verfügbare Bauraum.",
         "columns": [
-          "Schnittstelle",
-          "Oft übersehen",
-          "Gemeinsam festlegen"
+          "Bedarf des Prototyps",
+          "Unsere Entwicklung",
+          "Was wir prüfen"
         ],
         "rows": [
           {
-            "title": "Stromversorgung",
-            "why": "Anlaufstrom oder Strom während einer Aktion kann vom Durchschnittsverbrauch abweichen.",
-            "check": "Betriebsarten, Stromspitzen und Anschlüsse."
+            "title": "Das Prinzip funktionsfähig machen",
+            "why": "Schaltungen und Bauteile in einem einfachen Aufbau im Gehäuse.",
+            "check": "Reaktion der Steuerung und Funktion der Mechanismen."
           },
           {
-            "title": "Bauraum und Zugang",
-            "why": "Stecker benötigen Platz zum Anschliessen; austauschbare Komponenten müssen zugänglich bleiben.",
-            "check": "Reservierte Volumen, Kabelführung und Montagefolge."
+            "title": "Den Bauraum reduzieren",
+            "why": "Elektronik auf einer Leiterplatte (PCB), angepasst an den verfügbaren Platz.",
+            "check": "Anschlüsse, Befestigung und Zugänglichkeit im Prototyp."
           },
           {
-            "title": "Wärme",
-            "why": "Verlustleistung erwärmt Komponenten; Platine und Gehäuse tragen zum Wärmeweg bei.",
-            "check": "Umgebung, abzuführende Wärme und den Weg nach aussen."
+            "title": "Das Gesamtsystem abstimmen",
+            "why": "Anpassungen der Elektronik gemeinsam mit der Produktmechanik.",
+            "check": "Stromversorgung und Funktionen unter den vereinbarten Testbedingungen."
           }
         ]
       }
