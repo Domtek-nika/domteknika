@@ -179,6 +179,17 @@ const nextConfig: NextConfig = {
         source,
         headers: noIndexMediaHeaders,
       })),
+      // Search engines need the site icon and Organization logo to be indexable.
+      // These identity assets override the general media rule above.
+      ...[
+        "/favicon.ico",
+        "/icon.png",
+        "/apple-icon.png",
+        "/assets/domteknika-logo-search.png",
+      ].map((source) => ({
+        source,
+        headers: [{ key: "X-Robots-Tag", value: "index, follow" }],
+      })),
       {
         source: "/assets/logo_DOMTEKNIKA_2023-alpha.png",
         headers: [

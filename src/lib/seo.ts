@@ -130,7 +130,6 @@ export function localizedUrl(locale: Locale, path = "") {
 
 export function organizationJsonLd(locale: string) {
   const resolvedLocale = resolveLocale(locale);
-  const localeUrl = localizedUrl(resolvedLocale);
 
   return {
     "@context": "https://schema.org",
@@ -138,10 +137,16 @@ export function organizationJsonLd(locale: string) {
       {
         "@id": `${SITE_URL}#organization`,
         "@type": ["Organization", "ProfessionalService"],
-        name: "DOMTEKNIKA SA",
+        name: "DOMTEKNIKA",
+        legalName: "DOMTEKNIKA SA",
         url: SITE_URL.toString(),
         sameAs: ["https://www.linkedin.com/company/domteknika1/"],
-        logo: new URL("/assets/domteknika-logo.png", SITE_URL).toString(),
+        logo: {
+          "@type": "ImageObject",
+          url: new URL("/assets/domteknika-logo-search.png", SITE_URL).toString(),
+          width: 600,
+          height: 600,
+        },
         image: new URL(SOCIAL_IMAGE_PATH, SITE_URL).toString(),
         email: "contact@domteknika.ch",
         telephone: "+41 32 751 71 46",
@@ -172,7 +177,8 @@ export function organizationJsonLd(locale: string) {
         "@id": `${SITE_URL}#website`,
         "@type": "WebSite",
         name: "DOMTEKNIKA",
-        url: localeUrl,
+        alternateName: "DOMTEKNIKA SA",
+        url: SITE_URL.toString(),
         inLanguage: HREF_LANGS[resolvedLocale],
         publisher: {
           "@id": `${SITE_URL}#organization`,
