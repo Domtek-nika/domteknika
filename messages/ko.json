@@ -110,7 +110,7 @@
   },
   "ProjectsPage": {
     "Meta": {
-      "title": "DOMTEKNIKA - 프로젝트",
+      "title": "엔지니어링 프로젝트와 시제품 | DOMTEKNIKA",
       "description": "스위스 정밀 엔지니어링, 프로토타이핑, 생산 분야의 DOMTEKNIKA 주요 프로젝트를 살펴보세요."
     }
   },
@@ -215,7 +215,7 @@
   },
   "ExpertisePage": {
     "Meta": {
-      "title": "DOMTEKNIKA - 산업 전문성",
+      "title": "스위스 제품 엔지니어링 전문 기술 | DOMTEKNIKA",
       "description": "스위스 DOMTEKNIKA의 혁신, 제품 설계, 시뮬레이션, 프로토타이핑, 폴리머 및 전자회로 개발 역량을 확인하세요."
     },
     "Hero": {

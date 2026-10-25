@@ -102,8 +102,9 @@ export function buildPageMetadata({
       images: [
         {
           url: image,
-          width: 1200,
-          height: 630,
+          // Only the shared social image has this fixed size. Project and
+          // patent images keep their actual aspect ratio when fetched.
+          ...(!imagePath ? { width: 1200, height: 630 } : {}),
           alt:
             imageAlt ??
             "DOMTEKNIKA — Shape your dream. Swiss engineering.",
@@ -184,7 +185,7 @@ export function organizationJsonLd(locale: string) {
           "Prototyping",
           "Industrial design",
           "Simulation",
-          "Electronics integration",
+          "Electronics development",
           "Production engineering",
         ],
         contactPoint: {

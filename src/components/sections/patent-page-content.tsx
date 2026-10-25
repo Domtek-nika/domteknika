@@ -1338,6 +1338,7 @@ export function PatentPageContent({
           value={searchTerm}
           onChange={(event) => setSearchTerm(event.target.value)}
           placeholder={copy.searchPlaceholder}
+          aria-label={copy.searchPlaceholder}
           className="h-11 w-full rounded-[4px] border border-border bg-white pl-11 pr-4 text-foreground outline-none shadow-[0_2px_7px_rgba(0,0,0,0.05)] transition-[border-color,box-shadow] duration-300 placeholder:text-muted-foreground/75 focus:border-brand/50 focus:shadow-[0_10px_24px_rgba(0,0,0,0.08)] min-[1800px]:!h-[52px] min-[1800px]:!pl-14 min-[1800px]:!pr-5 min-[2400px]:!h-[58px] text-[13px] font-medium min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]"
           type="search"
         />
@@ -2826,9 +2827,9 @@ function PatentDrawingGallery({
                   src={image.href}
                   alt=""
                   fill
-                  sizes="80px"
+                  sizes="(max-width: 639px) 33vw, 80px"
                   quality={100}
-                  unoptimized
+                  fetchPriority="low"
                   className="object-contain p-1.5"
                 />
               </button>

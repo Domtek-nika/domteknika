@@ -110,7 +110,7 @@
   },
   "ProjectsPage": {
     "Meta": {
-      "title": "DOMTEKNIKA - Projets",
+      "title": "Projets d’ingénierie et prototypes | DOMTEKNIKA",
       "description": "Découvrez une sélection de projets DOMTEKNIKA en ingénierie de précision, prototypage et production."
     }
   },
@@ -215,7 +215,7 @@
   },
   "ExpertisePage": {
     "Meta": {
-      "title": "DOMTEKNIKA - Expertise industrielle",
+      "title": "Expertises en ingénierie produit en Suisse | DOMTEKNIKA",
       "description": "Découvrez les expertises de DOMTEKNIKA en Suisse : innovation, conception produit, simulation, prototypage, polymères et développement électronique."
     },
     "Hero": {

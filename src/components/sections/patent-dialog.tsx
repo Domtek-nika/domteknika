@@ -1658,9 +1658,9 @@ function PatentDrawingGallery({
                   src={image.href}
                   alt=""
                   fill
-                  sizes="80px"
+                  sizes="(max-width: 639px) 33vw, 80px"
                   quality={100}
-                  unoptimized
+                  fetchPriority="low"
                   className="object-contain p-1.5"
                 />
               </button>

@@ -26,7 +26,7 @@ export function PatentDetailPage({
   );
 
   return (
-    <main className="bg-background pb-24 pt-[132px] md:pt-[152px]">
+    <div className="bg-background pb-24 pt-[132px] md:pt-[152px]">
       <Container size="wide">
         <Link
           href="/patents"
@@ -187,7 +187,7 @@ export function PatentDetailPage({
           ) : null}
         </article>
       </Container>
-    </main>
+    </div>
   );
 }
 

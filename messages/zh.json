@@ -110,7 +110,7 @@
   },
   "ProjectsPage": {
     "Meta": {
-      "title": "DOMTEKNIKA - 项目",
+      "title": "工程设计与原型开发项目 | DOMTEKNIKA",
       "description": "探索 DOMTEKNIKA 在瑞士精密工程、原型开发和生产领域的精选项目。"
     }
   },
@@ -215,7 +215,7 @@
   },
   "ExpertisePage": {
     "Meta": {
-      "title": "DOMTEKNIKA - 工业专长",
+      "title": "瑞士产品工程设计与技术专长 | DOMTEKNIKA",
       "description": "了解瑞士 DOMTEKNIKA 在创新、产品设计、仿真、原型制作、聚合物及电子系统开发方面的专业能力。"
     },
     "Hero": {

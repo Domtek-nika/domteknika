@@ -23,7 +23,7 @@ export function ProjectDetailPage({
   const gallery = Array.from(new Set([project.image, ...(project.gallery ?? [])]));
 
   return (
-    <main className="bg-background pb-24 pt-[132px] md:pt-[152px]">
+    <div className="bg-background pb-24 pt-[132px] md:pt-[152px]">
       <Container size="wide">
         <Link
           href="/projects"
@@ -134,6 +134,6 @@ export function ProjectDetailPage({
           </Reveal>
         </article>
       </Container>
-    </main>
+    </div>
   );
 }

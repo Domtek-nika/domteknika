@@ -318,6 +318,7 @@ export function Navbar() {
       </nav>
 
       <motion.div
+        inert={!mobileNavVisible || mobileOpen}
         className={cn(
           "fixed inset-x-4 top-3 z-[910] transform-gpu will-change-transform min-[810px]:hidden",
           (!mobileNavVisible || mobileOpen) && "pointer-events-none",
@@ -362,6 +363,7 @@ export function Navbar() {
 
       {!isContactPage && (
         <motion.div
+          inert={!contactBubbleVisible}
           ref={contactBubbleRef}
           className={cn(
             "fixed bottom-[calc(env(safe-area-inset-bottom)+30px)] right-5 z-[905] min-[810px]:hidden",

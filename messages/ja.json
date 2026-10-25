@@ -110,7 +110,7 @@
   },
   "ProjectsPage": {
     "Meta": {
-      "title": "DOMTEKNIKA - プロジェクト",
+      "title": "設計・試作プロジェクト | DOMTEKNIKA",
       "description": "スイスの精密な設計・試作・製造の技術を生かした DOMTEKNIKA のプロジェクトをご紹介します。"
     }
   },
@@ -215,7 +215,7 @@
   },
   "ExpertisePage": {
     "Meta": {
-      "title": "DOMTEKNIKA | 産業分野の専門技術",
+      "title": "スイスの製品設計・試作・技術開発 | DOMTEKNIKA",
       "description": "スイスのDOMTEKNIKAの専門技術：イノベーション、製品設計、シミュレーション、試作、ポリマー、電子回路開発。"
     },
     "Hero": {

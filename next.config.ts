@@ -89,7 +89,7 @@ const nonIndexableMediaSources = [
 // to the homepage. Removed pages without a matching service keep their 404.
 const legacyPagePaths = [
   ["projets", "projects"],
-  ["projets-2", "projects"],
+  ["projets-2", "expertise"], // Former WordPress page titled "Compétences".
   ["brevets", "patents"],
   ["conception-2", "expertise/mechanical-design"],
   ["analyse-numerique-2", "expertise/simulation"],

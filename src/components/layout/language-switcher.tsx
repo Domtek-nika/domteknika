@@ -181,12 +181,13 @@ export function LanguageSwitcher({ className }: { className?: string }) {
               if (event.target === event.currentTarget && !open) setClosing(false);
             }}
             className={cn(
-              "fixed z-[950] rounded-[10px] border border-white/80 bg-white/90 p-1 shadow-[0_16px_34px_rgba(0,0,0,0.14)] backdrop-blur-2xl min-[1800px]:!rounded-[12px] min-[1800px]:!p-1.5",
+              "fixed z-[950] overflow-y-auto overscroll-contain rounded-[10px] border border-white/80 bg-white/90 p-1 shadow-[0_16px_34px_rgba(0,0,0,0.14)] backdrop-blur-2xl min-[1800px]:!rounded-[12px] min-[1800px]:!p-1.5",
               open ? styles.enter : styles.exit,
             )}
             style={{
               left: menuPosition.left,
               minWidth: menuPosition.minWidth,
+              maxHeight: `calc(100dvh - ${menuPosition.top + 12}px)`,
               top: menuPosition.top,
             }}
           >

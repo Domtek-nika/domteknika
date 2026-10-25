@@ -60,10 +60,6 @@ export function ProjectsSection({
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(
     null,
   );
-  const carouselProjects = useMemo(
-    () => [...projects, ...projects],
-    [projects],
-  );
   const autoplay = useMemo(
     () =>
       Autoplay({
@@ -150,7 +146,7 @@ export function ProjectsSection({
               onBlur={() => autoplay.reset()}
             >
               <CarouselContent className="-ml-4 pb-8">
-                {carouselProjects.map((project, index) => (
+                {projects.map((project, index) => (
                   <CarouselItem
                     key={`${project.id}-${index}`}
                     className="basis-[min(340px,82vw)] pl-4 md:basis-[274px] min-[1800px]:!basis-[470px] min-[2300px]:!basis-[490px]"
@@ -228,7 +224,7 @@ function ProjectCard({
             fill
             loading="lazy"
             decoding="async"
-            sizes="(min-width: 2300px) 490px, (min-width: 1800px) 470px, 274px"
+            sizes="(min-width: 2300px) 490px, (min-width: 1800px) 470px, (min-width: 768px) 274px, min(340px, 82vw)"
             className={cn(
               "transition-transform duration-500 ease-smooth group-hover:scale-[1.035]",
               getProjectCardImageFitClass(project.id),

@@ -239,6 +239,7 @@ export function ContactForm({
           label={copy.email}
           error={fieldError("email")}
           spellCheck={false}
+          autoCapitalize="none"
           autoComplete="email"
           maxLength={254}
           disabled={status === "sending"}
@@ -267,7 +268,7 @@ export function ContactForm({
             aria-invalid={Boolean(fieldErrors.message) || undefined}
             aria-describedby={fieldErrors.message ? "contact-message-error" : undefined}
             className={cn(
-              "min-h-[88px] resize-y rounded-[7px] border border-input bg-white px-3.5 py-3 font-medium text-foreground outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-muted-foreground focus:border-brand/45 focus:shadow-[0_0_0_3px_rgba(227,6,19,0.08)] min-[1800px]:!min-h-[130px] min-[1800px]:!rounded-[10px] min-[1800px]:!px-5 min-[1800px]:!py-4 min-[2400px]:!min-h-[160px] min-[2400px]:!rounded-[12px] min-[2400px]:!px-6 min-[2400px]:!py-5 text-[13px] leading-[1.45] min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]",
+              "min-h-[88px] resize-y rounded-[7px] border border-input bg-white px-3.5 py-3 font-medium text-foreground outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-muted-foreground focus:border-brand/45 focus:shadow-[0_0_0_3px_rgba(227,6,19,0.08)] min-[1800px]:!min-h-[130px] min-[1800px]:!rounded-[10px] min-[1800px]:!px-5 min-[1800px]:!py-4 min-[2400px]:!min-h-[160px] min-[2400px]:!rounded-[12px] min-[2400px]:!px-6 min-[2400px]:!py-5 text-[16px] leading-[1.45] min-[810px]:text-[13px] min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]",
               fieldErrors.message && "border-brand",
             )}
           />
@@ -282,7 +283,7 @@ export function ContactForm({
       <button
         type="submit"
         disabled={!hydrated || status === "sending"}
-        className="mt-3 inline-flex h-[44px] w-full items-center justify-between rounded-[7px] bg-brand px-5 text-[14px] font-extrabold text-white shadow-[0_6px_12px_rgba(0,0,0,0.22)] transition-transform duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35 focus-visible:ring-offset-2 [transition-timing-function:var(--ease-smooth)] min-[1800px]:!mt-4 min-[1800px]:!h-[56px] min-[1800px]:!rounded-[10px] min-[1800px]:!px-7 min-[1800px]:!text-[17px] min-[2400px]:!mt-5 min-[2400px]:!h-[64px] min-[2400px]:!rounded-[12px] min-[2400px]:!px-8 min-[2400px]:!text-[19px]"
+        className="mt-3 inline-flex h-[44px] w-full cursor-pointer items-center justify-between rounded-[7px] bg-brand px-5 text-[14px] font-extrabold text-white shadow-[0_6px_12px_rgba(0,0,0,0.22)] transition-transform duration-300 enabled:hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/35 focus-visible:ring-offset-2 disabled:cursor-not-allowed [transition-timing-function:var(--ease-smooth)] min-[1800px]:!mt-4 min-[1800px]:!h-[56px] min-[1800px]:!rounded-[10px] min-[1800px]:!px-7 min-[1800px]:!text-[17px] min-[2400px]:!mt-5 min-[2400px]:!h-[64px] min-[2400px]:!rounded-[12px] min-[2400px]:!px-8 min-[2400px]:!text-[19px]"
       >
         {status === "sending" ? copy.sending : copy.submit}
         {status === "sending" ? (
@@ -369,7 +370,7 @@ function ContactInput({
       <input
         id={inputId}
         className={cn(
-          "h-[40px] rounded-[7px] border border-input bg-white px-3.5 text-[13px] font-medium text-foreground outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-muted-foreground focus:border-brand/45 focus:shadow-[0_0_0_3px_rgba(227,6,19,0.08)] min-[1800px]:!h-[52px] min-[1800px]:!rounded-[10px] min-[1800px]:!px-5 min-[2400px]:!h-[58px] min-[2400px]:!rounded-[12px] min-[2400px]:!px-6 min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]",
+          "h-[40px] rounded-[7px] border border-input bg-white px-3.5 text-[16px] font-medium text-foreground outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-muted-foreground focus:border-brand/45 focus:shadow-[0_0_0_3px_rgba(227,6,19,0.08)] min-[810px]:text-[13px] min-[1800px]:!h-[52px] min-[1800px]:!rounded-[10px] min-[1800px]:!px-5 min-[2400px]:!h-[58px] min-[2400px]:!rounded-[12px] min-[2400px]:!px-6 min-[1800px]:!text-[15px] min-[2400px]:!text-[17px]",
           error && "border-brand",
           className,
         )}
