@@ -1,3 +1,31 @@
+.topicsViewport {
+  margin: 12px -8px -20px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding: 8px 8px 20px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.topicsGrid {
+  display: grid;
+  width: max-content;
+  grid-template-columns: repeat(4, max-content);
+  gap: 8px;
+}
+
+@media (min-width: 1024px) {
+  .topicsViewport {
+    /* Use part of the page gutter without widening the question column. */
+    margin-inline-end: -48px;
+  }
+
+  .topicsGrid {
+    width: auto;
+    grid-template-columns: repeat(4, minmax(min-content, max-content));
+  }
+}
+
 .results {
   animation: results-enter 240ms var(--ease-smooth) both;
 }

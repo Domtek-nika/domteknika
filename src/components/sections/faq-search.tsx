@@ -126,15 +126,17 @@ export function FaqSearch({
       </div>
 
       {showTopics && (
-        <div aria-label={labels.topicsLabel} role="group" className="mt-5 flex flex-wrap gap-2">
-          {[{ id: "all", label: labels.allTopics }, ...topics].map((topic) => (
-            <button key={topic.id} type="button" aria-pressed={activeTopic === topic.id} onClick={() => {
-              setActiveTopic(topic.id);
-              setPage(0);
-            }} className={`min-h-11 rounded-[7px] border px-4 py-2.5 text-left text-[12px] font-bold leading-[1.35] ${buttonMotionStyle} ${activeTopic === topic.id ? "border-brand bg-brand text-white shadow-[0_10px_22px_rgba(0,0,0,0.18)] hover:border-brand hover:bg-brand hover:shadow-[0_12px_26px_rgba(0,0,0,0.18)]" : inactiveButtonStyle} ${focusStyle}`}>
-              {topic.label}
-            </button>
-          ))}
+        <div className={styles.topicsViewport}>
+          <div aria-label={labels.topicsLabel} role="group" className={styles.topicsGrid}>
+            {[{ id: "all", label: labels.allTopics }, ...topics].map((topic) => (
+              <button key={topic.id} type="button" aria-pressed={activeTopic === topic.id} onClick={() => {
+                setActiveTopic(topic.id);
+                setPage(0);
+              }} className={`min-h-11 rounded-[7px] border px-4 py-2.5 text-left text-[12px] font-bold leading-[1.35] ${buttonMotionStyle} ${activeTopic === topic.id ? "border-brand bg-brand text-white shadow-[0_10px_22px_rgba(0,0,0,0.18)] hover:border-brand hover:bg-brand hover:shadow-[0_12px_26px_rgba(0,0,0,0.18)]" : inactiveButtonStyle} ${focusStyle}`}>
+                {topic.label}
+              </button>
+            ))}
+          </div>
         </div>
       )}
 
