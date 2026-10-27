@@ -129,7 +129,7 @@ export function ProjectDetailPage({
 
           <Reveal initiallyHidden className="mt-14">
             <Link href="/contact" className="inline-flex min-h-12 items-center gap-5 rounded-[7px] bg-brand px-6 py-3 text-[14px] font-extrabold text-white shadow-[0_10px_24px_rgba(227,6,19,0.2)]">
-              {serviceCopy.labels.contact}<ArrowUpRight className="size-4 shrink-0" aria-hidden />
+              {serviceCopy.labels.contact}<ArrowRight className="size-4 shrink-0" aria-hidden />
             </Link>
           </Reveal>
         </article>
