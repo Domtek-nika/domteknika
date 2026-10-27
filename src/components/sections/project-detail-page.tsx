@@ -27,9 +27,9 @@ export function ProjectDetailPage({
       <Container size="wide">
         <Link
           href="/projects"
-          className="inline-flex items-center gap-3 text-[13px] font-extrabold text-foreground transition-colors hover:text-brand"
+          className="inline-flex min-h-11 items-center justify-between gap-4 rounded-[7px] bg-brand px-5 py-2.5 text-[13px] font-bold text-white shadow-[0_4px_10px_rgba(0,0,0,0.28)] transition-[transform,background-color] hover:bg-primary/80 motion-safe:hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
         >
-          <ArrowLeft className="size-4 text-brand" aria-hidden />
+          <ArrowLeft className="size-4 shrink-0" aria-hidden />
           {copy.backToProjects}
         </Link>
 
