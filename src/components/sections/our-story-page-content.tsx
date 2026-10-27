@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useLocale } from "next-intl";
-import { ArrowUpRight, X } from "lucide-react";
+import { ArrowRight, ArrowUpRight, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState, useTransition } from "react";
 import { NavigationProgress } from "@/components/layout/navigation-progress";
 
@@ -1438,10 +1438,10 @@ function OurStoryLocationDialog({
               href="https://www.google.com/maps/search/?api=1&query=Chemin%20de%20Saint-Joux%2016B%2C%202520%20La%20Neuveville%2C%20Switzerland"
               target="_blank"
               rel="noreferrer"
-              className="mt-6 inline-flex items-center gap-3 self-start text-[13px] font-extrabold text-foreground transition-colors hover:text-brand focus-visible:ring-2 focus-visible:ring-brand/35 min-[1800px]:!gap-4 min-[1800px]:!text-[16px] min-[2400px]:!text-[18px]"
+              className="mt-6 inline-flex min-h-11 max-w-full items-center justify-between gap-3 self-start rounded-[7px] bg-brand px-4 py-2.5 text-[13px] font-bold leading-[1.4] text-white shadow-[0_4px_10px_rgba(0,0,0,0.28)] transition-[transform,background-color] hover:bg-primary/80 motion-safe:hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand min-[1800px]:!gap-4 min-[1800px]:!px-5 min-[1800px]:!text-[16px] min-[2400px]:!text-[18px]"
             >
-              {copy.openMaps}
-              <ArrowUpRight className="size-4 text-brand min-[1800px]:!size-5 min-[2400px]:!size-6" aria-hidden />
+              <span className="min-w-0">{copy.openMaps}</span>
+              <ArrowRight className="size-4 shrink-0 min-[1800px]:!size-5 min-[2400px]:!size-6" aria-hidden />
             </a>
           </div>
         </div>

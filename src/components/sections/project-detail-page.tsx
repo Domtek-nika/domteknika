@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
 import { Container } from "@/components/layout/container";
@@ -115,11 +115,11 @@ export function ProjectDetailPage({
           {relatedServices.length > 0 ? (
             <Reveal initiallyHidden as="section" className="mt-12 border-t border-border pt-8">
               <h2 className="text-2xl font-extrabold">{serviceCopy.labels.related}</h2>
-              <ul className="mt-4 flex flex-wrap gap-x-8 gap-y-2">
+              <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
                 {relatedServices.map((service) => (
-                  <li key={service.slug}>
-                    <Link href={`/expertise/${service.slug}`} className="inline-flex min-h-11 items-center gap-2 text-sm font-bold text-brand hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
-                      {serviceCopy.items[service.slug].title}<ArrowUpRight className="size-4 shrink-0" aria-hidden />
+                  <li key={service.slug} className="min-w-0">
+                    <Link href={`/expertise/${service.slug}`} className="inline-flex h-full min-h-[72px] w-full items-center justify-between gap-3 rounded-[7px] border border-border bg-white px-4 py-3 text-[13px] font-bold leading-[1.4] text-foreground shadow-[0_2px_6px_rgba(0,0,0,0.05)] transition-[translate,border-color,box-shadow] duration-500 motion-safe:hover:-translate-y-1 hover:border-brand/35 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)] active:border-brand focus-visible:border-brand motion-reduce:transition-none [transition-timing-function:var(--ease-smooth)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+                      <span>{serviceCopy.items[service.slug].title}</span><ArrowRight className="size-4 shrink-0 text-brand" aria-hidden />
                     </Link>
                   </li>
                 ))}
