@@ -205,7 +205,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
                   disabled={isPending}
                   onClick={() => switchTo(locale)}
                   className={cn(
-                    "flex w-full cursor-pointer items-center justify-between gap-4 rounded-[7px] px-3 py-2 text-left text-[13px] font-bold text-foreground transition-[background-color,color,box-shadow] duration-200 enabled:hover:bg-brand/10 enabled:hover:text-brand enabled:hover:shadow-[inset_2px_0_0_var(--brand)] focus-visible:bg-brand/10 focus-visible:text-brand focus-visible:shadow-[inset_2px_0_0_var(--brand)] focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-60 motion-reduce:transition-none [--tw-ease:var(--ease-smooth)] min-[1800px]:!gap-4 min-[1800px]:!rounded-[9px] min-[1800px]:!px-3 min-[1800px]:!py-2 min-[1800px]:!text-[14px] min-[2400px]:!text-[15px]",
+                    "flex w-full cursor-pointer items-center justify-between gap-4 rounded-[7px] px-3 py-2 text-left text-[13px] font-bold text-foreground transition-[background-color,color] duration-200 enabled:hover:bg-brand/10 enabled:hover:text-brand focus-visible:bg-brand/10 focus-visible:text-brand focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-60 motion-reduce:transition-none [--tw-ease:var(--ease-smooth)] min-[1800px]:!gap-4 min-[1800px]:!rounded-[9px] min-[1800px]:!px-3 min-[1800px]:!py-2 min-[1800px]:!text-[14px] min-[2400px]:!text-[15px]",
                     active && "bg-brand text-white enabled:hover:bg-primary/80 enabled:hover:text-white focus-visible:bg-brand focus-visible:text-white",
                   )}
                 >
