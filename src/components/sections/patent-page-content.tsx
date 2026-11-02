@@ -1571,6 +1571,7 @@ export function PatentPageContent({
     if (!selectedPatent) return;
 
     const { body, documentElement } = document;
+    const pathname = window.location.pathname;
     const previousBodyStyles = {
       overscrollBehavior: body.style.overscrollBehavior,
     };
@@ -1667,11 +1668,18 @@ export function PatentPageContent({
       documentElement.style.overflowY = previousDocumentStyles.overflowY;
       documentElement.style.overscrollBehavior =
         previousDocumentStyles.overscrollBehavior;
-      const restoreScrollY = lockedScrollYRef.current;
-      window.scrollTo(window.scrollX, restoreScrollY);
+      // Wait for the router to commit its URL before deciding to restore here.
+      window.requestAnimationFrame(() => {
+        if (window.location.pathname !== pathname) return;
+        window.scrollTo({
+          left: window.scrollX,
+          top: lockedScrollYRef.current,
+          behavior: "instant",
+        });
+      });
       window.dispatchEvent(
         new CustomEvent("domtek:scroll-lock", {
-          detail: { locked: false, scrollY: restoreScrollY },
+          detail: { locked: false, scrollY: window.scrollY },
         }),
       );
     };
@@ -3155,7 +3163,14 @@ function PatentDrawingLightbox({
   if (!image) return null;
 
   return (
-    <div className="absolute inset-0 z-50 grid place-items-center bg-black/70 px-4 py-5 backdrop-blur-[4px]">
+    <div className="absolute inset-0 z-50 grid place-items-center px-4 py-5">
+      <button
+        type="button"
+        tabIndex={-1}
+        className="absolute inset-0 cursor-default bg-black/70 backdrop-blur-[4px]"
+        aria-label={copy.closeDrawing}
+        onClick={onClose}
+      />
       <div className="relative h-full w-full max-w-[980px] overflow-hidden rounded-[12px] bg-white shadow-[0_26px_90px_rgba(0,0,0,0.32)]">
         <button
           type="button"

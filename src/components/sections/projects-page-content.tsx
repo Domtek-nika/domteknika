@@ -720,6 +720,7 @@ export function ProjectDetailsDialog({
 
   useEffect(() => {
     const { body, documentElement } = document;
+    const pathname = window.location.pathname;
     const previousBodyStyles = {
       overscrollBehavior: body.style.overscrollBehavior,
     };
@@ -847,11 +848,18 @@ export function ProjectDetailsDialog({
       documentElement.style.overflowY = previousDocumentStyles.overflowY;
       documentElement.style.overscrollBehavior =
         previousDocumentStyles.overscrollBehavior;
-      const restoreScrollY = window.scrollY || lockedScrollYRef.current;
-      window.scrollTo(window.scrollX, restoreScrollY);
+      // Wait for the router to commit its URL before deciding to restore here.
+      window.requestAnimationFrame(() => {
+        if (window.location.pathname !== pathname) return;
+        window.scrollTo({
+          left: window.scrollX,
+          top: window.scrollY || lockedScrollYRef.current,
+          behavior: "instant",
+        });
+      });
       window.dispatchEvent(
         new CustomEvent("domtek:scroll-lock", {
-          detail: { locked: false, scrollY: restoreScrollY },
+          detail: { locked: false, scrollY: window.scrollY },
         }),
       );
     };
@@ -1496,6 +1504,7 @@ export function ProjectsPageContent({ locale, copy }: { locale: string; copy: Pr
     if (!selectedProject) return;
 
     const { body, documentElement } = document;
+    const pathname = window.location.pathname;
     const previousBodyStyles = {
       overscrollBehavior: body.style.overscrollBehavior,
     };
@@ -1623,11 +1632,18 @@ export function ProjectsPageContent({ locale, copy }: { locale: string; copy: Pr
       documentElement.style.overflowY = previousDocumentStyles.overflowY;
       documentElement.style.overscrollBehavior =
         previousDocumentStyles.overscrollBehavior;
-      const restoreScrollY = window.scrollY || lockedScrollYRef.current;
-      window.scrollTo(window.scrollX, restoreScrollY);
+      // Wait for the router to commit its URL before deciding to restore here.
+      window.requestAnimationFrame(() => {
+        if (window.location.pathname !== pathname) return;
+        window.scrollTo({
+          left: window.scrollX,
+          top: window.scrollY || lockedScrollYRef.current,
+          behavior: "instant",
+        });
+      });
       window.dispatchEvent(
         new CustomEvent("domtek:scroll-lock", {
-          detail: { locked: false, scrollY: restoreScrollY },
+          detail: { locked: false, scrollY: window.scrollY },
         }),
       );
     };
@@ -2147,20 +2163,20 @@ export function ProjectsPageContent({ locale, copy }: { locale: string; copy: Pr
                 ) : null}
               </div>
             </div>
-            {expandedGalleryImage && (
-              <ProjectImageLightbox
-                image={expandedGalleryImage}
-                alt={selectedProject.imageAlt}
-                closeLabel={copy.modal.closeImage}
-                previousLabel={copy.modal.previousImage}
-                nextLabel={copy.modal.nextImage}
-                hasMultiple={selectedProjectGallery.length > 1}
-                onClose={() => setExpandedGalleryIndex(null)}
-                onPrevious={showPreviousExpandedGalleryImage}
-                onNext={showNextExpandedGalleryImage}
-              />
-            )}
           </section>
+          {expandedGalleryImage && (
+            <ProjectImageLightbox
+              image={expandedGalleryImage}
+              alt={selectedProject.imageAlt}
+              closeLabel={copy.modal.closeImage}
+              previousLabel={copy.modal.previousImage}
+              nextLabel={copy.modal.nextImage}
+              hasMultiple={selectedProjectGallery.length > 1}
+              onClose={() => setExpandedGalleryIndex(null)}
+              onPrevious={showPreviousExpandedGalleryImage}
+              onNext={showNextExpandedGalleryImage}
+            />
+          )}
         </div>
       )}
     </>
