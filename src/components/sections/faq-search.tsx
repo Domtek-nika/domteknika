@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronLeft, ChevronRight, Search, X } from "lucide-react";
-import { useId, useMemo, useRef, useState } from "react";
+import { useId, useMemo, useRef, useState, useSyncExternalStore } from "react";
 
 import { FaqAnswer } from "./faq-answer";
 import styles from "./faq-search.module.css";
@@ -43,6 +43,12 @@ const buttonMotionStyle = "cursor-pointer transition-[translate,scale,border-col
 const inactiveButtonStyle = "border-border bg-white text-foreground shadow-[0_2px_6px_rgba(0,0,0,0.05)] enabled:hover:border-brand/35 enabled:hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)] active:border-brand focus-visible:border-brand";
 const questionsPerPage = 7;
 
+// The server and first hydration render expose the complete native FAQ.
+// Enable filtering and pagination only once React can handle their controls.
+const subscribeToHydration = () => () => {};
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
+
 export function FaqSearch({
   questions,
   topics,
@@ -58,6 +64,7 @@ export function FaqSearch({
 }) {
   const searchId = useId();
   const resultsId = useId();
+  const isHydrated = useSyncExternalStore(subscribeToHydration, getClientSnapshot, getServerSnapshot);
   const searchRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState("");
   const [activeTopic, setActiveTopic] = useState("all");
@@ -103,72 +110,80 @@ export function FaqSearch({
 
   return (
     <div>
-      <label htmlFor={searchId} className="sr-only">{labels.searchLabel}</label>
-      <div className="relative">
-        <Search className="pointer-events-none absolute left-4 top-1/2 size-5 -translate-y-1/2 text-brand" aria-hidden />
-        <input
-          ref={searchRef}
-          id={searchId}
-          type="search"
-          value={query}
-          onChange={(event) => {
-            setQuery(event.target.value);
-            setPage(0);
-          }}
-          placeholder={labels.searchPlaceholder}
-          className="min-h-14 w-full rounded-[7px] border border-border bg-white py-3 pl-12 pr-12 text-[14px] font-medium text-foreground outline-none shadow-[0_2px_7px_rgba(0,0,0,0.05)] transition-[border-color,box-shadow] duration-300 placeholder:text-muted-foreground/75 hover:border-brand/35 focus:border-brand/50 focus:shadow-[0_10px_24px_rgba(0,0,0,0.08)] motion-reduce:transition-none [&::-webkit-search-cancel-button]:hidden"
-        />
-        {query && (
-          <button type="button" onClick={clearSearch} aria-label={labels.clearSearch} className={`absolute right-1 top-1/2 flex size-11 -translate-y-1/2 items-center justify-center rounded-[7px] text-muted-foreground hover:text-brand ${focusStyle}`}>
-            <X className="size-4" aria-hidden />
-          </button>
-        )}
-      </div>
-
-      {showTopics && (
-        <div className={styles.topicsViewport}>
-          <div aria-label={labels.topicsLabel} role="group" className={styles.topicsGrid}>
-            {[{ id: "all", label: labels.allTopics }, ...topics].map((topic) => (
-              <button key={topic.id} type="button" aria-pressed={activeTopic === topic.id} onClick={() => {
-                setActiveTopic(topic.id);
+      {isHydrated && (
+        <>
+          <label htmlFor={searchId} className="sr-only">{labels.searchLabel}</label>
+          <div className="relative">
+            <Search className="pointer-events-none absolute left-4 top-1/2 size-5 -translate-y-1/2 text-brand" aria-hidden />
+            <input
+              ref={searchRef}
+              id={searchId}
+              type="search"
+              value={query}
+              onChange={(event) => {
+                setQuery(event.target.value);
                 setPage(0);
-              }} className={`min-h-11 rounded-[7px] border px-4 py-2.5 text-left text-[12px] font-bold leading-[1.35] ${buttonMotionStyle} ${activeTopic === topic.id ? "border-brand bg-brand text-white shadow-[0_10px_22px_rgba(0,0,0,0.18)] hover:border-brand hover:bg-brand hover:shadow-[0_12px_26px_rgba(0,0,0,0.18)]" : inactiveButtonStyle} ${focusStyle}`}>
-                {topic.label}
+              }}
+              placeholder={labels.searchPlaceholder}
+              className="min-h-14 w-full rounded-[7px] border border-border bg-white py-3 pl-12 pr-12 text-[14px] font-medium text-foreground outline-none shadow-[0_2px_7px_rgba(0,0,0,0.05)] transition-[border-color,box-shadow] duration-300 placeholder:text-muted-foreground/75 hover:border-brand/35 focus:border-brand/50 focus:shadow-[0_10px_24px_rgba(0,0,0,0.08)] motion-reduce:transition-none [&::-webkit-search-cancel-button]:hidden"
+            />
+            {query && (
+              <button type="button" onClick={clearSearch} aria-label={labels.clearSearch} className={`absolute right-1 top-1/2 flex size-11 -translate-y-1/2 items-center justify-center rounded-[7px] text-muted-foreground hover:text-brand ${focusStyle}`}>
+                <X className="size-4" aria-hidden />
               </button>
-            ))}
+            )}
           </div>
-        </div>
-      )}
 
-      <p aria-live="polite" aria-atomic="true" className="mb-4 mt-5 text-muted-foreground text-xs font-bold">{resultLabel}</p>
+          {showTopics && (
+            <div className={styles.topicsViewport}>
+              <div aria-label={labels.topicsLabel} role="group" className={styles.topicsGrid}>
+                {[{ id: "all", label: labels.allTopics }, ...topics].map((topic) => (
+                  <button key={topic.id} type="button" aria-pressed={activeTopic === topic.id} onClick={() => {
+                    setActiveTopic(topic.id);
+                    setPage(0);
+                  }} className={`min-h-11 rounded-[7px] border px-4 py-2.5 text-left text-[12px] font-bold leading-[1.35] ${buttonMotionStyle} ${activeTopic === topic.id ? "border-brand bg-brand text-white shadow-[0_10px_22px_rgba(0,0,0,0.18)] hover:border-brand hover:bg-brand hover:shadow-[0_12px_26px_rgba(0,0,0,0.18)]" : inactiveButtonStyle} ${focusStyle}`}>
+                    {topic.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <p aria-live="polite" aria-atomic="true" className="mb-4 mt-5 text-muted-foreground text-xs font-bold">{resultLabel}</p>
+        </>
+      )}
 
       {results.length > 0 ? (
         <div id={resultsId}>
-          <div key={`${activeTopic}:${currentPage}`} className={`${styles.results} grid items-start`}>
+          <div key={`${activeTopic}:${currentPage}`} className={isHydrated ? `${styles.results} grid items-start` : undefined}>
             {/* Overlapping pages reserve the tallest page's natural height at
-                every screen size. Inactive pages cannot be seen or focused. */}
-            {resultPages.map((items, pageIndex) => (
-              <div
-                key={pageIndex}
-                aria-hidden={pageIndex !== currentPage ? true : undefined}
-                inert={pageIndex !== currentPage}
-                className={`col-start-1 row-start-1 border-t border-border ${pageIndex !== currentPage ? "invisible pointer-events-none" : ""}`}
-              >
-                {items.map((item) => (
-                  <FaqAnswer
-                    key={item.id}
-                    hidden={false}
-                    answer={item.answer}
-                    focusClassName={focusStyle}
-                  >
-                    {showTopics && <span className="mb-1.5 block text-brand text-[11px] font-extrabold">{item.topicLabel}</span>}
-                    {item.question}
-                  </FaqAnswer>
-                ))}
-              </div>
-            ))}
+                every screen size once enhanced. Without JavaScript, all
+                questions remain reachable using the native details elements. */}
+            {resultPages.map((items, pageIndex) => {
+              const inactive = isHydrated && pageIndex !== currentPage;
+              return (
+                <div
+                  key={pageIndex}
+                  aria-hidden={inactive ? true : undefined}
+                  inert={inactive}
+                  className={`col-start-1 row-start-1 border-t border-border ${inactive ? "invisible pointer-events-none" : ""}`}
+                >
+                  {items.map((item) => (
+                    <FaqAnswer
+                      key={item.id}
+                      hidden={false}
+                      answer={item.answer}
+                      focusClassName={focusStyle}
+                    >
+                      {showTopics && <span className="mb-1.5 block text-brand text-[11px] font-extrabold">{item.topicLabel}</span>}
+                      {item.question}
+                    </FaqAnswer>
+                  ))}
+                </div>
+              );
+            })}
           </div>
-          {pageCount > 1 && (
+          {isHydrated && pageCount > 1 && (
             <nav aria-label={labels.paginationLabel} className="mt-5 flex flex-wrap items-center justify-between gap-3">
               <button type="button" disabled={currentPage === 0} aria-controls={resultsId} onClick={() => setPage(currentPage - 1)} className={`inline-flex min-h-11 items-center gap-2 rounded-[7px] border px-3 py-2.5 disabled:cursor-not-allowed disabled:opacity-40 text-[12px] font-bold ${buttonMotionStyle} ${inactiveButtonStyle} ${focusStyle}`}>
                 <ChevronLeft className="size-4 shrink-0 text-brand" aria-hidden />{labels.previousPage}

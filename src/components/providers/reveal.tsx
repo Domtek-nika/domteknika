@@ -19,7 +19,7 @@ interface RevealProps extends AriaAttributes {
   children: ReactNode;
   className?: string;
   id?: string;
-  /** Begin hidden so an in-view block can animate when first revealed. */
+  /** Animate off-screen blocks as they enter the viewport after hydration. */
   initiallyHidden?: boolean;
   /** Delay in seconds before the reveal animation starts. */
   delay?: number;
@@ -132,8 +132,9 @@ export function Reveal({
       rect.top < viewportHeight + 120 &&
       rect.bottom > -120;
 
-    if (shouldStartVisible && initiallyHidden) reveal();
-    else setStateImmediately(shouldStartVisible ? "visible" : "hidden");
+    // Keep content already on screen visible. Only arm off-screen animations
+    // after hydration so the server HTML also works without JavaScript.
+    setStateImmediately(shouldStartVisible ? "visible" : "hidden");
   }, [
     getEffectiveMinimumScrollY,
     initiallyHidden,
@@ -210,7 +211,7 @@ export function Reveal({
       }}
       data-reveal
       variants={variants}
-      initial={initiallyHidden ? "hidden" : false}
+      initial={false}
       animate={controls}
       viewport={{ once: true, margin: "-80px" }}
       onViewportEnter={() => {
