@@ -26,6 +26,14 @@
         "Complete electrical and mechanical architecture developed by DOMTEKNIKA.",
         "Three-wheel and four-wheel variants explored from 2012 onward.",
         "Internal prototypes and validation carried through to a separate startup."
+      ],
+      "gallery": [
+        "/assets/projects/aventor/aventor-01.webp",
+        "/assets/projects/aventor/aventor-02.webp",
+        "/assets/projects/aventor/aventor-03-chassis-road-test.webp",
+        "/assets/projects/aventor/aventor-04-top-view-render.webp",
+        "/assets/projects/aventor/aventor-05-green-render.webp",
+        "/assets/projects/aventor/aventor-06-structural-analysis.webp"
       ]
     },
     {
@@ -55,6 +63,11 @@
         "Brewing-unit development for a tea-capsule machine.",
         "Capsule holding, opening, detection, ejection and beverage-flow validation.",
         "Pilot-series support and vortex component work linked to WO2009135899."
+      ],
+      "gallery": [
+        "/assets/projects/special-t-machine/tea-machine-01.webp",
+        "/assets/projects/special-t-machine/tea-machine-02.webp",
+        "/assets/projects/special-t-machine/tea-machine-03.webp"
       ]
     },
     {
@@ -75,6 +88,14 @@
         "Polymer and injected-composite architecture for a premium urban e-bike.",
         "Wheel, frame and component integration studies for a distinctive product identity.",
         "CAD refinement toward manufacturable surfaces and robust mechanical interfaces."
+      ],
+      "gallery": [
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-01.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-02.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-03.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-04.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-05.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-06.webp"
       ]
     },
     {
@@ -145,6 +166,12 @@
         "Hybrid urban vehicle platform with a possible fully electric configuration.",
         "Complete electrical and mechanical design and prototyping by DOMTEKNIKA.",
         "Internal development started in 2006-2007, continued through a separate startup and remains ongoing."
+      ],
+      "gallery": [
+        "/assets/projects/softcar/softcar-01.webp",
+        "/assets/projects/softcar/softcar-02.webp",
+        "/assets/projects/softcar/softcar-03.webp",
+        "/assets/projects/softcar/softcar-04.webp"
       ]
     },
     {
@@ -166,6 +193,13 @@
         "Historic ultra-light electric three-wheeler developed before DOMTEKNIKA was founded.",
         "Jean-Luc Thuliez contributed to the project while working at another company.",
         "Tandem seating, a central beam chassis and compact urban packaging shaped this early mobility study."
+      ],
+      "gallery": [
+        "/assets/projects/sam-cree/sam-cree-01.webp",
+        "/assets/projects/sam-cree/sam-cree-02.webp",
+        "/assets/projects/sam-cree/sam-cree-03.webp",
+        "/assets/projects/sam-cree/sam-cree-04.webp",
+        "/assets/projects/sam-cree/sam-cree-05.webp"
       ]
     },
     {
@@ -186,6 +220,13 @@
         "Electric two-wheel concept initiated around 2008.",
         "Complete electrical and mechanical design developed by DOMTEKNIKA.",
         "Internal prototypes produced without creating a separate startup."
+      ],
+      "gallery": [
+        "/assets/projects/angel-interceptor/angel-interceptor-01.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-02.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-03.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-04.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-05.webp"
       ]
     },
     {
@@ -206,6 +247,14 @@
         "Pet-product architecture around capsule insertion and feeding mechanics.",
         "Soft, recognizable product language balanced with internal functional packaging.",
         "Cutaway and prototype views to validate refills, access and product behavior."
+      ],
+      "gallery": [
+        "/assets/projects/ikitty/ikitty-01.webp",
+        "/assets/projects/ikitty/ikitty-02.webp",
+        "/assets/projects/ikitty/ikitty-03.webp",
+        "/assets/projects/ikitty/ikitty-04.webp",
+        "/assets/projects/ikitty/ikitty-05.webp",
+        "/assets/projects/ikitty/ikitty-06.webp"
       ]
     },
     {
@@ -247,6 +296,10 @@
         "Low-cost architecture compatible with soluble coffees and a broad range of other soluble beverages.",
         "Espresso-style result and cappuccino preparation with milk kept outside the internal circuit to prevent contamination and residue buildup.",
         "Subsequently brought to market for a major coffee-machine brand."
+      ],
+      "gallery": [
+        "/assets/projects/instant-coffee-dispenser/instant-coffee-dispenser-01.webp",
+        "/assets/projects/instant-coffee-dispenser/instant-coffee-dispenser-02.webp"
       ]
     },
     {
@@ -268,6 +321,12 @@
         "Three-wheeled technology demonstrator commissioned by Hutchinson for the Total group.",
         "Complete chassis and propulsion-electronics development by DOMTEKNIKA.",
         "Rotomoulded body parts designed and integrated into the working demonstrator."
+      ],
+      "gallery": [
+        "/assets/projects/totalcar-concept/total-car-01.webp",
+        "/assets/projects/totalcar-concept/total-car-02.webp",
+        "/assets/projects/totalcar-concept/total-car-03.webp",
+        "/assets/projects/totalcar-concept/total-car-04.webp"
       ]
     },
     {
@@ -296,6 +355,11 @@
         "Handheld dental-device form factor with clean, approachable styling.",
         "Internal packaging for removable components and consumable interfaces.",
         "Prototype-family thinking for testing ergonomics and visual variants."
+      ],
+      "gallery": [
+        "/assets/projects/airsmile/airsmile-01.webp",
+        "/assets/projects/airsmile/airsmile-02.webp",
+        "/assets/projects/airsmile/airsmile-03.webp"
       ]
     },
     {
@@ -316,6 +380,12 @@
         "Research and selection of a lightweight polymer instrument architecture.",
         "Complete mechanical development and validation through functional prototypes.",
         "Production-cost analysis and preparation for industrialization."
+      ],
+      "gallery": [
+        "/assets/projects/flex-drill/flex-drill-01.webp",
+        "/assets/projects/flex-drill/flex-drill-02.webp",
+        "/assets/projects/flex-drill/flex-drill-03.webp",
+        "/assets/projects/flex-drill/flex-drill-04.webp"
       ]
     },
     {
@@ -344,6 +414,14 @@
         "Replacement of a reusable steel architecture with an ergonomic, single-use polymer instrument.",
         "Complete product engineering and validation through functional prototypes.",
         "Industrialization and management of an initial injection-moulded series."
+      ],
+      "gallery": [
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-01.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-02.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-03.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-04.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-05.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-06.webp"
       ]
     },
     {
@@ -384,6 +462,9 @@
         "Complete product development covering the carafe, filter accessory and integrated mechanism.",
         "Low-cost volume-counting component measuring the quantity of filtered water.",
         "Clear replacement indication telling the user when the filtration cartridge should be changed."
+      ],
+      "gallery": [
+        "/assets/projects/filter-carafe/filter-carafe-01.webp"
       ]
     },
     {
@@ -404,6 +485,13 @@
         "Folding geometry studies for compact storage and transport.",
         "Hinge, frame and riding-position concepts for small electric mobility.",
         "Visual and mechanical iterations across bike and scooter formats."
+      ],
+      "gallery": [
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-01.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-02.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-03.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-04.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-05.webp"
       ]
     },
     {
@@ -425,6 +513,10 @@
         "Safety function designed to neutralize morphine if the bottle is breached.",
         "Industrial part design, revised prototype, tooling, injection trials and first-series production.",
         "Prescription-controlled platform adaptable to other liquid medicines."
+      ],
+      "gallery": [
+        "/assets/projects/smart-bottle/smart-bottle-01.webp",
+        "/assets/projects/smart-bottle/smart-bottle-02.webp"
       ]
     },
     {
@@ -445,6 +537,10 @@
         "Industrialization and optimization for reliable series production.",
         "Self-injection architecture that conceals the needle to reduce patient anxiety.",
         "Integrated dose monitoring to document treatment adherence over time."
+      ],
+      "gallery": [
+        "/assets/projects/personal-injector/personal-injector-01.webp",
+        "/assets/projects/personal-injector/personal-injector-02.webp"
       ]
     },
     {
@@ -465,6 +561,10 @@
         "Finite-element and rheological analyses of the PEEK components.",
         "Geometry optimization for injection molding and mechanical performance.",
         "Tooling development and injection-process tuning for repeatable production."
+      ],
+      "gallery": [
+        "/assets/projects/acetabular-reamer-holder/acetabular-reamer-holder-01.webp",
+        "/assets/projects/acetabular-reamer-holder/acetabular-reamer-holder-02.webp"
       ]
     },
     {
@@ -485,6 +585,12 @@
         "Polymer turbine developed before 2006.",
         "Early medical-device component documented through the surviving project material.",
         "Original cost, use-case and performance objectives not established by the available archive."
+      ],
+      "gallery": [
+        "/assets/projects/single-use-turbine/single-use-turbine-01.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-02.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-03.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-04.webp"
       ]
     },
     {
@@ -505,6 +611,13 @@
         "Compact station for drying gloves and a helmet between sports sessions.",
         "CAD studies covering supports, airflow and overall integration.",
         "Physical prototypes documenting the proposed architecture."
+      ],
+      "gallery": [
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-01.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-02.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-03.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-04.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-05.webp"
       ]
     },
     {
@@ -539,6 +652,13 @@
         "Frame architecture and folding kinematics for smartphone-scale storage.",
         "Research into fabrics compatible with highly compact folding.",
         "Presentation limited to documented engineering work; full industrialization is not confirmed."
+      ],
+      "gallery": [
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-01.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-02.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-03.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-04.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-05.webp"
       ]
     },
     {
@@ -608,6 +728,12 @@
         "Ergonomic handpiece and cartridge packaging for a dermocosmetic applicator.",
         "Fluid-delivery concept work balanced with beauty-product visual codes.",
         "Prototype and principle views to explain use, refill and internal layout."
+      ],
+      "gallery": [
+        "/assets/projects/skincare-applicator/skincare-applicator-01.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-02.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-03.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-04.webp"
       ]
     },
     {
@@ -629,6 +755,11 @@
         "Coffee-machine capsule circuit based on a double-pass water path.",
         "Water moves out and back through the capsule during extraction.",
         "The project description is intentionally limited to this fluidic principle."
+      ],
+      "gallery": [
+        "/assets/projects/alicoffee-machine/coffee-machine-01.webp",
+        "/assets/projects/alicoffee-machine/coffee-machine-02.webp",
+        "/assets/projects/alicoffee-machine/coffee-machine-03.webp"
       ]
     },
     {
@@ -785,6 +916,12 @@
         "Custom lifting system for the Velum Sky amphitheatre screen in Geneva.",
         "Guides concealed in the raised position to preserve the architectural view.",
         "Guidance, stiffness and drive engineered for a fully cantilevered screen during descent."
+      ],
+      "gallery": [
+        "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-02.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-03.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-04.webp"
       ]
     }
   ],
@@ -815,6 +952,14 @@
         "Architecture électrique et mécanique complète développée par DOMTEKNIKA.",
         "Versions trois et quatre roues étudiées à partir de 2012.",
         "Prototypes et validations menés en interne jusqu'à la création d'une startup distincte."
+      ],
+      "gallery": [
+        "/assets/projects/aventor/aventor-01.webp",
+        "/assets/projects/aventor/aventor-02.webp",
+        "/assets/projects/aventor/aventor-03-chassis-road-test.webp",
+        "/assets/projects/aventor/aventor-04-top-view-render.webp",
+        "/assets/projects/aventor/aventor-05-green-render.webp",
+        "/assets/projects/aventor/aventor-06-structural-analysis.webp"
       ]
     },
     {
@@ -844,6 +989,11 @@
         "Développement de l'unité d'extraction pour une machine à capsules de thé.",
         "Validation du maintien, de l'ouverture, de la détection, de l'éjection et du flux boisson.",
         "Support présérie et composant à vortex relié au brevet WO2009135899."
+      ],
+      "gallery": [
+        "/assets/projects/special-t-machine/tea-machine-01.webp",
+        "/assets/projects/special-t-machine/tea-machine-02.webp",
+        "/assets/projects/special-t-machine/tea-machine-03.webp"
       ]
     },
     {
@@ -864,6 +1014,14 @@
         "Architecture polymère et composite injecté pour un vélo électrique urbain premium.",
         "Études roues, cadre et intégration composants pour une identité produit distinctive.",
         "Affinage CAO vers des surfaces industrialisables et interfaces mécaniques robustes."
+      ],
+      "gallery": [
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-01.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-02.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-03.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-04.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-05.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-06.webp"
       ]
     },
     {
@@ -934,6 +1092,12 @@
         "Plateforme de véhicule urbain hybride, avec une configuration 100 % électrique possible.",
         "Conception électrique et mécanique complète et prototypage réalisés par DOMTEKNIKA.",
         "Développement interne lancé en 2006-2007, poursuivi via une startup distincte et toujours en cours."
+      ],
+      "gallery": [
+        "/assets/projects/softcar/softcar-01.webp",
+        "/assets/projects/softcar/softcar-02.webp",
+        "/assets/projects/softcar/softcar-03.webp",
+        "/assets/projects/softcar/softcar-04.webp"
       ]
     },
     {
@@ -955,6 +1119,13 @@
         "Trois-roues électrique ultraléger historique développé avant la création de DOMTEKNIKA.",
         "Jean-Luc Thuliez a contribué à ce projet lorsqu'il travaillait au sein d'une autre entreprise.",
         "Sièges en tandem, châssis à poutre centrale et encombrement urbain réduit caractérisaient cette étude pionnière."
+      ],
+      "gallery": [
+        "/assets/projects/sam-cree/sam-cree-01.webp",
+        "/assets/projects/sam-cree/sam-cree-02.webp",
+        "/assets/projects/sam-cree/sam-cree-03.webp",
+        "/assets/projects/sam-cree/sam-cree-04.webp",
+        "/assets/projects/sam-cree/sam-cree-05.webp"
       ]
     },
     {
@@ -975,6 +1146,13 @@
         "Concept électrique deux roues lancé autour de 2008.",
         "Conception électrique et mécanique complète réalisée par DOMTEKNIKA.",
         "Prototypes développés en interne, sans création d'une startup distincte."
+      ],
+      "gallery": [
+        "/assets/projects/angel-interceptor/angel-interceptor-01.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-02.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-03.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-04.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-05.webp"
       ]
     },
     {
@@ -995,6 +1173,14 @@
         "Architecture de produit animalier autour de l'insertion de capsules et du mécanisme de distribution.",
         "Langage produit doux et reconnaissable équilibré avec l'intégration fonctionnelle interne.",
         "Vues coupe et prototypes pour valider recharges, accès et comportement produit."
+      ],
+      "gallery": [
+        "/assets/projects/ikitty/ikitty-01.webp",
+        "/assets/projects/ikitty/ikitty-02.webp",
+        "/assets/projects/ikitty/ikitty-03.webp",
+        "/assets/projects/ikitty/ikitty-04.webp",
+        "/assets/projects/ikitty/ikitty-05.webp",
+        "/assets/projects/ikitty/ikitty-06.webp"
       ]
     },
     {
@@ -1036,6 +1222,10 @@
         "Architecture économique compatible avec différents cafés solubles et de nombreuses autres boissons solubles.",
         "Résultat proche d'un espresso et préparation de cappuccinos sans passage de lait dans les conduites ni les composants internes, afin d'éviter contamination et résidus.",
         "Machine ensuite commercialisée pour une grande marque de machines à café."
+      ],
+      "gallery": [
+        "/assets/projects/instant-coffee-dispenser/instant-coffee-dispenser-01.webp",
+        "/assets/projects/instant-coffee-dispenser/instant-coffee-dispenser-02.webp"
       ]
     },
     {
@@ -1057,6 +1247,12 @@
         "Démonstrateur technologique à trois roues commandé par Hutchinson pour le groupe Total.",
         "Développement complet du châssis et de l'électronique de propulsion par DOMTEKNIKA.",
         "Pièces de carrosserie rotomoulées conçues et intégrées au démonstrateur fonctionnel."
+      ],
+      "gallery": [
+        "/assets/projects/totalcar-concept/total-car-01.webp",
+        "/assets/projects/totalcar-concept/total-car-02.webp",
+        "/assets/projects/totalcar-concept/total-car-03.webp",
+        "/assets/projects/totalcar-concept/total-car-04.webp"
       ]
     },
     {
@@ -1085,6 +1281,11 @@
         "Format de dispositif dentaire portatif avec style propre et accessible.",
         "Intégration interne des composants amovibles et des consommables.",
         "Famille de prototypes pour tester ergonomie et variantes visuelles."
+      ],
+      "gallery": [
+        "/assets/projects/airsmile/airsmile-01.webp",
+        "/assets/projects/airsmile/airsmile-02.webp",
+        "/assets/projects/airsmile/airsmile-03.webp"
       ]
     },
     {
@@ -1105,6 +1306,12 @@
         "Recherche et sélection d'une architecture d'instrument polymère légère et performante.",
         "Développement mécanique complet et validation par prototypes fonctionnels.",
         "Analyse des coûts de production et préparation à l'industrialisation."
+      ],
+      "gallery": [
+        "/assets/projects/flex-drill/flex-drill-01.webp",
+        "/assets/projects/flex-drill/flex-drill-02.webp",
+        "/assets/projects/flex-drill/flex-drill-03.webp",
+        "/assets/projects/flex-drill/flex-drill-04.webp"
       ]
     },
     {
@@ -1133,6 +1340,14 @@
         "Remplacement d'une architecture réutilisable en acier par un instrument ergonomique en polymère à usage unique.",
         "Conception complète du produit et validation par prototypes fonctionnels.",
         "Industrialisation et pilotage d'une première série de pièces injectées."
+      ],
+      "gallery": [
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-01.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-02.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-03.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-04.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-05.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-06.webp"
       ]
     },
     {
@@ -1173,6 +1388,9 @@
         "Développement complet du produit, de la carafe et son accessoire filtrant jusqu'au mécanisme intégré.",
         "Composant économique de comptage mesurant le volume d'eau réellement filtré.",
         "Indication claire du moment où l'utilisateur doit remplacer la cartouche."
+      ],
+      "gallery": [
+        "/assets/projects/filter-carafe/filter-carafe-01.webp"
       ]
     },
     {
@@ -1193,6 +1411,13 @@
         "Études de géométrie pliante pour rangement et transport compacts.",
         "Concepts charnières, cadre et position de conduite pour petite mobilité électrique.",
         "Itérations visuelles et mécaniques sur formats vélo et scooter."
+      ],
+      "gallery": [
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-01.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-02.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-03.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-04.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-05.webp"
       ]
     },
     {
@@ -1214,6 +1439,10 @@
         "Dispositif de sécurité conçu pour neutraliser la morphine en cas d’effraction de la bouteille.",
         "Conception industrielle des pièces, prototype révisé, outillages, essais d’injection et première série.",
         "Plateforme de distribution selon prescription adaptable à d’autres médicaments liquides."
+      ],
+      "gallery": [
+        "/assets/projects/smart-bottle/smart-bottle-01.webp",
+        "/assets/projects/smart-bottle/smart-bottle-02.webp"
       ]
     },
     {
@@ -1234,6 +1463,10 @@
         "Industrialisation et optimisation pour une fabrication en série fiable.",
         "Architecture d'auto-injection dissimulant l'aiguille afin de réduire l'anxiété du patient.",
         "Suivi intégré des doses pour documenter la régularité du traitement dans le temps."
+      ],
+      "gallery": [
+        "/assets/projects/personal-injector/personal-injector-01.webp",
+        "/assets/projects/personal-injector/personal-injector-02.webp"
       ]
     },
     {
@@ -1254,6 +1487,10 @@
         "Calculs par éléments finis et analyses rhéologiques des composants en PEEK.",
         "Optimisation des géométries pour l'injection et la performance mécanique.",
         "Développement des outillages et mise au point du procédé pour une production répétable."
+      ],
+      "gallery": [
+        "/assets/projects/acetabular-reamer-holder/acetabular-reamer-holder-01.webp",
+        "/assets/projects/acetabular-reamer-holder/acetabular-reamer-holder-02.webp"
       ]
     },
     {
@@ -1274,6 +1511,12 @@
         "Turbine en polymère développée avant 2006.",
         "Composant médical ancien documenté par les éléments de projet conservés.",
         "Objectifs initiaux de coût, d’usage et de performance non établis par les archives disponibles."
+      ],
+      "gallery": [
+        "/assets/projects/single-use-turbine/single-use-turbine-01.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-02.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-03.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-04.webp"
       ]
     },
     {
@@ -1294,6 +1537,13 @@
         "Station compacte pour sécher gants et casque entre deux sessions.",
         "Études CAO des supports, de la circulation d’air et de l’intégration générale.",
         "Prototypes physiques documentant l’architecture proposée."
+      ],
+      "gallery": [
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-01.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-02.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-03.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-04.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-05.webp"
       ]
     },
     {
@@ -1328,6 +1578,13 @@
         "Architecture des armatures et cinématiques de pliage pour un rangement au format smartphone.",
         "Recherche de toiles compatibles avec un pliage très compact.",
         "Présentation limitée aux travaux documentés ; l’industrialisation complète n’est pas confirmée."
+      ],
+      "gallery": [
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-01.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-02.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-03.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-04.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-05.webp"
       ]
     },
     {
@@ -1397,6 +1654,12 @@
         "Pièce à main ergonomique et intégration de la cartouche pour applicateur dermocosmétique.",
         "Concept de distribution fluide équilibré avec les codes visuels beauté.",
         "Vues prototype et principe pour expliquer usage, recharge et architecture interne."
+      ],
+      "gallery": [
+        "/assets/projects/skincare-applicator/skincare-applicator-01.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-02.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-03.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-04.webp"
       ]
     },
     {
@@ -1418,6 +1681,11 @@
         "Circuit capsule de machine à café basé sur un chemin d'eau double passage.",
         "L'eau fait un aller-retour dans la capsule pendant l'extraction.",
         "La description du projet reste volontairement limitée à ce principe fluidique."
+      ],
+      "gallery": [
+        "/assets/projects/alicoffee-machine/coffee-machine-01.webp",
+        "/assets/projects/alicoffee-machine/coffee-machine-02.webp",
+        "/assets/projects/alicoffee-machine/coffee-machine-03.webp"
       ]
     },
     {
@@ -1574,6 +1842,12 @@
         "Système de levage sur mesure pour l’écran de l’amphithéâtre Velum Sky à Genève.",
         "Guides dissimulés en position haute pour préserver la vue architecturale.",
         "Guidage, rigidité et mécanisme de levage conçus pour maîtriser l’écran entièrement en porte-à-faux pendant sa descente."
+      ],
+      "gallery": [
+        "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-02.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-03.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-04.webp"
       ]
     }
   ],
@@ -1604,6 +1878,14 @@
         "Vollständige elektrische und mechanische Architektur, entwickelt von DOMTEKNIKA.",
         "Drei- und vierrädrige Varianten, die seit 2012 untersucht wurden.",
         "Interne Prototypen und Validierung bis zur Gründung eines eigenständigen Startups."
+      ],
+      "gallery": [
+        "/assets/projects/aventor/aventor-01.webp",
+        "/assets/projects/aventor/aventor-02.webp",
+        "/assets/projects/aventor/aventor-03-chassis-road-test.webp",
+        "/assets/projects/aventor/aventor-04-top-view-render.webp",
+        "/assets/projects/aventor/aventor-05-green-render.webp",
+        "/assets/projects/aventor/aventor-06-structural-analysis.webp"
       ]
     },
     {
@@ -1633,6 +1915,11 @@
         "Entwicklung der Brüheinheit für eine Teekapselmaschine.",
         "Validierung von Kapselaufnahme, Öffnung, Erkennung, Auswurf und Getränkefluss.",
         "Unterstützung der Vorserie und Entwicklung einer Wirbelkomponente im Zusammenhang mit WO2009135899."
+      ],
+      "gallery": [
+        "/assets/projects/special-t-machine/tea-machine-01.webp",
+        "/assets/projects/special-t-machine/tea-machine-02.webp",
+        "/assets/projects/special-t-machine/tea-machine-03.webp"
       ]
     },
     {
@@ -1653,6 +1940,14 @@
         "Polymer- und Spritzverbundarchitektur für ein hochwertiges urbanes E-Bike.",
         "Studien zur Integration von Rädern, Rahmen und Komponenten für eine eigenständige Produktidentität.",
         "CAD-Verfeinerung hin zu fertigbaren Oberflächen und robusten mechanischen Schnittstellen."
+      ],
+      "gallery": [
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-01.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-02.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-03.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-04.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-05.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-06.webp"
       ]
     },
     {
@@ -1723,6 +2018,12 @@
         "Hybride Stadtfahrzeugplattform mit möglicher vollelektrischer Konfiguration.",
         "Vollständige elektrische und mechanische Entwicklung sowie Prototypenbau durch DOMTEKNIKA.",
         "Interne Entwicklung seit 2006-2007, über ein separates Startup fortgeführt und weiterhin laufend."
+      ],
+      "gallery": [
+        "/assets/projects/softcar/softcar-01.webp",
+        "/assets/projects/softcar/softcar-02.webp",
+        "/assets/projects/softcar/softcar-03.webp",
+        "/assets/projects/softcar/softcar-04.webp"
       ]
     },
     {
@@ -1744,6 +2045,13 @@
         "Historisches ultraleichtes Elektro-Dreirad aus der Zeit vor der Gründung von DOMTEKNIKA.",
         "Jean-Luc Thuliez wirkte an dem Projekt mit, als er für ein anderes Unternehmen tätig war.",
         "Tandemsitze, zentraler Trägerrahmen und kompakte Abmessungen prägten diese frühe Mobilitätsstudie."
+      ],
+      "gallery": [
+        "/assets/projects/sam-cree/sam-cree-01.webp",
+        "/assets/projects/sam-cree/sam-cree-02.webp",
+        "/assets/projects/sam-cree/sam-cree-03.webp",
+        "/assets/projects/sam-cree/sam-cree-04.webp",
+        "/assets/projects/sam-cree/sam-cree-05.webp"
       ]
     },
     {
@@ -1764,6 +2072,13 @@
         "Elektrisches Zweiradkonzept, das um 2008 gestartet wurde.",
         "Vollständige elektrische und mechanische Entwicklung durch DOMTEKNIKA.",
         "Interne Prototypenentwicklung ohne Gründung eines separaten Startups."
+      ],
+      "gallery": [
+        "/assets/projects/angel-interceptor/angel-interceptor-01.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-02.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-03.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-04.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-05.webp"
       ]
     },
     {
@@ -1784,6 +2099,14 @@
         "Produktarchitektur für ein Tierwohl-System mit Kapselaufnahme und Ausgabemechanik.",
         "Freundliche, eigenständige Formensprache in Einklang mit der internen Funktionstechnik.",
         "Schnittmodelle und Prototypen zur Prüfung von Nachfüllung, Zugang und Produktverhalten."
+      ],
+      "gallery": [
+        "/assets/projects/ikitty/ikitty-01.webp",
+        "/assets/projects/ikitty/ikitty-02.webp",
+        "/assets/projects/ikitty/ikitty-03.webp",
+        "/assets/projects/ikitty/ikitty-04.webp",
+        "/assets/projects/ikitty/ikitty-05.webp",
+        "/assets/projects/ikitty/ikitty-06.webp"
       ]
     },
     {
@@ -1825,6 +2148,10 @@
         "Kostengünstige Architektur für unterschiedliche lösliche Kaffees und zahlreiche weitere lösliche Getränke.",
         "Espressoähnliches Ergebnis und Cappuccino-Zubereitung mit Milch ausserhalb des internen Kreislaufs, um Verunreinigungen und Rückstände zu vermeiden.",
         "Anschliessend für eine grosse Kaffeemaschinenmarke auf den Markt gebracht."
+      ],
+      "gallery": [
+        "/assets/projects/instant-coffee-dispenser/instant-coffee-dispenser-01.webp",
+        "/assets/projects/instant-coffee-dispenser/instant-coffee-dispenser-02.webp"
       ]
     },
     {
@@ -1846,6 +2173,12 @@
         "Dreirädriger Technologiedemonstrator im Auftrag von Hutchinson für die Total-Gruppe.",
         "Vollständige Entwicklung von Fahrgestell und Antriebselektronik durch DOMTEKNIKA.",
         "Rotationsgeformte Karosserieteile für den funktionsfähigen Demonstrator entwickelt und integriert."
+      ],
+      "gallery": [
+        "/assets/projects/totalcar-concept/total-car-01.webp",
+        "/assets/projects/totalcar-concept/total-car-02.webp",
+        "/assets/projects/totalcar-concept/total-car-03.webp",
+        "/assets/projects/totalcar-concept/total-car-04.webp"
       ]
     },
     {
@@ -1874,6 +2207,11 @@
         "Handliches Dentalgerät mit klarer, vertrauenswürdiger Formensprache.",
         "Interne Integration von abnehmbaren Komponenten und Verbrauchsteilen.",
         "Prototypenfamilie zur Prüfung von Ergonomie und Gestaltungsvarianten."
+      ],
+      "gallery": [
+        "/assets/projects/airsmile/airsmile-01.webp",
+        "/assets/projects/airsmile/airsmile-02.webp",
+        "/assets/projects/airsmile/airsmile-03.webp"
       ]
     },
     {
@@ -1894,6 +2232,12 @@
         "Untersuchung und Auswahl einer leichten, leistungsfähigen Polymerarchitektur.",
         "Vollständige mechanische Entwicklung und Validierung mit funktionsfähigen Prototypen.",
         "Produktionskostenanalyse und Vorbereitung der Industrialisierung."
+      ],
+      "gallery": [
+        "/assets/projects/flex-drill/flex-drill-01.webp",
+        "/assets/projects/flex-drill/flex-drill-02.webp",
+        "/assets/projects/flex-drill/flex-drill-03.webp",
+        "/assets/projects/flex-drill/flex-drill-04.webp"
       ]
     },
     {
@@ -1922,6 +2266,14 @@
         "Ersatz einer wiederverwendbaren Stahlarchitektur durch ein ergonomisches Einweg-Instrument aus Polymer.",
         "Vollständige Produktentwicklung und Validierung mit funktionsfähigen Prototypen.",
         "Industrialisierung und Betreuung einer ersten Spritzgussserie."
+      ],
+      "gallery": [
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-01.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-02.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-03.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-04.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-05.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-06.webp"
       ]
     },
     {
@@ -1962,6 +2314,9 @@
         "Vollständige Produktentwicklung von der Karaffe und dem Filterzubehör bis zum integrierten Mechanismus.",
         "Kostengünstige Volumenerfassung zur Messung der tatsächlich gefilterten Wassermenge.",
         "Klare Anzeige, wann die Filterkartusche gewechselt werden muss."
+      ],
+      "gallery": [
+        "/assets/projects/filter-carafe/filter-carafe-01.webp"
       ]
     },
     {
@@ -1982,6 +2337,13 @@
         "Studien zur Faltgeometrie für kompakte Lagerung und einfachen Transport.",
         "Konzepte für Gelenke, Rahmen und Fahrposition bei kleinen Elektrofahrzeugen.",
         "Gestalterische und mechanische Iterationen für Fahrrad- und Scooterformate."
+      ],
+      "gallery": [
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-01.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-02.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-03.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-04.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-05.webp"
       ]
     },
     {
@@ -2003,6 +2365,10 @@
         "Sicherheitsfunktion zur Neutralisierung des Morphins bei einem Aufbruch der Flasche.",
         "Industrielle Teilekonstruktion, überarbeiteter Prototyp, Werkzeuge, Spritzgussversuche und erste Serie.",
         "Verschreibungsgesteuerte Plattform, die auf andere flüssige Arzneimittel übertragbar ist."
+      ],
+      "gallery": [
+        "/assets/projects/smart-bottle/smart-bottle-01.webp",
+        "/assets/projects/smart-bottle/smart-bottle-02.webp"
       ]
     },
     {
@@ -2023,6 +2389,10 @@
         "Industrialisierung und Optimierung für eine zuverlässige Serienfertigung.",
         "Selbstinjektionsarchitektur mit verdeckter Nadel zur Verringerung der Patientenangst.",
         "Integrierte Dosiserfassung zur Dokumentation der Therapietreue im Zeitverlauf."
+      ],
+      "gallery": [
+        "/assets/projects/personal-injector/personal-injector-01.webp",
+        "/assets/projects/personal-injector/personal-injector-02.webp"
       ]
     },
     {
@@ -2043,6 +2413,10 @@
         "Finite-Elemente- und rheologische Analysen der PEEK-Komponenten.",
         "Geometrieoptimierung für Spritzguss und mechanische Leistung.",
         "Werkzeugentwicklung und Prozessabstimmung für eine wiederholbare Produktion."
+      ],
+      "gallery": [
+        "/assets/projects/acetabular-reamer-holder/acetabular-reamer-holder-01.webp",
+        "/assets/projects/acetabular-reamer-holder/acetabular-reamer-holder-02.webp"
       ]
     },
     {
@@ -2063,6 +2437,12 @@
         "Vor 2006 entwickelte Polymerturbine.",
         "Frühe medizintechnische Komponente, dokumentiert durch die erhaltenen Projektunterlagen.",
         "Ursprüngliche Kosten-, Einsatz- und Leistungsziele sind in den verfügbaren Unterlagen nicht belegt."
+      ],
+      "gallery": [
+        "/assets/projects/single-use-turbine/single-use-turbine-01.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-02.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-03.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-04.webp"
       ]
     },
     {
@@ -2083,6 +2463,13 @@
         "Kompakte Station zum Trocknen von Handschuhen und Helm zwischen zwei Sportsessions.",
         "CAD-Studien zu Halterungen, Luftführung und Gesamtintegration.",
         "Physische Prototypen zur Dokumentation der vorgeschlagenen Architektur."
+      ],
+      "gallery": [
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-01.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-02.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-03.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-04.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-05.webp"
       ]
     },
     {
@@ -2117,6 +2504,13 @@
         "Gestängearchitektur und Faltkinematik für ein Packmass im Smartphone-Format.",
         "Recherche zu Geweben, die eine besonders kompakte Faltung ermöglichen.",
         "Darstellung auf dokumentierte Entwicklungsarbeiten begrenzt; eine vollständige Industrialisierung ist nicht bestätigt."
+      ],
+      "gallery": [
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-01.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-02.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-03.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-04.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-05.webp"
       ]
     },
     {
@@ -2186,6 +2580,12 @@
         "Ergonomisches Handstück und Kartuschenintegration für einen dermokosmetischen Applikator.",
         "Entwicklung der Flüssigkeitsabgabe im Einklang mit der Formensprache hochwertiger Kosmetikprodukte.",
         "Prototypen und Prinzipdarstellungen zur Erklärung von Anwendung, Nachfüllung und Innenaufbau."
+      ],
+      "gallery": [
+        "/assets/projects/skincare-applicator/skincare-applicator-01.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-02.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-03.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-04.webp"
       ]
     },
     {
@@ -2207,6 +2607,11 @@
         "Kapselsystem einer Kaffeemaschine mit zweifachem Wasserdurchlauf.",
         "Während der Extraktion wird das Wasser durch die Kapsel hin- und zurückgeführt.",
         "Die Projektbeschreibung beschränkt sich bewusst auf dieses Strömungsprinzip."
+      ],
+      "gallery": [
+        "/assets/projects/alicoffee-machine/coffee-machine-01.webp",
+        "/assets/projects/alicoffee-machine/coffee-machine-02.webp",
+        "/assets/projects/alicoffee-machine/coffee-machine-03.webp"
       ]
     },
     {
@@ -2363,6 +2768,12 @@
         "Massgeschneidertes Hebesystem für die Leinwand im Velum-Sky-Auditorium in Genf.",
         "In oberer Position verdeckte Führungen zum Erhalt der architektonischen Ansicht.",
         "Führung, Steifigkeit und Antrieb für eine beim Absenken vollständig auskragende Leinwand."
+      ],
+      "gallery": [
+        "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-02.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-03.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-04.webp"
       ]
     }
   ],
@@ -2393,6 +2804,14 @@
         "Arquitectura eléctrica y mecánica completa desarrollada por DOMTEKNIKA.",
         "Versiones de tres y cuatro ruedas estudiadas desde 2012.",
         "Prototipos y validación internos hasta la creación de una startup independiente."
+      ],
+      "gallery": [
+        "/assets/projects/aventor/aventor-01.webp",
+        "/assets/projects/aventor/aventor-02.webp",
+        "/assets/projects/aventor/aventor-03-chassis-road-test.webp",
+        "/assets/projects/aventor/aventor-04-top-view-render.webp",
+        "/assets/projects/aventor/aventor-05-green-render.webp",
+        "/assets/projects/aventor/aventor-06-structural-analysis.webp"
       ]
     },
     {
@@ -2422,6 +2841,11 @@
         "Desarrollo de la unidad de infusión para una máquina de cápsulas de té.",
         "Validación de la sujeción, apertura, detección y expulsión de la cápsula, así como del flujo de bebida.",
         "Apoyo a la preserie y desarrollo de un componente de vórtice relacionado con WO2009135899."
+      ],
+      "gallery": [
+        "/assets/projects/special-t-machine/tea-machine-01.webp",
+        "/assets/projects/special-t-machine/tea-machine-02.webp",
+        "/assets/projects/special-t-machine/tea-machine-03.webp"
       ]
     },
     {
@@ -2442,6 +2866,14 @@
         "Arquitectura en polímero y composite inyectado para una bicicleta eléctrica urbana de gama alta.",
         "Estudios de integración de ruedas, cuadro y componentes para una identidad de producto propia.",
         "Perfeccionamiento CAD orientado a superficies industrializables e interfaces mecánicas robustas."
+      ],
+      "gallery": [
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-01.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-02.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-03.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-04.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-05.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-06.webp"
       ]
     },
     {
@@ -2512,6 +2944,12 @@
         "Plataforma de vehículo urbano híbrido con posible configuración 100 % eléctrica.",
         "Diseño eléctrico y mecánico completo y prototipado realizados por DOMTEKNIKA.",
         "Desarrollo interno iniciado en 2006-2007, continuado mediante una startup independiente y todavía en curso."
+      ],
+      "gallery": [
+        "/assets/projects/softcar/softcar-01.webp",
+        "/assets/projects/softcar/softcar-02.webp",
+        "/assets/projects/softcar/softcar-03.webp",
+        "/assets/projects/softcar/softcar-04.webp"
       ]
     },
     {
@@ -2533,6 +2971,13 @@
         "Triciclo eléctrico ultraligero histórico desarrollado antes de la creación de DOMTEKNIKA.",
         "Jean-Luc Thuliez participó en el proyecto mientras trabajaba en otra empresa.",
         "Asientos en tándem, chasis de viga central y dimensiones urbanas compactas definieron este estudio pionero."
+      ],
+      "gallery": [
+        "/assets/projects/sam-cree/sam-cree-01.webp",
+        "/assets/projects/sam-cree/sam-cree-02.webp",
+        "/assets/projects/sam-cree/sam-cree-03.webp",
+        "/assets/projects/sam-cree/sam-cree-04.webp",
+        "/assets/projects/sam-cree/sam-cree-05.webp"
       ]
     },
     {
@@ -2553,6 +2998,13 @@
         "Concepto eléctrico de dos ruedas iniciado alrededor de 2008.",
         "Diseño eléctrico y mecánico completo desarrollado por DOMTEKNIKA.",
         "Prototipos internos sin creación de una startup independiente."
+      ],
+      "gallery": [
+        "/assets/projects/angel-interceptor/angel-interceptor-01.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-02.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-03.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-04.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-05.webp"
       ]
     },
     {
@@ -2573,6 +3025,14 @@
         "Arquitectura de producto para mascotas basada en la inserción de cápsulas y el mecanismo de dispensación.",
         "Lenguaje formal amable y reconocible, equilibrado con la integración funcional interna.",
         "Vistas en sección y prototipos para validar las recargas, el acceso y el funcionamiento del producto."
+      ],
+      "gallery": [
+        "/assets/projects/ikitty/ikitty-01.webp",
+        "/assets/projects/ikitty/ikitty-02.webp",
+        "/assets/projects/ikitty/ikitty-03.webp",
+        "/assets/projects/ikitty/ikitty-04.webp",
+        "/assets/projects/ikitty/ikitty-05.webp",
+        "/assets/projects/ikitty/ikitty-06.webp"
       ]
     },
     {
@@ -2614,6 +3074,10 @@
         "Arquitectura de bajo coste compatible con distintos cafés solubles y numerosas bebidas solubles.",
         "Resultado similar al espresso y preparación de capuchinos manteniendo la leche fuera del circuito interno para evitar contaminación y residuos.",
         "Posteriormente comercializada para una importante marca de máquinas de café."
+      ],
+      "gallery": [
+        "/assets/projects/instant-coffee-dispenser/instant-coffee-dispenser-01.webp",
+        "/assets/projects/instant-coffee-dispenser/instant-coffee-dispenser-02.webp"
       ]
     },
     {
@@ -2635,6 +3099,12 @@
         "Demostrador tecnológico de tres ruedas encargado por Hutchinson para el grupo Total.",
         "Desarrollo completo del chasis y de la electrónica de propulsión por DOMTEKNIKA.",
         "Piezas de carrocería rotomoldeadas diseñadas e integradas en el demostrador funcional."
+      ],
+      "gallery": [
+        "/assets/projects/totalcar-concept/total-car-01.webp",
+        "/assets/projects/totalcar-concept/total-car-02.webp",
+        "/assets/projects/totalcar-concept/total-car-03.webp",
+        "/assets/projects/totalcar-concept/total-car-04.webp"
       ]
     },
     {
@@ -2663,6 +3133,11 @@
         "Formato portátil para un dispositivo dental con un diseño claro y accesible.",
         "Integración interna de componentes extraíbles y consumibles.",
         "Familia de prototipos para evaluar la ergonomía y distintas variantes visuales."
+      ],
+      "gallery": [
+        "/assets/projects/airsmile/airsmile-01.webp",
+        "/assets/projects/airsmile/airsmile-02.webp",
+        "/assets/projects/airsmile/airsmile-03.webp"
       ]
     },
     {
@@ -2683,6 +3158,12 @@
         "Investigación y selección de una arquitectura de polímero ligera y eficiente.",
         "Desarrollo mecánico completo y validación mediante prototipos funcionales.",
         "Análisis de costes de producción y preparación para la industrialización."
+      ],
+      "gallery": [
+        "/assets/projects/flex-drill/flex-drill-01.webp",
+        "/assets/projects/flex-drill/flex-drill-02.webp",
+        "/assets/projects/flex-drill/flex-drill-03.webp",
+        "/assets/projects/flex-drill/flex-drill-04.webp"
       ]
     },
     {
@@ -2711,6 +3192,14 @@
         "Sustitución de una arquitectura reutilizable de acero por un instrumento ergonómico de polímero y de un solo uso.",
         "Ingeniería completa del producto y validación mediante prototipos funcionales.",
         "Industrialización y gestión de una primera serie de piezas inyectadas."
+      ],
+      "gallery": [
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-01.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-02.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-03.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-04.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-05.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-06.webp"
       ]
     },
     {
@@ -2751,6 +3240,9 @@
         "Desarrollo completo del producto, desde la jarra y el accesorio filtrante hasta el mecanismo integrado.",
         "Componente económico de medición del volumen de agua realmente filtrada.",
         "Indicación clara del momento en que el usuario debe sustituir el cartucho."
+      ],
+      "gallery": [
+        "/assets/projects/filter-carafe/filter-carafe-01.webp"
       ]
     },
     {
@@ -2771,6 +3263,13 @@
         "Estudios de geometría plegable para facilitar el almacenamiento y el transporte.",
         "Conceptos de bisagras, cuadro y posición de conducción para micromovilidad eléctrica.",
         "Iteraciones visuales y mecánicas en formatos de bicicleta y patinete."
+      ],
+      "gallery": [
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-01.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-02.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-03.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-04.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-05.webp"
       ]
     },
     {
@@ -2792,6 +3291,10 @@
         "Función de seguridad diseñada para neutralizar la morfina si se fuerza la botella.",
         "Diseño industrial de piezas, prototipo revisado, moldes, pruebas de inyección y primera serie.",
         "Plataforma controlada por prescripción adaptable a otros medicamentos líquidos."
+      ],
+      "gallery": [
+        "/assets/projects/smart-bottle/smart-bottle-01.webp",
+        "/assets/projects/smart-bottle/smart-bottle-02.webp"
       ]
     },
     {
@@ -2812,6 +3315,10 @@
         "Industrialización y optimización para una producción en serie fiable.",
         "Arquitectura de autoinyección que oculta la aguja para reducir la ansiedad del paciente.",
         "Seguimiento integrado de dosis para documentar la regularidad del tratamiento."
+      ],
+      "gallery": [
+        "/assets/projects/personal-injector/personal-injector-01.webp",
+        "/assets/projects/personal-injector/personal-injector-02.webp"
       ]
     },
     {
@@ -2832,6 +3339,10 @@
         "Análisis por elementos finitos y reológicos de los componentes de PEEK.",
         "Optimización de geometrías para inyección y rendimiento mecánico.",
         "Desarrollo de moldes y puesta a punto del proceso para una producción repetible."
+      ],
+      "gallery": [
+        "/assets/projects/acetabular-reamer-holder/acetabular-reamer-holder-01.webp",
+        "/assets/projects/acetabular-reamer-holder/acetabular-reamer-holder-02.webp"
       ]
     },
     {
@@ -2852,6 +3363,12 @@
         "Turbina de polímero desarrollada antes de 2006.",
         "Componente médico temprano documentado por el material de proyecto conservado.",
         "Los objetivos originales de coste, uso y rendimiento no constan en el archivo disponible."
+      ],
+      "gallery": [
+        "/assets/projects/single-use-turbine/single-use-turbine-01.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-02.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-03.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-04.webp"
       ]
     },
     {
@@ -2872,6 +3389,13 @@
         "Estación compacta para secar guantes y casco entre dos sesiones.",
         "Estudios CAD de los soportes, la circulación de aire y la integración general.",
         "Prototipos físicos que documentan la arquitectura propuesta."
+      ],
+      "gallery": [
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-01.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-02.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-03.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-04.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-05.webp"
       ]
     },
     {
@@ -2906,6 +3430,13 @@
         "Arquitectura de varillas y cinemática de plegado para un volumen similar al de un smartphone.",
         "Investigación de tejidos compatibles con un plegado muy compacto.",
         "Presentación limitada al trabajo documentado; no se confirma una industrialización completa."
+      ],
+      "gallery": [
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-01.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-02.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-03.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-04.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-05.webp"
       ]
     },
     {
@@ -2975,6 +3506,12 @@
         "Pieza de mano ergonómica e integración del cartucho para un aplicador dermocosmético.",
         "Concepto de dispensación de fluido en armonía con los códigos visuales del sector de la belleza.",
         "Prototipos y vistas de principio para explicar el uso, la recarga y la arquitectura interna."
+      ],
+      "gallery": [
+        "/assets/projects/skincare-applicator/skincare-applicator-01.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-02.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-03.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-04.webp"
       ]
     },
     {
@@ -2996,6 +3533,11 @@
         "Circuito de cápsula para cafetera basado en un doble paso del agua.",
         "Durante la extracción, el agua recorre la cápsula en ambos sentidos.",
         "La descripción del proyecto se limita deliberadamente a este principio de circulación."
+      ],
+      "gallery": [
+        "/assets/projects/alicoffee-machine/coffee-machine-01.webp",
+        "/assets/projects/alicoffee-machine/coffee-machine-02.webp",
+        "/assets/projects/alicoffee-machine/coffee-machine-03.webp"
       ]
     },
     {
@@ -3152,6 +3694,12 @@
         "Sistema de elevación a medida para la pantalla del auditorio Velum Sky de Ginebra.",
         "Guías ocultas en la posición elevada para preservar la vista arquitectónica.",
         "Guiado, rigidez y accionamiento diseñados para una pantalla totalmente en voladizo durante el descenso."
+      ],
+      "gallery": [
+        "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-02.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-03.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-04.webp"
       ]
     }
   ],
@@ -3182,6 +3730,14 @@
         "DOMTEKNIKA가 개발한 완전한 전기·기계 아키텍처.",
         "2012년부터 검토한 세 바퀴 및 네 바퀴 버전.",
         "별도 스타트업 설립 단계까지 이어진 사내 시제품 제작과 검증."
+      ],
+      "gallery": [
+        "/assets/projects/aventor/aventor-01.webp",
+        "/assets/projects/aventor/aventor-02.webp",
+        "/assets/projects/aventor/aventor-03-chassis-road-test.webp",
+        "/assets/projects/aventor/aventor-04-top-view-render.webp",
+        "/assets/projects/aventor/aventor-05-green-render.webp",
+        "/assets/projects/aventor/aventor-06-structural-analysis.webp"
       ]
     },
     {
@@ -3211,6 +3767,11 @@
         "티 캡슐 머신의 추출 유닛 개발.",
         "캡슐 고정, 개방, 감지, 배출과 음료 흐름 검증.",
         "WO2009135899와 관련된 와류 부품 개발 및 파일럿 생산 지원."
+      ],
+      "gallery": [
+        "/assets/projects/special-t-machine/tea-machine-01.webp",
+        "/assets/projects/special-t-machine/tea-machine-02.webp",
+        "/assets/projects/special-t-machine/tea-machine-03.webp"
       ]
     },
     {
@@ -3231,6 +3792,14 @@
         "고급 도심형 전기자전거를 위한 폴리머 및 사출 복합재 구조 설계.",
         "차별화된 제품 정체성을 위한 휠, 프레임, 부품 통합 연구.",
         "양산 가능한 표면과 견고한 기계 인터페이스를 위한 CAD 정교화."
+      ],
+      "gallery": [
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-01.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-02.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-03.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-04.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-05.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-06.webp"
       ]
     },
     {
@@ -3301,6 +3870,12 @@
         "100% 전기 구성이 가능한 하이브리드 도심 차량 플랫폼.",
         "DOMTEKNIKA가 수행한 완전한 전기·기계 설계와 시제품 제작.",
         "2006~2007년 시작된 사내 개발로, 별도 스타트업을 통해 이어져 현재도 진행 중."
+      ],
+      "gallery": [
+        "/assets/projects/softcar/softcar-01.webp",
+        "/assets/projects/softcar/softcar-02.webp",
+        "/assets/projects/softcar/softcar-03.webp",
+        "/assets/projects/softcar/softcar-04.webp"
       ]
     },
     {
@@ -3322,6 +3897,13 @@
         "DOMTEKNIKA 설립 이전에 개발된 역사적인 초경량 전기 삼륜차입니다.",
         "Jean-Luc Thuliez가 다른 회사에서 근무하던 시기에 이 프로젝트에 참여했습니다.",
         "탠덤 좌석, 중앙 빔 섀시, 컴팩트한 도심형 패키징을 탐구한 초기 모빌리티 연구입니다."
+      ],
+      "gallery": [
+        "/assets/projects/sam-cree/sam-cree-01.webp",
+        "/assets/projects/sam-cree/sam-cree-02.webp",
+        "/assets/projects/sam-cree/sam-cree-03.webp",
+        "/assets/projects/sam-cree/sam-cree-04.webp",
+        "/assets/projects/sam-cree/sam-cree-05.webp"
       ]
     },
     {
@@ -3342,6 +3924,13 @@
         "약 2008년에 시작된 전기 이륜 콘셉트.",
         "DOMTEKNIKA가 수행한 완전한 전기·기계 설계.",
         "별도 스타트업 설립 없이 진행한 사내 시제품 개발."
+      ],
+      "gallery": [
+        "/assets/projects/angel-interceptor/angel-interceptor-01.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-02.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-03.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-04.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-05.webp"
       ]
     },
     {
@@ -3362,6 +3951,14 @@
         "캡슐 삽입과 급여 메커니즘을 중심으로 한 반려동물 제품 구조 설계.",
         "내부 기능 통합과 조화를 이루는 부드럽고 인지하기 쉬운 제품 디자인.",
         "리필, 접근성, 제품 작동을 검증하기 위한 단면 모델과 프로토타입."
+      ],
+      "gallery": [
+        "/assets/projects/ikitty/ikitty-01.webp",
+        "/assets/projects/ikitty/ikitty-02.webp",
+        "/assets/projects/ikitty/ikitty-03.webp",
+        "/assets/projects/ikitty/ikitty-04.webp",
+        "/assets/projects/ikitty/ikitty-05.webp",
+        "/assets/projects/ikitty/ikitty-06.webp"
       ]
     },
     {
@@ -3403,6 +4000,10 @@
         "다양한 인스턴트 커피와 여러 종류의 용해성 음료를 지원하는 저비용 구조.",
         "에스프레소에 가까운 결과와 우유를 내부 회로 밖에 유지해 오염과 잔류물을 방지하는 카푸치노 제조 방식.",
         "이후 주요 커피머신 브랜드를 위해 상용화."
+      ],
+      "gallery": [
+        "/assets/projects/instant-coffee-dispenser/instant-coffee-dispenser-01.webp",
+        "/assets/projects/instant-coffee-dispenser/instant-coffee-dispenser-02.webp"
       ]
     },
     {
@@ -3424,6 +4025,12 @@
         "Hutchinson이 Total 그룹을 위해 의뢰한 3륜 기술 실증 차량.",
         "DOMTEKNIKA가 수행한 섀시와 구동 전자장치의 전체 개발.",
         "실제 작동하는 실증 차량에 적용된 회전성형 차체 부품 설계와 통합."
+      ],
+      "gallery": [
+        "/assets/projects/totalcar-concept/total-car-01.webp",
+        "/assets/projects/totalcar-concept/total-car-02.webp",
+        "/assets/projects/totalcar-concept/total-car-03.webp",
+        "/assets/projects/totalcar-concept/total-car-04.webp"
       ]
     },
     {
@@ -3452,6 +4059,11 @@
         "깔끔하고 친근한 디자인의 휴대형 치과 기기 폼팩터.",
         "분리형 부품과 소모품 인터페이스의 내부 패키징.",
         "인체공학과 디자인 변형을 검증하기 위한 프로토타입 제품군."
+      ],
+      "gallery": [
+        "/assets/projects/airsmile/airsmile-01.webp",
+        "/assets/projects/airsmile/airsmile-02.webp",
+        "/assets/projects/airsmile/airsmile-03.webp"
       ]
     },
     {
@@ -3472,6 +4084,12 @@
         "가볍고 성능이 뛰어난 폴리머 기구 구조의 연구와 선정.",
         "전체 기계 개발과 기능성 프로토타입을 통한 검증.",
         "생산 비용 분석과 산업화 준비."
+      ],
+      "gallery": [
+        "/assets/projects/flex-drill/flex-drill-01.webp",
+        "/assets/projects/flex-drill/flex-drill-02.webp",
+        "/assets/projects/flex-drill/flex-drill-03.webp",
+        "/assets/projects/flex-drill/flex-drill-04.webp"
       ]
     },
     {
@@ -3500,6 +4118,14 @@
         "재사용 강철 구조를 인체공학적 일회용 폴리머 기구로 대체.",
         "전체 제품 엔지니어링과 기능성 프로토타입 검증.",
         "산업화와 첫 사출 생산 시리즈 관리."
+      ],
+      "gallery": [
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-01.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-02.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-03.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-04.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-05.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-06.webp"
       ]
     },
     {
@@ -3540,6 +4166,9 @@
         "카라페와 필터 액세서리부터 통합 메커니즘까지 제품 전체를 개발.",
         "실제로 정수된 물의 양을 측정하는 저비용 용량 계측 부품.",
         "사용자가 카트리지 교체 시점을 명확하게 확인할 수 있는 표시 기능."
+      ],
+      "gallery": [
+        "/assets/projects/filter-carafe/filter-carafe-01.webp"
       ]
     },
     {
@@ -3560,6 +4189,13 @@
         "컴팩트한 보관과 운반을 위한 폴딩 지오메트리 연구.",
         "소형 전기 모빌리티를 위한 힌지, 프레임, 주행 자세 콘셉트.",
         "자전거와 스쿠터 형식에 대한 디자인 및 기계 구조 반복 개발."
+      ],
+      "gallery": [
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-01.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-02.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-03.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-04.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-05.webp"
       ]
     },
     {
@@ -3581,6 +4217,10 @@
         "병이 강제로 개봉될 경우 모르핀을 중화하도록 설계한 안전 기능.",
         "산업용 부품 설계, 개선 프로토타입, 금형, 사출 시험과 첫 생산 시리즈.",
         "다른 액상 의약품에도 적용 가능한 처방 기반 공급 플랫폼."
+      ],
+      "gallery": [
+        "/assets/projects/smart-bottle/smart-bottle-01.webp",
+        "/assets/projects/smart-bottle/smart-bottle-02.webp"
       ]
     },
     {
@@ -3601,6 +4241,10 @@
         "신뢰성 높은 양산을 위한 산업화와 최적화.",
         "환자의 불안을 줄이도록 바늘을 숨긴 자가 주사 구조.",
         "시간에 따른 치료 규칙성을 기록하는 통합 투여량 모니터링."
+      ],
+      "gallery": [
+        "/assets/projects/personal-injector/personal-injector-01.webp",
+        "/assets/projects/personal-injector/personal-injector-02.webp"
       ]
     },
     {
@@ -3621,6 +4265,10 @@
         "PEEK 부품의 유한요소 및 유동 해석.",
         "사출 성형과 기계적 성능을 위한 형상 최적화.",
         "반복 가능한 생산을 위한 금형 개발과 사출 공정 조정."
+      ],
+      "gallery": [
+        "/assets/projects/acetabular-reamer-holder/acetabular-reamer-holder-01.webp",
+        "/assets/projects/acetabular-reamer-holder/acetabular-reamer-holder-02.webp"
       ]
     },
     {
@@ -3641,6 +4289,12 @@
         "2006년 이전에 개발된 폴리머 터빈.",
         "현재 남아 있는 프로젝트 자료로 확인되는 초기 의료기기 부품.",
         "기존 자료로는 초기 비용, 용도, 성능 목표를 확인할 수 없음."
+      ],
+      "gallery": [
+        "/assets/projects/single-use-turbine/single-use-turbine-01.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-02.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-03.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-04.webp"
       ]
     },
     {
@@ -3661,6 +4315,13 @@
         "스포츠 활동 사이에 장갑과 헬멧을 건조하는 컴팩트 스테이션.",
         "지지 구조, 공기 흐름과 전체 통합을 다룬 CAD 연구.",
         "제안된 구조를 기록하는 물리 프로토타입."
+      ],
+      "gallery": [
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-01.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-02.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-03.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-04.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-05.webp"
       ]
     },
     {
@@ -3695,6 +4356,13 @@
         "스마트폰 크기 수납을 위한 프레임 구조와 접힘 운동학.",
         "매우 컴팩트한 접힘에 적합한 원단 연구.",
         "문서로 확인되는 엔지니어링 작업만 소개하며 전체 산업화는 확인되지 않음."
+      ],
+      "gallery": [
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-01.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-02.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-03.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-04.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-05.webp"
       ]
     },
     {
@@ -3764,6 +4432,12 @@
         "더모코스메틱 어플리케이터를 위한 인체공학적 핸드피스와 카트리지 통합.",
         "뷰티 제품의 시각적 언어와 조화를 이루는 유체 토출 콘셉트.",
         "사용, 리필, 내부 구조를 설명하는 프로토타입과 원리 시각화."
+      ],
+      "gallery": [
+        "/assets/projects/skincare-applicator/skincare-applicator-01.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-02.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-03.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-04.webp"
       ]
     },
     {
@@ -3785,6 +4459,11 @@
         "물이 두 번 통과하는 캡슐 유로를 적용한 커피 머신 구조.",
         "추출 과정에서 물이 캡슐 내부를 왕복하도록 설계.",
         "프로젝트 설명은 이 유체 원리에 한정해 제공합니다."
+      ],
+      "gallery": [
+        "/assets/projects/alicoffee-machine/coffee-machine-01.webp",
+        "/assets/projects/alicoffee-machine/coffee-machine-02.webp",
+        "/assets/projects/alicoffee-machine/coffee-machine-03.webp"
       ]
     },
     {
@@ -3941,6 +4620,12 @@
         "제네바 Velum Sky 강당 스크린을 위한 맞춤형 승강 시스템.",
         "건축적 시야를 유지하도록 상부 위치에서 숨겨지는 가이드.",
         "하강 중 완전히 캔틸레버 상태인 스크린을 위한 가이드, 강성 및 구동 설계."
+      ],
+      "gallery": [
+        "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-02.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-03.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-04.webp"
       ]
     }
   ],
@@ -3971,6 +4656,14 @@
         "由 DOMTEKNIKA 完整开发电气与机械架构。",
         "自 2012 年起探索三轮与四轮版本。",
         "内部样机与验证工作一直推进至独立初创公司成立。"
+      ],
+      "gallery": [
+        "/assets/projects/aventor/aventor-01.webp",
+        "/assets/projects/aventor/aventor-02.webp",
+        "/assets/projects/aventor/aventor-03-chassis-road-test.webp",
+        "/assets/projects/aventor/aventor-04-top-view-render.webp",
+        "/assets/projects/aventor/aventor-05-green-render.webp",
+        "/assets/projects/aventor/aventor-06-structural-analysis.webp"
       ]
     },
     {
@@ -4000,6 +4693,11 @@
         "开发茶胶囊机的冲泡单元。",
         "验证胶囊固定、开启、识别、弹出以及饮品流动过程。",
         "支持试生产，并开发与 WO2009135899 相关的涡流部件。"
+      ],
+      "gallery": [
+        "/assets/projects/special-t-machine/tea-machine-01.webp",
+        "/assets/projects/special-t-machine/tea-machine-02.webp",
+        "/assets/projects/special-t-machine/tea-machine-03.webp"
       ]
     },
     {
@@ -4020,6 +4718,14 @@
         "为高端城市电动自行车开发聚合物与注塑复合材料架构。",
         "研究车轮、车架与组件集成，建立鲜明的产品识别度。",
         "深化 CAD 设计，使表面可工业化制造并确保机械接口可靠。"
+      ],
+      "gallery": [
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-01.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-02.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-03.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-04.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-05.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-06.webp"
       ]
     },
     {
@@ -4090,6 +4796,12 @@
         "可采用纯电配置的混合动力城市车辆平台。",
         "由 DOMTEKNIKA 完成全部电气、机械设计与样机开发。",
         "内部开发始于 2006 至 2007 年，经独立初创公司延续并仍在推进。"
+      ],
+      "gallery": [
+        "/assets/projects/softcar/softcar-01.webp",
+        "/assets/projects/softcar/softcar-02.webp",
+        "/assets/projects/softcar/softcar-03.webp",
+        "/assets/projects/softcar/softcar-04.webp"
       ]
     },
     {
@@ -4111,6 +4823,13 @@
         "在 DOMTEKNIKA 创立之前开发的历史性超轻型电动三轮车。",
         "Jean-Luc Thuliez 在另一家公司任职期间参与了该项目。",
         "串列座椅、中央梁底盘与紧凑城市布局构成了这项早期出行研究。"
+      ],
+      "gallery": [
+        "/assets/projects/sam-cree/sam-cree-01.webp",
+        "/assets/projects/sam-cree/sam-cree-02.webp",
+        "/assets/projects/sam-cree/sam-cree-03.webp",
+        "/assets/projects/sam-cree/sam-cree-04.webp",
+        "/assets/projects/sam-cree/sam-cree-05.webp"
       ]
     },
     {
@@ -4131,6 +4850,13 @@
         "约在 2008 年启动的电动两轮概念。",
         "由 DOMTEKNIKA 完成全部电气与机械设计。",
         "内部完成样机开发，未成立独立初创公司。"
+      ],
+      "gallery": [
+        "/assets/projects/angel-interceptor/angel-interceptor-01.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-02.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-03.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-04.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-05.webp"
       ]
     },
     {
@@ -4151,6 +4877,14 @@
         "围绕胶囊装载与定量投放机构构建宠物产品架构。",
         "在内部功能集成的基础上，塑造亲和且易于识别的产品语言。",
         "通过剖面图与原型验证补充方式、操作路径和产品运行逻辑。"
+      ],
+      "gallery": [
+        "/assets/projects/ikitty/ikitty-01.webp",
+        "/assets/projects/ikitty/ikitty-02.webp",
+        "/assets/projects/ikitty/ikitty-03.webp",
+        "/assets/projects/ikitty/ikitty-04.webp",
+        "/assets/projects/ikitty/ikitty-05.webp",
+        "/assets/projects/ikitty/ikitty-06.webp"
       ]
     },
     {
@@ -4192,6 +4926,10 @@
         "低成本架构兼容多种速溶咖啡和其他速溶饮品。",
         "实现接近意式浓缩咖啡的效果，并在制作卡布奇诺时让牛奶保持在内部回路之外，以避免污染和残留物。",
         "随后面向一家大型咖啡机品牌实现商业化。"
+      ],
+      "gallery": [
+        "/assets/projects/instant-coffee-dispenser/instant-coffee-dispenser-01.webp",
+        "/assets/projects/instant-coffee-dispenser/instant-coffee-dispenser-02.webp"
       ]
     },
     {
@@ -4213,6 +4951,12 @@
         "Hutchinson 为 Total 集团委托开发的三轮技术验证车。",
         "由 DOMTEKNIKA 完成底盘与驱动电子系统的整体开发。",
         "为可运行验证车设计并集成滚塑车身部件。"
+      ],
+      "gallery": [
+        "/assets/projects/totalcar-concept/total-car-01.webp",
+        "/assets/projects/totalcar-concept/total-car-02.webp",
+        "/assets/projects/totalcar-concept/total-car-03.webp",
+        "/assets/projects/totalcar-concept/total-car-04.webp"
       ]
     },
     {
@@ -4241,6 +4985,11 @@
         "打造外观简洁、亲和的手持式口腔护理设备。",
         "完成可拆卸组件与耗材接口的内部集成。",
         "通过系列原型验证人体工学与不同造型方案。"
+      ],
+      "gallery": [
+        "/assets/projects/airsmile/airsmile-01.webp",
+        "/assets/projects/airsmile/airsmile-02.webp",
+        "/assets/projects/airsmile/airsmile-03.webp"
       ]
     },
     {
@@ -4261,6 +5010,12 @@
         "研究并选择轻量、高性能的聚合物器械架构。",
         "完成机械开发并通过功能原型进行验证。",
         "分析生产成本并为工业化做好准备。"
+      ],
+      "gallery": [
+        "/assets/projects/flex-drill/flex-drill-01.webp",
+        "/assets/projects/flex-drill/flex-drill-02.webp",
+        "/assets/projects/flex-drill/flex-drill-03.webp",
+        "/assets/projects/flex-drill/flex-drill-04.webp"
       ]
     },
     {
@@ -4289,6 +5044,14 @@
         "以符合人体工学的一次性聚合物器械替代可重复使用的钢制架构。",
         "完成产品工程开发并通过功能原型验证。",
         "完成工业化并管理首批注塑生产。"
+      ],
+      "gallery": [
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-01.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-02.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-03.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-04.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-05.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-06.webp"
       ]
     },
     {
@@ -4329,6 +5092,9 @@
         "完成从壶体、过滤附件到集成机构的整套产品开发。",
         "采用低成本计量部件，统计实际过滤的水量。",
         "清晰提示用户何时需要更换滤芯。"
+      ],
+      "gallery": [
+        "/assets/projects/filter-carafe/filter-carafe-01.webp"
       ]
     },
     {
@@ -4349,6 +5115,13 @@
         "研究折叠几何结构，实现紧凑收纳与便捷运输。",
         "为小型电动出行工具开发铰链、车架与骑行姿态方案。",
         "针对自行车与滑板车形态进行造型和机械结构迭代。"
+      ],
+      "gallery": [
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-01.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-02.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-03.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-04.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-05.webp"
       ]
     },
     {
@@ -4370,6 +5143,10 @@
         "设计在瓶体被强行破坏时中和吗啡的安全功能。",
         "完成零件工业化设计、改进原型、模具、注塑试制和首批量产。",
         "构建可适配其他液体药物的处方控制分配平台。"
+      ],
+      "gallery": [
+        "/assets/projects/smart-bottle/smart-bottle-01.webp",
+        "/assets/projects/smart-bottle/smart-bottle-02.webp"
       ]
     },
     {
@@ -4390,6 +5167,10 @@
         "面向可靠批量生产的工业化与优化。",
         "采用隐藏针头的自助注射架构，减轻患者焦虑。",
         "集成剂量监测，持续记录治疗规律性。"
+      ],
+      "gallery": [
+        "/assets/projects/personal-injector/personal-injector-01.webp",
+        "/assets/projects/personal-injector/personal-injector-02.webp"
       ]
     },
     {
@@ -4410,6 +5191,10 @@
         "对 PEEK 部件开展有限元与流变分析。",
         "优化几何结构，兼顾注塑成型与机械性能。",
         "开发模具并调试注塑工艺，实现稳定重复生产。"
+      ],
+      "gallery": [
+        "/assets/projects/acetabular-reamer-holder/acetabular-reamer-holder-01.webp",
+        "/assets/projects/acetabular-reamer-holder/acetabular-reamer-holder-02.webp"
       ]
     },
     {
@@ -4430,6 +5215,12 @@
         "2006 年以前开发的聚合物涡轮。",
         "由现存项目资料记录的早期医疗器械部件。",
         "现有档案无法确定其最初的成本、用途和性能目标。"
+      ],
+      "gallery": [
+        "/assets/projects/single-use-turbine/single-use-turbine-01.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-02.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-03.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-04.webp"
       ]
     },
     {
@@ -4450,6 +5241,13 @@
         "用于在两次运动之间烘干手套和头盔的紧凑工作站。",
         "围绕支撑结构、气流和整体集成开展 CAD 研究。",
         "通过实体原型记录所提出的系统架构。"
+      ],
+      "gallery": [
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-01.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-02.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-03.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-04.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-05.webp"
       ]
     },
     {
@@ -4484,6 +5282,13 @@
         "设计伞架结构与折叠运动学，实现智能手机级收纳尺寸。",
         "研究适合高度紧凑折叠的面料。",
         "仅呈现已有资料支持的工程工作；尚无法确认是否完成全部工业化。"
+      ],
+      "gallery": [
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-01.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-02.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-03.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-04.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-05.webp"
       ]
     },
     {
@@ -4553,6 +5358,12 @@
         "为皮肤护理施用器设计符合人体工学的手持部件并集成料盒。",
         "在实现稳定流体输送的同时，延续美容产品的视觉语言。",
         "通过原型与原理图说明使用方式、补充流程和内部架构。"
+      ],
+      "gallery": [
+        "/assets/projects/skincare-applicator/skincare-applicator-01.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-02.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-03.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-04.webp"
       ]
     },
     {
@@ -4574,6 +5385,11 @@
         "开发采用双程水路的咖啡机胶囊系统。",
         "萃取过程中，水流在胶囊内完成往返循环。",
         "项目介绍有意仅聚焦于这一流体原理。"
+      ],
+      "gallery": [
+        "/assets/projects/alicoffee-machine/coffee-machine-01.webp",
+        "/assets/projects/alicoffee-machine/coffee-machine-02.webp",
+        "/assets/projects/alicoffee-machine/coffee-machine-03.webp"
       ]
     },
     {
@@ -4730,6 +5546,12 @@
         "为日内瓦 Velum Sky 礼堂屏幕定制升降系统。",
         "导轨在升起位置保持隐藏，以保留建筑空间的视觉完整性。",
         "为下降过程中完全悬臂的屏幕设计导向、刚度和驱动系统。"
+      ],
+      "gallery": [
+        "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-02.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-03.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-04.webp"
       ]
     }
   ],
@@ -4760,6 +5582,14 @@
         "電気系統と機械構造を DOMTEKNIKA が一貫して設計。",
         "2012 年以降、三輪・四輪の両仕様を検討。",
         "社内で試作・検証を重ね、開発は独立したスタートアップへ引き継がれました。"
+      ],
+      "gallery": [
+        "/assets/projects/aventor/aventor-01.webp",
+        "/assets/projects/aventor/aventor-02.webp",
+        "/assets/projects/aventor/aventor-03-chassis-road-test.webp",
+        "/assets/projects/aventor/aventor-04-top-view-render.webp",
+        "/assets/projects/aventor/aventor-05-green-render.webp",
+        "/assets/projects/aventor/aventor-06-structural-analysis.webp"
       ]
     },
     {
@@ -4789,6 +5619,11 @@
         "ティーカプセルマシンの抽出ユニットを開発。",
         "カプセルの保持・検知・開封・排出と、お茶の流れを検証。",
         "試験生産を支援し、特許 WO2009135899 に関連する渦流部品も検討しました。"
+      ],
+      "gallery": [
+        "/assets/projects/special-t-machine/tea-machine-01.webp",
+        "/assets/projects/special-t-machine/tea-machine-02.webp",
+        "/assets/projects/special-t-machine/tea-machine-03.webp"
       ]
     },
     {
@@ -4809,6 +5644,14 @@
         "高級都市型電動自転車のポリマー構造と射出成形複合材を設計。",
         "ホイール、フレーム、部品を一体化し、製品の個性を形にしました。",
         "量産できる形状と丈夫な部品接合部を目指して CAD を調整。"
+      ],
+      "gallery": [
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-01.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-02.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-03.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-04.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-05.webp",
+        "/assets/projects/stajvelo-rv01/stajvelo-rv01-06.webp"
       ]
     },
     {
@@ -4879,6 +5722,12 @@
         "完全電動仕様にも対応可能な都市型ハイブリッド車の構想。",
         "DOMTEKNIKA が電気系統・機械構造の設計と試作を一貫して担当。",
         "2006〜2007 年に社内で始まり、独立したスタートアップを経て開発が続いています。"
+      ],
+      "gallery": [
+        "/assets/projects/softcar/softcar-01.webp",
+        "/assets/projects/softcar/softcar-02.webp",
+        "/assets/projects/softcar/softcar-03.webp",
+        "/assets/projects/softcar/softcar-04.webp"
       ]
     },
     {
@@ -4900,6 +5749,13 @@
         "DOMTEKNIKA の設立前に開発された超軽量の電動三輪車。",
         "Jean-Luc Thuliez が別の会社に在籍中に開発へ参加。",
         "前後に並ぶ座席と中央の梁を使った車台で、小型の都市型車両を模索しました。"
+      ],
+      "gallery": [
+        "/assets/projects/sam-cree/sam-cree-01.webp",
+        "/assets/projects/sam-cree/sam-cree-02.webp",
+        "/assets/projects/sam-cree/sam-cree-03.webp",
+        "/assets/projects/sam-cree/sam-cree-04.webp",
+        "/assets/projects/sam-cree/sam-cree-05.webp"
       ]
     },
     {
@@ -4920,6 +5776,13 @@
         "2008 年頃に始まった二輪の電気自動車コンセプト。",
         "電気系統と機械構造を DOMTEKNIKA が設計。",
         "社内で試作を進め、独立したスタートアップは設立されませんでした。"
+      ],
+      "gallery": [
+        "/assets/projects/angel-interceptor/angel-interceptor-01.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-02.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-03.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-04.webp",
+        "/assets/projects/angel-interceptor/angel-interceptor-05.webp"
       ]
     },
     {
@@ -4940,6 +5803,14 @@
         "カプセルの装填と給餌の仕組みを中心に製品を設計。",
         "親しみやすい外観と、内部機構を収める構造を両立。",
         "断面図と試作品で補充のしやすさや動作を検証しました。"
+      ],
+      "gallery": [
+        "/assets/projects/ikitty/ikitty-01.webp",
+        "/assets/projects/ikitty/ikitty-02.webp",
+        "/assets/projects/ikitty/ikitty-03.webp",
+        "/assets/projects/ikitty/ikitty-04.webp",
+        "/assets/projects/ikitty/ikitty-05.webp",
+        "/assets/projects/ikitty/ikitty-06.webp"
       ]
     },
     {
@@ -4981,6 +5852,10 @@
         "さまざまなインスタントコーヒーや粉末飲料に対応する低コストの構造。",
         "エスプレッソに近い仕上がりを目指し、牛乳は内部配管に通さず残留物を抑えます。",
         "その後、大手コーヒーマシンブランド向けに製品化されました。"
+      ],
+      "gallery": [
+        "/assets/projects/instant-coffee-dispenser/instant-coffee-dispenser-01.webp",
+        "/assets/projects/instant-coffee-dispenser/instant-coffee-dispenser-02.webp"
       ]
     },
     {
@@ -5002,6 +5877,12 @@
         "Hutchinson が Total グループ向けに依頼した三輪の技術実証車。",
         "DOMTEKNIKA が車台と駆動用電子回路を設計。",
         "回転成形の車体部品を開発し、走行可能な実証車に組み込みました。"
+      ],
+      "gallery": [
+        "/assets/projects/totalcar-concept/total-car-01.webp",
+        "/assets/projects/totalcar-concept/total-car-02.webp",
+        "/assets/projects/totalcar-concept/total-car-03.webp",
+        "/assets/projects/totalcar-concept/total-car-04.webp"
       ]
     },
     {
@@ -5030,6 +5911,11 @@
         "手になじみ、親しみやすい外観の歯科用機器を検討。",
         "取り外す部品や使い切りカートリッジを本体に収める構造を設計。",
         "複数の試作品で使いやすさと外観の違いを確認しました。"
+      ],
+      "gallery": [
+        "/assets/projects/airsmile/airsmile-01.webp",
+        "/assets/projects/airsmile/airsmile-02.webp",
+        "/assets/projects/airsmile/airsmile-03.webp"
       ]
     },
     {
@@ -5050,6 +5936,12 @@
         "軽量なポリマー製器具の構造を検討・選定。",
         "機械設計を進め、機能試作品で検証。",
         "製造コストを分析し、量産化に向けて準備しました。"
+      ],
+      "gallery": [
+        "/assets/projects/flex-drill/flex-drill-01.webp",
+        "/assets/projects/flex-drill/flex-drill-02.webp",
+        "/assets/projects/flex-drill/flex-drill-03.webp",
+        "/assets/projects/flex-drill/flex-drill-04.webp"
       ]
     },
     {
@@ -5078,6 +5970,14 @@
         "再利用型の鋼製器具に代わる、使いやすい使い捨てポリマー器具を開発。",
         "製品全体を設計し、機能試作品で検証。",
         "初期ロットの射出成形と量産化を管理しました。"
+      ],
+      "gallery": [
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-01.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-02.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-03.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-04.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-05.webp",
+        "/assets/projects/biome-staple-applicator/biome-staple-applicator-06.webp"
       ]
     },
     {
@@ -5118,6 +6018,9 @@
         "浄水容器、フィルター部品、内蔵機構まで製品全体を開発。",
         "ろ過した水量を低コストで測る部品を設計。",
         "フィルターの交換時期を分かりやすく知らせる仕組みを用意しました。"
+      ],
+      "gallery": [
+        "/assets/projects/filter-carafe/filter-carafe-01.webp"
       ]
     },
     {
@@ -5138,6 +6041,13 @@
         "収納や持ち運びを考えた折りたたみ構造を検討。",
         "小型電動車両のヒンジ、フレーム、乗車姿勢を設計。",
         "自転車とスクーターの両形式で、外観と機構を改良しました。"
+      ],
+      "gallery": [
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-01.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-02.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-03.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-04.webp",
+        "/assets/projects/folding-bike-scooter/folding-bike-scooter-05.webp"
       ]
     },
     {
@@ -5159,6 +6069,10 @@
         "ボトル破損時にモルヒネを中和する安全機構を設計。",
         "量産向けの部品設計、改良試作、金型製作、射出成形試作と初期生産を担当。",
         "他の液体医薬品にも応用できる供給方式を検討しました。"
+      ],
+      "gallery": [
+        "/assets/projects/smart-bottle/smart-bottle-01.webp",
+        "/assets/projects/smart-bottle/smart-bottle-02.webp"
       ]
     },
     {
@@ -5179,6 +6093,10 @@
         "信頼性の高い量産に向けて製品構造を最適化。",
         "針を見せず、患者の不安を抑える自己注射の仕組みを設計。",
         "投与量を記録し、治療の継続状況を確認できる機能を統合しました。"
+      ],
+      "gallery": [
+        "/assets/projects/personal-injector/personal-injector-01.webp",
+        "/assets/projects/personal-injector/personal-injector-02.webp"
       ]
     },
     {
@@ -5199,6 +6117,10 @@
         "PEEK 部品の強度解析と樹脂の流動解析を実施。",
         "射出成形と機械的性能の両面から部品形状を最適化。",
         "金型と成形条件を調整し、安定して再現できる製造工程を整えました。"
+      ],
+      "gallery": [
+        "/assets/projects/acetabular-reamer-holder/acetabular-reamer-holder-01.webp",
+        "/assets/projects/acetabular-reamer-holder/acetabular-reamer-holder-02.webp"
       ]
     },
     {
@@ -5219,6 +6141,12 @@
         "2006 年以前に開発されたポリマー製タービン。",
         "残された資料から確認できる初期の医療機器部品です。",
         "当時のコスト、用途、性能目標は資料から特定できません。"
+      ],
+      "gallery": [
+        "/assets/projects/single-use-turbine/single-use-turbine-01.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-02.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-03.webp",
+        "/assets/projects/single-use-turbine/single-use-turbine-04.webp"
       ]
     },
     {
@@ -5239,6 +6167,13 @@
         "スポーツの合間に手袋やヘルメットを乾かす小型装置。",
         "用具の保持方法、空気の流れ、部品配置を CAD で検討。",
         "実際の試作品で構造を示しました。"
+      ],
+      "gallery": [
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-01.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-02.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-03.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-04.webp",
+        "/assets/projects/glove-helmet-dryer/glove-helmet-dryer-05.webp"
       ]
     },
     {
@@ -5273,6 +6208,13 @@
         "スマートフォン程度に収納するため、骨組みと折りたたみ方を検討。",
         "小さく畳める生地を調査。",
         "資料で確認できる設計・素材検討のみを紹介し、量産化の完了は断定しません。"
+      ],
+      "gallery": [
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-01.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-02.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-03.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-04.webp",
+        "/assets/projects/folding-umbrella/pocket-folding-umbrella-05.webp"
       ]
     },
     {
@@ -5342,6 +6284,12 @@
         "手になじむ本体と美容液カートリッジの配置を検討。",
         "美容機器としての外観と、美容液を届ける仕組みを両立。",
         "試作品と構造図で使い方、補充方法、内部配置を示しました。"
+      ],
+      "gallery": [
+        "/assets/projects/skincare-applicator/skincare-applicator-01.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-02.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-03.webp",
+        "/assets/projects/skincare-applicator/skincare-applicator-04.webp"
       ]
     },
     {
@@ -5363,6 +6311,11 @@
         "水が二度通る流路を設けたコーヒーカプセルの構想。",
         "抽出中、水はカプセル内を往復します。",
         "紹介するのは、この水の流れに関する仕組みです。"
+      ],
+      "gallery": [
+        "/assets/projects/alicoffee-machine/coffee-machine-01.webp",
+        "/assets/projects/alicoffee-machine/coffee-machine-02.webp",
+        "/assets/projects/alicoffee-machine/coffee-machine-03.webp"
       ]
     },
     {
@@ -5519,6 +6472,12 @@
         "ジュネーブの Velum Sky 講堂向けに大型スクリーンの昇降装置を設計。",
         "スクリーンを上げた状態ではガイドを隠し、建築空間の見え方を保ちます。",
         "下降中に片持ちとなるスクリーンに合わせ、案内機構、剛性、駆動方式を設計しました。"
+      ],
+      "gallery": [
+        "/assets/projects/velum-sky-screen/velum-sky-screen-01.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-02.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-03.webp",
+        "/assets/projects/velum-sky-screen/velum-sky-screen-04.webp"
       ]
     }
   ]

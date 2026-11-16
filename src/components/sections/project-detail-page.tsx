@@ -1,9 +1,11 @@
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/providers/reveal";
+import { ProjectGallery } from "@/components/sections/project-gallery";
 import { getDetailPageCopy } from "@/data/detail-page-copy";
+import { getProjectsPageCopy } from "@/data/project-page-copy";
+import { getProjectGallery } from "@/data/project-page-types";
 import type { Project } from "@/data/project-types";
 import { Link } from "@/i18n/navigation";
 import { getProjectServices } from "@/data/services";
@@ -18,9 +20,10 @@ export function ProjectDetailPage({
   project: Project;
 }) {
   const copy = getDetailPageCopy(locale);
+  const { modal } = getProjectsPageCopy(locale);
   const serviceCopy = getServiceCopy(locale);
   const relatedServices = getProjectServices(project.id);
-  const gallery = Array.from(new Set([project.image, ...(project.gallery ?? [])]));
+  const gallery = getProjectGallery(project);
 
   return (
     <div className="bg-background pb-24 pt-[132px] md:pt-[152px]">
@@ -54,17 +57,14 @@ export function ProjectDetailPage({
               </div>
             </div>
 
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[10px] border border-border bg-muted shadow-[0_20px_56px_rgba(0,0,0,0.08)]">
-              <Image
-                src={project.image}
-                alt={project.imageAlt}
-                fill
-                loading="eager"
-                fetchPriority="high"
-                sizes="(max-width: 1024px) 100vw, 54vw"
-                className="object-contain p-5 md:p-8"
-              />
-            </div>
+            <ProjectGallery
+              key={project.id}
+              images={gallery}
+              imageAlt={project.imageAlt}
+              label={copy.gallery}
+              previousLabel={modal.previousImage}
+              nextLabel={modal.nextImage}
+            />
           </div>
 
           <div className="mt-14 grid gap-10 border-t border-border pt-10 lg:grid-cols-2 lg:gap-16">
@@ -83,19 +83,6 @@ export function ProjectDetailPage({
               </Reveal>
             ) : null}
           </div>
-
-          {gallery.length > 1 ? (
-            <section className="mt-16" aria-labelledby="project-gallery-title">
-              <Reveal initiallyHidden><h2 id="project-gallery-title" className="text-foreground text-[28px] font-extrabold">{copy.gallery}</h2></Reveal>
-              <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {gallery.map((image, index) => (
-                  <Reveal initiallyHidden key={image} delay={(index % 3) * 0.08} className="relative aspect-[4/3] overflow-hidden rounded-[7px] border border-border bg-muted">
-                    <Image src={image} alt={`${project.title} — ${index + 1}`} fill loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-contain p-3" />
-                  </Reveal>
-                ))}
-              </div>
-            </section>
-          ) : null}
 
           {project.relatedPatents?.length ? (
             <Reveal initiallyHidden as="section" className="mt-16 border-t border-border pt-10">

@@ -4165,7 +4165,10 @@ export function getProjectsForLocale(
       ),
     };
 
-    return withProjectScope(projectWithLocalizedPatents, resolvedLocale);
+    return {
+      ...withProjectScope(projectWithLocalizedPatents, resolvedLocale),
+      gallery: getProjectGalleryFromManifest(projectWithLocalizedPatents),
+    };
   });
 
   return options?.includeHidden
