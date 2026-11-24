@@ -3,7 +3,7 @@ export const analyticsCopy = {
     title: "Ce site utilise des cookies.",
     text: "Nos cookies nous aident à améliorer votre expérience.",
     accept: "Tout accepter", reject: "Refuser", manage: "Gérer les cookies", privacy: "Confidentialité", close: "Fermer",
-    necessaryOnly: "Nécessaires seulement",
+    necessaryOnly: "Nécessaires uniquement",
     legal: "Avec votre consentement, nous utilisons Google Analytics (Google Ireland Limited) pour mesurer les visites, les pages consultées, la provenance du trafic et les appareils utilisés. Google reçoit notamment des informations de navigation et traite l’adresse IP pour déterminer une localisation approximative. Des données peuvent être traitées hors de Suisse et de l’EEE, notamment aux États-Unis. Le suivi ne se charge pas avant votre accord ; les fonctions publicitaires et Google Signals sont désactivés dans notre intégration. Votre choix est conservé dans le stockage local du navigateur pendant six mois. Vous pouvez retirer votre accord à tout moment via « Gérer les cookies » en bas de page : le suivi est arrêté et les cookies Analytics accessibles au site sont supprimés. Les cookies Analytics sont configurés pour expirer après six mois sans prolongation automatique. Le cookie fonctionnel NEXT_LOCALE reste utilisé pour mémoriser la langue. Refuser les statistiques ne limite pas l’accès au site.",
   },
   en: {
