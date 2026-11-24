@@ -58,6 +58,16 @@ const countryHeaderNames = [
 ];
 
 export default function proxy(request: NextRequest) {
+  // The contact form uses an API route outside this matcher. Pages don't
+  // accept Server Actions or multipart form submissions.
+  if (
+    request.method === "POST" &&
+    (request.headers.has("next-action") ||
+      request.headers.get("content-type")?.toLowerCase().startsWith("multipart/form-data"))
+  ) {
+    return new NextResponse(null, { status: 400 });
+  }
+
   const { pathname } = request.nextUrl;
   const hasLocalePrefix = routing.locales.some(
     (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`),
