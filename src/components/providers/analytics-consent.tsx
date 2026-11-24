@@ -102,7 +102,7 @@ export function AnalyticsConsent() {
       role="region"
       aria-label={copy.title}
       data-cookie-notice=""
-      className="fixed right-3 bottom-3 z-[100] max-h-[calc(100dvh-1.5rem)] w-[288px] max-w-[calc(100vw-24px)] overflow-y-auto overscroll-contain rounded-[7px] border border-black/10 bg-white p-5 text-[#111] shadow-[0_4px_24px_rgba(0,0,0,0.1)] sm:right-5 sm:bottom-5 sm:max-h-[calc(100dvh-2.5rem)]"
+      className="fixed bottom-3 left-3 z-[100] max-h-[calc(100dvh-1.5rem)] w-[288px] max-w-[calc(100vw-24px)] overflow-y-auto overscroll-contain rounded-[7px] border border-black/10 bg-white p-5 text-[#111] shadow-[0_4px_24px_rgba(0,0,0,0.1)] sm:bottom-5 sm:left-5 sm:max-h-[calc(100dvh-2.5rem)] min-[810px]:pointer-fine:right-5 min-[810px]:pointer-fine:left-auto"
     >
       <button type="button" onClick={() => choose("rejected")}
         aria-label={`${copy.close} — ${copy.reject}`} title={`${copy.close} — ${copy.reject}`}
