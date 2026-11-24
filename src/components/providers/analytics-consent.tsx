@@ -98,24 +98,31 @@ export function AnalyticsConsent() {
       id="dtk-google-analytics" src={`https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`}
       strategy="afterInteractive" onReady={initializeAnalytics}
     /> : null}
-    {show ? <section role="region" aria-label={copy.title} className="fixed bottom-3 left-3 z-[100] w-[288px] max-w-[calc(100vw-24px)] border border-black/10 bg-white p-5 text-[#111] shadow-[0_4px_24px_rgba(0,0,0,0.1)] sm:bottom-5 sm:left-5">
+    {show ? <section
+      role="region"
+      aria-label={copy.title}
+      data-cookie-notice=""
+      className="fixed bottom-3 left-3 z-[100] max-h-[calc(100dvh-1.5rem)] w-[288px] max-w-[calc(100vw-24px)] overflow-y-auto overscroll-contain rounded-[7px] border border-black/10 bg-white p-5 text-[#111] shadow-[0_4px_24px_rgba(0,0,0,0.1)] sm:bottom-5 sm:left-5 sm:max-h-[calc(100dvh-2.5rem)]"
+    >
       <button type="button" onClick={() => choose("rejected")}
         aria-label={`${copy.close} — ${copy.reject}`} title={`${copy.close} — ${copy.reject}`}
-        className="absolute right-2 top-2 flex h-6 w-6 cursor-pointer items-center justify-center text-[18px] leading-none text-[#595959] hover:text-brand focus-visible:outline-2 focus-visible:outline-brand [@media(pointer:coarse)]:right-0 [@media(pointer:coarse)]:top-0 [@media(pointer:coarse)]:h-11 [@media(pointer:coarse)]:w-11">
+        className="absolute right-2 top-2 flex h-6 w-6 cursor-pointer items-center justify-center rounded-[7px] text-[18px] leading-none text-[#595959] hover:text-brand focus-visible:outline-2 focus-visible:outline-brand [@media(pointer:coarse)]:right-0 [@media(pointer:coarse)]:top-0 [@media(pointer:coarse)]:h-11 [@media(pointer:coarse)]:w-11">
         <span aria-hidden="true">×</span>
       </button>
       <div className="mb-3 h-[3px] w-7 bg-brand" aria-hidden="true" />
-      <h2 className="pr-3 text-[15px] font-extrabold">{copy.title}</h2>
+      <h2 className="pr-5 text-[15px] font-extrabold">{copy.title}</h2>
       <p className="mt-2 text-[13px] leading-[1.6] text-[#595959]">{copy.text}</p>
-      <div className="mt-4 flex flex-col gap-3">
+      <div className="mt-4 grid grid-cols-2 gap-2">
+        <button type="button" onClick={() => choose("rejected")}
+          className="min-h-11 cursor-pointer rounded-[7px] border border-muted-foreground/75 bg-muted px-1.5 py-2 text-xs leading-tight font-bold text-foreground transition-colors hover:bg-border focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
+          {copy.necessaryOnly}
+        </button>
         <button type="button" onClick={() => choose("accepted")}
-          className="min-h-11 w-full cursor-pointer border border-brand bg-brand px-3 py-2 text-[12px] font-bold text-white transition-colors hover:bg-brand/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
+          className="min-h-11 cursor-pointer rounded-[7px] border border-brand bg-brand px-1.5 py-2 text-xs leading-tight font-bold text-white transition-colors hover:bg-brand/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
           {copy.accept}
         </button>
-        <div className="flex items-center justify-between gap-2">
-          <Link href="/privacy-policy" className="text-[11px] text-[#595959] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-brand">{copy.privacy}</Link>
-        </div>
       </div>
+      <Link href="/privacy-policy" className="mt-3 inline-block text-[11px] text-[#595959] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-brand">{copy.privacy}</Link>
     </section> : null}
   </>;
 }

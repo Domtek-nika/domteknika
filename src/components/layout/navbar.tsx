@@ -367,6 +367,7 @@ export function Navbar() {
           ref={contactBubbleRef}
           className={cn(
             "fixed bottom-[calc(env(safe-area-inset-bottom)+30px)] right-5 z-[905] min-[810px]:hidden",
+            "max-[380px]:[body:has([data-cookie-notice])_&]:invisible",
             !contactBubbleVisible && "pointer-events-none",
           )}
           style={
